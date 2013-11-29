@@ -1,7 +1,7 @@
 #!/ffp/bin/sh -xe
 
 PN=$(basename $0 .funpkg)
-PV=$(ls $PN-*.tar* | egrep -o '[0-9][0-9.]*[0-9]')
+#PV=$(ls $PN-*.tar* | egrep -o '[0-9][0-9.]*[0-9]')
 PR=1
 
 . ./config.ffp
@@ -11,7 +11,9 @@ W=$(mktemp -t -d $PN.XXXXXX)
 D=$W/pkg
 
 cd $W
-tar xf $X/$PN-$PV.tar*
+cat $X/SRC_URI | xargs wget 
+PV=$(ls $PN-*.tar* | egrep -o '[0-9][0-9.]*[0-9]')
+tar xf $PN-$PV.tar*
 cd $PN-*
 
 LDFLAGS="$FFP_LDFLAGS" \
