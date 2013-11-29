@@ -1,0 +1,8 @@
+--- version.sh.orig	2012-10-22 16:48:57.000000000 +0200
++++ version.sh	2012-10-22 16:49:03.000000000 +0200
+@@ -1,4 +1,4 @@
+-#!/bin/bash
++#!/ffp/bin/bash
+ [ -n "$1" ] && cd $1
+ git rev-list HEAD | sort > config.git-hash
+ LOCALVER=`wc -l config.git-hash | awk '{print $1}'`
