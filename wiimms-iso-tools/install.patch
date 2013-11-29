@@ -1,0 +1,13 @@
+--- install.orig	2012-03-20 10:22:58.000000000 +0100
++++ install.sh	2012-03-20 10:47:34.000000000 +0100
+@@ -28,9 +28,8 @@
+ 
+ #------------------------------------------------------------------------------
+ 
+-BASE_PATH="/usr/local"
+ BIN_PATH="$BASE_PATH/bin"
+-SHARE_PATH="/usr/local/share/wit"
++SHARE_PATH="$BASE_PATH/share/wit"
+ 
+ BIN_FILES="wit wwt wdf wfuse"
+ WDF_LINKS="wdf-cat wdf-dump"

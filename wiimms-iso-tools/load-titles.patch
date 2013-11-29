@@ -1,0 +1,41 @@
+--- load-titles.orig	2012-03-20 16:14:00.000000000 +0100
++++ load-titles.sh	2012-03-20 16:17:01.000000000 +0100
+@@ -30,8 +30,7 @@
+ 
+ NEEDED="wit wget tr"
+ 
+-BASE_PATH="/usr/local"
+-SHARE_PATH="/usr/local/share/wit"
++SHARE_PATH="$BASE_PATH/share/wit"
+ URI_TITLES=http://wiitdb.com/titles.txt
+ LANGUAGES="de es fr it ja ko nl pt ru zhcn zhtw"
+ 
+@@ -95,17 +94,17 @@
+ #------------------------------------------------------------------------------
+ 
+ errtool=
+-for tool in $NEEDED
+-do
+-    ((CYGWIN)) && [[ -x $tool.exe ]] && continue
+-    which $tool >/dev/null 2>&1 || errtool="$errtool $tool"
+-done
+-
+-if [[ $errtool != "" ]]
+-then
+-    echo "missing tools in PATH:$errtool" >&2
+-    exit 2
+-fi
++#for tool in $NEEDED
++#do
++#    ((CYGWIN)) && [[ -x $tool.exe ]] && continue
++#    which $tool >/dev/null 2>&1 || errtool="$errtool $tool"
++#done
++
++#if [[ $errtool != "" ]]
++#then
++#    echo "missing tools in PATH:$errtool" >&2
++#    exit 2
++#fi
+ 
+ #------------------------------------------------------------------------------
+ 
