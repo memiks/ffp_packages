@@ -1,0 +1,13 @@
+OpenCV (Open Source Computer Vision) is a library of programming
+ functions for real time computer vision.
+
+OpenCV is released under a BSD license, it is free for both academic
+and commercial use. It has C++,	C, Python and soon Java interfaces
+running on Windows, Linux, Android and Mac. 
+The library has >2500 optimized algorithms (see figure below).
+It is used around the world, has >2.5M downloads and >40K people 
+in the user group. Uses range from interactive art, to mine inspection, 
+stitching maps on the web on through advanced robotics. 
+
+Homepage: http://opencv.willowgarage.com/
+
