@@ -1,0 +1,672 @@
+++ basename ./slang.funpkg .funpkg
++ PN=slang
++ PR=1
++ . ./config.ffp
+++ GNU_HOST=
+++ GNU_TARGET=
+++ FFP_CFLAGS='-I/ffp/include -O2'
+++ FFP_LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
+++ '[' '!' -d '' ']'
+++ TMPDIR=/tmp
+++ export TMPDIR
+++ mandir=/ffp/share/man
+++ infodir=/ffp/share/info
+++ docdir=/ffp/share/doc
+++ pwd
++ X=/ffp/home/root/fun_plug/src/slang
+++ mktemp -t -d slang.XXXXXX
++ W=/tmp/slang.r7XqVr
++ D=/tmp/slang.r7XqVr/pkg
++ cd /tmp/slang.r7XqVr
++ cat /ffp/home/root/fun_plug/src/slang/SRC_URI
++ xargs wget
+--2012-11-08 10:42:21--  http://www.jedsoft.org/snapshots/slang-pre2.3.0-68.tar.gz
+Resolving www.jedsoft.org... 207.106.84.131
+Connecting to www.jedsoft.org|207.106.84.131|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1841915 (1.8M) [application/x-tar]
+Saving to: `slang-pre2.3.0-68.tar.gz'
+
+     0K .......... .......... .......... .......... ..........  2% 12.8K 2m16s
+    50K .......... .......... .......... .......... ..........  5% 71.6K 78s
+   100K .......... .......... .......... .......... ..........  8% 85.5K 57s
+   150K .......... .......... .......... .......... .......... 11%  110K 45s
+   200K .......... .......... .......... .......... .......... 13% 58.0K 40s
+   250K .......... .......... .......... .......... .......... 16% 24.3K 43s
+   300K .......... .......... .......... .......... .......... 19% 75.7K 38s
+   350K .......... .......... .......... .......... .......... 22% 73.9K 35s
+   400K .......... .......... .......... .......... .......... 25% 69.3K 32s
+   450K .......... .......... .......... .......... .......... 27% 49.5K 30s
+   500K .......... .......... .......... .......... .......... 30% 40.5K 29s
+   550K .......... .......... .......... .......... .......... 33% 15.0K 32s
+   600K .......... .......... .......... .......... .......... 36% 42.9K 31s
+   650K .......... .......... .......... .......... .......... 38% 72.9K 28s
+   700K .......... .......... .......... .......... .......... 41% 61.6K 26s
+   750K .......... .......... .......... .......... .......... 44% 60.3K 25s
+   800K .......... .......... .......... .......... .......... 47% 76.0K 23s
+   850K .......... .......... .......... .......... .......... 50% 94.7K 21s
+   900K .......... .......... .......... .......... .......... 52%  110K 19s
+   950K .......... .......... .......... .......... .......... 55% 72.9K 18s
+  1000K .......... .......... .......... .......... .......... 58% 37.6K 17s
+  1050K .......... .......... .......... .......... .......... 61% 41.4K 16s
+  1100K .......... .......... .......... .......... .......... 63% 64.8K 14s
+  1150K .......... .......... .......... .......... .......... 66%  111K 13s
+  1200K .......... .......... .......... .......... .......... 69% 54.7K 12s
+  1250K .......... .......... .......... .......... .......... 72% 54.4K 11s
+  1300K .......... .......... .......... .......... .......... 75% 79.9K 9s
+  1350K .......... .......... .......... .......... .......... 77% 37.4K 8s
+  1400K .......... .......... .......... .......... .......... 80% 81.2K 7s
+  1450K .......... .......... .......... .......... .......... 83% 84.5K 6s
+  1500K .......... .......... .......... .......... .......... 86% 52.8K 5s
+  1550K .......... .......... .......... .......... .......... 88% 73.4K 4s
+  1600K .......... .......... .......... .......... .......... 91% 39.3K 3s
+  1650K .......... .......... .......... .......... .......... 94% 36.5K 2s
+  1700K .......... .......... .......... .......... .......... 97% 35.1K 1s
+  1750K .......... .......... .......... .......... ........  100% 19.0K=39s
+
+2012-11-08 10:43:00 (46.1 KB/s) - `slang-pre2.3.0-68.tar.gz' saved [1841915/1841915]
+
+++ ls slang-pre2.3.0-68.tar.gz
+++ egrep -o 'pre[0-9][0-9.]*-[0-9]*'
++ PV=pre2.3.0-68
++ tar xf slang-pre2.3.0-68.tar.gz
++ cd slang-pre2.3.0-68 slang-pre2.3.0-68.tar.gz
++ LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
++ ./configure --prefix=/ffp --build= --host= --mandir=/ffp/share/man --infodir=/ffp/share/info
+checking build system type... armv5tejl-unknown-linux-gnueabi
+checking host system type... armv5tejl-unknown-linux-gnueabi
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /ffp/bin/grep
+checking for egrep... /ffp/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether gcc needs -traditional... no
+checking for library containing strerror... none required
+checking C compiler that understands ANSI prototypes... gcc looks ok.  Good.
+checking whether make sets $(MAKE)... yes
+checking for ranlib... ranlib
+checking for a BSD-compatible install... /ffp/bin/install -c
+checking terminfo layout... default
+checking type of readline support for slsh... slang
+checking for X... no
+checking for stdlib.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for memory.h... (cached) yes
+checking termios.h usability... yes
+checking termios.h presence... yes
+checking for termios.h... yes
+checking malloc.h usability... yes
+checking malloc.h presence... yes
+checking for malloc.h... yes
+checking locale.h usability... yes
+checking locale.h presence... yes
+checking for locale.h... yes
+checking xlocale.h usability... no
+checking xlocale.h presence... no
+checking for xlocale.h... no
+checking langinfo.h usability... yes
+checking langinfo.h presence... yes
+checking for langinfo.h... yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking sys/fcntl.h usability... yes
+checking sys/fcntl.h presence... yes
+checking for sys/fcntl.h... yes
+checking for sys/types.h... (cached) yes
+checking sys/wait.h usability... yes
+checking sys/wait.h presence... yes
+checking for sys/wait.h... yes
+checking sys/utsname.h usability... yes
+checking sys/utsname.h presence... yes
+checking for sys/utsname.h... yes
+checking sys/times.h usability... yes
+checking sys/times.h presence... yes
+checking for sys/times.h... yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking utime.h usability... yes
+checking utime.h presence... yes
+checking for utime.h... yes
+checking floatingpoint.h usability... no
+checking floatingpoint.h presence... no
+checking for floatingpoint.h... no
+checking ieeefp.h usability... no
+checking ieeefp.h presence... no
+checking for ieeefp.h... no
+checking nan.h usability... no
+checking nan.h presence... no
+checking for nan.h... no
+checking fenv.h usability... yes
+checking fenv.h presence... yes
+checking for fenv.h... yes
+checking sys/mman.h usability... yes
+checking sys/mman.h presence... yes
+checking for sys/mman.h... yes
+checking sys/socket.h usability... yes
+checking sys/socket.h presence... yes
+checking for sys/socket.h... yes
+checking netinet/in.h usability... yes
+checking netinet/in.h presence... yes
+checking for netinet/in.h... yes
+checking arpa/inet.h usability... yes
+checking arpa/inet.h presence... yes
+checking for arpa/inet.h... yes
+checking sys/un.h usability... yes
+checking sys/un.h presence... yes
+checking for sys/un.h... yes
+checking sys/resource.h usability... yes
+checking sys/resource.h presence... yes
+checking for sys/resource.h... yes
+checking for mode_t... yes
+checking for pid_t... yes
+checking for uid_t in sys/types.h... yes
+checking for socklen_t... yes
+checking for dirent.h that defines DIR... yes
+checking for library containing opendir... none required
+checking for memset... yes
+checking for memcpy... yes
+checking for putenv... yes
+checking for getcwd... yes
+checking for setlocale... yes
+checking for tcgetattr... yes
+checking for tcsetattr... yes
+checking for cfgetospeed... yes
+checking for sigaction... yes
+checking for sigemptyset... yes
+checking for sigprocmask... yes
+checking for sigaddset... yes
+checking for alarm... yes
+checking for pause... yes
+checking for vfscanf... yes
+checking for lstat... yes
+checking for readlink... yes
+checking for symlink... yes
+checking for link... yes
+checking for kill... yes
+checking for killpg... yes
+checking for snprintf... yes
+checking for vsnprintf... yes
+checking for getppid... yes
+checking for getegid... yes
+checking for geteuid... yes
+checking for getuid... yes
+checking for getgid... yes
+checking for setgid... yes
+checking for setuid... yes
+checking for setpgid... yes
+checking for getpgid... yes
+checking for setpgrp... yes
+checking for getpgrp... yes
+checking for setsid... yes
+checking for getsid... yes
+checking for mmap... yes
+checking for chown... yes
+checking for popen... yes
+checking for mkfifo... yes
+checking for atexit... yes
+checking for on_exit... yes
+checking for umask... yes
+checking for uname... yes
+checking for times... yes
+checking for gmtime... yes
+checking for mktime... yes
+checking for gettimeofday... yes
+checking for getitimer... yes
+checking for setitimer... yes
+checking for gmtime_r... yes
+checking for ctime_r... yes
+checking for localtime_r... yes
+checking for strtod... yes
+checking for atoll... yes
+checking for strtoll... yes
+checking for issetugid... no
+checking for isnan... no
+checking for finite... no
+checking for isinf... no
+checking for round... no
+checking for siglongjmp... yes
+checking for fork... yes
+checking for waitpid... yes
+checking for socket... yes
+checking for socketpair... yes
+checking for confstr... yes
+checking for pathconf... yes
+checking for getpriority... yes
+checking for setpriority... yes
+checking for setvbuf... yes
+checking for utime... yes
+checking for utimes... yes
+checking for ttyname... yes
+checking for ttyname_r... yes
+checking for newlocale... no
+checking for strtod_l... no
+checking for localeconv... yes
+checking for nl_langinfo and CODESET... yes
+checking for acosh in -lm... yes
+checking for asinh in -lm... yes
+checking for atanh in -lm... yes
+checking for hypot in -lm... yes
+checking for atan2 in -lm... yes
+checking for frexp in -lm... yes
+checking for frexpf in -lm... yes
+checking for ldexp in -lm... yes
+checking for ldexpf in -lm... yes
+checking for sincos in -lm... yes
+checking for sincosf in -lm... yes
+checking for feclearexcept in -lm... no
+checking for fpsetsticky in -lm... no
+checking dlfcn.h usability... yes
+checking dlfcn.h presence... yes
+checking for dlfcn.h... yes
+checking for dlopen in -ldl... yes
+checking size of short... 2
+checking size of int... 4
+checking size of long... 4
+checking size of float... 4
+checking size of double... 8
+checking for size_t... yes
+checking size of size_t... 4
+checking for long long... yes
+checking size of long long... 8
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... 64
+checking for _LARGEFILE_SOURCE value needed for large files... no
+checking for off_t... yes
+checking size of off_t... 8
+checking for ncurses5-config... /ffp/bin/ncurses5-config
+checking for terminfo... yes
+checking for the pcre library and header files ... yes: /ffp/lib and /ffp/include
+checking for the onig library and header files oniguruma.h... no
+checking for the png library and header files ... yes: /ffp/lib and /ffp/include
+checking for the z library and header files zlib.h... yes: /ffp/lib and /ffp/include
+checking for the iconv library and header files ... yes: /ffp/lib and /ffp/include
+checking for sysconf... yes
+checking SLANG_VERSION... 2.3.0
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating slsh/Makefile
+config.status: creating modules/Makefile
+config.status: creating demo/Makefile
+config.status: creating slang.pc
+config.status: creating src/sysconf.h
+
+Configuration complete.  You may need to edit src/Makefile.
+You are compiling SLANG with the following compiler configuration:
+       CC = gcc
+   CFLAGS = -g -O2 
+  LDFLAGS = -L/ffp/lib -Wl,-rpath,/ffp/lib -Wl,-export-dynamic
+
+   ELF_CC = $(CC)
+ ELF_LINK = $(CC) $(LDFLAGS) -shared -Wl,-O1 -Wl,--version-script,$(VERSION_SCRIPT) -Wl,-soname,$(ELFLIB_MAJOR)
+ELF_CFLAGS= $(CFLAGS) -fPIC 
+
+                  prefix: /ffp
+             exec_prefix: ${prefix}
+    Installation Lib Dir: ${exec_prefix}/lib
+Installation Include Dir: ${prefix}/include
+
+See also src/sl-feat.h for various features.
+
+The following modules that depend upon external libraries will be built:
+   pcre png z iconv
+
+
+While not required, it is recommended that you install the following
+libraries and reconfigure so that the corresponding modules can be built:
+   oniguruma
+
+Type 'make' to build a shared version of the library.
+Type 'make help' for more options
+
++ make
+cd src; make elf
+make[1]: Entering directory `/tmp/slang.r7XqVr/slang-pre2.3.0-68/src'
+/tmp/slang.r7XqVr/slang-pre2.3.0-68/autoconf/mkinsdir.sh /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs
+mkdir -p -- /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs
+cp sysconf.h config.h
+cp terminfo/default.inc terminfo.inc
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG -DMISC_TERMINFO_DIRS='"/ffp/share/terminfo"' /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/sltermin.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/sldisply.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slutty.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slang.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slarray.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slclass.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slcmd.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slerr.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slgetkey.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slkeymap.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slmalloc.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slmath.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slmemchr.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slmemcmp.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slmemcpy.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slmemset.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slmisc.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slparse.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slprepr.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slregexp.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slrline.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slsearch.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slsmg.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG -DSLANG_DOC_DIR='"/ffp/share/doc/slang/v2"' -DSLANG_INSTALL_PREFIX='"/ffp"' /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slstd.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/sltoken.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/sltypes.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slxstrng.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slcurses.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slscroll.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slsignal.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slkeypad.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slerrno.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slstring.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slstruct.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slcmplex.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slarrfun.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG -DMODULE_INSTALL_DIR='"/ffp/lib/slang/v2/modules"' -DMODULE_PATH_ENV_NAME='"SLANG_MODULE_PATH"' /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slimport.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slpath.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slarith.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slassoc.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slcompat.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slposdir.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slstdio.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slproc.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/sltime.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slstrops.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slbstr.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slpack.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slintall.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slistruc.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slposio.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slnspace.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slarrmis.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slospath.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slscanf.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/sllower.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slupper.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slischar.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slutf8.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slwcwidth.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slwclut.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slcommon.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/sllist.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slexcept.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slfpu.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slsig.c
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -c -g -O2  -fPIC  -Dunix -DSLANG  /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slboseos.c
+rm -f /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs/libslang.so.2.3.0
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && gcc -L/ffp/lib -Wl,-rpath,/ffp/lib -shared -Wl,-O1 -Wl,--version-script,/tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slang.ver -Wl,-soname,libslang.so.2 -o libslang.so.2.3.0 sltermin.o sldisply.o slutty.o slang.o slarray.o slclass.o slcmd.o slerr.o slgetkey.o slkeymap.o slmalloc.o slmath.o slmemchr.o slmemcmp.o slmemcpy.o slmemset.o slmisc.o slparse.o slprepr.o slregexp.o slrline.o slsearch.o slsmg.o slstd.o sltoken.o sltypes.o slxstrng.o slcurses.o slscroll.o slsignal.o slkeypad.o slerrno.o slstring.o slstruct.o slcmplex.o slarrfun.o slimport.o slpath.o slarith.o slassoc.o slcompat.o slposdir.o slstdio.o slproc.o sltime.o slstrops.o slbstr.o slpack.o slintall.o slistruc.o slposio.o slnspace.o slarrmis.o slospath.o slscanf.o sllower.o slupper.o slischar.o slutf8.o slwcwidth.o slwclut.o slcommon.o sllist.o slexcept.o slfpu.o slsig.o slboseos.o -L/ffp/lib -Wl,-rpath,/ffp/lib -ldl -lm -lc
+if [ libslang.so.2 != libslang.so.2.3.0 ]; then \
+	  cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && rm -f libslang.so.2 && /bin/ln -sf libslang.so.2.3.0 libslang.so.2; \
+	fi
+cd /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs && rm -f libslang.so && /bin/ln -sf libslang.so.2.3.0 libslang.so
+
+libslang.so.2.3.0 created in /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs.
+The link libslang.so to libslang.so.2.3.0 was also created.
+
+make[1]: Leaving directory `/tmp/slang.r7XqVr/slang-pre2.3.0-68/src'
+cd slsh; make all
+make[1]: Entering directory `/tmp/slang.r7XqVr/slang-pre2.3.0-68/slsh'
+/tmp/slang.r7XqVr/slang-pre2.3.0-68/autoconf/mkinsdir.sh objs
+mkdir -p -- objs
+cp ../src/config.h .
+cd objs && gcc -c -g -O2   -I/tmp/slang.r7XqVr/slang-pre2.3.0-68/src -DSLSH_CONF_DIR='"/ffp/etc"' -DSLSH_PATH='"/ffp/share/slsh"' -DSLSH_CONF_DIR_ENV='"SLSH_CONF_DIR"' -DSLSH_LIB_DIR_ENV='"SLSH_LIB_DIR"' -DSLSH_PATH_ENV='"SLSH_PATH"' /tmp/slang.r7XqVr/slang-pre2.3.0-68/slsh/slsh.c
+cd objs && gcc -c -g -O2   -I/tmp/slang.r7XqVr/slang-pre2.3.0-68/src -DSLSH_CONF_DIR='"/ffp/etc"' -DSLSH_PATH='"/ffp/share/slsh"' -DSLSH_CONF_DIR_ENV='"SLSH_CONF_DIR"' -DSLSH_LIB_DIR_ENV='"SLSH_LIB_DIR"' -DSLSH_PATH_ENV='"SLSH_PATH"' -DUSE_GNU_READLINE=0 /tmp/slang.r7XqVr/slang-pre2.3.0-68/slsh/readline.c
+gcc -g -O2   objs/slsh.o objs/readline.o -o objs/slsh_exe -L/ffp/lib -Wl,-rpath,/ffp/lib -Wl,-export-dynamic -L/tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs -lslang  -ldl  -lm
+make[1]: Leaving directory `/tmp/slang.r7XqVr/slang-pre2.3.0-68/slsh'
+cd modules; make all
+make[1]: Entering directory `/tmp/slang.r7XqVr/slang-pre2.3.0-68/modules'
+/tmp/slang.r7XqVr/slang-pre2.3.0-68/autoconf/mkinsdir.sh objs
+mkdir -p -- objs
+cp ../src/config.h .
+cd objs && gcc -g -O2   -shared -fPIC -I/tmp/slang.r7XqVr/slang-pre2.3.0-68/src /tmp/slang.r7XqVr/slang-pre2.3.0-68/modules/slsmg-module.c -o slsmg-module.so -L/ffp/lib -Wl,-rpath,/ffp/lib -Wl,-R/ffp/lib:/ffp/lib:/ffp/lib:/ffp/lib:/ffp/lib   -lm
+cd objs && gcc -g -O2   -shared -fPIC -I/tmp/slang.r7XqVr/slang-pre2.3.0-68/src /tmp/slang.r7XqVr/slang-pre2.3.0-68/modules/termios-module.c -o termios-module.so -L/ffp/lib -Wl,-rpath,/ffp/lib -Wl,-R/ffp/lib:/ffp/lib:/ffp/lib:/ffp/lib:/ffp/lib   -lm
+cd objs && gcc -g -O2   -shared -fPIC -I/tmp/slang.r7XqVr/slang-pre2.3.0-68/src /tmp/slang.r7XqVr/slang-pre2.3.0-68/modules/select-module.c -o select-module.so -L/ffp/lib -Wl,-rpath,/ffp/lib -Wl,-R/ffp/lib:/ffp/lib:/ffp/lib:/ffp/lib:/ffp/lib   -lm
+cd objs && gcc -g -O2   -shared -fPIC -I/tmp/slang.r7XqVr/slang-pre2.3.0-68/src /tmp/slang.r7XqVr/slang-pre2.3.0-68/modules/fcntl-module.c -o fcntl-module.so -L/ffp/lib -Wl,-rpath,/ffp/lib -Wl,-R/ffp/lib:/ffp/lib:/ffp/lib:/ffp/lib:/ffp/lib   -lm
+cd objs && gcc -g -O2   -shared -fPIC -I/tmp/slang.r7XqVr/slang-pre2.3.0-68/src /tmp/slang.r7XqVr/slang-pre2.3.0-68/modules/varray-module.c -o varray-module.so -L/ffp/lib -Wl,-rpath,/ffp/lib -Wl,-R/ffp/lib:/ffp/lib:/ffp/lib:/ffp/lib:/ffp/lib   -lm
+cd objs && gcc -g -O2   -shared -fPIC -I/tmp/slang.r7XqVr/slang-pre2.3.0-68/src /tmp/slang.r7XqVr/slang-pre2.3.0-68/modules/socket-module.c -o socket-module.so  -L/ffp/lib -Wl,-rpath,/ffp/lib -Wl,-R/ffp/lib:/ffp/lib:/ffp/lib:/ffp/lib:/ffp/lib   -lm
+cd objs && gcc -g -O2   -shared -fPIC -I/tmp/slang.r7XqVr/slang-pre2.3.0-68/src /tmp/slang.r7XqVr/slang-pre2.3.0-68/modules/rand-module.c -o rand-module.so -L/ffp/lib -Wl,-rpath,/ffp/lib -Wl,-R/ffp/lib:/ffp/lib:/ffp/lib:/ffp/lib:/ffp/lib   -lm
+cd objs && gcc -g -O2   -shared -fPIC -I/tmp/slang.r7XqVr/slang-pre2.3.0-68/src /tmp/slang.r7XqVr/slang-pre2.3.0-68/modules/fork-module.c -o fork-module.so -L/ffp/lib -Wl,-rpath,/ffp/lib -Wl,-R/ffp/lib:/ffp/lib:/ffp/lib:/ffp/lib:/ffp/lib   -lm
+cd objs && gcc -g -O2   -shared -fPIC -I/tmp/slang.r7XqVr/slang-pre2.3.0-68/src /tmp/slang.r7XqVr/slang-pre2.3.0-68/modules/csv-module.c -o csv-module.so -L/ffp/lib -Wl,-rpath,/ffp/lib -Wl,-R/ffp/lib:/ffp/lib:/ffp/lib:/ffp/lib:/ffp/lib   -lm
+cd objs && gcc -g -O2   -shared -fPIC -I/tmp/slang.r7XqVr/slang-pre2.3.0-68/src /tmp/slang.r7XqVr/slang-pre2.3.0-68/modules/base64-module.c -o base64-module.so -L/ffp/lib -Wl,-rpath,/ffp/lib -Wl,-R/ffp/lib:/ffp/lib:/ffp/lib:/ffp/lib:/ffp/lib   -lm
+cd objs && gcc -g -O2   -shared -fPIC -c -I/tmp/slang.r7XqVr/slang-pre2.3.0-68/src /tmp/slang.r7XqVr/slang-pre2.3.0-68/modules/chksum-module.c
+cd objs && gcc -g -O2   -shared -fPIC -c -I/tmp/slang.r7XqVr/slang-pre2.3.0-68/src /tmp/slang.r7XqVr/slang-pre2.3.0-68/modules/chksum_md5.c
+cd objs && gcc -g -O2   -shared -fPIC -c -I/tmp/slang.r7XqVr/slang-pre2.3.0-68/src /tmp/slang.r7XqVr/slang-pre2.3.0-68/modules/chksum_sha1.c
+cd objs && gcc -g -O2   -shared -fPIC chksum-module.o chksum_md5.o chksum_sha1.o -o chksum-module.so -L/ffp/lib -Wl,-rpath,/ffp/lib -Wl,-R/ffp/lib:/ffp/lib:/ffp/lib:/ffp/lib:/ffp/lib   -lm
+cd objs && gcc -g -O2   -shared -fPIC -I/tmp/slang.r7XqVr/slang-pre2.3.0-68/src /tmp/slang.r7XqVr/slang-pre2.3.0-68/modules/histogram-module.c -o histogram-module.so -L/ffp/lib -Wl,-rpath,/ffp/lib -Wl,-R/ffp/lib:/ffp/lib:/ffp/lib:/ffp/lib:/ffp/lib   -lm
+/tmp/slang.r7XqVr/slang-pre2.3.0-68/modules/histogram-module.c:54:0: warning: "isnan" redefined
+/ffp/include/math.h:280:0: note: this is the location of the previous definition
+cd objs && gcc -g -O2   -shared -fPIC -I/tmp/slang.r7XqVr/slang-pre2.3.0-68/src /tmp/slang.r7XqVr/slang-pre2.3.0-68/modules/stats-module.c -o stats-module.so -L/ffp/lib -Wl,-rpath,/ffp/lib -Wl,-R/ffp/lib:/ffp/lib:/ffp/lib:/ffp/lib:/ffp/lib   -lm
+cd objs && gcc -g -O2   -shared -fPIC -I/tmp/slang.r7XqVr/slang-pre2.3.0-68/src -I/ffp/include /tmp/slang.r7XqVr/slang-pre2.3.0-68/modules/pcre-module.c -o pcre-module.so -L/ffp/lib -lpcre -L/ffp/lib -Wl,-rpath,/ffp/lib -Wl,-R/ffp/lib:/ffp/lib:/ffp/lib:/ffp/lib:/ffp/lib   -lm
+cd objs && gcc -g -O2   -shared -fPIC -I/tmp/slang.r7XqVr/slang-pre2.3.0-68/src -I/ffp/include /tmp/slang.r7XqVr/slang-pre2.3.0-68/modules/png-module.c -o png-module.so -L/ffp/lib -lpng -L/ffp/lib -Wl,-rpath,/ffp/lib -Wl,-R/ffp/lib:/ffp/lib:/ffp/lib:/ffp/lib:/ffp/lib   -lm
+cd objs && gcc -g -O2   -shared -fPIC -I/tmp/slang.r7XqVr/slang-pre2.3.0-68/src -I/ffp/include /tmp/slang.r7XqVr/slang-pre2.3.0-68/modules/iconv-module.c -o iconv-module.so -L/ffp/lib -liconv -L/ffp/lib -Wl,-rpath,/ffp/lib -Wl,-R/ffp/lib:/ffp/lib:/ffp/lib:/ffp/lib:/ffp/lib   -lm
+cd objs && gcc -g -O2   -shared -fPIC -I/tmp/slang.r7XqVr/slang-pre2.3.0-68/src -I/ffp/include /tmp/slang.r7XqVr/slang-pre2.3.0-68/modules/zlib-module.c -o zlib-module.so -L/ffp/lib -lz -L/ffp/lib -Wl,-rpath,/ffp/lib -Wl,-R/ffp/lib:/ffp/lib:/ffp/lib:/ffp/lib:/ffp/lib   -lm
+cd objs && gcc -g -O2   -shared -fPIC -I/tmp/slang.r7XqVr/slang-pre2.3.0-68/src /tmp/slang.r7XqVr/slang-pre2.3.0-68/modules/sysconf-module.c -o sysconf-module.so -L/ffp/lib -Wl,-rpath,/ffp/lib -Wl,-R/ffp/lib:/ffp/lib:/ffp/lib:/ffp/lib:/ffp/lib   -lm
+make[1]: Leaving directory `/tmp/slang.r7XqVr/slang-pre2.3.0-68/modules'
+Use make install to install it.
++ make DESTDIR=/tmp/slang.r7XqVr/pkg install
+cd src; make install-elf
+make[1]: Entering directory `/tmp/slang.r7XqVr/slang-pre2.3.0-68/src'
+/tmp/slang.r7XqVr/slang-pre2.3.0-68/autoconf/mkinsdir.sh /tmp/slang.r7XqVr/pkg/ffp/include
+mkdir -p -- /tmp/slang.r7XqVr/pkg/ffp/include
+installing slang.h and slcurses.h in /tmp/slang.r7XqVr/pkg/ffp/include/
+/ffp/bin/install -c -m 644 /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slang.h /tmp/slang.r7XqVr/pkg/ffp/include/
+/ffp/bin/install -c -m 644 /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/slcurses.h /tmp/slang.r7XqVr/pkg/ffp/include/
+/tmp/slang.r7XqVr/slang-pre2.3.0-68/autoconf/mkinsdir.sh /tmp/slang.r7XqVr/pkg/ffp/share/doc/slang/v2
+mkdir -p -- /tmp/slang.r7XqVr/pkg/ffp/share/doc/slang/v2
+/ffp/bin/install -c -m 644 ../changes.txt /tmp/slang.r7XqVr/pkg/ffp/share/doc/slang/v2/
+/ffp/bin/install -c -m 644 ../COPYING /tmp/slang.r7XqVr/pkg/ffp/share/doc/slang/v2/
+/ffp/bin/install -c -m 644 ../doc/slangdoc.html /tmp/slang.r7XqVr/pkg/ffp/share/doc/slang/v2/
+/ffp/bin/install -c -m 644 ../doc/text/cref.txt /tmp/slang.r7XqVr/pkg/ffp/share/doc/slang/v2/
+/ffp/bin/install -c -m 644 ../doc/text/cslang.txt /tmp/slang.r7XqVr/pkg/ffp/share/doc/slang/v2/
+/ffp/bin/install -c -m 644 ../doc/text/slang.txt /tmp/slang.r7XqVr/pkg/ffp/share/doc/slang/v2/
+/ffp/bin/install -c -m 644 ../doc/text/slangfun.txt /tmp/slang.r7XqVr/pkg/ffp/share/doc/slang/v2/
+/tmp/slang.r7XqVr/slang-pre2.3.0-68/autoconf/mkinsdir.sh /tmp/slang.r7XqVr/pkg/ffp/lib
+mkdir -p -- /tmp/slang.r7XqVr/pkg/ffp/lib
+rm -f /tmp/slang.r7XqVr/pkg/ffp/lib/libslang.so
+rm -f /tmp/slang.r7XqVr/pkg/ffp/lib/libslang.so.2
+installing libslang.so.2.3.0 in /tmp/slang.r7XqVr/pkg/ffp/lib
+/ffp/bin/install -c -m 644 /tmp/slang.r7XqVr/slang-pre2.3.0-68/src/elfobjs/libslang.so.2.3.0 /tmp/slang.r7XqVr/pkg/ffp/lib/
+cd /tmp/slang.r7XqVr/pkg/ffp/lib && /bin/ln -sf libslang.so.2.3.0 libslang.so.2
+cd /tmp/slang.r7XqVr/pkg/ffp/lib && /bin/ln -sf libslang.so.2 libslang.so
+
+libslang.so.2.3.0 created in /tmp/slang.r7XqVr/pkg/ffp/lib.
+The links libslang.so and libslang.so.2 to libslang.so.2.3.0 were also created.
+
+make[1]: Leaving directory `/tmp/slang.r7XqVr/slang-pre2.3.0-68/src'
+Now installing slsh
+cd slsh; make install
+make[1]: Entering directory `/tmp/slang.r7XqVr/slang-pre2.3.0-68/slsh'
+cd objs && gcc -c -g -O2   -I/tmp/slang.r7XqVr/slang-pre2.3.0-68/src -DSLSH_CONF_DIR='"/ffp/etc"' -DSLSH_PATH='"/ffp/share/slsh"' -DSLSH_CONF_DIR_ENV='"SLSH_CONF_DIR"' -DSLSH_LIB_DIR_ENV='"SLSH_LIB_DIR"' -DSLSH_PATH_ENV='"SLSH_PATH"' /tmp/slang.r7XqVr/slang-pre2.3.0-68/slsh/slsh.c
+gcc -g -O2   objs/slsh.o objs/readline.o -o objs/slsh -L/ffp/lib -Wl,-rpath,/ffp/lib -Wl,-export-dynamic -L/tmp/slang.r7XqVr/pkg/ffp/lib -Wl,-R/ffp/lib:/ffp/lib:/ffp/lib:/ffp/lib:/ffp/lib -L/ffp/lib -lslang  -ldl  -lm
+/tmp/slang.r7XqVr/slang-pre2.3.0-68/autoconf/mkinsdir.sh /tmp/slang.r7XqVr/pkg/ffp/bin
+mkdir -p -- /tmp/slang.r7XqVr/pkg/ffp/bin
+/tmp/slang.r7XqVr/slang-pre2.3.0-68/autoconf/mkinsdir.sh /tmp/slang.r7XqVr/pkg/ffp/share/man/man1
+mkdir -p -- /tmp/slang.r7XqVr/pkg/ffp/share/man/man1
+/tmp/slang.r7XqVr/slang-pre2.3.0-68/autoconf/mkinsdir.sh /tmp/slang.r7XqVr/pkg/ffp/etc
+mkdir -p -- /tmp/slang.r7XqVr/pkg/ffp/etc
+/tmp/slang.r7XqVr/slang-pre2.3.0-68/autoconf/mkinsdir.sh /tmp/slang.r7XqVr/pkg/ffp/share/slsh
+mkdir -p -- /tmp/slang.r7XqVr/pkg/ffp/share/slsh
+/tmp/slang.r7XqVr/slang-pre2.3.0-68/autoconf/mkinsdir.sh /tmp/slang.r7XqVr/pkg/ffp/share/slsh/rline
+mkdir -p -- /tmp/slang.r7XqVr/pkg/ffp/share/slsh/rline
+/tmp/slang.r7XqVr/slang-pre2.3.0-68/autoconf/mkinsdir.sh /tmp/slang.r7XqVr/pkg/ffp/share/slsh/help
+mkdir -p -- /tmp/slang.r7XqVr/pkg/ffp/share/slsh/help
+/tmp/slang.r7XqVr/slang-pre2.3.0-68/autoconf/mkinsdir.sh /tmp/slang.r7XqVr/pkg/ffp/share/slsh/local-packages
+mkdir -p -- /tmp/slang.r7XqVr/pkg/ffp/share/slsh/local-packages
+/tmp/slang.r7XqVr/slang-pre2.3.0-68/autoconf/mkinsdir.sh /tmp/slang.r7XqVr/pkg/ffp/share/slsh/scripts
+mkdir -p -- /tmp/slang.r7XqVr/pkg/ffp/share/slsh/scripts
+/tmp/slang.r7XqVr/slang-pre2.3.0-68/autoconf/mkinsdir.sh /tmp/slang.r7XqVr/pkg/ffp/share/doc/slsh/html
+mkdir -p -- /tmp/slang.r7XqVr/pkg/ffp/share/doc/slsh/html
+/ffp/bin/install -c -m 644 lib/arrayfuns.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh
+/ffp/bin/install -c -m 644 lib/autoload.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh
+/ffp/bin/install -c -m 644 lib/cmdopt.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh
+/ffp/bin/install -c -m 644 lib/fswalk.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh
+/ffp/bin/install -c -m 644 lib/glob.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh
+/ffp/bin/install -c -m 644 lib/print.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh
+/ffp/bin/install -c -m 644 lib/process.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh
+/ffp/bin/install -c -m 644 lib/profile.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh
+/ffp/bin/install -c -m 644 lib/readascii.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh
+/ffp/bin/install -c -m 644 lib/require.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh
+/ffp/bin/install -c -m 644 lib/setfuns.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh
+/ffp/bin/install -c -m 644 lib/sldb.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh
+/ffp/bin/install -c -m 644 lib/sldbcore.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh
+/ffp/bin/install -c -m 644 lib/sldbsock.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh
+/ffp/bin/install -c -m 644 lib/slshhelp.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh
+/ffp/bin/install -c -m 644 lib/slshrl.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh
+/ffp/bin/install -c -m 644 lib/stkcheck.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh
+/ffp/bin/install -c -m 644 lib/structfuns.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh
+/ffp/bin/install -c -m 644 lib/rline/complete.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh/rline/
+/ffp/bin/install -c -m 644 lib/rline/editfuns.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh/rline/
+/ffp/bin/install -c -m 644 lib/rline/editor.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh/rline/
+/ffp/bin/install -c -m 644 lib/rline/emacskeys.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh/rline/
+/ffp/bin/install -c -m 644 lib/rline/history.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh/rline/
+/ffp/bin/install -c -m 644 lib/rline/histsrch.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh/rline/
+/ffp/bin/install -c -m 644 lib/rline/vikeys.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh/rline/
+/ffp/bin/install -c -m 644 lib/rline/slrline.rc /tmp/slang.r7XqVr/pkg/ffp/share/slsh/rline/
+/ffp/bin/install -c scripts/jpegsize /tmp/slang.r7XqVr/pkg/ffp/share/slsh/scripts
+/ffp/bin/install -c scripts/lsrpm /tmp/slang.r7XqVr/pkg/ffp/share/slsh/scripts
+/ffp/bin/install -c scripts/sldb /tmp/slang.r7XqVr/pkg/ffp/share/slsh/scripts
+/ffp/bin/install -c scripts/svnsh /tmp/slang.r7XqVr/pkg/ffp/share/slsh/scripts
+/ffp/bin/install -c scripts/slprof /tmp/slang.r7XqVr/pkg/ffp/share/slsh/scripts
+/ffp/bin/install -c scripts/slstkchk /tmp/slang.r7XqVr/pkg/ffp/share/slsh/scripts
+/ffp/bin/install -c -m 644 lib/help/arrayfuns.hlp /tmp/slang.r7XqVr/pkg/ffp/share/slsh/help
+/ffp/bin/install -c -m 644 lib/help/cmdopt.hlp /tmp/slang.r7XqVr/pkg/ffp/share/slsh/help
+/ffp/bin/install -c -m 644 lib/help/glob.hlp /tmp/slang.r7XqVr/pkg/ffp/share/slsh/help
+/ffp/bin/install -c -m 644 lib/help/print.hlp /tmp/slang.r7XqVr/pkg/ffp/share/slsh/help
+/ffp/bin/install -c -m 644 lib/help/process.hlp /tmp/slang.r7XqVr/pkg/ffp/share/slsh/help
+/ffp/bin/install -c -m 644 lib/help/profile.hlp /tmp/slang.r7XqVr/pkg/ffp/share/slsh/help
+/ffp/bin/install -c -m 644 lib/help/readascii.hlp /tmp/slang.r7XqVr/pkg/ffp/share/slsh/help
+/ffp/bin/install -c -m 644 lib/help/require.hlp /tmp/slang.r7XqVr/pkg/ffp/share/slsh/help
+/ffp/bin/install -c -m 644 lib/help/setfuns.hlp /tmp/slang.r7XqVr/pkg/ffp/share/slsh/help
+/ffp/bin/install -c -m 644 lib/help/structfuns.hlp /tmp/slang.r7XqVr/pkg/ffp/share/slsh/help
+/ffp/bin/install -c -m 644 doc/html/slshfun-1.html /tmp/slang.r7XqVr/pkg/ffp/share/doc/slsh/html/
+/ffp/bin/install -c -m 644 doc/html/slshfun-2.html /tmp/slang.r7XqVr/pkg/ffp/share/doc/slsh/html/
+/ffp/bin/install -c -m 644 doc/html/slshfun-3.html /tmp/slang.r7XqVr/pkg/ffp/share/doc/slsh/html/
+/ffp/bin/install -c -m 644 doc/html/slshfun-4.html /tmp/slang.r7XqVr/pkg/ffp/share/doc/slsh/html/
+/ffp/bin/install -c -m 644 doc/html/slshfun-5.html /tmp/slang.r7XqVr/pkg/ffp/share/doc/slsh/html/
+/ffp/bin/install -c -m 644 doc/html/slshfun-6.html /tmp/slang.r7XqVr/pkg/ffp/share/doc/slsh/html/
+/ffp/bin/install -c -m 644 doc/html/slshfun-7.html /tmp/slang.r7XqVr/pkg/ffp/share/doc/slsh/html/
+/ffp/bin/install -c -m 644 doc/html/slshfun-8.html /tmp/slang.r7XqVr/pkg/ffp/share/doc/slsh/html/
+/ffp/bin/install -c -m 644 doc/html/slshfun-9.html /tmp/slang.r7XqVr/pkg/ffp/share/doc/slsh/html/
+/ffp/bin/install -c -m 644 doc/html/slshfun.html /tmp/slang.r7XqVr/pkg/ffp/share/doc/slsh/html/
+/ffp/bin/install -c objs/slsh /tmp/slang.r7XqVr/pkg/ffp/bin/
+/ffp/bin/install -c -m 644 etc/slsh.rc /tmp/slang.r7XqVr/pkg/ffp/etc/
+echo 'prepend_to_slang_load_path("/ffp/share/slsh/local-packages");' >> /tmp/slang.r7XqVr/pkg/ffp/etc/slsh.rc
+/ffp/bin/install -c -m 644 doc/man/slsh.1 /tmp/slang.r7XqVr/pkg/ffp/share/man/man1/
+make[1]: Leaving directory `/tmp/slang.r7XqVr/slang-pre2.3.0-68/slsh'
+Now installing the modules
+cd modules; make install
+make[1]: Entering directory `/tmp/slang.r7XqVr/slang-pre2.3.0-68/modules'
+/tmp/slang.r7XqVr/slang-pre2.3.0-68/autoconf/mkinsdir.sh /tmp/slang.r7XqVr/pkg/ffp/lib/slang/v2/modules
+mkdir -p -- /tmp/slang.r7XqVr/pkg/ffp/lib/slang/v2/modules
+/ffp/bin/install -c -m 644 objs/slsmg-module.so /tmp/slang.r7XqVr/pkg/ffp/lib/slang/v2/modules
+/ffp/bin/install -c -m 644 objs/termios-module.so /tmp/slang.r7XqVr/pkg/ffp/lib/slang/v2/modules
+/ffp/bin/install -c -m 644 objs/select-module.so /tmp/slang.r7XqVr/pkg/ffp/lib/slang/v2/modules
+/ffp/bin/install -c -m 644 objs/fcntl-module.so /tmp/slang.r7XqVr/pkg/ffp/lib/slang/v2/modules
+/ffp/bin/install -c -m 644 objs/varray-module.so /tmp/slang.r7XqVr/pkg/ffp/lib/slang/v2/modules
+/ffp/bin/install -c -m 644 objs/socket-module.so /tmp/slang.r7XqVr/pkg/ffp/lib/slang/v2/modules
+/ffp/bin/install -c -m 644 objs/rand-module.so /tmp/slang.r7XqVr/pkg/ffp/lib/slang/v2/modules
+/ffp/bin/install -c -m 644 objs/fork-module.so /tmp/slang.r7XqVr/pkg/ffp/lib/slang/v2/modules
+/ffp/bin/install -c -m 644 objs/csv-module.so /tmp/slang.r7XqVr/pkg/ffp/lib/slang/v2/modules
+/ffp/bin/install -c -m 644 objs/base64-module.so /tmp/slang.r7XqVr/pkg/ffp/lib/slang/v2/modules
+/ffp/bin/install -c -m 644 objs/chksum-module.so /tmp/slang.r7XqVr/pkg/ffp/lib/slang/v2/modules
+/ffp/bin/install -c -m 644 objs/histogram-module.so /tmp/slang.r7XqVr/pkg/ffp/lib/slang/v2/modules
+/ffp/bin/install -c -m 644 objs/stats-module.so /tmp/slang.r7XqVr/pkg/ffp/lib/slang/v2/modules
+/ffp/bin/install -c -m 644 objs/pcre-module.so /tmp/slang.r7XqVr/pkg/ffp/lib/slang/v2/modules
+/ffp/bin/install -c -m 644 objs/png-module.so /tmp/slang.r7XqVr/pkg/ffp/lib/slang/v2/modules
+/ffp/bin/install -c -m 644 objs/iconv-module.so /tmp/slang.r7XqVr/pkg/ffp/lib/slang/v2/modules
+/ffp/bin/install -c -m 644 objs/zlib-module.so /tmp/slang.r7XqVr/pkg/ffp/lib/slang/v2/modules
+/ffp/bin/install -c -m 644 objs/sysconf-module.so /tmp/slang.r7XqVr/pkg/ffp/lib/slang/v2/modules
+/tmp/slang.r7XqVr/slang-pre2.3.0-68/autoconf/mkinsdir.sh /tmp/slang.r7XqVr/pkg/ffp/share/slsh
+/ffp/bin/install -c -m 644 slsmg.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh
+/ffp/bin/install -c -m 644 termios.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh
+/ffp/bin/install -c -m 644 select.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh
+/ffp/bin/install -c -m 644 fcntl.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh
+/ffp/bin/install -c -m 644 varray.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh
+/ffp/bin/install -c -m 644 socket.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh
+/ffp/bin/install -c -m 644 pcre.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh
+/ffp/bin/install -c -m 644 png.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh
+/ffp/bin/install -c -m 644 iconv.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh
+/ffp/bin/install -c -m 644 onig.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh
+/ffp/bin/install -c -m 644 rand.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh
+/ffp/bin/install -c -m 644 csv.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh
+/ffp/bin/install -c -m 644 zlib.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh
+/ffp/bin/install -c -m 644 fork.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh
+/ffp/bin/install -c -m 644 sysconf.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh
+/ffp/bin/install -c -m 644 base64.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh
+/ffp/bin/install -c -m 644 chksum.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh
+/ffp/bin/install -c -m 644 histogram.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh
+/ffp/bin/install -c -m 644 stats.sl /tmp/slang.r7XqVr/pkg/ffp/share/slsh
+/tmp/slang.r7XqVr/slang-pre2.3.0-68/autoconf/mkinsdir.sh /tmp/slang.r7XqVr/pkg/ffp/share/slsh/cmaps
+mkdir -p -- /tmp/slang.r7XqVr/pkg/ffp/share/slsh/cmaps
+/ffp/bin/install -c -m 644 cmaps/cool.map /tmp/slang.r7XqVr/pkg/ffp/share/slsh/cmaps
+/ffp/bin/install -c -m 644 cmaps/coolwarm.map /tmp/slang.r7XqVr/pkg/ffp/share/slsh/cmaps
+/ffp/bin/install -c -m 644 cmaps/copper.map /tmp/slang.r7XqVr/pkg/ffp/share/slsh/cmaps
+/ffp/bin/install -c -m 644 cmaps/cubicl.map /tmp/slang.r7XqVr/pkg/ffp/share/slsh/cmaps
+/ffp/bin/install -c -m 644 cmaps/cubicyf.map /tmp/slang.r7XqVr/pkg/ffp/share/slsh/cmaps
+/ffp/bin/install -c -m 644 cmaps/drywet.map /tmp/slang.r7XqVr/pkg/ffp/share/slsh/cmaps
+/ffp/bin/install -c -m 644 cmaps/ds9b.map /tmp/slang.r7XqVr/pkg/ffp/share/slsh/cmaps
+/ffp/bin/install -c -m 644 cmaps/ds9sls.map /tmp/slang.r7XqVr/pkg/ffp/share/slsh/cmaps
+/ffp/bin/install -c -m 644 cmaps/edge.map /tmp/slang.r7XqVr/pkg/ffp/share/slsh/cmaps
+/ffp/bin/install -c -m 644 cmaps/gebco.map /tmp/slang.r7XqVr/pkg/ffp/share/slsh/cmaps
+/ffp/bin/install -c -m 644 cmaps/globe.map /tmp/slang.r7XqVr/pkg/ffp/share/slsh/cmaps
+/ffp/bin/install -c -m 644 cmaps/gray.map /tmp/slang.r7XqVr/pkg/ffp/share/slsh/cmaps
+/ffp/bin/install -c -m 644 cmaps/haxby.map /tmp/slang.r7XqVr/pkg/ffp/share/slsh/cmaps
+/ffp/bin/install -c -m 644 cmaps/hot.map /tmp/slang.r7XqVr/pkg/ffp/share/slsh/cmaps
+/ffp/bin/install -c -m 644 cmaps/jet.map /tmp/slang.r7XqVr/pkg/ffp/share/slsh/cmaps
+/ffp/bin/install -c -m 644 cmaps/no_green.map /tmp/slang.r7XqVr/pkg/ffp/share/slsh/cmaps
+/ffp/bin/install -c -m 644 cmaps/ocean.map /tmp/slang.r7XqVr/pkg/ffp/share/slsh/cmaps
+/ffp/bin/install -c -m 644 cmaps/polar.map /tmp/slang.r7XqVr/pkg/ffp/share/slsh/cmaps
+/ffp/bin/install -c -m 644 cmaps/rainbow.map /tmp/slang.r7XqVr/pkg/ffp/share/slsh/cmaps
+/ffp/bin/install -c -m 644 cmaps/red2green.map /tmp/slang.r7XqVr/pkg/ffp/share/slsh/cmaps
+/ffp/bin/install -c -m 644 cmaps/relief.map /tmp/slang.r7XqVr/pkg/ffp/share/slsh/cmaps
+/ffp/bin/install -c -m 644 cmaps/sealand.map /tmp/slang.r7XqVr/pkg/ffp/share/slsh/cmaps
+/ffp/bin/install -c -m 644 cmaps/seis.map /tmp/slang.r7XqVr/pkg/ffp/share/slsh/cmaps
+/ffp/bin/install -c -m 644 cmaps/split.map /tmp/slang.r7XqVr/pkg/ffp/share/slsh/cmaps
+/ffp/bin/install -c -m 644 cmaps/topo.map /tmp/slang.r7XqVr/pkg/ffp/share/slsh/cmaps
+/ffp/bin/install -c -m 644 cmaps/wysiwyg.map /tmp/slang.r7XqVr/pkg/ffp/share/slsh/cmaps
+/tmp/slang.r7XqVr/slang-pre2.3.0-68/autoconf/mkinsdir.sh /tmp/slang.r7XqVr/pkg/ffp/share/slsh/help
+/ffp/bin/install -c -m 644 help/csvfuns.hlp /tmp/slang.r7XqVr/pkg/ffp/share/slsh/help
+/ffp/bin/install -c -m 644 help/forkfuns.hlp /tmp/slang.r7XqVr/pkg/ffp/share/slsh/help
+/ffp/bin/install -c -m 644 help/histfuns.hlp /tmp/slang.r7XqVr/pkg/ffp/share/slsh/help
+/ffp/bin/install -c -m 644 help/onigfuns.hlp /tmp/slang.r7XqVr/pkg/ffp/share/slsh/help
+/ffp/bin/install -c -m 644 help/pcrefuns.hlp /tmp/slang.r7XqVr/pkg/ffp/share/slsh/help
+/ffp/bin/install -c -m 644 help/pngfuns.hlp /tmp/slang.r7XqVr/pkg/ffp/share/slsh/help
+/ffp/bin/install -c -m 644 help/randfuns.hlp /tmp/slang.r7XqVr/pkg/ffp/share/slsh/help
+/ffp/bin/install -c -m 644 help/slsmg.hlp /tmp/slang.r7XqVr/pkg/ffp/share/slsh/help
+/ffp/bin/install -c -m 644 help/sockfuns.hlp /tmp/slang.r7XqVr/pkg/ffp/share/slsh/help
+/ffp/bin/install -c -m 644 help/statsfuns.hlp /tmp/slang.r7XqVr/pkg/ffp/share/slsh/help
+make[1]: Leaving directory `/tmp/slang.r7XqVr/slang-pre2.3.0-68/modules'
+
+On some systems, e.g., linux, you may also have to run ldconfig.
+
+autoconf/mkinsdir.sh /tmp/slang.r7XqVr/pkg/ffp/lib/pkgconfig
+mkdir -p -- /tmp/slang.r7XqVr/pkg/ffp/lib/pkgconfig
+/ffp/bin/install -c -m 644 slang.pc /tmp/slang.r7XqVr/pkg/ffp/lib/pkgconfig/
++ mkdir -p /tmp/slang.r7XqVr/pkg/install
++ cp /ffp/home/root/fun_plug/src/slang/DESCR /ffp/home/root/fun_plug/src/slang/HOMEPAGE /tmp/slang.r7XqVr/pkg/install/
++ cd /tmp/slang.r7XqVr/pkg
++ makepkg slang pre2.3.0-68 1
+Creating /tmp/slang-pre2.3.0-68-arm-1.tar ...
