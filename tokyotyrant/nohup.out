@@ -1,0 +1,163 @@
+++ basename ./tokyotyrant.funpkg .funpkg
++ PN=tokyotyrant
+++ ls tokyotyrant-1.1.41.tar.bz2
+++ egrep -o '[0-9][0-9.]*[0-9]'
++ PV=1.1.41
++ PR=1
++ . ./config.ffp
+++ GNU_HOST=
+++ GNU_TARGET=
+++ FFP_CFLAGS='-I/ffp/include -O2'
+++ FFP_LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
+++ '[' '!' -d '' ']'
+++ TMPDIR=/tmp
+++ export TMPDIR
+++ mandir=/ffp/share/man
+++ infodir=/ffp/share/info
+++ docdir=/ffp/share/doc
+++ pwd
++ X=/ffp/home/root/src/tokyotyrant
+++ mktemp -t -d tokyotyrant.XXXXXX
++ W=/tmp/tokyotyrant.rr1YT1
++ D=/tmp/tokyotyrant.rr1YT1/pkg
++ cd /tmp/tokyotyrant.rr1YT1
++ tar xf /ffp/home/root/src/tokyotyrant/tokyotyrant-1.1.41.tar.bz2
++ cd tokyotyrant-1.1.41
++ LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
++ ./configure --prefix=/ffp --build= --host= --mandir=/ffp/share/man --infodir=/ffp/share/info
+#================================================================
+# Configuring Tokyo Tyrant version 1.1.41.
+#================================================================
+checking for gcc... gcc
+checking for C compiler default output file name... a.out
+checking whether the C compiler works... yes
+checking whether we are cross compiling... no
+checking for suffix of executables... 
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /ffp/bin/grep
+checking for egrep... /ffp/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking whether byte ordering is bigendian... no
+checking for main in -lc... yes
+checking for main in -lm... yes
+checking for main in -lpthread... yes
+checking for main in -lrt... yes
+checking for main in -ldl... yes
+checking for main in -lnsl... no
+checking for main in -lsocket... no
+checking for main in -lresolv... no
+checking for main in -lz... yes
+checking for main in -lbz2... yes
+checking for main in -ltokyocabinet... yes
+checking for main in -ltokyotyrant... no
+checking for stdlib.h... (cached) yes
+checking for stdint.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking pthread.h usability... yes
+checking pthread.h presence... yes
+checking for pthread.h... yes
+checking tcutil.h usability... yes
+checking tcutil.h presence... yes
+checking for tcutil.h... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating tokyotyrant.pc
+#================================================================
+# Ready to make.
+#================================================================
++ make
+gcc -c -I. -I/ffp/include -I/ffp/home/root//include -I/usr/local/include -DNDEBUG -D_GNU_SOURCE=1 -D_REENTRANT -D__EXTENSIONS__ -D_TT_PREFIX="\"/ffp\"" -D_TT_INCLUDEDIR="\"/ffp/include\"" -D_TT_LIBDIR="\"/ffp/lib\"" -D_TT_BINDIR="\"/ffp/bin\"" -D_TT_LIBEXECDIR="\"/ffp/libexec\"" -D_TT_APPINC="\"-I/ffp/include\"" -D_TT_APPLIBS="\"-L/ffp/lib -ltokyotyrant -ltokyocabinet -lbz2 -lz -ldl -lrt -lpthread -lm -lc \"" -g -O2 -std=c99 -Wall -fPIC -fsigned-char -O2 ttutil.c
+gcc -c -I. -I/ffp/include -I/ffp/home/root//include -I/usr/local/include -DNDEBUG -D_GNU_SOURCE=1 -D_REENTRANT -D__EXTENSIONS__ -D_TT_PREFIX="\"/ffp\"" -D_TT_INCLUDEDIR="\"/ffp/include\"" -D_TT_LIBDIR="\"/ffp/lib\"" -D_TT_BINDIR="\"/ffp/bin\"" -D_TT_LIBEXECDIR="\"/ffp/libexec\"" -D_TT_APPINC="\"-I/ffp/include\"" -D_TT_APPLIBS="\"-L/ffp/lib -ltokyotyrant -ltokyocabinet -lbz2 -lz -ldl -lrt -lpthread -lm -lc \"" -g -O2 -std=c99 -Wall -fPIC -fsigned-char -O2 tculog.c
+gcc -c -I. -I/ffp/include -I/ffp/home/root//include -I/usr/local/include -DNDEBUG -D_GNU_SOURCE=1 -D_REENTRANT -D__EXTENSIONS__ -D_TT_PREFIX="\"/ffp\"" -D_TT_INCLUDEDIR="\"/ffp/include\"" -D_TT_LIBDIR="\"/ffp/lib\"" -D_TT_BINDIR="\"/ffp/bin\"" -D_TT_LIBEXECDIR="\"/ffp/libexec\"" -D_TT_APPINC="\"-I/ffp/include\"" -D_TT_APPLIBS="\"-L/ffp/lib -ltokyotyrant -ltokyocabinet -lbz2 -lz -ldl -lrt -lpthread -lm -lc \"" -g -O2 -std=c99 -Wall -fPIC -fsigned-char -O2 tcrdb.c
+gcc -c -I. -I/ffp/include -I/ffp/home/root//include -I/usr/local/include -DNDEBUG -D_GNU_SOURCE=1 -D_REENTRANT -D__EXTENSIONS__ -D_TT_PREFIX="\"/ffp\"" -D_TT_INCLUDEDIR="\"/ffp/include\"" -D_TT_LIBDIR="\"/ffp/lib\"" -D_TT_BINDIR="\"/ffp/bin\"" -D_TT_LIBEXECDIR="\"/ffp/libexec\"" -D_TT_APPINC="\"-I/ffp/include\"" -D_TT_APPLIBS="\"-L/ffp/lib -ltokyotyrant -ltokyocabinet -lbz2 -lz -ldl -lrt -lpthread -lm -lc \"" -g -O2 -std=c99 -Wall -fPIC -fsigned-char -O2 myconf.c
+ar rv libtokyotyrant.a ttutil.o tculog.o tcrdb.o myconf.o
+ar: creating libtokyotyrant.a
+a - ttutil.o
+a - tculog.o
+a - tcrdb.o
+a - myconf.o
+if uname -a | egrep -i 'SunOS' > /dev/null ; \
+	  then \
+	    gcc -g -O2 -std=c99 -Wall -fPIC -fsigned-char -O2 -shared -Wl,-G,-h,libtokyotyrant.so.3 -o libtokyotyrant.so.3.24.0 \
+	      ttutil.o tculog.o tcrdb.o myconf.o -L/ffp/lib -Wl,-rpath,/ffp/lib -L. -L/ffp/lib -L/ffp/home/root//lib -L/usr/local/lib -ltokyocabinet -lbz2 -lz -ldl -lrt -lpthread -lm -lc  ; \
+	  else \
+	    gcc -g -O2 -std=c99 -Wall -fPIC -fsigned-char -O2 -shared -Wl,-soname,libtokyotyrant.so.3 -o libtokyotyrant.so.3.24.0 \
+	      ttutil.o tculog.o tcrdb.o myconf.o -L/ffp/lib -Wl,-rpath,/ffp/lib -L. -L/ffp/lib -L/ffp/home/root//lib -L/usr/local/lib -ltokyocabinet -lbz2 -lz -ldl -lrt -lpthread -lm -lc  ; \
+	  fi
+ln -f -s libtokyotyrant.so.3.24.0 libtokyotyrant.so.3
+ln -f -s libtokyotyrant.so.3.24.0 libtokyotyrant.so
+gcc -c -I. -I/ffp/include -I/ffp/home/root//include -I/usr/local/include -DNDEBUG -D_GNU_SOURCE=1 -D_REENTRANT -D__EXTENSIONS__ -D_TT_PREFIX="\"/ffp\"" -D_TT_INCLUDEDIR="\"/ffp/include\"" -D_TT_LIBDIR="\"/ffp/lib\"" -D_TT_BINDIR="\"/ffp/bin\"" -D_TT_LIBEXECDIR="\"/ffp/libexec\"" -D_TT_APPINC="\"-I/ffp/include\"" -D_TT_APPLIBS="\"-L/ffp/lib -ltokyotyrant -ltokyocabinet -lbz2 -lz -ldl -lrt -lpthread -lm -lc \"" -g -O2 -std=c99 -Wall -fPIC -fsigned-char -O2 ttskelmock.c
+gcc -g -O2 -std=c99 -Wall -fPIC -fsigned-char -O2 -shared -o ttskelmock.so ttskelmock.o -L/ffp/lib -Wl,-rpath,/ffp/lib -L. -L/ffp/lib -L/ffp/home/root//lib -L/usr/local/lib -ltokyocabinet -lbz2 -lz -ldl -lrt -lpthread -lm -lc 
+gcc -c -I. -I/ffp/include -I/ffp/home/root//include -I/usr/local/include -DNDEBUG -D_GNU_SOURCE=1 -D_REENTRANT -D__EXTENSIONS__ -D_TT_PREFIX="\"/ffp\"" -D_TT_INCLUDEDIR="\"/ffp/include\"" -D_TT_LIBDIR="\"/ffp/lib\"" -D_TT_BINDIR="\"/ffp/bin\"" -D_TT_LIBEXECDIR="\"/ffp/libexec\"" -D_TT_APPINC="\"-I/ffp/include\"" -D_TT_APPLIBS="\"-L/ffp/lib -ltokyotyrant -ltokyocabinet -lbz2 -lz -ldl -lrt -lpthread -lm -lc \"" -g -O2 -std=c99 -Wall -fPIC -fsigned-char -O2 ttskeldir.c
+gcc -g -O2 -std=c99 -Wall -fPIC -fsigned-char -O2 -shared -o ttskeldir.so ttskeldir.o -L/ffp/lib -Wl,-rpath,/ffp/lib -L. -L/ffp/lib -L/ffp/home/root//lib -L/usr/local/lib -ltokyocabinet -lbz2 -lz -ldl -lrt -lpthread -lm -lc 
+gcc -c -I. -I/ffp/include -I/ffp/home/root//include -I/usr/local/include -DNDEBUG -D_GNU_SOURCE=1 -D_REENTRANT -D__EXTENSIONS__ -D_TT_PREFIX="\"/ffp\"" -D_TT_INCLUDEDIR="\"/ffp/include\"" -D_TT_LIBDIR="\"/ffp/lib\"" -D_TT_BINDIR="\"/ffp/bin\"" -D_TT_LIBEXECDIR="\"/ffp/libexec\"" -D_TT_APPINC="\"-I/ffp/include\"" -D_TT_APPLIBS="\"-L/ffp/lib -ltokyotyrant -ltokyocabinet -lbz2 -lz -ldl -lrt -lpthread -lm -lc \"" -g -O2 -std=c99 -Wall -fPIC -fsigned-char -O2 ttskelproxy.c
+gcc -g -O2 -std=c99 -Wall -fPIC -fsigned-char -O2 -shared -o ttskelproxy.so ttskelproxy.o -L/ffp/lib -Wl,-rpath,/ffp/lib -L. -L/ffp/lib -L/ffp/home/root//lib -L/usr/local/lib -ltokyocabinet -lbz2 -lz -ldl -lrt -lpthread -lm -lc 
+gcc -c -I. -I/ffp/include -I/ffp/home/root//include -I/usr/local/include -DNDEBUG -D_GNU_SOURCE=1 -D_REENTRANT -D__EXTENSIONS__ -D_TT_PREFIX="\"/ffp\"" -D_TT_INCLUDEDIR="\"/ffp/include\"" -D_TT_LIBDIR="\"/ffp/lib\"" -D_TT_BINDIR="\"/ffp/bin\"" -D_TT_LIBEXECDIR="\"/ffp/libexec\"" -D_TT_APPINC="\"-I/ffp/include\"" -D_TT_APPLIBS="\"-L/ffp/lib -ltokyotyrant -ltokyocabinet -lbz2 -lz -ldl -lrt -lpthread -lm -lc \"" -g -O2 -std=c99 -Wall -fPIC -fsigned-char -O2 ttskelnull.c
+gcc -g -O2 -std=c99 -Wall -fPIC -fsigned-char -O2 -shared -o ttskelnull.so ttskelnull.o -L/ffp/lib -Wl,-rpath,/ffp/lib -L. -L/ffp/lib -L/ffp/home/root//lib -L/usr/local/lib -ltokyocabinet -lbz2 -lz -ldl -lrt -lpthread -lm -lc 
+gcc -c -I. -I/ffp/include -I/ffp/home/root//include -I/usr/local/include -DNDEBUG -D_GNU_SOURCE=1 -D_REENTRANT -D__EXTENSIONS__ -D_TT_PREFIX="\"/ffp\"" -D_TT_INCLUDEDIR="\"/ffp/include\"" -D_TT_LIBDIR="\"/ffp/lib\"" -D_TT_BINDIR="\"/ffp/bin\"" -D_TT_LIBEXECDIR="\"/ffp/libexec\"" -D_TT_APPINC="\"-I/ffp/include\"" -D_TT_APPLIBS="\"-L/ffp/lib -ltokyotyrant -ltokyocabinet -lbz2 -lz -ldl -lrt -lpthread -lm -lc \"" -g -O2 -std=c99 -Wall -fPIC -fsigned-char -O2 ttserver.c
+gcc -c -I. -I/ffp/include -I/ffp/home/root//include -I/usr/local/include -DNDEBUG -D_GNU_SOURCE=1 -D_REENTRANT -D__EXTENSIONS__ -D_TT_PREFIX="\"/ffp\"" -D_TT_INCLUDEDIR="\"/ffp/include\"" -D_TT_LIBDIR="\"/ffp/lib\"" -D_TT_BINDIR="\"/ffp/bin\"" -D_TT_LIBEXECDIR="\"/ffp/libexec\"" -D_TT_APPINC="\"-I/ffp/include\"" -D_TT_APPLIBS="\"-L/ffp/lib -ltokyotyrant -ltokyocabinet -lbz2 -lz -ldl -lrt -lpthread -lm -lc \"" -g -O2 -std=c99 -Wall -fPIC -fsigned-char -O2 scrext.c
+LD_RUN_PATH=/lib:/usr/lib:/ffp/lib:/ffp/home/root//lib:/usr/local/lib:/ffp/lib:. gcc -g -O2 -std=c99 -Wall -fPIC -fsigned-char -O2 -o ttserver ttserver.o scrext.o -L/ffp/lib -Wl,-rpath,/ffp/lib -L. -L/ffp/lib -L/ffp/home/root//lib -L/usr/local/lib  -ltokyotyrant -ltokyocabinet -lbz2 -lz -ldl -lrt -lpthread -lm -lc 
+gcc -c -I. -I/ffp/include -I/ffp/home/root//include -I/usr/local/include -DNDEBUG -D_GNU_SOURCE=1 -D_REENTRANT -D__EXTENSIONS__ -D_TT_PREFIX="\"/ffp\"" -D_TT_INCLUDEDIR="\"/ffp/include\"" -D_TT_LIBDIR="\"/ffp/lib\"" -D_TT_BINDIR="\"/ffp/bin\"" -D_TT_LIBEXECDIR="\"/ffp/libexec\"" -D_TT_APPINC="\"-I/ffp/include\"" -D_TT_APPLIBS="\"-L/ffp/lib -ltokyotyrant -ltokyocabinet -lbz2 -lz -ldl -lrt -lpthread -lm -lc \"" -g -O2 -std=c99 -Wall -fPIC -fsigned-char -O2 ttulmgr.c
+LD_RUN_PATH=/lib:/usr/lib:/ffp/lib:/ffp/home/root//lib:/usr/local/lib:/ffp/lib:. gcc -g -O2 -std=c99 -Wall -fPIC -fsigned-char -O2 -o ttulmgr ttulmgr.o -L/ffp/lib -Wl,-rpath,/ffp/lib -L. -L/ffp/lib -L/ffp/home/root//lib -L/usr/local/lib  -ltokyotyrant -ltokyocabinet -lbz2 -lz -ldl -lrt -lpthread -lm -lc 
+gcc -c -I. -I/ffp/include -I/ffp/home/root//include -I/usr/local/include -DNDEBUG -D_GNU_SOURCE=1 -D_REENTRANT -D__EXTENSIONS__ -D_TT_PREFIX="\"/ffp\"" -D_TT_INCLUDEDIR="\"/ffp/include\"" -D_TT_LIBDIR="\"/ffp/lib\"" -D_TT_BINDIR="\"/ffp/bin\"" -D_TT_LIBEXECDIR="\"/ffp/libexec\"" -D_TT_APPINC="\"-I/ffp/include\"" -D_TT_APPLIBS="\"-L/ffp/lib -ltokyotyrant -ltokyocabinet -lbz2 -lz -ldl -lrt -lpthread -lm -lc \"" -g -O2 -std=c99 -Wall -fPIC -fsigned-char -O2 ttultest.c
+LD_RUN_PATH=/lib:/usr/lib:/ffp/lib:/ffp/home/root//lib:/usr/local/lib:/ffp/lib:. gcc -g -O2 -std=c99 -Wall -fPIC -fsigned-char -O2 -o ttultest ttultest.o -L/ffp/lib -Wl,-rpath,/ffp/lib -L. -L/ffp/lib -L/ffp/home/root//lib -L/usr/local/lib  -ltokyotyrant -ltokyocabinet -lbz2 -lz -ldl -lrt -lpthread -lm -lc 
+gcc -c -I. -I/ffp/include -I/ffp/home/root//include -I/usr/local/include -DNDEBUG -D_GNU_SOURCE=1 -D_REENTRANT -D__EXTENSIONS__ -D_TT_PREFIX="\"/ffp\"" -D_TT_INCLUDEDIR="\"/ffp/include\"" -D_TT_LIBDIR="\"/ffp/lib\"" -D_TT_BINDIR="\"/ffp/bin\"" -D_TT_LIBEXECDIR="\"/ffp/libexec\"" -D_TT_APPINC="\"-I/ffp/include\"" -D_TT_APPLIBS="\"-L/ffp/lib -ltokyotyrant -ltokyocabinet -lbz2 -lz -ldl -lrt -lpthread -lm -lc \"" -g -O2 -std=c99 -Wall -fPIC -fsigned-char -O2 tcrtest.c
+LD_RUN_PATH=/lib:/usr/lib:/ffp/lib:/ffp/home/root//lib:/usr/local/lib:/ffp/lib:. gcc -g -O2 -std=c99 -Wall -fPIC -fsigned-char -O2 -o tcrtest tcrtest.o -L/ffp/lib -Wl,-rpath,/ffp/lib -L. -L/ffp/lib -L/ffp/home/root//lib -L/usr/local/lib  -ltokyotyrant -ltokyocabinet -lbz2 -lz -ldl -lrt -lpthread -lm -lc 
+gcc -c -I. -I/ffp/include -I/ffp/home/root//include -I/usr/local/include -DNDEBUG -D_GNU_SOURCE=1 -D_REENTRANT -D__EXTENSIONS__ -D_TT_PREFIX="\"/ffp\"" -D_TT_INCLUDEDIR="\"/ffp/include\"" -D_TT_LIBDIR="\"/ffp/lib\"" -D_TT_BINDIR="\"/ffp/bin\"" -D_TT_LIBEXECDIR="\"/ffp/libexec\"" -D_TT_APPINC="\"-I/ffp/include\"" -D_TT_APPLIBS="\"-L/ffp/lib -ltokyotyrant -ltokyocabinet -lbz2 -lz -ldl -lrt -lpthread -lm -lc \"" -g -O2 -std=c99 -Wall -fPIC -fsigned-char -O2 tcrmttest.c
+LD_RUN_PATH=/lib:/usr/lib:/ffp/lib:/ffp/home/root//lib:/usr/local/lib:/ffp/lib:. gcc -g -O2 -std=c99 -Wall -fPIC -fsigned-char -O2 -o tcrmttest tcrmttest.o -L/ffp/lib -Wl,-rpath,/ffp/lib -L. -L/ffp/lib -L/ffp/home/root//lib -L/usr/local/lib  -ltokyotyrant -ltokyocabinet -lbz2 -lz -ldl -lrt -lpthread -lm -lc 
+gcc -c -I. -I/ffp/include -I/ffp/home/root//include -I/usr/local/include -DNDEBUG -D_GNU_SOURCE=1 -D_REENTRANT -D__EXTENSIONS__ -D_TT_PREFIX="\"/ffp\"" -D_TT_INCLUDEDIR="\"/ffp/include\"" -D_TT_LIBDIR="\"/ffp/lib\"" -D_TT_BINDIR="\"/ffp/bin\"" -D_TT_LIBEXECDIR="\"/ffp/libexec\"" -D_TT_APPINC="\"-I/ffp/include\"" -D_TT_APPLIBS="\"-L/ffp/lib -ltokyotyrant -ltokyocabinet -lbz2 -lz -ldl -lrt -lpthread -lm -lc \"" -g -O2 -std=c99 -Wall -fPIC -fsigned-char -O2 tcrmgr.c
+LD_RUN_PATH=/lib:/usr/lib:/ffp/lib:/ffp/home/root//lib:/usr/local/lib:/ffp/lib:. gcc -g -O2 -std=c99 -Wall -fPIC -fsigned-char -O2 -o tcrmgr tcrmgr.o -L/ffp/lib -Wl,-rpath,/ffp/lib -L. -L/ffp/lib -L/ffp/home/root//lib -L/usr/local/lib  -ltokyotyrant -ltokyocabinet -lbz2 -lz -ldl -lrt -lpthread -lm -lc 
+
+#================================================================
+# Ready to install.
+#================================================================
++ make DESTDIR=/tmp/tokyotyrant.rr1YT1/pkg install
+mkdir -p /tmp/tokyotyrant.rr1YT1/pkg/ffp/include
+cp -Rf ttutil.h tculog.h tcrdb.h /tmp/tokyotyrant.rr1YT1/pkg/ffp/include
+mkdir -p /tmp/tokyotyrant.rr1YT1/pkg/ffp/lib
+cp -Rf libtokyotyrant.a libtokyotyrant.so.3.24.0 libtokyotyrant.so.3 libtokyotyrant.so ttskelmock.so ttskeldir.so ttskelproxy.so ttskelnull.so /tmp/tokyotyrant.rr1YT1/pkg/ffp/lib
+mkdir -p /tmp/tokyotyrant.rr1YT1/pkg/ffp/bin
+cp -Rf ttserver ttulmgr ttultest tcrtest tcrmttest tcrmgr /tmp/tokyotyrant.rr1YT1/pkg/ffp/bin
+mkdir -p /tmp/tokyotyrant.rr1YT1/pkg/ffp/sbin
+cp -Rf ttservctl /tmp/tokyotyrant.rr1YT1/pkg/ffp/sbin
+mkdir -p /tmp/tokyotyrant.rr1YT1/pkg/ffp/share/tokyotyrant
+cp -Rf ext COPYING ChangeLog THANKS doc tokyotyrant.idl /tmp/tokyotyrant.rr1YT1/pkg/ffp/share/tokyotyrant
+mkdir -p /tmp/tokyotyrant.rr1YT1/pkg/ffp/share/man/man1
+cd man && cp -Rf ttserver.1 ttulmgr.1 ttultest.1 tcrtest.1 tcrmttest.1 tcrmgr.1 /tmp/tokyotyrant.rr1YT1/pkg/ffp/share/man/man1
+mkdir -p /tmp/tokyotyrant.rr1YT1/pkg/ffp/share/man/man3
+cd man && cp -Rf ttutil.3 tculog.3 tcrdb.3 /tmp/tokyotyrant.rr1YT1/pkg/ffp/share/man/man3
+mkdir -p /tmp/tokyotyrant.rr1YT1/pkg/ffp/share/man/man8
+cd man && cp -Rf ttservctl.8 /tmp/tokyotyrant.rr1YT1/pkg/ffp/share/man/man8
+mkdir -p /tmp/tokyotyrant.rr1YT1/pkg/ffp/lib/pkgconfig
+cp -Rf tokyotyrant.pc /tmp/tokyotyrant.rr1YT1/pkg/ffp/lib/pkgconfig
+[ "$UID" == 0 ] && ldconfig || true
+ldconfig: can't read header from /ffp/lib/libmenu.so, skipping
+ldconfig: can't read header from /ffp/lib/libncurses.so, skipping
+ldconfig: can't read header from /ffp/lib/libcursesw.so, skipping
+ldconfig: can't read header from /ffp/lib/libpanel.so, skipping
+ldconfig: can't read header from /ffp/lib/libform.so, skipping
+ldconfig: /ffp/lib/libstdc++.so.6.0.14-gdb.py is not a shared library, skipping
+ldconfig: can't read header from /ffp/lib/libcurses.so, skipping
+ldconfig: skipping /ffp/usr/lib: No such file or directory
+
+#================================================================
+# Thanks for using Tokyo Tyrant.
+#================================================================
++ mkdir -p /tmp/tokyotyrant.rr1YT1/pkg/install
++ cp /ffp/home/root/src/tokyotyrant/DESCR /ffp/home/root/src/tokyotyrant/HOMEPAGE /tmp/tokyotyrant.rr1YT1/pkg/install/
++ cd /tmp/tokyotyrant.rr1YT1/pkg
++ makepkg tokyotyrant 1.1.41 1
+Creating /tmp/tokyotyrant-1.1.41-arm-1.txz ...
