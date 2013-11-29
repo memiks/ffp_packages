@@ -1,0 +1,69 @@
+#!/ffp/bin/sh -xe
+
+PN=uClibc
+PR=3
+
+. ./config.ffp
+
+X=$(pwd)
+W=$(mktemp -t -d $PN.XXXXXX)
+D=$W/pkg
+
+cd $W
+cat $X/SRC_URI | xargs wget --no-check-certificate 
+PV=$(ls $PN-*.tar* | egrep -o '[0-9][0-9.]*[0-9]')
+tar xf $PN-$PV.tar*
+cd $PN-*
+
+for file in `ls $X/patches/*.patch`
+do
+        patch -p0 -i $file
+done
+
+cat $X/config_${FFP_ARCH} >.config
+
+_enable() {
+	sed -i "s,^\($1=y\|# $1 .*\),$1=y," .config
+}
+_disable() {
+	sed -i "s,^\($1=y\|# $1 .*\),# $1 is not set," .config
+}
+_set() {
+	sed -i "s,^$1=.*,$1=\"$2\"," .config
+}
+
+_set KERNEL_HEADERS /ffp/include
+if [ ! -d /ffp/include/linux ]; then
+	_set KERNEL_HEADERS /usr/include
+fi
+
+_set RUNTIME_PREFIX /ffp
+_set DEVEL_PREFIX   /ffp
+
+yes '' | make oldconfig
+
+#echo '#include <linux/uio.h>' > libc/sysdeps/linux/common/bits/uio.h
+
+make
+make utils
+make PREFIX=$D install install_utils
+
+mkdir -p $D/install
+cp $X/{DESCR,HOMEPAGE} $D/install/
+
+cd $D
+makepkg $PN $PV $PR
+
+
+# -solibs package
+D2=$D-solibs
+mkdir -p $D2/ffp/lib
+cp -av $D/ffp/lib/*.so* $D2/ffp/lib
+
+mkdir -p $D2/install
+cp $X/DESCR-solibs $D2/install/DESCR
+cp $X/HOMEPAGE $D2/install/
+
+cd $D2
+makepkg $PN-solibs $PV $PR
+
