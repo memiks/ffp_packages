@@ -1,0 +1,12 @@
+Libxslt is the XSLT C library developed for the GNOME project. 
+XSLT itself is a an XML language to define transformation for XML. 
+Libxslt is based on libxml2 the XML C library dev
+
+People can either embed the library in their application or use xsltproc 
+the command line processing tool. 
+This library is free software and can be reused in commercial applications 
+(see the intro)
+
+
+Homepage: http://xmlsoft.org/XSLT/index.html
+

@@ -1,0 +1,1141 @@
+++ basename ./libxml2.funpkg .funpkg
++ PN=libxml2
++ PR=1
++ . ./config.ffp
+++ GNU_HOST=
+++ GNU_TARGET=
+++ FFP_CFLAGS='-I/ffp/include -O2'
+++ FFP_LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
+++ '[' '!' -d '' ']'
+++ TMPDIR=/tmp
+++ export TMPDIR
+++ mandir=/ffp/share/man
+++ infodir=/ffp/share/info
+++ docdir=/ffp/share/doc
+++ pwd
++ X=/ffp/var/www/ffp_packages/libxml2
+++ mktemp -t -d libxml2.XXXXXX
++ W=/tmp/libxml2.9AyPei
++ D=/tmp/libxml2.9AyPei/pkg
++ cd /tmp/libxml2.9AyPei
++ cat /ffp/var/www/ffp_packages/libxml2/SRC_URI
++ xargs wget --no-check-certificate
+--2013-08-02 14:12:17--  ftp://xmlsoft.org/libxslt/libxml2-2.9.1.tar.gz
+           => 'libxml2-2.9.1.tar.gz'
+Resolving xmlsoft.org... 176.31.99.103
+Connecting to xmlsoft.org|176.31.99.103|:21... connected.
+Logging in as anonymous ... Logged in!
+==> SYST ... done.    ==> PWD ... done.
+==> TYPE I ... done.  ==> CWD (1) /libxslt ... done.
+==> SIZE libxml2-2.9.1.tar.gz ... 5172503
+==> PASV ... done.    ==> RETR libxml2-2.9.1.tar.gz ... done.
+Length: 5172503 (4.9M) (unauthoritative)
+
+     0K .......... .......... .......... .......... ..........  0%  442K 11s
+    50K .......... .......... .......... .......... ..........  1% 1.13M 8s
+   100K .......... .......... .......... .......... ..........  2% 1.28M 6s
+   150K .......... .......... .......... .......... ..........  3% 1.32M 6s
+   200K .......... .......... .......... .......... ..........  4% 1.30M 5s
+   250K .......... .......... .......... .......... ..........  5% 1.30M 5s
+   300K .......... .......... .......... .......... ..........  6% 1.35M 5s
+   350K .......... .......... .......... .......... ..........  7% 1.33M 4s
+   400K .......... .......... .......... .......... ..........  8% 1.18M 4s
+   450K .......... .......... .......... .......... ..........  9% 1.34M 4s
+   500K .......... .......... .......... .......... .......... 10% 1.34M 4s
+   550K .......... .......... .......... .......... .......... 11% 1.32M 4s
+   600K .......... .......... .......... .......... .......... 12% 1.34M 4s
+   650K .......... .......... .......... .......... .......... 13% 1.31M 4s
+   700K .......... .......... .......... .......... .......... 14% 1.35M 4s
+   750K .......... .......... .......... .......... .......... 15% 1.34M 4s
+   800K .......... .......... .......... .......... .......... 16% 1.32M 4s
+   850K .......... .......... .......... .......... .......... 17% 1.35M 3s
+   900K .......... .......... .......... .......... .......... 18% 1.33M 3s
+   950K .......... .......... .......... .......... .......... 19%  978K 3s
+  1000K .......... .......... .......... .......... .......... 20% 1.35M 3s
+  1050K .......... .......... .......... .......... .......... 21% 1.35M 3s
+  1100K .......... .......... .......... .......... .......... 22% 1.31M 3s
+  1150K .......... .......... .......... .......... .......... 23% 1.35M 3s
+  1200K .......... .......... .......... .......... .......... 24% 1.35M 3s
+  1250K .......... .......... .......... .......... .......... 25% 1.30M 3s
+  1300K .......... .......... .......... .......... .......... 26% 1.36M 3s
+  1350K .......... .......... .......... .......... .......... 27% 1.30M 3s
+  1400K .......... .......... .......... .......... .......... 28% 1.36M 3s
+  1450K .......... .......... .......... .......... .......... 29% 1.34M 3s
+  1500K .......... .......... .......... .......... .......... 30% 1.31M 3s
+  1550K .......... .......... .......... .......... .......... 31% 1.34M 3s
+  1600K .......... .......... .......... .......... .......... 32% 1.36M 3s
+  1650K .......... .......... .......... .......... .......... 33% 1.30M 3s
+  1700K .......... .......... .......... .......... .......... 34% 1.34M 3s
+  1750K .......... .......... .......... .......... .......... 35% 1.36M 3s
+  1800K .......... .......... .......... .......... .......... 36% 1.31M 3s
+  1850K .......... .......... .......... .......... .......... 37% 1.35M 2s
+  1900K .......... .......... .......... .......... .......... 38% 1.31M 2s
+  1950K .......... .......... .......... .......... .......... 39% 1.34M 2s
+  2000K .......... .......... .......... .......... .......... 40% 1.35M 2s
+  2050K .......... .......... .......... .......... .......... 41% 1.31M 2s
+  2100K .......... .......... .......... .......... .......... 42% 1.36M 2s
+  2150K .......... .......... .......... .......... .......... 43% 1.34M 2s
+  2200K .......... .......... .......... .......... .......... 44% 1.31M 2s
+  2250K .......... .......... .......... .......... .......... 45% 1.36M 2s
+  2300K .......... .......... .......... .......... .......... 46% 1.34M 2s
+  2350K .......... .......... .......... .......... .......... 47% 1.31M 2s
+  2400K .......... .......... .......... .......... .......... 48% 1.35M 2s
+  2450K .......... .......... .......... .......... .......... 49% 1.35M 2s
+  2500K .......... .......... .......... .......... .......... 50% 1.31M 2s
+  2550K .......... .......... .......... .......... .......... 51% 1.35M 2s
+  2600K .......... .......... .......... .......... .......... 52% 1.30M 2s
+  2650K .......... .......... .......... .......... .......... 53% 1.36M 2s
+  2700K .......... .......... .......... .......... .......... 54% 1.34M 2s
+  2750K .......... .......... .......... .......... .......... 55% 1.31M 2s
+  2800K .......... .......... .......... .......... .......... 56% 1.36M 2s
+  2850K .......... .......... .......... .......... .......... 57% 1.34M 2s
+  2900K .......... .......... .......... .......... .......... 58% 1.30M 2s
+  2950K .......... .......... .......... .......... .......... 59% 1.36M 2s
+  3000K .......... .......... .......... .......... .......... 60% 1.34M 2s
+  3050K .......... .......... .......... .......... .......... 61% 1.31M 1s
+  3100K .......... .......... .......... .......... .......... 62% 1.35M 1s
+  3150K .......... .......... .......... .......... .......... 63% 1.35M 1s
+  3200K .......... .......... .......... .......... .......... 64% 1.31M 1s
+  3250K .......... .......... .......... .......... .......... 65% 1.34M 1s
+  3300K .......... .......... .......... .......... .......... 66% 1.31M 1s
+  3350K .......... .......... .......... .......... .......... 67% 1.36M 1s
+  3400K .......... .......... .......... .......... .......... 68% 1.31M 1s
+  3450K .......... .......... .......... .......... .......... 69% 1.32M 1s
+  3500K .......... .......... .......... .......... .......... 70%  852K 1s
+  3550K .......... .......... .......... .......... .......... 71% 1.34M 1s
+  3600K .......... .......... .......... .......... .......... 72% 1.31M 1s
+  3650K .......... .......... .......... .......... .......... 73% 1.34M 1s
+  3700K .......... .......... .......... .......... .......... 74% 1.36M 1s
+  3750K .......... .......... .......... .......... .......... 75% 1.30M 1s
+  3800K .......... .......... .......... .......... .......... 76% 1.34M 1s
+  3850K .......... .......... .......... .......... .......... 77% 1.32M 1s
+  3900K .......... .......... .......... .......... .......... 78% 1.34M 1s
+  3950K .......... .......... .......... .......... .......... 79% 1.36M 1s
+  4000K .......... .......... .......... .......... .......... 80% 1.31M 1s
+  4050K .......... .......... .......... .......... .......... 81% 1.34M 1s
+  4100K .......... .......... .......... .......... .......... 82% 1.35M 1s
+  4150K .......... .......... .......... .......... .......... 83% 1.31M 1s
+  4200K .......... .......... .......... .......... .......... 84% 1.34M 1s
+  4250K .......... .......... .......... .......... .......... 85% 1.35M 1s
+  4300K .......... .......... .......... .......... .......... 86% 1.31M 1s
+  4350K .......... .......... .......... .......... .......... 87% 1.35M 0s
+  4400K .......... .......... .......... .......... .......... 88% 1.34M 0s
+  4450K .......... .......... .......... .......... .......... 89% 1.32M 0s
+  4500K .......... .......... .......... .......... .......... 90% 1.34M 0s
+  4550K .......... .......... .......... .......... .......... 91% 1.32M 0s
+  4600K .......... .......... .......... .......... .......... 92% 1.35M 0s
+  4650K .......... .......... .......... .......... .......... 93% 1.35M 0s
+  4700K .......... .......... .......... .......... .......... 94% 1.30M 0s
+  4750K .......... .......... .......... .......... .......... 95% 1.35M 0s
+  4800K .......... .......... .......... .......... .......... 96% 1.35M 0s
+  4850K .......... .......... .......... .......... .......... 97% 1.31M 0s
+  4900K .......... .......... .......... .......... .......... 97% 1.36M 0s
+  4950K .......... .......... .......... .......... .......... 98% 1.34M 0s
+  5000K .......... .......... .......... .......... .......... 99% 1.30M 0s
+  5050K .                                                     100% 2.54M=3.8s
+
+2013-08-02 14:12:21 (1.29 MB/s) - 'libxml2-2.9.1.tar.gz' saved [5172503]
+
+++ ls libxml2-2.9.1.tar.gz
+++ egrep -o '[0-9][0-9.]*[0-9]'
++ PV=2.9.1
++ tar xf libxml2-2.9.1.tar.gz
++ cd libxml2-2.9.1 libxml2-2.9.1.tar.gz
+++ ls '/ffp/var/www/ffp_packages/libxml2/patches/*.patch'
+ls: cannot access /ffp/var/www/ffp_packages/libxml2/patches/*.patch: No such file or directory
++ CFLAGS='-I/ffp/include -O2 -D_GNU_SOURCE -pthread'
++ CXXFLAGS='-I/ffp/include -O2 -D_GNU_SOURCE -pthread'
++ LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread '
++ ./configure --prefix=/ffp --build= --host= --mandir=/ffp/share/man --infodir=/ffp/share/info
+checking build system type... armv5tejl-unknown-linux-gnueabi
+checking host system type... armv5tejl-unknown-linux-gnueabi
+checking for a BSD-compatible install... /ffp/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /ffp/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for style of include used by make... GNU
+checking dependency style of gcc... gcc3
+checking whether ln -s works... yes
+checking how to run the C preprocessor... gcc -E
+checking for mv... /ffp/bin/mv
+checking for tar... /ffp/bin/tar
+checking for perl... /ffp/bin/perl
+checking for wget... /ffp/bin/wget
+checking for xmllint... /ffp/bin/xmllint
+checking for xsltproc... /ffp/bin/xsltproc
+checking how to print strings... printf
+checking for a sed that does not truncate output... /ffp/bin/sed
+checking for grep that handles long lines and -e... /ffp/bin/grep
+checking for egrep... /ffp/bin/grep -E
+checking for fgrep... /ffp/bin/grep -F
+checking for ld used by gcc... /ffp/bin/ld
+checking if the linker (/ffp/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /ffp/bin/nm -B
+checking the name lister (/ffp/bin/nm -B) interface... BSD nm
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert armv5tejl-unknown-linux-gnueabi file names to armv5tejl-unknown-linux-gnueabi format... func_convert_file_noop
+checking how to convert armv5tejl-unknown-linux-gnueabi file names to toolchain format... func_convert_file_noop
+checking for /ffp/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /ffp/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/ffp/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+Checking zlib
+checking zlib.h usability... yes
+checking zlib.h presence... yes
+checking for zlib.h... yes
+checking for gzread in -lz... yes
+Checking lzma
+checking lzma.h usability... yes
+checking lzma.h presence... yes
+checking for lzma.h... yes
+checking for lzma_code in -llzma... yes
+Checking headers
+checking for dirent.h that defines DIR... yes
+checking for library containing opendir... none required
+checking for ANSI C header files... (cached) yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking for unistd.h... (cached) yes
+checking ctype.h usability... yes
+checking ctype.h presence... yes
+checking for ctype.h... yes
+checking dirent.h usability... yes
+checking dirent.h presence... yes
+checking for dirent.h... yes
+checking errno.h usability... yes
+checking errno.h presence... yes
+checking for errno.h... yes
+checking malloc.h usability... yes
+checking malloc.h presence... yes
+checking for malloc.h... yes
+checking stdarg.h usability... yes
+checking stdarg.h presence... yes
+checking for stdarg.h... yes
+checking for sys/stat.h... (cached) yes
+checking for sys/types.h... (cached) yes
+checking for stdint.h... (cached) yes
+checking for inttypes.h... (cached) yes
+checking time.h usability... yes
+checking time.h presence... yes
+checking for time.h... yes
+checking ansidecl.h usability... yes
+checking ansidecl.h presence... yes
+checking for ansidecl.h... yes
+checking ieeefp.h usability... no
+checking ieeefp.h presence... no
+checking for ieeefp.h... no
+checking nan.h usability... no
+checking nan.h presence... no
+checking for nan.h... no
+checking math.h usability... yes
+checking math.h presence... yes
+checking for math.h... yes
+checking limits.h usability... yes
+checking limits.h presence... yes
+checking for limits.h... yes
+checking fp_class.h usability... no
+checking fp_class.h presence... no
+checking for fp_class.h... no
+checking float.h usability... yes
+checking float.h presence... yes
+checking for float.h... yes
+checking for stdlib.h... (cached) yes
+checking for sys/socket.h... yes
+checking for netinet/in.h... yes
+checking for arpa/inet.h... yes
+checking netdb.h usability... yes
+checking netdb.h presence... yes
+checking for netdb.h... yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking sys/select.h usability... yes
+checking sys/select.h presence... yes
+checking for sys/select.h... yes
+checking poll.h usability... yes
+checking poll.h presence... yes
+checking for poll.h... yes
+checking sys/mman.h usability... yes
+checking sys/mman.h presence... yes
+checking for sys/mman.h... yes
+checking sys/timeb.h usability... yes
+checking sys/timeb.h presence... yes
+checking for sys/timeb.h... yes
+checking signal.h usability... yes
+checking signal.h presence... yes
+checking for signal.h... yes
+checking for arpa/nameser.h... yes
+checking for resolv.h... yes
+checking dl.h usability... no
+checking dl.h presence... no
+checking for dl.h... no
+checking for dlfcn.h... (cached) yes
+Checking types
+checking for uint32_t... yes
+Checking libraries
+checking for strftime... yes
+checking for strdup... yes
+checking for strndup... yes
+checking for strerror... yes
+checking for finite... no
+checking for isnand... no
+checking for fp_class... no
+checking for class... no
+checking for fpclass... no
+checking for strftime... (cached) yes
+checking for localtime... yes
+checking for gettimeofday... yes
+checking for ftime... yes
+checking for stat... yes
+checking for _stat... no
+checking for signal... yes
+checking for rand... yes
+checking for rand_r... yes
+checking for srand... yes
+checking for time... yes
+checking for isascii... yes
+checking for mmap... yes
+checking for munmap... yes
+checking for putenv... yes
+checking for va_copy... yes
+checking for library containing gethostent... none required
+checking for library containing setsockopt... none required
+checking for library containing connect... none required
+checking for type of socket length (socklen_t)... socklen_t *
+checking whether to enable IPv6... yes
+checking struct sockaddr::ss_family... yes
+checking for getaddrinfo... yes
+checking for isnan... no
+checking for isnan in -lm... no
+checking for isinf... no
+checking for isinf in -lm... no
+checking for python... /ffp/bin/python
+Found Python version 2.7
+checking for shl_load... no
+checking for shl_load in -ldld... no
+checking for dlopen... no
+checking for dlopen in -ldl... yes
+Checking configuration requirements
+Enabling multithreaded support
+checking pthread.h usability... yes
+checking pthread.h presence... yes
+checking for pthread.h... yes
+checking for pthread_join in -lpthread... yes
+checking iconv.h usability... yes
+checking iconv.h presence... yes
+checking for iconv.h... yes
+checking for iconv... no
+checking for iconv in -liconv... yes
+checking for iconv declaration... 
+	extern size_t iconv (iconv_t cd,  char * *inbuf, size_t *inbytesleft, char * *outbuf, size_t *outbytesleft);
+Disabling ICU support
+Enabled Schematron support
+Enabled Schemas/Relax-NG support
+checking for printf... yes
+checking for sprintf... yes
+checking for fprintf... yes
+checking for snprintf... yes
+checking for vfprintf... yes
+checking for vsprintf... yes
+checking for vsnprintf... yes
+checking for sscanf... yes
+Disabling code coverage for GCC
+configure: creating ./config.status
+config.status: creating libxml2.spec
+config.status: creating Makefile
+config.status: creating include/Makefile
+config.status: creating include/libxml/Makefile
+config.status: creating doc/Makefile
+config.status: creating doc/examples/Makefile
+config.status: creating doc/devhelp/Makefile
+config.status: creating example/Makefile
+config.status: creating python/Makefile
+config.status: creating python/tests/Makefile
+config.status: creating xstc/Makefile
+config.status: creating include/libxml/xmlversion.h
+config.status: creating xml2-config
+config.status: creating libxml-2.0.pc
+config.status: creating libxml-2.0-uninstalled.pc
+config.status: creating python/setup.py
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+Done configuring
++ CFLAGS='-I/ffp/include -O2 -D_GNU_SOURCE -pthread'
++ CXXFLAGS='-I/ffp/include -O2 -D_GNU_SOURCE -pthread'
++ LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread '
++ make
+make  all-recursive
+make[1]: Entering directory `/tmp/libxml2.9AyPei/libxml2-2.9.1'
+Making all in include
+make[2]: Entering directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/include'
+Making all in libxml
+make[3]: Entering directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/include/libxml'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/include/libxml'
+make[3]: Entering directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/include'
+make[3]: Nothing to be done for `all-am'.
+make[3]: Leaving directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/include'
+make[2]: Leaving directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/include'
+Making all in .
+make[2]: Entering directory `/tmp/libxml2.9AyPei/libxml2-2.9.1'
+  CC     SAX.lo
+  CC     entities.lo
+  CC     encoding.lo
+encoding.c: In function 'UTF16LEToUTF8':
+encoding.c:491:26: warning: cast increases required alignment of target type [-Wcast-align]
+encoding.c: In function 'UTF8ToUTF16LE':
+encoding.c:573:27: warning: cast increases required alignment of target type [-Wcast-align]
+encoding.c: In function 'UTF16BEToUTF8':
+encoding.c:729:26: warning: cast increases required alignment of target type [-Wcast-align]
+encoding.c: In function 'UTF8ToUTF16BE':
+encoding.c:815:27: warning: cast increases required alignment of target type [-Wcast-align]
+  CC     error.lo
+  CC     parserInternals.lo
+  CC     parser.lo
+parser.c: In function 'xmlParseInNodeContext__internal_alias':
+parser.c:13610:9: warning: pointer targets in passing argument 1 of 'xmlFindCharEncodingHandler__internal_alias' differ in signedness [-Wpointer-sign]
+elfgcchack.h:3521:46: note: expected 'const char *' but argument is of type 'const xmlChar *'
+  CC     tree.lo
+tree.c: In function 'xmlDOMWrapCloneNode__internal_alias':
+tree.c:9346:36: warning: declaration of 'clone' shadows a global declaration [-Wshadow]
+  CC     hash.lo
+  CC     list.lo
+  CC     xmlIO.lo
+  CC     xmlmemory.lo
+xmlmemory.c: In function 'xmlReallocLoc__internal_alias':
+xmlmemory.c:328:9: warning: cast increases required alignment of target type [-Wcast-align]
+xmlmemory.c: In function 'xmlMemFree__internal_alias':
+xmlmemory.c:434:9: warning: cast increases required alignment of target type [-Wcast-align]
+  CC     uri.lo
+  CC     valid.lo
+  CC     xlink.lo
+  CC     HTMLparser.lo
+  CC     HTMLtree.lo
+  CC     debugXML.lo
+  CC     xpath.lo
+In file included from xpath.c:171:0:
+timsort.h: In function 'libxml_domnode_tim_sort_resize':
+timsort.h:326:7: warning: format '%lu' expects argument of type 'long unsigned int', but argument 3 has type 'unsigned int' [-Wformat]
+xpath.c: In function 'xmlXPathRegisterFuncNS__internal_alias':
+xpath.c:4870:5: warning: ISO C forbids passing argument 4 of 'xmlHashAddEntry2__internal_alias' between function pointer and 'void *' [-pedantic]
+elfgcchack.h:4269:36: note: expected 'void *' but argument is of type 'xmlXPathFunction'
+xpath.c: In function 'xmlXPathFunctionLookupNS__internal_alias':
+xpath.c:4951:24: warning: ISO C forbids assignment between function pointer and 'void *' [-pedantic]
+xpath.c: In function 'xmlXPathCompOpEval':
+xpath.c:13535:41: warning: ISO C forbids assignment between function pointer and 'void *' [-pedantic]
+xpath.c:13562:31: warning: ISO C forbids assignment between function pointer and 'void *' [-pedantic]
+xpath.c: At top level:
+trionan.c:194:1: warning: 'trio_is_special_quantity' defined but not used [-Wunused-function]
+trionan.c:218:1: warning: 'trio_is_negative' defined but not used [-Wunused-function]
+  CC     xpointer.lo
+  CC     xinclude.lo
+  CC     nanohttp.lo
+  CC     nanoftp.lo
+  CC     catalog.lo
+  CC     globals.lo
+  CC     threads.lo
+threads.c:53:12: warning: redundant redeclaration of 'pthread_once' [-Wredundant-decls]
+/ffp/include/pthread.h:468:12: note: previous declaration of 'pthread_once' was here
+threads.c:56:14: warning: redundant redeclaration of 'pthread_getspecific' [-Wredundant-decls]
+/ffp/include/pthread.h:1093:14: note: previous declaration of 'pthread_getspecific' was here
+threads.c:58:12: warning: redundant redeclaration of 'pthread_setspecific' [-Wredundant-decls]
+/ffp/include/pthread.h:1096:12: note: previous declaration of 'pthread_setspecific' was here
+threads.c:61:12: warning: redundant redeclaration of 'pthread_key_create' [-Wredundant-decls]
+/ffp/include/pthread.h:1085:12: note: previous declaration of 'pthread_key_create' was here
+threads.c:64:12: warning: redundant redeclaration of 'pthread_key_delete' [-Wredundant-decls]
+/ffp/include/pthread.h:1090:12: note: previous declaration of 'pthread_key_delete' was here
+threads.c:67:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+threads.c:66:12: warning: redundant redeclaration of 'pthread_mutex_init' [-Wredundant-decls]
+/ffp/include/pthread.h:723:12: note: previous declaration of 'pthread_mutex_init' was here
+threads.c:69:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+threads.c:68:12: warning: redundant redeclaration of 'pthread_mutex_destroy' [-Wredundant-decls]
+/ffp/include/pthread.h:728:12: note: previous declaration of 'pthread_mutex_destroy' was here
+threads.c:71:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+threads.c:70:12: warning: redundant redeclaration of 'pthread_mutex_lock' [-Wredundant-decls]
+/ffp/include/pthread.h:736:12: note: previous declaration of 'pthread_mutex_lock' was here
+threads.c:73:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+threads.c:72:12: warning: redundant redeclaration of 'pthread_mutex_unlock' [-Wredundant-decls]
+/ffp/include/pthread.h:747:12: note: previous declaration of 'pthread_mutex_unlock' was here
+threads.c:75:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+threads.c:74:12: warning: redundant redeclaration of 'pthread_cond_init' [-Wredundant-decls]
+/ffp/include/pthread.h:942:12: note: previous declaration of 'pthread_cond_init' was here
+threads.c:77:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+threads.c:76:12: warning: redundant redeclaration of 'pthread_cond_destroy' [-Wredundant-decls]
+/ffp/include/pthread.h:947:12: note: previous declaration of 'pthread_cond_destroy' was here
+threads.c:79:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+threads.c:78:12: warning: redundant redeclaration of 'pthread_cond_wait' [-Wredundant-decls]
+/ffp/include/pthread.h:963:12: note: previous declaration of 'pthread_cond_wait' was here
+threads.c:81:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+threads.c:80:12: warning: redundant redeclaration of 'pthread_equal' [-Wredundant-decls]
+/ffp/include/pthread.h:272:12: note: previous declaration of 'pthread_equal' was here
+threads.c:83:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+threads.c:82:18: warning: redundant redeclaration of 'pthread_self' [-Wredundant-decls]
+/ffp/include/pthread.h:269:18: note: previous declaration of 'pthread_self' was here
+threads.c:85:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+threads.c:84:12: warning: redundant redeclaration of 'pthread_key_create' [-Wredundant-decls]
+/ffp/include/pthread.h:1085:12: note: previous declaration of 'pthread_key_create' was here
+threads.c:87:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+threads.c:86:12: warning: redundant redeclaration of 'pthread_key_delete' [-Wredundant-decls]
+/ffp/include/pthread.h:1090:12: note: previous declaration of 'pthread_key_delete' was here
+threads.c:89:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+threads.c:88:12: warning: redundant redeclaration of 'pthread_cond_signal' [-Wredundant-decls]
+/ffp/include/pthread.h:951:12: note: previous declaration of 'pthread_cond_signal' was here
+  CC     c14n.lo
+  CC     xmlstring.lo
+  CC     buf.lo
+  CC     xmlregexp.lo
+  CC     xmlschemas.lo
+xmlschemas.c: In function 'xmlSchemaParseLocalAttribute':
+xmlschemas.c:7467:7: warning: cast increases required alignment of target type [-Wcast-align]
+  CC     xmlschemastypes.lo
+  CC     xmlunicode.lo
+  CC     xmlreader.lo
+  CC     relaxng.lo
+  CC     dict.lo
+dict.c: In function 'xmlDictAddString':
+dict.c:252:29: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+dict.c: In function 'xmlDictAddQString':
+dict.c:320:29: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  CC     SAX2.lo
+  CC     xmlwriter.lo
+  CC     legacy.lo
+  CC     chvalid.lo
+  CC     pattern.lo
+  CC     xmlsave.lo
+  CC     xmlmodule.lo
+  CC     schematron.lo
+  CC     xzlib.lo
+  CCLD   libxml2.la
+  CC     testdso.lo
+  CCLD   testdso.la
+  CC     xmllint.o
+  CCLD   xmllint
+  CC     xmlcatalog.o
+  CCLD   xmlcatalog
+  CC     testSchemas.o
+  CCLD   testSchemas
+  CC     testRelax.o
+  CCLD   testRelax
+  CC     testSAX.o
+  CCLD   testSAX
+  CC     testHTML.o
+  CCLD   testHTML
+  CC     testXPath.o
+  CCLD   testXPath
+  CC     testURI.o
+  CCLD   testURI
+  CC     testThreads.o
+  CCLD   testThreads
+  CC     testC14N.o
+  CCLD   testC14N
+  CC     testAutomata.o
+  CCLD   testAutomata
+  CC     testRegexp.o
+  CCLD   testRegexp
+  CC     testReader.o
+  CCLD   testReader
+  CC     testapi.o
+testapi.c:18033:25: warning: 'gen_xmlSchematronPtr' defined but not used [-Wunused-function]
+testapi.c:18036:13: warning: 'des_xmlSchematronPtr' defined but not used [-Wunused-function]
+testapi.c:18053:35: warning: 'gen_xmlSchematronParserCtxtPtr' defined but not used [-Wunused-function]
+testapi.c:18056:13: warning: 'des_xmlSchematronParserCtxtPtr' defined but not used [-Wunused-function]
+testapi.c:34482:27: warning: 'gen_xmlSAXHandlerPtr_ptr' defined but not used [-Wunused-function]
+testapi.c:34485:13: warning: 'des_xmlSAXHandlerPtr_ptr' defined but not used [-Wunused-function]
+  CCLD   testapi
+  CC     testModule.o
+  CCLD   testModule
+  CC     runtest.o
+runtest.c: In function 'streamProcessTest':
+runtest.c:2096:65: warning: unused parameter 'options' [-Wunused-parameter]
+  CCLD   runtest
+  CC     runsuite.o
+  CCLD   runsuite
+  CC     testchar.o
+  CCLD   testchar
+  CC     testdict.o
+testdict.c: In function 'run_test2':
+testdict.c:155:20: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+testdict.c: In function 'run_test1':
+testdict.c:318:20: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+  CCLD   testdict
+  CC     runxmlconf.o
+  CCLD   runxmlconf
+  CC     testrecurse.o
+  CCLD   testrecurse
+  CC     testlimits.o
+testlimits.c: In function 'saxTest':
+testlimits.c:1290:13: warning: format '%lu' expects argument of type 'long unsigned int', but argument 4 has type 'size_t' [-Wformat]
+testlimits.c:1296:21: warning: format '%lu' expects argument of type 'long unsigned int', but argument 4 has type 'size_t' [-Wformat]
+testlimits.c: In function 'readerTest':
+testlimits.c:1345:25: warning: format '%lu' expects argument of type 'long unsigned int', but argument 4 has type 'size_t' [-Wformat]
+testlimits.c:1355:25: warning: format '%lu' expects argument of type 'long unsigned int', but argument 4 has type 'size_t' [-Wformat]
+  CCLD   testlimits
+sed -e 's?\@XML_LIBDIR\@?-L/ffp/lib?g' \
+	    -e 's?\@XML_INCLUDEDIR\@?-I/ffp/include/libxml2?g' \
+	    -e 's?\@VERSION\@?2.9.1?g' \
+	    -e 's?\@XML_LIBS\@?-lxml2 -lz   -liconv -lm ?g' \
+	       < ./xml2Conf.sh.in > xml2Conf.tmp \
+	&& mv xml2Conf.tmp xml2Conf.sh
+make[2]: Leaving directory `/tmp/libxml2.9AyPei/libxml2-2.9.1'
+Making all in doc
+make[2]: Entering directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/doc'
+Making all in .
+make[3]: Entering directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/doc'
+make[3]: Nothing to be done for `all-am'.
+make[3]: Leaving directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/doc'
+Making all in devhelp
+make[3]: Entering directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/doc/devhelp'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/doc/devhelp'
+Making all in examples
+make[3]: Entering directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/doc/examples'
+  CC     io1.o
+  CCLD   io1
+  CC     io2.o
+  CCLD   io2
+  CC     parse1.o
+  CCLD   parse1
+  CC     parse2.o
+  CCLD   parse2
+  CC     parse3.o
+  CCLD   parse3
+  CC     parse4.o
+  CCLD   parse4
+  CC     reader1.o
+  CCLD   reader1
+  CC     reader2.o
+  CCLD   reader2
+  CC     reader3.o
+  CCLD   reader3
+  CC     reader4.o
+  CCLD   reader4
+  CC     testWriter.o
+  CCLD   testWriter
+  CC     tree1.o
+  CCLD   tree1
+  CC     tree2.o
+tree2.c: In function 'main':
+tree2.c:30:15: warning: variable 'dtd' set but not used [-Wunused-but-set-variable]
+  CCLD   tree2
+  CC     xpath1.o
+  CCLD   xpath1
+  CC     xpath2.o
+  CCLD   xpath2
+make[3]: Leaving directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/doc/examples'
+make[2]: Leaving directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/doc'
+Making all in example
+make[2]: Entering directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/example'
+  CC     gjobread.o
+  CCLD   gjobread
+make[2]: Leaving directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/example'
+Making all in xstc
+make[2]: Entering directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/xstc'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/xstc'
+Making all in python
+make[2]: Entering directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/python'
+make  all-recursive
+make[3]: Entering directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/python'
+Making all in .
+make[4]: Entering directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/python'
+  CC     libxml.lo
+  CC     libxml2-py.lo
+  CC     types.lo
+types.c: In function 'libxml_xmlXPathObjectPtrConvert':
+types.c:608:41: warning: cast increases required alignment of target type [-Wcast-align]
+  CCLD   libxml2mod.la
+make[4]: Leaving directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/python'
+Making all in tests
+make[4]: Entering directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/python/tests'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/python/tests'
+make[3]: Leaving directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/python'
+make[2]: Leaving directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/python'
+make[1]: Leaving directory `/tmp/libxml2.9AyPei/libxml2-2.9.1'
++ make DESTDIR=/tmp/libxml2.9AyPei/pkg install
+make  install-recursive
+make[1]: Entering directory `/tmp/libxml2.9AyPei/libxml2-2.9.1'
+Making install in include
+make[2]: Entering directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/include'
+Making install in libxml
+make[3]: Entering directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/include/libxml'
+make[4]: Entering directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/include/libxml'
+make[4]: Nothing to be done for `install-exec-am'.
+ /ffp/bin/mkdir -p '/tmp/libxml2.9AyPei/pkg/ffp/include/libxml2/libxml'
+ /ffp/bin/install -c -m 644 SAX.h entities.h encoding.h parser.h parserInternals.h xmlerror.h HTMLparser.h HTMLtree.h debugXML.h tree.h list.h hash.h xpath.h xpathInternals.h xpointer.h xinclude.h xmlIO.h xmlmemory.h nanohttp.h nanoftp.h uri.h valid.h xlink.h xmlversion.h DOCBparser.h catalog.h threads.h globals.h c14n.h xmlautomata.h xmlregexp.h xmlmodule.h xmlschemas.h schemasInternals.h xmlschemastypes.h xmlstring.h xmlunicode.h xmlreader.h relaxng.h dict.h '/tmp/libxml2.9AyPei/pkg/ffp/include/libxml2/libxml'
+ /ffp/bin/install -c -m 644 SAX2.h xmlexports.h xmlwriter.h chvalid.h pattern.h xmlsave.h schematron.h '/tmp/libxml2.9AyPei/pkg/ffp/include/libxml2/libxml'
+make[4]: Leaving directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/include/libxml'
+make[3]: Leaving directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/include/libxml'
+make[3]: Entering directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/include'
+make[4]: Entering directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/include'
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/include'
+make[3]: Leaving directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/include'
+make[2]: Leaving directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/include'
+Making install in .
+make[2]: Entering directory `/tmp/libxml2.9AyPei/libxml2-2.9.1'
+make[3]: Entering directory `/tmp/libxml2.9AyPei/libxml2-2.9.1'
+ /ffp/bin/mkdir -p '/tmp/libxml2.9AyPei/pkg/ffp/lib'
+ /ffp/bin/sh ./libtool   --mode=install /ffp/bin/install -c   libxml2.la '/tmp/libxml2.9AyPei/pkg/ffp/lib'
+libtool: install: /ffp/bin/install -c .libs/libxml2.so.2.9.1 /tmp/libxml2.9AyPei/pkg/ffp/lib/libxml2.so.2.9.1
+libtool: install: (cd /tmp/libxml2.9AyPei/pkg/ffp/lib && { ln -s -f libxml2.so.2.9.1 libxml2.so.2 || { rm -f libxml2.so.2 && ln -s libxml2.so.2.9.1 libxml2.so.2; }; })
+libtool: install: (cd /tmp/libxml2.9AyPei/pkg/ffp/lib && { ln -s -f libxml2.so.2.9.1 libxml2.so || { rm -f libxml2.so && ln -s libxml2.so.2.9.1 libxml2.so; }; })
+libtool: install: /ffp/bin/install -c .libs/libxml2.lai /tmp/libxml2.9AyPei/pkg/ffp/lib/libxml2.la
+libtool: install: /ffp/bin/install -c .libs/libxml2.a /tmp/libxml2.9AyPei/pkg/ffp/lib/libxml2.a
+libtool: install: chmod 644 /tmp/libxml2.9AyPei/pkg/ffp/lib/libxml2.a
+libtool: install: ranlib /tmp/libxml2.9AyPei/pkg/ffp/lib/libxml2.a
+libtool: install: warning: remember to run `libtool --finish /ffp/lib'
+ /ffp/bin/mkdir -p '/tmp/libxml2.9AyPei/pkg/ffp/bin'
+  /ffp/bin/sh ./libtool   --mode=install /ffp/bin/install -c xmllint xmlcatalog '/tmp/libxml2.9AyPei/pkg/ffp/bin'
+libtool: install: /ffp/bin/install -c .libs/xmllint /tmp/libxml2.9AyPei/pkg/ffp/bin/xmllint
+libtool: install: /ffp/bin/install -c .libs/xmlcatalog /tmp/libxml2.9AyPei/pkg/ffp/bin/xmlcatalog
+ /ffp/bin/mkdir -p '/tmp/libxml2.9AyPei/pkg/ffp/bin'
+ /ffp/bin/install -c xml2-config '/tmp/libxml2.9AyPei/pkg/ffp/bin'
+ /ffp/bin/mkdir -p '/tmp/libxml2.9AyPei/pkg/ffp/lib'
+ /ffp/bin/install -c -m 644 xml2Conf.sh '/tmp/libxml2.9AyPei/pkg/ffp/lib'
+/ffp/bin/mkdir -p /tmp/libxml2.9AyPei/pkg/ffp/share/doc/libxml2-2.9.1
+/ffp/bin/install -c -m 0644 ./Copyright /tmp/libxml2.9AyPei/pkg/ffp/share/doc/libxml2-2.9.1
+/ffp/bin/mkdir -p /tmp/libxml2.9AyPei/pkg/ffp/share/doc/libxml2-2.9.1/examples
+/ffp/bin/install -c -m 0644 ./xmllint.c /tmp/libxml2.9AyPei/pkg/ffp/share/doc/libxml2-2.9.1/examples
+/ffp/bin/install -c -m 0644 ./testSAX.c /tmp/libxml2.9AyPei/pkg/ffp/share/doc/libxml2-2.9.1/examples
+/ffp/bin/install -c -m 0644 ./testHTML.c /tmp/libxml2.9AyPei/pkg/ffp/share/doc/libxml2-2.9.1/examples
+/ffp/bin/install -c -m 0644 ./testXPath.c /tmp/libxml2.9AyPei/pkg/ffp/share/doc/libxml2-2.9.1/examples
+ /ffp/bin/mkdir -p '/tmp/libxml2.9AyPei/pkg/ffp/share/aclocal'
+ /ffp/bin/install -c -m 644 libxml.m4 '/tmp/libxml2.9AyPei/pkg/ffp/share/aclocal'
+ /ffp/bin/mkdir -p '/tmp/libxml2.9AyPei/pkg/ffp/share/man/man1'
+ /ffp/bin/install -c -m 644 xml2-config.1 '/tmp/libxml2.9AyPei/pkg/ffp/share/man/man1'
+ /ffp/bin/mkdir -p '/tmp/libxml2.9AyPei/pkg/ffp/share/man/man3'
+ /ffp/bin/install -c -m 644 libxml.3 '/tmp/libxml2.9AyPei/pkg/ffp/share/man/man3'
+ /ffp/bin/mkdir -p '/tmp/libxml2.9AyPei/pkg/ffp/lib/pkgconfig'
+ /ffp/bin/install -c -m 644 libxml-2.0.pc '/tmp/libxml2.9AyPei/pkg/ffp/lib/pkgconfig'
+make[3]: Leaving directory `/tmp/libxml2.9AyPei/libxml2-2.9.1'
+make[2]: Leaving directory `/tmp/libxml2.9AyPei/libxml2-2.9.1'
+Making install in doc
+make[2]: Entering directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/doc'
+Making install in .
+make[3]: Entering directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/doc'
+make[4]: Entering directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/doc'
+make[4]: Nothing to be done for `install-exec-am'.
+/ffp/bin/mkdir -p /tmp/libxml2.9AyPei/pkg/ffp/share/doc/libxml2-2.9.1/html
+/ffp/bin/install -c -m 0644 ./xml.html ./encoding.html ./FAQ.html ./structure.gif ./DOM.gif ./smallfootonly.gif ./redhat.gif ./libxml.gif ./w3c.png ./Libxml2-Logo-180x168.gif ./Libxml2-Logo-90x34.gif /tmp/libxml2.9AyPei/pkg/ffp/share/doc/libxml2-2.9.1/html
+/ffp/bin/mkdir -p /tmp/libxml2.9AyPei/pkg/ffp/share/doc/libxml2-2.9.1/html/html
+/ffp/bin/install -c -m 0644 ./html/*.html /tmp/libxml2.9AyPei/pkg/ffp/share/doc/libxml2-2.9.1/html/html
+/ffp/bin/install -c -m 0644 ./html/*.png /tmp/libxml2.9AyPei/pkg/ffp/share/doc/libxml2-2.9.1/html/html
+/ffp/bin/mkdir -p /tmp/libxml2.9AyPei/pkg/ffp/share/doc/libxml2-2.9.1/html/tutorial
+/ffp/bin/install -c -m 0644 ./tutorial/*.* \
+		/tmp/libxml2.9AyPei/pkg/ffp/share/doc/libxml2-2.9.1/html/tutorial
+/ffp/bin/mkdir -p /tmp/libxml2.9AyPei/pkg/ffp/share/doc/libxml2-2.9.1/html/tutorial/images
+/ffp/bin/install -c -m 0644 ./tutorial/images/*.* \
+		/tmp/libxml2.9AyPei/pkg/ffp/share/doc/libxml2-2.9.1/html/tutorial/images
+/ffp/bin/mkdir -p /tmp/libxml2.9AyPei/pkg/ffp/share/doc/libxml2-2.9.1/html/tutorial/images/callouts
+/ffp/bin/install -c -m 0644 ./tutorial/images/callouts/*.* \
+		/tmp/libxml2.9AyPei/pkg/ffp/share/doc/libxml2-2.9.1/html/tutorial/images/callouts
+ /ffp/bin/mkdir -p '/tmp/libxml2.9AyPei/pkg/ffp/share/man/man1'
+ /ffp/bin/install -c -m 644 xmllint.1 xmlcatalog.1 '/tmp/libxml2.9AyPei/pkg/ffp/share/man/man1'
+make[4]: Leaving directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/doc'
+make[3]: Leaving directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/doc'
+Making install in devhelp
+make[3]: Entering directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/doc/devhelp'
+make[4]: Entering directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/doc/devhelp'
+make[4]: Nothing to be done for `install-exec-am'.
+ /ffp/bin/mkdir -p '/tmp/libxml2.9AyPei/pkg/ffp/share/gtk-doc/html/libxml2'
+ /ffp/bin/install -c -m 644 libxml2.devhelp general.html index.html libxml2-c14n.html libxml2-catalog.html libxml2-chvalid.html libxml2-debugXML.html libxml2-dict.html libxml2-DOCBparser.html libxml2-encoding.html libxml2-entities.html libxml2-globals.html libxml2-hash.html libxml2-HTMLparser.html libxml2-HTMLtree.html libxml2-list.html libxml2-nanoftp.html libxml2-nanohttp.html libxml2-parser.html libxml2-parserInternals.html libxml2-pattern.html libxml2-relaxng.html libxml2-SAX2.html libxml2-SAX.html libxml2-schemasInternals.html libxml2-schematron.html libxml2-threads.html libxml2-tree.html libxml2-uri.html libxml2-valid.html libxml2-xinclude.html libxml2-xlink.html libxml2-xmlautomata.html libxml2-xmlerror.html libxml2-xmlexports.html libxml2-xmlIO.html libxml2-xmlmemory.html libxml2-xmlmodule.html libxml2-xmlreader.html libxml2-xmlregexp.html '/tmp/libxml2.9AyPei/pkg/ffp/share/gtk-doc/html/libxml2'
+ /ffp/bin/install -c -m 644 libxml2-xmlsave.html libxml2-xmlschemas.html libxml2-xmlschemastypes.html libxml2-xmlstring.html libxml2-xmlunicode.html libxml2-xmlversion.html libxml2-xmlwriter.html libxml2-xpath.html libxml2-xpathInternals.html libxml2-xpointer.html home.png left.png right.png up.png style.css '/tmp/libxml2.9AyPei/pkg/ffp/share/gtk-doc/html/libxml2'
+make[4]: Leaving directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/doc/devhelp'
+make[3]: Leaving directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/doc/devhelp'
+Making install in examples
+make[3]: Entering directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/doc/examples'
+make[4]: Entering directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/doc/examples'
+make[4]: Nothing to be done for `install-exec-am'.
+/ffp/bin/mkdir -p /tmp/libxml2.9AyPei/pkg/ffp/share/doc/libxml2-2.9.1/html
+/ffp/bin/install -c -m 0644 ./*.html ./*.c ./*.xml ./*.xsl ./*.res /tmp/libxml2.9AyPei/pkg/ffp/share/doc/libxml2-2.9.1/html
+make[4]: Leaving directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/doc/examples'
+make[3]: Leaving directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/doc/examples'
+make[2]: Leaving directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/doc'
+Making install in example
+make[2]: Entering directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/example'
+make[3]: Entering directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/example'
+make[3]: Nothing to be done for `install-exec-am'.
+make[3]: Nothing to be done for `install-data-am'.
+make[3]: Leaving directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/example'
+make[2]: Leaving directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/example'
+Making install in xstc
+make[2]: Entering directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/xstc'
+make[3]: Entering directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/xstc'
+make[3]: Nothing to be done for `install-exec-am'.
+make[3]: Nothing to be done for `install-data-am'.
+make[3]: Leaving directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/xstc'
+make[2]: Leaving directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/xstc'
+Making install in python
+make[2]: Entering directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/python'
+make  install-recursive
+make[3]: Entering directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/python'
+Making install in .
+make[4]: Entering directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/python'
+make[5]: Entering directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/python'
+make[5]: Nothing to be done for `install-exec-am'.
+ /ffp/bin/mkdir -p '/tmp/libxml2.9AyPei/pkg/ffp/share/doc/libxml2-python-2.9.1'
+ /ffp/bin/install -c -m 644 TODO '/tmp/libxml2.9AyPei/pkg/ffp/share/doc/libxml2-python-2.9.1'
+ /ffp/bin/mkdir -p '/tmp/libxml2.9AyPei/pkg/ffp/lib/python2.7/site-packages'
+ /ffp/bin/install -c -m 644 drv_libxml2.py libxml2.py '/tmp/libxml2.9AyPei/pkg/ffp/lib/python2.7/site-packages'
+ /ffp/bin/mkdir -p '/tmp/libxml2.9AyPei/pkg/ffp/lib/python2.7/site-packages'
+ /ffp/bin/sh ../libtool   --mode=install /ffp/bin/install -c   libxml2mod.la '/tmp/libxml2.9AyPei/pkg/ffp/lib/python2.7/site-packages'
+libtool: install: warning: relinking `libxml2mod.la'
+libtool: install: (cd /tmp/libxml2.9AyPei/libxml2-2.9.1/python; /ffp/bin/sh /tmp/libxml2.9AyPei/libxml2-2.9.1/libtool  --silent --tag CC --mode=relink gcc -I/ffp/include -O2 -D_GNU_SOURCE -pthread -pedantic -W -Wformat -Wunused -Wimplicit -Wreturn-type -Wswitch -Wcomment -Wtrigraphs -Wformat -Wchar-subscripts -Wuninitialized -Wparentheses -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wredundant-decls -Wno-long-long -module -avoid-version ../libxml2.la -L/ffp/lib/python2.7/config -lpthread -ldl -lutil -lm -lpython2.7 -Xlinker -export-dynamic -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread -o libxml2mod.la -rpath /ffp/lib/python2.7/site-packages libxml.lo libxml2-py.lo types.lo -inst-prefix-dir /tmp/libxml2.9AyPei/pkg)
+libtool: install: /ffp/bin/install -c .libs/libxml2mod.soT /tmp/libxml2.9AyPei/pkg/ffp/lib/python2.7/site-packages/libxml2mod.so
+libtool: install: /ffp/bin/install -c .libs/libxml2mod.lai /tmp/libxml2.9AyPei/pkg/ffp/lib/python2.7/site-packages/libxml2mod.la
+libtool: install: /ffp/bin/install -c .libs/libxml2mod.a /tmp/libxml2.9AyPei/pkg/ffp/lib/python2.7/site-packages/libxml2mod.a
+libtool: install: chmod 644 /tmp/libxml2.9AyPei/pkg/ffp/lib/python2.7/site-packages/libxml2mod.a
+libtool: install: ranlib /tmp/libxml2.9AyPei/pkg/ffp/lib/python2.7/site-packages/libxml2mod.a
+libtool: install: warning: remember to run `libtool --finish /ffp/lib/python2.7/site-packages'
+make[5]: Leaving directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/python'
+make[4]: Leaving directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/python'
+Making install in tests
+make[4]: Entering directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/python/tests'
+make[5]: Entering directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/python/tests'
+make[5]: Nothing to be done for `install-exec-am'.
+ /ffp/bin/mkdir -p '/tmp/libxml2.9AyPei/pkg/ffp/share/doc/libxml2-python-2.9.1/examples'
+ /ffp/bin/install -c -m 644 build.py attribs.py tst.py tstxpath.py xpathext.py push.py pushSAX.py pushSAXhtml.py error.py serialize.py validate.py tstURI.py cutnpaste.py xpathret.py xpath.py outbuf.py inbuf.py input_callback.py resolver.py regexp.py reader.py reader2.py reader3.py reader4.py reader5.py reader6.py reader7.py reader8.py readernext.py walker.py nsdel.py ctxterror.py readererr.py relaxng.py schema.py thread2.py sync.py tstLastError.py indexes.py dtdvalid.py '/tmp/libxml2.9AyPei/pkg/ffp/share/doc/libxml2-python-2.9.1/examples'
+ /ffp/bin/install -c -m 644 tstmem.py validDTD.py validSchemas.py validRNG.py compareNodes.py xpathns.py xpathleak.py tst.xml valid.xml invalid.xml test.dtd '/tmp/libxml2.9AyPei/pkg/ffp/share/doc/libxml2-python-2.9.1/examples'
+make[5]: Leaving directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/python/tests'
+make[4]: Leaving directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/python/tests'
+make[3]: Leaving directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/python'
+make[2]: Leaving directory `/tmp/libxml2.9AyPei/libxml2-2.9.1/python'
+make[1]: Leaving directory `/tmp/libxml2.9AyPei/libxml2-2.9.1'
++ mkdir -p /tmp/libxml2.9AyPei/pkg/install
++ cp /ffp/var/www/ffp_packages/libxml2/DESCR /ffp/var/www/ffp_packages/libxml2/HOMEPAGE /tmp/libxml2.9AyPei/pkg/install/
++ cd /tmp/libxml2.9AyPei/pkg
++ makepkg libxml2 2.9.1 1
+Creating /tmp/libxml2-2.9.1-arm-1.tar ...
+sending incremental file list
+libxml2-2.9.1-arm-1.tar
+
+sent 3213492 bytes  received 31 bytes  79346.25 bytes/sec
+total size is 1744435200  speedup is 542.84
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/openvpn-2.3_alpha1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libatomic_ops-git-20130417-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/ghostscript-9.06-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/most-pre5.1-14-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1686-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/beautifulsoup4-4.0.0b9-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gnunet-0.9.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/guile-2.0.9-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/mpc-0.23-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/httrack-3.47.17-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/parted-3.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/cmake-2.8.7-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libsigc++-2.2.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1192-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/harfbuzz-0.9.9-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/Python-3.3.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/par-1.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/dtach-0.8-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1218-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/bridge-utils-20130613-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/vim-7.3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gnuplot-4.4.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1283-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/xupnpd-383-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/tor-0.2.3.25-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/openssh-6.2p2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/fontconfig-2.8.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/btsync-1.0.134-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/ImageMagick-6.8.6-7-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/rtmpdump-2.3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libev-4.11-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/setuptools-0.6c11-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/tokyotyrant-1.1.41-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/less-457-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libmicrohttpd-0.9.19-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/lzo-2.06-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/liboop-20130521-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/cairo-1.12.8-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/Django-1.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libspectre-0.2.7-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/protobuf-2.4.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/unrar-4.1.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/php-5.4.11-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/openssl-1.0.0g-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libgpg-error-1.10-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/node-v0.6.10-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/xvidcore-1.3.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/Python-2.7.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gcc-solibs-4.6.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1260-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/BeautifulSoup-3.2.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libunistring-0.9.3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/php-5.5.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gnuplot-4.4.4-arm-2.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/nut-2.6.5-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/fontconfig-2.10.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1627-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/freetype-2.4.8-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/pango-1.32.3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/sshpass-1.05-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/miniupnpc-1.8.20130503-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/tokyocabinet-1.4.47-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/nzbget-0.8.0r394-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/thttpd-2.25b-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libmpdclient-2.8-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libgcrypt-1.5.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1267-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/swig-2.0.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1182-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/netatalk-3.0.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/openssh-6.2p2-arm-4-node.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/par2cmdline-0.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/neon-0.29.6-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/berkeleydb-5.1.19-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/cherokee-130207-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/attr-2.4.46-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gcc-4.6.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/btsync-1.0.134-arm-2.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/php-5.4.13-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/openssh-6.1p1-arm-4-node.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/sendmail-8.14.5-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/openssl-1.0.1c-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/ntfs-3g-2013.1.13-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/ncmpc-0.21-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/php-5.4.14-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/mysecureshell-1.30-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/thttpd-2.25b-arm-2.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/bdwgc-git-20130417-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libextractor-0.6.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/Python-2.7.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/Python-2.7.3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/ntfs-3g-2013.1.13-arm-2.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gnupg-1.4.8-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/cksfv-1.3.14-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/git-1.8.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/Python-3.3.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gnufdisk-2.0.0a-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/nail-20120224-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1217-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/slang-pre2.3.0-68-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/zsh-5.0.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/php-5.5.0beta3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/ImageMagick-6.8.2-9-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/wdfs-1.4.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/seeks-20120224-arm-2.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libargp-20110921-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/debianutils-4.3.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/lsh-2.0.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/opencv-2.3.1-arm-2.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/p7zip-9.20.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libmms-0.6.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/links-2.7-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/node-0.8.21-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1214-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libgd-2.0.33-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libpar2-0.3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gzip-1.6-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/M2Crypto-0.21.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/cifs-utils-git-20120302-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1359-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/git-1.8.2.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/rrdtool-1.4.5-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libpar2-0.2-arm-2.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libiconv-1.14-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libpar2-0.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/easy-rsa-ff5bfd1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/node-0.8.21-arm-2.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/openssh-6.1p1-arm-4.txz
+ADD /home2/memiksfr/subdomains/ffp/pkg/libxml2-2.9.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/pixman-0.28.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/zlib-1.2.6-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/glib-2.35.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1222-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/php-5.5.201306201030-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/nginx-1.5.3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MPlayer-1.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/isync-1.0.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libffi-3.0.11-arm-1.txz
+95f341c4aaf4ea5118d10bb529c15a94  BeautifulSoup-3.2.1-arm-1.txz
+a1e0ad986d101c81735bcdaa73ed1120  Django-1.4-arm-1.txz
+8a03198597eb048966609fa7e85081cb  ImageMagick-6.8.2-9-arm-1.txz
+a96f1a2198f01f465a3842125910c3fd  ImageMagick-6.8.6-7-arm-1.txz
+ed100bdde17d72a8de04fe76bf507c27  M2Crypto-0.21.1-arm-1.txz
+982aeaa56561d1a47906af083a198b4e  MCServer-1182-arm-1.txz
+f43e8c2fa9ed0649943984454f93e205  MCServer-1192-arm-1.txz
+59fcfcf1b1ce120f0667436648288811  MCServer-1214-arm-1.txz
+286cba7502f2e28048679877cfdaadcf  MCServer-1217-arm-1.txz
+a196fc6af4ffdc1332a30aedf7b9a8b7  MCServer-1218-arm-1.txz
+866887febd98b38b784f3eaf8a2211b4  MCServer-1222-arm-1.txz
+28bffa04cd4865b1116b9ac2953462ef  MCServer-1260-arm-1.txz
+2a04bdde5efc99df870f2afc1c823038  MCServer-1267-arm-1.txz
+acd360f67af8840035ce045ab8187e3f  MCServer-1283-arm-1.txz
+65cae87083e7251844f83940a019aea5  MCServer-1359-arm-1.txz
+a0986fe4bb34bc85675e7de3ac07579f  MCServer-1627-arm-1.txz
+7c19d0c1417b40c47325ba9477de4246  MCServer-1686-arm-1.txz
+0db42aed04763a412e09295b7879ce42  MPlayer-1.1-arm-1.txz
+a3d7a6d1f4d1ead00ef46940ba2f3bcc  Python-2.7.2-arm-1.txz
+0c0c5ee79714df0686e52cf9775c16bc  Python-2.7.3-arm-1.txz
+7fd7c65f6db3f5080db928f916170028  Python-2.7.4-arm-1.txz
+55a2f685c893cfd91fd418db3e26be35  Python-3.3.0-arm-1.txz
+c3a2e7ba952f7038e91c5657ed68932f  Python-3.3.2-arm-1.txz
+032ac662c6dd9de1b3cd9b11f533b116  attr-2.4.46-arm-1.txz
+a9c00879a9952577e76bc54f1a523501  bdwgc-git-20130417-arm-1.txz
+85ef9e1adaa758c1f8587c4556799f69  beautifulsoup4-4.0.0b9-arm-1.txz
+6ff8d6a390e744dd99e8d7a7e61b6de2  berkeleydb-5.1.19-arm-1.txz
+6e9a66a2d9c1fe45a78854345ab8e1d0  bridge-utils-20130613-arm-1.txz
+2045af3c1979202d77e2c11fb4af6a4b  btsync-1.0.134-arm-1.txz
+66ec09a4d7ecb2078b4d6178ccedf8ca  btsync-1.0.134-arm-2.txz
+32d26bc2fb54e3151a3b10029b310a0e  cairo-1.12.8-arm-1.txz
+01effab30ea00b69d40f4b9f509f55ff  cherokee-130207-arm-1.txz
+49ecff75fd683d7bd3b219c955593780  cifs-utils-git-20120302-arm-1.txz
+d33d4de033f5734caa97fb64d220a52b  cksfv-1.3.14-arm-1.txz
+ac0cd5691e28b0bcf1f1de6733a86460  cmake-2.8.7-arm-1.txz
+869d4cfb1c3ea02fa71b6535c1cf700e  debianutils-4.3.4-arm-1.txz
+fd44ad8cf4a284e8ae90798467fd345b  dtach-0.8-arm-1.txz
+42f76c5e4198ea32ba4728e59789bd19  easy-rsa-ff5bfd1-arm-1.txz
+473b0116a2dbd50121f48097b2e5a829  fontconfig-2.10.2-arm-1.txz
+6be66afb530ab8c7c079e91a13e65ca3  fontconfig-2.8.0-arm-1.txz
+f77c4c8c754b164d05ed1b6e0c4c3ec3  freetype-2.4.8-arm-1.txz
+d2c81249d4bf660ba5c20991c8e86fb4  gcc-4.6.2-arm-1.txz
+e9ee3add43dea9b356feaa4fdbca5fe2  gcc-solibs-4.6.2-arm-1.txz
+fdedc4578b52177d1d36dc48c019e359  ghostscript-9.06-arm-1.txz
+4f283bc42de500a9fe9d6a2e7dae7be4  git-1.8.0-arm-1.txz
+124e02a1eec50b33d8f1c72cf768c572  git-1.8.2.1-arm-1.txz
+102f8bf9b770e8e7701b8ac9cf4e938c  glib-2.35.2-arm-1.txz
+dd86ef680e23d649c7034ceb70f1e420  gnufdisk-2.0.0a-arm-1.txz
+03f8318c94b5154ff9370961ace3567e  gnunet-0.9.2-arm-1.txz
+338c45bfe0571d896fdf12833397b8a6  gnupg-1.4.8-arm-1.txz
+3da6e410046d049a9de0952ced17d207  gnuplot-4.4.4-arm-1.txz
+9e22f867fddbb011ae97fbb522027188  gnuplot-4.4.4-arm-2.txz
+697c54482c649bcbcfa078a211ab1ba8  guile-2.0.9-arm-1.txz
+63cc9ab1a443d49b3c76e77ad2e23c36  gzip-1.6-arm-1.txz
+d863b220986066854ac7c9b0afb20faa  harfbuzz-0.9.9-arm-1.txz
+9985e82de59492de16c2a0a376499444  httrack-3.47.17-arm-1.txz
+704d33fe923ead8b65f73ec35eee3993  isync-1.0.4-arm-1.txz
+82a6edbe7ba4f8e27d76dc36b1fb0fa3  less-457-arm-1.txz
+358f7bbfbb6b011715b2e7c5b4cdf2ba  libargp-20110921-arm-1.txz
+cdf7b3acf8e021921e1e2f696b21b12f  libatomic_ops-git-20130417-arm-1.txz
+0c54f33ceaa95ff640e77ec2378a124e  libev-4.11-arm-1.txz
+cbfd7cd569281a9ed6fa2313c30939ed  libextractor-0.6.2-arm-1.txz
+2d1b88015a8dd263f557fb27043e53f8  libffi-3.0.11-arm-1.txz
+f729e959f7a3bc84258d734f81214621  libgcrypt-1.5.0-arm-1.txz
+664311c312926ca30c077a89baebce93  libgd-2.0.33-arm-1.txz
+8ba41420fa0aab68345956455934bc00  libgpg-error-1.10-arm-1.txz
+d111af3855b8c53e4eb17a65223e4412  libiconv-1.14-arm-1.txz
+1c150a8bb838d5c6fec063b67d324c59  libmicrohttpd-0.9.19-arm-1.txz
+c9e9f52bd5ac9f9e2512345223a3b274  libmms-0.6.2-arm-1.txz
+d0a1cb638f0d3b0a4e9fc1780e561a3b  libmpdclient-2.8-arm-1.txz
+92e4b9b7e27e392bdf0821b65a8cc49c  liboop-20130521-arm-1.txz
+d0ba07ffb41f8c8072c3a72c642fd6ed  libpar2-0.2-arm-1.txz
+3c5701c05ab95f986e01253ad94a8650  libpar2-0.2-arm-2.txz
+90633b9593b93f9ef0352f098964a5a6  libpar2-0.3-arm-1.txz
+1e1c96e71aef38f9bbba4d5b203342fe  libsigc++-2.2.0-arm-1.txz
+549f4f792f3f414dc11a2543aa27a0ff  libspectre-0.2.7-arm-1.txz
+362fecb4327b4db509cc27c8377e3da5  libunistring-0.9.3-arm-1.txz
+2e05471eae96519df1366a8370581b05  libxml2-2.9.1-arm-1.txz
+aa138e6d77ad3953671610579cc3d42b  links-2.7-arm-1.txz
+05d3cae428d3fe660e2d737c915c7c65  lsh-2.0.4-arm-1.txz
+aff618deb5ab34b9ac7a03e0d8154838  lzo-2.06-arm-1.txz
+93e07aea57558da5c62ae0554a2a63f2  miniupnpc-1.8.20130503-arm-1.txz
+f855d164949e7acc18fa4aaf101c0d04  most-pre5.1-14-arm-1.txz
+82f43ab36d048f11944c428ee0a5bdde  mpc-0.23-arm-1.txz
+e96e21b39bfa4d7eb5d44b5228fe7b70  mysecureshell-1.30-arm-1.txz
+cfb7825ee4f94260672690d154f2b6e3  nail-20120224-arm-1.txz
+431550741d9045c1001cfa3e737344d4  ncmpc-0.21-arm-1.txz
+0a14881eadc441ccdcfcd31bea56bcdd  neon-0.29.6-arm-1.txz
+9a89b60c336964997604fae4ed17695e  netatalk-3.0.2-arm-1.txz
+50caa925b133ed445146536fcd9ecc95  nginx-1.5.3-arm-1.txz
+6029909b3d503980c034bd39478c0be1  node-0.8.21-arm-1.txz
+8a7d226e05c96bbcb6d53615c8358a7b  node-0.8.21-arm-2.txz
+87293f8ac425e78b4fd4ea49597b9cb0  node-v0.6.10-arm-1.txz
+ff2e1a80a55f02857a1f36d0cd31ddfe  ntfs-3g-2013.1.13-arm-1.txz
+353f4908bd4ff526bc28562ba08c7e43  ntfs-3g-2013.1.13-arm-2.txz
+71de0746bef03bd0f6edcfc667d19a6c  nut-2.6.5-arm-1.txz
+3a2df95f41ab7e1b0f0b81e874fb0812  nzbget-0.8.0r394-arm-1.txz
+083f7fd632357f1cce627207fb4552d3  opencv-2.3.1-arm-2.txz
+74894e01f5a6c68dc684a058883adce1  openssh-6.1p1-arm-4-node.txz
+ca1211de85f0f37d3a8e91d62fc63ab9  openssh-6.1p1-arm-4.txz
+d3f1799e4bfd961aa3370fa080fe8535  openssh-6.2p2-arm-1.txz
+b65975536508fb1f046a8ebb40b5ccf0  openssh-6.2p2-arm-4-node.txz
+c446b1a2cdfb22283d06cdc1696f69ef  openssl-1.0.0g-arm-1.txz
+1a6b123a0d2d852c49cd3b59dd162587  openssl-1.0.1c-arm-1.txz
+e425e9eba96db0a358e9a3dbb8352f4c  openvpn-2.3_alpha1-arm-1.txz
+2739d61c04fef5e9c14703d3414a12b4  p7zip-9.20.1-arm-1.txz
+b6587c19ed46af536599c44164f30062  pango-1.32.3-arm-1.txz
+31aab821d024ee722d8086de0aaec3af  par-1.1-arm-1.txz
+40e39f90d6ffc36a13ed1266eaa233af  par2cmdline-0.4-arm-1.txz
+b0bf2733a984c43aa5ae222caf6ed652  parted-3.1-arm-1.txz
+50bb839f538148a881ce720ac210d8cb  php-5.4.11-arm-1.txz
+54868d5f85ba92baadd3f4dfafaebcbe  php-5.4.13-arm-1.txz
+28fccad42a83e371f834863b7a6acf65  php-5.4.14-arm-1.txz
+b327febbd27233c0b6d4db45147f9107  php-5.5.0-arm-1.txz
+60cf27986a25f0c1e48759e28f30b39e  php-5.5.0beta3-arm-1.txz
+d17b4f22394d53369dbd77da4ec28af6  php-5.5.201306201030-arm-1.txz
+ac2a6618d9bff07b61619eb43e444f76  pixman-0.28.0-arm-1.txz
+6193b8bc9c34ed897730111343822d4f  protobuf-2.4.1-arm-1.txz
+16e33376597489b17fc80cc37d00fc5c  rrdtool-1.4.5-arm-1.txz
+a9950a1a97c267804ff19d08aa6d9525  rtmpdump-2.3-arm-1.txz
+4fa15a6145d7b868d687b8eba8279abc  seeks-20120224-arm-2.txz
+d949e5826b587dfcbb4fc5127b9914bc  sendmail-8.14.5-arm-1.txz
+3b684329a947e339bcf852abccb64a72  setuptools-0.6c11-arm-1.txz
+97642aff8413275eadf07642783a7570  slang-pre2.3.0-68-arm-1.txz
+672ee83f6e2b613bbbf9aad110c52a8f  sshpass-1.05-arm-1.txz
+50001317da06eb57e8898c2e2c590c20  swig-2.0.4-arm-1.txz
+9de0fbcbf9791df858354068d847a6c6  thttpd-2.25b-arm-1.txz
+a8c0f419b0455f2d8c89c54ee989d074  thttpd-2.25b-arm-2.txz
+6c49bfc80064b5760b761b57f119c8ed  tokyocabinet-1.4.47-arm-1.txz
+276175e3bd3f5f00e0f5729b013790b0  tokyotyrant-1.1.41-arm-1.txz
+d800d890172e3b93db736db52bdb6de8  tor-0.2.3.25-arm-1.txz
+175f16b06006a17e1ce953e370f369c8  unrar-4.1.4-arm-1.txz
+51da0ea5b5cd3b92dc196ce0ccee8789  vim-7.3-arm-1.txz
+012b27f2e1bc2848263c6d1879589e0d  wdfs-1.4.2-arm-1.txz
+262e997d805600f7080e12cec9e094a8  xupnpd-383-arm-1.txz
+5f93016524482301a080ccbceeaa1413  xvidcore-1.3.2-arm-1.txz
+18c2e4aa1dcfa44fe7f49784d7414846  zlib-1.2.6-arm-1.txz
+4deac8f4478776eb8988b0949dce9854  zsh-5.0.2-arm-1.txz
