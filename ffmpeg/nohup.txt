@@ -1,0 +1,34 @@
+nohup: ignoring input
+++ basename ./ffmpeg.funpkg .funpkg
++ PN=ffmpeg
++ PR=2
++ . ./config.ffp
+++ case "$FFP_ARCH" in
+++ GNU_BUILD=arm-ffp-linux-uclibcgnueabi
+++ GNU_HOST=arm-ffp-linux-uclibcgnueabi
+++ GNU_TARGET=arm-ffp-linux-uclibcgnueabi
+++ FFP_CFLAGS='-I/ffp/include -O2'
+++ FFP_LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
+++ '[' '!' -d '' ']'
+++ TMPDIR=/tmp
+++ export TMPDIR
+++ mandir=/ffp/share/man
+++ infodir=/ffp/share/info
+++ docdir=/ffp/share/doc
+++ pwd
++ X=/ffp/home/root/fun_plug/ffp_packages/ffmpeg
+++ mktemp -t -d ffmpeg.XXXXXX
++ W=/tmp/ffmpeg.el1I3f
++ D=/tmp/ffmpeg.el1I3f/pkg
++ cd /tmp/ffmpeg.el1I3f
++ PV=20121025
+++ uname -m
++ CPU=armv5tejl
++ git clone --depth 1 git://source.ffmpeg.org/ffmpeg
+Cloning into 'ffmpeg'...
+Checking out files:  11% (408/3412)   Checking out files:  12% (410/3412)   Checking out files:  13% (444/3412)   Checking out files:  14% (478/3412)   Checking out files:  15% (512/3412)   Checking out files:  16% (546/3412)   Checking out files:  17% (581/3412)   Checking out files:  17% (610/3412)   Checking out files:  18% (615/3412)   Checking out files:  19% (649/3412)   Checking out files:  20% (683/3412)   Checking out files:  21% (717/3412)   Checking out files:  21% (746/3412)   Checking out files:  22% (751/3412)   Checking out files:  23% (785/3412)   Checking out files:  24% (819/3412)   Checking out files:  25% (853/3412)   Checking out files:  26% (888/3412)   Checking out files:  27% (922/3412)   Checking out files:  27% (943/3412)   Checking out files:  28% (956/3412)   Checking out files:  29% (990/3412)   Checking out files:  30% (1024/3412)   Checking out files:  31% (1058/3412)   Checking out files:  32% (1092/3412)   Checking out files:  33% (1126/3412)   Checking out files:  33% (1134/3412)   Checking out files:  34% (1161/3412)   Checking out files:  35% (1195/3412)   Checking out files:  36% (1229/3412)   Checking out files:  37% (1263/3412)   Checking out files:  38% (1297/3412)   Checking out files:  38% (1314/3412)   Checking out files:  39% (1331/3412)   Checking out files:  40% (1365/3412)   Checking out files:  41% (1399/3412)   Checking out files:  42% (1434/3412)   Checking out files:  43% (1468/3412)   Checking out files:  44% (1502/3412)   Checking out files:  45% (1536/3412)   Checking out files:  46% (1570/3412)   Checking out files:  47% (1604/3412)   Checking out files:  48% (1638/3412)   Checking out files:  49% (1672/3412)   Checking out files:  49% (1688/3412)   Checking out files:  50% (1706/3412)   Checking out files:  51% (1741/3412)   Checking out files:  52% (1775/3412)   Checking out files:  53% (1809/3412)   Checking out files:  54% (1843/3412)   Checking out files:  55% (1877/3412)   Checking out files:  56% (1911/3412)   Checking out files:  57% (1945/3412)   Checking out files:  58% (1979/3412)   Checking out files:  59% (2014/3412)   Checking out files:  60% (2048/3412)   Checking out files:  61% (2082/3412)   Checking out files:  61% (2113/3412)   Checking out files:  62% (2116/3412)   Checking out files:  62% (2125/3412)   Checking out files:  63% (2150/3412)   Checking out files:  64% (2184/3412)   Checking out files:  65% (2218/3412)   Checking out files:  66% (2252/3412)   Checking out files:  67% (2287/3412)   Checking out files:  68% (2321/3412)   Checking out files:  69% (2355/3412)   Checking out files:  70% (2389/3412)   Checking out files:  71% (2423/3412)   Checking out files:  72% (2457/3412)   Checking out files:  73% (2491/3412)   Checking out files:  74% (2525/3412)   Checking out files:  74% (2537/3412)   Checking out files:  75% (2559/3412)   Checking out files:  76% (2594/3412)   Checking out files:  77% (2628/3412)   Checking out files:  78% (2662/3412)   Checking out files:  79% (2696/3412)   Checking out files:  80% (2730/3412)   Checking out files:  81% (2764/3412)   Checking out files:  82% (2798/3412)   Checking out files:  83% (2832/3412)   Checking out files:  84% (2867/3412)   Checking out files:  85% (2901/3412)   Checking out files:  86% (2935/3412)   Checking out files:  87% (2969/3412)   Checking out files:  87% (2990/3412)   Checking out files:  88% (3003/3412)   Checking out files:  89% (3037/3412)   Checking out files:  90% (3071/3412)   Checking out files:  91% (3105/3412)   Checking out files:  92% (3140/3412)   Checking out files:  93% (3174/3412)   Checking out files:  94% (3208/3412)   Checking out files:  95% (3242/3412)   Checking out files:  96% (3276/3412)   Checking out files:  97% (3310/3412)   Checking out files:  98% (3344/3412)   Checking out files:  99% (3378/3412)   Checking out files: 100% (3412/3412)   Checking out files: 100% (3412/3412), done.
++ cd ffmpeg
++ LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
++ ./configure --prefix=/ffp --disable-static --enable-shared --enable-gpl --enable-nonfree --enable-small --disable-armv6 --disable-armv6t2 --disable-armvfp
+Unknown option "--disable-armvfp".
+See ./configure --help for available options.
