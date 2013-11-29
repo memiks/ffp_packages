@@ -1,0 +1,55 @@
+#!/ffp/bin/sh -xe
+
+PN=$(basename $0 .funpkg)
+PR=1
+
+. ./config.ffp
+
+X=$(pwd)
+W=$(mktemp -t -d $PN.XXXXXX)
+D=$W/pkg
+
+cd $W
+cat $X/SRC_URI | xargs wget 
+PV=$(ls $PN-*.tar* | egrep -o '[0-9][0-9.]*[0-9]')
+tar xf $PN-$PV.tar*
+
+cd $PN-*
+
+#find $X/patches -type f -iname '*.patch' -exec patch -p0 -i {} \;
+
+for file in `ls $X/patches/*.patch`
+do
+	patch -p0 -i $file
+done
+
+#cd $PN-*
+
+LDFLAGS="$FFP_LDFLAGS -liconv -lneon" \
+./configure \
+	--prefix=/ffp \
+	--build=$GNU_BUILD \
+	--host=$GNU_HOST \
+	--mandir=$mandir \
+	--with-ssl=openssl \
+	--with-libiconv-prefix=/ffp \
+	--with-libiconv=/ffp \
+	--with-neon=/ffp \
+	--with-libneon=/ffp \
+	--infodir=$infodir
+
+LDFLAGS="$FFP_LDFLAGS -liconv -lneon" make
+make DESTDIR=$D install
+
+mkdir -p $D/install
+cp $X/{DESCR,HOMEPAGE} $D/install/
+
+cd $D
+
+rm -rf $D/sbin
+rm -rf $D/ffp/sbin/umount.davfs
+chmod 766 $D/ffp/sbin/mount.davfs
+
+makepkg $PN $PV $PR
+
+

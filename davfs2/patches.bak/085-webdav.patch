@@ -1,0 +1,12 @@
+--- src/webdav.orig.c	2012-10-02 11:18:51.000000000 +0200
++++ src/webdav.c	2012-10-02 11:19:05.000000000 +0200
+@@ -36,9 +36,7 @@
+ #include <limits.h>
+ #endif
+ #include <stdio.h>
+-#ifdef HAVE_STDLIB_H
+ #include <stdlib.h>
+-#endif
+ #include <string.h>
+ #ifdef HAVE_SYSLOG_H
+ #include <syslog.h>

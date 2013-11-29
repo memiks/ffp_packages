@@ -1,0 +1,24 @@
+--- src/webdav.orig.c	2012-10-01 14:37:55.000000000 +0200
++++ src/webdav.c	2012-10-01 14:38:25.000000000 +0200
+@@ -343,21 +343,6 @@
+     if (ne_sock_init() != 0)
+         error(EXIT_FAILURE, errno, _("socket library initialization failed"));
+ 
+-    if (args->neon_debug & ~NE_DBG_HTTPPLAIN) {
+-        char *buf = malloc(log_bufsize);
+-        cookie_io_functions_t *log_func = malloc(sizeof(cookie_io_functions_t));
+-        if (!log_func) abort();
+-        log_func->read = NULL;
+-        log_func->write = log_writer;
+-        log_func->seek = NULL;
+-        log_func->close = NULL;
+-        log_stream = fopencookie(buf, "w", *log_func);
+-        if (!log_stream)
+-            error(EXIT_FAILURE, errno,
+-                  _("can't open stream to log neon-messages"));
+-        ne_debug_init(log_stream, args->neon_debug);
+-    }
+-
+     session = ne_session_create(args->scheme, args->host, args->port);
+ 
+     ne_set_read_timeout(session, args->read_timeout);
