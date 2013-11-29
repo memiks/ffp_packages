@@ -1,0 +1,1166 @@
+++ basename ./libextractor.funpkg .funpkg
++ PN=libextractor
++ PR=1
++ . ./config.ffp
+++ GNU_HOST=
+++ GNU_TARGET=
+++ FFP_CFLAGS='-I/ffp/include -O2'
+++ FFP_LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
+++ '[' '!' -d '' ']'
+++ TMPDIR=/tmp
+++ export TMPDIR
+++ mandir=/ffp/share/man
+++ infodir=/ffp/share/info
+++ docdir=/ffp/share/doc
+++ pwd
++ X=/ffp/home/root/src/libextractor
+++ mktemp -t -d libextractor.XXXXXX
++ W=/tmp/libextractor.RuH9SW
++ D=/tmp/libextractor.RuH9SW/pkg
++ cd /tmp/libextractor.RuH9SW
++ cat /ffp/home/root/src/libextractor/SRC_URI
++ xargs wget
+--2012-03-14 13:19:45--  http://ftpmirror.gnu.org/libextractor/libextractor-0.6.2.tar.gz
+Resolving ftpmirror.gnu.org... 140.186.70.73
+Connecting to ftpmirror.gnu.org|140.186.70.73|:80... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: http://ftp.igh.cnrs.fr/pub/gnu/libextractor/libextractor-0.6.2.tar.gz [following]
+--2012-03-14 13:19:46--  http://ftp.igh.cnrs.fr/pub/gnu/libextractor/libextractor-0.6.2.tar.gz
+Resolving ftp.igh.cnrs.fr... 193.50.6.138
+Connecting to ftp.igh.cnrs.fr|193.50.6.138|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 955346 (933K) [application/octet-stream]
+Saving to: `libextractor-0.6.2.tar.gz'
+
+     0K .......... .......... .......... .......... ..........  5%  261K 3s
+    50K .......... .......... .......... .......... .......... 10%  824K 2s
+   100K .......... .......... .......... .......... .......... 16% 1014K 2s
+   150K .......... .......... .......... .......... .......... 21% 1.16M 1s
+   200K .......... .......... .......... .......... .......... 26% 1.81M 1s
+   250K .......... .......... .......... .......... .......... 32%  753K 1s
+   300K .......... .......... .......... .......... .......... 37% 22.5M 1s
+   350K .......... .......... .......... .......... .......... 42%  231K 1s
+   400K .......... .......... .......... .......... .......... 48%  898K 1s
+   450K .......... .......... .......... .......... .......... 53% 1.03M 1s
+   500K .......... .......... .......... .......... .......... 58% 1.59M 1s
+   550K .......... .......... .......... .......... .......... 64% 1.14M 0s
+   600K .......... .......... .......... .......... .......... 69% 1.75M 0s
+   650K .......... .......... .......... .......... .......... 75% 1.20M 0s
+   700K .......... .......... .......... .......... .......... 80% 1.35M 0s
+   750K .......... .......... .......... .......... .......... 85% 1.59M 0s
+   800K .......... .......... .......... .......... .......... 91% 1.51M 0s
+   850K .......... .......... .......... .......... .......... 96% 1.27M 0s
+   900K .......... .......... .......... ..                   100% 1.44M=1.1s
+
+2012-03-14 13:19:47 (880 KB/s) - `libextractor-0.6.2.tar.gz' saved [955346/955346]
+
+++ ls libextractor-0.6.2.tar.gz
+++ egrep -o '[0-9][0-9.]*[0-9]'
++ PV=0.6.2
++ tar xf libextractor-0.6.2.tar.gz
++ cd libextractor-0.6.2 libextractor-0.6.2.tar.gz
++ LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
++ ./configure --prefix=/ffp --build= --host= --mandir=/ffp/share/man --infodir=/ffp/share/info
+checking for a BSD-compatible install... /ffp/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /ffp/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking build system type... armv5tejl-unknown-linux-gnueabi
+checking host system type... armv5tejl-unknown-linux-gnueabi
+checking for style of include used by make... GNU
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking dependency style of gcc... gcc3
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /ffp/bin/grep
+checking for egrep... /ffp/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking for gawk... (cached) gawk
+checking for gcc... (cached) gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to accept ISO C89... (cached) none needed
+checking dependency style of gcc... (cached) gcc3
+checking how to run the C preprocessor... gcc -E
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking dependency style of g++... gcc3
+checking for g++... yes
+checking whether ln -s works... yes
+checking whether make sets $(MAKE)... (cached) yes
+checking for a sed that does not truncate output... /ffp/bin/sed
+checking for fgrep... /ffp/bin/grep -F
+checking for ld used by gcc... /ffp/bin/ld
+checking if the linker (/ffp/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /ffp/bin/nm -B
+checking the name lister (/ffp/bin/nm -B) interface... BSD nm
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking for /ffp/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for ar... ar
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /ffp/bin/nm -B output from gcc object... ok
+checking for dlfcn.h... yes
+checking whether we are using the GNU C++ compiler... (cached) yes
+checking whether g++ accepts -g... (cached) yes
+checking dependency style of g++... (cached) gcc3
+checking how to run the C++ preprocessor... g++ -E
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/ffp/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for shl_load... no
+checking for shl_load in -ldld... no
+checking for dlopen... no
+checking for dlopen in -ldl... yes
+checking whether a program can dlopen itself... yes
+checking whether a statically linked program can dlopen itself... no
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking for ld used by g++... /ffp/bin/ld
+checking if the linker (/ffp/bin/ld) is GNU ld... yes
+checking whether the g++ linker (/ffp/bin/ld) supports shared libraries... yes
+checking for g++ option to produce PIC... -fPIC -DPIC
+checking if g++ PIC flag -fPIC -DPIC works... yes
+checking if g++ static flag -static works... yes
+checking if g++ supports -c -o file.o... yes
+checking if g++ supports -c -o file.o... (cached) yes
+checking whether the g++ linker (/ffp/bin/ld) supports shared libraries... yes
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking which extension is used for runtime loadable modules... .so
+checking which variable specifies run-time module search path... LD_LIBRARY_PATH
+checking for the default library search path... /lib /usr/lib
+checking for library containing dlopen... -ldl
+checking for dlerror... yes
+checking for shl_load... (cached) no
+checking for shl_load in -ldld... (cached) no
+checking for dld_link in -ldld... no
+checking for _ prefix in compiled symbols... no
+checking whether deplibs are loaded by dlopen... yes
+checking for argz.h... no
+checking for error_t... no
+checking for argz_add... no
+checking for argz_append... no
+checking for argz_count... no
+checking for argz_create_sep... no
+checking for argz_insert... no
+checking for argz_next... no
+checking for argz_stringify... no
+checking whether libtool supports -dlopen/-dlpreopen... yes
+checking for ltdl.h... yes
+checking whether lt_dlinterface_register is declared... yes
+checking for lt_dladvise_preload in -lltdl... yes
+checking where to find libltdl headers... 
+checking where to find libltdl library... -lltdl
+checking for unistd.h... (cached) yes
+checking for dl.h... no
+checking for sys/dl.h... no
+checking for dld.h... no
+checking for mach-o/dyld.h... no
+checking for dirent.h... yes
+checking for closedir... yes
+checking for opendir... yes
+checking for readdir... yes
+checking for strlcat... yes
+checking for strlcpy... yes
+checking for ld used by GCC... /ffp/bin/ld
+checking if the linker (/ffp/bin/ld) is GNU ld... yes
+checking for shared library run path origin... done
+checking for iconv... yes
+checking how to link with libiconv... /ffp/lib/libiconv.so -Wl,-rpath -Wl,/ffp/lib
+checking for iconv declaration... install-shextern size_t iconv (iconv_t cd, char * *inbuf, size_t *inbytesleft, char * *outbuf, size_t *outbytesleft);
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... 64
+checking for _LARGEFILE_SOURCE value needed for large files... no
+checking for fclose in -lstdc++... yes
+checking langinfo.h usability... yes
+checking langinfo.h presence... yes
+checking for langinfo.h... yes
+checking for ov_open_callbacks in -lvorbisfile... no
+checking for FLAC__stream_decoder_init_stream in -lFLAC... no
+checking for FLAC__stream_decoder_init_ogg_stream in -lFLAC... no
+checking for vorbis_comment_query in -lvorbisfile... no
+checking for inflate in -lz... yes
+checking zlib.h usability... yes
+checking zlib.h presence... yes
+checking for zlib.h... yes
+checking for BZ2_decompress in -lbz2... yes
+checking bzlib.h usability... yes
+checking bzlib.h presence... yes
+checking for bzlib.h... yes
+checking for rpmReadPackageFile in -lrpm... no
+checking for mpeg2_init in -lmpeg2... no
+checking for _ZTI9MemStream in -lpoppler... no
+checking for ImageFactory::iptcData in -lexiv2... no
+checking for getPDFMajorVersion in -lpoppler... no
+checking whether gcc accepts -no-cpp-precomp... no
+checking for ANSI C header files... (cached) yes
+checking for dirent.h that defines DIR... yes
+checking for library containing opendir... none required
+checking for stdbool.h that conforms to C99... yes
+checking for _Bool... yes
+checking iconv.h usability... yes
+checking iconv.h presence... yes
+checking for iconv.h... yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking netinet/in.h usability... yes
+checking netinet/in.h presence... yes
+checking for netinet/in.h... yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking libintl.h usability... yes
+checking libintl.h presence... yes
+checking for libintl.h... yes
+checking limits.h usability... yes
+checking limits.h presence... yes
+checking for limits.h... yes
+checking stddef.h usability... yes
+checking stddef.h presence... yes
+checking for stddef.h... yes
+checking for zlib.h... (cached) yes
+checking for ltdl.h... (cached) yes
+checking for inline... inline
+checking for size_t... yes
+checking for pid_t... yes
+checking endianess... little
+checking for working memcmp... yes
+checking for vprintf... yes
+checking for _doprnt... no
+checking for stdlib.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for sys/param.h... yes
+checking for getpagesize... yes
+checking for working mmap... yes
+checking whether lstat correctly handles trailing slash... yes
+checking whether stat accepts an empty string... no
+checking for error_at_line... yes
+checking for library containing dlopen... (cached) -ldl
+checking for library containing shm_open... -lrt
+checking for mkstemp... yes
+checking for strndup... yes
+checking for munmap... yes
+checking for strcasecmp... yes
+checking for strdup... yes
+checking for strncasecmp... yes
+checking for memmove... yes
+checking for memset... yes
+checking for strtoul... yes
+checking for floor... no
+checking for getcwd... yes
+checking for pow... no
+checking for setenv... yes
+checking for sqrt... no
+checking for strchr... yes
+checking for strcspn... yes
+checking for strrchr... yes
+checking for strnlen... yes
+checking for strndup... (cached) yes
+checking for ftruncate... yes
+checking for shm_open... yes
+checking for shm_unlink... yes
+checking whether NLS is requested... yes
+checking for msgfmt... /ffp/bin/msgfmt
+checking for gmsgfmt... /ffp/bin/msgfmt
+checking for xgettext... /ffp/bin/xgettext
+checking for msgmerge... /ffp/bin/msgmerge
+checking for CFPreferencesCopyAppValue... no
+checking for CFLocaleCopyCurrent... no
+checking for GNU gettext in libc... no
+checking for iconv... (cached) yes
+checking how to link with libiconv... /ffp/lib/libiconv.so -Wl,-rpath -Wl,/ffp/lib
+checking for GNU gettext in libintl... yes
+checking whether to use NLS... yes
+checking where the gettext function comes from... external libintl
+checking how to link with libintl... /ffp/lib/libintl.so /ffp/lib/libiconv.so /ffp/lib/libc.so -Wl,-rpath -Wl,/ffp/lib
+checking if the linker (/ffp/bin/ld) is GNU ld... (cached) yes
+checking for glib... checking for pkg-config... /ffp/bin/pkg-config
+checking for GLIB - version >= 2.0.0... yes (version 2.30.2)
+checking whether glib is disabled... checking for gtk... checking for pkg-config... (cached) /ffp/bin/pkg-config
+checking for GTK+ - version >= 2.6.0... no
+*** Could not run GTK+ test program, checking why...
+*** The test program failed to compile or link. See the file config.log for the
+*** exact error that occured. This usually means GTK+ is incorrectly installed.
+checking for Qt... --with-qt not specified
+checking Qt/qpixmap.h usability... no
+checking Qt/qpixmap.h presence... no
+checking for Qt/qpixmap.h... no
+checking for Qt SVG... --with-qt not specified
+checking Qt/qsvgrenderer.h usability... no
+checking Qt/qsvgrenderer.h presence... no
+checking for Qt/qsvgrenderer.h... no
+checking pkg-config is at least version 0.9.0... yes
+checking for GSF... 
+checking for gsf_init in -lgsf-1... no
+checking for zzuf... 0
+checking whether to enable the FFmpeg thumbnail extractor... no
+checking whether -export-symbols-regex works... yes
+checking our pkgconfig libname... libextractor
+checking our pkgconfig version... 0.6.2
+checking our pkgconfig_libdir... ${libdir}/pkgconfig
+expanded our pkgconfig_libdir... /ffp/lib/pkgconfig
+checking our pkgconfig_libfile... libextractor.pc
+checking our package / suffix... libextractor / 
+checking our pkgconfig description... Metadata extraction library
+checking our pkgconfig requires... 
+checking our pkgconfig ext libs... -lextractor
+checking our pkgconfig cppflags... -I/ffp/include
+checking our pkgconfig ldflags... -L/ffp/lib -Wl,-rpath,/ffp/lib
+noninstalled pkgconfig -L /tmp/libextractor.RuH9SW/libextractor-0.6.2/src/.libs
+noninstalled pkgconfig -I /tmp/libextractor.RuH9SW/libextractor-0.6.2/.
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating po/Makefile.in
+config.status: creating m4/Makefile
+config.status: creating contrib/macosx/Info.plist
+config.status: creating contrib/macosx/Pkg-Info.plist
+config.status: creating doc/Makefile
+config.status: creating src/Makefile
+config.status: creating src/include/Makefile
+config.status: creating src/intlemu/Makefile
+config.status: creating src/common/Makefile
+config.status: creating src/main/Makefile
+config.status: creating src/plugins/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing po-directories commands
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+config.status: executing libextractor.pc commands
+config.status: creating libextractor.pc.in
+config.status: creating libextractor.pc
+config.status: creating libextractor-uninstalled.pc
+config.status: creating libextractor-uninstalled.sh
+configure: NOTICE: libgsf not found, no OLE2 (MS Office) support
+configure: NOTICE: FFmpeg thumbnailer plugin disabled
+configure: NOTICE: neither gtk nor Qt not found, no thumbnail support
+configure: NOTICE: vorbis support disabled
+configure: NOTICE: libmpeg2 not found (will not compile mpeg2 plugin)
+configure: NOTICE: libpoppler not found (will not compile pdf plugin)
++ make
+make  all-recursive
+make[1]: Entering directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2'
+Making all in m4
+make[2]: Entering directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/m4'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/m4'
+Making all in po
+make[2]: Entering directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/po'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/po'
+Making all in src
+make[2]: Entering directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src'
+Making all in include
+make[3]: Entering directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/include'
+Making all in .
+make[4]: Entering directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/include'
+make[4]: Nothing to be done for `all-am'.
+make[4]: Leaving directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/include'
+make[3]: Leaving directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/include'
+Making all in main
+make[3]: Entering directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/main'
+Making all in .
+make[4]: Entering directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/main'
+/ffp/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include  -DPLUGINDIR=\"libextractor\" -DPLUGININSTDIR=\"/ffp/lib/libextractor\"  -I/ffp/include  -fno-strict-aliasing -g -O2 -MT libextractor_la-extractor.lo -MD -MP -MF .deps/libextractor_la-extractor.Tpo -c -o libextractor_la-extractor.lo `test -f 'extractor.c' || echo './'`extractor.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -DPLUGINDIR=\"libextractor\" -DPLUGININSTDIR=\"/ffp/lib/libextractor\" -I/ffp/include -fno-strict-aliasing -g -O2 -MT libextractor_la-extractor.lo -MD -MP -MF .deps/libextractor_la-extractor.Tpo -c extractor.c  -fPIC -DPIC -o .libs/libextractor_la-extractor.o
+mv -f .deps/libextractor_la-extractor.Tpo .deps/libextractor_la-extractor.Plo
+/ffp/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include  -DPLUGINDIR=\"libextractor\" -DPLUGININSTDIR=\"/ffp/lib/libextractor\"  -I/ffp/include  -fno-strict-aliasing -g -O2 -MT libextractor_la-extractor_metatypes.lo -MD -MP -MF .deps/libextractor_la-extractor_metatypes.Tpo -c -o libextractor_la-extractor_metatypes.lo `test -f 'extractor_metatypes.c' || echo './'`extractor_metatypes.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -DPLUGINDIR=\"libextractor\" -DPLUGININSTDIR=\"/ffp/lib/libextractor\" -I/ffp/include -fno-strict-aliasing -g -O2 -MT libextractor_la-extractor_metatypes.lo -MD -MP -MF .deps/libextractor_la-extractor_metatypes.Tpo -c extractor_metatypes.c  -fPIC -DPIC -o .libs/libextractor_la-extractor_metatypes.o
+mv -f .deps/libextractor_la-extractor_metatypes.Tpo .deps/libextractor_la-extractor_metatypes.Plo
+/ffp/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include  -DPLUGINDIR=\"libextractor\" -DPLUGININSTDIR=\"/ffp/lib/libextractor\"  -I/ffp/include  -fno-strict-aliasing -g -O2 -MT libextractor_la-extractor_print.lo -MD -MP -MF .deps/libextractor_la-extractor_print.Tpo -c -o libextractor_la-extractor_print.lo `test -f 'extractor_print.c' || echo './'`extractor_print.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -DPLUGINDIR=\"libextractor\" -DPLUGININSTDIR=\"/ffp/lib/libextractor\" -I/ffp/include -fno-strict-aliasing -g -O2 -MT libextractor_la-extractor_print.lo -MD -MP -MF .deps/libextractor_la-extractor_print.Tpo -c extractor_print.c  -fPIC -DPIC -o .libs/libextractor_la-extractor_print.o
+mv -f .deps/libextractor_la-extractor_print.Tpo .deps/libextractor_la-extractor_print.Plo
+/ffp/bin/sh ../../libtool --tag=CC   --mode=link gcc  -fno-strict-aliasing -g -O2 -export-dynamic -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*" -version-info 3:2:0 -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor.la -rpath /ffp/lib libextractor_la-extractor.lo libextractor_la-extractor_metatypes.lo libextractor_la-extractor_print.lo -lltdl -lz -lbz2 /ffp/lib/libiconv.so -Wl,-rpath -Wl,/ffp/lib -L/ffp/lib -lintl -L/ffp/lib -liconv -L/ffp/lib -lc -R/ffp/lib -lrt -ldl 
+libtool: link: /ffp/bin/nm -B  .libs/libextractor_la-extractor.o .libs/libextractor_la-extractor_metatypes.o .libs/libextractor_la-extractor_print.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor.exp
+libtool: link: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*" ".libs/libextractor.exp" > ".libs/libextractor.expT"
+libtool: link: mv -f ".libs/libextractor.expT" ".libs/libextractor.exp"
+libtool: link: echo "{ global:" > .libs/libextractor.ver
+libtool: link:  cat .libs/libextractor.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor.ver
+libtool: link:  echo "local: *; };" >> .libs/libextractor.ver
+libtool: link:  gcc -shared  .libs/libextractor_la-extractor.o .libs/libextractor_la-extractor_metatypes.o .libs/libextractor_la-extractor_print.o   -Wl,-rpath -Wl,/ffp/lib -Wl,-rpath -Wl,/ffp/lib -L/ffp/lib /ffp/lib/libltdl.so -lz -lbz2 /ffp/lib/libintl.so /ffp/lib/libiconv.so -lc -lrt -ldl  -Wl,-rpath -Wl,/ffp/lib -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor.so.3 -Wl,-version-script -Wl,.libs/libextractor.ver -o .libs/libextractor.so.3.0.2
+libtool: link: (cd ".libs" && rm -f "libextractor.so.3" && ln -s "libextractor.so.3.0.2" "libextractor.so.3")
+libtool: link: (cd ".libs" && rm -f "libextractor.so" && ln -s "libextractor.so.3.0.2" "libextractor.so")
+libtool: link: ( cd ".libs" && rm -f "libextractor.la" && ln -s "../libextractor.la" "libextractor.la" )
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include   -I/ffp/include  -fno-strict-aliasing -g -O2 -MT extract.o -MD -MP -MF .deps/extract.Tpo -c -o extract.o extract.c
+mv -f .deps/extract.Tpo .deps/extract.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include   -I/ffp/include  -fno-strict-aliasing -g -O2 -MT getopt.o -MD -MP -MF .deps/getopt.Tpo -c -o getopt.o getopt.c
+mv -f .deps/getopt.Tpo .deps/getopt.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include   -I/ffp/include  -fno-strict-aliasing -g -O2 -MT getopt1.o -MD -MP -MF .deps/getopt1.Tpo -c -o getopt1.o getopt1.c
+mv -f .deps/getopt1.Tpo .deps/getopt1.Po
+/ffp/bin/sh ../../libtool --tag=CC   --mode=link gcc  -fno-strict-aliasing -g -O2  -L/ffp/lib -Wl,-rpath,/ffp/lib -o extract extract.o getopt.o getopt1.o ../../src/main/libextractor.la  -L/ffp/lib -lintl -L/ffp/lib -liconv -L/ffp/lib -lc -R/ffp/lib -lrt -ldl 
+libtool: link: gcc -fno-strict-aliasing -g -O2 -Wl,-rpath -Wl,/ffp/lib -o .libs/extract extract.o getopt.o getopt1.o  -L/ffp/lib ../../src/main/.libs/libextractor.so /ffp/lib/libintl.so /ffp/lib/libiconv.so -lc -lrt -ldl -Wl,-rpath -Wl,/ffp/lib
+make[4]: Leaving directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/main'
+make[3]: Leaving directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/main'
+Making all in common
+make[3]: Entering directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/common'
+/ffp/bin/sh ../../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include  -I/ffp/include  -fno-strict-aliasing -g -O2 -MT unzip.lo -MD -MP -MF .deps/unzip.Tpo -c -o unzip.lo unzip.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I/ffp/include -fno-strict-aliasing -g -O2 -MT unzip.lo -MD -MP -MF .deps/unzip.Tpo -c unzip.c  -fPIC -DPIC -o .libs/unzip.o
+mv -f .deps/unzip.Tpo .deps/unzip.Plo
+/ffp/bin/sh ../../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include  -I/ffp/include  -fno-strict-aliasing -g -O2 -MT pack.lo -MD -MP -MF .deps/pack.Tpo -c -o pack.lo pack.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I/ffp/include -fno-strict-aliasing -g -O2 -MT pack.lo -MD -MP -MF .deps/pack.Tpo -c pack.c  -fPIC -DPIC -o .libs/pack.o
+mv -f .deps/pack.Tpo .deps/pack.Plo
+/ffp/bin/sh ../../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include  -I/ffp/include  -fno-strict-aliasing -g -O2 -MT convert.lo -MD -MP -MF .deps/convert.Tpo -c -o convert.lo convert.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I/ffp/include -fno-strict-aliasing -g -O2 -MT convert.lo -MD -MP -MF .deps/convert.Tpo -c convert.c  -fPIC -DPIC -o .libs/convert.o
+mv -f .deps/convert.Tpo .deps/convert.Plo
+/ffp/bin/sh ../../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include  -I/ffp/include  -fno-strict-aliasing -g -O2 -MT convert_numeric.lo -MD -MP -MF .deps/convert_numeric.Tpo -c -o convert_numeric.lo convert_numeric.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I/ffp/include -fno-strict-aliasing -g -O2 -MT convert_numeric.lo -MD -MP -MF .deps/convert_numeric.Tpo -c convert_numeric.c  -fPIC -DPIC -o .libs/convert_numeric.o
+mv -f .deps/convert_numeric.Tpo .deps/convert_numeric.Plo
+/ffp/bin/sh ../../libtool --tag=CC   --mode=link gcc  -fno-strict-aliasing -g -O2 -export-dynamic -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*" -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_common.la -rpath /ffp/lib unzip.lo pack.lo convert.lo convert_numeric.lo /ffp/lib/libiconv.so -Wl,-rpath -Wl,/ffp/lib -lz -L/ffp/lib -lintl -L/ffp/lib -liconv -L/ffp/lib -lc -R/ffp/lib 
+libtool: link: /ffp/bin/nm -B  .libs/unzip.o .libs/pack.o .libs/convert.o .libs/convert_numeric.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_common.exp
+libtool: link: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*" ".libs/libextractor_common.exp" > ".libs/libextractor_common.expT"
+libtool: link: mv -f ".libs/libextractor_common.expT" ".libs/libextractor_common.exp"
+libtool: link: echo "{ global:" > .libs/libextractor_common.ver
+libtool: link:  cat .libs/libextractor_common.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_common.ver
+libtool: link:  echo "local: *; };" >> .libs/libextractor_common.ver
+libtool: link:  gcc -shared  .libs/unzip.o .libs/pack.o .libs/convert.o .libs/convert_numeric.o   -Wl,-rpath -Wl,/ffp/lib -Wl,-rpath -Wl,/ffp/lib -L/ffp/lib -lz /ffp/lib/libintl.so /ffp/lib/libiconv.so -lc  -Wl,-rpath -Wl,/ffp/lib -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_common.so.0 -Wl,-version-script -Wl,.libs/libextractor_common.ver -o .libs/libextractor_common.so.0.0.0
+libtool: link: (cd ".libs" && rm -f "libextractor_common.so.0" && ln -s "libextractor_common.so.0.0.0" "libextractor_common.so.0")
+libtool: link: (cd ".libs" && rm -f "libextractor_common.so" && ln -s "libextractor_common.so.0.0.0" "libextractor_common.so")
+libtool: link: ( cd ".libs" && rm -f "libextractor_common.la" && ln -s "../libextractor_common.la" "libextractor_common.la" )
+make[3]: Leaving directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/common'
+Making all in plugins
+make[3]: Entering directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/plugins'
+Making all in .
+make[4]: Entering directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/plugins'
+/ffp/bin/sh ../../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common  -I/ffp/include  -fno-strict-aliasing -g -O2 -MT applefile_extractor.lo -MD -MP -MF .deps/applefile_extractor.Tpo -c -o applefile_extractor.lo applefile_extractor.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common -I/ffp/include -fno-strict-aliasing -g -O2 -MT applefile_extractor.lo -MD -MP -MF .deps/applefile_extractor.Tpo -c applefile_extractor.c  -fPIC -DPIC -o .libs/applefile_extractor.o
+mv -f .deps/applefile_extractor.Tpo .deps/applefile_extractor.Plo
+/ffp/bin/sh ../../libtool --tag=CC   --mode=link gcc  -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_applefile.la -rpath /ffp/lib/libextractor applefile_extractor.lo ../../src/common/libextractor_common.la -L/ffp/lib -lintl -L/ffp/lib -liconv -L/ffp/lib -lc -R/ffp/lib 
+libtool: link: /ffp/bin/nm -B  .libs/applefile_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_applefile.exp
+libtool: link: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_applefile.exp" > ".libs/libextractor_applefile.expT"
+libtool: link: mv -f ".libs/libextractor_applefile.expT" ".libs/libextractor_applefile.exp"
+libtool: link: echo "{ global:" > .libs/libextractor_applefile.ver
+libtool: link:  cat .libs/libextractor_applefile.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_applefile.ver
+libtool: link:  echo "local: *; };" >> .libs/libextractor_applefile.ver
+libtool: link:  gcc -shared  .libs/applefile_extractor.o   -Wl,-rpath -Wl,/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/common/.libs -Wl,-rpath -Wl,/ffp/lib -Wl,-rpath -Wl,/ffp/lib -L/ffp/lib ../../src/common/.libs/libextractor_common.so /ffp/lib/libintl.so /ffp/lib/libiconv.so -lc  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_applefile.so -Wl,-version-script -Wl,.libs/libextractor_applefile.ver -o .libs/libextractor_applefile.so
+libtool: link: ( cd ".libs" && rm -f "libextractor_applefile.la" && ln -s "../libextractor_applefile.la" "libextractor_applefile.la" )
+/ffp/bin/sh ../../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common  -I/ffp/include  -fno-strict-aliasing -g -O2 -MT asf_extractor.lo -MD -MP -MF .deps/asf_extractor.Tpo -c -o asf_extractor.lo asf_extractor.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common -I/ffp/include -fno-strict-aliasing -g -O2 -MT asf_extractor.lo -MD -MP -MF .deps/asf_extractor.Tpo -c asf_extractor.c  -fPIC -DPIC -o .libs/asf_extractor.o
+mv -f .deps/asf_extractor.Tpo .deps/asf_extractor.Plo
+/ffp/bin/sh ../../libtool --tag=CC   --mode=link gcc  -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_asf.la -rpath /ffp/lib/libextractor asf_extractor.lo  
+libtool: link: /ffp/bin/nm -B  .libs/asf_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_asf.exp
+libtool: link: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_asf.exp" > ".libs/libextractor_asf.expT"
+libtool: link: mv -f ".libs/libextractor_asf.expT" ".libs/libextractor_asf.exp"
+libtool: link: echo "{ global:" > .libs/libextractor_asf.ver
+libtool: link:  cat .libs/libextractor_asf.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_asf.ver
+libtool: link:  echo "local: *; };" >> .libs/libextractor_asf.ver
+libtool: link:  gcc -shared  .libs/asf_extractor.o   -L/ffp/lib  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_asf.so -Wl,-version-script -Wl,.libs/libextractor_asf.ver -o .libs/libextractor_asf.so
+libtool: link: ( cd ".libs" && rm -f "libextractor_asf.la" && ln -s "../libextractor_asf.la" "libextractor_asf.la" )
+/ffp/bin/sh ../../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common  -I/ffp/include  -fno-strict-aliasing -g -O2 -MT deb_extractor.lo -MD -MP -MF .deps/deb_extractor.Tpo -c -o deb_extractor.lo deb_extractor.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common -I/ffp/include -fno-strict-aliasing -g -O2 -MT deb_extractor.lo -MD -MP -MF .deps/deb_extractor.Tpo -c deb_extractor.c  -fPIC -DPIC -o .libs/deb_extractor.o
+mv -f .deps/deb_extractor.Tpo .deps/deb_extractor.Plo
+/ffp/bin/sh ../../libtool --tag=CC   --mode=link gcc  -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_deb.la -rpath /ffp/lib/libextractor deb_extractor.lo -lz 
+libtool: link: /ffp/bin/nm -B  .libs/deb_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_deb.exp
+libtool: link: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_deb.exp" > ".libs/libextractor_deb.expT"
+libtool: link: mv -f ".libs/libextractor_deb.expT" ".libs/libextractor_deb.exp"
+libtool: link: echo "{ global:" > .libs/libextractor_deb.ver
+libtool: link:  cat .libs/libextractor_deb.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_deb.ver
+libtool: link:  echo "local: *; };" >> .libs/libextractor_deb.ver
+libtool: link:  gcc -shared  .libs/deb_extractor.o   -L/ffp/lib -lz  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_deb.so -Wl,-version-script -Wl,.libs/libextractor_deb.ver -o .libs/libextractor_deb.so
+libtool: link: ( cd ".libs" && rm -f "libextractor_deb.la" && ln -s "../libextractor_deb.la" "libextractor_deb.la" )
+/ffp/bin/sh ../../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common  -I/ffp/include  -fno-strict-aliasing -g -O2 -MT dvi_extractor.lo -MD -MP -MF .deps/dvi_extractor.Tpo -c -o dvi_extractor.lo dvi_extractor.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common -I/ffp/include -fno-strict-aliasing -g -O2 -MT dvi_extractor.lo -MD -MP -MF .deps/dvi_extractor.Tpo -c dvi_extractor.c  -fPIC -DPIC -o .libs/dvi_extractor.o
+mv -f .deps/dvi_extractor.Tpo .deps/dvi_extractor.Plo
+/ffp/bin/sh ../../libtool --tag=CC   --mode=link gcc  -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_dvi.la -rpath /ffp/lib/libextractor dvi_extractor.lo  
+libtool: link: /ffp/bin/nm -B  .libs/dvi_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_dvi.exp
+libtool: link: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_dvi.exp" > ".libs/libextractor_dvi.expT"
+libtool: link: mv -f ".libs/libextractor_dvi.expT" ".libs/libextractor_dvi.exp"
+libtool: link: echo "{ global:" > .libs/libextractor_dvi.ver
+libtool: link:  cat .libs/libextractor_dvi.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_dvi.ver
+libtool: link:  echo "local: *; };" >> .libs/libextractor_dvi.ver
+libtool: link:  gcc -shared  .libs/dvi_extractor.o   -L/ffp/lib  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_dvi.so -Wl,-version-script -Wl,.libs/libextractor_dvi.ver -o .libs/libextractor_dvi.so
+libtool: link: ( cd ".libs" && rm -f "libextractor_dvi.la" && ln -s "../libextractor_dvi.la" "libextractor_dvi.la" )
+/ffp/bin/sh ../../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common  -I/ffp/include  -fno-strict-aliasing -g -O2 -MT elf_extractor.lo -MD -MP -MF .deps/elf_extractor.Tpo -c -o elf_extractor.lo elf_extractor.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common -I/ffp/include -fno-strict-aliasing -g -O2 -MT elf_extractor.lo -MD -MP -MF .deps/elf_extractor.Tpo -c elf_extractor.c  -fPIC -DPIC -o .libs/elf_extractor.o
+mv -f .deps/elf_extractor.Tpo .deps/elf_extractor.Plo
+/ffp/bin/sh ../../libtool --tag=CC   --mode=link gcc  -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_elf.la -rpath /ffp/lib/libextractor elf_extractor.lo ../../src/common/libextractor_common.la 
+libtool: link: /ffp/bin/nm -B  .libs/elf_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_elf.exp
+libtool: link: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_elf.exp" > ".libs/libextractor_elf.expT"
+libtool: link: mv -f ".libs/libextractor_elf.expT" ".libs/libextractor_elf.exp"
+libtool: link: echo "{ global:" > .libs/libextractor_elf.ver
+libtool: link:  cat .libs/libextractor_elf.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_elf.ver
+libtool: link:  echo "local: *; };" >> .libs/libextractor_elf.ver
+libtool: link:  gcc -shared  .libs/elf_extractor.o   -Wl,-rpath -Wl,/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/common/.libs -Wl,-rpath -Wl,/ffp/lib -L/ffp/lib ../../src/common/.libs/libextractor_common.so  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_elf.so -Wl,-version-script -Wl,.libs/libextractor_elf.ver -o .libs/libextractor_elf.so
+libtool: link: ( cd ".libs" && rm -f "libextractor_elf.la" && ln -s "../libextractor_elf.la" "libextractor_elf.la" )
+/ffp/bin/sh ../../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common  -I/ffp/include  -fno-strict-aliasing -g -O2 -MT flv_extractor.lo -MD -MP -MF .deps/flv_extractor.Tpo -c -o flv_extractor.lo flv_extractor.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common -I/ffp/include -fno-strict-aliasing -g -O2 -MT flv_extractor.lo -MD -MP -MF .deps/flv_extractor.Tpo -c flv_extractor.c  -fPIC -DPIC -o .libs/flv_extractor.o
+mv -f .deps/flv_extractor.Tpo .deps/flv_extractor.Plo
+/ffp/bin/sh ../../libtool --tag=CC   --mode=link gcc  -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_flv.la -rpath /ffp/lib/libextractor flv_extractor.lo ../../src/common/libextractor_common.la 
+libtool: link: /ffp/bin/nm -B  .libs/flv_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_flv.exp
+libtool: link: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_flv.exp" > ".libs/libextractor_flv.expT"
+libtool: link: mv -f ".libs/libextractor_flv.expT" ".libs/libextractor_flv.exp"
+libtool: link: echo "{ global:" > .libs/libextractor_flv.ver
+libtool: link:  cat .libs/libextractor_flv.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_flv.ver
+libtool: link:  echo "local: *; };" >> .libs/libextractor_flv.ver
+libtool: link:  gcc -shared  .libs/flv_extractor.o   -Wl,-rpath -Wl,/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/common/.libs -Wl,-rpath -Wl,/ffp/lib -L/ffp/lib ../../src/common/.libs/libextractor_common.so  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_flv.so -Wl,-version-script -Wl,.libs/libextractor_flv.ver -o .libs/libextractor_flv.so
+libtool: link: ( cd ".libs" && rm -f "libextractor_flv.la" && ln -s "../libextractor_flv.la" "libextractor_flv.la" )
+/ffp/bin/sh ../../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common  -I/ffp/include  -fno-strict-aliasing -g -O2 -MT gif_extractor.lo -MD -MP -MF .deps/gif_extractor.Tpo -c -o gif_extractor.lo gif_extractor.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common -I/ffp/include -fno-strict-aliasing -g -O2 -MT gif_extractor.lo -MD -MP -MF .deps/gif_extractor.Tpo -c gif_extractor.c  -fPIC -DPIC -o .libs/gif_extractor.o
+mv -f .deps/gif_extractor.Tpo .deps/gif_extractor.Plo
+/ffp/bin/sh ../../libtool --tag=CC   --mode=link gcc  -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_gif.la -rpath /ffp/lib/libextractor gif_extractor.lo ../../src/common/libextractor_common.la 
+libtool: link: /ffp/bin/nm -B  .libs/gif_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_gif.exp
+libtool: link: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_gif.exp" > ".libs/libextractor_gif.expT"
+libtool: link: mv -f ".libs/libextractor_gif.expT" ".libs/libextractor_gif.exp"
+libtool: link: echo "{ global:" > .libs/libextractor_gif.ver
+libtool: link:  cat .libs/libextractor_gif.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_gif.ver
+libtool: link:  echo "local: *; };" >> .libs/libextractor_gif.ver
+libtool: link:  gcc -shared  .libs/gif_extractor.o   -Wl,-rpath -Wl,/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/common/.libs -Wl,-rpath -Wl,/ffp/lib -L/ffp/lib ../../src/common/.libs/libextractor_common.so  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_gif.so -Wl,-version-script -Wl,.libs/libextractor_gif.ver -o .libs/libextractor_gif.so
+libtool: link: ( cd ".libs" && rm -f "libextractor_gif.la" && ln -s "../libextractor_gif.la" "libextractor_gif.la" )
+/ffp/bin/sh ../../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common  -I/ffp/include  -fno-strict-aliasing -g -O2 -MT html_extractor.lo -MD -MP -MF .deps/html_extractor.Tpo -c -o html_extractor.lo html_extractor.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common -I/ffp/include -fno-strict-aliasing -g -O2 -MT html_extractor.lo -MD -MP -MF .deps/html_extractor.Tpo -c html_extractor.c  -fPIC -DPIC -o .libs/html_extractor.o
+mv -f .deps/html_extractor.Tpo .deps/html_extractor.Plo
+/ffp/bin/sh ../../libtool --tag=CC   --mode=link gcc  -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_html.la -rpath /ffp/lib/libextractor html_extractor.lo ../../src/common/libextractor_common.la 
+libtool: link: /ffp/bin/nm -B  .libs/html_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_html.exp
+libtool: link: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_html.exp" > ".libs/libextractor_html.expT"
+libtool: link: mv -f ".libs/libextractor_html.expT" ".libs/libextractor_html.exp"
+libtool: link: echo "{ global:" > .libs/libextractor_html.ver
+libtool: link:  cat .libs/libextractor_html.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_html.ver
+libtool: link:  echo "local: *; };" >> .libs/libextractor_html.ver
+libtool: link:  gcc -shared  .libs/html_extractor.o   -Wl,-rpath -Wl,/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/common/.libs -Wl,-rpath -Wl,/ffp/lib -L/ffp/lib ../../src/common/.libs/libextractor_common.so  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_html.so -Wl,-version-script -Wl,.libs/libextractor_html.ver -o .libs/libextractor_html.so
+libtool: link: ( cd ".libs" && rm -f "libextractor_html.la" && ln -s "../libextractor_html.la" "libextractor_html.la" )
+/ffp/bin/sh ../../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common  -I/ffp/include  -fno-strict-aliasing -g -O2 -MT id3_extractor.lo -MD -MP -MF .deps/id3_extractor.Tpo -c -o id3_extractor.lo id3_extractor.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common -I/ffp/include -fno-strict-aliasing -g -O2 -MT id3_extractor.lo -MD -MP -MF .deps/id3_extractor.Tpo -c id3_extractor.c  -fPIC -DPIC -o .libs/id3_extractor.o
+mv -f .deps/id3_extractor.Tpo .deps/id3_extractor.Plo
+/ffp/bin/sh ../../libtool --tag=CC   --mode=link gcc  -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_id3.la -rpath /ffp/lib/libextractor id3_extractor.lo ../../src/common/libextractor_common.la -L/ffp/lib -lintl -L/ffp/lib -liconv -L/ffp/lib -lc -R/ffp/lib 
+libtool: link: /ffp/bin/nm -B  .libs/id3_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_id3.exp
+libtool: link: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_id3.exp" > ".libs/libextractor_id3.expT"
+libtool: link: mv -f ".libs/libextractor_id3.expT" ".libs/libextractor_id3.exp"
+libtool: link: echo "{ global:" > .libs/libextractor_id3.ver
+libtool: link:  cat .libs/libextractor_id3.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_id3.ver
+libtool: link:  echo "local: *; };" >> .libs/libextractor_id3.ver
+libtool: link:  gcc -shared  .libs/id3_extractor.o   -Wl,-rpath -Wl,/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/common/.libs -Wl,-rpath -Wl,/ffp/lib -Wl,-rpath -Wl,/ffp/lib -L/ffp/lib ../../src/common/.libs/libextractor_common.so /ffp/lib/libintl.so /ffp/lib/libiconv.so -lc  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_id3.so -Wl,-version-script -Wl,.libs/libextractor_id3.ver -o .libs/libextractor_id3.so
+libtool: link: ( cd ".libs" && rm -f "libextractor_id3.la" && ln -s "../libextractor_id3.la" "libextractor_id3.la" )
+/ffp/bin/sh ../../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common  -I/ffp/include  -fno-strict-aliasing -g -O2 -MT id3v2_extractor.lo -MD -MP -MF .deps/id3v2_extractor.Tpo -c -o id3v2_extractor.lo id3v2_extractor.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common -I/ffp/include -fno-strict-aliasing -g -O2 -MT id3v2_extractor.lo -MD -MP -MF .deps/id3v2_extractor.Tpo -c id3v2_extractor.c  -fPIC -DPIC -o .libs/id3v2_extractor.o
+mv -f .deps/id3v2_extractor.Tpo .deps/id3v2_extractor.Plo
+/ffp/bin/sh ../../libtool --tag=CC   --mode=link gcc  -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_id3v2.la -rpath /ffp/lib/libextractor id3v2_extractor.lo ../../src/common/libextractor_common.la 
+libtool: link: /ffp/bin/nm -B  .libs/id3v2_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_id3v2.exp
+libtool: link: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_id3v2.exp" > ".libs/libextractor_id3v2.expT"
+libtool: link: mv -f ".libs/libextractor_id3v2.expT" ".libs/libextractor_id3v2.exp"
+libtool: link: echo "{ global:" > .libs/libextractor_id3v2.ver
+libtool: link:  cat .libs/libextractor_id3v2.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_id3v2.ver
+libtool: link:  echo "local: *; };" >> .libs/libextractor_id3v2.ver
+libtool: link:  gcc -shared  .libs/id3v2_extractor.o   -Wl,-rpath -Wl,/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/common/.libs -Wl,-rpath -Wl,/ffp/lib -L/ffp/lib ../../src/common/.libs/libextractor_common.so  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_id3v2.so -Wl,-version-script -Wl,.libs/libextractor_id3v2.ver -o .libs/libextractor_id3v2.so
+libtool: link: ( cd ".libs" && rm -f "libextractor_id3v2.la" && ln -s "../libextractor_id3v2.la" "libextractor_id3v2.la" )
+/ffp/bin/sh ../../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common  -I/ffp/include  -fno-strict-aliasing -g -O2 -MT id3v23_extractor.lo -MD -MP -MF .deps/id3v23_extractor.Tpo -c -o id3v23_extractor.lo id3v23_extractor.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common -I/ffp/include -fno-strict-aliasing -g -O2 -MT id3v23_extractor.lo -MD -MP -MF .deps/id3v23_extractor.Tpo -c id3v23_extractor.c  -fPIC -DPIC -o .libs/id3v23_extractor.o
+mv -f .deps/id3v23_extractor.Tpo .deps/id3v23_extractor.Plo
+/ffp/bin/sh ../../libtool --tag=CC   --mode=link gcc  -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_id3v23.la -rpath /ffp/lib/libextractor id3v23_extractor.lo ../../src/common/libextractor_common.la 
+libtool: link: /ffp/bin/nm -B  .libs/id3v23_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_id3v23.exp
+libtool: link: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_id3v23.exp" > ".libs/libextractor_id3v23.expT"
+libtool: link: mv -f ".libs/libextractor_id3v23.expT" ".libs/libextractor_id3v23.exp"
+libtool: link: echo "{ global:" > .libs/libextractor_id3v23.ver
+libtool: link:  cat .libs/libextractor_id3v23.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_id3v23.ver
+libtool: link:  echo "local: *; };" >> .libs/libextractor_id3v23.ver
+libtool: link:  gcc -shared  .libs/id3v23_extractor.o   -Wl,-rpath -Wl,/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/common/.libs -Wl,-rpath -Wl,/ffp/lib -L/ffp/lib ../../src/common/.libs/libextractor_common.so  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_id3v23.so -Wl,-version-script -Wl,.libs/libextractor_id3v23.ver -o .libs/libextractor_id3v23.so
+libtool: link: ( cd ".libs" && rm -f "libextractor_id3v23.la" && ln -s "../libextractor_id3v23.la" "libextractor_id3v23.la" )
+/ffp/bin/sh ../../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common  -I/ffp/include  -fno-strict-aliasing -g -O2 -MT id3v24_extractor.lo -MD -MP -MF .deps/id3v24_extractor.Tpo -c -o id3v24_extractor.lo id3v24_extractor.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common -I/ffp/include -fno-strict-aliasing -g -O2 -MT id3v24_extractor.lo -MD -MP -MF .deps/id3v24_extractor.Tpo -c id3v24_extractor.c  -fPIC -DPIC -o .libs/id3v24_extractor.o
+mv -f .deps/id3v24_extractor.Tpo .deps/id3v24_extractor.Plo
+/ffp/bin/sh ../../libtool --tag=CC   --mode=link gcc  -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_id3v24.la -rpath /ffp/lib/libextractor id3v24_extractor.lo ../../src/common/libextractor_common.la 
+libtool: link: /ffp/bin/nm -B  .libs/id3v24_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_id3v24.exp
+libtool: link: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_id3v24.exp" > ".libs/libextractor_id3v24.expT"
+libtool: link: mv -f ".libs/libextractor_id3v24.expT" ".libs/libextractor_id3v24.exp"
+libtool: link: echo "{ global:" > .libs/libextractor_id3v24.ver
+libtool: link:  cat .libs/libextractor_id3v24.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_id3v24.ver
+libtool: link:  echo "local: *; };" >> .libs/libextractor_id3v24.ver
+libtool: link:  gcc -shared  .libs/id3v24_extractor.o   -Wl,-rpath -Wl,/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/common/.libs -Wl,-rpath -Wl,/ffp/lib -L/ffp/lib ../../src/common/.libs/libextractor_common.so  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_id3v24.so -Wl,-version-script -Wl,.libs/libextractor_id3v24.ver -o .libs/libextractor_id3v24.so
+libtool: link: ( cd ".libs" && rm -f "libextractor_id3v24.la" && ln -s "../libextractor_id3v24.la" "libextractor_id3v24.la" )
+/ffp/bin/sh ../../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common  -I/ffp/include  -fno-strict-aliasing -g -O2 -MT it_extractor.lo -MD -MP -MF .deps/it_extractor.Tpo -c -o it_extractor.lo it_extractor.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common -I/ffp/include -fno-strict-aliasing -g -O2 -MT it_extractor.lo -MD -MP -MF .deps/it_extractor.Tpo -c it_extractor.c  -fPIC -DPIC -o .libs/it_extractor.o
+mv -f .deps/it_extractor.Tpo .deps/it_extractor.Plo
+/ffp/bin/sh ../../libtool --tag=CC   --mode=link gcc  -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_it.la -rpath /ffp/lib/libextractor it_extractor.lo  
+libtool: link: /ffp/bin/nm -B  .libs/it_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_it.exp
+libtool: link: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_it.exp" > ".libs/libextractor_it.expT"
+libtool: link: mv -f ".libs/libextractor_it.expT" ".libs/libextractor_it.exp"
+libtool: link: echo "{ global:" > .libs/libextractor_it.ver
+libtool: link:  cat .libs/libextractor_it.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_it.ver
+libtool: link:  echo "local: *; };" >> .libs/libextractor_it.ver
+libtool: link:  gcc -shared  .libs/it_extractor.o   -L/ffp/lib  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_it.so -Wl,-version-script -Wl,.libs/libextractor_it.ver -o .libs/libextractor_it.so
+libtool: link: ( cd ".libs" && rm -f "libextractor_it.la" && ln -s "../libextractor_it.la" "libextractor_it.la" )
+/ffp/bin/sh ../../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common  -I/ffp/include  -fno-strict-aliasing -g -O2 -MT jpeg_extractor.lo -MD -MP -MF .deps/jpeg_extractor.Tpo -c -o jpeg_extractor.lo jpeg_extractor.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common -I/ffp/include -fno-strict-aliasing -g -O2 -MT jpeg_extractor.lo -MD -MP -MF .deps/jpeg_extractor.Tpo -c jpeg_extractor.c  -fPIC -DPIC -o .libs/jpeg_extractor.o
+mv -f .deps/jpeg_extractor.Tpo .deps/jpeg_extractor.Plo
+/ffp/bin/sh ../../libtool --tag=CC   --mode=link gcc  -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_jpeg.la -rpath /ffp/lib/libextractor jpeg_extractor.lo -L/ffp/lib -lintl -L/ffp/lib -liconv -L/ffp/lib -lc -R/ffp/lib 
+libtool: link: /ffp/bin/nm -B  .libs/jpeg_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_jpeg.exp
+libtool: link: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_jpeg.exp" > ".libs/libextractor_jpeg.expT"
+libtool: link: mv -f ".libs/libextractor_jpeg.expT" ".libs/libextractor_jpeg.exp"
+libtool: link: echo "{ global:" > .libs/libextractor_jpeg.ver
+libtool: link:  cat .libs/libextractor_jpeg.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_jpeg.ver
+libtool: link:  echo "local: *; };" >> .libs/libextractor_jpeg.ver
+libtool: link:  gcc -shared  .libs/jpeg_extractor.o   -Wl,-rpath -Wl,/ffp/lib -Wl,-rpath -Wl,/ffp/lib -L/ffp/lib /ffp/lib/libintl.so /ffp/lib/libiconv.so -lc  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_jpeg.so -Wl,-version-script -Wl,.libs/libextractor_jpeg.ver -o .libs/libextractor_jpeg.so
+libtool: link: ( cd ".libs" && rm -f "libextractor_jpeg.la" && ln -s "../libextractor_jpeg.la" "libextractor_jpeg.la" )
+/ffp/bin/sh ../../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common  -I/ffp/include  -fno-strict-aliasing -g -O2 -MT man_extractor.lo -MD -MP -MF .deps/man_extractor.Tpo -c -o man_extractor.lo man_extractor.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common -I/ffp/include -fno-strict-aliasing -g -O2 -MT man_extractor.lo -MD -MP -MF .deps/man_extractor.Tpo -c man_extractor.c  -fPIC -DPIC -o .libs/man_extractor.o
+mv -f .deps/man_extractor.Tpo .deps/man_extractor.Plo
+/ffp/bin/sh ../../libtool --tag=CC   --mode=link gcc  -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_man.la -rpath /ffp/lib/libextractor man_extractor.lo -L/ffp/lib -lintl -L/ffp/lib -liconv -L/ffp/lib -lc -R/ffp/lib 
+libtool: link: /ffp/bin/nm -B  .libs/man_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_man.exp
+libtool: link: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_man.exp" > ".libs/libextractor_man.expT"
+libtool: link: mv -f ".libs/libextractor_man.expT" ".libs/libextractor_man.exp"
+libtool: link: echo "{ global:" > .libs/libextractor_man.ver
+libtool: link:  cat .libs/libextractor_man.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_man.ver
+libtool: link:  echo "local: *; };" >> .libs/libextractor_man.ver
+libtool: link:  gcc -shared  .libs/man_extractor.o   -Wl,-rpath -Wl,/ffp/lib -Wl,-rpath -Wl,/ffp/lib -L/ffp/lib /ffp/lib/libintl.so /ffp/lib/libiconv.so -lc  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_man.so -Wl,-version-script -Wl,.libs/libextractor_man.ver -o .libs/libextractor_man.so
+libtool: link: ( cd ".libs" && rm -f "libextractor_man.la" && ln -s "../libextractor_man.la" "libextractor_man.la" )
+/ffp/bin/sh ../../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common  -I/ffp/include  -fno-strict-aliasing -g -O2 -MT mime_extractor.lo -MD -MP -MF .deps/mime_extractor.Tpo -c -o mime_extractor.lo mime_extractor.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common -I/ffp/include -fno-strict-aliasing -g -O2 -MT mime_extractor.lo -MD -MP -MF .deps/mime_extractor.Tpo -c mime_extractor.c  -fPIC -DPIC -o .libs/mime_extractor.o
+mv -f .deps/mime_extractor.Tpo .deps/mime_extractor.Plo
+/ffp/bin/sh ../../libtool --tag=CC   --mode=link gcc  -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_mime.la -rpath /ffp/lib/libextractor mime_extractor.lo  
+libtool: link: /ffp/bin/nm -B  .libs/mime_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_mime.exp
+libtool: link: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_mime.exp" > ".libs/libextractor_mime.expT"
+libtool: link: mv -f ".libs/libextractor_mime.expT" ".libs/libextractor_mime.exp"
+libtool: link: echo "{ global:" > .libs/libextractor_mime.ver
+libtool: link:  cat .libs/libextractor_mime.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_mime.ver
+libtool: link:  echo "local: *; };" >> .libs/libextractor_mime.ver
+libtool: link:  gcc -shared  .libs/mime_extractor.o   -L/ffp/lib  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_mime.so -Wl,-version-script -Wl,.libs/libextractor_mime.ver -o .libs/libextractor_mime.so
+libtool: link: ( cd ".libs" && rm -f "libextractor_mime.la" && ln -s "../libextractor_mime.la" "libextractor_mime.la" )
+/ffp/bin/sh ../../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common  -I/ffp/include  -fno-strict-aliasing -g -O2 -MT mp3_extractor.lo -MD -MP -MF .deps/mp3_extractor.Tpo -c -o mp3_extractor.lo mp3_extractor.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common -I/ffp/include -fno-strict-aliasing -g -O2 -MT mp3_extractor.lo -MD -MP -MF .deps/mp3_extractor.Tpo -c mp3_extractor.c  -fPIC -DPIC -o .libs/mp3_extractor.o
+mv -f .deps/mp3_extractor.Tpo .deps/mp3_extractor.Plo
+/ffp/bin/sh ../../libtool --tag=CC   --mode=link gcc  -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_mp3.la -rpath /ffp/lib/libextractor mp3_extractor.lo ../../src/common/libextractor_common.la -L/ffp/lib -lintl -L/ffp/lib -liconv -L/ffp/lib -lc -R/ffp/lib 
+libtool: link: /ffp/bin/nm -B  .libs/mp3_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_mp3.exp
+libtool: link: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_mp3.exp" > ".libs/libextractor_mp3.expT"
+libtool: link: mv -f ".libs/libextractor_mp3.expT" ".libs/libextractor_mp3.exp"
+libtool: link: echo "{ global:" > .libs/libextractor_mp3.ver
+libtool: link:  cat .libs/libextractor_mp3.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_mp3.ver
+libtool: link:  echo "local: *; };" >> .libs/libextractor_mp3.ver
+libtool: link:  gcc -shared  .libs/mp3_extractor.o   -Wl,-rpath -Wl,/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/common/.libs -Wl,-rpath -Wl,/ffp/lib -Wl,-rpath -Wl,/ffp/lib -L/ffp/lib ../../src/common/.libs/libextractor_common.so /ffp/lib/libintl.so /ffp/lib/libiconv.so -lc  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_mp3.so -Wl,-version-script -Wl,.libs/libextractor_mp3.ver -o .libs/libextractor_mp3.so
+libtool: link: ( cd ".libs" && rm -f "libextractor_mp3.la" && ln -s "../libextractor_mp3.la" "libextractor_mp3.la" )
+/ffp/bin/sh ../../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common  -I/ffp/include  -fno-strict-aliasing -g -O2 -MT nsf_extractor.lo -MD -MP -MF .deps/nsf_extractor.Tpo -c -o nsf_extractor.lo nsf_extractor.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common -I/ffp/include -fno-strict-aliasing -g -O2 -MT nsf_extractor.lo -MD -MP -MF .deps/nsf_extractor.Tpo -c nsf_extractor.c  -fPIC -DPIC -o .libs/nsf_extractor.o
+mv -f .deps/nsf_extractor.Tpo .deps/nsf_extractor.Plo
+/ffp/bin/sh ../../libtool --tag=CC   --mode=link gcc  -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_nsf.la -rpath /ffp/lib/libextractor nsf_extractor.lo  
+libtool: link: /ffp/bin/nm -B  .libs/nsf_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_nsf.exp
+libtool: link: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_nsf.exp" > ".libs/libextractor_nsf.expT"
+libtool: link: mv -f ".libs/libextractor_nsf.expT" ".libs/libextractor_nsf.exp"
+libtool: link: echo "{ global:" > .libs/libextractor_nsf.ver
+libtool: link:  cat .libs/libextractor_nsf.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_nsf.ver
+libtool: link:  echo "local: *; };" >> .libs/libextractor_nsf.ver
+libtool: link:  gcc -shared  .libs/nsf_extractor.o   -L/ffp/lib  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_nsf.so -Wl,-version-script -Wl,.libs/libextractor_nsf.ver -o .libs/libextractor_nsf.so
+libtool: link: ( cd ".libs" && rm -f "libextractor_nsf.la" && ln -s "../libextractor_nsf.la" "libextractor_nsf.la" )
+/ffp/bin/sh ../../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common  -I/ffp/include  -fno-strict-aliasing -g -O2 -MT nsfe_extractor.lo -MD -MP -MF .deps/nsfe_extractor.Tpo -c -o nsfe_extractor.lo nsfe_extractor.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common -I/ffp/include -fno-strict-aliasing -g -O2 -MT nsfe_extractor.lo -MD -MP -MF .deps/nsfe_extractor.Tpo -c nsfe_extractor.c  -fPIC -DPIC -o .libs/nsfe_extractor.o
+mv -f .deps/nsfe_extractor.Tpo .deps/nsfe_extractor.Plo
+/ffp/bin/sh ../../libtool --tag=CC   --mode=link gcc  -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_nsfe.la -rpath /ffp/lib/libextractor nsfe_extractor.lo  
+libtool: link: /ffp/bin/nm -B  .libs/nsfe_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_nsfe.exp
+libtool: link: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_nsfe.exp" > ".libs/libextractor_nsfe.expT"
+libtool: link: mv -f ".libs/libextractor_nsfe.expT" ".libs/libextractor_nsfe.exp"
+libtool: link: echo "{ global:" > .libs/libextractor_nsfe.ver
+libtool: link:  cat .libs/libextractor_nsfe.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_nsfe.ver
+libtool: link:  echo "local: *; };" >> .libs/libextractor_nsfe.ver
+libtool: link:  gcc -shared  .libs/nsfe_extractor.o   -L/ffp/lib  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_nsfe.so -Wl,-version-script -Wl,.libs/libextractor_nsfe.ver -o .libs/libextractor_nsfe.so
+libtool: link: ( cd ".libs" && rm -f "libextractor_nsfe.la" && ln -s "../libextractor_nsfe.la" "libextractor_nsfe.la" )
+/ffp/bin/sh ../../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common  -I/ffp/include  -fno-strict-aliasing -g -O2 -MT odf_extractor.lo -MD -MP -MF .deps/odf_extractor.Tpo -c -o odf_extractor.lo odf_extractor.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common -I/ffp/include -fno-strict-aliasing -g -O2 -MT odf_extractor.lo -MD -MP -MF .deps/odf_extractor.Tpo -c odf_extractor.c  -fPIC -DPIC -o .libs/odf_extractor.o
+mv -f .deps/odf_extractor.Tpo .deps/odf_extractor.Plo
+/ffp/bin/sh ../../libtool --tag=CC   --mode=link gcc  -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_odf.la -rpath /ffp/lib/libextractor odf_extractor.lo ../../src/common/libextractor_common.la -lz  
+libtool: link: /ffp/bin/nm -B  .libs/odf_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_odf.exp
+libtool: link: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_odf.exp" > ".libs/libextractor_odf.expT"
+libtool: link: mv -f ".libs/libextractor_odf.expT" ".libs/libextractor_odf.exp"
+libtool: link: echo "{ global:" > .libs/libextractor_odf.ver
+libtool: link:  cat .libs/libextractor_odf.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_odf.ver
+libtool: link:  echo "local: *; };" >> .libs/libextractor_odf.ver
+libtool: link:  gcc -shared  .libs/odf_extractor.o   -Wl,-rpath -Wl,/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/common/.libs -Wl,-rpath -Wl,/ffp/lib -L/ffp/lib ../../src/common/.libs/libextractor_common.so -lz  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_odf.so -Wl,-version-script -Wl,.libs/libextractor_odf.ver -o .libs/libextractor_odf.so
+libtool: link: ( cd ".libs" && rm -f "libextractor_odf.la" && ln -s "../libextractor_odf.la" "libextractor_odf.la" )
+/ffp/bin/sh ../../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common  -I/ffp/include  -fno-strict-aliasing -g -O2 -MT png_extractor.lo -MD -MP -MF .deps/png_extractor.Tpo -c -o png_extractor.lo png_extractor.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common -I/ffp/include -fno-strict-aliasing -g -O2 -MT png_extractor.lo -MD -MP -MF .deps/png_extractor.Tpo -c png_extractor.c  -fPIC -DPIC -o .libs/png_extractor.o
+mv -f .deps/png_extractor.Tpo .deps/png_extractor.Plo
+/ffp/bin/sh ../../libtool --tag=CC   --mode=link gcc  -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_png.la -rpath /ffp/lib/libextractor png_extractor.lo ../../src/common/libextractor_common.la -lz 
+libtool: link: /ffp/bin/nm -B  .libs/png_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_png.exp
+libtool: link: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_png.exp" > ".libs/libextractor_png.expT"
+libtool: link: mv -f ".libs/libextractor_png.expT" ".libs/libextractor_png.exp"
+libtool: link: echo "{ global:" > .libs/libextractor_png.ver
+libtool: link:  cat .libs/libextractor_png.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_png.ver
+libtool: link:  echo "local: *; };" >> .libs/libextractor_png.ver
+libtool: link:  gcc -shared  .libs/png_extractor.o   -Wl,-rpath -Wl,/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/common/.libs -Wl,-rpath -Wl,/ffp/lib -L/ffp/lib ../../src/common/.libs/libextractor_common.so -lz  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_png.so -Wl,-version-script -Wl,.libs/libextractor_png.ver -o .libs/libextractor_png.so
+libtool: link: ( cd ".libs" && rm -f "libextractor_png.la" && ln -s "../libextractor_png.la" "libextractor_png.la" )
+/ffp/bin/sh ../../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common  -I/ffp/include  -fno-strict-aliasing -g -O2 -MT ps_extractor.lo -MD -MP -MF .deps/ps_extractor.Tpo -c -o ps_extractor.lo ps_extractor.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common -I/ffp/include -fno-strict-aliasing -g -O2 -MT ps_extractor.lo -MD -MP -MF .deps/ps_extractor.Tpo -c ps_extractor.c  -fPIC -DPIC -o .libs/ps_extractor.o
+mv -f .deps/ps_extractor.Tpo .deps/ps_extractor.Plo
+/ffp/bin/sh ../../libtool --tag=CC   --mode=link gcc  -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_ps.la -rpath /ffp/lib/libextractor ps_extractor.lo  
+libtool: link: /ffp/bin/nm -B  .libs/ps_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_ps.exp
+libtool: link: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_ps.exp" > ".libs/libextractor_ps.expT"
+libtool: link: mv -f ".libs/libextractor_ps.expT" ".libs/libextractor_ps.exp"
+libtool: link: echo "{ global:" > .libs/libextractor_ps.ver
+libtool: link:  cat .libs/libextractor_ps.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_ps.ver
+libtool: link:  echo "local: *; };" >> .libs/libextractor_ps.ver
+libtool: link:  gcc -shared  .libs/ps_extractor.o   -L/ffp/lib  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_ps.so -Wl,-version-script -Wl,.libs/libextractor_ps.ver -o .libs/libextractor_ps.so
+libtool: link: ( cd ".libs" && rm -f "libextractor_ps.la" && ln -s "../libextractor_ps.la" "libextractor_ps.la" )
+/ffp/bin/sh ../../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common  -I/ffp/include  -fno-strict-aliasing -g -O2 -MT qt_extractor.lo -MD -MP -MF .deps/qt_extractor.Tpo -c -o qt_extractor.lo qt_extractor.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common -I/ffp/include -fno-strict-aliasing -g -O2 -MT qt_extractor.lo -MD -MP -MF .deps/qt_extractor.Tpo -c qt_extractor.c  -fPIC -DPIC -o .libs/qt_extractor.o
+mv -f .deps/qt_extractor.Tpo .deps/qt_extractor.Plo
+/ffp/bin/sh ../../libtool --tag=CC   --mode=link gcc  -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_qt.la -rpath /ffp/lib/libextractor qt_extractor.lo -lz -lm 
+libtool: link: /ffp/bin/nm -B  .libs/qt_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_qt.exp
+libtool: link: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_qt.exp" > ".libs/libextractor_qt.expT"
+libtool: link: mv -f ".libs/libextractor_qt.expT" ".libs/libextractor_qt.exp"
+libtool: link: echo "{ global:" > .libs/libextractor_qt.ver
+libtool: link:  cat .libs/libextractor_qt.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_qt.ver
+libtool: link:  echo "local: *; };" >> .libs/libextractor_qt.ver
+libtool: link:  gcc -shared  .libs/qt_extractor.o   -L/ffp/lib -lz -lm  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_qt.so -Wl,-version-script -Wl,.libs/libextractor_qt.ver -o .libs/libextractor_qt.so
+libtool: link: ( cd ".libs" && rm -f "libextractor_qt.la" && ln -s "../libextractor_qt.la" "libextractor_qt.la" )
+/ffp/bin/sh ../../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common  -I/ffp/include  -fno-strict-aliasing -g -O2 -MT real_extractor.lo -MD -MP -MF .deps/real_extractor.Tpo -c -o real_extractor.lo real_extractor.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common -I/ffp/include -fno-strict-aliasing -g -O2 -MT real_extractor.lo -MD -MP -MF .deps/real_extractor.Tpo -c real_extractor.c  -fPIC -DPIC -o .libs/real_extractor.o
+mv -f .deps/real_extractor.Tpo .deps/real_extractor.Plo
+/ffp/bin/sh ../../libtool --tag=CC   --mode=link gcc  -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_real.la -rpath /ffp/lib/libextractor real_extractor.lo  
+libtool: link: /ffp/bin/nm -B  .libs/real_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_real.exp
+libtool: link: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_real.exp" > ".libs/libextractor_real.expT"
+libtool: link: mv -f ".libs/libextractor_real.expT" ".libs/libextractor_real.exp"
+libtool: link: echo "{ global:" > .libs/libextractor_real.ver
+libtool: link:  cat .libs/libextractor_real.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_real.ver
+libtool: link:  echo "local: *; };" >> .libs/libextractor_real.ver
+libtool: link:  gcc -shared  .libs/real_extractor.o   -L/ffp/lib  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_real.so -Wl,-version-script -Wl,.libs/libextractor_real.ver -o .libs/libextractor_real.so
+libtool: link: ( cd ".libs" && rm -f "libextractor_real.la" && ln -s "../libextractor_real.la" "libextractor_real.la" )
+/ffp/bin/sh ../../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common  -I/ffp/include  -fno-strict-aliasing -g -O2 -MT riff_extractor.lo -MD -MP -MF .deps/riff_extractor.Tpo -c -o riff_extractor.lo riff_extractor.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common -I/ffp/include -fno-strict-aliasing -g -O2 -MT riff_extractor.lo -MD -MP -MF .deps/riff_extractor.Tpo -c riff_extractor.c  -fPIC -DPIC -o .libs/riff_extractor.o
+mv -f .deps/riff_extractor.Tpo .deps/riff_extractor.Plo
+/ffp/bin/sh ../../libtool --tag=CC   --mode=link gcc  -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_riff.la -rpath /ffp/lib/libextractor riff_extractor.lo -L/ffp/lib -lintl -L/ffp/lib -liconv -L/ffp/lib -lc -R/ffp/lib -lm  
+libtool: link: /ffp/bin/nm -B  .libs/riff_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_riff.exp
+libtool: link: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_riff.exp" > ".libs/libextractor_riff.expT"
+libtool: link: mv -f ".libs/libextractor_riff.expT" ".libs/libextractor_riff.exp"
+libtool: link: echo "{ global:" > .libs/libextractor_riff.ver
+libtool: link:  cat .libs/libextractor_riff.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_riff.ver
+libtool: link:  echo "local: *; };" >> .libs/libextractor_riff.ver
+libtool: link:  gcc -shared  .libs/riff_extractor.o   -Wl,-rpath -Wl,/ffp/lib -Wl,-rpath -Wl,/ffp/lib -L/ffp/lib /ffp/lib/libintl.so /ffp/lib/libiconv.so -lc -lm  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_riff.so -Wl,-version-script -Wl,.libs/libextractor_riff.ver -o .libs/libextractor_riff.so
+libtool: link: ( cd ".libs" && rm -f "libextractor_riff.la" && ln -s "../libextractor_riff.la" "libextractor_riff.la" )
+/ffp/bin/sh ../../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common  -I/ffp/include  -fno-strict-aliasing -g -O2 -MT s3m_extractor.lo -MD -MP -MF .deps/s3m_extractor.Tpo -c -o s3m_extractor.lo s3m_extractor.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common -I/ffp/include -fno-strict-aliasing -g -O2 -MT s3m_extractor.lo -MD -MP -MF .deps/s3m_extractor.Tpo -c s3m_extractor.c  -fPIC -DPIC -o .libs/s3m_extractor.o
+mv -f .deps/s3m_extractor.Tpo .deps/s3m_extractor.Plo
+/ffp/bin/sh ../../libtool --tag=CC   --mode=link gcc  -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_s3m.la -rpath /ffp/lib/libextractor s3m_extractor.lo  
+libtool: link: /ffp/bin/nm -B  .libs/s3m_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_s3m.exp
+libtool: link: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_s3m.exp" > ".libs/libextractor_s3m.expT"
+libtool: link: mv -f ".libs/libextractor_s3m.expT" ".libs/libextractor_s3m.exp"
+libtool: link: echo "{ global:" > .libs/libextractor_s3m.ver
+libtool: link:  cat .libs/libextractor_s3m.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_s3m.ver
+libtool: link:  echo "local: *; };" >> .libs/libextractor_s3m.ver
+libtool: link:  gcc -shared  .libs/s3m_extractor.o   -L/ffp/lib  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_s3m.so -Wl,-version-script -Wl,.libs/libextractor_s3m.ver -o .libs/libextractor_s3m.so
+libtool: link: ( cd ".libs" && rm -f "libextractor_s3m.la" && ln -s "../libextractor_s3m.la" "libextractor_s3m.la" )
+/ffp/bin/sh ../../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common  -I/ffp/include  -fno-strict-aliasing -g -O2 -MT sid_extractor.lo -MD -MP -MF .deps/sid_extractor.Tpo -c -o sid_extractor.lo sid_extractor.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common -I/ffp/include -fno-strict-aliasing -g -O2 -MT sid_extractor.lo -MD -MP -MF .deps/sid_extractor.Tpo -c sid_extractor.c  -fPIC -DPIC -o .libs/sid_extractor.o
+mv -f .deps/sid_extractor.Tpo .deps/sid_extractor.Plo
+/ffp/bin/sh ../../libtool --tag=CC   --mode=link gcc  -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_sid.la -rpath /ffp/lib/libextractor sid_extractor.lo  
+libtool: link: /ffp/bin/nm -B  .libs/sid_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_sid.exp
+libtool: link: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_sid.exp" > ".libs/libextractor_sid.expT"
+libtool: link: mv -f ".libs/libextractor_sid.expT" ".libs/libextractor_sid.exp"
+libtool: link: echo "{ global:" > .libs/libextractor_sid.ver
+libtool: link:  cat .libs/libextractor_sid.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_sid.ver
+libtool: link:  echo "local: *; };" >> .libs/libextractor_sid.ver
+libtool: link:  gcc -shared  .libs/sid_extractor.o   -L/ffp/lib  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_sid.so -Wl,-version-script -Wl,.libs/libextractor_sid.ver -o .libs/libextractor_sid.so
+libtool: link: ( cd ".libs" && rm -f "libextractor_sid.la" && ln -s "../libextractor_sid.la" "libextractor_sid.la" )
+/ffp/bin/sh ../../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common  -I/ffp/include  -fno-strict-aliasing -g -O2 -MT tar_extractor.lo -MD -MP -MF .deps/tar_extractor.Tpo -c -o tar_extractor.lo tar_extractor.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common -I/ffp/include -fno-strict-aliasing -g -O2 -MT tar_extractor.lo -MD -MP -MF .deps/tar_extractor.Tpo -c tar_extractor.c  -fPIC -DPIC -o .libs/tar_extractor.o
+mv -f .deps/tar_extractor.Tpo .deps/tar_extractor.Plo
+/ffp/bin/sh ../../libtool --tag=CC   --mode=link gcc  -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_tar.la -rpath /ffp/lib/libextractor tar_extractor.lo  
+libtool: link: /ffp/bin/nm -B  .libs/tar_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_tar.exp
+libtool: link: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_tar.exp" > ".libs/libextractor_tar.expT"
+libtool: link: mv -f ".libs/libextractor_tar.expT" ".libs/libextractor_tar.exp"
+libtool: link: echo "{ global:" > .libs/libextractor_tar.ver
+libtool: link:  cat .libs/libextractor_tar.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_tar.ver
+libtool: link:  echo "local: *; };" >> .libs/libextractor_tar.ver
+libtool: link:  gcc -shared  .libs/tar_extractor.o   -L/ffp/lib  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_tar.so -Wl,-version-script -Wl,.libs/libextractor_tar.ver -o .libs/libextractor_tar.so
+libtool: link: ( cd ".libs" && rm -f "libextractor_tar.la" && ln -s "../libextractor_tar.la" "libextractor_tar.la" )
+/ffp/bin/sh ../../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common  -I/ffp/include  -fno-strict-aliasing -g -O2 -MT tiff_extractor.lo -MD -MP -MF .deps/tiff_extractor.Tpo -c -o tiff_extractor.lo tiff_extractor.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common -I/ffp/include -fno-strict-aliasing -g -O2 -MT tiff_extractor.lo -MD -MP -MF .deps/tiff_extractor.Tpo -c tiff_extractor.c  -fPIC -DPIC -o .libs/tiff_extractor.o
+mv -f .deps/tiff_extractor.Tpo .deps/tiff_extractor.Plo
+/ffp/bin/sh ../../libtool --tag=CC   --mode=link gcc  -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_tiff.la -rpath /ffp/lib/libextractor tiff_extractor.lo ../../src/common/libextractor_common.la 
+libtool: link: /ffp/bin/nm -B  .libs/tiff_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_tiff.exp
+libtool: link: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_tiff.exp" > ".libs/libextractor_tiff.expT"
+libtool: link: mv -f ".libs/libextractor_tiff.expT" ".libs/libextractor_tiff.exp"
+libtool: link: echo "{ global:" > .libs/libextractor_tiff.ver
+libtool: link:  cat .libs/libextractor_tiff.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_tiff.ver
+libtool: link:  echo "local: *; };" >> .libs/libextractor_tiff.ver
+libtool: link:  gcc -shared  .libs/tiff_extractor.o   -Wl,-rpath -Wl,/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/common/.libs -Wl,-rpath -Wl,/ffp/lib -L/ffp/lib ../../src/common/.libs/libextractor_common.so  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_tiff.so -Wl,-version-script -Wl,.libs/libextractor_tiff.ver -o .libs/libextractor_tiff.so
+libtool: link: ( cd ".libs" && rm -f "libextractor_tiff.la" && ln -s "../libextractor_tiff.la" "libextractor_tiff.la" )
+/ffp/bin/sh ../../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common  -I/ffp/include  -fno-strict-aliasing -g -O2 -MT wav_extractor.lo -MD -MP -MF .deps/wav_extractor.Tpo -c -o wav_extractor.lo wav_extractor.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common -I/ffp/include -fno-strict-aliasing -g -O2 -MT wav_extractor.lo -MD -MP -MF .deps/wav_extractor.Tpo -c wav_extractor.c  -fPIC -DPIC -o .libs/wav_extractor.o
+mv -f .deps/wav_extractor.Tpo .deps/wav_extractor.Plo
+/ffp/bin/sh ../../libtool --tag=CC   --mode=link gcc  -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_wav.la -rpath /ffp/lib/libextractor wav_extractor.lo -L/ffp/lib -lintl -L/ffp/lib -liconv -L/ffp/lib -lc -R/ffp/lib 
+libtool: link: /ffp/bin/nm -B  .libs/wav_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_wav.exp
+libtool: link: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_wav.exp" > ".libs/libextractor_wav.expT"
+libtool: link: mv -f ".libs/libextractor_wav.expT" ".libs/libextractor_wav.exp"
+libtool: link: echo "{ global:" > .libs/libextractor_wav.ver
+libtool: link:  cat .libs/libextractor_wav.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_wav.ver
+libtool: link:  echo "local: *; };" >> .libs/libextractor_wav.ver
+libtool: link:  gcc -shared  .libs/wav_extractor.o   -Wl,-rpath -Wl,/ffp/lib -Wl,-rpath -Wl,/ffp/lib -L/ffp/lib /ffp/lib/libintl.so /ffp/lib/libiconv.so -lc  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_wav.so -Wl,-version-script -Wl,.libs/libextractor_wav.ver -o .libs/libextractor_wav.so
+libtool: link: ( cd ".libs" && rm -f "libextractor_wav.la" && ln -s "../libextractor_wav.la" "libextractor_wav.la" )
+/ffp/bin/sh ../../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common  -I/ffp/include  -fno-strict-aliasing -g -O2 -MT xm_extractor.lo -MD -MP -MF .deps/xm_extractor.Tpo -c -o xm_extractor.lo xm_extractor.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common -I/ffp/include -fno-strict-aliasing -g -O2 -MT xm_extractor.lo -MD -MP -MF .deps/xm_extractor.Tpo -c xm_extractor.c  -fPIC -DPIC -o .libs/xm_extractor.o
+mv -f .deps/xm_extractor.Tpo .deps/xm_extractor.Plo
+/ffp/bin/sh ../../libtool --tag=CC   --mode=link gcc  -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_xm.la -rpath /ffp/lib/libextractor xm_extractor.lo  
+libtool: link: /ffp/bin/nm -B  .libs/xm_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_xm.exp
+libtool: link: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_xm.exp" > ".libs/libextractor_xm.expT"
+libtool: link: mv -f ".libs/libextractor_xm.expT" ".libs/libextractor_xm.exp"
+libtool: link: echo "{ global:" > .libs/libextractor_xm.ver
+libtool: link:  cat .libs/libextractor_xm.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_xm.ver
+libtool: link:  echo "local: *; };" >> .libs/libextractor_xm.ver
+libtool: link:  gcc -shared  .libs/xm_extractor.o   -L/ffp/lib  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_xm.so -Wl,-version-script -Wl,.libs/libextractor_xm.ver -o .libs/libextractor_xm.so
+libtool: link: ( cd ".libs" && rm -f "libextractor_xm.la" && ln -s "../libextractor_xm.la" "libextractor_xm.la" )
+/ffp/bin/sh ../../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common  -I/ffp/include  -fno-strict-aliasing -g -O2 -MT zip_extractor.lo -MD -MP -MF .deps/zip_extractor.Tpo -c -o zip_extractor.lo zip_extractor.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src/common -I/ffp/include -fno-strict-aliasing -g -O2 -MT zip_extractor.lo -MD -MP -MF .deps/zip_extractor.Tpo -c zip_extractor.c  -fPIC -DPIC -o .libs/zip_extractor.o
+mv -f .deps/zip_extractor.Tpo .deps/zip_extractor.Plo
+/ffp/bin/sh ../../libtool --tag=CC   --mode=link gcc  -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_zip.la -rpath /ffp/lib/libextractor zip_extractor.lo  
+libtool: link: /ffp/bin/nm -B  .libs/zip_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_zip.exp
+libtool: link: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_zip.exp" > ".libs/libextractor_zip.expT"
+libtool: link: mv -f ".libs/libextractor_zip.expT" ".libs/libextractor_zip.exp"
+libtool: link: echo "{ global:" > .libs/libextractor_zip.ver
+libtool: link:  cat .libs/libextractor_zip.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_zip.ver
+libtool: link:  echo "local: *; };" >> .libs/libextractor_zip.ver
+libtool: link:  gcc -shared  .libs/zip_extractor.o   -L/ffp/lib  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_zip.so -Wl,-version-script -Wl,.libs/libextractor_zip.ver -o .libs/libextractor_zip.so
+libtool: link: ( cd ".libs" && rm -f "libextractor_zip.la" && ln -s "../libextractor_zip.la" "libextractor_zip.la" )
+make[4]: Leaving directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/plugins'
+make[3]: Leaving directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/plugins'
+Making all in .
+make[3]: Entering directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src'
+make[3]: Nothing to be done for `all-am'.
+make[3]: Leaving directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src'
+make[2]: Leaving directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src'
+Making all in doc
+make[2]: Entering directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/doc'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/doc'
+Making all in .
+make[2]: Entering directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2'
+make[2]: Nothing to be done for `all-am'.
+make[2]: Leaving directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2'
+make[1]: Leaving directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2'
++ make DESTDIR=/tmp/libextractor.RuH9SW/pkg install
+Making install in m4
+make[1]: Entering directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/m4'
+make[2]: Entering directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/m4'
+make[2]: Nothing to be done for `install-exec-am'.
+make[2]: Nothing to be done for `install-data-am'.
+make[2]: Leaving directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/m4'
+make[1]: Leaving directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/m4'
+Making install in po
+make[1]: Entering directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/po'
+/ffp/bin/mkdir -p /tmp/libextractor.RuH9SW/pkg/ffp/share
+installing rw.gmo as /tmp/libextractor.RuH9SW/pkg/ffp/share/locale/rw/LC_MESSAGES/libextractor.mo
+installing fr.gmo as /tmp/libextractor.RuH9SW/pkg/ffp/share/locale/fr/LC_MESSAGES/libextractor.mo
+installing de.gmo as /tmp/libextractor.RuH9SW/pkg/ffp/share/locale/de/LC_MESSAGES/libextractor.mo
+installing ga.gmo as /tmp/libextractor.RuH9SW/pkg/ffp/share/locale/ga/LC_MESSAGES/libextractor.mo
+installing ro.gmo as /tmp/libextractor.RuH9SW/pkg/ffp/share/locale/ro/LC_MESSAGES/libextractor.mo
+installing sv.gmo as /tmp/libextractor.RuH9SW/pkg/ffp/share/locale/sv/LC_MESSAGES/libextractor.mo
+installing vi.gmo as /tmp/libextractor.RuH9SW/pkg/ffp/share/locale/vi/LC_MESSAGES/libextractor.mo
+installing nl.gmo as /tmp/libextractor.RuH9SW/pkg/ffp/share/locale/nl/LC_MESSAGES/libextractor.mo
+if test "libextractor" = "gettext-tools"; then \
+	  /ffp/bin/mkdir -p /tmp/libextractor.RuH9SW/pkg/ffp/share/gettext/po; \
+	  for file in Makefile.in.in remove-potcdate.sin quot.sed boldquot.sed en@quot.header en@boldquot.header insert-header.sin Rules-quot   Makevars.template; do \
+	    /ffp/bin/install -c -m 644 ./$file \
+			    /tmp/libextractor.RuH9SW/pkg/ffp/share/gettext/po/$file; \
+	  done; \
+	  for file in Makevars; do \
+	    rm -f /tmp/libextractor.RuH9SW/pkg/ffp/share/gettext/po/$file; \
+	  done; \
+	else \
+	  : ; \
+	fi
+make[1]: Leaving directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/po'
+Making install in src
+make[1]: Entering directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src'
+Making install in include
+make[2]: Entering directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/include'
+Making install in .
+make[3]: Entering directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/include'
+make[4]: Entering directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/include'
+make[4]: Nothing to be done for `install-exec-am'.
+test -z "/ffp/include" || /ffp/bin/mkdir -p "/tmp/libextractor.RuH9SW/pkg/ffp/include"
+ /ffp/bin/install -c -m 644 extractor.h '/tmp/libextractor.RuH9SW/pkg/ffp/include'
+make[4]: Leaving directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/include'
+make[3]: Leaving directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/include'
+make[2]: Leaving directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/include'
+Making install in main
+make[2]: Entering directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/main'
+Making install in .
+make[3]: Entering directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/main'
+make[4]: Entering directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/main'
+test -z "/ffp/lib" || /ffp/bin/mkdir -p "/tmp/libextractor.RuH9SW/pkg/ffp/lib"
+ /ffp/bin/sh ../../libtool   --mode=install /ffp/bin/install -c   libextractor.la '/tmp/libextractor.RuH9SW/pkg/ffp/lib'
+libtool: install: /ffp/bin/install -c .libs/libextractor.so.3.0.2 /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor.so.3.0.2
+libtool: install: (cd /tmp/libextractor.RuH9SW/pkg/ffp/lib && { ln -s -f libextractor.so.3.0.2 libextractor.so.3 || { rm -f libextractor.so.3 && ln -s libextractor.so.3.0.2 libextractor.so.3; }; })
+libtool: install: (cd /tmp/libextractor.RuH9SW/pkg/ffp/lib && { ln -s -f libextractor.so.3.0.2 libextractor.so || { rm -f libextractor.so && ln -s libextractor.so.3.0.2 libextractor.so; }; })
+libtool: install: /ffp/bin/install -c .libs/libextractor.lai /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor.la
+libtool: install: warning: remember to run `libtool --finish /ffp/lib'
+test -z "/ffp/bin" || /ffp/bin/mkdir -p "/tmp/libextractor.RuH9SW/pkg/ffp/bin"
+  /ffp/bin/sh ../../libtool   --mode=install /ffp/bin/install -c extract '/tmp/libextractor.RuH9SW/pkg/ffp/bin'
+libtool: install: warning: `../../src/main/libextractor.la' has not been installed in `/ffp/lib'
+libtool: install: /ffp/bin/install -c .libs/extract /tmp/libextractor.RuH9SW/pkg/ffp/bin/extract
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/main'
+make[3]: Leaving directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/main'
+make[2]: Leaving directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/main'
+Making install in common
+make[2]: Entering directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/common'
+make[3]: Entering directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/common'
+test -z "/ffp/lib" || /ffp/bin/mkdir -p "/tmp/libextractor.RuH9SW/pkg/ffp/lib"
+ /ffp/bin/sh ../../libtool   --mode=install /ffp/bin/install -c   libextractor_common.la '/tmp/libextractor.RuH9SW/pkg/ffp/lib'
+libtool: install: /ffp/bin/install -c .libs/libextractor_common.so.0.0.0 /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor_common.so.0.0.0
+libtool: install: (cd /tmp/libextractor.RuH9SW/pkg/ffp/lib && { ln -s -f libextractor_common.so.0.0.0 libextractor_common.so.0 || { rm -f libextractor_common.so.0 && ln -s libextractor_common.so.0.0.0 libextractor_common.so.0; }; })
+libtool: install: (cd /tmp/libextractor.RuH9SW/pkg/ffp/lib && { ln -s -f libextractor_common.so.0.0.0 libextractor_common.so || { rm -f libextractor_common.so && ln -s libextractor_common.so.0.0.0 libextractor_common.so; }; })
+libtool: install: /ffp/bin/install -c .libs/libextractor_common.lai /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor_common.la
+libtool: install: warning: remember to run `libtool --finish /ffp/lib'
+make[3]: Nothing to be done for `install-data-am'.
+make[3]: Leaving directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/common'
+make[2]: Leaving directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/common'
+Making install in plugins
+make[2]: Entering directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/plugins'
+Making install in .
+make[3]: Entering directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/plugins'
+make[4]: Entering directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/plugins'
+make[4]: Nothing to be done for `install-exec-am'.
+test -z "/ffp/lib/libextractor" || /ffp/bin/mkdir -p "/tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor"
+ /ffp/bin/sh ../../libtool   --mode=install /ffp/bin/install -c   libextractor_applefile.la libextractor_asf.la libextractor_deb.la libextractor_dvi.la libextractor_elf.la libextractor_flv.la libextractor_gif.la libextractor_html.la libextractor_id3.la libextractor_id3v2.la libextractor_id3v23.la libextractor_id3v24.la libextractor_it.la libextractor_jpeg.la libextractor_man.la libextractor_mime.la libextractor_mp3.la libextractor_nsf.la libextractor_nsfe.la libextractor_odf.la libextractor_png.la libextractor_ps.la libextractor_qt.la libextractor_real.la libextractor_riff.la libextractor_s3m.la libextractor_sid.la libextractor_tar.la libextractor_tiff.la libextractor_wav.la libextractor_xm.la libextractor_zip.la '/tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor'
+libtool: install: warning: relinking `libextractor_applefile.la'
+libtool: install: (cd /tmp/libextractor.RuH9SW/libextractor-0.6.2/src/plugins; /ffp/bin/sh /tmp/libextractor.RuH9SW/libextractor-0.6.2/libtool  --tag CC --mode=relink gcc -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_applefile.la -rpath /ffp/lib/libextractor applefile_extractor.lo ../../src/common/libextractor_common.la -L/ffp/lib -lintl -L/ffp/lib -liconv -L/ffp/lib -lc -R/ffp/lib -inst-prefix-dir /tmp/libextractor.RuH9SW/pkg)
+libtool: relink: /ffp/bin/nm -B  .libs/applefile_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_applefile.exp
+libtool: relink: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_applefile.exp" > ".libs/libextractor_applefile.expT"
+libtool: relink: mv -f ".libs/libextractor_applefile.expT" ".libs/libextractor_applefile.exp"
+libtool: relink: echo "{ global:" > .libs/libextractor_applefile.ver
+libtool: relink:  cat .libs/libextractor_applefile.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_applefile.ver
+libtool: relink:  echo "local: *; };" >> .libs/libextractor_applefile.ver
+libtool: relink:  gcc -shared  .libs/applefile_extractor.o   -Wl,-rpath -Wl,/ffp/lib -L/ffp/lib -L/tmp/libextractor.RuH9SW/pkg/ffp/lib -lextractor_common -lintl -liconv -lc  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_applefile.so -Wl,-version-script -Wl,.libs/libextractor_applefile.ver -o .libs/libextractor_applefile.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_applefile.soT /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_applefile.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_applefile.lai /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_applefile.la
+libtool: install: /ffp/bin/install -c .libs/libextractor_asf.so /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_asf.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_asf.lai /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_asf.la
+libtool: install: /ffp/bin/install -c .libs/libextractor_deb.so /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_deb.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_deb.lai /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_deb.la
+libtool: install: /ffp/bin/install -c .libs/libextractor_dvi.so /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_dvi.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_dvi.lai /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_dvi.la
+libtool: install: warning: relinking `libextractor_elf.la'
+libtool: install: (cd /tmp/libextractor.RuH9SW/libextractor-0.6.2/src/plugins; /ffp/bin/sh /tmp/libextractor.RuH9SW/libextractor-0.6.2/libtool  --tag CC --mode=relink gcc -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_elf.la -rpath /ffp/lib/libextractor elf_extractor.lo ../../src/common/libextractor_common.la -inst-prefix-dir /tmp/libextractor.RuH9SW/pkg)
+libtool: relink: /ffp/bin/nm -B  .libs/elf_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_elf.exp
+libtool: relink: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_elf.exp" > ".libs/libextractor_elf.expT"
+libtool: relink: mv -f ".libs/libextractor_elf.expT" ".libs/libextractor_elf.exp"
+libtool: relink: echo "{ global:" > .libs/libextractor_elf.ver
+libtool: relink:  cat .libs/libextractor_elf.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_elf.ver
+libtool: relink:  echo "local: *; };" >> .libs/libextractor_elf.ver
+libtool: relink:  gcc -shared  .libs/elf_extractor.o   -Wl,-rpath -Wl,/ffp/lib -L/ffp/lib -L/tmp/libextractor.RuH9SW/pkg/ffp/lib -lextractor_common  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_elf.so -Wl,-version-script -Wl,.libs/libextractor_elf.ver -o .libs/libextractor_elf.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_elf.soT /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_elf.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_elf.lai /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_elf.la
+libtool: install: warning: relinking `libextractor_flv.la'
+libtool: install: (cd /tmp/libextractor.RuH9SW/libextractor-0.6.2/src/plugins; /ffp/bin/sh /tmp/libextractor.RuH9SW/libextractor-0.6.2/libtool  --tag CC --mode=relink gcc -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_flv.la -rpath /ffp/lib/libextractor flv_extractor.lo ../../src/common/libextractor_common.la -inst-prefix-dir /tmp/libextractor.RuH9SW/pkg)
+libtool: relink: /ffp/bin/nm -B  .libs/flv_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_flv.exp
+libtool: relink: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_flv.exp" > ".libs/libextractor_flv.expT"
+libtool: relink: mv -f ".libs/libextractor_flv.expT" ".libs/libextractor_flv.exp"
+libtool: relink: echo "{ global:" > .libs/libextractor_flv.ver
+libtool: relink:  cat .libs/libextractor_flv.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_flv.ver
+libtool: relink:  echo "local: *; };" >> .libs/libextractor_flv.ver
+libtool: relink:  gcc -shared  .libs/flv_extractor.o   -Wl,-rpath -Wl,/ffp/lib -L/ffp/lib -L/tmp/libextractor.RuH9SW/pkg/ffp/lib -lextractor_common  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_flv.so -Wl,-version-script -Wl,.libs/libextractor_flv.ver -o .libs/libextractor_flv.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_flv.soT /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_flv.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_flv.lai /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_flv.la
+libtool: install: warning: relinking `libextractor_gif.la'
+libtool: install: (cd /tmp/libextractor.RuH9SW/libextractor-0.6.2/src/plugins; /ffp/bin/sh /tmp/libextractor.RuH9SW/libextractor-0.6.2/libtool  --tag CC --mode=relink gcc -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_gif.la -rpath /ffp/lib/libextractor gif_extractor.lo ../../src/common/libextractor_common.la -inst-prefix-dir /tmp/libextractor.RuH9SW/pkg)
+libtool: relink: /ffp/bin/nm -B  .libs/gif_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_gif.exp
+libtool: relink: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_gif.exp" > ".libs/libextractor_gif.expT"
+libtool: relink: mv -f ".libs/libextractor_gif.expT" ".libs/libextractor_gif.exp"
+libtool: relink: echo "{ global:" > .libs/libextractor_gif.ver
+libtool: relink:  cat .libs/libextractor_gif.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_gif.ver
+libtool: relink:  echo "local: *; };" >> .libs/libextractor_gif.ver
+libtool: relink:  gcc -shared  .libs/gif_extractor.o   -Wl,-rpath -Wl,/ffp/lib -L/ffp/lib -L/tmp/libextractor.RuH9SW/pkg/ffp/lib -lextractor_common  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_gif.so -Wl,-version-script -Wl,.libs/libextractor_gif.ver -o .libs/libextractor_gif.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_gif.soT /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_gif.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_gif.lai /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_gif.la
+libtool: install: warning: relinking `libextractor_html.la'
+libtool: install: (cd /tmp/libextractor.RuH9SW/libextractor-0.6.2/src/plugins; /ffp/bin/sh /tmp/libextractor.RuH9SW/libextractor-0.6.2/libtool  --tag CC --mode=relink gcc -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_html.la -rpath /ffp/lib/libextractor html_extractor.lo ../../src/common/libextractor_common.la -inst-prefix-dir /tmp/libextractor.RuH9SW/pkg)
+libtool: relink: /ffp/bin/nm -B  .libs/html_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_html.exp
+libtool: relink: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_html.exp" > ".libs/libextractor_html.expT"
+libtool: relink: mv -f ".libs/libextractor_html.expT" ".libs/libextractor_html.exp"
+libtool: relink: echo "{ global:" > .libs/libextractor_html.ver
+libtool: relink:  cat .libs/libextractor_html.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_html.ver
+libtool: relink:  echo "local: *; };" >> .libs/libextractor_html.ver
+libtool: relink:  gcc -shared  .libs/html_extractor.o   -Wl,-rpath -Wl,/ffp/lib -L/ffp/lib -L/tmp/libextractor.RuH9SW/pkg/ffp/lib -lextractor_common  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_html.so -Wl,-version-script -Wl,.libs/libextractor_html.ver -o .libs/libextractor_html.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_html.soT /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_html.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_html.lai /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_html.la
+libtool: install: warning: relinking `libextractor_id3.la'
+libtool: install: (cd /tmp/libextractor.RuH9SW/libextractor-0.6.2/src/plugins; /ffp/bin/sh /tmp/libextractor.RuH9SW/libextractor-0.6.2/libtool  --tag CC --mode=relink gcc -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_id3.la -rpath /ffp/lib/libextractor id3_extractor.lo ../../src/common/libextractor_common.la -L/ffp/lib -lintl -L/ffp/lib -liconv -L/ffp/lib -lc -R/ffp/lib -inst-prefix-dir /tmp/libextractor.RuH9SW/pkg)
+libtool: relink: /ffp/bin/nm -B  .libs/id3_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_id3.exp
+libtool: relink: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_id3.exp" > ".libs/libextractor_id3.expT"
+libtool: relink: mv -f ".libs/libextractor_id3.expT" ".libs/libextractor_id3.exp"
+libtool: relink: echo "{ global:" > .libs/libextractor_id3.ver
+libtool: relink:  cat .libs/libextractor_id3.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_id3.ver
+libtool: relink:  echo "local: *; };" >> .libs/libextractor_id3.ver
+libtool: relink:  gcc -shared  .libs/id3_extractor.o   -Wl,-rpath -Wl,/ffp/lib -L/ffp/lib -L/tmp/libextractor.RuH9SW/pkg/ffp/lib -lextractor_common -lintl -liconv -lc  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_id3.so -Wl,-version-script -Wl,.libs/libextractor_id3.ver -o .libs/libextractor_id3.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_id3.soT /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_id3.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_id3.lai /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_id3.la
+libtool: install: warning: relinking `libextractor_id3v2.la'
+libtool: install: (cd /tmp/libextractor.RuH9SW/libextractor-0.6.2/src/plugins; /ffp/bin/sh /tmp/libextractor.RuH9SW/libextractor-0.6.2/libtool  --tag CC --mode=relink gcc -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_id3v2.la -rpath /ffp/lib/libextractor id3v2_extractor.lo ../../src/common/libextractor_common.la -inst-prefix-dir /tmp/libextractor.RuH9SW/pkg)
+libtool: relink: /ffp/bin/nm -B  .libs/id3v2_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_id3v2.exp
+libtool: relink: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_id3v2.exp" > ".libs/libextractor_id3v2.expT"
+libtool: relink: mv -f ".libs/libextractor_id3v2.expT" ".libs/libextractor_id3v2.exp"
+libtool: relink: echo "{ global:" > .libs/libextractor_id3v2.ver
+libtool: relink:  cat .libs/libextractor_id3v2.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_id3v2.ver
+libtool: relink:  echo "local: *; };" >> .libs/libextractor_id3v2.ver
+libtool: relink:  gcc -shared  .libs/id3v2_extractor.o   -Wl,-rpath -Wl,/ffp/lib -L/ffp/lib -L/tmp/libextractor.RuH9SW/pkg/ffp/lib -lextractor_common  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_id3v2.so -Wl,-version-script -Wl,.libs/libextractor_id3v2.ver -o .libs/libextractor_id3v2.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_id3v2.soT /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_id3v2.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_id3v2.lai /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_id3v2.la
+libtool: install: warning: relinking `libextractor_id3v23.la'
+libtool: install: (cd /tmp/libextractor.RuH9SW/libextractor-0.6.2/src/plugins; /ffp/bin/sh /tmp/libextractor.RuH9SW/libextractor-0.6.2/libtool  --tag CC --mode=relink gcc -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_id3v23.la -rpath /ffp/lib/libextractor id3v23_extractor.lo ../../src/common/libextractor_common.la -inst-prefix-dir /tmp/libextractor.RuH9SW/pkg)
+libtool: relink: /ffp/bin/nm -B  .libs/id3v23_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_id3v23.exp
+libtool: relink: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_id3v23.exp" > ".libs/libextractor_id3v23.expT"
+libtool: relink: mv -f ".libs/libextractor_id3v23.expT" ".libs/libextractor_id3v23.exp"
+libtool: relink: echo "{ global:" > .libs/libextractor_id3v23.ver
+libtool: relink:  cat .libs/libextractor_id3v23.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_id3v23.ver
+libtool: relink:  echo "local: *; };" >> .libs/libextractor_id3v23.ver
+libtool: relink:  gcc -shared  .libs/id3v23_extractor.o   -Wl,-rpath -Wl,/ffp/lib -L/ffp/lib -L/tmp/libextractor.RuH9SW/pkg/ffp/lib -lextractor_common  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_id3v23.so -Wl,-version-script -Wl,.libs/libextractor_id3v23.ver -o .libs/libextractor_id3v23.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_id3v23.soT /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_id3v23.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_id3v23.lai /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_id3v23.la
+libtool: install: warning: relinking `libextractor_id3v24.la'
+libtool: install: (cd /tmp/libextractor.RuH9SW/libextractor-0.6.2/src/plugins; /ffp/bin/sh /tmp/libextractor.RuH9SW/libextractor-0.6.2/libtool  --tag CC --mode=relink gcc -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_id3v24.la -rpath /ffp/lib/libextractor id3v24_extractor.lo ../../src/common/libextractor_common.la -inst-prefix-dir /tmp/libextractor.RuH9SW/pkg)
+libtool: relink: /ffp/bin/nm -B  .libs/id3v24_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_id3v24.exp
+libtool: relink: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_id3v24.exp" > ".libs/libextractor_id3v24.expT"
+libtool: relink: mv -f ".libs/libextractor_id3v24.expT" ".libs/libextractor_id3v24.exp"
+libtool: relink: echo "{ global:" > .libs/libextractor_id3v24.ver
+libtool: relink:  cat .libs/libextractor_id3v24.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_id3v24.ver
+libtool: relink:  echo "local: *; };" >> .libs/libextractor_id3v24.ver
+libtool: relink:  gcc -shared  .libs/id3v24_extractor.o   -Wl,-rpath -Wl,/ffp/lib -L/ffp/lib -L/tmp/libextractor.RuH9SW/pkg/ffp/lib -lextractor_common  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_id3v24.so -Wl,-version-script -Wl,.libs/libextractor_id3v24.ver -o .libs/libextractor_id3v24.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_id3v24.soT /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_id3v24.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_id3v24.lai /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_id3v24.la
+libtool: install: /ffp/bin/install -c .libs/libextractor_it.so /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_it.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_it.lai /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_it.la
+libtool: install: /ffp/bin/install -c .libs/libextractor_jpeg.so /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_jpeg.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_jpeg.lai /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_jpeg.la
+libtool: install: /ffp/bin/install -c .libs/libextractor_man.so /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_man.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_man.lai /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_man.la
+libtool: install: /ffp/bin/install -c .libs/libextractor_mime.so /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_mime.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_mime.lai /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_mime.la
+libtool: install: warning: relinking `libextractor_mp3.la'
+libtool: install: (cd /tmp/libextractor.RuH9SW/libextractor-0.6.2/src/plugins; /ffp/bin/sh /tmp/libextractor.RuH9SW/libextractor-0.6.2/libtool  --tag CC --mode=relink gcc -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_mp3.la -rpath /ffp/lib/libextractor mp3_extractor.lo ../../src/common/libextractor_common.la -L/ffp/lib -lintl -L/ffp/lib -liconv -L/ffp/lib -lc -R/ffp/lib -inst-prefix-dir /tmp/libextractor.RuH9SW/pkg)
+libtool: relink: /ffp/bin/nm -B  .libs/mp3_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_mp3.exp
+libtool: relink: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_mp3.exp" > ".libs/libextractor_mp3.expT"
+libtool: relink: mv -f ".libs/libextractor_mp3.expT" ".libs/libextractor_mp3.exp"
+libtool: relink: echo "{ global:" > .libs/libextractor_mp3.ver
+libtool: relink:  cat .libs/libextractor_mp3.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_mp3.ver
+libtool: relink:  echo "local: *; };" >> .libs/libextractor_mp3.ver
+libtool: relink:  gcc -shared  .libs/mp3_extractor.o   -Wl,-rpath -Wl,/ffp/lib -L/ffp/lib -L/tmp/libextractor.RuH9SW/pkg/ffp/lib -lextractor_common -lintl -liconv -lc  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_mp3.so -Wl,-version-script -Wl,.libs/libextractor_mp3.ver -o .libs/libextractor_mp3.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_mp3.soT /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_mp3.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_mp3.lai /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_mp3.la
+libtool: install: /ffp/bin/install -c .libs/libextractor_nsf.so /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_nsf.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_nsf.lai /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_nsf.la
+libtool: install: /ffp/bin/install -c .libs/libextractor_nsfe.so /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_nsfe.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_nsfe.lai /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_nsfe.la
+libtool: install: warning: relinking `libextractor_odf.la'
+libtool: install: (cd /tmp/libextractor.RuH9SW/libextractor-0.6.2/src/plugins; /ffp/bin/sh /tmp/libextractor.RuH9SW/libextractor-0.6.2/libtool  --tag CC --mode=relink gcc -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_odf.la -rpath /ffp/lib/libextractor odf_extractor.lo ../../src/common/libextractor_common.la -lz -inst-prefix-dir /tmp/libextractor.RuH9SW/pkg)
+libtool: relink: /ffp/bin/nm -B  .libs/odf_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_odf.exp
+libtool: relink: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_odf.exp" > ".libs/libextractor_odf.expT"
+libtool: relink: mv -f ".libs/libextractor_odf.expT" ".libs/libextractor_odf.exp"
+libtool: relink: echo "{ global:" > .libs/libextractor_odf.ver
+libtool: relink:  cat .libs/libextractor_odf.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_odf.ver
+libtool: relink:  echo "local: *; };" >> .libs/libextractor_odf.ver
+libtool: relink:  gcc -shared  .libs/odf_extractor.o   -Wl,-rpath -Wl,/ffp/lib -L/ffp/lib -L/tmp/libextractor.RuH9SW/pkg/ffp/lib -lextractor_common -lz  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_odf.so -Wl,-version-script -Wl,.libs/libextractor_odf.ver -o .libs/libextractor_odf.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_odf.soT /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_odf.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_odf.lai /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_odf.la
+libtool: install: warning: relinking `libextractor_png.la'
+libtool: install: (cd /tmp/libextractor.RuH9SW/libextractor-0.6.2/src/plugins; /ffp/bin/sh /tmp/libextractor.RuH9SW/libextractor-0.6.2/libtool  --tag CC --mode=relink gcc -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_png.la -rpath /ffp/lib/libextractor png_extractor.lo ../../src/common/libextractor_common.la -lz -inst-prefix-dir /tmp/libextractor.RuH9SW/pkg)
+libtool: relink: /ffp/bin/nm -B  .libs/png_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_png.exp
+libtool: relink: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_png.exp" > ".libs/libextractor_png.expT"
+libtool: relink: mv -f ".libs/libextractor_png.expT" ".libs/libextractor_png.exp"
+libtool: relink: echo "{ global:" > .libs/libextractor_png.ver
+libtool: relink:  cat .libs/libextractor_png.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_png.ver
+libtool: relink:  echo "local: *; };" >> .libs/libextractor_png.ver
+libtool: relink:  gcc -shared  .libs/png_extractor.o   -Wl,-rpath -Wl,/ffp/lib -L/ffp/lib -L/tmp/libextractor.RuH9SW/pkg/ffp/lib -lextractor_common -lz  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_png.so -Wl,-version-script -Wl,.libs/libextractor_png.ver -o .libs/libextractor_png.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_png.soT /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_png.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_png.lai /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_png.la
+libtool: install: /ffp/bin/install -c .libs/libextractor_ps.so /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_ps.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_ps.lai /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_ps.la
+libtool: install: /ffp/bin/install -c .libs/libextractor_qt.so /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_qt.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_qt.lai /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_qt.la
+libtool: install: /ffp/bin/install -c .libs/libextractor_real.so /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_real.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_real.lai /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_real.la
+libtool: install: /ffp/bin/install -c .libs/libextractor_riff.so /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_riff.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_riff.lai /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_riff.la
+libtool: install: /ffp/bin/install -c .libs/libextractor_s3m.so /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_s3m.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_s3m.lai /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_s3m.la
+libtool: install: /ffp/bin/install -c .libs/libextractor_sid.so /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_sid.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_sid.lai /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_sid.la
+libtool: install: /ffp/bin/install -c .libs/libextractor_tar.so /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_tar.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_tar.lai /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_tar.la
+libtool: install: warning: relinking `libextractor_tiff.la'
+libtool: install: (cd /tmp/libextractor.RuH9SW/libextractor-0.6.2/src/plugins; /ffp/bin/sh /tmp/libextractor.RuH9SW/libextractor-0.6.2/libtool  --tag CC --mode=relink gcc -fno-strict-aliasing -g -O2 -Wl,-Bsymbolic -export-dynamic -avoid-version -module -no-undefined -export-symbols-regex "EXTRACTOR_[a-zA-Z0-9_]*_......." -L/ffp/lib -Wl,-rpath,/ffp/lib -o libextractor_tiff.la -rpath /ffp/lib/libextractor tiff_extractor.lo ../../src/common/libextractor_common.la -inst-prefix-dir /tmp/libextractor.RuH9SW/pkg)
+libtool: relink: /ffp/bin/nm -B  .libs/tiff_extractor.o   | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /ffp/bin/sed 's/.* //' | sort | uniq > .libs/libextractor_tiff.exp
+libtool: relink: /ffp/bin/grep -E -e "EXTRACTOR_[a-zA-Z0-9_]*_......." ".libs/libextractor_tiff.exp" > ".libs/libextractor_tiff.expT"
+libtool: relink: mv -f ".libs/libextractor_tiff.expT" ".libs/libextractor_tiff.exp"
+libtool: relink: echo "{ global:" > .libs/libextractor_tiff.ver
+libtool: relink:  cat .libs/libextractor_tiff.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libextractor_tiff.ver
+libtool: relink:  echo "local: *; };" >> .libs/libextractor_tiff.ver
+libtool: relink:  gcc -shared  .libs/tiff_extractor.o   -Wl,-rpath -Wl,/ffp/lib -L/ffp/lib -L/tmp/libextractor.RuH9SW/pkg/ffp/lib -lextractor_common  -Wl,-Bsymbolic -Wl,-rpath -Wl,/ffp/lib   -Wl,-soname -Wl,libextractor_tiff.so -Wl,-version-script -Wl,.libs/libextractor_tiff.ver -o .libs/libextractor_tiff.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_tiff.soT /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_tiff.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_tiff.lai /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_tiff.la
+libtool: install: /ffp/bin/install -c .libs/libextractor_wav.so /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_wav.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_wav.lai /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_wav.la
+libtool: install: /ffp/bin/install -c .libs/libextractor_xm.so /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_xm.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_xm.lai /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_xm.la
+libtool: install: /ffp/bin/install -c .libs/libextractor_zip.so /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_zip.so
+libtool: install: /ffp/bin/install -c .libs/libextractor_zip.lai /tmp/libextractor.RuH9SW/pkg/ffp/lib/libextractor/libextractor_zip.la
+libtool: install: warning: remember to run `libtool --finish /ffp/lib/libextractor'
+make[4]: Leaving directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/plugins'
+make[3]: Leaving directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/plugins'
+make[2]: Leaving directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src/plugins'
+Making install in .
+make[2]: Entering directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src'
+make[3]: Entering directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src'
+make[3]: Nothing to be done for `install-exec-am'.
+make[3]: Nothing to be done for `install-data-am'.
+make[3]: Leaving directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src'
+make[2]: Leaving directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src'
+make[1]: Leaving directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/src'
+Making install in doc
+make[1]: Entering directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/doc'
+make[2]: Entering directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/doc'
+make[2]: Nothing to be done for `install-exec-am'.
+test -z "/ffp/share/info" || /ffp/bin/mkdir -p "/tmp/libextractor.RuH9SW/pkg/ffp/share/info"
+ /ffp/bin/install -c -m 644 ./extractor.info '/tmp/libextractor.RuH9SW/pkg/ffp/share/info'
+test -z "/ffp/share/man/man1" || /ffp/bin/mkdir -p "/tmp/libextractor.RuH9SW/pkg/ffp/share/man/man1"
+ /ffp/bin/install -c -m 644 extract.1 '/tmp/libextractor.RuH9SW/pkg/ffp/share/man/man1'
+test -z "/ffp/share/man/man3" || /ffp/bin/mkdir -p "/tmp/libextractor.RuH9SW/pkg/ffp/share/man/man3"
+ /ffp/bin/install -c -m 644 libextractor.3 '/tmp/libextractor.RuH9SW/pkg/ffp/share/man/man3'
+make[2]: Leaving directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/doc'
+make[1]: Leaving directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2/doc'
+Making install in .
+make[1]: Entering directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2'
+make[2]: Entering directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2'
+make[2]: Nothing to be done for `install-exec-am'.
+test -z "/ffp/lib/pkgconfig" || /ffp/bin/mkdir -p "/tmp/libextractor.RuH9SW/pkg/ffp/lib/pkgconfig"
+ /ffp/bin/install -c -m 644 libextractor.pc '/tmp/libextractor.RuH9SW/pkg/ffp/lib/pkgconfig'
+make[2]: Leaving directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2'
+make[1]: Leaving directory `/tmp/libextractor.RuH9SW/libextractor-0.6.2'
++ mkdir -p /tmp/libextractor.RuH9SW/pkg/install
++ cp /ffp/home/root/src/libextractor/DESCR /ffp/home/root/src/libextractor/HOMEPAGE /tmp/libextractor.RuH9SW/pkg/install/
++ cd /tmp/libextractor.RuH9SW/pkg
++ makepkg libextractor 0.6.2 1
+Creating /tmp/libextractor-0.6.2-arm-1.tar ...

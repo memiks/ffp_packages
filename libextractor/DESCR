@@ -1,0 +1,37 @@
+GNU libextractor is a library used to extract meta data from files of 
+arbitrary type. 
+
+It is designed to use helper-libraries to perform the actual extraction, 
+and to be trivially extendable by linking against external extractors for 
+additional file types. libextractor is a GNU package. 
+
+Our official GNU website can be found at 
+http://www.gnu.org/software/libextractor/. 
+
+libextractor can be downloaded from this site or the GNU mirrors.
+
+The goal is to provide developers of file-sharing networks, browsers or 
+WWW-indexing bots with a universal library to obtain simple keywords and 
+meta data to match against queries and to show to users instead of only 
+relying on filenames. 
+
+libextractor contains a shell command extract that, similar to the 
+well-known file command, can extract meta data from a file an print 
+the results to stdout.
+
+Currently, libextractor supports the following formats: 
+HTML, PDF, PS, OLE2 (DOC, XLS, PPT), OpenOffice (sxw), StarOffice (sdw), 
+DVI, MAN, FLAC, MP3 (ID3v1 and ID3v2), NSF(E) (NES music), SID (C64 music), 
+OGG, WAV, EXIV2, JPEG, GIF, PNG, TIFF, DEB, RPM, TAR(.GZ), ZIP, ELF, 
+S3M (Scream Tracker 3), XM (eXtended Module), IT (Impulse Tracker), FLV, 
+REAL, RIFF (AVI), MPEG, QT and ASF.
+
+Also, various additional MIME types are detected.
+
+libextractor is free software; you can redistribute it and/or modify it 
+under the terms of the GNU General Public License as published by the 
+Free Software Foundation; either version 2 of the License, or 
+(at your option) any later version. 
+
+Homepage: http://www.gnu.org/software/libextractor/
+
