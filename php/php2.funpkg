@@ -1,0 +1,50 @@
+#!/ffp/bin/sh -xe
+
+PN=php
+PR=1
+
+. ./config.ffp
+
+X=$(pwd)
+W=/tmp/php.aXQZQH
+#$(mktemp -t -d $PN.XXXXXX)
+D=$W/pkg
+
+cd $W
+#cat $X/SRC_URI | xargs wget 
+#PV=$(ls $PN-*.tar* | egrep -o '[0-9.][0-9.]*[0-9]')
+#tar xf $PN-$PV.tar*
+PV=5.5.1
+cd $PN-$PV
+
+#for file in `ls $X/patches/*.patch`
+#do
+#        patch -p0 -i $file
+#done
+
+#CFLAGS="$FFP_CFLAGS -D_GNU_SOURCE -pthread" \
+#CXXFLAGS="$FFP_CFLAGS -D_GNU_SOURCE -pthread" \
+#LDFLAGS="$FFP_LDFLAGS -lpthread " \
+#INCLUDES="$INCLUDES" \
+#make
+
+CFLAGS="$FFP_CFLAGS -D_GNU_SOURCE -pthread" \
+CXXFLAGS="$FFP_CFLAGS -D_GNU_SOURCE -pthread" \
+LDFLAGS="$FFP_LDFLAGS -lpthread " \
+INCLUDES="$INCLUDES" \
+make INSTALL_ROOT=$D install
+
+# install php.ini examples
+mkdir -p $D/ffp/etc/examples
+install -m 0644 php.ini-* $D/ffp/etc/examples/
+
+cp -rvf $X/start $D/ffp/
+
+mkdir -p $D/install
+cp $X/{DESCR,HOMEPAGE} $D/install/
+
+cd $D
+rm -rf .registry .channels .filemap .lock .depdblock .depdb
+
+makepkg $PN $PV $PR
+

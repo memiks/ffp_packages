@@ -1,0 +1,13 @@
+--- configure.orig	2013-08-08 15:49:10.000000000 +0200
++++ configure	2013-08-08 15:52:03.000000000 +0200
+@@ -38213,8 +38213,8 @@
+ 
+   if test "$PHP_PNG_DIR" != "no"; then
+ 
+-    for i in $PHP_PNG_DIR /usr/local /usr; do
+-      test -f $i/include/png.h && GD_PNG_DIR=$i && break
++    for i in $PHP_PNG_DIR /usr/local/include /usr/include; do
++      test -f $i/png.h && GD_PNG_DIR=$i && break
+     done
+ 
+     if test -z "$GD_PNG_DIR"; then

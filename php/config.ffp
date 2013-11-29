@@ -1,0 +1,34 @@
+export FFP_ARCH=arm
+case "$FFP_ARCH" in
+	arm)
+		GNU_BUILD=arm-ffp-linux-uclibcgnueabi
+		;;
+	oarm)
+		GNU_BUILD=arm-ffp-linux-uclibc
+		;;
+	"")
+		echo "FFP_ARCH unset"
+		exit 1
+		;;
+	*)
+		echo "FFP_ARCH unknown"
+		exit 1
+		;;
+esac
+
+GNU_HOST=$GNU_BUILD
+GNU_TARGET=$GNU_HOST
+
+FFP_CFLAGS="-I/ffp/include -I/ffp/include/libpng15 -I/ffp/include/libxml2 -O2"
+FFP_LDFLAGS="-L/ffp/lib -Wl,-rpath,/ffp/lib"
+INCLUDES="-I/ffp/include -I/ffp/include/libpng15 -I/ffp/include/libxml2 "
+
+if [ ! -d "$TMPDIR" ]; then
+	TMPDIR=/tmp
+fi
+export TMPDIR
+
+mandir=/ffp/share/man
+infodir=/ffp/share/info
+docdir=/ffp/share/doc
+

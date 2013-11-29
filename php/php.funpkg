@@ -1,0 +1,95 @@
+#!/ffp/bin/sh -xe
+
+PN=$(basename $0 .funpkg)
+PR=1
+
+. ./config.ffp
+
+X=$(pwd)
+W=$(mktemp -t -d $PN.XXXXXX)
+D=$W/pkg
+
+cd $W
+cat $X/SRC_URI | xargs wget 
+PV=$(ls $PN-*.tar* | egrep -o '[0-9.][0-9.]*[0-9]')
+tar xf $PN-$PV.tar*
+cd $PN-$PV
+
+for file in `ls $X/patches/*.patch`
+do
+        patch -p0 -i $file
+done
+
+CFLAGS="$FFP_CFLAGS -D_GNU_SOURCE -pthread" \
+CXXFLAGS="$FFP_CFLAGS -D_GNU_SOURCE -pthread" \
+LDFLAGS="$FFP_LDFLAGS -lpthread " \
+INCLUDES="$INCLUDES" \
+./configure \
+	--prefix=/ffp \
+	--build=$GNU_BUILD \
+	--host=$GNU_HOST \
+	--mandir=$mandir \
+    --infodir=$infodir \
+    --includedir=/ffp \
+	--with-tsrm-pthreads \
+	--with-config-file-path=/ffp/etc \
+	--enable-shared=yes \
+	--enable-static=no \
+	--enable-calendar \
+	--enable-ctype \
+	--enable-xml \
+	--with-libxml-dir=/ffp \
+	--enable-libxml \
+	--enable-simplexml \
+	--enable-soap \
+	--enable-mbstring \
+	--enable-mbregex \
+	--enable-pdo \
+	--with-sqlite3=shared,/ffp \
+	--with-pdo-sqlite=shared,/ffp \
+	--with-mysql=shared,/ffp \
+	--with-pdo-mysql=shared,/ffp \
+	--with-mysql-sock=shared,/ffp/var/run/mysql \
+	--enable-tokenizer \
+	--with-zlib=shared,/ffp \
+	--with-zlib-dir=/ffp \
+	--with-openssl=shared,/ffp \
+	--enable-pcntl \
+	--enable-sigchild \
+	--enable-ftp \
+	--with-gd=shared \
+ 	--with-freetype-dir=/ffp \
+	--with-curl=shared,/ffp \
+	--with-jpeg-dir=/ffp \
+	--with-png-dir=/ffp/include/libpng15 \
+	--with-bz2=shared,/ffp \
+	--with-iconv=shared,/ffp \
+	--enable-fpm
+
+CFLAGS="$FFP_CFLAGS -D_GNU_SOURCE -pthread" \
+CXXFLAGS="$FFP_CFLAGS -D_GNU_SOURCE -pthread" \
+LDFLAGS="$FFP_LDFLAGS -lpthread " \
+INCLUDES="$INCLUDES" \
+make
+
+CFLAGS="$FFP_CFLAGS -D_GNU_SOURCE -pthread" \
+CXXFLAGS="$FFP_CFLAGS -D_GNU_SOURCE -pthread" \
+LDFLAGS="$FFP_LDFLAGS -lpthread " \
+INCLUDES="$INCLUDES" \
+make INSTALL_ROOT=$D install
+
+# install php.ini examples
+mkdir -p $D/ffp/etc/examples
+install -m 0644 php.ini-* $D/ffp/etc/examples/
+
+cp -rvf $X/start $D/ffp/                       
+
+
+mkdir -p $D/install
+cp $X/{DESCR,HOMEPAGE} $D/install/
+
+cd $D
+rm -rf .registry .channels .filemap .lock .depdblock .depdb
+
+makepkg $PN $PV $PR
+
