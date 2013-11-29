@@ -1,0 +1,55 @@
+--- GNUmakefile.orig	2013-04-26 12:37:18.000000000 +0200
++++ GNUmakefile	2013-04-26 14:13:13.000000000 +0200
+@@ -19,7 +19,7 @@
+ # Macros
+ #
+ 
+-CC = /usr/bin/g++
++CC = /ffp/bin/g++
+ 
+ 
+ all: MCServer/MCServer
+@@ -43,8 +43,8 @@
+ ################
+ # release build - fastest run-time, no gdb support
+ ################
+-CC_OPTIONS = -s -g -O3 -DNDEBUG
+-CXX_OPTIONS = -s -g -O3 -DNDEBUG
++CC_OPTIONS = -s -g -O3 -DNDEBUG  -Wno-psabi
++CXX_OPTIONS = -s -g -O3 -DNDEBUG  -Wno-psabi
+ LNK_OPTIONS = -pthread -O3
+ BUILDDIR = build/release/
+ 
+@@ -53,8 +53,8 @@
+ ################
+ # profile build - a release build with symbols and profiling engine built in
+ ################
+-CC_OPTIONS = -s -g -ggdb -O3 -pg -DNDEBUG
+-CXX_OPTIONS = -s -g -ggdb -O3 -pg -DNDEBUG
++CC_OPTIONS = -s -g -ggdb -O3 -pg -DNDEBUG  -Wno-psabi
++CXX_OPTIONS = -s -g -ggdb -O3 -pg -DNDEBUG  -Wno-psabi
+ LNK_OPTIONS = -pthread -ggdb -O3 -pg
+ BUILDDIR = build/profile/
+ 
+@@ -63,8 +63,8 @@
+ ################
+ # pedantic build - basically a debug build with lots of warnings
+ ################
+-CC_OPTIONS = -s -g -ggdb -D_DEBUG -Wall -Wextra -pedantic -ansi -Wno-long-long
+-CXX_OPTIONS = -s -g -ggdb -D_DEBUG -Wall -Wextra -pedantic -ansi -Wno-long-long
++CC_OPTIONS = -s -g -ggdb -D_DEBUG -Wall -Wextra -pedantic -ansi -Wno-long-long  -Wno-psabi
++CXX_OPTIONS = -s -g -ggdb -D_DEBUG -Wall -Wextra -pedantic -ansi -Wno-long-long  -Wno-psabi
+ LNK_OPTIONS = -pthread -ggdb
+ BUILDDIR = build/pedantic/
+ 
+@@ -73,8 +73,8 @@
+ # debug build - fully traceable by gdb in C++ code, slowest
+ # Since C code is used only for supporting libraries (zlib, lua), it is still O3-optimized
+ ################
+-CC_OPTIONS = -s -ggdb -g -D_DEBUG -O3
+-CXX_OPTIONS = -s -ggdb -g -D_DEBUG
++CC_OPTIONS = -s -ggdb -g -D_DEBUG -O3  -Wno-psabi
++CXX_OPTIONS = -s -ggdb -g -D_DEBUG  -Wno-psabi
+ LNK_OPTIONS = -pthread -g -ggdb
+ BUILDDIR = build/debug/
+ endif
