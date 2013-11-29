@@ -1,0 +1,1127 @@
+++ basename ./swig.funpkg .funpkg
++ PN=swig
+++ ls swig-2.0.4.tar.gz
+++ egrep -o '[0-9.][0-9.]*[0-9]'
++ PV=2.0.4
++ PR=1
++ . ./config.ffp
+++ GNU_HOST=
+++ GNU_TARGET=
+++ FFP_CFLAGS='-I/ffp/include -O2'
+++ FFP_LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
+++ '[' '!' -d '' ']'
+++ TMPDIR=/tmp
+++ export TMPDIR
+++ mandir=/ffp/share/man
+++ infodir=/ffp/share/info
+++ docdir=/ffp/share/doc
+++ pwd
++ X=/ffp/home/root/compile/ffp07/src/swig
+++ mktemp -t -d swig.XXXXXX
++ W=/tmp/swig.QAywrt
++ D=/tmp/swig.QAywrt/pkg
++ cd /tmp/swig.QAywrt
++ tar xf /ffp/home/root/compile/ffp07/src/swig/swig-2.0.4.tar.gz
++ cd swig-2.0.4
++ LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
++ ./configure --prefix=/ffp --build= --host=
+checking build system type... armv5tejl-unknown-linux-gnueabi
+checking host system type... armv5tejl-unknown-linux-gnueabi
+checking for a BSD-compatible install... /ffp/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /ffp/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for style of include used by make... GNU
+checking dependency style of gcc... gcc3
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking dependency style of g++... gcc3
+checking whether gcc and cc understand -c and -o together... yes
+checking maximum warning verbosity option... -Wall -W -ansi -pedantic for C++ -Wall -W -ansi -pedantic for C
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /ffp/bin/grep
+checking for egrep... /ffp/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for bool... yes
+checking for popen... yes
+checking whether to enable PCRE support... yes
+checking whether to use local PCRE... no
+checking for a sed that does not truncate output... /ffp/bin/sed
+checking for pcre-config... /ffp/bin/pcre-config
+checking whether to enable ccache-swig... yes
+
+Checking packages required for SWIG developers.
+Note : None of the following packages are required for users to compile and install SWIG
+
+checking for bison... no
+checking for byacc... no
+checking for ranlib... ranlib
+checking for ar... ar
+checking for yodl2man... no
+checking for yodl2html... no
+
+Checking for installed target languages and other information in order to compile and run
+the examples and test-suite invoked by 'make check'.
+Note : None of the following packages are required for users to compile and install SWIG
+
+checking for boostlib >= 1.20.0... configure: We could not detect the boost libraries (version 1.20 or higher). If you have a staged boost library (still not installed) please specify $BOOST_ROOT in your environment and do not give a PATH to --with-boost option.  If you are sure you have boost installed, then check your version number looking in <boost/version.hpp>. See http://randspringer.de/boost for more documentation.
+checking SO... .so
+checking LDSHARED... gcc -shared
+checking CXXSHARED... gcc -shared
+checking TRYLINKINGWITHCXX... CXXSHARED= g++ -shared 
+checking CCSHARED... -fpic
+checking RPATH... -Xlinker -rpath $(exec_prefix)/lib -Xlinker -rpath .
+checking LINKFORSHARED... -Xlinker -export-dynamic
+checking PLATFLAGS... 
+checking for dlopen in -ldl... yes
+checking for shl_load in -ldld... no
+checking for library containing t_open... no
+checking for library containing gethostbyname... none required
+checking for library containing socket... none required
+checking for swill_init in -lswill... no
+checking for main in -lieee... no
+checking for crypt in -lcrypt... yes
+checking for X... no
+checking for X11 header files... 
+couldn't find any!
+checking for X11 libraries... checking for XCreateWindow in -lXwindow... no
+couldn't find any!  Using -lX11.
+checking for Tcl configuration... no
+checking for Tcl header files... not found
+checking for Tcl library... not found
+checking for python... python
+checking for Python prefix... /ffp
+checking for Python exec-prefix... /ffp
+checking for Python version... python2.7
+checking for Python lib dir... lib
+checking for Python header files... -I/ffp/include/python2.7 -I/ffp/lib/python2.7/config
+checking for Python library... /ffp/lib/python2.7/config
+checking for python3... no
+checking for python3.0... no
+checking for python3.1... no
+checking for python3-config... no
+checking for python3.0-config... no
+checking for python3.1-config... no
+checking for perl... perl
+checking for Perl5 header files... /ffp/lib/perl5/5.14.2/arm-linux-thread-multi-64int/CORE
+checking for Perl5 library... perl.so
+checking for Perl5 compiler options... -D_REENTRANT -D_GNU_SOURCE -fno-strict-aliasing -pipe -fstack-protector -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
+checking for octave... no
+checking for Octave header files... could not figure out how to run octave
+checking for java... no
+checking for kaffe... no
+checking for guavac... no
+checking for javac... no
+checking for java include file jni.h... not found
+checking for gcj... no
+checking for gcjh... no
+checking for guile-config... no
+checking for Guile header files... not found
+checking for Guile library... not found
+checking whether Guile's gh_ API works... no
+checking whether Guile's SCM_ API works... no
+checking for mzscheme... no
+checking for mzc... no
+checking for ruby... no
+checking for Ruby header files... could not figure out how to run ruby
+checking for php5... no
+checking for php... php
+checking for PHP header files... found PHP , but only PHP 5 is supported
+checking for Ocaml DL load generator... checking for ocamldlgen... no
+checking for Ocaml package tool... checking for ocamlfind... no
+checking for Ocaml compiler... checking for ocamlc... no
+checking for Ocaml interpreter... checking for ocaml... yes
+checking for Ocaml toplevel creator... checking for ocamlmktop... no
+checking for pike... no
+checking for pike7.6... no
+checking for pike7.4... no
+checking for pike7.2... no
+checking for chicken... no
+checking for csc... no
+checking for csi... no
+checking for gmcs... no
+checking for mcs... no
+checking for cscc... no
+checking for lua... no
+checking lua.h usability... no
+checking lua.h presence... no
+checking for lua.h... no
+checking for lua.h in other locations... not found
+checking for library containing lua_close... no
+checking for alisp... no
+checking for clisp... no
+checking for R... no
+checking for 6g... no
+checking for 8g... no
+checking for gccgo... no
+checking for dmd... no
+checking for ldmd... no
+checking for gdmd... no
+checking for dmd... no
+checking for gdmd... no
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating swig.spec
+config.status: creating Source/Makefile
+config.status: creating Examples/Makefile
+config.status: creating Examples/guile/Makefile
+config.status: creating Examples/xml/Makefile
+config.status: creating Examples/test-suite/chicken/Makefile
+config.status: creating Examples/test-suite/csharp/Makefile
+config.status: creating Examples/test-suite/d/Makefile
+config.status: creating Examples/test-suite/guile/Makefile
+config.status: creating Examples/test-suite/guilescm/Makefile
+config.status: creating Examples/test-suite/java/Makefile
+config.status: creating Examples/test-suite/mzscheme/Makefile
+config.status: creating Examples/test-suite/ocaml/Makefile
+config.status: creating Examples/test-suite/octave/Makefile
+config.status: creating Examples/test-suite/perl5/Makefile
+config.status: creating Examples/test-suite/php/Makefile
+config.status: creating Examples/test-suite/pike/Makefile
+config.status: creating Examples/test-suite/python/Makefile
+config.status: creating Examples/test-suite/ruby/Makefile
+config.status: creating Examples/test-suite/tcl/Makefile
+config.status: creating Examples/test-suite/lua/Makefile
+config.status: creating Examples/test-suite/allegrocl/Makefile
+config.status: creating Examples/test-suite/clisp/Makefile
+config.status: creating Examples/test-suite/cffi/Makefile
+config.status: creating Examples/test-suite/uffi/Makefile
+config.status: creating Examples/test-suite/r/Makefile
+config.status: creating Examples/test-suite/go/Makefile
+config.status: creating Lib/ocaml/swigp4.ml
+config.status: creating preinst-swig
+config.status: creating CCache/ccache_swig_config.h
+config.status: creating Source/Include/swigconfig.h
+config.status: executing depfiles commands
+=== configuring in CCache (/tmp/swig.QAywrt/swig-2.0.4/CCache)
+configure: running /ffp/bin/sh ./configure --disable-option-checking '--prefix=/ffp'  '--build=' '--host=' 'build_alias=' 'host_alias=' 'LDFLAGS=-L/ffp/lib -Wl,-rpath,/ffp/lib' --cache-file=/dev/null --srcdir=.
+configure: Configuring ccache
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking how to run the C preprocessor... gcc -E
+checking for a BSD-compatible install... /ffp/bin/install -c
+checking for dirent.h that defines DIR... yes
+checking for library containing opendir... none required
+checking whether time.h and sys/time.h may both be included... yes
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking for grep that handles long lines and -e... /ffp/bin/grep
+checking for egrep... /ffp/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking ctype.h usability... yes
+checking ctype.h presence... yes
+checking for ctype.h... yes
+checking for strings.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking pwd.h usability... yes
+checking pwd.h presence... yes
+checking for pwd.h... yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking for realpath... yes
+checking for snprintf... yes
+checking for vsnprintf... yes
+checking for vasprintf... yes
+checking for asprintf... yes
+checking for mkstemp... yes
+checking for gethostname... yes
+checking for getpwuid... yes
+checking for utimes... yes
+checking for compar_fn_t in stdlib.h... yes
+checking for C99 vsnprintf... yes
+checking zlib.h usability... yes
+checking zlib.h presence... yes
+checking for zlib.h... yes
+checking for gzdopen in -lz... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating config.h
++ make
+make[1]: Entering directory `/tmp/swig.QAywrt/swig-2.0.4/Source'
+make  all-am
+make[2]: Entering directory `/tmp/swig.QAywrt/swig-2.0.4/Source'
+depbase=`echo CParse/cscanner.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	gcc -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT CParse/cscanner.o -MD -MP -MF $depbase.Tpo -c -o CParse/cscanner.o CParse/cscanner.c &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo CParse/parser.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	gcc -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT CParse/parser.o -MD -MP -MF $depbase.Tpo -c -o CParse/parser.o CParse/parser.c &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo CParse/templ.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	gcc -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT CParse/templ.o -MD -MP -MF $depbase.Tpo -c -o CParse/templ.o CParse/templ.c &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo CParse/util.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	gcc -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT CParse/util.o -MD -MP -MF $depbase.Tpo -c -o CParse/util.o CParse/util.c &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo DOH/base.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	gcc -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT DOH/base.o -MD -MP -MF $depbase.Tpo -c -o DOH/base.o DOH/base.c &&\
+	mv -f $depbase.Tpo $depbase.Po
+DOH/base.c: In function 'DohCall':
+DOH/base.c:952:13: warning: ISO C forbids conversion of object pointer to function pointer type
+depbase=`echo DOH/file.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	gcc -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT DOH/file.o -MD -MP -MF $depbase.Tpo -c -o DOH/file.o DOH/file.c &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo DOH/fio.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	gcc -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT DOH/fio.o -MD -MP -MF $depbase.Tpo -c -o DOH/fio.o DOH/fio.c &&\
+	mv -f $depbase.Tpo $depbase.Po
+DOH/fio.c: In function 'DohEncoding':
+DOH/fio.c:53:45: warning: ISO C forbids conversion of function pointer to object pointer type
+DOH/fio.c: In function 'encode':
+DOH/fio.c:77:8: warning: ISO C forbids conversion of object pointer to function pointer type
+depbase=`echo DOH/hash.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	gcc -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT DOH/hash.o -MD -MP -MF $depbase.Tpo -c -o DOH/hash.o DOH/hash.c &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo DOH/list.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	gcc -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT DOH/list.o -MD -MP -MF $depbase.Tpo -c -o DOH/list.o DOH/list.c &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo DOH/memory.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	gcc -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT DOH/memory.o -MD -MP -MF $depbase.Tpo -c -o DOH/memory.o DOH/memory.c &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo DOH/string.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	gcc -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT DOH/string.o -MD -MP -MF $depbase.Tpo -c -o DOH/string.o DOH/string.c &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo DOH/void.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	gcc -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT DOH/void.o -MD -MP -MF $depbase.Tpo -c -o DOH/void.o DOH/void.c &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Modules/allegrocl.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	g++ -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Modules/allegrocl.o -MD -MP -MF $depbase.Tpo -c -o Modules/allegrocl.o Modules/allegrocl.cxx &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Modules/allocate.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	g++ -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Modules/allocate.o -MD -MP -MF $depbase.Tpo -c -o Modules/allocate.o Modules/allocate.cxx &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Modules/browser.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	g++ -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Modules/browser.o -MD -MP -MF $depbase.Tpo -c -o Modules/browser.o Modules/browser.cxx &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Modules/cffi.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	g++ -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Modules/cffi.o -MD -MP -MF $depbase.Tpo -c -o Modules/cffi.o Modules/cffi.cxx &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Modules/chicken.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	g++ -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Modules/chicken.o -MD -MP -MF $depbase.Tpo -c -o Modules/chicken.o Modules/chicken.cxx &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Modules/clisp.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	g++ -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Modules/clisp.o -MD -MP -MF $depbase.Tpo -c -o Modules/clisp.o Modules/clisp.cxx &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Modules/contract.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	g++ -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Modules/contract.o -MD -MP -MF $depbase.Tpo -c -o Modules/contract.o Modules/contract.cxx &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Modules/csharp.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	g++ -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Modules/csharp.o -MD -MP -MF $depbase.Tpo -c -o Modules/csharp.o Modules/csharp.cxx &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Modules/d.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	g++ -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Modules/d.o -MD -MP -MF $depbase.Tpo -c -o Modules/d.o Modules/d.cxx &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Modules/directors.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	g++ -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Modules/directors.o -MD -MP -MF $depbase.Tpo -c -o Modules/directors.o Modules/directors.cxx &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Modules/emit.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	g++ -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Modules/emit.o -MD -MP -MF $depbase.Tpo -c -o Modules/emit.o Modules/emit.cxx &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Modules/go.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	g++ -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Modules/go.o -MD -MP -MF $depbase.Tpo -c -o Modules/go.o Modules/go.cxx &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Modules/guile.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	g++ -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Modules/guile.o -MD -MP -MF $depbase.Tpo -c -o Modules/guile.o Modules/guile.cxx &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Modules/java.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	g++ -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Modules/java.o -MD -MP -MF $depbase.Tpo -c -o Modules/java.o Modules/java.cxx &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Modules/lang.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	g++ -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Modules/lang.o -MD -MP -MF $depbase.Tpo -c -o Modules/lang.o Modules/lang.cxx &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Modules/lua.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	g++ -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Modules/lua.o -MD -MP -MF $depbase.Tpo -c -o Modules/lua.o Modules/lua.cxx &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Modules/main.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	g++ -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Modules/main.o -MD -MP -MF $depbase.Tpo -c -o Modules/main.o Modules/main.cxx &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Modules/modula3.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	g++ -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Modules/modula3.o -MD -MP -MF $depbase.Tpo -c -o Modules/modula3.o Modules/modula3.cxx &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Modules/module.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	g++ -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Modules/module.o -MD -MP -MF $depbase.Tpo -c -o Modules/module.o Modules/module.cxx &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Modules/mzscheme.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	g++ -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Modules/mzscheme.o -MD -MP -MF $depbase.Tpo -c -o Modules/mzscheme.o Modules/mzscheme.cxx &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Modules/ocaml.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	g++ -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Modules/ocaml.o -MD -MP -MF $depbase.Tpo -c -o Modules/ocaml.o Modules/ocaml.cxx &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Modules/octave.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	g++ -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Modules/octave.o -MD -MP -MF $depbase.Tpo -c -o Modules/octave.o Modules/octave.cxx &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Modules/overload.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	g++ -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Modules/overload.o -MD -MP -MF $depbase.Tpo -c -o Modules/overload.o Modules/overload.cxx &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Modules/perl5.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	g++ -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Modules/perl5.o -MD -MP -MF $depbase.Tpo -c -o Modules/perl5.o Modules/perl5.cxx &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Modules/php.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	g++ -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Modules/php.o -MD -MP -MF $depbase.Tpo -c -o Modules/php.o Modules/php.cxx &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Modules/pike.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	g++ -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Modules/pike.o -MD -MP -MF $depbase.Tpo -c -o Modules/pike.o Modules/pike.cxx &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Modules/python.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	g++ -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Modules/python.o -MD -MP -MF $depbase.Tpo -c -o Modules/python.o Modules/python.cxx &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Modules/r.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	g++ -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Modules/r.o -MD -MP -MF $depbase.Tpo -c -o Modules/r.o Modules/r.cxx &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Modules/ruby.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	g++ -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Modules/ruby.o -MD -MP -MF $depbase.Tpo -c -o Modules/ruby.o Modules/ruby.cxx &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Modules/s-exp.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	g++ -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Modules/s-exp.o -MD -MP -MF $depbase.Tpo -c -o Modules/s-exp.o Modules/s-exp.cxx &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Modules/swigmain.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	g++ -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Modules/swigmain.o -MD -MP -MF $depbase.Tpo -c -o Modules/swigmain.o Modules/swigmain.cxx &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Modules/tcl8.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	g++ -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Modules/tcl8.o -MD -MP -MF $depbase.Tpo -c -o Modules/tcl8.o Modules/tcl8.cxx &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Modules/typepass.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	g++ -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Modules/typepass.o -MD -MP -MF $depbase.Tpo -c -o Modules/typepass.o Modules/typepass.cxx &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Modules/uffi.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	g++ -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Modules/uffi.o -MD -MP -MF $depbase.Tpo -c -o Modules/uffi.o Modules/uffi.cxx &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Modules/utils.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	g++ -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Modules/utils.o -MD -MP -MF $depbase.Tpo -c -o Modules/utils.o Modules/utils.cxx &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Modules/xml.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	g++ -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Modules/xml.o -MD -MP -MF $depbase.Tpo -c -o Modules/xml.o Modules/xml.cxx &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Preprocessor/cpp.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	gcc -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Preprocessor/cpp.o -MD -MP -MF $depbase.Tpo -c -o Preprocessor/cpp.o Preprocessor/cpp.c &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Preprocessor/expr.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	gcc -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Preprocessor/expr.o -MD -MP -MF $depbase.Tpo -c -o Preprocessor/expr.o Preprocessor/expr.c &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Swig/cwrap.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	gcc -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Swig/cwrap.o -MD -MP -MF $depbase.Tpo -c -o Swig/cwrap.o Swig/cwrap.c &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Swig/deprecate.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	gcc -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Swig/deprecate.o -MD -MP -MF $depbase.Tpo -c -o Swig/deprecate.o Swig/deprecate.c &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Swig/error.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	gcc -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Swig/error.o -MD -MP -MF $depbase.Tpo -c -o Swig/error.o Swig/error.c &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Swig/fragment.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	gcc -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Swig/fragment.o -MD -MP -MF $depbase.Tpo -c -o Swig/fragment.o Swig/fragment.c &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Swig/getopt.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	gcc -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Swig/getopt.o -MD -MP -MF $depbase.Tpo -c -o Swig/getopt.o Swig/getopt.c &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Swig/include.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	gcc -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Swig/include.o -MD -MP -MF $depbase.Tpo -c -o Swig/include.o Swig/include.c &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Swig/misc.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	gcc -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Swig/misc.o -MD -MP -MF $depbase.Tpo -c -o Swig/misc.o Swig/misc.c &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Swig/naming.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	gcc -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Swig/naming.o -MD -MP -MF $depbase.Tpo -c -o Swig/naming.o Swig/naming.c &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Swig/parms.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	gcc -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Swig/parms.o -MD -MP -MF $depbase.Tpo -c -o Swig/parms.o Swig/parms.c &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Swig/scanner.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	gcc -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Swig/scanner.o -MD -MP -MF $depbase.Tpo -c -o Swig/scanner.o Swig/scanner.c &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Swig/stype.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	gcc -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Swig/stype.o -MD -MP -MF $depbase.Tpo -c -o Swig/stype.o Swig/stype.c &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Swig/symbol.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	gcc -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Swig/symbol.o -MD -MP -MF $depbase.Tpo -c -o Swig/symbol.o Swig/symbol.c &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Swig/tree.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	gcc -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Swig/tree.o -MD -MP -MF $depbase.Tpo -c -o Swig/tree.o Swig/tree.c &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Swig/typeobj.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	gcc -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Swig/typeobj.o -MD -MP -MF $depbase.Tpo -c -o Swig/typeobj.o Swig/typeobj.c &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Swig/typemap.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	gcc -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Swig/typemap.o -MD -MP -MF $depbase.Tpo -c -o Swig/typemap.o Swig/typemap.c &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Swig/typesys.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	gcc -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Swig/typesys.o -MD -MP -MF $depbase.Tpo -c -o Swig/typesys.o Swig/typesys.c &&\
+	mv -f $depbase.Tpo $depbase.Po
+depbase=`echo Swig/wrapfunc.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	gcc -DHAVE_CONFIG_H   -I../Source/Include -I../Source/CParse -I../Source/Include -I../Source/DOH -I../Source/CParse -I../Source/Preprocessor -I../Source/Swig -I../Source/Modules -I/ffp/include  -g -O2 -Wall -W -ansi -pedantic -MT Swig/wrapfunc.o -MD -MP -MF $depbase.Tpo -c -o Swig/wrapfunc.o Swig/wrapfunc.c &&\
+	mv -f $depbase.Tpo $depbase.Po
+g++  -g -O2 -Wall -W -ansi -pedantic  -L/ffp/lib -Wl,-rpath,/ffp/lib -o eswig CParse/cscanner.o CParse/parser.o CParse/templ.o CParse/util.o DOH/base.o DOH/file.o DOH/fio.o DOH/hash.o DOH/list.o DOH/memory.o DOH/string.o DOH/void.o Modules/allegrocl.o Modules/allocate.o Modules/browser.o Modules/cffi.o Modules/chicken.o Modules/clisp.o Modules/contract.o Modules/csharp.o Modules/d.o Modules/directors.o Modules/emit.o Modules/go.o Modules/guile.o Modules/java.o Modules/lang.o Modules/lua.o Modules/main.o Modules/modula3.o Modules/module.o Modules/mzscheme.o Modules/ocaml.o Modules/octave.o Modules/overload.o Modules/perl5.o Modules/php.o Modules/pike.o Modules/python.o Modules/r.o Modules/ruby.o Modules/s-exp.o Modules/swigmain.o Modules/tcl8.o Modules/typepass.o Modules/uffi.o Modules/utils.o Modules/xml.o Preprocessor/cpp.o Preprocessor/expr.o Swig/cwrap.o Swig/deprecate.o Swig/error.o Swig/fragment.o Swig/getopt.o Swig/include.o Swig/misc.o Swig/naming.o Swig/parms.o Swig/scanner.o Swig/stype.o Swig/symbol.o Swig/tree.o Swig/typeobj.o Swig/typemap.o Swig/typesys.o Swig/wrapfunc.o  -ldl  -L/ffp/lib -lpcre
+cp -f ../Source/eswig ../swig
+make[2]: Leaving directory `/tmp/swig.QAywrt/swig-2.0.4/Source'
+make[1]: Leaving directory `/tmp/swig.QAywrt/swig-2.0.4/Source'
+test -z "1" || (cd CCache && make)
+make[1]: Entering directory `/tmp/swig.QAywrt/swig-2.0.4/CCache'
+gcc -g -O2 -Wall -W -I.   -c -o ccache.o ccache.c
+gcc -g -O2 -Wall -W -I.   -c -o mdfour.o mdfour.c
+gcc -g -O2 -Wall -W -I.   -c -o hash.o hash.c
+gcc -g -O2 -Wall -W -I.   -c -o execute.o execute.c
+gcc -g -O2 -Wall -W -I.   -c -o util.o util.c
+gcc -g -O2 -Wall -W -I.   -c -o args.o args.c
+gcc -g -O2 -Wall -W -I.   -c -o stats.o stats.c
+gcc -g -O2 -Wall -W -I.   -c -o cleanup.o cleanup.c
+gcc -g -O2 -Wall -W -I.   -c -o snprintf.o snprintf.c
+gcc -g -O2 -Wall -W -I.   -c -o unify.o unify.c
+gcc -g -O2 -Wall -W -I.  -o ccache-swig ccache.o mdfour.o hash.o execute.o util.o args.o stats.o cleanup.o snprintf.o unify.o -lz 
+make[1]: Leaving directory `/tmp/swig.QAywrt/swig-2.0.4/CCache'
++ make DESTDIR=/tmp/swig.QAywrt/pkg install
+Installing SWIG executable
+Installing /tmp/swig.QAywrt/pkg/ffp/bin/swig
+Installing the SWIG library
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/attribute.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/carrays.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/cdata.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/cmalloc.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/constraints.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/cpointer.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/cstring.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/cwstring.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/exception.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/intrusive_ptr.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/inttypes.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/math.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/pointer.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/shared_ptr.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/std_except.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/stdint.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/stl.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/swigarch.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/swigrun.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/wchar.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/windows.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/allkw.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/runtime.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/swig.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/swigerrors.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/swiginit.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/swiglabels.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/swigrun.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/swigwarn.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/swigwarnings.swg
+Installing language specific files for gcj
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/gcj/cni.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/gcj/javaprims.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/gcj/cni.swg
+Installing language specific files for typemaps
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/typemaps/attribute.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/typemaps/carrays.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/typemaps/cdata.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/typemaps/cmalloc.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/typemaps/cpointer.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/typemaps/cstring.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/typemaps/cstrings.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/typemaps/cwstring.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/typemaps/enumint.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/typemaps/exception.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/typemaps/factory.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/typemaps/fragments.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/typemaps/implicit.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/typemaps/inoutlist.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/typemaps/misctypes.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/typemaps/primtypes.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/typemaps/ptrtypes.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/typemaps/std_except.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/typemaps/std_string.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/typemaps/std_strings.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/typemaps/std_wstring.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/typemaps/string.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/typemaps/strings.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/typemaps/swigmacros.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/typemaps/swigobject.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/typemaps/swigtype.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/typemaps/swigtypemaps.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/typemaps/traits.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/typemaps/typemaps.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/typemaps/valtypes.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/typemaps/void.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/typemaps/wstring.swg
+Installing language specific files for tcl
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/tcl/attribute.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/tcl/carrays.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/tcl/cdata.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/tcl/cmalloc.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/tcl/cni.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/tcl/cpointer.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/tcl/cstring.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/tcl/cwstring.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/tcl/exception.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/tcl/factory.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/tcl/jstring.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/tcl/std_common.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/tcl/std_deque.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/tcl/std_except.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/tcl/std_map.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/tcl/std_pair.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/tcl/std_string.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/tcl/std_vector.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/tcl/std_wstring.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/tcl/stl.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/tcl/tclinterp.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/tcl/tclresult.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/tcl/tclsh.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/tcl/typemaps.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/tcl/wish.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/tcl/tcl8.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/tcl/tclapi.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/tcl/tclerrors.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/tcl/tclfragments.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/tcl/tclinit.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/tcl/tclkw.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/tcl/tclmacros.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/tcl/tclopers.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/tcl/tclprimtypes.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/tcl/tclrun.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/tcl/tclruntime.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/tcl/tclstrings.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/tcl/tcltypemaps.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/tcl/tcluserdir.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/tcl/tclwstrings.swg
+Installing language specific files for perl5
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/perl5/attribute.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/perl5/carrays.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/perl5/cdata.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/perl5/cmalloc.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/perl5/cni.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/perl5/cpointer.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/perl5/cstring.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/perl5/exception.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/perl5/factory.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/perl5/jstring.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/perl5/perlmain.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/perl5/reference.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/perl5/std_common.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/perl5/std_deque.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/perl5/std_except.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/perl5/std_list.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/perl5/std_map.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/perl5/std_pair.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/perl5/std_string.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/perl5/std_vector.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/perl5/stl.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/perl5/typemaps.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/perl5/perl5.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/perl5/perlerrors.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/perl5/perlfragments.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/perl5/perlhead.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/perl5/perlinit.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/perl5/perlkw.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/perl5/perlmacros.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/perl5/perlopers.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/perl5/perlprimtypes.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/perl5/perlrun.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/perl5/perlruntime.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/perl5/perlstrings.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/perl5/perltypemaps.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/perl5/perluserdir.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/perl5/Makefile.pl
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/perl5/noembed.h
+Installing language specific files for python
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/argcargv.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/attribute.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/boost_shared_ptr.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/carrays.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/ccomplex.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/cdata.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/cmalloc.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/cni.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/complex.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/cpointer.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/cstring.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/cwstring.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/embed.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/embed15.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/exception.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/factory.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/file.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/implicit.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/jstring.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/pyabc.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/pybuffer.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/pyname_compat.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/std_alloc.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/std_basic_string.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/std_carray.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/std_char_traits.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/std_common.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/std_complex.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/std_container.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/std_deque.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/std_except.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/std_ios.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/std_iostream.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/std_list.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/std_map.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/std_multimap.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/std_multiset.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/std_pair.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/std_set.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/std_shared_ptr.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/std_sstream.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/std_streambuf.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/std_string.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/std_vector.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/std_vectora.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/std_wios.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/std_wiostream.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/std_wsstream.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/std_wstreambuf.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/std_wstring.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/stl.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/typemaps.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/wchar.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/builtin.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/defarg.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/director.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/pyapi.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/pybackward.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/pyclasses.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/pycomplex.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/pycontainer.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/pydocs.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/pyerrors.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/pyfragments.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/pyhead.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/pyinit.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/pyiterators.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/pymacros.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/pyopers.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/pyprimtypes.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/pyrun.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/pyruntime.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/pystdcommon.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/pystrings.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/python.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/pythonkw.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/pythreads.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/pytuplehlp.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/pytypemaps.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/pyuserdir.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/python/pywstrings.swg
+Installing language specific files for guile
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/guile/cplusplus.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/guile/ghinterface.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/guile/guile.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/guile/guilemain.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/guile/interpreter.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/guile/list-vector.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/guile/pointer-in-out.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/guile/ports.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/guile/std_common.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/guile/std_deque.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/guile/std_except.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/guile/std_map.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/guile/std_pair.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/guile/std_string.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/guile/std_vector.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/guile/stl.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/guile/swigrun.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/guile/typemaps.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/guile/guile_gh.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/guile/guile_gh_run.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/guile/guile_scm.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/guile/guile_scm_run.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/guile/common.scm
+Installing language specific files for java
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/java/arrays_java.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/java/boost_intrusive_ptr.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/java/boost_shared_ptr.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/java/std_common.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/java/std_deque.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/java/std_except.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/java/std_map.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/java/std_pair.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/java/std_shared_ptr.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/java/std_string.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/java/std_vector.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/java/std_wstring.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/java/stl.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/java/typemaps.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/java/various.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/java/director.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/java/enums.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/java/enumsimple.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/java/enumtypesafe.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/java/enumtypeunsafe.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/java/java.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/java/javahead.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/java/javakw.swg
+Installing language specific files for mzscheme
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/mzscheme/std_common.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/mzscheme/std_deque.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/mzscheme/std_map.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/mzscheme/std_pair.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/mzscheme/std_string.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/mzscheme/std_vector.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/mzscheme/stl.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/mzscheme/typemaps.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/mzscheme/mzrun.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/mzscheme/mzscheme.swg
+Installing language specific files for ruby
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/argcargv.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/attribute.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/carrays.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/cdata.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/cmalloc.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/cni.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/cpointer.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/cstring.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/embed.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/exception.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/factory.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/file.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/jstring.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/progargcargv.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/std_alloc.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/std_basic_string.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/std_char_traits.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/std_common.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/std_complex.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/std_container.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/std_deque.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/std_except.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/std_functors.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/std_ios.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/std_iostream.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/std_list.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/std_map.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/std_multimap.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/std_multiset.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/std_pair.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/std_queue.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/std_set.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/std_sstream.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/std_stack.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/std_streambuf.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/std_string.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/std_vector.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/std_vectora.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/std_wstring.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/stl.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/timeval.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/typemaps.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/director.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/ruby.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/rubyapi.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/rubyautodoc.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/rubyclasses.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/rubycomplex.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/rubycontainer.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/rubycontainer_extended.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/rubydef.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/rubyerrors.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/rubyfragments.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/rubyhead.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/rubyinit.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/rubyiterators.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/rubykw.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/rubymacros.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/rubyopers.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/rubyprimtypes.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/rubyrun.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/rubyruntime.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/rubystdautodoc.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/rubystdcommon.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/rubystdfunctors.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/rubystrings.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/rubytracking.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/rubytypemaps.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/rubyuserdir.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/rubywstrings.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/Makefile.swig
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ruby/extconf.rb
+Installing language specific files for php
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/php/const.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/php/factory.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/php/globalvar.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/php/phppointers.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/php/std_common.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/php/std_deque.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/php/std_map.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/php/std_pair.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/php/std_string.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/php/std_vector.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/php/stl.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/php/typemaps.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/php/utils.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/php/director.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/php/php.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/php/phpinit.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/php/phpkw.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/php/phprun.swg
+Installing language specific files for ocaml
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ocaml/carray.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ocaml/cstring.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ocaml/ocaml.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ocaml/std_common.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ocaml/std_complex.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ocaml/std_deque.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ocaml/std_list.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ocaml/std_map.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ocaml/std_pair.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ocaml/std_string.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ocaml/std_vector.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ocaml/stl.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ocaml/typecheck.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ocaml/typemaps.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ocaml/class.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ocaml/director.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ocaml/ocaml.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ocaml/ocamldec.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ocaml/ocamlkw.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ocaml/preamble.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ocaml/typeregister.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ocaml/swigp4.ml
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ocaml/swig.mli
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/ocaml/swig.ml
+Installing language specific files for octave
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/octave/attribute.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/octave/boost_shared_ptr.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/octave/carrays.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/octave/cdata.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/octave/cmalloc.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/octave/exception.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/octave/factory.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/octave/implicit.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/octave/std_alloc.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/octave/std_basic_string.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/octave/std_carray.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/octave/std_char_traits.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/octave/std_common.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/octave/std_complex.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/octave/std_container.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/octave/std_deque.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/octave/std_except.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/octave/std_map.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/octave/std_pair.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/octave/std_string.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/octave/std_vector.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/octave/stl.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/octave/typemaps.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/octave/director.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/octave/octave.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/octave/octcomplex.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/octave/octcontainer.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/octave/octfragments.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/octave/octiterators.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/octave/octopers.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/octave/octprimtypes.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/octave/octrun.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/octave/octruntime.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/octave/octstdcommon.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/octave/octtypemaps.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/octave/octuserdir.swg
+Installing language specific files for pike
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/pike/std_string.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/pike/pike.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/pike/pikekw.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/pike/pikerun.swg
+Installing language specific files for chicken
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/chicken/std_string.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/chicken/typemaps.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/chicken/chicken.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/chicken/chickenkw.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/chicken/chickenrun.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/chicken/swigclosprefix.scm
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/chicken/multi-generic.scm
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/chicken/tinyclos-multi-generic.patch
+Installing language specific files for csharp
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/csharp/arrays_csharp.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/csharp/boost_shared_ptr.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/csharp/std_common.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/csharp/std_deque.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/csharp/std_except.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/csharp/std_map.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/csharp/std_pair.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/csharp/std_shared_ptr.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/csharp/std_string.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/csharp/std_vector.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/csharp/std_wstring.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/csharp/stl.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/csharp/typemaps.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/csharp/wchar.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/csharp/csharp.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/csharp/csharphead.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/csharp/csharpkw.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/csharp/director.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/csharp/enums.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/csharp/enumsimple.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/csharp/enumtypesafe.swg
+Installing language specific files for modula3
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/modula3/typemaps.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/modula3/modula3.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/modula3/modula3head.swg
+Installing language specific files for allegrocl
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/allegrocl/inout_typemaps.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/allegrocl/longlongs.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/allegrocl/std_list.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/allegrocl/std_string.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/allegrocl/typemaps.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/allegrocl/allegrocl.swg
+Installing language specific files for clisp
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/clisp/clisp.swg
+Installing language specific files for lua
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/lua/_std_common.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/lua/carrays.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/lua/lua_fnptr.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/lua/std_common.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/lua/std_deque.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/lua/std_except.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/lua/std_map.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/lua/std_pair.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/lua/std_string.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/lua/std_vector.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/lua/stl.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/lua/typemaps.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/lua/wchar.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/lua/lua.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/lua/luarun.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/lua/luaruntime.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/lua/luatypemaps.swg
+Installing language specific files for cffi
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/cffi/cffi.swg
+Installing language specific files for uffi
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/uffi/uffi.swg
+Installing language specific files for r
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/r/cdata.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/r/exception.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/r/std_alloc.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/r/std_common.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/r/std_container.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/r/std_deque.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/r/std_except.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/r/std_map.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/r/std_pair.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/r/std_string.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/r/std_vector.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/r/stl.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/r/typemaps.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/r/r.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/r/rcontainer.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/r/rfragments.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/r/rkw.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/r/ropers.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/r/rrun.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/r/rstdcommon.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/r/rtype.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/r/srun.swg
+Installing language specific files for go
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/go/cdata.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/go/exception.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/go/std_common.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/go/std_deque.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/go/std_except.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/go/std_map.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/go/std_pair.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/go/std_string.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/go/std_vector.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/go/stl.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/go/typemaps.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/go/go.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/go/gokw.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/go/goruntime.swg
+Installing language specific files for d
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/d/boost_shared_ptr.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/d/carrays.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/d/cpointer.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/d/std_common.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/d/std_deque.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/d/std_except.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/d/std_map.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/d/std_pair.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/d/std_shared_ptr.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/d/std_string.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/d/std_vector.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/d/stl.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/d/typemaps.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/d/d.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/d/dclassgen.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/d/ddirectives.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/d/denums.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/d/dexception.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/d/dhead.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/d/director.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/d/dkw.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/d/dmemberfunctionpointers.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/d/doperators.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/d/dprimitives.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/d/dstrings.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/d/dswigtype.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/d/dvoid.swg
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/d/wrapperloader.swg
+Installing language specific files for std
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/std/_std_deque.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/std/std_alloc.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/std/std_basic_string.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/std/std_char_traits.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/std/std_common.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/std/std_container.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/std/std_deque.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/std/std_except.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/std/std_ios.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/std/std_iostream.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/std/std_list.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/std/std_map.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/std/std_multimap.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/std/std_multiset.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/std/std_pair.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/std/std_queue.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/std/std_set.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/std/std_sstream.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/std/std_stack.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/std/std_streambuf.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/std/std_string.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/std/std_vector.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/std/std_vectora.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/std/std_wios.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/std/std_wiostream.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/std/std_wsstream.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/std/std_wstreambuf.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/std/std_wstring.i
+Installing /tmp/swig.QAywrt/pkg/ffp/share/swig/2.0.4/std/std_carray.swg
+Installing ccache-swig
+Installing /tmp/swig.QAywrt/pkg/ffp/bin/ccache-swig
+Installing /tmp/swig.QAywrt/pkg/ffp/share/man/man1/ccache-swig.1
+Installation complete
++ mkdir -p /tmp/swig.QAywrt/pkg/install
++ cp /ffp/home/root/compile/ffp07/src/swig/DESCR /ffp/home/root/compile/ffp07/src/swig/HOMEPAGE /tmp/swig.QAywrt/pkg/install/
++ cd /tmp/swig.QAywrt/pkg
++ makepkg swig 2.0.4 1
+Creating /tmp/swig-2.0.4-arm-1.txz ...
