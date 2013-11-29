@@ -1,0 +1,20 @@
+--- gllib/Makefile.am	2011-09-22 18:14:33.000000000 -0400
++++ gllib/Makefile.am	2011-09-22 20:46:40.259578300 -0400
+@@ -28,14 +28,15 @@ MAINTAINERCLEANFILES =
+ AM_CPPFLAGS = -DGNULIB_STRICT_CHECKING=1
+ AM_CFLAGS =
+ 
+-noinst_LTLIBRARIES += libargp.la
++lib_LTLIBRARIES = libargp.la
++include_HEADERS = argp.h
+ 
+ libargp_la_SOURCES =
+ libargp_la_LIBADD = $(gl_LTLIBOBJS)
+ libargp_la_DEPENDENCIES = $(gl_LTLIBOBJS)
+ EXTRA_libargp_la_SOURCES =
+ libargp_la_LDFLAGS = $(AM_LDFLAGS)
+-libargp_la_LDFLAGS += -no-undefined
++libargp_la_LDFLAGS += -no-undefined -shared
+ libargp_la_LDFLAGS += $(LTLIBINTL)
+ 
+ ## begin gnulib module alloca
