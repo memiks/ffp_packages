@@ -1,0 +1,1805 @@
+++ basename ./libiconv.funpkg .funpkg
++ PN=libiconv
++ PR=1
++ . ./config.ffp
+++ GNU_HOST=
+++ GNU_TARGET=
+++ FFP_CFLAGS='-I/ffp/include -O2'
+++ FFP_LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
+++ '[' '!' -d '' ']'
+++ TMPDIR=/tmp
+++ export TMPDIR
+++ mandir=/ffp/share/man
+++ infodir=/ffp/share/info
+++ docdir=/ffp/share/doc
+++ pwd
++ X=/ffp/home/root/fun_plug/ffp_packages/libiconv
+++ mktemp -t -d libiconv.XXXXXX
++ W=/tmp/libiconv.JdwmxQ
++ D=/tmp/libiconv.JdwmxQ/pkg
++ cd /tmp/libiconv.JdwmxQ
++ cat /ffp/home/root/fun_plug/ffp_packages/libiconv/SRC_URI
++ xargs wget
+--2013-06-03 09:32:55--  http://ftp.gnu.org/gnu/libiconv/libiconv-1.14.tar.gz
+Resolving ftp.gnu.org... 2001:4830:134:3::b, 208.118.235.20
+Connecting to ftp.gnu.org|2001:4830:134:3::b|:80... failed: Address family not supported by protocol.
+Connecting to ftp.gnu.org|208.118.235.20|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 4984397 (4.8M) [application/x-gzip]
+Saving to: `libiconv-1.14.tar.gz'
+
+     0K .......... .......... .......... .......... ..........  1%  139K 35s
+    50K .......... .......... .......... .......... ..........  2%  217K 28s
+   100K .......... .......... .......... .......... ..........  3%  214K 26s
+   150K .......... .......... .......... .......... ..........  4%  220K 25s
+   200K .......... .......... .......... .......... ..........  5%  252K 23s
+   250K .......... .......... .......... .......... ..........  6%  234K 22s
+   300K .......... .......... .......... .......... ..........  7%  226K 22s
+   350K .......... .......... .......... .......... ..........  8%  252K 21s
+   400K .......... .......... .......... .......... ..........  9%  258K 20s
+   450K .......... .......... .......... .......... .......... 10%  257K 20s
+   500K .......... .......... .......... .......... .......... 11%  322K 19s
+   550K .......... .......... .......... .......... .......... 12%  246K 19s
+   600K .......... .......... .......... .......... .......... 13%  346K 18s
+   650K .......... .......... .......... .......... .......... 14%  233K 18s
+   700K .......... .......... .......... .......... .......... 15%  366K 17s
+   750K .......... .......... .......... .......... .......... 16%  285K 17s
+   800K .......... .......... .......... .......... .......... 17%  294K 16s
+   850K .......... .......... .......... .......... .......... 18%  386K 16s
+   900K .......... .......... .......... .......... .......... 19%  221K 16s
+   950K .......... .......... .......... .......... .......... 20%  217K 16s
+  1000K .......... .......... .......... .......... .......... 21%  195K 16s
+  1050K .......... .......... .......... .......... .......... 22%  302K 15s
+  1100K .......... .......... .......... .......... .......... 23%  147K 16s
+  1150K .......... .......... .......... .......... .......... 24%  446K 15s
+  1200K .......... .......... .......... .......... .......... 25%  182K 15s
+  1250K .......... .......... .......... .......... .......... 26%  190K 15s
+  1300K .......... .......... .......... .......... .......... 27%  214K 15s
+  1350K .......... .......... .......... .......... .......... 28%  213K 15s
+  1400K .......... .......... .......... .......... .......... 29%  213K 15s
+  1450K .......... .......... .......... .......... .......... 30%  192K 14s
+  1500K .......... .......... .......... .......... .......... 31%  183K 14s
+  1550K .......... .......... .......... .......... .......... 32%  223K 14s
+  1600K .......... .......... .......... .......... .......... 33%  190K 14s
+  1650K .......... .......... .......... .......... .......... 34%  219K 14s
+  1700K .......... .......... .......... .......... .......... 35%  184K 14s
+  1750K .......... .......... .......... .......... .......... 36%  214K 14s
+  1800K .......... .......... .......... .......... .......... 38%  286K 13s
+  1850K .......... .......... .......... .......... .......... 39%  195K 13s
+  1900K .......... .......... .......... .......... .......... 40%  320K 13s
+  1950K .......... .......... .......... .......... .......... 41%  240K 13s
+  2000K .......... .......... .......... .......... .......... 42%  305K 12s
+  2050K .......... .......... .......... .......... .......... 43%  235K 12s
+  2100K .......... .......... .......... .......... .......... 44%  217K 12s
+  2150K .......... .......... .......... .......... .......... 45%  245K 12s
+  2200K .......... .......... .......... .......... .......... 46%  388K 11s
+  2250K .......... .......... .......... .......... .......... 47%  267K 11s
+  2300K .......... .......... .......... .......... .......... 48%  342K 11s
+  2350K .......... .......... .......... .......... .......... 49%  405K 10s
+  2400K .......... .......... .......... .......... .......... 50%  351K 10s
+  2450K .......... .......... .......... .......... .......... 51%  415K 10s
+  2500K .......... .......... .......... .......... .......... 52%  341K 10s
+  2550K .......... .......... .......... .......... .......... 53%  264K 9s
+  2600K .......... .......... .......... .......... .......... 54% 8.21M 9s
+  2650K .......... .......... .......... .......... .......... 55%  274K 9s
+  2700K .......... .......... .......... .......... .......... 56%  342K 9s
+  2750K .......... .......... .......... .......... .......... 57%  401K 8s
+  2800K .......... .......... .......... .......... .......... 58%  358K 8s
+  2850K .......... .......... .......... .......... .......... 59%  399K 8s
+  2900K .......... .......... .......... .......... .......... 60%  406K 8s
+  2950K .......... .......... .......... .......... .......... 61%  405K 7s
+  3000K .......... .......... .......... .......... .......... 62%  325K 7s
+  3050K .......... .......... .......... .......... .......... 63%  343K 7s
+  3100K .......... .......... .......... .......... .......... 64%  542K 7s
+  3150K .......... .......... .......... .......... .......... 65%  403K 6s
+  3200K .......... .......... .......... .......... .......... 66%  407K 6s
+  3250K .......... .......... .......... .......... .......... 67%  341K 6s
+  3300K .......... .......... .......... .......... .......... 68%  432K 6s
+  3350K .......... .......... .......... .......... .......... 69%  187K 6s
+  3400K .......... .......... .......... .......... .......... 70% 11.8M 5s
+  3450K .......... .......... .......... .......... .......... 71%  282K 5s
+  3500K .......... .......... .......... .......... .......... 72%  274K 5s
+  3550K .......... .......... .......... .......... .......... 73%  226K 5s
+  3600K .......... .......... .......... .......... .......... 74%  256K 5s
+  3650K .......... .......... .......... .......... .......... 76%  341K 4s
+  3700K .......... .......... .......... .......... .......... 77%  264K 4s
+  3750K .......... .......... .......... .......... .......... 78%  356K 4s
+  3800K .......... .......... .......... .......... .......... 79%  237K 4s
+  3850K .......... .......... .......... .......... .......... 80%  368K 4s
+  3900K .......... .......... .......... .......... .......... 81%  370K 3s
+  3950K .......... .......... .......... .......... .......... 82%  224K 3s
+  4000K .......... .......... .......... .......... .......... 83%  330K 3s
+  4050K .......... .......... .......... .......... .......... 84%  254K 3s
+  4100K .......... .......... .......... .......... .......... 85%  340K 3s
+  4150K .......... .......... .......... .......... .......... 86%  248K 2s
+  4200K .......... .......... .......... .......... .......... 87%  351K 2s
+  4250K .......... .......... .......... .......... .......... 88%  272K 2s
+  4300K .......... .......... .......... .......... .......... 89%  296K 2s
+  4350K .......... .......... .......... .......... .......... 90%  357K 2s
+  4400K .......... .......... .......... .......... .......... 91%  251K 2s
+  4450K .......... .......... .......... .......... .......... 92%  381K 1s
+  4500K .......... .......... .......... .......... .......... 93%  389K 1s
+  4550K .......... .......... .......... .......... .......... 94%  304K 1s
+  4600K .......... .......... .......... .......... .......... 95%  389K 1s
+  4650K .......... .......... .......... .......... .......... 96%  282K 1s
+  4700K .......... .......... .......... .......... .......... 97%  391K 0s
+  4750K .......... .......... .......... .......... .......... 98%  397K 0s
+  4800K .......... .......... .......... .......... .......... 99%  280K 0s
+  4850K .......... .......                                    100%  375K=18s
+
+2013-06-03 09:33:13 (277 KB/s) - `libiconv-1.14.tar.gz' saved [4984397/4984397]
+
+++ ls libiconv-1.14.tar.gz
+++ egrep -o '[0-9][0-9.]*[0-9]'
++ PV=1.14
++ tar xf libiconv-1.14.tar.gz
++ cd libiconv-1.14 libiconv-1.14.tar.gz
+++ ls '/ffp/home/root/fun_plug/ffp_packages/libiconv/patches/*.patch'
+ls: cannot access /ffp/home/root/fun_plug/ffp_packages/libiconv/patches/*.patch: No such file or directory
++ CFLAGS='-I/ffp/include -O2 -D_GNU_SOURCE -pthread'
++ CXXFLAGS='-I/ffp/include -O2 -D_GNU_SOURCE -pthread'
++ LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread '
++ ./configure --prefix=/ffp --build= --host= --mandir=/ffp/share/man --infodir=/ffp/share/info
+checking for a BSD-compatible install... /ffp/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /ffp/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make sets $(MAKE)... (cached) yes
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for style of include used by make... GNU
+checking dependency style of gcc... none
+checking how to run the C preprocessor... gcc -E
+checking for strip... /ffp/bin/strip
+checking build system type... armv5tejl-unknown-linux-gnueabi
+checking host system type... armv5tejl-unknown-linux-gnueabi
+checking for grep that handles long lines and -e... /ffp/bin/grep
+checking for egrep... /ffp/bin/grep -E
+checking for ranlib... ranlib
+checking whether gcc and cc understand -c and -o together... yes
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking for ld used by GCC... /ffp/bin/ld
+checking if the linker (/ffp/bin/ld) is GNU ld... yes
+checking for shared library path variable... LD_LIBRARY_PATH
+checking whether to activate relocatable installation... no
+checking how to copy files... cp -p
+checking how to make hard links... ln
+checking whether ln -s works... yes
+checking how to print strings... printf
+checking for a sed that does not truncate output... /ffp/bin/sed
+checking for fgrep... /ffp/bin/grep -F
+checking for ld used by gcc... /ffp/bin/ld
+checking if the linker (/ffp/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /ffp/bin/nm -B
+checking the name lister (/ffp/bin/nm -B) interface... BSD nm
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert armv5tejl-unknown-linux-gnueabi file names to armv5tejl-unknown-linux-gnueabi format... func_convert_file_noop
+checking how to convert armv5tejl-unknown-linux-gnueabi file names to toolchain format... func_convert_file_noop
+checking for /ffp/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for archiver @FILE support... @
+checking for strip... /ffp/bin/strip
+checking for ranlib... (cached) ranlib
+checking command to parse /ffp/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/ffp/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking for windres... no
+checking whether the -Werror option is usable... yes
+checking for simple visibility declarations... yes
+checking for shared library run path origin... done
+checking for iconv... yes
+checking for working iconv... yes
+checking how to link with libiconv... /ffp/lib/libiconv.so -Wl,-rpath -Wl,/ffp/lib
+checking for iconv declaration... 
+         extern size_t iconv (iconv_t cd, char * *inbuf, size_t *inbytesleft, char * *outbuf, size_t *outbytesleft);
+checking whether NLS is requested... yes
+checking for msgfmt... /ffp/bin/msgfmt
+checking for gmsgfmt... /ffp/bin/msgfmt
+checking for xgettext... /ffp/bin/xgettext
+checking for msgmerge... /ffp/bin/msgmerge
+checking for CFPreferencesCopyAppValue... no
+checking for CFLocaleCopyCurrent... no
+checking for GNU gettext in libc... no
+checking for iconv... (cached) yes
+checking for working iconv... (cached) yes
+checking how to link with libiconv... /ffp/lib/libiconv.so -Wl,-rpath -Wl,/ffp/lib
+checking for GNU gettext in libintl... yes
+checking whether to use NLS... yes
+checking where the gettext function comes from... external libintl
+checking how to link with libintl... /ffp/lib/libintl.so /ffp/lib/libiconv.so /ffp/lib/libc.so -Wl,-rpath -Wl,/ffp/lib
+checking for mbstate_t... yes
+checking for wchar_t... yes
+checking for getc_unlocked... yes
+checking for mbrtowc... yes
+checking for wcrtomb... yes
+checking for mbsinit... yes
+checking for setlocale... yes
+checking whether <wchar.h> is standalone... yes
+checking for memmove... yes
+checking for nl_langinfo and CODESET... yes
+checking for working fcntl.h... yes
+checking wchar.h usability... yes
+checking wchar.h presence... yes
+checking for wchar.h... yes
+checking for EILSEQ... yes
+checking byte ordering... little endian
+checking for size_t... yes
+checking for working alloca.h... yes
+checking for alloca... yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for sys/param.h... yes
+checking for unistd.h... (cached) yes
+checking for wchar.h... (cached) yes
+checking for stdint.h... (cached) yes
+checking for sys/socket.h... yes
+checking for sys/stat.h... (cached) yes
+checking for sys/time.h... yes
+checking for canonicalize_file_name... yes
+checking for getcwd... yes
+checking for readlink... yes
+checking for realpath... yes
+checking for readlinkat... yes
+checking for lstat... yes
+checking for setenv... yes
+checking whether // is distinct from /... no
+checking whether realpath works... no
+checking if environ is properly declared... yes
+checking whether the preprocessor supports include_next... yes
+checking whether system header files limit the line length... no
+checking for complete errno.h... yes
+checking whether strerror_r is declared... yes
+checking for strerror_r... yes
+checking whether strerror_r returns char *... yes
+checking for inline... inline
+checking whether lstat correctly handles trailing slash... yes
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible malloc... yes
+checking for unsigned long long int... yes
+checking for long long int... yes
+checking whether setenv is declared... yes
+checking for ssize_t... yes
+checking for sigset_t... yes
+checking for uid_t in sys/types.h... yes
+checking for SIGPIPE... yes
+checking whether C symbols are prefixed with underscore at the linker level... no
+checking for stdbool.h that conforms to C99... yes
+checking for _Bool... yes
+checking whether stdint.h conforms to C99... no
+checking sys/inttypes.h usability... no
+checking sys/inttypes.h presence... no
+checking for sys/inttypes.h... no
+checking sys/bitypes.h usability... yes
+checking sys/bitypes.h presence... yes
+checking for sys/bitypes.h... yes
+checking for bit size of ptrdiff_t... 32
+checking for bit size of size_t... 32
+checking for bit size of sig_atomic_t... 32
+checking for bit size of wchar_t... 32
+checking for bit size of wint_t... 32
+checking whether sig_atomic_t is signed... yes
+checking whether wchar_t is signed... no
+checking whether wint_t is signed... no
+checking for ptrdiff_t integer literal suffix... 
+checking for size_t integer literal suffix... u
+checking for sig_atomic_t integer literal suffix... 
+checking for wchar_t integer literal suffix... u
+checking for wint_t integer literal suffix... u
+checking whether strerror(0) succeeds... yes
+checking for C/C++ restrict keyword... __restrict
+checking whether ffsl is declared without a macro... yes
+checking whether ffsll is declared without a macro... yes
+checking whether memmem is declared without a macro... yes
+checking whether mempcpy is declared without a macro... yes
+checking whether memrchr is declared without a macro... yes
+checking whether rawmemchr is declared without a macro... yes
+checking whether stpcpy is declared without a macro... yes
+checking whether stpncpy is declared without a macro... yes
+checking whether strchrnul is declared without a macro... yes
+checking whether strdup is declared without a macro... yes
+checking whether strncat is declared without a macro... yes
+checking whether strndup is declared without a macro... yes
+checking whether strnlen is declared without a macro... yes
+checking whether strpbrk is declared without a macro... yes
+checking whether strsep is declared without a macro... yes
+checking whether strcasestr is declared without a macro... yes
+checking whether strtok_r is declared without a macro... yes
+checking whether strerror_r is declared without a macro... yes
+checking whether strsignal is declared without a macro... yes
+checking whether strverscmp is declared without a macro... yes
+checking whether stat file-mode macros are broken... no
+checking for struct timespec in <time.h>... yes
+checking whether clearerr_unlocked is declared... yes
+checking whether feof_unlocked is declared... yes
+checking whether ferror_unlocked is declared... yes
+checking whether fflush_unlocked is declared... yes
+checking whether fgets_unlocked is declared... yes
+checking whether fputc_unlocked is declared... yes
+checking whether fputs_unlocked is declared... yes
+checking whether fread_unlocked is declared... yes
+checking whether fwrite_unlocked is declared... yes
+checking whether getc_unlocked is declared... yes
+checking whether getchar_unlocked is declared... yes
+checking whether putc_unlocked is declared... yes
+checking whether putchar_unlocked is declared... yes
+checking whether // is distinct from /... (cached) no
+checking for error_at_line... yes
+checking whether fcntl is declared without a macro... yes
+checking whether openat is declared without a macro... yes
+checking for mbstate_t... (cached) yes
+checking for memmove... (cached) yes
+checking whether program_invocation_name is declared... yes
+checking whether program_invocation_short_name is declared... yes
+checking whether readlink signature is correct... yes
+checking whether readlink handles trailing slash correctly... yes
+checking search.h usability... yes
+checking search.h presence... yes
+checking for search.h... yes
+checking for tsearch... yes
+checking for volatile sig_atomic_t... yes
+checking for sighandler_t... yes
+checking whether pthread_sigmask is declared without a macro... yes
+checking whether sigaction is declared without a macro... yes
+checking whether sigaddset is declared without a macro... yes
+checking whether sigdelset is declared without a macro... yes
+checking whether sigemptyset is declared without a macro... yes
+checking whether sigfillset is declared without a macro... yes
+checking whether sigismember is declared without a macro... yes
+checking whether sigpending is declared without a macro... yes
+checking whether sigprocmask is declared without a macro... yes
+checking for sigprocmask... yes
+checking for ssize_t... (cached) yes
+checking whether stat handles trailing slashes on directories... yes
+checking whether stat handles trailing slashes on files... yes
+checking whether NULL can be used in arbitrary expressions... yes
+checking whether dprintf is declared without a macro... yes
+checking whether fpurge is declared without a macro... no
+checking whether fseeko is declared without a macro... yes
+checking whether ftello is declared without a macro... yes
+checking whether getdelim is declared without a macro... yes
+checking whether getline is declared without a macro... yes
+checking whether popen is declared without a macro... yes
+checking whether renameat is declared without a macro... yes
+checking whether snprintf is declared without a macro... yes
+checking whether tmpfile is declared without a macro... yes
+checking whether vdprintf is declared without a macro... yes
+checking whether vsnprintf is declared without a macro... yes
+checking whether _Exit is declared without a macro... yes
+checking whether atoll is declared without a macro... yes
+checking whether canonicalize_file_name is declared without a macro... yes
+checking whether getloadavg is declared without a macro... no
+checking whether getsubopt is declared without a macro... yes
+checking whether grantpt is declared without a macro... yes
+checking whether mkdtemp is declared without a macro... yes
+checking whether mkostemp is declared without a macro... no
+checking whether mkostemps is declared without a macro... no
+checking whether mkstemp is declared without a macro... yes
+checking whether mkstemps is declared without a macro... no
+checking whether ptsname is declared without a macro... yes
+checking whether random_r is declared without a macro... yes
+checking whether initstat_r is declared without a macro... no
+checking whether srandom_r is declared without a macro... yes
+checking whether setstate_r is declared without a macro... yes
+checking whether realpath is declared without a macro... yes
+checking whether rpmatch is declared without a macro... no
+checking whether setenv is declared without a macro... yes
+checking whether strtod is declared without a macro... yes
+checking whether strtoll is declared without a macro... yes
+checking whether strtoull is declared without a macro... yes
+checking whether unlockpt is declared without a macro... yes
+checking whether unsetenv is declared without a macro... yes
+checking for working strerror function... yes
+checking for nlink_t... yes
+checking whether fchmodat is declared without a macro... yes
+checking whether fstatat is declared without a macro... yes
+checking whether futimens is declared without a macro... yes
+checking whether lchmod is declared without a macro... no
+checking whether lstat is declared without a macro... yes
+checking whether mkdirat is declared without a macro... yes
+checking whether mkfifo is declared without a macro... yes
+checking whether mkfifoat is declared without a macro... yes
+checking whether mknod is declared without a macro... yes
+checking whether mknodat is declared without a macro... yes
+checking whether stat is declared without a macro... yes
+checking whether utimensat is declared without a macro... yes
+checking whether chown is declared without a macro... yes
+checking whether dup2 is declared without a macro... yes
+checking whether dup3 is declared without a macro... no
+checking whether environ is declared without a macro... yes
+checking whether euidaccess is declared without a macro... no
+checking whether faccessat is declared without a macro... yes
+checking whether fchdir is declared without a macro... yes
+checking whether fchownat is declared without a macro... yes
+checking whether fsync is declared without a macro... yes
+checking whether ftruncate is declared without a macro... yes
+checking whether getcwd is declared without a macro... yes
+checking whether getdomainname is declared without a macro... yes
+checking whether getdtablesize is declared without a macro... yes
+checking whether getgroups is declared without a macro... yes
+checking whether gethostname is declared without a macro... yes
+checking whether getlogin is declared without a macro... yes
+checking whether getlogin_r is declared without a macro... yes
+checking whether getpagesize is declared without a macro... yes
+checking whether getusershell is declared without a macro... yes
+checking whether setusershell is declared without a macro... yes
+checking whether endusershell is declared without a macro... yes
+checking whether group_member is declared without a macro... no
+checking whether lchown is declared without a macro... yes
+checking whether link is declared without a macro... yes
+checking whether linkat is declared without a macro... yes
+checking whether lseek is declared without a macro... yes
+checking whether pipe is declared without a macro... yes
+checking whether pipe2 is declared without a macro... yes
+checking whether pread is declared without a macro... yes
+checking whether pwrite is declared without a macro... yes
+checking whether readlink is declared without a macro... yes
+checking whether readlinkat is declared without a macro... yes
+checking whether rmdir is declared without a macro... yes
+checking whether sleep is declared without a macro... yes
+checking whether symlink is declared without a macro... yes
+checking whether symlinkat is declared without a macro... yes
+checking whether ttyname_r is declared without a macro... yes
+checking whether unlink is declared without a macro... yes
+checking whether unlinkat is declared without a macro... yes
+checking whether usleep is declared without a macro... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating lib/Makefile
+config.status: creating srclib/Makefile
+config.status: creating src/Makefile
+config.status: creating po/Makefile.in
+config.status: creating man/Makefile
+config.status: creating tests/Makefile
+config.status: creating include/iconv.h
+config.status: creating include/iconv.h.inst
+config.status: creating config.h
+config.status: creating lib/config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing po-directories commands
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+=== configuring in libcharset (/tmp/libiconv.JdwmxQ/libiconv-1.14/libcharset)
+configure: running /ffp/bin/sh ./configure --disable-option-checking '--prefix=/ffp'  '--build=' '--host=' '--mandir=/ffp/share/man' '--infodir=/ffp/share/info' 'build_alias=' 'host_alias=' 'CFLAGS=-I/ffp/include -O2 -D_GNU_SOURCE -pthread' 'LDFLAGS=-L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread ' --cache-file=/dev/null --srcdir=.
+checking whether make sets $(MAKE)... yes
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking how to run the C preprocessor... gcc -E
+checking for a BSD-compatible install... /ffp/bin/install -c
+checking build system type... armv5tejl-unknown-linux-gnu
+checking host system type... armv5tejl-unknown-linux-gnu
+checking whether to activate relocatable installation... no
+checking for grep that handles long lines and -e... /ffp/bin/grep
+checking for egrep... /ffp/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking how to print strings... printf
+checking for a sed that does not truncate output... /ffp/bin/sed
+checking for fgrep... /ffp/bin/grep -F
+checking for ld used by gcc... /ffp/bin/ld
+checking if the linker (/ffp/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /ffp/bin/nm -B
+checking the name lister (/ffp/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert armv5tejl-unknown-linux-gnu file names to armv5tejl-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert armv5tejl-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /ffp/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking for gawk... gawk
+checking command to parse /ffp/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/ffp/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for simple visibility declarations... yes
+checking for nl_langinfo and CODESET... yes
+checking for working fcntl.h... yes
+checking whether we are using the GNU C Library 2.1 or newer... yes
+checking for setlocale... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating lib/Makefile
+config.status: creating include/localcharset.h
+config.status: creating include/localcharset.h.inst
+config.status: creating config.h
+config.status: executing libtool commands
+=== configuring in preload (/tmp/libiconv.JdwmxQ/libiconv-1.14/preload)
+configure: running /ffp/bin/sh ./configure --disable-option-checking '--prefix=/ffp'  '--build=' '--host=' '--mandir=/ffp/share/man' '--infodir=/ffp/share/info' 'build_alias=' 'host_alias=' 'CFLAGS=-I/ffp/include -O2 -D_GNU_SOURCE -pthread' 'LDFLAGS=-L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread ' --cache-file=/dev/null --srcdir=.
+checking whether make sets $(MAKE)... yes
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking how to run the C preprocessor... gcc -E
+checking for a BSD-compatible install... /ffp/bin/install -c
+checking build system type... armv5tejl-unknown-linux-gnueabi
+checking host system type... armv5tejl-unknown-linux-gnueabi
+checking whether to activate relocatable installation... no
+checking whether ln -s works... yes
+checking for grep that handles long lines and -e... /ffp/bin/grep
+checking for egrep... /ffp/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking how to print strings... printf
+checking for a sed that does not truncate output... /ffp/bin/sed
+checking for fgrep... /ffp/bin/grep -F
+checking for ld used by gcc... /ffp/bin/ld
+checking if the linker (/ffp/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /ffp/bin/nm -B
+checking the name lister (/ffp/bin/nm -B) interface... BSD nm
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert armv5tejl-unknown-linux-gnueabi file names to armv5tejl-unknown-linux-gnueabi format... func_convert_file_noop
+checking how to convert armv5tejl-unknown-linux-gnueabi file names to toolchain format... func_convert_file_noop
+checking for /ffp/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking for gawk... gawk
+checking command to parse /ffp/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/ffp/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking whether the -Werror option is usable... yes
+checking for simple visibility declarations... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: executing libtool commands
++ CFLAGS='-I/ffp/include -O2 -D_GNU_SOURCE -pthread'
++ CXXFLAGS='-I/ffp/include -O2 -D_GNU_SOURCE -pthread'
++ LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread '
++ make
+builddir="`pwd`"; cd libcharset && make all && make install-lib libdir="$builddir/lib" includedir="$builddir/lib"
+make[1]: Entering directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/libcharset'
+if [ ! -d include ] ; then mkdir include ; fi
+cp ./include/libcharset.h.in include/libcharset.h
+cd lib && make all
+make[2]: Entering directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/libcharset/lib'
+/ffp/bin/sh ../libtool --mode=compile gcc -I. -I. -I.. -I./.. -I../include -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fvisibility=hidden  -DLIBDIR=\"/ffp/lib\" -DBUILDING_LIBCHARSET -DBUILDING_DLL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/ffp/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libcharset_set_relocation_prefix -Drelocate=libcharset_relocate -DHAVE_CONFIG_H -c ./localcharset.c
+libtool: compile:  gcc -I. -I. -I.. -I./.. -I../include -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fvisibility=hidden -DLIBDIR=\"/ffp/lib\" -DBUILDING_LIBCHARSET -DBUILDING_DLL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/ffp/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libcharset_set_relocation_prefix -Drelocate=libcharset_relocate -DHAVE_CONFIG_H -c ./localcharset.c  -fPIC -DPIC -o .libs/localcharset.o
+libtool: compile:  gcc -I. -I. -I.. -I./.. -I../include -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fvisibility=hidden -DLIBDIR=\"/ffp/lib\" -DBUILDING_LIBCHARSET -DBUILDING_DLL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/ffp/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libcharset_set_relocation_prefix -Drelocate=libcharset_relocate -DHAVE_CONFIG_H -c ./localcharset.c -o localcharset.o >/dev/null 2>&1
+/ffp/bin/sh ../libtool --mode=compile gcc -I. -I. -I.. -I./.. -I../include -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fvisibility=hidden  -DLIBDIR=\"/ffp/lib\" -DBUILDING_LIBCHARSET -DBUILDING_DLL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/ffp/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libcharset_set_relocation_prefix -Drelocate=libcharset_relocate -DHAVE_CONFIG_H -c ./relocatable.c
+libtool: compile:  gcc -I. -I. -I.. -I./.. -I../include -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fvisibility=hidden -DLIBDIR=\"/ffp/lib\" -DBUILDING_LIBCHARSET -DBUILDING_DLL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/ffp/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libcharset_set_relocation_prefix -Drelocate=libcharset_relocate -DHAVE_CONFIG_H -c ./relocatable.c  -fPIC -DPIC -o .libs/relocatable.o
+libtool: compile:  gcc -I. -I. -I.. -I./.. -I../include -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fvisibility=hidden -DLIBDIR=\"/ffp/lib\" -DBUILDING_LIBCHARSET -DBUILDING_DLL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/ffp/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libcharset_set_relocation_prefix -Drelocate=libcharset_relocate -DHAVE_CONFIG_H -c ./relocatable.c -o relocatable.o >/dev/null 2>&1
+/ffp/bin/sh ../libtool --mode=link gcc -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread  -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fvisibility=hidden -o libcharset.la -rpath /ffp/lib -version-info 1:0:0 -no-undefined localcharset.lo relocatable.lo
+libtool: link: gcc -shared  -fPIC -DPIC  .libs/localcharset.o .libs/relocatable.o   -L/ffp/lib -lpthread  -Wl,-rpath -Wl,/ffp/lib -O2 -pthread   -pthread -Wl,-soname -Wl,libcharset.so.1 -o .libs/libcharset.so.1.0.0
+libtool: link: (cd ".libs" && rm -f "libcharset.so.1" && ln -s "libcharset.so.1.0.0" "libcharset.so.1")
+libtool: link: (cd ".libs" && rm -f "libcharset.so" && ln -s "libcharset.so.1.0.0" "libcharset.so")
+libtool: link: ar cru .libs/libcharset.a  localcharset.o relocatable.o
+libtool: link: ranlib .libs/libcharset.a
+libtool: link: ( cd ".libs" && rm -f "libcharset.la" && ln -s "../libcharset.la" "libcharset.la" )
+/bin/sh ./config.charset 'armv5tejl-unknown-linux-gnu' > t-charset.alias
+mv t-charset.alias charset.alias
+sed -e '/^#/d' -e 's/@''PACKAGE''@//g' ./ref-add.sin > t-ref-add.sed
+mv t-ref-add.sed ref-add.sed
+sed -e '/^#/d' -e 's/@''PACKAGE''@//g' ./ref-del.sin > t-ref-del.sed
+mv t-ref-del.sed ref-del.sed
+make[2]: Leaving directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/libcharset/lib'
+make[1]: Leaving directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/libcharset'
+make[1]: Entering directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/libcharset'
+cd lib && make all
+make[2]: Entering directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/libcharset/lib'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/libcharset/lib'
+cd lib && make install-lib libdir='/tmp/libiconv.JdwmxQ/libiconv-1.14/lib' includedir='/tmp/libiconv.JdwmxQ/libiconv-1.14/lib'
+make[2]: Entering directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/libcharset/lib'
+/bin/sh ../build-aux/mkinstalldirs /tmp/libiconv.JdwmxQ/libiconv-1.14/lib
+/ffp/bin/sh ../libtool --mode=install /ffp/bin/install -c -m 644 libcharset.la /tmp/libiconv.JdwmxQ/libiconv-1.14/lib/libcharset.la
+libtool: install: /ffp/bin/install -c -m 644 .libs/libcharset.so.1.0.0 /tmp/libiconv.JdwmxQ/libiconv-1.14/lib/libcharset.so.1.0.0
+libtool: install: (cd /tmp/libiconv.JdwmxQ/libiconv-1.14/lib && { ln -s -f libcharset.so.1.0.0 libcharset.so.1 || { rm -f libcharset.so.1 && ln -s libcharset.so.1.0.0 libcharset.so.1; }; })
+libtool: install: (cd /tmp/libiconv.JdwmxQ/libiconv-1.14/lib && { ln -s -f libcharset.so.1.0.0 libcharset.so || { rm -f libcharset.so && ln -s libcharset.so.1.0.0 libcharset.so; }; })
+libtool: install: /ffp/bin/install -c -m 644 .libs/libcharset.lai /tmp/libiconv.JdwmxQ/libiconv-1.14/lib/libcharset.la
+libtool: install: /ffp/bin/install -c -m 644 .libs/libcharset.a /tmp/libiconv.JdwmxQ/libiconv-1.14/lib/libcharset.a
+libtool: install: chmod 644 /tmp/libiconv.JdwmxQ/libiconv-1.14/lib/libcharset.a
+libtool: install: ranlib /tmp/libiconv.JdwmxQ/libiconv-1.14/lib/libcharset.a
+libtool: install: warning: remember to run `libtool --finish /ffp/lib'
+test -f /tmp/libiconv.JdwmxQ/libiconv-1.14/lib/charset.alias && orig=/tmp/libiconv.JdwmxQ/libiconv-1.14/lib/charset.alias \
+	                                || orig=charset.alias; \
+	sed -f ref-add.sed $orig > /tmp/libiconv.JdwmxQ/libiconv-1.14/lib/t-charset.alias; \
+	/ffp/bin/install -c -m 644 /tmp/libiconv.JdwmxQ/libiconv-1.14/lib/t-charset.alias /tmp/libiconv.JdwmxQ/libiconv-1.14/lib/charset.alias; \
+	rm -f /tmp/libiconv.JdwmxQ/libiconv-1.14/lib/t-charset.alias
+make[2]: Leaving directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/libcharset/lib'
+/bin/sh ./build-aux/mkinstalldirs /tmp/libiconv.JdwmxQ/libiconv-1.14/lib
+/ffp/bin/install -c -m 644 include/libcharset.h /tmp/libiconv.JdwmxQ/libiconv-1.14/lib/libcharset.h
+/ffp/bin/install -c -m 644 include/localcharset.h.inst /tmp/libiconv.JdwmxQ/libiconv-1.14/lib/localcharset.h
+make[1]: Leaving directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/libcharset'
+cd lib && make all
+make[1]: Entering directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/lib'
+/ffp/bin/sh ../libtool --mode=compile gcc -I. -I. -I../include -I./../include -I.. -I./.. -I/ffp/include -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fvisibility=hidden -DLIBDIR=\"/ffp/lib\" -DBUILDING_LIBICONV -DBUILDING_DLL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/ffp/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libiconv_set_relocation_prefix -Drelocate=libiconv_relocate -DHAVE_CONFIG_H -c ./iconv.c
+libtool: compile:  gcc -I. -I. -I../include -I./../include -I.. -I./.. -I/ffp/include -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fvisibility=hidden -DLIBDIR=\"/ffp/lib\" -DBUILDING_LIBICONV -DBUILDING_DLL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/ffp/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libiconv_set_relocation_prefix -Drelocate=libiconv_relocate -DHAVE_CONFIG_H -c ./iconv.c  -fPIC -DPIC -o .libs/iconv.o
+/ffp/bin/sh ../libtool --mode=compile gcc -I. -I. -I../include -I./../include -I.. -I./.. -I/ffp/include -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fvisibility=hidden -DLIBDIR=\"/ffp/lib\" -DBUILDING_LIBICONV -DBUILDING_DLL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/ffp/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libiconv_set_relocation_prefix -Drelocate=libiconv_relocate -DHAVE_CONFIG_H -c ./../libcharset/lib/localcharset.c
+libtool: compile:  gcc -I. -I. -I../include -I./../include -I.. -I./.. -I/ffp/include -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fvisibility=hidden -DLIBDIR=\"/ffp/lib\" -DBUILDING_LIBICONV -DBUILDING_DLL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/ffp/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libiconv_set_relocation_prefix -Drelocate=libiconv_relocate -DHAVE_CONFIG_H -c ./../libcharset/lib/localcharset.c  -fPIC -DPIC -o .libs/localcharset.o
+/ffp/bin/sh ../libtool --mode=compile gcc -I. -I. -I../include -I./../include -I.. -I./.. -I/ffp/include -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fvisibility=hidden -DLIBDIR=\"/ffp/lib\" -DBUILDING_LIBICONV -DBUILDING_DLL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/ffp/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libiconv_set_relocation_prefix -Drelocate=libiconv_relocate -DHAVE_CONFIG_H -c ./relocatable.c
+libtool: compile:  gcc -I. -I. -I../include -I./../include -I.. -I./.. -I/ffp/include -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fvisibility=hidden -DLIBDIR=\"/ffp/lib\" -DBUILDING_LIBICONV -DBUILDING_DLL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/ffp/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libiconv_set_relocation_prefix -Drelocate=libiconv_relocate -DHAVE_CONFIG_H -c ./relocatable.c  -fPIC -DPIC -o .libs/relocatable.o
+/ffp/bin/sh ../libtool --mode=link gcc -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread   -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fvisibility=hidden -o libiconv.la -rpath /ffp/lib -version-info 7:1:5 -no-undefined iconv.lo localcharset.lo relocatable.lo  
+libtool: link: gcc -shared  -fPIC -DPIC  .libs/iconv.o .libs/localcharset.o .libs/relocatable.o   -L/ffp/lib -lpthread  -Wl,-rpath -Wl,/ffp/lib -O2 -pthread   -pthread -Wl,-soname -Wl,libiconv.so.2 -o .libs/libiconv.so.2.5.1
+libtool: link: (cd ".libs" && rm -f "libiconv.so.2" && ln -s "libiconv.so.2.5.1" "libiconv.so.2")
+libtool: link: (cd ".libs" && rm -f "libiconv.so" && ln -s "libiconv.so.2.5.1" "libiconv.so")
+libtool: link: ( cd ".libs" && rm -f "libiconv.la" && ln -s "../libiconv.la" "libiconv.la" )
+make[1]: Leaving directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/lib'
+cd preload && make all
+make[1]: Entering directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/preload'
+rm -f -r objects
+mkdir objects && \
+	for f in ./../lib/iconv.c ./../libcharset/lib/localcharset.c ./../lib/relocatable.c; do \
+	  /ffp/bin/sh ./libtool --mode=compile gcc -I../lib -I./../lib -I../include -I./../include -I.. -I./..  -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fvisibility=hidden -DLIBDIR=\"/ffp/lib\" -DBUILDING_LIBICONV -DBUILDING_DLL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/ffp/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libiconv_set_relocation_prefix -Drelocate=libiconv_relocate -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DINSTALLPREFIX=\"/ffp\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -D__EXTENSIONS__=1 -D_ALL_SOURCE=1 -D_GNU_SOURCE=1 -D_POSIX_PTHREAD_SEMANTICS=1 -D_TANDEM_SOURCE=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_VISIBILITY=1 -DLIBICONV_PLUG -c $f -o objects/`basename $f | sed -e 's,\.c$,.o,'` || exit 1; \
+	done && \
+	/ffp/bin/sh ./libtool --mode=link gcc -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread  -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fvisibility=hidden -o libiconv.la -rpath /ffp/lib -no-undefined objects/*.lo && \
+	rm -f -r objects
+libtool: compile:  gcc -I../lib -I./../lib -I../include -I./../include -I.. -I./.. -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fvisibility=hidden -DLIBDIR=\"/ffp/lib\" -DBUILDING_LIBICONV -DBUILDING_DLL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/ffp/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libiconv_set_relocation_prefix -Drelocate=libiconv_relocate -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DINSTALLPREFIX=\"/ffp\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -D__EXTENSIONS__=1 -D_ALL_SOURCE=1 -D_GNU_SOURCE=1 -D_POSIX_PTHREAD_SEMANTICS=1 -D_TANDEM_SOURCE=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_VISIBILITY=1 -DLIBICONV_PLUG -c ./../lib/iconv.c  -fPIC -DPIC -o objects/.libs/iconv.o
+libtool: compile:  gcc -I../lib -I./../lib -I../include -I./../include -I.. -I./.. -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fvisibility=hidden -DLIBDIR=\"/ffp/lib\" -DBUILDING_LIBICONV -DBUILDING_DLL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/ffp/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libiconv_set_relocation_prefix -Drelocate=libiconv_relocate -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DINSTALLPREFIX=\"/ffp\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -D__EXTENSIONS__=1 -D_ALL_SOURCE=1 -D_GNU_SOURCE=1 -D_POSIX_PTHREAD_SEMANTICS=1 -D_TANDEM_SOURCE=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_VISIBILITY=1 -DLIBICONV_PLUG -c ./../libcharset/lib/localcharset.c  -fPIC -DPIC -o objects/.libs/localcharset.o
+libtool: compile:  gcc -I../lib -I./../lib -I../include -I./../include -I.. -I./.. -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fvisibility=hidden -DLIBDIR=\"/ffp/lib\" -DBUILDING_LIBICONV -DBUILDING_DLL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/ffp/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libiconv_set_relocation_prefix -Drelocate=libiconv_relocate -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DINSTALLPREFIX=\"/ffp\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -D__EXTENSIONS__=1 -D_ALL_SOURCE=1 -D_GNU_SOURCE=1 -D_POSIX_PTHREAD_SEMANTICS=1 -D_TANDEM_SOURCE=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_VISIBILITY=1 -DLIBICONV_PLUG -c ./../lib/relocatable.c  -fPIC -DPIC -o objects/.libs/relocatable.o
+libtool: link: gcc -shared  -fPIC -DPIC  objects/.libs/iconv.o objects/.libs/localcharset.o objects/.libs/relocatable.o   -L/ffp/lib -lpthread  -Wl,-rpath -Wl,/ffp/lib -O2 -pthread   -pthread -Wl,-soname -Wl,libiconv.so.0 -o .libs/libiconv.so.0.0.0
+libtool: link: (cd ".libs" && rm -f "libiconv.so.0" && ln -s "libiconv.so.0.0.0" "libiconv.so.0")
+libtool: link: (cd ".libs" && rm -f "libiconv.so" && ln -s "libiconv.so.0.0.0" "libiconv.so")
+libtool: link: ( cd ".libs" && rm -f "libiconv.la" && ln -s "../libiconv.la" "libiconv.la" )
+cp .libs/libiconv.so preloadable_libiconv.so
+make[1]: Leaving directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/preload'
+cd srclib && make all
+make[1]: Entering directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/srclib'
+make[2]: Entering directory `/tmp/libiconv.JdwmxQ/libiconv-1.14'
+make[2]: Nothing to be done for `am--refresh'.
+make[2]: Leaving directory `/tmp/libiconv.JdwmxQ/libiconv-1.14'
+rm -f alloca.h-t alloca.h && \
+	{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */'; \
+	  cat ./alloca.in.h; \
+	} > alloca.h-t && \
+	mv -f alloca.h-t alloca.h
+rm -f c++defs.h-t c++defs.h && \
+	sed -n -e '/_GL_CXXDEFS/,$p' \
+	  < ../build-aux/snippet/c++defs.h \
+	  > c++defs.h-t && \
+	mv c++defs.h-t c++defs.h
+rm -f arg-nonnull.h-t arg-nonnull.h && \
+	sed -n -e '/GL_ARG_NONNULL/,$p' \
+	  < ../build-aux/snippet/arg-nonnull.h \
+	  > arg-nonnull.h-t && \
+	mv arg-nonnull.h-t arg-nonnull.h
+rm -f warn-on-use.h-t warn-on-use.h && \
+	sed -n -e '/^.ifndef/,$p' \
+	  < ../build-aux/snippet/warn-on-use.h \
+	  > warn-on-use.h-t && \
+	mv warn-on-use.h-t warn-on-use.h
+rm -f fcntl.h-t fcntl.h && \
+	{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */'; \
+	  sed -e 's|@''GUARD_PREFIX''@|GL|g' \
+	      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+	      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+	      -e 's|@''PRAGMA_COLUMNS''@||g' \
+	      -e 's|@''NEXT_FCNTL_H''@|<fcntl.h>|g' \
+	      -e 's/@''GNULIB_FCNTL''@/0/g' \
+	      -e 's/@''GNULIB_NONBLOCKING''@/0/g' \
+	      -e 's/@''GNULIB_OPEN''@/0/g' \
+	      -e 's/@''GNULIB_OPENAT''@/0/g' \
+	      -e 's|@''HAVE_FCNTL''@|1|g' \
+	      -e 's|@''HAVE_OPENAT''@|1|g' \
+	      -e 's|@''REPLACE_FCNTL''@|0|g' \
+	      -e 's|@''REPLACE_OPEN''@|0|g' \
+	      -e 's|@''REPLACE_OPENAT''@|0|g' \
+	      -e '/definitions of _GL_FUNCDECL_RPL/r c++defs.h' \
+	      -e '/definition of _GL_ARG_NONNULL/r arg-nonnull.h' \
+	      -e '/definition of _GL_WARN_ON_USE/r warn-on-use.h' \
+	      < ./fcntl.in.h; \
+	} > fcntl.h-t && \
+	mv fcntl.h-t fcntl.h
+rm -f signal.h-t signal.h && \
+	{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */' && \
+	  sed -e 's|@''GUARD_PREFIX''@|GL|g' \
+	      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+	      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+	      -e 's|@''PRAGMA_COLUMNS''@||g' \
+	      -e 's|@''NEXT_SIGNAL_H''@|<signal.h>|g' \
+	      -e 's|@''GNULIB_PTHREAD_SIGMASK''@|0|g' \
+	      -e 's/@''GNULIB_SIGNAL_H_SIGPIPE''@/1/g' \
+	      -e 's/@''GNULIB_SIGPROCMASK''@/1/g' \
+	      -e 's/@''GNULIB_SIGACTION''@/0/g' \
+	      -e 's|@''HAVE_POSIX_SIGNALBLOCKING''@|1|g' \
+	      -e 's|@''HAVE_PTHREAD_SIGMASK''@|1|g' \
+	      -e 's|@''HAVE_SIGSET_T''@|1|g' \
+	      -e 's|@''HAVE_SIGINFO_T''@|1|g' \
+	      -e 's|@''HAVE_SIGACTION''@|1|g' \
+	      -e 's|@''HAVE_STRUCT_SIGACTION_SA_SIGACTION''@|1|g' \
+	      -e 's|@''HAVE_TYPE_VOLATILE_SIG_ATOMIC_T''@|1|g' \
+	      -e 's|@''HAVE_SIGHANDLER_T''@|1|g' \
+	      -e 's|@''REPLACE_PTHREAD_SIGMASK''@|0|g' \
+	      -e '/definitions of _GL_FUNCDECL_RPL/r c++defs.h' \
+	      -e '/definition of _GL_ARG_NONNULL/r arg-nonnull.h' \
+	      -e '/definition of _GL_WARN_ON_USE/r warn-on-use.h' \
+	      < ./signal.in.h; \
+	} > signal.h-t && \
+	mv signal.h-t signal.h
+rm -f stdint.h-t stdint.h && \
+	{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */'; \
+	  sed -e 's|@''GUARD_PREFIX''@|GL|g' \
+	      -e 's/@''HAVE_STDINT_H''@/1/g' \
+	      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+	      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+	      -e 's|@''PRAGMA_COLUMNS''@||g' \
+	      -e 's|@''NEXT_STDINT_H''@|<stdint.h>|g' \
+	      -e 's/@''HAVE_SYS_TYPES_H''@/1/g' \
+	      -e 's/@''HAVE_INTTYPES_H''@/1/g' \
+	      -e 's/@''HAVE_SYS_INTTYPES_H''@/0/g' \
+	      -e 's/@''HAVE_SYS_BITYPES_H''@/1/g' \
+	      -e 's/@''HAVE_WCHAR_H''@/1/g' \
+	      -e 's/@''HAVE_LONG_LONG_INT''@/1/g' \
+	      -e 's/@''HAVE_UNSIGNED_LONG_LONG_INT''@/1/g' \
+	      -e 's/@''APPLE_UNIVERSAL_BUILD''@/0/g' \
+	      -e 's/@''BITSIZEOF_PTRDIFF_T''@/32/g' \
+	      -e 's/@''PTRDIFF_T_SUFFIX''@//g' \
+	      -e 's/@''BITSIZEOF_SIG_ATOMIC_T''@/32/g' \
+	      -e 's/@''HAVE_SIGNED_SIG_ATOMIC_T''@/1/g' \
+	      -e 's/@''SIG_ATOMIC_T_SUFFIX''@//g' \
+	      -e 's/@''BITSIZEOF_SIZE_T''@/32/g' \
+	      -e 's/@''SIZE_T_SUFFIX''@/u/g' \
+	      -e 's/@''BITSIZEOF_WCHAR_T''@/32/g' \
+	      -e 's/@''HAVE_SIGNED_WCHAR_T''@/0/g' \
+	      -e 's/@''WCHAR_T_SUFFIX''@/u/g' \
+	      -e 's/@''BITSIZEOF_WINT_T''@/32/g' \
+	      -e 's/@''HAVE_SIGNED_WINT_T''@/0/g' \
+	      -e 's/@''WINT_T_SUFFIX''@/u/g' \
+	      < ./stdint.in.h; \
+	} > stdint.h-t && \
+	mv stdint.h-t stdint.h
+rm -f stdio.h-t stdio.h && \
+	{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */' && \
+	  sed -e 's|@''GUARD_PREFIX''@|GL|g' \
+	      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+	      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+	      -e 's|@''PRAGMA_COLUMNS''@||g' \
+	      -e 's|@''NEXT_STDIO_H''@|<stdio.h>|g' \
+	      -e 's/@''GNULIB_DPRINTF''@/0/g' \
+	      -e 's/@''GNULIB_FCLOSE''@/0/g' \
+	      -e 's/@''GNULIB_FFLUSH''@/0/g' \
+	      -e 's/@''GNULIB_FGETC''@/1/g' \
+	      -e 's/@''GNULIB_FGETS''@/1/g' \
+	      -e 's/@''GNULIB_FOPEN''@/0/g' \
+	      -e 's/@''GNULIB_FPRINTF''@/1/g' \
+	      -e 's/@''GNULIB_FPRINTF_POSIX''@/0/g' \
+	      -e 's/@''GNULIB_FPURGE''@/0/g' \
+	      -e 's/@''GNULIB_FPUTC''@/1/g' \
+	      -e 's/@''GNULIB_FPUTS''@/1/g' \
+	      -e 's/@''GNULIB_FREAD''@/1/g' \
+	      -e 's/@''GNULIB_FREOPEN''@/0/g' \
+	      -e 's/@''GNULIB_FSCANF''@/1/g' \
+	      -e 's/@''GNULIB_FSEEK''@/0/g' \
+	      -e 's/@''GNULIB_FSEEKO''@/0/g' \
+	      -e 's/@''GNULIB_FTELL''@/0/g' \
+	      -e 's/@''GNULIB_FTELLO''@/0/g' \
+	      -e 's/@''GNULIB_FWRITE''@/1/g' \
+	      -e 's/@''GNULIB_GETC''@/1/g' \
+	      -e 's/@''GNULIB_GETCHAR''@/1/g' \
+	      -e 's/@''GNULIB_GETDELIM''@/0/g' \
+	      -e 's/@''GNULIB_GETLINE''@/0/g' \
+	      -e 's/@''GNULIB_GETS''@/1/g' \
+	      -e 's/@''GNULIB_OBSTACK_PRINTF''@/0/g' \
+	      -e 's/@''GNULIB_OBSTACK_PRINTF_POSIX''@/0/g' \
+	      -e 's/@''GNULIB_PERROR''@/0/g' \
+	      -e 's/@''GNULIB_POPEN''@/0/g' \
+	      -e 's/@''GNULIB_PRINTF''@/1/g' \
+	      -e 's/@''GNULIB_PRINTF_POSIX''@/0/g' \
+	      -e 's/@''GNULIB_PUTC''@/1/g' \
+	      -e 's/@''GNULIB_PUTCHAR''@/1/g' \
+	      -e 's/@''GNULIB_PUTS''@/1/g' \
+	      -e 's/@''GNULIB_REMOVE''@/0/g' \
+	      -e 's/@''GNULIB_RENAME''@/0/g' \
+	      -e 's/@''GNULIB_RENAMEAT''@/0/g' \
+	      -e 's/@''GNULIB_SCANF''@/1/g' \
+	      -e 's/@''GNULIB_SNPRINTF''@/0/g' \
+	      -e 's/@''GNULIB_SPRINTF_POSIX''@/0/g' \
+	      -e 's/@''GNULIB_STDIO_H_NONBLOCKING''@/0/g' \
+	      -e 's/@''GNULIB_STDIO_H_SIGPIPE''@/1/g' \
+	      -e 's/@''GNULIB_TMPFILE''@/0/g' \
+	      -e 's/@''GNULIB_VASPRINTF''@/0/g' \
+	      -e 's/@''GNULIB_VDPRINTF''@/0/g' \
+	      -e 's/@''GNULIB_VFPRINTF''@/1/g' \
+	      -e 's/@''GNULIB_VFPRINTF_POSIX''@/0/g' \
+	      -e 's/@''GNULIB_VFSCANF''@/0/g' \
+	      -e 's/@''GNULIB_VSCANF''@/0/g' \
+	      -e 's/@''GNULIB_VPRINTF''@/1/g' \
+	      -e 's/@''GNULIB_VPRINTF_POSIX''@/0/g' \
+	      -e 's/@''GNULIB_VSNPRINTF''@/0/g' \
+	      -e 's/@''GNULIB_VSPRINTF_POSIX''@/0/g' \
+	      < ./stdio.in.h | \
+	  sed -e 's|@''HAVE_DECL_FPURGE''@|1|g' \
+	      -e 's|@''HAVE_DECL_FSEEKO''@|1|g' \
+	      -e 's|@''HAVE_DECL_FTELLO''@|1|g' \
+	      -e 's|@''HAVE_DECL_GETDELIM''@|1|g' \
+	      -e 's|@''HAVE_DECL_GETLINE''@|1|g' \
+	      -e 's|@''HAVE_DECL_OBSTACK_PRINTF''@|1|g' \
+	      -e 's|@''HAVE_DECL_SNPRINTF''@|1|g' \
+	      -e 's|@''HAVE_DECL_VSNPRINTF''@|1|g' \
+	      -e 's|@''HAVE_DPRINTF''@|1|g' \
+	      -e 's|@''HAVE_FSEEKO''@|1|g' \
+	      -e 's|@''HAVE_FTELLO''@|1|g' \
+	      -e 's|@''HAVE_RENAMEAT''@|1|g' \
+	      -e 's|@''HAVE_VASPRINTF''@|1|g' \
+	      -e 's|@''HAVE_VDPRINTF''@|1|g' \
+	      -e 's|@''REPLACE_DPRINTF''@|0|g' \
+	      -e 's|@''REPLACE_FCLOSE''@|0|g' \
+	      -e 's|@''REPLACE_FFLUSH''@|0|g' \
+	      -e 's|@''REPLACE_FOPEN''@|0|g' \
+	      -e 's|@''REPLACE_FPRINTF''@|0|g' \
+	      -e 's|@''REPLACE_FPURGE''@|0|g' \
+	      -e 's|@''REPLACE_FREOPEN''@|0|g' \
+	      -e 's|@''REPLACE_FSEEK''@|0|g' \
+	      -e 's|@''REPLACE_FSEEKO''@|0|g' \
+	      -e 's|@''REPLACE_FTELL''@|0|g' \
+	      -e 's|@''REPLACE_FTELLO''@|0|g' \
+	      -e 's|@''REPLACE_GETDELIM''@|0|g' \
+	      -e 's|@''REPLACE_GETLINE''@|0|g' \
+	      -e 's|@''REPLACE_OBSTACK_PRINTF''@|0|g' \
+	      -e 's|@''REPLACE_PERROR''@|0|g' \
+	      -e 's|@''REPLACE_POPEN''@|0|g' \
+	      -e 's|@''REPLACE_PRINTF''@|0|g' \
+	      -e 's|@''REPLACE_REMOVE''@|0|g' \
+	      -e 's|@''REPLACE_RENAME''@|0|g' \
+	      -e 's|@''REPLACE_RENAMEAT''@|0|g' \
+	      -e 's|@''REPLACE_SNPRINTF''@|0|g' \
+	      -e 's|@''REPLACE_SPRINTF''@|0|g' \
+	      -e 's|@''REPLACE_STDIO_READ_FUNCS''@|0|g' \
+	      -e 's|@''REPLACE_STDIO_WRITE_FUNCS''@|0|g' \
+	      -e 's|@''REPLACE_TMPFILE''@|0|g' \
+	      -e 's|@''REPLACE_VASPRINTF''@|0|g' \
+	      -e 's|@''REPLACE_VDPRINTF''@|0|g' \
+	      -e 's|@''REPLACE_VFPRINTF''@|0|g' \
+	      -e 's|@''REPLACE_VPRINTF''@|0|g' \
+	      -e 's|@''REPLACE_VSNPRINTF''@|0|g' \
+	      -e 's|@''REPLACE_VSPRINTF''@|0|g' \
+	      -e 's|@''ASM_SYMBOL_PREFIX''@|""|g' \
+	      -e '/definitions of _GL_FUNCDECL_RPL/r c++defs.h' \
+	      -e '/definition of _GL_ARG_NONNULL/r arg-nonnull.h' \
+	      -e '/definition of _GL_WARN_ON_USE/r warn-on-use.h'; \
+	} > stdio.h-t && \
+	mv stdio.h-t stdio.h
+rm -f stdlib.h-t stdlib.h && \
+	{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */' && \
+	  sed -e 's|@''GUARD_PREFIX''@|GL|g' \
+	      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+	      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+	      -e 's|@''PRAGMA_COLUMNS''@||g' \
+	      -e 's|@''NEXT_STDLIB_H''@|<stdlib.h>|g' \
+	      -e 's/@''GNULIB__EXIT''@/0/g' \
+	      -e 's/@''GNULIB_ATOLL''@/0/g' \
+	      -e 's/@''GNULIB_CALLOC_POSIX''@/0/g' \
+	      -e 's/@''GNULIB_CANONICALIZE_FILE_NAME''@/1/g' \
+	      -e 's/@''GNULIB_GETLOADAVG''@/0/g' \
+	      -e 's/@''GNULIB_GETSUBOPT''@/0/g' \
+	      -e 's/@''GNULIB_GRANTPT''@/0/g' \
+	      -e 's/@''GNULIB_MALLOC_POSIX''@/0/g' \
+	      -e 's/@''GNULIB_MBTOWC''@/0/g' \
+	      -e 's/@''GNULIB_MKDTEMP''@/0/g' \
+	      -e 's/@''GNULIB_MKOSTEMP''@/0/g' \
+	      -e 's/@''GNULIB_MKOSTEMPS''@/0/g' \
+	      -e 's/@''GNULIB_MKSTEMP''@/0/g' \
+	      -e 's/@''GNULIB_MKSTEMPS''@/0/g' \
+	      -e 's/@''GNULIB_PTSNAME''@/0/g' \
+	      -e 's/@''GNULIB_PUTENV''@/0/g' \
+	      -e 's/@''GNULIB_RANDOM_R''@/0/g' \
+	      -e 's/@''GNULIB_REALLOC_POSIX''@/0/g' \
+	      -e 's/@''GNULIB_REALPATH''@/1/g' \
+	      -e 's/@''GNULIB_RPMATCH''@/0/g' \
+	      -e 's/@''GNULIB_SETENV''@/0/g' \
+	      -e 's/@''GNULIB_STRTOD''@/0/g' \
+	      -e 's/@''GNULIB_STRTOLL''@/0/g' \
+	      -e 's/@''GNULIB_STRTOULL''@/0/g' \
+	      -e 's/@''GNULIB_SYSTEM_POSIX''@/0/g' \
+	      -e 's/@''GNULIB_UNLOCKPT''@/0/g' \
+	      -e 's/@''GNULIB_UNSETENV''@/0/g' \
+	      -e 's/@''GNULIB_WCTOMB''@/0/g' \
+	      < ./stdlib.in.h | \
+	  sed -e 's|@''HAVE__EXIT''@|1|g' \
+	      -e 's|@''HAVE_ATOLL''@|1|g' \
+	      -e 's|@''HAVE_CANONICALIZE_FILE_NAME''@|1|g' \
+	      -e 's|@''HAVE_DECL_GETLOADAVG''@|1|g' \
+	      -e 's|@''HAVE_GETSUBOPT''@|1|g' \
+	      -e 's|@''HAVE_GRANTPT''@|1|g' \
+	      -e 's|@''HAVE_MKDTEMP''@|1|g' \
+	      -e 's|@''HAVE_MKOSTEMP''@|1|g' \
+	      -e 's|@''HAVE_MKOSTEMPS''@|1|g' \
+	      -e 's|@''HAVE_MKSTEMP''@|1|g' \
+	      -e 's|@''HAVE_MKSTEMPS''@|1|g' \
+	      -e 's|@''HAVE_PTSNAME''@|1|g' \
+	      -e 's|@''HAVE_RANDOM_H''@|1|g' \
+	      -e 's|@''HAVE_RANDOM_R''@|1|g' \
+	      -e 's|@''HAVE_REALPATH''@|1|g' \
+	      -e 's|@''HAVE_RPMATCH''@|1|g' \
+	      -e 's|@''HAVE_DECL_SETENV''@|1|g' \
+	      -e 's|@''HAVE_STRTOD''@|1|g' \
+	      -e 's|@''HAVE_STRTOLL''@|1|g' \
+	      -e 's|@''HAVE_STRTOULL''@|1|g' \
+	      -e 's|@''HAVE_STRUCT_RANDOM_DATA''@|1|g' \
+	      -e 's|@''HAVE_SYS_LOADAVG_H''@|0|g' \
+	      -e 's|@''HAVE_UNLOCKPT''@|1|g' \
+	      -e 's|@''HAVE_DECL_UNSETENV''@|1|g' \
+	      -e 's|@''REPLACE_CALLOC''@|0|g' \
+	      -e 's|@''REPLACE_CANONICALIZE_FILE_NAME''@|1|g' \
+	      -e 's|@''REPLACE_MALLOC''@|0|g' \
+	      -e 's|@''REPLACE_MBTOWC''@|0|g' \
+	      -e 's|@''REPLACE_MKSTEMP''@|0|g' \
+	      -e 's|@''REPLACE_PUTENV''@|0|g' \
+	      -e 's|@''REPLACE_REALLOC''@|0|g' \
+	      -e 's|@''REPLACE_REALPATH''@|1|g' \
+	      -e 's|@''REPLACE_SETENV''@|0|g' \
+	      -e 's|@''REPLACE_STRTOD''@|0|g' \
+	      -e 's|@''REPLACE_UNSETENV''@|0|g' \
+	      -e 's|@''REPLACE_WCTOMB''@|0|g' \
+	      -e '/definitions of _GL_FUNCDECL_RPL/r c++defs.h' \
+	      -e '/definition of _Noreturn/r ../build-aux/snippet/_Noreturn.h' \
+	      -e '/definition of _GL_ARG_NONNULL/r arg-nonnull.h' \
+	      -e '/definition of _GL_WARN_ON_USE/r warn-on-use.h'; \
+	} > stdlib.h-t && \
+	mv stdlib.h-t stdlib.h
+rm -f string.h-t string.h && \
+	{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */' && \
+	  sed -e 's|@''GUARD_PREFIX''@|GL|g' \
+	      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+	      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+	      -e 's|@''PRAGMA_COLUMNS''@||g' \
+	      -e 's|@''NEXT_STRING_H''@|<string.h>|g' \
+	      -e 's/@''GNULIB_FFSL''@/0/g' \
+	      -e 's/@''GNULIB_FFSLL''@/0/g' \
+	      -e 's/@''GNULIB_MBSLEN''@/0/g' \
+	      -e 's/@''GNULIB_MBSNLEN''@/0/g' \
+	      -e 's/@''GNULIB_MBSCHR''@/0/g' \
+	      -e 's/@''GNULIB_MBSRCHR''@/0/g' \
+	      -e 's/@''GNULIB_MBSSTR''@/0/g' \
+	      -e 's/@''GNULIB_MBSCASECMP''@/0/g' \
+	      -e 's/@''GNULIB_MBSNCASECMP''@/0/g' \
+	      -e 's/@''GNULIB_MBSPCASECMP''@/0/g' \
+	      -e 's/@''GNULIB_MBSCASESTR''@/0/g' \
+	      -e 's/@''GNULIB_MBSCSPN''@/0/g' \
+	      -e 's/@''GNULIB_MBSPBRK''@/0/g' \
+	      -e 's/@''GNULIB_MBSSPN''@/0/g' \
+	      -e 's/@''GNULIB_MBSSEP''@/0/g' \
+	      -e 's/@''GNULIB_MBSTOK_R''@/0/g' \
+	      -e 's/@''GNULIB_MEMCHR''@/0/g' \
+	      -e 's/@''GNULIB_MEMMEM''@/0/g' \
+	      -e 's/@''GNULIB_MEMPCPY''@/0/g' \
+	      -e 's/@''GNULIB_MEMRCHR''@/0/g' \
+	      -e 's/@''GNULIB_RAWMEMCHR''@/0/g' \
+	      -e 's/@''GNULIB_STPCPY''@/0/g' \
+	      -e 's/@''GNULIB_STPNCPY''@/0/g' \
+	      -e 's/@''GNULIB_STRCHRNUL''@/0/g' \
+	      -e 's/@''GNULIB_STRDUP''@/0/g' \
+	      -e 's/@''GNULIB_STRNCAT''@/0/g' \
+	      -e 's/@''GNULIB_STRNDUP''@/0/g' \
+	      -e 's/@''GNULIB_STRNLEN''@/0/g' \
+	      -e 's/@''GNULIB_STRPBRK''@/0/g' \
+	      -e 's/@''GNULIB_STRSEP''@/0/g' \
+	      -e 's/@''GNULIB_STRSTR''@/0/g' \
+	      -e 's/@''GNULIB_STRCASESTR''@/0/g' \
+	      -e 's/@''GNULIB_STRTOK_R''@/0/g' \
+	      -e 's/@''GNULIB_STRERROR''@/1/g' \
+	      -e 's/@''GNULIB_STRERROR_R''@/0/g' \
+	      -e 's/@''GNULIB_STRSIGNAL''@/0/g' \
+	      -e 's/@''GNULIB_STRVERSCMP''@/0/g' \
+	      < ./string.in.h | \
+	  sed -e 's|@''HAVE_FFSL''@|1|g' \
+	      -e 's|@''HAVE_FFSLL''@|1|g' \
+	      -e 's|@''HAVE_MBSLEN''@|0|g' \
+	      -e 's|@''HAVE_MEMCHR''@|1|g' \
+	      -e 's|@''HAVE_DECL_MEMMEM''@|1|g' \
+	      -e 's|@''HAVE_MEMPCPY''@|1|g' \
+	      -e 's|@''HAVE_DECL_MEMRCHR''@|1|g' \
+	      -e 's|@''HAVE_RAWMEMCHR''@|1|g' \
+	      -e 's|@''HAVE_STPCPY''@|1|g' \
+	      -e 's|@''HAVE_STPNCPY''@|1|g' \
+	      -e 's|@''HAVE_STRCHRNUL''@|1|g' \
+	      -e 's|@''HAVE_DECL_STRDUP''@|1|g' \
+	      -e 's|@''HAVE_DECL_STRNDUP''@|1|g' \
+	      -e 's|@''HAVE_DECL_STRNLEN''@|1|g' \
+	      -e 's|@''HAVE_STRPBRK''@|1|g' \
+	      -e 's|@''HAVE_STRSEP''@|1|g' \
+	      -e 's|@''HAVE_STRCASESTR''@|1|g' \
+	      -e 's|@''HAVE_DECL_STRTOK_R''@|1|g' \
+	      -e 's|@''HAVE_DECL_STRERROR_R''@|1|g' \
+	      -e 's|@''HAVE_DECL_STRSIGNAL''@|1|g' \
+	      -e 's|@''HAVE_STRVERSCMP''@|1|g' \
+	      -e 's|@''REPLACE_STPNCPY''@|0|g' \
+	      -e 's|@''REPLACE_MEMCHR''@|0|g' \
+	      -e 's|@''REPLACE_MEMMEM''@|0|g' \
+	      -e 's|@''REPLACE_STRCASESTR''@|0|g' \
+	      -e 's|@''REPLACE_STRCHRNUL''@|0|g' \
+	      -e 's|@''REPLACE_STRDUP''@|0|g' \
+	      -e 's|@''REPLACE_STRSTR''@|0|g' \
+	      -e 's|@''REPLACE_STRERROR''@|0|g' \
+	      -e 's|@''REPLACE_STRERROR_R''@|0|g' \
+	      -e 's|@''REPLACE_STRNCAT''@|0|g' \
+	      -e 's|@''REPLACE_STRNDUP''@|0|g' \
+	      -e 's|@''REPLACE_STRNLEN''@|0|g' \
+	      -e 's|@''REPLACE_STRSIGNAL''@|0|g' \
+	      -e 's|@''REPLACE_STRTOK_R''@|0|g' \
+	      -e 's|@''UNDEFINE_STRTOK_R''@|0|g' \
+	      -e '/definitions of _GL_FUNCDECL_RPL/r c++defs.h' \
+	      -e '/definition of _GL_ARG_NONNULL/r arg-nonnull.h' \
+	      -e '/definition of _GL_WARN_ON_USE/r warn-on-use.h'; \
+	      < ./string.in.h; \
+	} > string.h-t && \
+	mv string.h-t string.h
+/ffp/bin/mkdir -p sys
+rm -f sys/stat.h-t sys/stat.h && \
+	{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */'; \
+	  sed -e 's|@''GUARD_PREFIX''@|GL|g' \
+	      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+	      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+	      -e 's|@''PRAGMA_COLUMNS''@||g' \
+	      -e 's|@''NEXT_SYS_STAT_H''@|<sys/stat.h>|g' \
+	      -e 's/@''GNULIB_FCHMODAT''@/0/g' \
+	      -e 's/@''GNULIB_FSTATAT''@/0/g' \
+	      -e 's/@''GNULIB_FUTIMENS''@/0/g' \
+	      -e 's/@''GNULIB_LCHMOD''@/0/g' \
+	      -e 's/@''GNULIB_LSTAT''@/1/g' \
+	      -e 's/@''GNULIB_MKDIRAT''@/0/g' \
+	      -e 's/@''GNULIB_MKFIFO''@/0/g' \
+	      -e 's/@''GNULIB_MKFIFOAT''@/0/g' \
+	      -e 's/@''GNULIB_MKNOD''@/0/g' \
+	      -e 's/@''GNULIB_MKNODAT''@/0/g' \
+	      -e 's/@''GNULIB_STAT''@/1/g' \
+	      -e 's/@''GNULIB_UTIMENSAT''@/0/g' \
+	      -e 's|@''HAVE_FCHMODAT''@|1|g' \
+	      -e 's|@''HAVE_FSTATAT''@|1|g' \
+	      -e 's|@''HAVE_FUTIMENS''@|1|g' \
+	      -e 's|@''HAVE_LCHMOD''@|1|g' \
+	      -e 's|@''HAVE_LSTAT''@|1|g' \
+	      -e 's|@''HAVE_MKDIRAT''@|1|g' \
+	      -e 's|@''HAVE_MKFIFO''@|1|g' \
+	      -e 's|@''HAVE_MKFIFOAT''@|1|g' \
+	      -e 's|@''HAVE_MKNOD''@|1|g' \
+	      -e 's|@''HAVE_MKNODAT''@|1|g' \
+	      -e 's|@''HAVE_UTIMENSAT''@|1|g' \
+	      -e 's|@''REPLACE_FSTAT''@|0|g' \
+	      -e 's|@''REPLACE_FSTATAT''@|0|g' \
+	      -e 's|@''REPLACE_FUTIMENS''@|0|g' \
+	      -e 's|@''REPLACE_LSTAT''@|0|g' \
+	      -e 's|@''REPLACE_MKDIR''@|0|g' \
+	      -e 's|@''REPLACE_MKFIFO''@|0|g' \
+	      -e 's|@''REPLACE_MKNOD''@|0|g' \
+	      -e 's|@''REPLACE_STAT''@|0|g' \
+	      -e 's|@''REPLACE_UTIMENSAT''@|0|g' \
+	      -e '/definitions of _GL_FUNCDECL_RPL/r c++defs.h' \
+	      -e '/definition of _GL_ARG_NONNULL/r arg-nonnull.h' \
+	      -e '/definition of _GL_WARN_ON_USE/r warn-on-use.h' \
+	      < ./sys_stat.in.h; \
+	} > sys/stat.h-t && \
+	mv sys/stat.h-t sys/stat.h
+rm -f time.h-t time.h && \
+	{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */' && \
+	  sed -e 's|@''GUARD_PREFIX''@|GL|g' \
+	      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+	      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+	      -e 's|@''PRAGMA_COLUMNS''@||g' \
+	      -e 's|@''NEXT_TIME_H''@|<time.h>|g' \
+	      -e 's/@''GNULIB_MKTIME''@/0/g' \
+	      -e 's/@''GNULIB_NANOSLEEP''@/0/g' \
+	      -e 's/@''GNULIB_STRPTIME''@/0/g' \
+	      -e 's/@''GNULIB_TIMEGM''@/0/g' \
+	      -e 's/@''GNULIB_TIME_R''@/0/g' \
+	      -e 's|@''HAVE_DECL_LOCALTIME_R''@|1|g' \
+	      -e 's|@''HAVE_NANOSLEEP''@|1|g' \
+	      -e 's|@''HAVE_STRPTIME''@|1|g' \
+	      -e 's|@''HAVE_TIMEGM''@|1|g' \
+	      -e 's|@''REPLACE_LOCALTIME_R''@|GNULIB_PORTCHECK|g' \
+	      -e 's|@''REPLACE_MKTIME''@|GNULIB_PORTCHECK|g' \
+	      -e 's|@''REPLACE_NANOSLEEP''@|GNULIB_PORTCHECK|g' \
+	      -e 's|@''REPLACE_TIMEGM''@|GNULIB_PORTCHECK|g' \
+	      -e 's|@''PTHREAD_H_DEFINES_STRUCT_TIMESPEC''@|0|g' \
+	      -e 's|@''SYS_TIME_H_DEFINES_STRUCT_TIMESPEC''@|0|g' \
+	      -e 's|@''TIME_H_DEFINES_STRUCT_TIMESPEC''@|1|g' \
+	      -e '/definitions of _GL_FUNCDECL_RPL/r c++defs.h' \
+	      -e '/definition of _GL_ARG_NONNULL/r arg-nonnull.h' \
+	      -e '/definition of _GL_WARN_ON_USE/r warn-on-use.h' \
+	      < ./time.in.h; \
+	} > time.h-t && \
+	mv time.h-t time.h
+rm -f unistd.h-t unistd.h && \
+	{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */'; \
+	  sed -e 's|@''GUARD_PREFIX''@|GL|g' \
+	      -e 's|@''HAVE_UNISTD_H''@|1|g' \
+	      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+	      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+	      -e 's|@''PRAGMA_COLUMNS''@||g' \
+	      -e 's|@''NEXT_UNISTD_H''@|<unistd.h>|g' \
+	      -e 's/@''GNULIB_CHOWN''@/0/g' \
+	      -e 's/@''GNULIB_CLOSE''@/0/g' \
+	      -e 's/@''GNULIB_DUP2''@/0/g' \
+	      -e 's/@''GNULIB_DUP3''@/0/g' \
+	      -e 's/@''GNULIB_ENVIRON''@/1/g' \
+	      -e 's/@''GNULIB_EUIDACCESS''@/0/g' \
+	      -e 's/@''GNULIB_FACCESSAT''@/0/g' \
+	      -e 's/@''GNULIB_FCHDIR''@/0/g' \
+	      -e 's/@''GNULIB_FCHOWNAT''@/0/g' \
+	      -e 's/@''GNULIB_FSYNC''@/0/g' \
+	      -e 's/@''GNULIB_FTRUNCATE''@/0/g' \
+	      -e 's/@''GNULIB_GETCWD''@/0/g' \
+	      -e 's/@''GNULIB_GETDOMAINNAME''@/0/g' \
+	      -e 's/@''GNULIB_GETDTABLESIZE''@/0/g' \
+	      -e 's/@''GNULIB_GETGROUPS''@/0/g' \
+	      -e 's/@''GNULIB_GETHOSTNAME''@/0/g' \
+	      -e 's/@''GNULIB_GETLOGIN''@/0/g' \
+	      -e 's/@''GNULIB_GETLOGIN_R''@/0/g' \
+	      -e 's/@''GNULIB_GETPAGESIZE''@/0/g' \
+	      -e 's/@''GNULIB_GETUSERSHELL''@/0/g' \
+	      -e 's/@''GNULIB_GROUP_MEMBER''@/0/g' \
+	      -e 's/@''GNULIB_LCHOWN''@/0/g' \
+	      -e 's/@''GNULIB_LINK''@/0/g' \
+	      -e 's/@''GNULIB_LINKAT''@/0/g' \
+	      -e 's/@''GNULIB_LSEEK''@/0/g' \
+	      -e 's/@''GNULIB_PIPE''@/0/g' \
+	      -e 's/@''GNULIB_PIPE2''@/0/g' \
+	      -e 's/@''GNULIB_PREAD''@/0/g' \
+	      -e 's/@''GNULIB_PWRITE''@/0/g' \
+	      -e 's/@''GNULIB_READ''@/1/g' \
+	      -e 's/@''GNULIB_READLINK''@/1/g' \
+	      -e 's/@''GNULIB_READLINKAT''@/0/g' \
+	      -e 's/@''GNULIB_RMDIR''@/0/g' \
+	      -e 's/@''GNULIB_SLEEP''@/0/g' \
+	      -e 's/@''GNULIB_SYMLINK''@/0/g' \
+	      -e 's/@''GNULIB_SYMLINKAT''@/0/g' \
+	      -e 's/@''GNULIB_TTYNAME_R''@/0/g' \
+	      -e 's/@''GNULIB_UNISTD_H_GETOPT''@/0/g' \
+	      -e 's/@''GNULIB_UNISTD_H_NONBLOCKING''@/0/g' \
+	      -e 's/@''GNULIB_UNISTD_H_SIGPIPE''@/1/g' \
+	      -e 's/@''GNULIB_UNLINK''@/0/g' \
+	      -e 's/@''GNULIB_UNLINKAT''@/0/g' \
+	      -e 's/@''GNULIB_USLEEP''@/0/g' \
+	      -e 's/@''GNULIB_WRITE''@/0/g' \
+	      < ./unistd.in.h | \
+	  sed -e 's|@''HAVE_CHOWN''@|1|g' \
+	      -e 's|@''HAVE_DUP2''@|1|g' \
+	      -e 's|@''HAVE_DUP3''@|1|g' \
+	      -e 's|@''HAVE_EUIDACCESS''@|1|g' \
+	      -e 's|@''HAVE_FACCESSAT''@|1|g' \
+	      -e 's|@''HAVE_FCHDIR''@|1|g' \
+	      -e 's|@''HAVE_FCHOWNAT''@|1|g' \
+	      -e 's|@''HAVE_FSYNC''@|1|g' \
+	      -e 's|@''HAVE_FTRUNCATE''@|1|g' \
+	      -e 's|@''HAVE_GETDTABLESIZE''@|1|g' \
+	      -e 's|@''HAVE_GETGROUPS''@|1|g' \
+	      -e 's|@''HAVE_GETHOSTNAME''@|1|g' \
+	      -e 's|@''HAVE_GETLOGIN''@|1|g' \
+	      -e 's|@''HAVE_GETPAGESIZE''@|1|g' \
+	      -e 's|@''HAVE_GROUP_MEMBER''@|1|g' \
+	      -e 's|@''HAVE_LCHOWN''@|1|g' \
+	      -e 's|@''HAVE_LINK''@|1|g' \
+	      -e 's|@''HAVE_LINKAT''@|1|g' \
+	      -e 's|@''HAVE_PIPE''@|1|g' \
+	      -e 's|@''HAVE_PIPE2''@|1|g' \
+	      -e 's|@''HAVE_PREAD''@|1|g' \
+	      -e 's|@''HAVE_PWRITE''@|1|g' \
+	      -e 's|@''HAVE_READLINK''@|1|g' \
+	      -e 's|@''HAVE_READLINKAT''@|1|g' \
+	      -e 's|@''HAVE_SLEEP''@|1|g' \
+	      -e 's|@''HAVE_SYMLINK''@|1|g' \
+	      -e 's|@''HAVE_SYMLINKAT''@|1|g' \
+	      -e 's|@''HAVE_UNLINKAT''@|1|g' \
+	      -e 's|@''HAVE_USLEEP''@|1|g' \
+	      -e 's|@''HAVE_DECL_ENVIRON''@|1|g' \
+	      -e 's|@''HAVE_DECL_FCHDIR''@|1|g' \
+	      -e 's|@''HAVE_DECL_GETDOMAINNAME''@|1|g' \
+	      -e 's|@''HAVE_DECL_GETLOGIN_R''@|1|g' \
+	      -e 's|@''HAVE_DECL_GETPAGESIZE''@|1|g' \
+	      -e 's|@''HAVE_DECL_GETUSERSHELL''@|1|g' \
+	      -e 's|@''HAVE_DECL_TTYNAME_R''@|1|g' \
+	      -e 's|@''HAVE_OS_H''@|0|g' \
+	      -e 's|@''HAVE_SYS_PARAM_H''@|0|g' \
+	  | \
+	  sed -e 's|@''REPLACE_CHOWN''@|0|g' \
+	      -e 's|@''REPLACE_CLOSE''@|0|g' \
+	      -e 's|@''REPLACE_DUP''@|0|g' \
+	      -e 's|@''REPLACE_DUP2''@|0|g' \
+	      -e 's|@''REPLACE_FCHOWNAT''@|0|g' \
+	      -e 's|@''REPLACE_GETCWD''@|0|g' \
+	      -e 's|@''REPLACE_GETDOMAINNAME''@|0|g' \
+	      -e 's|@''REPLACE_GETLOGIN_R''@|0|g' \
+	      -e 's|@''REPLACE_GETGROUPS''@|0|g' \
+	      -e 's|@''REPLACE_GETPAGESIZE''@|0|g' \
+	      -e 's|@''REPLACE_LCHOWN''@|0|g' \
+	      -e 's|@''REPLACE_LINK''@|0|g' \
+	      -e 's|@''REPLACE_LINKAT''@|0|g' \
+	      -e 's|@''REPLACE_LSEEK''@|0|g' \
+	      -e 's|@''REPLACE_PREAD''@|0|g' \
+	      -e 's|@''REPLACE_PWRITE''@|0|g' \
+	      -e 's|@''REPLACE_READ''@|0|g' \
+	      -e 's|@''REPLACE_READLINK''@|0|g' \
+	      -e 's|@''REPLACE_RMDIR''@|0|g' \
+	      -e 's|@''REPLACE_SLEEP''@|0|g' \
+	      -e 's|@''REPLACE_SYMLINK''@|0|g' \
+	      -e 's|@''REPLACE_TTYNAME_R''@|0|g' \
+	      -e 's|@''REPLACE_UNLINK''@|0|g' \
+	      -e 's|@''REPLACE_UNLINKAT''@|0|g' \
+	      -e 's|@''REPLACE_USLEEP''@|0|g' \
+	      -e 's|@''REPLACE_WRITE''@|0|g' \
+	      -e 's|@''UNISTD_H_HAVE_WINSOCK2_H''@|0|g' \
+	      -e 's|@''UNISTD_H_HAVE_WINSOCK2_H_AND_USE_SOCKETS''@|0|g' \
+	      -e '/definitions of _GL_FUNCDECL_RPL/r c++defs.h' \
+	      -e '/definition of _GL_ARG_NONNULL/r arg-nonnull.h' \
+	      -e '/definition of _GL_WARN_ON_USE/r warn-on-use.h'; \
+	} > unistd.h-t && \
+	mv unistd.h-t unistd.h
+rm -f unitypes.h-t unitypes.h && \
+	{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */'; \
+	  cat ./unitypes.in.h; \
+	} > unitypes.h-t && \
+	mv -f unitypes.h-t unitypes.h
+rm -f uniwidth.h-t uniwidth.h && \
+	{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */'; \
+	  cat ./uniwidth.in.h; \
+	} > uniwidth.h-t && \
+	mv -f uniwidth.h-t uniwidth.h
+make  all-am
+make[2]: Entering directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/srclib'
+make[3]: Entering directory `/tmp/libiconv.JdwmxQ/libiconv-1.14'
+make[3]: Nothing to be done for `am--refresh'.
+make[3]: Leaving directory `/tmp/libiconv.JdwmxQ/libiconv-1.14'
+gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I.. -I../lib  -I../intl -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -I/ffp/include  -I/ffp/include -O2 -D_GNU_SOURCE -pthread -c allocator.c
+gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I.. -I../lib  -I../intl -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -I/ffp/include  -I/ffp/include -O2 -D_GNU_SOURCE -pthread -c areadlink.c
+gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I.. -I../lib  -I../intl -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -I/ffp/include  -I/ffp/include -O2 -D_GNU_SOURCE -pthread -c careadlinkat.c
+gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I.. -I../lib  -I../intl -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -I/ffp/include  -I/ffp/include -O2 -D_GNU_SOURCE -pthread -c malloca.c
+gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I.. -I../lib  -I../intl -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -I/ffp/include  -I/ffp/include -O2 -D_GNU_SOURCE -pthread -c progname.c
+gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I.. -I../lib  -I../intl -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -I/ffp/include  -I/ffp/include -O2 -D_GNU_SOURCE -pthread -c safe-read.c
+gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I.. -I../lib  -I../intl -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -I/ffp/include  -I/ffp/include -O2 -D_GNU_SOURCE -pthread -c -o width.o `test -f 'uniwidth/width.c' || echo './'`uniwidth/width.c
+gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I.. -I../lib  -I../intl -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -I/ffp/include  -I/ffp/include -O2 -D_GNU_SOURCE -pthread -c xmalloc.c
+gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I.. -I../lib  -I../intl -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -I/ffp/include  -I/ffp/include -O2 -D_GNU_SOURCE -pthread -c xstrdup.c
+gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I.. -I../lib  -I../intl -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -I/ffp/include  -I/ffp/include -O2 -D_GNU_SOURCE -pthread -c xreadlink.c
+gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I.. -I../lib  -I../intl -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -I/ffp/include  -I/ffp/include -O2 -D_GNU_SOURCE -pthread -c canonicalize-lgpl.c
+rm -f libicrt.a
+ar cru libicrt.a allocator.o areadlink.o careadlinkat.o malloca.o progname.o safe-read.o width.o xmalloc.o xstrdup.o xreadlink.o canonicalize-lgpl.o
+ranlib libicrt.a
+make[2]: Leaving directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/srclib'
+make[1]: Leaving directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/srclib'
+cd src && make all
+make[1]: Entering directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/src'
+gcc -c -I. -I. -I.. -I../include -I./../include -I../srclib -I./../srclib -I../lib -I/ffp/include -O2 -D_GNU_SOURCE -pthread -I/ffp/include -DINSTALLDIR=\"/ffp/bin\" -DLOCALEDIR=\"/ffp/share/locale\" ./iconv_no_i18n.c
+/ffp/bin/sh ../libtool --mode=link gcc -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread  -I/ffp/include -O2 -D_GNU_SOURCE -pthread iconv_no_i18n.o ../srclib/libicrt.a ../lib/libiconv.la  -o iconv_no_i18n
+libtool: link: gcc -Wl,-rpath -Wl,/ffp/lib -I/ffp/include -O2 -D_GNU_SOURCE -pthread iconv_no_i18n.o -o .libs/iconv_no_i18n  -L/ffp/lib ../srclib/libicrt.a ../lib/.libs/libiconv.so -lpthread -pthread -Wl,-rpath -Wl,/ffp/lib
+gcc -c -I. -I. -I.. -I../include -I./../include -I../srclib -I./../srclib -I../lib -I/ffp/include -O2 -D_GNU_SOURCE -pthread -I/ffp/include -DINSTALLDIR=\"/ffp/bin\" -DLOCALEDIR=\"/ffp/share/locale\" ./iconv.c
+test `ls -ld . | sed -e 's/^d\(.........\).*/\1/'` = rwxrwxrwx || chmod 777 .
+make[1]: Leaving directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/src'
+cd po && make all
+make[1]: Entering directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/po'
+make[1]: Leaving directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/po'
+cd man && make all
+make[1]: Entering directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/man'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/man'
+if test -d tests; then cd tests && make all; fi
+make[1]: Entering directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/tests'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/tests'
++ make DESTDIR=/tmp/libiconv.JdwmxQ/pkg install
+cd libcharset && make install prefix='/ffp' exec_prefix='/ffp' libdir='/ffp/lib'
+make[1]: Entering directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/libcharset'
+cd lib && make install prefix='/ffp' exec_prefix='/ffp' libdir='/ffp/lib'
+make[2]: Entering directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/libcharset/lib'
+if test yes = no; then \
+	  case 'linux-gnu' in \
+	    darwin[56]*) \
+	      need_charset_alias=true ;; \
+	    darwin* | cygwin* | mingw* | pw32* | cegcc*) \
+	      need_charset_alias=false ;; \
+	    *) \
+	      need_charset_alias=true ;; \
+	  esac ; \
+	else \
+	  need_charset_alias=false ; \
+	fi ; \
+	/bin/sh ../build-aux/mkinstalldirs /tmp/libiconv.JdwmxQ/pkg/ffp/lib ; \
+	/ffp/bin/sh ../libtool --mode=install /ffp/bin/install -c -m 644 libcharset.la /tmp/libiconv.JdwmxQ/pkg/ffp/lib/libcharset.la
+mkdir -p -- /tmp/libiconv.JdwmxQ/pkg/ffp/lib
+libtool: install: /ffp/bin/install -c -m 644 .libs/libcharset.so.1.0.0 /tmp/libiconv.JdwmxQ/pkg/ffp/lib/libcharset.so.1.0.0
+libtool: install: (cd /tmp/libiconv.JdwmxQ/pkg/ffp/lib && { ln -s -f libcharset.so.1.0.0 libcharset.so.1 || { rm -f libcharset.so.1 && ln -s libcharset.so.1.0.0 libcharset.so.1; }; })
+libtool: install: (cd /tmp/libiconv.JdwmxQ/pkg/ffp/lib && { ln -s -f libcharset.so.1.0.0 libcharset.so || { rm -f libcharset.so && ln -s libcharset.so.1.0.0 libcharset.so; }; })
+libtool: install: /ffp/bin/install -c -m 644 .libs/libcharset.lai /tmp/libiconv.JdwmxQ/pkg/ffp/lib/libcharset.la
+libtool: install: /ffp/bin/install -c -m 644 .libs/libcharset.a /tmp/libiconv.JdwmxQ/pkg/ffp/lib/libcharset.a
+libtool: install: chmod 644 /tmp/libiconv.JdwmxQ/pkg/ffp/lib/libcharset.a
+libtool: install: ranlib /tmp/libiconv.JdwmxQ/pkg/ffp/lib/libcharset.a
+libtool: install: warning: remember to run `libtool --finish /ffp/lib'
+if test -f /tmp/libiconv.JdwmxQ/pkg/ffp/lib/charset.alias; then \
+	  sed -f ref-add.sed /tmp/libiconv.JdwmxQ/pkg/ffp/lib/charset.alias > /tmp/libiconv.JdwmxQ/pkg/ffp/lib/t-charset.alias; \
+	  /ffp/bin/install -c -m 644 /tmp/libiconv.JdwmxQ/pkg/ffp/lib/t-charset.alias /tmp/libiconv.JdwmxQ/pkg/ffp/lib/charset.alias; \
+	  rm -f /tmp/libiconv.JdwmxQ/pkg/ffp/lib/t-charset.alias; \
+	else \
+	  if $need_charset_alias; then \
+	    sed -f ref-add.sed charset.alias > /tmp/libiconv.JdwmxQ/pkg/ffp/lib/t-charset.alias; \
+	    /ffp/bin/install -c -m 644 /tmp/libiconv.JdwmxQ/pkg/ffp/lib/t-charset.alias /tmp/libiconv.JdwmxQ/pkg/ffp/lib/charset.alias; \
+	    rm -f /tmp/libiconv.JdwmxQ/pkg/ffp/lib/t-charset.alias; \
+	  fi ; \
+	fi
+make[2]: Leaving directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/libcharset/lib'
+/bin/sh ./build-aux/mkinstalldirs /tmp/libiconv.JdwmxQ/pkg/ffp/include
+mkdir -p -- /tmp/libiconv.JdwmxQ/pkg/ffp/include
+/ffp/bin/install -c -m 644 include/libcharset.h /tmp/libiconv.JdwmxQ/pkg/ffp/include/libcharset.h
+/ffp/bin/install -c -m 644 include/localcharset.h.inst /tmp/libiconv.JdwmxQ/pkg/ffp/include/localcharset.h
+make[1]: Leaving directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/libcharset'
+cd lib && make install prefix='/ffp' exec_prefix='/ffp' libdir='/ffp/lib'
+make[1]: Entering directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/lib'
+if [ ! -d /tmp/libiconv.JdwmxQ/pkg/ffp/lib ] ; then /bin/sh ../build-aux/mkinstalldirs /tmp/libiconv.JdwmxQ/pkg/ffp/lib ; fi
+/ffp/bin/sh ../libtool --mode=install /ffp/bin/install -c -m 644 libiconv.la /tmp/libiconv.JdwmxQ/pkg/ffp/lib/libiconv.la
+libtool: install: /ffp/bin/install -c -m 644 .libs/libiconv.so.2.5.1 /tmp/libiconv.JdwmxQ/pkg/ffp/lib/libiconv.so.2.5.1
+libtool: install: (cd /tmp/libiconv.JdwmxQ/pkg/ffp/lib && { ln -s -f libiconv.so.2.5.1 libiconv.so.2 || { rm -f libiconv.so.2 && ln -s libiconv.so.2.5.1 libiconv.so.2; }; })
+libtool: install: (cd /tmp/libiconv.JdwmxQ/pkg/ffp/lib && { ln -s -f libiconv.so.2.5.1 libiconv.so || { rm -f libiconv.so && ln -s libiconv.so.2.5.1 libiconv.so; }; })
+libtool: install: /ffp/bin/install -c -m 644 .libs/libiconv.lai /tmp/libiconv.JdwmxQ/pkg/ffp/lib/libiconv.la
+libtool: install: warning: remember to run `libtool --finish /ffp/lib'
+case "linux-gnueabi" in \
+	  aix*) (cd /tmp/libiconv.JdwmxQ/pkg/ffp/lib && \
+	         objects=`ar t libiconv.a`" "`ar t /lib/libiconv.a` && \
+	         ar x libiconv.a && ar x /lib/libiconv.a && \
+	         ar q libiconv.new.a $objects && \
+	         rm -f $objects && \
+	         mv -f libiconv.new.a libiconv.a) ;; \
+	esac
+make[1]: Leaving directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/lib'
+cd preload && make install prefix='/ffp' exec_prefix='/ffp' libdir='/ffp/lib'
+make[1]: Entering directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/preload'
+if [ ! -d /tmp/libiconv.JdwmxQ/pkg/ffp/lib ] ; then /bin/sh ./build-aux/mkinstalldirs /tmp/libiconv.JdwmxQ/pkg/ffp/lib ; fi
+if test -n "preloadable_libiconv.so"; then /ffp/bin/install -c -m 644 preloadable_libiconv.so /tmp/libiconv.JdwmxQ/pkg/ffp/lib/preloadable_libiconv.so.new && mv /tmp/libiconv.JdwmxQ/pkg/ffp/lib/preloadable_libiconv.so.new /tmp/libiconv.JdwmxQ/pkg/ffp/lib/preloadable_libiconv.so ; fi
+make[1]: Leaving directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/preload'
+cd srclib && make install prefix='/ffp' exec_prefix='/ffp' libdir='/ffp/lib'
+make[1]: Entering directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/srclib'
+make[2]: Entering directory `/tmp/libiconv.JdwmxQ/libiconv-1.14'
+make[2]: Nothing to be done for `am--refresh'.
+make[2]: Leaving directory `/tmp/libiconv.JdwmxQ/libiconv-1.14'
+make  install-am
+make[2]: Entering directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/srclib'
+make[3]: Entering directory `/tmp/libiconv.JdwmxQ/libiconv-1.14'
+make[3]: Nothing to be done for `am--refresh'.
+make[3]: Leaving directory `/tmp/libiconv.JdwmxQ/libiconv-1.14'
+make[3]: Entering directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/srclib'
+make[4]: Entering directory `/tmp/libiconv.JdwmxQ/libiconv-1.14'
+make[4]: Nothing to be done for `am--refresh'.
+make[4]: Leaving directory `/tmp/libiconv.JdwmxQ/libiconv-1.14'
+make[3]: Nothing to be done for `install-exec-am'.
+make[3]: Nothing to be done for `install-data-am'.
+make[3]: Leaving directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/srclib'
+make[2]: Leaving directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/srclib'
+make[1]: Leaving directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/srclib'
+cd src && make install prefix='/ffp' exec_prefix='/ffp' libdir='/ffp/lib'
+make[1]: Entering directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/src'
+test `ls -ld . | sed -e 's/^d\(.........\).*/\1/'` = rwxrwxrwx || chmod 777 .
+if [ ! -d /tmp/libiconv.JdwmxQ/pkg/ffp/bin ] ; then /bin/sh ../build-aux/mkinstalldirs /tmp/libiconv.JdwmxQ/pkg/ffp/bin ; fi
+mkdir -p -- /tmp/libiconv.JdwmxQ/pkg/ffp/bin
+case "linux-gnueabi" in \
+	  hpux*) gcc -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread  -I/ffp/include -O2 -D_GNU_SOURCE -pthread `if test -n ''; then  /ffp/bin; fi` iconv.o ../srclib/libicrt.a -L/tmp/libiconv.JdwmxQ/pkg/ffp/lib -liconv /ffp/lib/libintl.so /ffp/lib/libiconv.so /ffp/lib/libc.so -Wl,-rpath -Wl,/ffp/lib  `if test -n '/tmp/libiconv.JdwmxQ/pkg'; then echo " -Wl,+b -Wl,/ffp/lib"; fi` -o iconv;; \
+	  *) /ffp/bin/sh ../libtool --mode=link gcc -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread  -I/ffp/include -O2 -D_GNU_SOURCE -pthread `if test -n ''; then  /ffp/bin; fi` iconv.o ../srclib/libicrt.a /tmp/libiconv.JdwmxQ/pkg/ffp/lib/libiconv.la -L/ffp/lib -lintl -L/ffp/lib -liconv -L/ffp/lib -lc -R/ffp/lib  -o iconv;; \
+	esac
+libtool: link: gcc -Wl,-rpath -Wl,/ffp/lib -I/ffp/include -O2 -D_GNU_SOURCE -pthread iconv.o -o iconv  -L/ffp/lib ../srclib/libicrt.a -lpthread /ffp/lib/libintl.so /ffp/lib/libiconv.so -lc -pthread -Wl,-rpath -Wl,/ffp/lib -Wl,-rpath -Wl,/ffp/lib
+/ffp/bin/sh ../libtool --mode=install /ffp/bin/install -c iconv /tmp/libiconv.JdwmxQ/pkg/ffp/bin/iconv
+libtool: install: /ffp/bin/install -c iconv /tmp/libiconv.JdwmxQ/pkg/ffp/bin/iconv
+make[1]: Leaving directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/src'
+if [ ! -d /tmp/libiconv.JdwmxQ/pkg/ffp/include ] ; then /bin/sh ./build-aux/mkinstalldirs /tmp/libiconv.JdwmxQ/pkg/ffp/include ; fi
+/ffp/bin/install -c -m 644 include/iconv.h.inst /tmp/libiconv.JdwmxQ/pkg/ffp/include/iconv.h
+cd po && make install prefix='/ffp' exec_prefix='/ffp' datarootdir='/ffp/share' datadir='/ffp/share'
+make[1]: Entering directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/po'
+installing af.gmo as /tmp/libiconv.JdwmxQ/pkg/ffp/share/locale/af/LC_MESSAGES/libiconv.mo
+installing bg.gmo as /tmp/libiconv.JdwmxQ/pkg/ffp/share/locale/bg/LC_MESSAGES/libiconv.mo
+installing ca.gmo as /tmp/libiconv.JdwmxQ/pkg/ffp/share/locale/ca/LC_MESSAGES/libiconv.mo
+installing cs.gmo as /tmp/libiconv.JdwmxQ/pkg/ffp/share/locale/cs/LC_MESSAGES/libiconv.mo
+installing da.gmo as /tmp/libiconv.JdwmxQ/pkg/ffp/share/locale/da/LC_MESSAGES/libiconv.mo
+installing de.gmo as /tmp/libiconv.JdwmxQ/pkg/ffp/share/locale/de/LC_MESSAGES/libiconv.mo
+installing el.gmo as /tmp/libiconv.JdwmxQ/pkg/ffp/share/locale/el/LC_MESSAGES/libiconv.mo
+installing eo.gmo as /tmp/libiconv.JdwmxQ/pkg/ffp/share/locale/eo/LC_MESSAGES/libiconv.mo
+installing es.gmo as /tmp/libiconv.JdwmxQ/pkg/ffp/share/locale/es/LC_MESSAGES/libiconv.mo
+installing et.gmo as /tmp/libiconv.JdwmxQ/pkg/ffp/share/locale/et/LC_MESSAGES/libiconv.mo
+installing fi.gmo as /tmp/libiconv.JdwmxQ/pkg/ffp/share/locale/fi/LC_MESSAGES/libiconv.mo
+installing fr.gmo as /tmp/libiconv.JdwmxQ/pkg/ffp/share/locale/fr/LC_MESSAGES/libiconv.mo
+installing ga.gmo as /tmp/libiconv.JdwmxQ/pkg/ffp/share/locale/ga/LC_MESSAGES/libiconv.mo
+installing gl.gmo as /tmp/libiconv.JdwmxQ/pkg/ffp/share/locale/gl/LC_MESSAGES/libiconv.mo
+installing hr.gmo as /tmp/libiconv.JdwmxQ/pkg/ffp/share/locale/hr/LC_MESSAGES/libiconv.mo
+installing hu.gmo as /tmp/libiconv.JdwmxQ/pkg/ffp/share/locale/hu/LC_MESSAGES/libiconv.mo
+installing id.gmo as /tmp/libiconv.JdwmxQ/pkg/ffp/share/locale/id/LC_MESSAGES/libiconv.mo
+installing it.gmo as /tmp/libiconv.JdwmxQ/pkg/ffp/share/locale/it/LC_MESSAGES/libiconv.mo
+installing ja.gmo as /tmp/libiconv.JdwmxQ/pkg/ffp/share/locale/ja/LC_MESSAGES/libiconv.mo
+installing nl.gmo as /tmp/libiconv.JdwmxQ/pkg/ffp/share/locale/nl/LC_MESSAGES/libiconv.mo
+installing pl.gmo as /tmp/libiconv.JdwmxQ/pkg/ffp/share/locale/pl/LC_MESSAGES/libiconv.mo
+installing pt_BR.gmo as /tmp/libiconv.JdwmxQ/pkg/ffp/share/locale/pt_BR/LC_MESSAGES/libiconv.mo
+installing rm.gmo as /tmp/libiconv.JdwmxQ/pkg/ffp/share/locale/rm/LC_MESSAGES/libiconv.mo
+installing ro.gmo as /tmp/libiconv.JdwmxQ/pkg/ffp/share/locale/ro/LC_MESSAGES/libiconv.mo
+installing ru.gmo as /tmp/libiconv.JdwmxQ/pkg/ffp/share/locale/ru/LC_MESSAGES/libiconv.mo
+installing sk.gmo as /tmp/libiconv.JdwmxQ/pkg/ffp/share/locale/sk/LC_MESSAGES/libiconv.mo
+installing sl.gmo as /tmp/libiconv.JdwmxQ/pkg/ffp/share/locale/sl/LC_MESSAGES/libiconv.mo
+installing sq.gmo as /tmp/libiconv.JdwmxQ/pkg/ffp/share/locale/sq/LC_MESSAGES/libiconv.mo
+installing sr.gmo as /tmp/libiconv.JdwmxQ/pkg/ffp/share/locale/sr/LC_MESSAGES/libiconv.mo
+installing sv.gmo as /tmp/libiconv.JdwmxQ/pkg/ffp/share/locale/sv/LC_MESSAGES/libiconv.mo
+installing tr.gmo as /tmp/libiconv.JdwmxQ/pkg/ffp/share/locale/tr/LC_MESSAGES/libiconv.mo
+installing uk.gmo as /tmp/libiconv.JdwmxQ/pkg/ffp/share/locale/uk/LC_MESSAGES/libiconv.mo
+installing vi.gmo as /tmp/libiconv.JdwmxQ/pkg/ffp/share/locale/vi/LC_MESSAGES/libiconv.mo
+installing wa.gmo as /tmp/libiconv.JdwmxQ/pkg/ffp/share/locale/wa/LC_MESSAGES/libiconv.mo
+installing zh_CN.gmo as /tmp/libiconv.JdwmxQ/pkg/ffp/share/locale/zh_CN/LC_MESSAGES/libiconv.mo
+installing zh_TW.gmo as /tmp/libiconv.JdwmxQ/pkg/ffp/share/locale/zh_TW/LC_MESSAGES/libiconv.mo
+if test "libiconv" = "gettext-tools"; then \
+	  /ffp/bin/mkdir -p /tmp/libiconv.JdwmxQ/pkg/ffp/share/gettext/po; \
+	  for file in Makefile.in.in remove-potcdate.sin quot.sed boldquot.sed en@quot.header en@boldquot.header insert-header.sin Rules-quot   Makevars.template; do \
+	    /ffp/bin/install -c -m 644 ./$file \
+			    /tmp/libiconv.JdwmxQ/pkg/ffp/share/gettext/po/$file; \
+	  done; \
+	  for file in Makevars; do \
+	    rm -f /tmp/libiconv.JdwmxQ/pkg/ffp/share/gettext/po/$file; \
+	  done; \
+	else \
+	  : ; \
+	fi
+make[1]: Leaving directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/po'
+cd man && make install prefix='/ffp' exec_prefix='/ffp' datarootdir='/ffp/share' datadir='/ffp/share' mandir='/ffp/share/man'
+make[1]: Entering directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/man'
+if [ ! -d /tmp/libiconv.JdwmxQ/pkg/ffp/share/man/man1 ] ; then /bin/sh ../build-aux/mkinstalldirs /tmp/libiconv.JdwmxQ/pkg/ffp/share/man/man1 ; fi
+mkdir -p -- /tmp/libiconv.JdwmxQ/pkg/ffp/share/man/man1
+builddir="`pwd`"; cd . && for f in *.1 ; do (cd "$builddir"; echo /ffp/bin/install -c -m 644 ./$f /tmp/libiconv.JdwmxQ/pkg/ffp/share/man/man1/$f ; /ffp/bin/install -c -m 644 ./$f /tmp/libiconv.JdwmxQ/pkg/ffp/share/man/man1/$f) ; done
+/ffp/bin/install -c -m 644 ./iconv.1 /tmp/libiconv.JdwmxQ/pkg/ffp/share/man/man1/iconv.1
+if [ ! -d /tmp/libiconv.JdwmxQ/pkg/ffp/share/man/man3 ] ; then /bin/sh ../build-aux/mkinstalldirs /tmp/libiconv.JdwmxQ/pkg/ffp/share/man/man3 ; fi
+mkdir -p -- /tmp/libiconv.JdwmxQ/pkg/ffp/share/man/man3
+builddir="`pwd`"; cd . && for f in *.3 ; do (cd "$builddir"; echo /ffp/bin/install -c -m 644 ./$f /tmp/libiconv.JdwmxQ/pkg/ffp/share/man/man3/$f ; /ffp/bin/install -c -m 644 ./$f /tmp/libiconv.JdwmxQ/pkg/ffp/share/man/man3/$f) ; done
+/ffp/bin/install -c -m 644 ./iconv.3 /tmp/libiconv.JdwmxQ/pkg/ffp/share/man/man3/iconv.3
+/ffp/bin/install -c -m 644 ./iconv_close.3 /tmp/libiconv.JdwmxQ/pkg/ffp/share/man/man3/iconv_close.3
+/ffp/bin/install -c -m 644 ./iconv_open.3 /tmp/libiconv.JdwmxQ/pkg/ffp/share/man/man3/iconv_open.3
+/ffp/bin/install -c -m 644 ./iconv_open_into.3 /tmp/libiconv.JdwmxQ/pkg/ffp/share/man/man3/iconv_open_into.3
+/ffp/bin/install -c -m 644 ./iconvctl.3 /tmp/libiconv.JdwmxQ/pkg/ffp/share/man/man3/iconvctl.3
+if [ ! -d /tmp/libiconv.JdwmxQ/pkg/ffp/share/doc/libiconv ] ; then /bin/sh ../build-aux/mkinstalldirs /tmp/libiconv.JdwmxQ/pkg/ffp/share/doc/libiconv ; fi
+mkdir -p -- /tmp/libiconv.JdwmxQ/pkg/ffp/share/doc/libiconv
+builddir="`pwd`"; cd . && for f in *.html ; do (cd "$builddir"; echo /ffp/bin/install -c -m 644 ./$f /tmp/libiconv.JdwmxQ/pkg/ffp/share/doc/libiconv/$f ; /ffp/bin/install -c -m 644 ./$f /tmp/libiconv.JdwmxQ/pkg/ffp/share/doc/libiconv/$f) ; done
+/ffp/bin/install -c -m 644 ./iconv.1.html /tmp/libiconv.JdwmxQ/pkg/ffp/share/doc/libiconv/iconv.1.html
+/ffp/bin/install -c -m 644 ./iconv.3.html /tmp/libiconv.JdwmxQ/pkg/ffp/share/doc/libiconv/iconv.3.html
+/ffp/bin/install -c -m 644 ./iconv_close.3.html /tmp/libiconv.JdwmxQ/pkg/ffp/share/doc/libiconv/iconv_close.3.html
+/ffp/bin/install -c -m 644 ./iconv_open.3.html /tmp/libiconv.JdwmxQ/pkg/ffp/share/doc/libiconv/iconv_open.3.html
+/ffp/bin/install -c -m 644 ./iconv_open_into.3.html /tmp/libiconv.JdwmxQ/pkg/ffp/share/doc/libiconv/iconv_open_into.3.html
+/ffp/bin/install -c -m 644 ./iconvctl.3.html /tmp/libiconv.JdwmxQ/pkg/ffp/share/doc/libiconv/iconvctl.3.html
+make[1]: Leaving directory `/tmp/libiconv.JdwmxQ/libiconv-1.14/man'
++ mkdir -p /tmp/libiconv.JdwmxQ/pkg/install
++ cp /ffp/home/root/fun_plug/ffp_packages/libiconv/DESCR /ffp/home/root/fun_plug/ffp_packages/libiconv/HOMEPAGE /tmp/libiconv.JdwmxQ/pkg/install/
++ cd /tmp/libiconv.JdwmxQ/pkg
++ makepkg libiconv 1.14 1
+Creating /tmp/libiconv-1.14-arm-1.tar ...
+sending incremental file list
+libiconv-1.14-arm-1.tar
+
+sent 1410091 bytes  received 31 bytes  76222.81 bytes/sec
+total size is 1472778240  speedup is 1044.43
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libatomic_ops-git-20130417-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/ghostscript-9.06-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/most-pre5.1-14-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/beautifulsoup4-4.0.0b9-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gnunet-0.9.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/guile-2.0.9-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/parted-3.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/cmake-2.8.7-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libsigc++-2.2.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1192-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/harfbuzz-0.9.9-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/Python-3.3.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/par-1.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/dtach-0.8-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1218-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/vim-7.3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gnuplot-4.4.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1283-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/xupnpd-383-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/tor-0.2.3.25-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/fontconfig-2.8.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/rtmpdump-2.3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libev-4.11-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/setuptools-0.6c11-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/tokyotyrant-1.1.41-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/less-457-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libmicrohttpd-0.9.19-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/lzo-2.06-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/liboop-20130521-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/cairo-1.12.8-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/Django-1.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libspectre-0.2.7-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/protobuf-2.4.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/unrar-4.1.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/php-5.4.11-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/openssl-1.0.0g-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libgpg-error-1.10-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/node-v0.6.10-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/xvidcore-1.3.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/Python-2.7.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gcc-solibs-4.6.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1260-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/BeautifulSoup-3.2.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libunistring-0.9.3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gnuplot-4.4.4-arm-2.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/nut-2.6.5-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/fontconfig-2.10.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/freetype-2.4.8-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/pango-1.32.3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/sshpass-1.05-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/miniupnpc-1.8.20130503-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/tokyocabinet-1.4.47-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/nzbget-0.8.0r394-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libgcrypt-1.5.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1267-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/swig-2.0.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1182-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/netatalk-3.0.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/par2cmdline-0.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/neon-0.29.6-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/berkeleydb-5.1.19-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/cherokee-130207-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/attr-2.4.46-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gcc-4.6.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/php-5.4.13-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/openssh-6.1p1-arm-4-node.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/sendmail-8.14.5-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/openssl-1.0.1c-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/php-5.4.14-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/mysecureshell-1.30-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/bdwgc-git-20130417-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libextractor-0.6.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/Python-2.7.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/Python-2.7.3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gnupg-1.4.8-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/cksfv-1.3.14-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/git-1.8.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gnufdisk-2.0.0a-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/nail-20120224-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1217-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/slang-pre2.3.0-68-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/zsh-5.0.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/php-5.5.0beta3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/ImageMagick-6.8.2-9-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/wdfs-1.4.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/seeks-20120224-arm-2.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libargp-20110921-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/lsh-2.0.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/opencv-2.3.1-arm-2.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/p7zip-9.20.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libmms-0.6.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/links-2.7-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/node-0.8.21-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1214-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libgd-2.0.33-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/M2Crypto-0.21.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/cifs-utils-git-20120302-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1359-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/git-1.8.2.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/rrdtool-1.4.5-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libpar2-0.2-arm-2.txz
+ADD /home2/memiksfr/subdomains/ffp/pkg/libiconv-1.14-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libpar2-0.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/node-0.8.21-arm-2.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/openssh-6.1p1-arm-4.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/pixman-0.28.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/zlib-1.2.6-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/glib-2.35.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1222-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MPlayer-1.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/isync-1.0.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libffi-3.0.11-arm-1.txz
+95f341c4aaf4ea5118d10bb529c15a94  BeautifulSoup-3.2.1-arm-1.txz
+a1e0ad986d101c81735bcdaa73ed1120  Django-1.4-arm-1.txz
+8a03198597eb048966609fa7e85081cb  ImageMagick-6.8.2-9-arm-1.txz
+ed100bdde17d72a8de04fe76bf507c27  M2Crypto-0.21.1-arm-1.txz
+982aeaa56561d1a47906af083a198b4e  MCServer-1182-arm-1.txz
+f43e8c2fa9ed0649943984454f93e205  MCServer-1192-arm-1.txz
+59fcfcf1b1ce120f0667436648288811  MCServer-1214-arm-1.txz
+286cba7502f2e28048679877cfdaadcf  MCServer-1217-arm-1.txz
+a196fc6af4ffdc1332a30aedf7b9a8b7  MCServer-1218-arm-1.txz
+866887febd98b38b784f3eaf8a2211b4  MCServer-1222-arm-1.txz
+28bffa04cd4865b1116b9ac2953462ef  MCServer-1260-arm-1.txz
+2a04bdde5efc99df870f2afc1c823038  MCServer-1267-arm-1.txz
+acd360f67af8840035ce045ab8187e3f  MCServer-1283-arm-1.txz
+65cae87083e7251844f83940a019aea5  MCServer-1359-arm-1.txz
+0db42aed04763a412e09295b7879ce42  MPlayer-1.1-arm-1.txz
+a3d7a6d1f4d1ead00ef46940ba2f3bcc  Python-2.7.2-arm-1.txz
+0c0c5ee79714df0686e52cf9775c16bc  Python-2.7.3-arm-1.txz
+7fd7c65f6db3f5080db928f916170028  Python-2.7.4-arm-1.txz
+55a2f685c893cfd91fd418db3e26be35  Python-3.3.0-arm-1.txz
+032ac662c6dd9de1b3cd9b11f533b116  attr-2.4.46-arm-1.txz
+a9c00879a9952577e76bc54f1a523501  bdwgc-git-20130417-arm-1.txz
+85ef9e1adaa758c1f8587c4556799f69  beautifulsoup4-4.0.0b9-arm-1.txz
+6ff8d6a390e744dd99e8d7a7e61b6de2  berkeleydb-5.1.19-arm-1.txz
+32d26bc2fb54e3151a3b10029b310a0e  cairo-1.12.8-arm-1.txz
+01effab30ea00b69d40f4b9f509f55ff  cherokee-130207-arm-1.txz
+49ecff75fd683d7bd3b219c955593780  cifs-utils-git-20120302-arm-1.txz
+d33d4de033f5734caa97fb64d220a52b  cksfv-1.3.14-arm-1.txz
+ac0cd5691e28b0bcf1f1de6733a86460  cmake-2.8.7-arm-1.txz
+fd44ad8cf4a284e8ae90798467fd345b  dtach-0.8-arm-1.txz
+473b0116a2dbd50121f48097b2e5a829  fontconfig-2.10.2-arm-1.txz
+6be66afb530ab8c7c079e91a13e65ca3  fontconfig-2.8.0-arm-1.txz
+f77c4c8c754b164d05ed1b6e0c4c3ec3  freetype-2.4.8-arm-1.txz
+d2c81249d4bf660ba5c20991c8e86fb4  gcc-4.6.2-arm-1.txz
+e9ee3add43dea9b356feaa4fdbca5fe2  gcc-solibs-4.6.2-arm-1.txz
+fdedc4578b52177d1d36dc48c019e359  ghostscript-9.06-arm-1.txz
+4f283bc42de500a9fe9d6a2e7dae7be4  git-1.8.0-arm-1.txz
+124e02a1eec50b33d8f1c72cf768c572  git-1.8.2.1-arm-1.txz
+102f8bf9b770e8e7701b8ac9cf4e938c  glib-2.35.2-arm-1.txz
+dd86ef680e23d649c7034ceb70f1e420  gnufdisk-2.0.0a-arm-1.txz
+03f8318c94b5154ff9370961ace3567e  gnunet-0.9.2-arm-1.txz
+338c45bfe0571d896fdf12833397b8a6  gnupg-1.4.8-arm-1.txz
+3da6e410046d049a9de0952ced17d207  gnuplot-4.4.4-arm-1.txz
+9e22f867fddbb011ae97fbb522027188  gnuplot-4.4.4-arm-2.txz
+697c54482c649bcbcfa078a211ab1ba8  guile-2.0.9-arm-1.txz
+d863b220986066854ac7c9b0afb20faa  harfbuzz-0.9.9-arm-1.txz
+704d33fe923ead8b65f73ec35eee3993  isync-1.0.4-arm-1.txz
+82a6edbe7ba4f8e27d76dc36b1fb0fa3  less-457-arm-1.txz
+358f7bbfbb6b011715b2e7c5b4cdf2ba  libargp-20110921-arm-1.txz
+cdf7b3acf8e021921e1e2f696b21b12f  libatomic_ops-git-20130417-arm-1.txz
+0c54f33ceaa95ff640e77ec2378a124e  libev-4.11-arm-1.txz
+cbfd7cd569281a9ed6fa2313c30939ed  libextractor-0.6.2-arm-1.txz
+2d1b88015a8dd263f557fb27043e53f8  libffi-3.0.11-arm-1.txz
+f729e959f7a3bc84258d734f81214621  libgcrypt-1.5.0-arm-1.txz
+664311c312926ca30c077a89baebce93  libgd-2.0.33-arm-1.txz
+8ba41420fa0aab68345956455934bc00  libgpg-error-1.10-arm-1.txz
+d111af3855b8c53e4eb17a65223e4412  libiconv-1.14-arm-1.txz
+1c150a8bb838d5c6fec063b67d324c59  libmicrohttpd-0.9.19-arm-1.txz
+c9e9f52bd5ac9f9e2512345223a3b274  libmms-0.6.2-arm-1.txz
+92e4b9b7e27e392bdf0821b65a8cc49c  liboop-20130521-arm-1.txz
+d0ba07ffb41f8c8072c3a72c642fd6ed  libpar2-0.2-arm-1.txz
+3c5701c05ab95f986e01253ad94a8650  libpar2-0.2-arm-2.txz
+1e1c96e71aef38f9bbba4d5b203342fe  libsigc++-2.2.0-arm-1.txz
+549f4f792f3f414dc11a2543aa27a0ff  libspectre-0.2.7-arm-1.txz
+362fecb4327b4db509cc27c8377e3da5  libunistring-0.9.3-arm-1.txz
+aa138e6d77ad3953671610579cc3d42b  links-2.7-arm-1.txz
+05d3cae428d3fe660e2d737c915c7c65  lsh-2.0.4-arm-1.txz
+aff618deb5ab34b9ac7a03e0d8154838  lzo-2.06-arm-1.txz
+93e07aea57558da5c62ae0554a2a63f2  miniupnpc-1.8.20130503-arm-1.txz
+f855d164949e7acc18fa4aaf101c0d04  most-pre5.1-14-arm-1.txz
+e96e21b39bfa4d7eb5d44b5228fe7b70  mysecureshell-1.30-arm-1.txz
+cfb7825ee4f94260672690d154f2b6e3  nail-20120224-arm-1.txz
+0a14881eadc441ccdcfcd31bea56bcdd  neon-0.29.6-arm-1.txz
+9a89b60c336964997604fae4ed17695e  netatalk-3.0.2-arm-1.txz
+6029909b3d503980c034bd39478c0be1  node-0.8.21-arm-1.txz
+8a7d226e05c96bbcb6d53615c8358a7b  node-0.8.21-arm-2.txz
+87293f8ac425e78b4fd4ea49597b9cb0  node-v0.6.10-arm-1.txz
+71de0746bef03bd0f6edcfc667d19a6c  nut-2.6.5-arm-1.txz
+3a2df95f41ab7e1b0f0b81e874fb0812  nzbget-0.8.0r394-arm-1.txz
+083f7fd632357f1cce627207fb4552d3  opencv-2.3.1-arm-2.txz
+74894e01f5a6c68dc684a058883adce1  openssh-6.1p1-arm-4-node.txz
+ca1211de85f0f37d3a8e91d62fc63ab9  openssh-6.1p1-arm-4.txz
+c446b1a2cdfb22283d06cdc1696f69ef  openssl-1.0.0g-arm-1.txz
+1a6b123a0d2d852c49cd3b59dd162587  openssl-1.0.1c-arm-1.txz
+2739d61c04fef5e9c14703d3414a12b4  p7zip-9.20.1-arm-1.txz
+b6587c19ed46af536599c44164f30062  pango-1.32.3-arm-1.txz
+31aab821d024ee722d8086de0aaec3af  par-1.1-arm-1.txz
+40e39f90d6ffc36a13ed1266eaa233af  par2cmdline-0.4-arm-1.txz
+b0bf2733a984c43aa5ae222caf6ed652  parted-3.1-arm-1.txz
+50bb839f538148a881ce720ac210d8cb  php-5.4.11-arm-1.txz
+54868d5f85ba92baadd3f4dfafaebcbe  php-5.4.13-arm-1.txz
+28fccad42a83e371f834863b7a6acf65  php-5.4.14-arm-1.txz
+60cf27986a25f0c1e48759e28f30b39e  php-5.5.0beta3-arm-1.txz
+ac2a6618d9bff07b61619eb43e444f76  pixman-0.28.0-arm-1.txz
+6193b8bc9c34ed897730111343822d4f  protobuf-2.4.1-arm-1.txz
+16e33376597489b17fc80cc37d00fc5c  rrdtool-1.4.5-arm-1.txz
+a9950a1a97c267804ff19d08aa6d9525  rtmpdump-2.3-arm-1.txz
+4fa15a6145d7b868d687b8eba8279abc  seeks-20120224-arm-2.txz
+d949e5826b587dfcbb4fc5127b9914bc  sendmail-8.14.5-arm-1.txz
+3b684329a947e339bcf852abccb64a72  setuptools-0.6c11-arm-1.txz
+97642aff8413275eadf07642783a7570  slang-pre2.3.0-68-arm-1.txz
+672ee83f6e2b613bbbf9aad110c52a8f  sshpass-1.05-arm-1.txz
+50001317da06eb57e8898c2e2c590c20  swig-2.0.4-arm-1.txz
+6c49bfc80064b5760b761b57f119c8ed  tokyocabinet-1.4.47-arm-1.txz
+276175e3bd3f5f00e0f5729b013790b0  tokyotyrant-1.1.41-arm-1.txz
+d800d890172e3b93db736db52bdb6de8  tor-0.2.3.25-arm-1.txz
+175f16b06006a17e1ce953e370f369c8  unrar-4.1.4-arm-1.txz
+51da0ea5b5cd3b92dc196ce0ccee8789  vim-7.3-arm-1.txz
+012b27f2e1bc2848263c6d1879589e0d  wdfs-1.4.2-arm-1.txz
+262e997d805600f7080e12cec9e094a8  xupnpd-383-arm-1.txz
+5f93016524482301a080ccbceeaa1413  xvidcore-1.3.2-arm-1.txz
+18c2e4aa1dcfa44fe7f49784d7414846  zlib-1.2.6-arm-1.txz
+4deac8f4478776eb8988b0949dce9854  zsh-5.0.2-arm-1.txz
