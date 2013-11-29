@@ -1,0 +1,20 @@
+--- scheduler.c.orig	2012-03-14 14:59:59.000000000 +0100
++++ scheduler.c	2012-03-14 15:00:07.000000000 +0100
+@@ -37,7 +37,7 @@
+ 
+ 
+ #ifdef LINUX
+-#include "execinfo.h"
++//#include "execinfo.h"
+ 
+ /**
+  * Use lsof to generate file descriptor reports on select error?
+@@ -48,7 +48,7 @@
+ /**
+  * Obtain trace information for all scheduler calls that schedule tasks.
+  */
+-#define EXECINFO GNUNET_NO
++//#define EXECINFO GNUNET_NO
+ 
+ /**
+  * Check each file descriptor before adding

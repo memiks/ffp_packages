@@ -1,0 +1,10 @@
+--- gnunet-helper-exit.orig	2012-03-14 16:48:14.000000000 +0100
++++ gnunet-helper-exit.c	2012-03-14 16:48:34.000000000 +0100
+@@ -43,6 +43,7 @@
+  */
+ #include "platform.h"
+ #include <linux/if_tun.h>
++#include <linux/mii.h>
+ 
+ /**
+  * Need 'struct GNUNET_MessageHeader'.
