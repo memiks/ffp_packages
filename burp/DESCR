@@ -1,0 +1,8 @@
+CouchPotato is an automatic NZB and torrent downloader.
+You can keep a "want to watch"-list and it will search for NZBs/torrents
+ of these items every X hours. Once a correct release is found, matching
+ the correct quality, it will send it to SABnzbd or download the .nzb or
+ .torrent to a specified directory. 
+
+Homepage: http://couchpota.to/
+
