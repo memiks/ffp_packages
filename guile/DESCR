@@ -1,0 +1,17 @@
+ Guile is the GNU Ubiquitous Intelligent Language for Extensions, the 
+official extension language for the GNU operating system. 
+
+Guile is a library designed to help programmers create flexible 
+applications. Using Guile in an application allows the application's 
+functionality to be extended by users or other programmers with 
+plug-ins, modules, or scripts. Guile provides what might be described as 
+"practical software freedom," making it possible for users to customize 
+an application to meet their needs without digging into the 
+application's internals. 
+
+There is a long list of proven applications that employ extension 
+languages. Successful and long-lived examples of Free Software projects 
+that use Guile are TeXmacs, LilyPond, and GnuCash. 
+
+Homepage: http://www.gnu.org/software/guile/
+
