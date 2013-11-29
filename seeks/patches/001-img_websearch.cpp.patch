@@ -1,0 +1,11 @@
+--- src/plugins/img_websearch/img_websearch.orig.cpp	2012-10-09 09:52:25.000000000 +0200
++++ src/plugins/img_websearch/img_websearch.cpp	2012-10-09 09:52:53.000000000 +0200
+@@ -429,7 +429,7 @@
+     else
+       {
+         csp->_content_type = CT_JSON;
+-        err = json_renderer::render_json_results(qc->_cached_snippets,
++        json_renderer::render_json_results(qc->_cached_snippets,
+               csp,rsp,parameters,qc,0.0,true);
+       }
+ 

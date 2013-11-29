@@ -1,0 +1,64 @@
+#!/ffp/bin/sh -xe
+
+PN=$(basename $0 .funpkg)
+#PV=$(date +%Y%m%d)
+PR=1
+
+. ./config.ffp
+
+X=$(pwd)
+W=$(mktemp -t -d $PN.XXXXXX)
+D=$W/pkg
+
+cd $W
+cat $X/SRC_URI | xargs wget --no-check-certificate 
+PV=$(ls $PN-*.tar* | egrep -o '[0-9][0-9.]*[0-9]*[0-9]')
+tar xf $PN-$PV.tar*
+cd $PN-*
+
+#git checkout --track -b experimental origin/experimental
+
+#for file in `ls $X/patches/*.patch`
+#do
+#        patch -p0 -i $file
+#done
+
+
+# patch to replace opencv_1.0 dependancies to opencv_2.x
+#sed -e 's/cxflann.h/cv.h/g' src/plugins/img_websearch/ocvsurf.cpp > ocvsurf.cpp
+#mv ocvsurf.cpp src/plugins/img_websearch/
+
+#LDFLAGS="$FFP_LDFLAGS -lc" ./autogen.sh
+
+for file in `ls $X/patches/*.patch`
+do
+        patch -p0 -i $file
+done
+
+
+LDFLAGS="$FFP_LDFLAGS -lc" \
+./configure \
+	--prefix=/ffp \
+	--enable-httpserv-plugin
+#	--without-libevent 
+#	--disable-opencv
+
+
+LDFLAGS="$FFP_LDFLAGS -lc" make
+
+
+LDFLAGS="$FFP_LDFLAGS -lc" make DESTDIR=$D install
+
+
+mkdir -p $D/ffp/start
+install -m 0644 $X/start-seeks.sh $D/ffp/start/seeks.sh
+
+cp $X/seeks-config $D/ffp/etc/seeks/config
+cp $X/seeks-websearch-config $D/ffp/etc/seeks/websearch-config
+
+mkdir -p $D/install
+cp $X/{DESCR,HOMEPAGE} $D/install/
+
+cd $D
+makepkg $PN $PV $PR
+

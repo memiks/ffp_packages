@@ -1,0 +1,11 @@
+--- src/plugins/img_websearch/ocvsurf.orig.cpp	2012-10-09 13:43:35.000000000 +0200
++++ src/plugins/img_websearch/ocvsurf.cpp	2012-10-09 13:43:50.000000000 +0200
+@@ -29,7 +29,7 @@
+ #include "miscutil.h"
+ #include "errlog.h"
+ 
+-#include <cxflann.h>
++#include <cv.h>
+ 
+ #include <iostream>
+ #include <fstream>

@@ -1,0 +1,23 @@
+iSeeks implements a decentralized Peer-to-Peer architecture:
+install Seeks on your machine, server or laptop, 
+and automatically start sharing results. 
+
+While users share queries over the Peer-to-Peer network, 
+Seeks protects your privacy by sending encrypted query 
+fragments to peers. 
+
+This scheme makes it difficult for other peers to devise your initial...
+
+Seeks is Free Software, and distributed under the AGPLv3 license.
+
+Through open code and data formats, Seeks allows you to regain control 
+over your selection of results and to build a personnal profile 
+you can share with others. 
+
+This is your control over curation of any feed of textual and image data. 
+
+Seeks is decentralized and lets users share through passive 
+collaborative filtering.
+
+Homepage: http://www.seeks-project.info/site/
+
