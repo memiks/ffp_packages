@@ -1,0 +1,273 @@
+++ basename ./shellinabox.funpkg .funpkg
++ PN=shellinabox
++ PR=1
++ . ./config.ffp
+++ GNU_HOST=
+++ GNU_TARGET=
+++ FFP_CFLAGS='-I/ffp/include -O2'
+++ FFP_LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
+++ '[' '!' -d '' ']'
+++ TMPDIR=/tmp
+++ export TMPDIR
+++ mandir=/ffp/share/man
+++ infodir=/ffp/share/info
+++ docdir=/ffp/share/doc
+++ pwd
++ X=/ffp/home/root/fun_plug/ffp_packages/shellinabox
+++ mktemp -t -d shellinabox.XXXXXX
++ W=/tmp/shellinabox.SnuNgQ
++ D=/tmp/shellinabox.SnuNgQ/pkg
++ cd /tmp/shellinabox.SnuNgQ
++ cat /ffp/home/root/fun_plug/ffp_packages/shellinabox/SRC_URI
++ xargs wget
+--2012-11-16 13:27:19--  http://shellinabox.googlecode.com/files/shellinabox-2.14.tar.gz
+Resolving shellinabox.googlecode.com... 2a00:1450:4013:c00::52, 74.125.136.82
+Connecting to shellinabox.googlecode.com|2a00:1450:4013:c00::52|:80... failed: Address family not supported by protocol.
+Connecting to shellinabox.googlecode.com|74.125.136.82|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 544919 (532K) [application/x-gzip]
+Saving to: `shellinabox-2.14.tar.gz'
+
+     0K .......... .......... .......... .......... ..........  9%  340K 1s
+    50K .......... .......... .......... .......... .......... 18%  385K 1s
+   100K .......... .......... .......... .......... .......... 28% 90.1K 2s
+   150K .......... .......... .......... .......... .......... 37%  258K 2s
+   200K .......... .......... .......... .......... .......... 46%  205K 1s
+   250K .......... .......... .......... .......... .......... 56%  181K 1s
+   300K .......... .......... .......... .......... .......... 65%  258K 1s
+   350K .......... .......... .......... .......... .......... 75%  262K 1s
+   400K .......... .......... .......... .......... .......... 84%  204K 0s
+   450K .......... .......... .......... .......... .......... 93%  337K 0s
+   500K .......... .......... .......... ..                   100% 61.2K=2.8s
+
+2012-11-16 13:27:22 (187 KB/s) - `shellinabox-2.14.tar.gz' saved [544919/544919]
+
+++ ls shellinabox-2.14.tar.gz
+++ egrep -o '[0-9][0-9.]*[0-9]'
++ PV=2.14
++ tar xf shellinabox-2.14.tar.gz
++ cd shellinabox-2.14 shellinabox-2.14.tar.gz
++ LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
++ ./configure --prefix=/ffp --build= --host= --mandir=/ffp/share/man --infodir=/ffp/share/info
+checking for a BSD-compatible install... /ffp/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /ffp/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for style of include used by make... GNU
+checking dependency style of gcc... gcc3
+checking build system type... armv5tejl-unknown-linux-gnueabi
+checking host system type... armv5tejl-unknown-linux-gnueabi
+checking for a sed that does not truncate output... /ffp/bin/sed
+checking for grep that handles long lines and -e... /ffp/bin/grep
+checking for egrep... /ffp/bin/grep -E
+checking for fgrep... /ffp/bin/grep -F
+checking for ld used by gcc... /ffp/bin/ld
+checking if the linker (/ffp/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /ffp/bin/nm -B
+checking the name lister (/ffp/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking for /ffp/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for ar... ar
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /ffp/bin/nm -B output from gcc object... ok
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/ffp/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for an ANSI C-conforming const... yes
+checking whether gcc needs -traditional... no
+checking libutil.h usability... no
+checking libutil.h presence... no
+checking for libutil.h... no
+checking pthread.h usability... yes
+checking pthread.h presence... yes
+checking for pthread.h... yes
+checking pty.h usability... yes
+checking pty.h presence... yes
+checking for pty.h... yes
+checking for strings.h... (cached) yes
+checking sys/prctl.h usability... yes
+checking sys/prctl.h presence... yes
+checking for sys/prctl.h... yes
+checking sys/uio.h usability... yes
+checking sys/uio.h presence... yes
+checking for sys/uio.h... yes
+checking util.h usability... no
+checking util.h presence... no
+checking for util.h... no
+checking utmp.h usability... yes
+checking utmp.h presence... yes
+checking for utmp.h... yes
+checking utmpx.h usability... yes
+checking utmpx.h presence... yes
+checking for utmpx.h... yes
+checking for login_tty... no
+checking for login_tty in -lutil... yes
+checking for strlcat... yes
+checking for getgrgid_r... yes
+checking for getgrnam_r... yes
+checking for gethostbyname_r... yes
+checking for getpwnam_r... yes
+checking for getpwuid_r... yes
+checking for openpty... yes
+checking for strcasestr... yes
+checking for getresuid... yes
+checking for getresgid... yes
+checking for setresuid... yes
+checking for setresgid... yes
+checking openssl/bio.h usability... yes
+checking openssl/bio.h presence... yes
+checking for openssl/bio.h... yes
+checking openssl/err.h usability... yes
+checking openssl/err.h presence... yes
+checking for openssl/err.h... yes
+checking openssl/ssl.h usability... yes
+checking openssl/ssl.h presence... yes
+checking for openssl/ssl.h... yes
+checking security/pam_appl.h usability... no
+checking security/pam_appl.h presence... no
+checking for security/pam_appl.h... no
+checking security/pam_client.h usability... no
+checking security/pam_client.h presence... no
+checking for security/pam_client.h... no
+checking security/pam_misc.h usability... no
+checking security/pam_misc.h presence... no
+checking for security/pam_misc.h... no
+checking for dlopen... no
+checking for dlopen in -ldl... yes
+checking for deflate in -lz... yes
+checking zlib.h usability... yes
+checking zlib.h presence... yes
+checking for zlib.h... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
++ make
+od shellinabox/beep.wav >shellinabox/beep.h
+od shellinabox/cgi_root.html >shellinabox/cgi_root.h
+od shellinabox/enabled.gif >shellinabox/enabled.h
+od shellinabox/favicon.ico >shellinabox/favicon.h
+od shellinabox/keyboard.png >shellinabox/keyboard.h
+od shellinabox/keyboard-layout.html >shellinabox/keyboard-layout.h
+od shellinabox/print-styles.css >shellinabox/print-styles.h
+od shellinabox/root_page.html >shellinabox/root_page.h
+od shellinabox/shell_in_a_box.js >shellinabox/shell_in_a_box.h
+od shellinabox/styles.css >shellinabox/styles.h
+od shellinabox/vt100.js >shellinabox/vt100.h
+make  all-am
+make[1]: Entering directory `/tmp/shellinabox.SnuNgQ/shellinabox-2.14'
+/ffp/bin/sh ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.    -g -std=gnu99 -Wall -Os -MT hashmap.lo -MD -MP -MF .deps/hashmap.Tpo -c -o hashmap.lo `test -f 'libhttp/hashmap.c' || echo './'`libhttp/hashmap.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -std=gnu99 -Wall -Os -MT hashmap.lo -MD -MP -MF .deps/hashmap.Tpo -c libhttp/hashmap.c  -fPIC -DPIC -o .libs/hashmap.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -std=gnu99 -Wall -Os -MT hashmap.lo -MD -MP -MF .deps/hashmap.Tpo -c libhttp/hashmap.c -o hashmap.o >/dev/null 2>&1
+mv -f .deps/hashmap.Tpo .deps/hashmap.Plo
+/ffp/bin/sh ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.    -g -std=gnu99 -Wall -Os -MT trie.lo -MD -MP -MF .deps/trie.Tpo -c -o trie.lo `test -f 'libhttp/trie.c' || echo './'`libhttp/trie.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -std=gnu99 -Wall -Os -MT trie.lo -MD -MP -MF .deps/trie.Tpo -c libhttp/trie.c  -fPIC -DPIC -o .libs/trie.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -std=gnu99 -Wall -Os -MT trie.lo -MD -MP -MF .deps/trie.Tpo -c libhttp/trie.c -o trie.o >/dev/null 2>&1
+mv -f .deps/trie.Tpo .deps/trie.Plo
+/ffp/bin/sh ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.    -g -std=gnu99 -Wall -Os -MT httpconnection.lo -MD -MP -MF .deps/httpconnection.Tpo -c -o httpconnection.lo `test -f 'libhttp/httpconnection.c' || echo './'`libhttp/httpconnection.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -std=gnu99 -Wall -Os -MT httpconnection.lo -MD -MP -MF .deps/httpconnection.Tpo -c libhttp/httpconnection.c  -fPIC -DPIC -o .libs/httpconnection.o
+libhttp/httpconnection.c:70:0: warning: "isnan" redefined
+/ffp/include/math.h:280:0: note: this is the location of the previous definition
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -std=gnu99 -Wall -Os -MT httpconnection.lo -MD -MP -MF .deps/httpconnection.Tpo -c libhttp/httpconnection.c -o httpconnection.o >/dev/null 2>&1
+mv -f .deps/httpconnection.Tpo .deps/httpconnection.Plo
+/ffp/bin/sh ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.    -g -std=gnu99 -Wall -Os -MT server.lo -MD -MP -MF .deps/server.Tpo -c -o server.lo `test -f 'libhttp/server.c' || echo './'`libhttp/server.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -std=gnu99 -Wall -Os -MT server.lo -MD -MP -MF .deps/server.Tpo -c libhttp/server.c  -fPIC -DPIC -o .libs/server.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -std=gnu99 -Wall -Os -MT server.lo -MD -MP -MF .deps/server.Tpo -c libhttp/server.c -o server.o >/dev/null 2>&1
+mv -f .deps/server.Tpo .deps/server.Plo
+/ffp/bin/sh ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.    -g -std=gnu99 -Wall -Os -MT ssl.lo -MD -MP -MF .deps/ssl.Tpo -c -o ssl.lo `test -f 'libhttp/ssl.c' || echo './'`libhttp/ssl.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -std=gnu99 -Wall -Os -MT ssl.lo -MD -MP -MF .deps/ssl.Tpo -c libhttp/ssl.c  -fPIC -DPIC -o .libs/ssl.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -std=gnu99 -Wall -Os -MT ssl.lo -MD -MP -MF .deps/ssl.Tpo -c libhttp/ssl.c -o ssl.o >/dev/null 2>&1
+mv -f .deps/ssl.Tpo .deps/ssl.Plo
+/ffp/bin/sh ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.    -g -std=gnu99 -Wall -Os -MT url.lo -MD -MP -MF .deps/url.Tpo -c -o url.lo `test -f 'libhttp/url.c' || echo './'`libhttp/url.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -std=gnu99 -Wall -Os -MT url.lo -MD -MP -MF .deps/url.Tpo -c libhttp/url.c  -fPIC -DPIC -o .libs/url.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -std=gnu99 -Wall -Os -MT url.lo -MD -MP -MF .deps/url.Tpo -c libhttp/url.c -o url.o >/dev/null 2>&1
+mv -f .deps/url.Tpo .deps/url.Plo
+/ffp/bin/sh ./libtool --tag=CC   --mode=link gcc -g -std=gnu99 -Wall -Os -export-symbols  ./libhttp/libhttp.sym -version 1:0:0 -L/ffp/lib -Wl,-rpath,/ffp/lib -o libhttp.la  hashmap.lo trie.lo httpconnection.lo server.lo ssl.lo url.lo   -lz -ldl -lutil 
+libtool: link: ar cru .libs/libhttp.a .libs/hashmap.o .libs/trie.o .libs/httpconnection.o .libs/server.o .libs/ssl.o .libs/url.o 
+libtool: link: ranlib .libs/libhttp.a
+libtool: link: ( cd ".libs" && rm -f "libhttp.la" && ln -s "../libhttp.la" "libhttp.la" )
+/ffp/bin/sh ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.    -g -std=gnu99 -Wall -Os -MT logging.lo -MD -MP -MF .deps/logging.Tpo -c -o logging.lo `test -f 'logging/logging.c' || echo './'`logging/logging.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -std=gnu99 -Wall -Os -MT logging.lo -MD -MP -MF .deps/logging.Tpo -c logging/logging.c  -fPIC -DPIC -o .libs/logging.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -std=gnu99 -Wall -Os -MT logging.lo -MD -MP -MF .deps/logging.Tpo -c logging/logging.c -o logging.o >/dev/null 2>&1
+mv -f .deps/logging.Tpo .deps/logging.Plo
+/ffp/bin/sh ./libtool --tag=CC   --mode=link gcc -g -std=gnu99 -Wall -Os -version 1:0:0 -L/ffp/lib -Wl,-rpath,/ffp/lib -o liblogging.la  logging.lo   -lz -ldl -lutil 
+libtool: link: ar cru .libs/liblogging.a .libs/logging.o 
+libtool: link: ranlib .libs/liblogging.a
+libtool: link: ( cd ".libs" && rm -f "liblogging.la" && ln -s "../liblogging.la" "liblogging.la" )
+gcc -DHAVE_CONFIG_H -I.    -g -std=gnu99 -Wall -Os -MT shellinaboxd.o -MD -MP -MF .deps/shellinaboxd.Tpo -c -o shellinaboxd.o `test -f 'shellinabox/shellinaboxd.c' || echo './'`shellinabox/shellinaboxd.c
+mv -f .deps/shellinaboxd.Tpo .deps/shellinaboxd.Po
+gcc -DHAVE_CONFIG_H -I.    -g -std=gnu99 -Wall -Os -MT externalfile.o -MD -MP -MF .deps/externalfile.Tpo -c -o externalfile.o `test -f 'shellinabox/externalfile.c' || echo './'`shellinabox/externalfile.c
+mv -f .deps/externalfile.Tpo .deps/externalfile.Po
+gcc -DHAVE_CONFIG_H -I.    -g -std=gnu99 -Wall -Os -MT launcher.o -MD -MP -MF .deps/launcher.Tpo -c -o launcher.o `test -f 'shellinabox/launcher.c' || echo './'`shellinabox/launcher.c
+mv -f .deps/launcher.Tpo .deps/launcher.Po
+gcc -DHAVE_CONFIG_H -I.    -g -std=gnu99 -Wall -Os -MT privileges.o -MD -MP -MF .deps/privileges.Tpo -c -o privileges.o `test -f 'shellinabox/privileges.c' || echo './'`shellinabox/privileges.c
+mv -f .deps/privileges.Tpo .deps/privileges.Po
+gcc -DHAVE_CONFIG_H -I.    -g -std=gnu99 -Wall -Os -MT service.o -MD -MP -MF .deps/service.Tpo -c -o service.o `test -f 'shellinabox/service.c' || echo './'`shellinabox/service.c
+mv -f .deps/service.Tpo .deps/service.Po
+gcc -DHAVE_CONFIG_H -I.    -g -std=gnu99 -Wall -Os -MT session.o -MD -MP -MF .deps/session.Tpo -c -o session.o `test -f 'shellinabox/session.c' || echo './'`shellinabox/session.c
+mv -f .deps/session.Tpo .deps/session.Po
+gcc -DHAVE_CONFIG_H -I.    -g -std=gnu99 -Wall -Os -MT usercss.o -MD -MP -MF .deps/usercss.Tpo -c -o usercss.o `test -f 'shellinabox/usercss.c' || echo './'`shellinabox/usercss.c
+mv -f .deps/usercss.Tpo .deps/usercss.Po
+/ffp/bin/sh ./libtool --tag=CC   --mode=link gcc -g -std=gnu99 -Wall -Os -static -L/ffp/lib -Wl,-rpath,/ffp/lib -o shellinaboxd shellinaboxd.o externalfile.o launcher.o privileges.o service.o session.o usercss.o liblogging.la libhttp.la -lz -ldl -lutil 
+libtool: link: gcc -g -std=gnu99 -Wall -Os -Wl,-rpath -Wl,/ffp/lib -o shellinaboxd shellinaboxd.o externalfile.o launcher.o privileges.o service.o session.o usercss.o  -L/ffp/lib ./.libs/liblogging.a ./.libs/libhttp.a -lz -ldl -lutil
+preprocess ./shellinabox/shellinaboxd.man.in >shellinaboxd.1
+make[1]: Leaving directory `/tmp/shellinabox.SnuNgQ/shellinabox-2.14'
++ make DESTDIR=/tmp/shellinabox.SnuNgQ/pkg install
+make  install-am
+make[1]: Entering directory `/tmp/shellinabox.SnuNgQ/shellinabox-2.14'
+make[2]: Entering directory `/tmp/shellinabox.SnuNgQ/shellinabox-2.14'
+test -z "/ffp/bin" || /ffp/bin/mkdir -p "/tmp/shellinabox.SnuNgQ/pkg/ffp/bin"
+  /ffp/bin/sh ./libtool   --mode=install /ffp/bin/install -c shellinaboxd '/tmp/shellinabox.SnuNgQ/pkg/ffp/bin'
+libtool: install: /ffp/bin/install -c shellinaboxd /tmp/shellinabox.SnuNgQ/pkg/ffp/bin/shellinaboxd
+test -z "/ffp/share/doc/shellinabox" || /ffp/bin/mkdir -p "/tmp/shellinabox.SnuNgQ/pkg/ffp/share/doc/shellinabox"
+ /ffp/bin/install -c -m 644 AUTHORS COPYING GPL-2 ChangeLog INSTALL NEWS README TODO shellinabox/white-on-black.css shellinabox/black-on-white.css shellinabox/monochrome.css shellinabox/color.css '/tmp/shellinabox.SnuNgQ/pkg/ffp/share/doc/shellinabox'
+test -z "/ffp/share/man/man1" || /ffp/bin/mkdir -p "/tmp/shellinabox.SnuNgQ/pkg/ffp/share/man/man1"
+ /ffp/bin/install -c -m 644 shellinaboxd.1 '/tmp/shellinabox.SnuNgQ/pkg/ffp/share/man/man1'
+make[2]: Leaving directory `/tmp/shellinabox.SnuNgQ/shellinabox-2.14'
+make[1]: Leaving directory `/tmp/shellinabox.SnuNgQ/shellinabox-2.14'
++ mkdir -p /tmp/shellinabox.SnuNgQ/pkg/install
++ cp /ffp/home/root/fun_plug/ffp_packages/shellinabox/DESCR /ffp/home/root/fun_plug/ffp_packages/shellinabox/HOMEPAGE /tmp/shellinabox.SnuNgQ/pkg/install/
++ cd /tmp/shellinabox.SnuNgQ/pkg
++ makepkg shellinabox 2.14 1
+Creating /tmp/shellinabox-2.14-arm-1.tar ...
