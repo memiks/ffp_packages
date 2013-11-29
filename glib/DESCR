@@ -1,0 +1,10 @@
+GLib fournit les éléments applicatifs de base pour les bibliothèques et 
+les applications écrites en C. Elle fournit le système central des 
+objets employés dans GNOME, l'implémentation de la boucle principale, 
+ainsi qu'un vaste ensemble de fonctions utilitaires pour le traitement 
+des chaînes et d'autres structures de données courantes. 
+
+
+
+Homepage: http://developer.gnome.org/glib/ 
+
