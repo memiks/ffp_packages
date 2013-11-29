@@ -1,0 +1,12 @@
+--- Lib/sre_compile.py.orig	2013-04-12 11:07:56.000000000 +0200
++++ Lib/sre_compile.py	2013-04-12 11:08:20.000000000 +0200
+@@ -13,7 +13,8 @@
+ import _sre, sys
+ import sre_parse
+ from sre_constants import *
+-from _sre import MAXREPEAT
++#from _sre import MAXREPEAT
++MAXREPEAT = 65535
+ 
+ assert _sre.MAGIC == MAGIC, "SRE module mismatch"
+ 

@@ -1,0 +1,12 @@
+--- Lib/sre_parse.py.orig	2013-04-12 11:11:34.000000000 +0200
++++ Lib/sre_parse.py	2013-04-12 11:11:45.000000000 +0200
+@@ -15,7 +15,8 @@
+ import sys
+ 
+ from sre_constants import *
+-from _sre import MAXREPEAT
++#from _sre import MAXREPEAT
++MAXREPEAT = 65535
+ 
+ SPECIAL_CHARS = ".\\[{()*+?^$|"
+ REPEAT_CHARS = "*+?{"

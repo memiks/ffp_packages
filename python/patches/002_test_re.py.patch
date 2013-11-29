@@ -1,0 +1,12 @@
+--- Lib/test/test_re.py.orig	2013-04-12 11:08:52.000000000 +0200
++++ Lib/test/test_re.py	2013-04-12 11:10:47.000000000 +0200
+@@ -874,7 +874,8 @@
+     @cpython_only
+     def test_repeat_minmax_overflow_maxrepeat(self):
+         try:
+-            from _sre import MAXREPEAT
++            #from _sre import MAXREPEAT
++            MAXREPEAT = 65535
+         except ImportError:
+             self.skipTest('requires _sre.MAXREPEAT constant')
+         string = "x" * 100000

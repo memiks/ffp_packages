@@ -1,0 +1,12 @@
+--- Lib/sre_constants.py.orig	2013-04-12 11:11:00.000000000 +0200
++++ Lib/sre_constants.py	2013-04-12 11:11:19.000000000 +0200
+@@ -15,7 +15,8 @@
+ 
+ MAGIC = 20031017
+ 
+-from _sre import MAXREPEAT
++#from _sre import MAXREPEAT
++MAXREPEAT = 65535
+ 
+ # SRE standard exception (access as sre.error)
+ # should this really be here?
