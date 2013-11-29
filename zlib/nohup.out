@@ -1,0 +1,160 @@
++ PN=zlib
++ PV=1.2.6
++ PR=1
++ . ./config.ffp
+++ case "$FFP_ARCH" in
+++ echo 'FFP_ARCH unset'
+FFP_ARCH unset
+++ exit 1
++ PN=zlib
++ PV=1.2.6
++ PR=1
++ . ./config.ffp
+++ case "$FFP_ARCH" in
+++ GNU_BUILD=arm-ffp-linux-uclibcgnueabi
+++ GNU_HOST=arm-ffp-linux-uclibcgnueabi
+++ GNU_TARGET=arm-ffp-linux-uclibcgnueabi
+++ FFP_CFLAGS='-I/ffp/include -O2'
+++ FFP_LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
+++ '[' '!' -d '' ']'
+++ TMPDIR=/tmp
+++ export TMPDIR
+++ mandir=/ffp/share/man
+++ infodir=/ffp/share/info
+++ docdir=/ffp/share/doc
+++ pwd
++ X=/ffp/home/root/src/zlib
+++ mktemp -t -d zlib.XXXXXX
++ W=/tmp/zlib.UvqBUZ
++ D=/tmp/zlib.UvqBUZ/pkg
++ cd /tmp/zlib.UvqBUZ
++ cat $'/ffp/home/root/src/zlib/SRC\350URI'
+cat: /ffp/home/root/src/zlib/SRCËURI: No such file or directory
++ xargs wget
+wget: missing URL
+Usage: wget [OPTION]... [URL]...
+
+Try `wget --help' for more options.
++ PN=zlib
++ PV=1.2.6
++ PR=1
++ . ./config.ffp
+++ case "$FFP_ARCH" in
+++ GNU_BUILD=arm-ffp-linux-uclibcgnueabi
+++ GNU_HOST=arm-ffp-linux-uclibcgnueabi
+++ GNU_TARGET=arm-ffp-linux-uclibcgnueabi
+++ FFP_CFLAGS='-I/ffp/include -O2'
+++ FFP_LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
+++ '[' '!' -d '' ']'
+++ TMPDIR=/tmp
+++ export TMPDIR
+++ mandir=/ffp/share/man
+++ infodir=/ffp/share/info
+++ docdir=/ffp/share/doc
+++ pwd
++ X=/ffp/home/root/src/zlib
+++ mktemp -t -d zlib.XXXXXX
++ W=/tmp/zlib.u4NC6v
++ D=/tmp/zlib.u4NC6v/pkg
++ cd /tmp/zlib.u4NC6v
++ cat /ffp/home/root/src/zlib/SRC_URI
++ xargs wget
+--2012-03-02 10:31:12--  http://zlib.net/zlib-1.2.6.tar.bz2
+Resolving zlib.net... 69.73.181.135
+Connecting to zlib.net|69.73.181.135|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 501388 (490K) [application/x-tar]
+Saving to: `zlib-1.2.6.tar.bz2'
+
+     0K .......... .......... .......... .......... .......... 10% 91.1K 5s
+    50K .......... .......... .......... .......... .......... 20%  349K 3s
+   100K .......... .......... .......... .......... .......... 30%  359K 2s
+   150K .......... .......... .......... .......... .......... 40%  372K 1s
+   200K .......... .......... .......... .......... .......... 51%  386K 1s
+   250K .......... .......... .......... .......... .......... 61% 1.78M 1s
+   300K .......... .......... .......... .......... .......... 71%  391K 0s
+   350K .......... .......... .......... .......... .......... 81%  399K 0s
+   400K .......... .......... .......... .......... .......... 91% 1.73M 0s
+   450K .......... .......... .......... .........            100%  331K=1.5s
+
+2012-03-02 10:31:14 (321 KB/s) - `zlib-1.2.6.tar.bz2' saved [501388/501388]
+
++ tar xf zlib-1.2.6.tar.bz2
++ cd zlib-1.2.6
++ CFLAGS='-I/ffp/include -O2'
++ LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
++ ./configure --prefix=/ffp --shared
+Checking for gcc...
+Checking for shared library support...
+Building shared library libz.so.1.2.6 with gcc.
+Checking for off64_t... Yes.
+Checking for fseeko... Yes.
+Checking for unistd.h... Yes.
+Checking for stdarg.h... Yes.
+Checking whether to use vs[n]printf() or s[n]printf()... using vs[n]printf().
+Checking for vsnprintf() in stdio.h... Yes.
+Checking for return value of vsnprintf()... Yes.
+Checking for attribute(visibility) support... Yes.
++ make
+gcc -I/ffp/include -O2  -D_LARGEFILE64_SOURCE=1 -I. -c -o example.o test/example.c
+gcc -I/ffp/include -O2  -D_LARGEFILE64_SOURCE=1   -c -o adler32.o adler32.c
+gcc -I/ffp/include -O2  -D_LARGEFILE64_SOURCE=1   -c -o crc32.o crc32.c
+gcc -I/ffp/include -O2  -D_LARGEFILE64_SOURCE=1   -c -o deflate.o deflate.c
+gcc -I/ffp/include -O2  -D_LARGEFILE64_SOURCE=1   -c -o infback.o infback.c
+gcc -I/ffp/include -O2  -D_LARGEFILE64_SOURCE=1   -c -o inffast.o inffast.c
+gcc -I/ffp/include -O2  -D_LARGEFILE64_SOURCE=1   -c -o inflate.o inflate.c
+gcc -I/ffp/include -O2  -D_LARGEFILE64_SOURCE=1   -c -o inftrees.o inftrees.c
+gcc -I/ffp/include -O2  -D_LARGEFILE64_SOURCE=1   -c -o trees.o trees.c
+gcc -I/ffp/include -O2  -D_LARGEFILE64_SOURCE=1   -c -o zutil.o zutil.c
+gcc -I/ffp/include -O2  -D_LARGEFILE64_SOURCE=1   -c -o compress.o compress.c
+gcc -I/ffp/include -O2  -D_LARGEFILE64_SOURCE=1   -c -o uncompr.o uncompr.c
+gcc -I/ffp/include -O2  -D_LARGEFILE64_SOURCE=1   -c -o gzclose.o gzclose.c
+gcc -I/ffp/include -O2  -D_LARGEFILE64_SOURCE=1   -c -o gzlib.o gzlib.c
+gcc -I/ffp/include -O2  -D_LARGEFILE64_SOURCE=1   -c -o gzread.o gzread.c
+gcc -I/ffp/include -O2  -D_LARGEFILE64_SOURCE=1   -c -o gzwrite.o gzwrite.c
+ar rc libz.a adler32.o crc32.o deflate.o infback.o inffast.o inflate.o inftrees.o trees.o zutil.o compress.o uncompr.o gzclose.o gzlib.o gzread.o gzwrite.o 
+gcc -I/ffp/include -O2  -D_LARGEFILE64_SOURCE=1 -o example example.o -L. libz.a
+gcc -I/ffp/include -O2  -D_LARGEFILE64_SOURCE=1 -I. -c -o minigzip.o test/minigzip.c
+gcc -I/ffp/include -O2  -D_LARGEFILE64_SOURCE=1 -o minigzip minigzip.o -L. libz.a
+gcc -I/ffp/include -O2  -fPIC -D_LARGEFILE64_SOURCE=1 -DPIC -c -o objs/adler32.o adler32.c
+gcc -I/ffp/include -O2  -fPIC -D_LARGEFILE64_SOURCE=1 -DPIC -c -o objs/crc32.o crc32.c
+gcc -I/ffp/include -O2  -fPIC -D_LARGEFILE64_SOURCE=1 -DPIC -c -o objs/deflate.o deflate.c
+gcc -I/ffp/include -O2  -fPIC -D_LARGEFILE64_SOURCE=1 -DPIC -c -o objs/infback.o infback.c
+gcc -I/ffp/include -O2  -fPIC -D_LARGEFILE64_SOURCE=1 -DPIC -c -o objs/inffast.o inffast.c
+gcc -I/ffp/include -O2  -fPIC -D_LARGEFILE64_SOURCE=1 -DPIC -c -o objs/inflate.o inflate.c
+gcc -I/ffp/include -O2  -fPIC -D_LARGEFILE64_SOURCE=1 -DPIC -c -o objs/inftrees.o inftrees.c
+gcc -I/ffp/include -O2  -fPIC -D_LARGEFILE64_SOURCE=1 -DPIC -c -o objs/trees.o trees.c
+gcc -I/ffp/include -O2  -fPIC -D_LARGEFILE64_SOURCE=1 -DPIC -c -o objs/zutil.o zutil.c
+gcc -I/ffp/include -O2  -fPIC -D_LARGEFILE64_SOURCE=1 -DPIC -c -o objs/compress.o compress.c
+gcc -I/ffp/include -O2  -fPIC -D_LARGEFILE64_SOURCE=1 -DPIC -c -o objs/uncompr.o uncompr.c
+gcc -I/ffp/include -O2  -fPIC -D_LARGEFILE64_SOURCE=1 -DPIC -c -o objs/gzclose.o gzclose.c
+gcc -I/ffp/include -O2  -fPIC -D_LARGEFILE64_SOURCE=1 -DPIC -c -o objs/gzlib.o gzlib.c
+gcc -I/ffp/include -O2  -fPIC -D_LARGEFILE64_SOURCE=1 -DPIC -c -o objs/gzread.o gzread.c
+gcc -I/ffp/include -O2  -fPIC -D_LARGEFILE64_SOURCE=1 -DPIC -c -o objs/gzwrite.o gzwrite.c
+gcc -shared -Wl,-soname,libz.so.1,--version-script,zlib.map -I/ffp/include -O2  -fPIC -D_LARGEFILE64_SOURCE=1 -o libz.so.1.2.6 adler32.lo crc32.lo deflate.lo infback.lo inffast.lo inflate.lo inftrees.lo trees.lo zutil.lo compress.lo uncompr.lo gzclose.lo gzlib.lo gzread.lo gzwrite.lo  -lc -L/ffp/lib -Wl,-rpath,/ffp/lib 
+rm -f libz.so libz.so.1
+ln -s libz.so.1.2.6 libz.so
+ln -s libz.so.1.2.6 libz.so.1
+gcc -I/ffp/include -O2  -D_LARGEFILE64_SOURCE=1 -o examplesh example.o -L. libz.so.1.2.6
+gcc -I/ffp/include -O2  -D_LARGEFILE64_SOURCE=1 -o minigzipsh minigzip.o -L. libz.so.1.2.6
+gcc -I/ffp/include -O2  -D_LARGEFILE64_SOURCE=1 -I. -D_FILE_OFFSET_BITS=64 -c -o example64.o test/example.c
+gcc -I/ffp/include -O2  -D_LARGEFILE64_SOURCE=1 -o example64 example64.o -L. libz.a
+gcc -I/ffp/include -O2  -D_LARGEFILE64_SOURCE=1 -I. -D_FILE_OFFSET_BITS=64 -c -o minigzip64.o test/minigzip.c
+gcc -I/ffp/include -O2  -D_LARGEFILE64_SOURCE=1 -o minigzip64 minigzip64.o -L. libz.a
++ make prefix=/tmp/zlib.u4NC6v/pkg/ffp install
+cp libz.a /tmp/zlib.u4NC6v/pkg/ffp/lib
+chmod 644 /tmp/zlib.u4NC6v/pkg/ffp/lib/libz.a
+cp libz.so.1.2.6 /tmp/zlib.u4NC6v/pkg/ffp/lib
+chmod 755 /tmp/zlib.u4NC6v/pkg/ffp/lib/libz.so.1.2.6
+cp zlib.3 /tmp/zlib.u4NC6v/pkg/ffp/share/man/man3
+chmod 644 /tmp/zlib.u4NC6v/pkg/ffp/share/man/man3/zlib.3
+cp zlib.pc /tmp/zlib.u4NC6v/pkg/ffp/lib/pkgconfig
+chmod 644 /tmp/zlib.u4NC6v/pkg/ffp/lib/pkgconfig/zlib.pc
+cp zlib.h zconf.h /tmp/zlib.u4NC6v/pkg/ffp/include
+chmod 644 /tmp/zlib.u4NC6v/pkg/ffp/include/zlib.h /tmp/zlib.u4NC6v/pkg/ffp/include/zconf.h
++ rm -rf /tmp/zlib.u4NC6v/pkg/ffp/share/man/man3
++ mkdir -p /tmp/zlib.u4NC6v/pkg/install
++ cp /ffp/home/root/src/zlib/DESCR /ffp/home/root/src/zlib/HOMEPAGE /tmp/zlib.u4NC6v/pkg/install/
++ cd /tmp/zlib.u4NC6v/pkg
++ makepkg zlib 1.2.6 1
+Creating /tmp/zlib-1.2.6-arm-1.tar ...
