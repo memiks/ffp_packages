@@ -1,0 +1,88 @@
+#!/ffp/bin/sh -xe
+
+PATH=/ffp/bin:/ffp/sbin:$PATH
+
+PN=$(basename $0 .funpkg)
+PR=1
+
+. ./config.ffp
+
+X=$(pwd)
+W=$(mktemp -t -d $PN.XXXXXX)
+D=$W/pkg
+
+cd $W
+cat $X/SRC_URI | xargs wget --no-check-certificate 
+PV=$(ls $PN-*.tar* | egrep -o '[0-9][0-9.]*[0-9]')
+tar xf $PN-$PV.tar*
+cd $PN-*
+
+for file in `ls $X/patches/*.patch`
+do
+        patch -p0 -i $file
+done
+
+CFLAGS="$FFP_CFLAGS -D_GNU_SOURCE" \
+CXXFLAGS="$FFP_CFLAGS -D_GNU_SOURCE " \
+LDFLAGS="$FFP_LDFLAGS" \
+./configure \
+	--with-rtsig_module \
+	--with-select_module \
+	--without-select_module \
+	--with-poll_module \
+	--with-file-aio \
+	--with-ipv6 \
+	--with-http_ssl_module \
+	--with-http_spdy_module \
+	--with-http_realip_module \
+	--with-http_addition_module \
+	--with-http_xslt_module \
+	--with-http_sub_module \
+	--with-http_dav_module \
+	--with-http_mp4_module \
+	--with-http_gunzip_module \
+	--with-http_gzip_static_module \
+	--with-http_random_index_module \
+	--with-http_secure_link_module \
+	--with-http_degradation_module \
+	--with-http_stub_status_module \
+	--prefix=/ffp \
+	--sbin-path=/ffp/sbin \
+	--conf-path=/ffp/etc \
+	--error-log-path=/ffp/var/logs/nginx_error.log \
+	--pid-path=/ffp/var/nginx.pid \
+	--lock-path=/ffp/var/nginx.lock \
+	--user=httpd \
+	--group=httpd 
+#	--mandir=$mandir \
+#	--infodir=$infodir
+    
+CFLAGS="$FFP_CFLAGS -D_GNU_SOURCE" \
+CXXFLAGS="$FFP_CFLAGS -D_GNU_SOURCE" \
+LDFLAGS="$FFP_LDFLAGS" \
+make
+
+mkdir -p $D/ffp/etc/examples/nginx
+mkdir -p $D/ffp/sbin
+mkdir -p $D/ffp/bin
+mkdir -p $D/ffp/var/logs
+mkdir -p $D/ffp/logs
+
+make DESTDIR=$D install
+
+cd $D/ffp/
+LIST_CONF_FILE=$(ls -p | grep -v /$)
+
+for file in ${LIST_CONF_FILE}    
+do                                     
+        mv $file $D/ffp/etc/examples/nginx/
+done                                   
+
+
+mkdir -p $D/install
+cp $X/{DESCR,HOMEPAGE} $D/install/
+
+cd $D
+makepkg $PN $PV $PR
+
+

@@ -1,0 +1,16 @@
+nginx [engine x] is an HTTP and reverse proxy server, as well as a mail proxy 
+server, written by Igor Sysoev. 
+
+For a long time, it has been running on many heavily loaded Russian sites 
+including Yandex, Mail.Ru, VKontakte, and Rambler. 
+
+According to Netcraft nginx served or proxied 14.08% busiest sites 
+in June 2013. 
+
+Here are some of the success stories: Netflix, Wordpress.com, FastMail.FM.
+
+The sources and documentation are distributed under the 2-clause 
+BSD-like license. 
+
+Homepage: http://nginx.org/
+
