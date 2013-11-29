@@ -1,0 +1,523 @@
+++ basename ./mysecureshell.funpkg .funpkg
++ PN=mysecureshell
++ PR=1
++ . ./config.ffp
+++ GNU_HOST=
+++ GNU_TARGET=
+++ FFP_CFLAGS='-I/ffp/include -O2'
+++ FFP_LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
+++ '[' '!' -d '' ']'
+++ TMPDIR=/tmp
+++ export TMPDIR
+++ mandir=/ffp/share/man
+++ infodir=/ffp/share/info
+++ docdir=/ffp/share/doc
+++ pwd
++ X=/ffp/home/root/fun_plug/ffp_packages/mysecureshell
+++ mktemp -t -d mysecureshell.XXXXXX
++ W=/tmp/mysecureshell.yEqvsn
++ D=/tmp/mysecureshell.yEqvsn/pkg
++ cd /tmp/mysecureshell.yEqvsn
++ xargs wget
++ cat /ffp/home/root/fun_plug/ffp_packages/mysecureshell/SRC_URI
+--2013-03-13 15:18:17--  http://mysecureshell.free.fr/repository/source/mysecureshell_1.30.tar.gz
+Resolving mysecureshell.free.fr... 212.27.63.100
+Connecting to mysecureshell.free.fr|212.27.63.100|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 129097 (126K) [application/x-gzip]
+Saving to: `mysecureshell_1.30.tar.gz'
+
+     0K .......... .......... .......... .......... .......... 39%  481K 0s
+    50K .......... .......... .......... .......... .......... 79%  385K 0s
+   100K .......... .......... ......                          100% 18.2M=0.2s
+
+2013-03-13 15:18:18 (535 KB/s) - `mysecureshell_1.30.tar.gz' saved [129097/129097]
+
+++ ls mysecureshell_1.30.tar.gz
+++ egrep -o '[0-9][0-9.]*[0-9]'
++ PV=1.30
++ tar xf mysecureshell_1.30.tar.gz
++ cd mysecureshell_1.30 mysecureshell_1.30.tar.gz
+++ ls /ffp/home/root/fun_plug/ffp_packages/mysecureshell/patches/001_FileSystemAcl.patch
++ for file in '`ls $X/patches/*.patch`'
++ patch -p0 -i /ffp/home/root/fun_plug/ffp_packages/mysecureshell/patches/001_FileSystemAcl.patch
+patching file ./SftpServer/FileSystemAcl.h
++ LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
++ ./configure --prefix=/ffp --bindir=/ffp/bin --sysconfdir=/ffp/etc --with-conffile=/ffp/etc/ssh/sftp_config --with-shutfile=/ffp/etc/sftp.shut --sbindir=/ffp/bin --build= --host= --mandir=/ffp/share/man --infodir=/ffp/share/info
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for sed... /ffp/bin/sed
+checking for sudo... /ffp/bin/sudo
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /ffp/bin/grep
+checking for egrep... /ffp/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether gcc needs -traditional... no
+checking whether ln -s works... yes
+checking for inline... inline
+checking for an ANSI C-conforming const... yes
+checking for uid_t in sys/types.h... yes
+checking for int32_t... yes
+checking for mode_t... yes
+checking for off_t... yes
+checking for ssize_t... yes
+checking whether struct tm is in sys/time.h or time.h... time.h
+checking return type of signal handlers... void
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... 64
+checking for u_int8_t... yes
+checking for u_int16_t... yes
+checking for u_int32_t... yes
+checking for u_int64_t... yes
+checking for dirent.h that defines DIR... yes
+checking for library containing opendir... none required
+checking for ANSI C header files... (cached) yes
+checking arpa/inet.h usability... yes
+checking arpa/inet.h presence... yes
+checking for arpa/inet.h... yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking netdb.h usability... yes
+checking netdb.h presence... yes
+checking for netdb.h... yes
+checking netinet/in.h usability... yes
+checking netinet/in.h presence... yes
+checking for netinet/in.h... yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for strings.h... (cached) yes
+checking sys/param.h usability... yes
+checking sys/param.h presence... yes
+checking for sys/param.h... yes
+checking sys/socket.h usability... yes
+checking sys/socket.h presence... yes
+checking for sys/socket.h... yes
+checking for unistd.h... (cached) yes
+checking sys/statfs.h usability... yes
+checking sys/statfs.h presence... yes
+checking for sys/statfs.h... yes
+checking for sys/param.h... (cached) yes
+checking sys/statvfs.h usability... yes
+checking sys/statvfs.h presence... yes
+checking for sys/statvfs.h... yes
+checking sys/socket usability... no
+checking sys/socket presence... no
+checking for sys/socket... no
+checking for netinet/in.h... (cached) yes
+checking sys/acl.h usability... no
+checking sys/acl.h presence... no
+checking for sys/acl.h... no
+checking sys/ioctl.h usability... yes
+checking sys/ioctl.h presence... yes
+checking for sys/ioctl.h... yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking for sys/mount.h... yes
+checking whether closedir returns void... no
+checking for pid_t... yes
+checking vfork.h usability... no
+checking vfork.h presence... no
+checking for vfork.h... no
+checking for fork... yes
+checking for vfork... yes
+checking for working fork... yes
+checking for working vfork... (cached) yes
+checking whether lstat correctly handles trailing slash... yes
+checking whether stat accepts an empty string... no
+checking whether lstat accepts an empty string... no
+checking for unistd.h... (cached) yes
+checking for working chown... yes
+checking type of array argument to getgroups... gid_t
+checking for size_t... yes
+checking for getgroups... yes
+checking for working getgroups... yes
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible malloc... yes
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible realloc... yes
+checking for strftime... yes
+checking whether time.h and sys/time.h may both be included... yes
+checking for sys/time.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for alarm... yes
+checking for working mktime... no
+checking sys/select.h usability... yes
+checking sys/select.h presence... yes
+checking for sys/select.h... yes
+checking for sys/socket.h... (cached) yes
+checking types of arguments for select... int,fd_set *,struct timeval *
+checking whether stat file-mode macros are broken... no
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking whether time.h and sys/time.h may both be included... (cached) yes
+checking for endgrent... yes
+checking for strcasecmp... yes
+checking for strchr... yes
+checking for strdup... yes
+checking for strerror... yes
+checking for strrchr... yes
+checking for strstr... yes
+checking for statfs... yes
+checking for statvfs... yes
+checking for getgroups... (cached) yes
+checking for strlcpy... yes
+checking for strlcat... yes
+checking for acl... no
+checking for atexit... yes
+checking for dup2... yes
+checking for endpwent... yes
+checking for gettimeofday... yes
+checking for memset... yes
+checking for mkdir... yes
+checking for realpath... yes
+checking for regcomp... yes
+checking for rmdir... yes
+checking for select... yes
+checking for setenv... yes
+checking for memmove... yes
+checking for connect... yes
+checking for gethostbyaddr... yes
+checking for gethostbyname... yes
+checking for inet_ntoa... yes
+checking for iconv_open... no
+checking for libiconv_open in -liconv... yes
+checking for iconv_close... no
+checking for libiconv_open in -liconv... (cached) yes
+checking for iconv... no
+checking for libiconv_open in -liconv... (cached) yes
+checking for acl_get_entry in -lacl... no
+checking for OpenSSL_add_all_digests in -lcrypto... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating install.sh
+config.status: creating uninstaller.sh
+config.status: creating utils/sftp-user
+chmod: cannot access `utils/sftp-verif': No such file or directory
+config.status: creating utils/sftp-verif
+config.status: creating config.h
+checking for a BSD-compatible install... /ffp/bin/install -c
+
+MySecureShell has been configured with the following options:
+          Log file: /var/log/sftp-server.log (color: no)
+     User binaries: /ffp/bin
+     Shutdown file: /ffp/etc/sftp.shut
+Configuration file: /ffp/etc/ssh/sftp_config
+ Compilation flags: 
+
+Option supported:
+ACL               : no
+Remote Admin      : yes
+UTF-8 Encoding    : yes
+
+Sftp extension supported:
+Disk Usage        : yes
+Disk Usage OpenSSH: yes
+File Hashing      : yes
++ make
+Compile		[main.c]
+Compile		[string.c]
+Compile		[parsing.c]
+Compile		[hash.c]
+Compile		[conf.c]
+Compile		[convert.c]
+Compile		[user.c]
+Compile		[prog.c]
+Compile		[ip.c]
+Compile		[FileSpec.c]
+Compile		[SftpServer/Buffer.c]
+Compile		[SftpServer/Encode.c]
+SftpServer/Encode.c:222:13: warning: 'EncodeACLCallBack' defined but not used
+SftpServer/Encode.c:276:13: warning: 'EncodeACL' defined but not used
+Compile		[SftpServer/Handle.c]
+Compile		[SftpServer/Send.c]
+Compile		[SftpServer/Sftp.c]
+Compile		[SftpServer/Util.c]
+Compile		[SftpServer/Log.c]
+Compile		[SftpServer/Encoding.c]
+Compile		[SftpServer/Admin.c]
+Compile		[SftpServer/SftpWho.c]
+Compile		[SftpServer/SftpExt.c]
+Compile		[SftpServer/SftpServer.c]
+Compile		[SftpServer/GetUsersInfos.c]
+Compile		[SftpServer/Stats.c]
+Compile		[SftpServer/Access.c]
+Compile		[SftpServer/FileSystem.c]
+SftpServer/FileSystem.c: In function 'FSCheckSecurity':
+SftpServer/FileSystem.c:244:3: warning: statement with no effect
+SftpServer/FileSystem.c:241:13: warning: unused variable 'nbEntries'
+SftpServer/FileSystem.c: At top level:
+SftpServer/FileSystem.c:206:13: warning: 'FSCheckSecurityACL' defined but not used
+Compile		[SftpServer/FileSystemAcl.c]
+Compile binary	[MySecureShell]
+Compile		[SftpWho/Main.c]
+Compile binary	[utils/sftp-who]
+Compile		[SftpState/Main.c]
+Compile binary	[utils/sftp-state]
+Compile		[SftpAdmin/Main.c]
+Compile binary	[utils/sftp-admin]
++ USER=root
++ make DESTDIR=/tmp/mysecureshell.yEqvsn/pkg install
+TERM environment variable not set.
+#########################################
+#		MySecureShell		#
+#########################################
+
+Welcome to the MySecureShell installation script !
+
+Detecting needed files for installation:
+Existing file MySecureShell			[ OK ]
+Existing file sftp_config			[ OK ]
+
+Do you want to test MySecureShell (check libraries requirement) ? (Y/n)
+Test MySecureShell...
+Test ending
+
+
+This script will made a few operations:
+- Install MySecureShell in /bin
+- Make a configuration file in /etc/ssh/sftp_config
+- Introduce if which MySecureShell as a valid shell
+- Install utilities in /usr/bin
+
+WARNING: The server will shutdown and all sftp connected clients will be killed !
+- Do you want to continue installation ? (Y/n)
+MySecureShell Installation
+
+
+No default ssh folders found. Do you want to create /etc/ssh ? (Y/n)
+Created /etc/ssh folder				[ OK ]
+MySecureShell file created				[ OK ]
+
+MySecureShell file created				[ OK ]
+
+No file /etc/shells. Do you want to create /etc/shells ? (y/N)
+
+Installation of tool sftp-who			[ OK ]
+Installation of tool sftp-kill			[ OK ]
+Installation of tool sftp-state			[ OK ]
+Installation of tool sftp-admin			[ OK ]
+Installation of tool sftp-verif			[ OK ]
+Installation of tool sftp-user			[ OK ]
+
+Do you want to automatically rotate MySecureShell logs ? (Y/n)
+Initialisation of MySecureShell rotation logs	[ OK ]
+cp: target `/tmp/mysecureshell.yEqvsn/pkg/ffp/share/man/fr/man8' is not a directory
+Installation of Manuals				[ OK ]
+
+Installation Finished !
+
+Note: If you run on Mac OS X, don't forget to copy MSS folder in Applications !
+
++ mkdir -p /tmp/mysecureshell.yEqvsn/pkg/install
++ cp /ffp/home/root/fun_plug/ffp_packages/mysecureshell/DESCR /ffp/home/root/fun_plug/ffp_packages/mysecureshell/HOMEPAGE /tmp/mysecureshell.yEqvsn/pkg/install/
++ cd /tmp/mysecureshell.yEqvsn/pkg
++ makepkg mysecureshell 1.30 1
+Creating /tmp/mysecureshell-1.30-arm-1.tar ...
+stdin: is not a tty
+sending incremental file list
+mysecureshell-1.30-arm-1.tar
+
+sent 39565 bytes  received 1525 bytes  9131.11 bytes/sec
+total size is 1126502400  speedup is 27415.49
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/ghostscript-9.06-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/most-pre5.1-14-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/beautifulsoup4-4.0.0b9-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gnunet-0.9.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/cmake-2.8.7-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libsigc++-2.2.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1192-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/harfbuzz-0.9.9-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/Python-3.3.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/par-1.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/dtach-0.8-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1218-arm-1.txz
+stdin: is not a tty
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/vim-7.3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gnuplot-4.4.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/tor-0.2.3.25-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/fontconfig-2.8.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/rtmpdump-2.3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libev-4.11-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/setuptools-0.6c11-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/tokyotyrant-1.1.41-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/less-457-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libmicrohttpd-0.9.19-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/lzo-2.06-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/cairo-1.12.8-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/Django-1.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libspectre-0.2.7-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/protobuf-2.4.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/unrar-4.1.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/php-5.4.11-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/openssl-1.0.0g-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libgpg-error-1.10-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/node-v0.6.10-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/xvidcore-1.3.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/Python-2.7.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gcc-solibs-4.6.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1260-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/BeautifulSoup-3.2.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libunistring-0.9.3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gnuplot-4.4.4-arm-2.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/fontconfig-2.10.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/freetype-2.4.8-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/pango-1.32.3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/tokyocabinet-1.4.47-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/nzbget-0.8.0r394-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libgcrypt-1.5.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/swig-2.0.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1182-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/netatalk-3.0.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/par2cmdline-0.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/neon-0.29.6-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/berkeleydb-5.1.19-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/cherokee-130207-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/attr-2.4.46-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gcc-4.6.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/openssh-6.1p1-arm-4-node.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/sendmail-8.14.5-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/openssl-1.0.1c-arm-1.txz
+UPDATE /home2/memiksfr/subdomains/ffp/pkg/mysecureshell-1.30-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libextractor-0.6.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/Python-2.7.3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gnupg-1.4.8-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/cksfv-1.3.14-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/git-1.8.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/nail-20120224-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1217-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/slang-pre2.3.0-68-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/ImageMagick-6.8.2-9-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/wdfs-1.4.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/seeks-20120224-arm-2.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/opencv-2.3.1-arm-2.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/p7zip-9.20.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libmms-0.6.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/links-2.7-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/node-0.8.21-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1214-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libgd-2.0.33-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/M2Crypto-0.21.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/cifs-utils-git-20120302-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/rrdtool-1.4.5-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libpar2-0.2-arm-2.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libpar2-0.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/node-0.8.21-arm-2.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/openssh-6.1p1-arm-4.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/pixman-0.28.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/zlib-1.2.6-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/glib-2.35.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1222-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MPlayer-1.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/isync-1.0.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libffi-3.0.11-arm-1.txz
+95f341c4aaf4ea5118d10bb529c15a94  BeautifulSoup-3.2.1-arm-1.txz
+a1e0ad986d101c81735bcdaa73ed1120  Django-1.4-arm-1.txz
+8a03198597eb048966609fa7e85081cb  ImageMagick-6.8.2-9-arm-1.txz
+ed100bdde17d72a8de04fe76bf507c27  M2Crypto-0.21.1-arm-1.txz
+982aeaa56561d1a47906af083a198b4e  MCServer-1182-arm-1.txz
+f43e8c2fa9ed0649943984454f93e205  MCServer-1192-arm-1.txz
+59fcfcf1b1ce120f0667436648288811  MCServer-1214-arm-1.txz
+286cba7502f2e28048679877cfdaadcf  MCServer-1217-arm-1.txz
+a196fc6af4ffdc1332a30aedf7b9a8b7  MCServer-1218-arm-1.txz
+866887febd98b38b784f3eaf8a2211b4  MCServer-1222-arm-1.txz
+28bffa04cd4865b1116b9ac2953462ef  MCServer-1260-arm-1.txz
+0db42aed04763a412e09295b7879ce42  MPlayer-1.1-arm-1.txz
+a3d7a6d1f4d1ead00ef46940ba2f3bcc  Python-2.7.2-arm-1.txz
+0c0c5ee79714df0686e52cf9775c16bc  Python-2.7.3-arm-1.txz
+55a2f685c893cfd91fd418db3e26be35  Python-3.3.0-arm-1.txz
+032ac662c6dd9de1b3cd9b11f533b116  attr-2.4.46-arm-1.txz
+85ef9e1adaa758c1f8587c4556799f69  beautifulsoup4-4.0.0b9-arm-1.txz
+6ff8d6a390e744dd99e8d7a7e61b6de2  berkeleydb-5.1.19-arm-1.txz
+32d26bc2fb54e3151a3b10029b310a0e  cairo-1.12.8-arm-1.txz
+01effab30ea00b69d40f4b9f509f55ff  cherokee-130207-arm-1.txz
+49ecff75fd683d7bd3b219c955593780  cifs-utils-git-20120302-arm-1.txz
+d33d4de033f5734caa97fb64d220a52b  cksfv-1.3.14-arm-1.txz
+ac0cd5691e28b0bcf1f1de6733a86460  cmake-2.8.7-arm-1.txz
+fd44ad8cf4a284e8ae90798467fd345b  dtach-0.8-arm-1.txz
+473b0116a2dbd50121f48097b2e5a829  fontconfig-2.10.2-arm-1.txz
+6be66afb530ab8c7c079e91a13e65ca3  fontconfig-2.8.0-arm-1.txz
+f77c4c8c754b164d05ed1b6e0c4c3ec3  freetype-2.4.8-arm-1.txz
+d2c81249d4bf660ba5c20991c8e86fb4  gcc-4.6.2-arm-1.txz
+e9ee3add43dea9b356feaa4fdbca5fe2  gcc-solibs-4.6.2-arm-1.txz
+fdedc4578b52177d1d36dc48c019e359  ghostscript-9.06-arm-1.txz
+4f283bc42de500a9fe9d6a2e7dae7be4  git-1.8.0-arm-1.txz
+102f8bf9b770e8e7701b8ac9cf4e938c  glib-2.35.2-arm-1.txz
+03f8318c94b5154ff9370961ace3567e  gnunet-0.9.2-arm-1.txz
+338c45bfe0571d896fdf12833397b8a6  gnupg-1.4.8-arm-1.txz
+3da6e410046d049a9de0952ced17d207  gnuplot-4.4.4-arm-1.txz
+9e22f867fddbb011ae97fbb522027188  gnuplot-4.4.4-arm-2.txz
+d863b220986066854ac7c9b0afb20faa  harfbuzz-0.9.9-arm-1.txz
+704d33fe923ead8b65f73ec35eee3993  isync-1.0.4-arm-1.txz
+82a6edbe7ba4f8e27d76dc36b1fb0fa3  less-457-arm-1.txz
+0c54f33ceaa95ff640e77ec2378a124e  libev-4.11-arm-1.txz
+cbfd7cd569281a9ed6fa2313c30939ed  libextractor-0.6.2-arm-1.txz
+2d1b88015a8dd263f557fb27043e53f8  libffi-3.0.11-arm-1.txz
+f729e959f7a3bc84258d734f81214621  libgcrypt-1.5.0-arm-1.txz
+664311c312926ca30c077a89baebce93  libgd-2.0.33-arm-1.txz
+8ba41420fa0aab68345956455934bc00  libgpg-error-1.10-arm-1.txz
+4f162fbadfa6abc502a045ef4093c4ed  libmicrohttpd-0.9.19-arm-1.txz
+c9e9f52bd5ac9f9e2512345223a3b274  libmms-0.6.2-arm-1.txz
+d0ba07ffb41f8c8072c3a72c642fd6ed  libpar2-0.2-arm-1.txz
+3c5701c05ab95f986e01253ad94a8650  libpar2-0.2-arm-2.txz
+1e1c96e71aef38f9bbba4d5b203342fe  libsigc++-2.2.0-arm-1.txz
+549f4f792f3f414dc11a2543aa27a0ff  libspectre-0.2.7-arm-1.txz
+362fecb4327b4db509cc27c8377e3da5  libunistring-0.9.3-arm-1.txz
+aa138e6d77ad3953671610579cc3d42b  links-2.7-arm-1.txz
+aff618deb5ab34b9ac7a03e0d8154838  lzo-2.06-arm-1.txz
+f855d164949e7acc18fa4aaf101c0d04  most-pre5.1-14-arm-1.txz
+e96e21b39bfa4d7eb5d44b5228fe7b70  mysecureshell-1.30-arm-1.txz
+cfb7825ee4f94260672690d154f2b6e3  nail-20120224-arm-1.txz
+0a14881eadc441ccdcfcd31bea56bcdd  neon-0.29.6-arm-1.txz
+9a89b60c336964997604fae4ed17695e  netatalk-3.0.2-arm-1.txz
+6029909b3d503980c034bd39478c0be1  node-0.8.21-arm-1.txz
+8a7d226e05c96bbcb6d53615c8358a7b  node-0.8.21-arm-2.txz
+87293f8ac425e78b4fd4ea49597b9cb0  node-v0.6.10-arm-1.txz
+3a2df95f41ab7e1b0f0b81e874fb0812  nzbget-0.8.0r394-arm-1.txz
+083f7fd632357f1cce627207fb4552d3  opencv-2.3.1-arm-2.txz
+74894e01f5a6c68dc684a058883adce1  openssh-6.1p1-arm-4-node.txz
+ca1211de85f0f37d3a8e91d62fc63ab9  openssh-6.1p1-arm-4.txz
+c446b1a2cdfb22283d06cdc1696f69ef  openssl-1.0.0g-arm-1.txz
+1a6b123a0d2d852c49cd3b59dd162587  openssl-1.0.1c-arm-1.txz
+2739d61c04fef5e9c14703d3414a12b4  p7zip-9.20.1-arm-1.txz
+b6587c19ed46af536599c44164f30062  pango-1.32.3-arm-1.txz
+31aab821d024ee722d8086de0aaec3af  par-1.1-arm-1.txz
+40e39f90d6ffc36a13ed1266eaa233af  par2cmdline-0.4-arm-1.txz
+50bb839f538148a881ce720ac210d8cb  php-5.4.11-arm-1.txz
+ac2a6618d9bff07b61619eb43e444f76  pixman-0.28.0-arm-1.txz
+6193b8bc9c34ed897730111343822d4f  protobuf-2.4.1-arm-1.txz
+16e33376597489b17fc80cc37d00fc5c  rrdtool-1.4.5-arm-1.txz
+a9950a1a97c267804ff19d08aa6d9525  rtmpdump-2.3-arm-1.txz
+4fa15a6145d7b868d687b8eba8279abc  seeks-20120224-arm-2.txz
+d949e5826b587dfcbb4fc5127b9914bc  sendmail-8.14.5-arm-1.txz
+3b684329a947e339bcf852abccb64a72  setuptools-0.6c11-arm-1.txz
+97642aff8413275eadf07642783a7570  slang-pre2.3.0-68-arm-1.txz
+50001317da06eb57e8898c2e2c590c20  swig-2.0.4-arm-1.txz
+6c49bfc80064b5760b761b57f119c8ed  tokyocabinet-1.4.47-arm-1.txz
+276175e3bd3f5f00e0f5729b013790b0  tokyotyrant-1.1.41-arm-1.txz
+d800d890172e3b93db736db52bdb6de8  tor-0.2.3.25-arm-1.txz
+175f16b06006a17e1ce953e370f369c8  unrar-4.1.4-arm-1.txz
+51da0ea5b5cd3b92dc196ce0ccee8789  vim-7.3-arm-1.txz
+012b27f2e1bc2848263c6d1879589e0d  wdfs-1.4.2-arm-1.txz
+5f93016524482301a080ccbceeaa1413  xvidcore-1.3.2-arm-1.txz
+18c2e4aa1dcfa44fe7f49784d7414846  zlib-1.2.6-arm-1.txz

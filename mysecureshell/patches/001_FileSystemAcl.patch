@@ -1,0 +1,11 @@
+--- ./SftpServer/FileSystemAcl.h.orig	2013-03-13 14:18:21.000000000 +0100
++++ ./SftpServer/FileSystemAcl.h	2013-03-13 14:18:42.000000000 +0100
+@@ -34,7 +34,7 @@
+ 
+ #else
+ 
+-#define FSEnumAcl(_X, _Y, _Z)	SSH2_FX_OK
++#define FSEnumAcl(_A, _B, _C, _D, _E)    SSH2_FX_OK
+ 
+ #endif //HAVE_LIBACL
+ 
