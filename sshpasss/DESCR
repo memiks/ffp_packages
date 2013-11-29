@@ -1,0 +1,12 @@
+ This is the Non-interactive ssh password auth project ("sshpass") 
+
+This project was registered on SourceForge.net on Jan 4, 2006, and is 
+described by the project team as follows: 
+
+Sshpass is a tool for non-interactivly performing password 
+authentication with SSH's so called "interactive keyboard password 
+authentication". Most user should use SSH's more secure public key 
+authentiaction instead. 
+
+Homepage: http://sshpass.sourceforge.net/
+
