@@ -1,2 +1,0 @@
-The testsuite takes ages.
-
