@@ -1,0 +1,1960 @@
+++ basename ./zsh.funpkg .funpkg
++ PN=zsh
++ PR=1
++ . ./config.ffp
+++ GNU_HOST=
+++ GNU_TARGET=
+++ FFP_CFLAGS='-I/ffp/include -O2'
+++ FFP_LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
+++ '[' '!' -d '' ']'
+++ TMPDIR=/tmp
+++ export TMPDIR
+++ mandir=/ffp/share/man
+++ infodir=/ffp/share/info
+++ docdir=/ffp/share/doc
+++ pwd
++ X=/ffp/home/root/fun_plug/ffp_packages/zsh
+++ mktemp -t -d zsh.XXXXXX
++ W=/tmp/zsh.a0jf4c
++ D=/tmp/zsh.a0jf4c/pkg
++ cd /tmp/zsh.a0jf4c
++ cat /ffp/home/root/fun_plug/ffp_packages/zsh/SRC_URI
++ xargs wget
+--2013-05-16 13:21:01--  http://sourceforge.net/projects/zsh/files/zsh/5.0.2/zsh-5.0.2.tar.bz2
+Resolving sourceforge.net... 216.34.181.60
+Connecting to sourceforge.net|216.34.181.60|:80... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: http://sourceforge.net/projects/zsh/files/zsh/5.0.2/zsh-5.0.2.tar.bz2/download [following]
+--2013-05-16 13:21:01--  http://sourceforge.net/projects/zsh/files/zsh/5.0.2/zsh-5.0.2.tar.bz2/download
+Connecting to sourceforge.net|216.34.181.60|:80... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: http://downloads.sourceforge.net/project/zsh/zsh/5.0.2/zsh-5.0.2.tar.bz2?r=&ts=1368703354&use_mirror=freefr [following]
+--2013-05-16 13:21:02--  http://downloads.sourceforge.net/project/zsh/zsh/5.0.2/zsh-5.0.2.tar.bz2?r=&ts=1368703354&use_mirror=freefr
+Resolving downloads.sourceforge.net... 216.34.181.59
+Connecting to downloads.sourceforge.net|216.34.181.59|:80... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: http://freefr.dl.sourceforge.net/project/zsh/zsh/5.0.2/zsh-5.0.2.tar.bz2 [following]
+--2013-05-16 13:21:02--  http://freefr.dl.sourceforge.net/project/zsh/zsh/5.0.2/zsh-5.0.2.tar.bz2
+Resolving freefr.dl.sourceforge.net... 2001:1b48:10f::7, 158.255.96.7
+Connecting to freefr.dl.sourceforge.net|2001:1b48:10f::7|:80... failed: Address family not supported by protocol.
+Connecting to freefr.dl.sourceforge.net|158.255.96.7|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 3025767 (2.9M) [application/x-bzip2]
+Saving to: `zsh-5.0.2.tar.bz2'
+
+     0K .......... .......... .......... .......... ..........  1%  427K 7s
+    50K .......... .......... .......... .......... ..........  3% 1.23M 4s
+   100K .......... .......... .......... .......... ..........  5% 1.23M 4s
+   150K .......... .......... .......... .......... ..........  6% 1.22M 3s
+   200K .......... .......... .......... .......... ..........  8% 1.33M 3s
+   250K .......... .......... .......... .......... .......... 10% 1.28M 3s
+   300K .......... .......... .......... .......... .......... 11% 1.34M 3s
+   350K .......... .......... .......... .......... .......... 13% 1.36M 2s
+   400K .......... .......... .......... .......... .......... 15% 1.37M 2s
+   450K .......... .......... .......... .......... .......... 16% 1.40M 2s
+   500K .......... .......... .......... .......... .......... 18% 1.26M 2s
+   550K .......... .......... .......... .......... .......... 20% 1.43M 2s
+   600K .......... .......... .......... .......... .......... 21% 1.40M 2s
+   650K .......... .......... .......... .......... .......... 23% 1.35M 2s
+   700K .......... .......... .......... .......... .......... 25% 1.39M 2s
+   750K .......... .......... .......... .......... .......... 27% 1.40M 2s
+   800K .......... .......... .......... .......... .......... 28% 1.36M 2s
+   850K .......... .......... .......... .......... .......... 30% 1.39M 2s
+   900K .......... .......... .......... .......... .......... 32% 1.35M 2s
+   950K .......... .......... .......... .......... .......... 33% 1.40M 2s
+  1000K .......... .......... .......... .......... .......... 35% 1.40M 2s
+  1050K .......... .......... .......... .......... .......... 37% 1.35M 1s
+  1100K .......... .......... .......... .......... .......... 38% 1.39M 1s
+  1150K .......... .......... .......... .......... .......... 40% 1.40M 1s
+  1200K .......... .......... .......... .......... .......... 42% 1.35M 1s
+  1250K .......... .......... .......... .......... .......... 43% 1.39M 1s
+  1300K .......... .......... .......... .......... .......... 45% 1.40M 1s
+  1350K .......... .......... .......... .......... .......... 47% 1.36M 1s
+  1400K .......... .......... .......... .......... .......... 49% 1.39M 1s
+  1450K .......... .......... .......... .......... .......... 50% 1.40M 1s
+  1500K .......... .......... .......... .......... .......... 52% 1.36M 1s
+  1550K .......... .......... .......... .......... .......... 54% 1.39M 1s
+  1600K .......... .......... .......... .......... .......... 55% 1.35M 1s
+  1650K .......... .......... .......... .......... .......... 57% 1.40M 1s
+  1700K .......... .......... .......... .......... .......... 59% 1.40M 1s
+  1750K .......... .......... .......... .......... .......... 60% 1.36M 1s
+  1800K .......... .......... .......... .......... .......... 62% 1.38M 1s
+  1850K .......... .......... .......... .......... .......... 64% 1.39M 1s
+  1900K .......... .......... .......... .......... .......... 65% 1.37M 1s
+  1950K .......... .......... .......... .......... .......... 67% 1.39M 1s
+  2000K .......... .......... .......... .......... .......... 69% 1.39M 1s
+  2050K .......... .......... .......... .......... .......... 71% 1.37M 1s
+  2100K .......... .......... .......... .......... .......... 72% 1.39M 1s
+  2150K .......... .......... .......... .......... .......... 74% 1.39M 1s
+  2200K .......... .......... .......... .......... .......... 76% 1.37M 1s
+  2250K .......... .......... .......... .......... .......... 77% 1.39M 0s
+  2300K .......... .......... .......... .......... .......... 79% 1.35M 0s
+  2350K .......... .......... .......... .......... .......... 81% 1.38M 0s
+  2400K .......... .......... .......... .......... .......... 82% 1.41M 0s
+  2450K .......... .......... .......... .......... .......... 84% 1.35M 0s
+  2500K .......... .......... .......... .......... .......... 86% 1.39M 0s
+  2550K .......... .......... .......... .......... .......... 87% 1.41M 0s
+  2600K .......... .......... .......... .......... .......... 89% 1.35M 0s
+  2650K .......... .......... .......... .......... .......... 91% 1.39M 0s
+  2700K .......... .......... .......... .......... .......... 93% 1.40M 0s
+  2750K .......... .......... .......... .......... .......... 94% 1.36M 0s
+  2800K .......... .......... .......... .......... .......... 96% 1.39M 0s
+  2850K .......... .......... .......... .......... .......... 98% 1.37M 0s
+  2900K .......... .......... .......... .......... .......... 99% 1.40M 0s
+  2950K ....                                                  100% 1.58M=2.2s
+
+2013-05-16 13:21:04 (1.32 MB/s) - `zsh-5.0.2.tar.bz2' saved [3025767/3025767]
+
+++ ls zsh-5.0.2.tar.bz2
+++ egrep -o '[0-9][0-9.]*[0-9]'
++ PV=5.0.2
++ tar xf zsh-5.0.2.tar.bz2
++ cd zsh-5.0.2 zsh-5.0.2.tar.bz2
+++ ls '/ffp/home/root/fun_plug/ffp_packages/zsh/patches/*.patch'
+ls: cannot access /ffp/home/root/fun_plug/ffp_packages/zsh/patches/*.patch: No such file or directory
++ CFLAGS='-I/ffp/include -O2 -D_GNU_SOURCE -pthread'
++ CXXFLAGS='-I/ffp/include -O2 -D_GNU_SOURCE -pthread'
++ LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread '
++ ./configure --prefix=/ffp --build= --host= --mandir=/ffp/share/man --with-tcsetpgrp --infodir=/ffp/share/info
+configuring for zsh 5.0.2
+checking build system type... armv5tejl-unknown-linux-gnueabi
+checking host system type... armv5tejl-unknown-linux-gnueabi
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... 64
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /ffp/bin/grep
+checking for egrep... /ffp/bin/grep -E
+checking whether gcc needs -traditional... no
+checking for an ANSI C-conforming const... yes
+checking for gcc option to accept ANSI C... 
+checking whether to use prototypes... yes
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for size_t... yes
+checking for working alloca.h... yes
+checking for alloca... yes
+checking if the compiler supports union initialisation... yes
+checking if signed to unsigned casting is broken... no
+checking if the compiler supports variable-length arrays... yes
+checking whether make sets $(MAKE)... yes
+checking for a BSD-compatible install... /ffp/bin/install -c
+checking for gawk... gawk
+checking whether ln works... yes
+checking for egrep... (cached) /ffp/bin/grep -E
+checking for yodl... no
+checking for pdfetex... no
+checking for texi2pdf... texi2pdf
+checking for texi2html... no
+checking for ansi2knr... no
+checking for dirent.h that defines DIR... yes
+checking for library containing opendir... none required
+checking for ANSI C header files... (cached) yes
+checking whether time.h and sys/time.h may both be included... yes
+checking whether stat file-mode macros are broken... no
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking sys/times.h usability... yes
+checking sys/times.h presence... yes
+checking for sys/times.h... yes
+checking sys/select.h usability... yes
+checking sys/select.h presence... yes
+checking for sys/select.h... yes
+checking termcap.h usability... no
+checking termcap.h presence... no
+checking for termcap.h... no
+checking termio.h usability... yes
+checking termio.h presence... yes
+checking for termio.h... yes
+checking termios.h usability... yes
+checking termios.h presence... yes
+checking for termios.h... yes
+checking sys/param.h usability... yes
+checking sys/param.h presence... yes
+checking for sys/param.h... yes
+checking sys/filio.h usability... no
+checking sys/filio.h presence... no
+checking for sys/filio.h... no
+checking for string.h... (cached) yes
+checking for memory.h... (cached) yes
+checking limits.h usability... yes
+checking limits.h presence... yes
+checking for limits.h... yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking libc.h usability... no
+checking libc.h presence... no
+checking for libc.h... no
+checking sys/utsname.h usability... yes
+checking sys/utsname.h presence... yes
+checking for sys/utsname.h... yes
+checking sys/resource.h usability... yes
+checking sys/resource.h presence... yes
+checking for sys/resource.h... yes
+checking locale.h usability... yes
+checking locale.h presence... yes
+checking for locale.h... yes
+checking errno.h usability... yes
+checking errno.h presence... yes
+checking for errno.h... yes
+checking stdio.h usability... yes
+checking stdio.h presence... yes
+checking for stdio.h... yes
+checking stdarg.h usability... yes
+checking stdarg.h presence... yes
+checking for stdarg.h... yes
+checking varargs.h usability... no
+checking varargs.h presence... no
+checking for varargs.h... no
+checking for stdlib.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking sys/capability.h usability... no
+checking sys/capability.h presence... no
+checking for sys/capability.h... no
+checking utmp.h usability... yes
+checking utmp.h presence... yes
+checking for utmp.h... yes
+checking utmpx.h usability... yes
+checking utmpx.h presence... yes
+checking for utmpx.h... yes
+checking for sys/types.h... (cached) yes
+checking pwd.h usability... yes
+checking pwd.h presence... yes
+checking for pwd.h... yes
+checking grp.h usability... yes
+checking grp.h presence... yes
+checking for grp.h... yes
+checking poll.h usability... yes
+checking poll.h presence... yes
+checking for poll.h... yes
+checking sys/mman.h usability... yes
+checking sys/mman.h presence... yes
+checking for sys/mman.h... yes
+checking netinet/in_systm.h usability... yes
+checking netinet/in_systm.h presence... yes
+checking for netinet/in_systm.h... yes
+checking pcre.h usability... yes
+checking pcre.h presence... yes
+checking for pcre.h... yes
+checking langinfo.h usability... yes
+checking langinfo.h presence... yes
+checking for langinfo.h... yes
+checking wchar.h usability... yes
+checking wchar.h presence... yes
+checking for wchar.h... yes
+checking stddef.h usability... yes
+checking stddef.h presence... yes
+checking for stddef.h... yes
+checking sys/stropts.h usability... no
+checking sys/stropts.h presence... no
+checking for sys/stropts.h... no
+checking iconv.h usability... yes
+checking iconv.h presence... yes
+checking for iconv.h... yes
+checking ncurses.h usability... yes
+checking ncurses.h presence... yes
+checking for ncurses.h... yes
+checking ncursesw/ncurses.h usability... yes
+checking ncursesw/ncurses.h presence... yes
+checking for ncursesw/ncurses.h... yes
+checking ncurses/ncurses.h usability... yes
+checking ncurses/ncurses.h presence... yes
+checking for ncurses/ncurses.h... yes
+checking dlfcn.h usability... yes
+checking dlfcn.h presence... yes
+checking for dlfcn.h... yes
+checking dl.h usability... no
+checking dl.h presence... no
+checking for dl.h... no
+checking for conflicts in sys/time.h and sys/select.h... no
+checking TIOCGWINSZ in termios.h... no
+checking TIOCGWINSZ in sys/ioctl.h... yes
+checking for streams headers including struct winsize... no
+checking for printf in -lc... yes
+checking for pow in -lm... yes
+checking for clock_gettime in -lrt... yes
+checking if _XOPEN_SOURCE_EXTENDED should not be defined... no
+checking for library containing tigetflag... -lncursesw
+checking for library containing tgetent... none required
+checking curses.h usability... yes
+checking curses.h presence... yes
+checking for curses.h... yes
+checking if we need to ignore ncurses... no
+checking for library containing getpwnam... none required
+checking for dlopen in -ldl... yes
+checking for socket in -lsocket... no
+checking for library containing gethostbyname2... none required
+checking for iconv... no
+checking for iconv in -liconv... no
+checking for libiconv in -liconv... yes
+checking for iconv declaration... 
+checking if an include file defines ospeed... no
+checking if you must define ospeed... yes
+checking gdbm.h usability... no
+checking gdbm.h presence... no
+checking for gdbm.h... no
+checking for gdbm_open in -lgdbm... no
+checking sys/xattr.h usability... yes
+checking sys/xattr.h presence... yes
+checking for sys/xattr.h... yes
+checking return type of signal handlers... void
+checking for pid_t... yes
+checking for off_t... yes
+checking for ino_t... yes
+checking for mode_t... yes
+checking for uid_t in sys/types.h... yes
+checking for size_t... (cached) yes
+checking if long is 64 bits... no
+checking if off_t is 64 bit... yes
+checking if ino_t is 64 bit... yes
+checking if compiler has a 64 bit type... long long
+checking for a corresponding unsigned 64 bit type... unsigned long long
+checking for %lld printf support... yes
+checking for sigset_t... yes
+checking for struct stat.st_atim.tv_nsec... yes
+checking for struct stat.st_atimespec.tv_nsec... no
+checking for struct stat.st_atimensec... no
+checking for struct stat.st_mtim.tv_nsec... yes
+checking for struct stat.st_mtimespec.tv_nsec... no
+checking for struct stat.st_mtimensec... no
+checking for struct stat.st_ctim.tv_nsec... yes
+checking for struct stat.st_ctimespec.tv_nsec... no
+checking for struct stat.st_ctimensec... no
+checking for struct timezone... yes
+checking for struct utmp... yes
+checking for struct utmpx... yes
+checking for ut_host in struct utmp... yes
+checking for ut_host in struct utmpx... yes
+checking for ut_xtime in struct utmpx... no
+checking for ut_tv in struct utmpx... yes
+checking for d_ino in struct dirent... yes
+checking for d_stat in struct dirent... no
+checking for d_ino in struct direct... no
+checking for d_stat in struct direct... no
+checking for sin6_scope_id in struct sockaddr_in6... yes
+checking if we need our own h_errno... yes
+checking for strftime... yes
+checking for strptime... yes
+checking for mktime... yes
+checking for timelocal... yes
+checking for difftime... yes
+checking for gettimeofday... yes
+checking for clock_gettime... yes
+checking for select... yes
+checking for poll... yes
+checking for readlink... yes
+checking for faccessx... no
+checking for fchdir... yes
+checking for ftruncate... yes
+checking for fstat... yes
+checking for lstat... yes
+checking for lchown... yes
+checking for fchown... yes
+checking for fchmod... yes
+checking for fseeko... yes
+checking for ftello... yes
+checking for mkfifo... yes
+checking for _mktemp... no
+checking for mkstemp... yes
+checking for waitpid... yes
+checking for wait3... yes
+checking for sigaction... yes
+checking for sigblock... yes
+checking for sighold... yes
+checking for sigrelse... yes
+checking for sigsetmask... yes
+checking for sigprocmask... yes
+checking for killpg... yes
+checking for setpgid... yes
+checking for setpgrp... yes
+checking for tcsetpgrp... yes
+checking for tcgetattr... yes
+checking for nice... yes
+checking for gethostname... yes
+checking for gethostbyname2... yes
+checking for getipnodebyname... no
+checking for inet_aton... yes
+checking for inet_pton... yes
+checking for inet_ntop... yes
+checking for getlogin... yes
+checking for getpwent... yes
+checking for getpwnam... yes
+checking for getpwuid... yes
+checking for getgrgid... yes
+checking for getgrnam... yes
+checking for initgroups... yes
+checking for nis_list... no
+checking for setuid... yes
+checking for seteuid... yes
+checking for setreuid... yes
+checking for setresuid... yes
+checking for setsid... yes
+checking for memcpy... yes
+checking for memmove... yes
+checking for strstr... yes
+checking for strerror... yes
+checking for strtoul... yes
+checking for getrlimit... yes
+checking for getrusage... yes
+checking for setlocale... yes
+checking for uname... yes
+checking for signgam... yes
+checking for putenv... yes
+checking for getenv... yes
+checking for setenv... yes
+checking for unsetenv... yes
+checking for xw... no
+checking for brk... yes
+checking for sbrk... yes
+checking for pathconf... yes
+checking for sysconf... yes
+checking for tgetent... yes
+checking for tigetflag... yes
+checking for tigetnum... yes
+checking for tigetstr... yes
+checking for setupterm... yes
+checking for initscr... yes
+checking for getcchar... yes
+checking for setcchar... yes
+checking for waddwstr... yes
+checking for wget_wch... yes
+checking for win_wch... yes
+checking for use_default_colors... yes
+checking for pcre_compile... no
+checking for pcre_study... no
+checking for pcre_exec... no
+checking for nl_langinfo... yes
+checking for erand48... yes
+checking for open_memstream... no
+checking for wctomb... yes
+checking for iconv... (cached) no
+checking for grantpt... yes
+checking for unlockpt... yes
+checking for ptsname... yes
+checking for htons... yes
+checking for ntohs... yes
+checking for regcomp... yes
+checking for regexec... yes
+checking for regerror... yes
+checking for regfree... yes
+checking for gdbm_open... no
+checking for getxattr... yes
+checking for realpath... yes
+checking for canonicalize_file_name... yes
+checking for symlink... yes
+checking for getcwd... yes
+checking for working strcoll... yes
+checking if tgetent accepts NULL... yes
+checking if tgetent returns 0 on success... no
+checking for stdlib.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for sys/param.h... (cached) yes
+checking for getpagesize... yes
+checking for working mmap... yes
+checking for munmap... yes
+checking for msync... yes
+checking whether getpgrp requires zero arguments... yes
+checking for dlopen... yes
+checking for dlerror... yes
+checking for dlsym... yes
+checking for dlclose... yes
+checking for load... no
+checking for loadquery... no
+checking for loadbind... no
+checking for unload... no
+checking for shl_load... no
+checking for shl_unload... no
+checking for shl_findsym... no
+checking if getxattr etc. are Linux-like... yes
+checking if getxattr etc. are usable... yes
+checking what style of signals to use... POSIX_SIGNALS
+checking where signal.h is located... /ffp/include/bits/signum.h
+checking where error names are located...  /ffp/include/asm-generic/errno-base.h /ffp/include/asm-generic/errno.h /ffp/include/bits/errno.h
+checking location of curses header... ncursesw/ncurses.h
+checking where curses key definitions are located... /ffp/include/ncursesw/ncurses.h
+checking for ncursesw/term.h... yes
+checking for ncurses/term.h... yes
+checking for term.h... yes
+checking where term.h is located... ncursesw/term.h
+checking if boolcodes is available... yes
+checking if numcodes is available... yes
+checking if strcodes is available... yes
+checking if boolnames is available... yes
+checking if numnames is available... yes
+checking if strnames is available... yes
+checking if tgoto prototype is missing... no
+checking where the RLIMIT macros are located... /ffp/include/bits/resource.h
+checking if rlim_t is longer than a long... yes
+checking if rlim_t is a quad... yes
+checking for rlim_t... yes
+checking for limit RLIMIT_AIO_MEM... no
+checking for limit RLIMIT_AIO_OPS... no
+checking for limit RLIMIT_AS... yes
+checking for limit RLIMIT_LOCKS... yes
+checking for limit RLIMIT_MEMLOCK... yes
+checking for limit RLIMIT_NPROC... yes
+checking for limit RLIMIT_NTHR... no
+checking for limit RLIMIT_NOFILE... yes
+checking for limit RLIMIT_PTHREAD... no
+checking for limit RLIMIT_RSS... yes
+checking for limit RLIMIT_SBSIZE... no
+checking for limit RLIMIT_TCACHE... no
+checking for limit RLIMIT_VMEM... no
+checking for limit RLIMIT_SIGPENDING... yes
+checking for limit RLIMIT_MSGQUEUE... yes
+checking for limit RLIMIT_NICE... yes
+checking for limit RLIMIT_RTPRIO... yes
+checking if RLIMIT_VMEM and RLIMIT_RSS are the same... no
+checking if RLIMIT_VMEM and RLIMIT_AS are the same... no
+checking if RLIMIT_RSS and RLIMIT_AS are the same... no
+checking for struct rusage.ru_maxrss... yes
+checking for struct rusage.ru_ixrss... yes
+checking for struct rusage.ru_idrss... yes
+checking for struct rusage.ru_isrss... yes
+checking for struct rusage.ru_minflt... yes
+checking for struct rusage.ru_majflt... yes
+checking for struct rusage.ru_nswap... yes
+checking for struct rusage.ru_inblock... yes
+checking for struct rusage.ru_oublock... yes
+checking for struct rusage.ru_msgsnd... yes
+checking for struct rusage.ru_msgrcv... yes
+checking for struct rusage.ru_nsignals... yes
+checking for struct rusage.ru_nvcsw... yes
+checking for struct rusage.ru_nivcsw... yes
+checking for /dev/fd filesystem... /proc/self/fd
+checking for RFS superroot directory... no
+checking whether we should use the native getcwd... no
+checking whether getcwd calls malloc to allocate memory... yes
+checking for setproctitle... no
+checking for library containing setproctitle... no
+checking for NIS... no
+checking for NIS+... no
+checking for utmp file... /var/run/utmp
+checking for wtmp file... /var/log/wtmp
+checking for utmpx file... no
+checking for wtmpx file... no
+checking for brk() prototype in <unistd.h>... yes
+checking for sbrk() prototype in <unistd.h>... yes
+checking for mknod prototype in <sys/stat.h>... yes
+checking for ioctl prototype in <unistd.h> or <termios.h>... no
+checking for ioctl prototype in <sys/ioctl.h>... yes
+checking if named FIFOs work... yes
+checking if echo in /bin/sh interprets escape sequences... no
+checking if link() works... yes
+checking if kill(pid, 0) returns ESRCH correctly... yes
+checking if POSIX sigsuspend() works... yes
+checking if getpwnam() is faked... no
+checking base type of the third argument to accept... socklen_t
+checking if your system has /dev/ptmx... yes
+checking if /dev/ptmx is usable... yes
+configure: checking for functions supporting multibyte characters
+checking for iswalnum... yes
+checking for iswcntrl... yes
+checking for iswdigit... yes
+checking for iswgraph... yes
+checking for iswlower... yes
+checking for iswprint... yes
+checking for iswpunct... yes
+checking for iswspace... yes
+checking for iswupper... yes
+checking for iswxdigit... yes
+checking for mbrlen... yes
+checking for mbrtowc... yes
+checking for towupper... yes
+checking for towlower... yes
+checking for wcschr... yes
+checking for wcscpy... yes
+checking for wcslen... yes
+checking for wcsncmp... yes
+checking for wcsncpy... yes
+checking for wcrtomb... yes
+checking for wcwidth... yes
+checking for wmemchr... yes
+checking for wmemcmp... yes
+checking for wmemcpy... yes
+checking for wmemmove... yes
+checking for wmemset... yes
+configure: all functions found, multibyte support enabled
+checking if the wcwidth() function is broken... no
+checking if your system uses ELF binaries... yes
+checking if we can use -rdynamic... yes
+checking if your dlsym() needs a leading underscore... no
+checking if environ is available in shared libraries... yes
+checking if tgetent is available in shared libraries... yes
+checking if tigetstr is available in shared libraries... yes
+checking if name clashes in shared objects are OK... yes
+checking for working RTLD_GLOBAL... yes
+checking whether symbols in the executable are available... yes
+checking whether executables can be stripped... yes
+checking whether libraries can be stripped... yes
+configure: creating ./config.status
+config.status: creating Config/defs.mk
+config.status: creating Makefile
+config.status: creating Doc/Makefile
+config.status: creating Etc/Makefile
+config.status: creating Src/Makefile
+config.status: creating Test/Makefile
+config.status: creating config.h
+config.status: executing config.modules commands
+creating ./config.modules
+config.status: executing stamp-h commands
+
+zsh configuration
+-----------------
+zsh version               : 5.0.2
+host operating system     : armv5tejl-unknown-linux-gnueabi
+source code location      : .
+compiler                  : gcc
+preprocessor flags        : 
+executable compiler flags : -I/ffp/include -O2 -D_GNU_SOURCE -pthread
+module compiler flags     : -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC
+executable linker flags   : -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread   -rdynamic
+module linker flags       : -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread   -shared
+library flags             : -liconv -ldl -lncursesw -lrt -lm  -lc
+installation basename     : zsh
+binary install path       : /ffp/bin
+man page install path     : /ffp/share/man
+info install path         : /ffp/share/info
+functions install path    : ${prefix}/share/zsh/5.0.2/functions
+See config.modules for installed modules and functions.
+
++ CFLAGS='-I/ffp/include -O2 -D_GNU_SOURCE -pthread'
++ CXXFLAGS='-I/ffp/include -O2 -D_GNU_SOURCE -pthread'
++ LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread '
++ make
+make[1]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src'
+cd .. && /bin/sh $top_srcdir/Src/mkmakemod.sh Src Makemod
+creating Src/Makemod.in
+config.status: creating Src/Makemod
+make[2]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src'
+gawk -f ./signames1.awk /ffp/include/bits/signum.h >sigtmp.c
+gcc -E sigtmp.c >sigtmp.out
+gawk -f ./signames2.awk sigtmp.out > signames.c
+rm -f sigtmp.c sigtmp.out
+grep 'define.*SIGCOUNT' signames.c > sigcount.h
+make[3]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src'
+make[3]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src'
+Updated `zsh.mdh'.
+echo 'timestamp for zsh.mdh against zsh.mdd' > zsh.mdhs
+gawk -f ../Src/makepro.awk builtin.c Src > builtin.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < builtin.syms) \
+		> builtin.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < builtin.syms) \
+		> `echo builtin.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../Src/makepro.awk compat.c Src > compat.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < compat.syms) \
+		> compat.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < compat.syms) \
+		> `echo compat.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../Src/makepro.awk cond.c Src > cond.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < cond.syms) \
+		> cond.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < cond.syms) \
+		> `echo cond.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../Src/makepro.awk exec.c Src > exec.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < exec.syms) \
+		> exec.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < exec.syms) \
+		> `echo exec.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../Src/makepro.awk glob.c Src > glob.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < glob.syms) \
+		> glob.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < glob.syms) \
+		> `echo glob.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../Src/makepro.awk hashtable.c Src > hashtable.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < hashtable.syms) \
+		> hashtable.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < hashtable.syms) \
+		> `echo hashtable.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../Src/makepro.awk hashnameddir.c Src > hashnameddir.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < hashnameddir.syms) \
+		> hashnameddir.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < hashnameddir.syms) \
+		> `echo hashnameddir.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../Src/makepro.awk hist.c Src > hist.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < hist.syms) \
+		> hist.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < hist.syms) \
+		> `echo hist.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../Src/makepro.awk init.c Src > init.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < init.syms) \
+		> init.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < init.syms) \
+		> `echo init.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../Src/makepro.awk input.c Src > input.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < input.syms) \
+		> input.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < input.syms) \
+		> `echo input.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../Src/makepro.awk jobs.c Src > jobs.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < jobs.syms) \
+		> jobs.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < jobs.syms) \
+		> `echo jobs.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../Src/makepro.awk lex.c Src > lex.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < lex.syms) \
+		> lex.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < lex.syms) \
+		> `echo lex.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../Src/makepro.awk linklist.c Src > linklist.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < linklist.syms) \
+		> linklist.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < linklist.syms) \
+		> `echo linklist.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../Src/makepro.awk loop.c Src > loop.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < loop.syms) \
+		> loop.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < loop.syms) \
+		> `echo loop.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../Src/makepro.awk math.c Src > math.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < math.syms) \
+		> math.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < math.syms) \
+		> `echo math.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../Src/makepro.awk mem.c Src > mem.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < mem.syms) \
+		> mem.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < mem.syms) \
+		> `echo mem.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../Src/makepro.awk module.c Src > module.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < module.syms) \
+		> module.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < module.syms) \
+		> `echo module.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../Src/makepro.awk options.c Src > options.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < options.syms) \
+		> options.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < options.syms) \
+		> `echo options.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../Src/makepro.awk params.c Src > params.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < params.syms) \
+		> params.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < params.syms) \
+		> `echo params.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../Src/makepro.awk parse.c Src > parse.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < parse.syms) \
+		> parse.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < parse.syms) \
+		> `echo parse.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../Src/makepro.awk pattern.c Src > pattern.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < pattern.syms) \
+		> pattern.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < pattern.syms) \
+		> `echo pattern.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../Src/makepro.awk prompt.c Src > prompt.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < prompt.syms) \
+		> prompt.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < prompt.syms) \
+		> `echo prompt.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../Src/makepro.awk signals.c Src > signals.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < signals.syms) \
+		> signals.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < signals.syms) \
+		> `echo signals.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../Src/makepro.awk signames.c Src > signames.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < signames.syms) \
+		> signames.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < signames.syms) \
+		> `echo signames.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../Src/makepro.awk sort.c Src > sort.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < sort.syms) \
+		> sort.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < sort.syms) \
+		> `echo sort.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../Src/makepro.awk string.c Src > string.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < string.syms) \
+		> string.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < string.syms) \
+		> `echo string.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../Src/makepro.awk subst.c Src > subst.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < subst.syms) \
+		> subst.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < subst.syms) \
+		> `echo subst.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../Src/makepro.awk text.c Src > text.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < text.syms) \
+		> text.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < text.syms) \
+		> `echo text.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../Src/makepro.awk utils.c Src > utils.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < utils.syms) \
+		> utils.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < utils.syms) \
+		> `echo utils.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../Src/makepro.awk watch.c Src > watch.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < watch.syms) \
+		> watch.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < watch.syms) \
+		> `echo watch.epro | sed 's/\.epro$/.pro/'`
+make[3]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src'
+make[3]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src'
+Updated `zsh.mdh'.
+make -f Makemod prefix='/ffp' exec_prefix='/ffp' bindir='/ffp/bin' libdir='/ffp/lib' MODDIR='/ffp/lib/zsh/5.0.2' infodir='/ffp/share/info' mandir='/ffp/share/man' datadir='/ffp/share' fndir='/ffp/share/zsh/5.0.2/functions' htmldir='/ffp/share/zsh/htmldoc' CC='gcc' CPPFLAGS='' DEFS='-DHAVE_CONFIG_H' CFLAGS='-I/ffp/include -O2 -D_GNU_SOURCE -pthread' LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread ' EXTRA_LDFLAGS='-rdynamic' DLCFLAGS='-fPIC' DLLDFLAGS='-shared' LIBLDFLAGS='' EXELDFLAGS='' LIBS='-liconv -ldl -lncursesw -lrt -lm  -lc' DL_EXT='so' DLLD='gcc' AWK='gawk' ANSI2KNR=': ansi2knr' YODL=': yodl ' YODL2TXT=': yodl2txt' YODL2HTML=': yodl2html' FUNCTIONS_INSTALL='' tzsh='zsh' prep
+make[3]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src'
+creating Src/Builtins/Makefile.in
+config.status: creating Src/Builtins/Makefile
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Builtins'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Builtins'
+creating Src/Modules/Makefile.in
+config.status: creating Src/Modules/Makefile
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+creating Src/Zle/Makefile.in
+config.status: creating Src/Zle/Makefile
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+make[3]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src'
+echo 'timestamp for *.mdd files' > ../Src/modules.stamp
+make[3]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Builtins'
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Builtins'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Builtins'
+Updated `rlimits.mdh'.
+echo 'timestamp for rlimits.mdh against rlimits.mdd' > rlimits.mdhs
+gawk -f ../../Src/makepro.awk rlimits.c Src/Builtins > rlimits.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < rlimits.syms) \
+		> rlimits.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < rlimits.syms) \
+		> `echo rlimits.epro | sed 's/\.epro$/.pro/'`
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Builtins'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Builtins'
+Updated `rlimits.mdh'.
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Builtins'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Builtins'
+Updated `sched.mdh'.
+echo 'timestamp for sched.mdh against sched.mdd' > sched.mdhs
+gawk -f ../../Src/makepro.awk sched.c Src/Builtins > sched.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < sched.syms) \
+		> sched.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < sched.syms) \
+		> `echo sched.epro | sed 's/\.epro$/.pro/'`
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Builtins'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Builtins'
+Updated `sched.mdh'.
+make[3]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Builtins'
+make[3]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `attr.mdh'.
+echo 'timestamp for attr.mdh against attr.mdd' > attr.mdhs
+gawk -f ../../Src/makepro.awk attr.c Src/Modules > attr.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < attr.syms) \
+		> attr.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < attr.syms) \
+		> `echo attr.epro | sed 's/\.epro$/.pro/'`
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `attr.mdh'.
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `cap.mdh'.
+echo 'timestamp for cap.mdh against cap.mdd' > cap.mdhs
+gawk -f ../../Src/makepro.awk cap.c Src/Modules > cap.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < cap.syms) \
+		> cap.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < cap.syms) \
+		> `echo cap.epro | sed 's/\.epro$/.pro/'`
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `cap.mdh'.
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `clone.mdh'.
+echo 'timestamp for clone.mdh against clone.mdd' > clone.mdhs
+gawk -f ../../Src/makepro.awk clone.c Src/Modules > clone.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < clone.syms) \
+		> clone.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < clone.syms) \
+		> `echo clone.epro | sed 's/\.epro$/.pro/'`
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `clone.mdh'.
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `curses.mdh'.
+echo 'timestamp for curses.mdh against curses.mdd' > curses.mdhs
+gawk -f ../../Src/makepro.awk curses.c Src/Modules > curses.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < curses.syms) \
+		> curses.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < curses.syms) \
+		> `echo curses.epro | sed 's/\.epro$/.pro/'`
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `curses.mdh'.
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `datetime.mdh'.
+echo 'timestamp for datetime.mdh against datetime.mdd' > datetime.mdhs
+gawk -f ../../Src/makepro.awk datetime.c Src/Modules > datetime.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < datetime.syms) \
+		> datetime.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < datetime.syms) \
+		> `echo datetime.epro | sed 's/\.epro$/.pro/'`
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `datetime.mdh'.
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `example.mdh'.
+echo 'timestamp for example.mdh against example.mdd' > example.mdhs
+gawk -f ../../Src/makepro.awk example.c Src/Modules > example.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < example.syms) \
+		> example.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < example.syms) \
+		> `echo example.epro | sed 's/\.epro$/.pro/'`
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `example.mdh'.
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `files.mdh'.
+echo 'timestamp for files.mdh against files.mdd' > files.mdhs
+gawk -f ../../Src/makepro.awk files.c Src/Modules > files.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < files.syms) \
+		> files.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < files.syms) \
+		> `echo files.epro | sed 's/\.epro$/.pro/'`
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `files.mdh'.
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `langinfo.mdh'.
+echo 'timestamp for langinfo.mdh against langinfo.mdd' > langinfo.mdhs
+gawk -f ../../Src/makepro.awk langinfo.c Src/Modules > langinfo.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < langinfo.syms) \
+		> langinfo.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < langinfo.syms) \
+		> `echo langinfo.epro | sed 's/\.epro$/.pro/'`
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `langinfo.mdh'.
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `mapfile.mdh'.
+echo 'timestamp for mapfile.mdh against mapfile.mdd' > mapfile.mdhs
+gawk -f ../../Src/makepro.awk mapfile.c Src/Modules > mapfile.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < mapfile.syms) \
+		> mapfile.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < mapfile.syms) \
+		> `echo mapfile.epro | sed 's/\.epro$/.pro/'`
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `mapfile.mdh'.
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `mathfunc.mdh'.
+echo 'timestamp for mathfunc.mdh against mathfunc.mdd' > mathfunc.mdhs
+gawk -f ../../Src/makepro.awk mathfunc.c Src/Modules > mathfunc.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < mathfunc.syms) \
+		> mathfunc.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < mathfunc.syms) \
+		> `echo mathfunc.epro | sed 's/\.epro$/.pro/'`
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `mathfunc.mdh'.
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `newuser.mdh'.
+echo 'timestamp for newuser.mdh against newuser.mdd' > newuser.mdhs
+gawk -f ../../Src/makepro.awk newuser.c Src/Modules > newuser.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < newuser.syms) \
+		> newuser.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < newuser.syms) \
+		> `echo newuser.epro | sed 's/\.epro$/.pro/'`
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `newuser.mdh'.
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `parameter.mdh'.
+echo 'timestamp for parameter.mdh against parameter.mdd' > parameter.mdhs
+gawk -f ../../Src/makepro.awk parameter.c Src/Modules > parameter.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < parameter.syms) \
+		> parameter.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < parameter.syms) \
+		> `echo parameter.epro | sed 's/\.epro$/.pro/'`
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `parameter.mdh'.
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `regex.mdh'.
+echo 'timestamp for regex.mdh against regex.mdd' > regex.mdhs
+gawk -f ../../Src/makepro.awk regex.c Src/Modules > regex.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < regex.syms) \
+		> regex.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < regex.syms) \
+		> `echo regex.epro | sed 's/\.epro$/.pro/'`
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `regex.mdh'.
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `socket.mdh'.
+echo 'timestamp for socket.mdh against socket.mdd' > socket.mdhs
+gawk -f ../../Src/makepro.awk socket.c Src/Modules > socket.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < socket.syms) \
+		> socket.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < socket.syms) \
+		> `echo socket.epro | sed 's/\.epro$/.pro/'`
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `socket.mdh'.
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `stat.mdh'.
+echo 'timestamp for stat.mdh against stat.mdd' > stat.mdhs
+gawk -f ../../Src/makepro.awk stat.c Src/Modules > stat.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < stat.syms) \
+		> stat.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < stat.syms) \
+		> `echo stat.epro | sed 's/\.epro$/.pro/'`
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `stat.mdh'.
+if [ x" /ffp/include/asm-generic/errno-base.h /ffp/include/asm-generic/errno.h /ffp/include/bits/errno.h" = x ]; then \
+		touch errtmp.out; \
+	   else \
+		gawk -f ./errnames1.awk  /ffp/include/asm-generic/errno-base.h /ffp/include/asm-generic/errno.h /ffp/include/bits/errno.h >errtmp.c; \
+		gcc -E errtmp.c >errtmp.out; \
+	   fi
+gawk -f ./errnames2.awk errtmp.out > errnames.c
+rm -f errtmp.c errtmp.out
+grep 'define.*ERRCOUNT' errnames.c > errcount.h
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `system.mdh'.
+echo 'timestamp for system.mdh against system.mdd' > system.mdhs
+gawk -f ../../Src/makepro.awk system.c Src/Modules > system.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < system.syms) \
+		> system.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < system.syms) \
+		> `echo system.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../../Src/makepro.awk errnames.c Src/Modules > errnames.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < errnames.syms) \
+		> errnames.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < errnames.syms) \
+		> `echo errnames.epro | sed 's/\.epro$/.pro/'`
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `system.mdh'.
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `tcp.mdh'.
+echo 'timestamp for tcp.mdh against tcp.mdd' > tcp.mdhs
+gawk -f ../../Src/makepro.awk tcp.c Src/Modules > tcp.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < tcp.syms) \
+		> tcp.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < tcp.syms) \
+		> `echo tcp.epro | sed 's/\.epro$/.pro/'`
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `tcp.mdh'.
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `termcap.mdh'.
+echo 'timestamp for termcap.mdh against termcap.mdd' > termcap.mdhs
+gawk -f ../../Src/makepro.awk termcap.c Src/Modules > termcap.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < termcap.syms) \
+		> termcap.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < termcap.syms) \
+		> `echo termcap.epro | sed 's/\.epro$/.pro/'`
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `termcap.mdh'.
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `terminfo.mdh'.
+echo 'timestamp for terminfo.mdh against terminfo.mdd' > terminfo.mdhs
+gawk -f ../../Src/makepro.awk terminfo.c Src/Modules > terminfo.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < terminfo.syms) \
+		> terminfo.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < terminfo.syms) \
+		> `echo terminfo.epro | sed 's/\.epro$/.pro/'`
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `terminfo.mdh'.
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `zftp.mdh'.
+echo 'timestamp for zftp.mdh against zftp.mdd' > zftp.mdhs
+gawk -f ../../Src/makepro.awk zftp.c Src/Modules > zftp.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < zftp.syms) \
+		> zftp.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < zftp.syms) \
+		> `echo zftp.epro | sed 's/\.epro$/.pro/'`
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `zftp.mdh'.
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `zprof.mdh'.
+echo 'timestamp for zprof.mdh against zprof.mdd' > zprof.mdhs
+gawk -f ../../Src/makepro.awk zprof.c Src/Modules > zprof.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < zprof.syms) \
+		> zprof.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < zprof.syms) \
+		> `echo zprof.epro | sed 's/\.epro$/.pro/'`
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `zprof.mdh'.
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `zpty.mdh'.
+echo 'timestamp for zpty.mdh against zpty.mdd' > zpty.mdhs
+gawk -f ../../Src/makepro.awk zpty.c Src/Modules > zpty.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < zpty.syms) \
+		> zpty.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < zpty.syms) \
+		> `echo zpty.epro | sed 's/\.epro$/.pro/'`
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `zpty.mdh'.
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `zselect.mdh'.
+echo 'timestamp for zselect.mdh against zselect.mdd' > zselect.mdhs
+gawk -f ../../Src/makepro.awk zselect.c Src/Modules > zselect.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < zselect.syms) \
+		> zselect.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < zselect.syms) \
+		> `echo zselect.epro | sed 's/\.epro$/.pro/'`
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `zselect.mdh'.
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+( \
+	    echo '/** thingies.list                            **/'; \
+	    echo '/** thingy structures for the known thingies **/'; \
+	    echo; \
+	    echo '/* format: T("name", TH_FLAGS, w_widget, t_nextthingy) */'; \
+	    echo; \
+	    sed -e 's/#.*//; /^$/d; s/" *,.*/"/' \
+		-e 's/^"/T("/; s/$/, 0,/; h' \
+		-e 's/-//g; s/^.*"\(.*\)".*/w_\1, t_D\1)/' \
+		-e 'H; g; s/\n/ /' \
+		< ./iwidgets.list; \
+	    sed -e 's/#.*//; /^$/d; s/" *,.*/"/' \
+		-e 's/^"/T("./; s/$/, TH_IMMORTAL,/; h' \
+		-e 's/-//g; s/^.*"\.\(.*\)".*/w_\1, t_\1)/' \
+		-e 'H; g; s/\n/ /' \
+		< ./iwidgets.list; \
+	) > thingies.list
+( \
+	    echo '/** zle_things.h                              **/'; \
+	    echo '/** indices of and pointers to known thingies **/'; \
+	    echo; \
+	    echo 'enum {'; \
+	    sed -n -f ./zle_things.sed < thingies.list; \
+	    echo '    ZLE_BUILTIN_THINGY_COUNT'; \
+	    echo '};'; \
+	) > zle_things.h
+make[5]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+make[5]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+Updated `zle.mdh'.
+echo 'timestamp for zle.mdh against zle.mdd' > zle.mdhs
+gawk -f ../../Src/makepro.awk zle_bindings.c Src/Zle > zle_bindings.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < zle_bindings.syms) \
+		> zle_bindings.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < zle_bindings.syms) \
+		> `echo zle_bindings.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../../Src/makepro.awk zle_hist.c Src/Zle > zle_hist.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < zle_hist.syms) \
+		> zle_hist.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < zle_hist.syms) \
+		> `echo zle_hist.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../../Src/makepro.awk zle_keymap.c Src/Zle > zle_keymap.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < zle_keymap.syms) \
+		> zle_keymap.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < zle_keymap.syms) \
+		> `echo zle_keymap.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../../Src/makepro.awk zle_main.c Src/Zle > zle_main.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < zle_main.syms) \
+		> zle_main.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < zle_main.syms) \
+		> `echo zle_main.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../../Src/makepro.awk zle_misc.c Src/Zle > zle_misc.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < zle_misc.syms) \
+		> zle_misc.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < zle_misc.syms) \
+		> `echo zle_misc.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../../Src/makepro.awk zle_move.c Src/Zle > zle_move.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < zle_move.syms) \
+		> zle_move.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < zle_move.syms) \
+		> `echo zle_move.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../../Src/makepro.awk zle_params.c Src/Zle > zle_params.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < zle_params.syms) \
+		> zle_params.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < zle_params.syms) \
+		> `echo zle_params.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../../Src/makepro.awk zle_refresh.c Src/Zle > zle_refresh.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < zle_refresh.syms) \
+		> zle_refresh.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < zle_refresh.syms) \
+		> `echo zle_refresh.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../../Src/makepro.awk zle_thingy.c Src/Zle > zle_thingy.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < zle_thingy.syms) \
+		> zle_thingy.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < zle_thingy.syms) \
+		> `echo zle_thingy.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../../Src/makepro.awk zle_tricky.c Src/Zle > zle_tricky.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < zle_tricky.syms) \
+		> zle_tricky.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < zle_tricky.syms) \
+		> `echo zle_tricky.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../../Src/makepro.awk zle_utils.c Src/Zle > zle_utils.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < zle_utils.syms) \
+		> zle_utils.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < zle_utils.syms) \
+		> `echo zle_utils.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../../Src/makepro.awk zle_vi.c Src/Zle > zle_vi.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < zle_vi.syms) \
+		> zle_vi.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < zle_vi.syms) \
+		> `echo zle_vi.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../../Src/makepro.awk zle_word.c Src/Zle > zle_word.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < zle_word.syms) \
+		> zle_word.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < zle_word.syms) \
+		> `echo zle_word.epro | sed 's/\.epro$/.pro/'`
+make[5]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+make[5]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+Updated `zle.mdh'.
+make[5]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+make[5]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+Updated `complete.mdh'.
+echo 'timestamp for complete.mdh against complete.mdd' > complete.mdhs
+gawk -f ../../Src/makepro.awk complete.c Src/Zle > complete.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < complete.syms) \
+		> complete.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < complete.syms) \
+		> `echo complete.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../../Src/makepro.awk compcore.c Src/Zle > compcore.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < compcore.syms) \
+		> compcore.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < compcore.syms) \
+		> `echo compcore.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../../Src/makepro.awk compmatch.c Src/Zle > compmatch.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < compmatch.syms) \
+		> compmatch.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < compmatch.syms) \
+		> `echo compmatch.epro | sed 's/\.epro$/.pro/'`
+gawk -f ../../Src/makepro.awk compresult.c Src/Zle > compresult.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < compresult.syms) \
+		> compresult.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < compresult.syms) \
+		> `echo compresult.epro | sed 's/\.epro$/.pro/'`
+make[5]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+make[5]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+Updated `complete.mdh'.
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `zutil.mdh'.
+echo 'timestamp for zutil.mdh against zutil.mdd' > zutil.mdhs
+gawk -f ../../Src/makepro.awk zutil.c Src/Modules > zutil.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < zutil.syms) \
+		> zutil.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < zutil.syms) \
+		> `echo zutil.epro | sed 's/\.epro$/.pro/'`
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+Updated `zutil.mdh'.
+make[3]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[3]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+Updated `compctl.mdh'.
+echo 'timestamp for compctl.mdh against compctl.mdd' > compctl.mdhs
+gawk -f ../../Src/makepro.awk compctl.c Src/Zle > compctl.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < compctl.syms) \
+		> compctl.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < compctl.syms) \
+		> `echo compctl.epro | sed 's/\.epro$/.pro/'`
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+Updated `compctl.mdh'.
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+Updated `complist.mdh'.
+echo 'timestamp for complist.mdh against complist.mdd' > complist.mdhs
+gawk -f ../../Src/makepro.awk complist.c Src/Zle > complist.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < complist.syms) \
+		> complist.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < complist.syms) \
+		> `echo complist.epro | sed 's/\.epro$/.pro/'`
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+Updated `complist.mdh'.
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+Updated `computil.mdh'.
+echo 'timestamp for computil.mdh against computil.mdd' > computil.mdhs
+gawk -f ../../Src/makepro.awk computil.c Src/Zle > computil.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < computil.syms) \
+		> computil.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < computil.syms) \
+		> `echo computil.epro | sed 's/\.epro$/.pro/'`
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+Updated `computil.mdh'.
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+Updated `deltochar.mdh'.
+echo 'timestamp for deltochar.mdh against deltochar.mdd' > deltochar.mdhs
+gawk -f ../../Src/makepro.awk deltochar.c Src/Zle > deltochar.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < deltochar.syms) \
+		> deltochar.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < deltochar.syms) \
+		> `echo deltochar.epro | sed 's/\.epro$/.pro/'`
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+Updated `deltochar.mdh'.
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+Updated `zleparameter.mdh'.
+echo 'timestamp for zleparameter.mdh against zleparameter.mdd' > zleparameter.mdhs
+gawk -f ../../Src/makepro.awk zleparameter.c Src/Zle > zleparameter.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < zleparameter.syms) \
+		> zleparameter.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < zleparameter.syms) \
+		> `echo zleparameter.epro | sed 's/\.epro$/.pro/'`
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+Updated `zleparameter.mdh'.
+make[3]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+make[2]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src'
+rm -f stamp-modobjs.tmp
+make[2]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src'
+gcc -c -I. -I../Src -I../Src -I../Src/Zle -I.  -DHAVE_CONFIG_H -I/ffp/include -O2 -D_GNU_SOURCE -pthread  -o builtin.o builtin.c
+gcc -c -I. -I../Src -I../Src -I../Src/Zle -I.  -DHAVE_CONFIG_H -I/ffp/include -O2 -D_GNU_SOURCE -pthread  -o compat.o compat.c
+gcc -c -I. -I../Src -I../Src -I../Src/Zle -I.  -DHAVE_CONFIG_H -I/ffp/include -O2 -D_GNU_SOURCE -pthread  -o cond.o cond.c
+gcc -c -I. -I../Src -I../Src -I../Src/Zle -I.  -DHAVE_CONFIG_H -I/ffp/include -O2 -D_GNU_SOURCE -pthread  -o exec.o exec.c
+gcc -c -I. -I../Src -I../Src -I../Src/Zle -I.  -DHAVE_CONFIG_H -I/ffp/include -O2 -D_GNU_SOURCE -pthread  -o glob.o glob.c
+gcc -c -I. -I../Src -I../Src -I../Src/Zle -I.  -DHAVE_CONFIG_H -I/ffp/include -O2 -D_GNU_SOURCE -pthread  -o hashtable.o hashtable.c
+gcc -c -I. -I../Src -I../Src -I../Src/Zle -I.  -DHAVE_CONFIG_H -I/ffp/include -O2 -D_GNU_SOURCE -pthread  -o hashnameddir.o hashnameddir.c
+gcc -c -I. -I../Src -I../Src -I../Src/Zle -I.  -DHAVE_CONFIG_H -I/ffp/include -O2 -D_GNU_SOURCE -pthread  -o hist.o hist.c
+srcdir='.' CFMOD='../config.modules' \
+	  /bin/sh ./mkbltnmlst.sh bltinmods.list
+Updated `zshpaths.h'.
+Creating `zshxmods.h'.
+echo '#define ZSH_VERSION "'5.0.2'"' > version.h
+gcc -c -I. -I../Src -I../Src -I../Src/Zle -I.  -DHAVE_CONFIG_H -I/ffp/include -O2 -D_GNU_SOURCE -pthread  -o init.o init.c
+gcc -c -I. -I../Src -I../Src -I../Src/Zle -I.  -DHAVE_CONFIG_H -I/ffp/include -O2 -D_GNU_SOURCE -pthread  -o input.o input.c
+gcc -c -I. -I../Src -I../Src -I../Src/Zle -I.  -DHAVE_CONFIG_H -I/ffp/include -O2 -D_GNU_SOURCE -pthread  -o jobs.o jobs.c
+gcc -c -I. -I../Src -I../Src -I../Src/Zle -I.  -DHAVE_CONFIG_H -I/ffp/include -O2 -D_GNU_SOURCE -pthread  -o lex.o lex.c
+gcc -c -I. -I../Src -I../Src -I../Src/Zle -I.  -DHAVE_CONFIG_H -I/ffp/include -O2 -D_GNU_SOURCE -pthread  -o linklist.o linklist.c
+gcc -c -I. -I../Src -I../Src -I../Src/Zle -I.  -DHAVE_CONFIG_H -I/ffp/include -O2 -D_GNU_SOURCE -pthread  -o loop.o loop.c
+gcc -c -I. -I../Src -I../Src -I../Src/Zle -I.  -DHAVE_CONFIG_H -I/ffp/include -O2 -D_GNU_SOURCE -pthread  -o math.o math.c
+gcc -c -I. -I../Src -I../Src -I../Src/Zle -I.  -DHAVE_CONFIG_H -I/ffp/include -O2 -D_GNU_SOURCE -pthread  -o mem.o mem.c
+gcc -c -I. -I../Src -I../Src -I../Src/Zle -I.  -DHAVE_CONFIG_H -I/ffp/include -O2 -D_GNU_SOURCE -pthread  -o module.o module.c
+gcc -c -I. -I../Src -I../Src -I../Src/Zle -I.  -DHAVE_CONFIG_H -I/ffp/include -O2 -D_GNU_SOURCE -pthread  -o options.o options.c
+sed -ne \
+	's/^\* *\$''Revision: \(.*\) ''\$/#define ZSH_PATCHLEVEL "\1"/p' \
+	../ChangeLog >patchlevel.h
+gcc -c -I. -I../Src -I../Src -I../Src/Zle -I.  -DHAVE_CONFIG_H -I/ffp/include -O2 -D_GNU_SOURCE -pthread  -o params.o params.c
+gcc -c -I. -I../Src -I../Src -I../Src/Zle -I.  -DHAVE_CONFIG_H -I/ffp/include -O2 -D_GNU_SOURCE -pthread  -o parse.o parse.c
+gcc -c -I. -I../Src -I../Src -I../Src/Zle -I.  -DHAVE_CONFIG_H -I/ffp/include -O2 -D_GNU_SOURCE -pthread  -o pattern.o pattern.c
+gcc -c -I. -I../Src -I../Src -I../Src/Zle -I.  -DHAVE_CONFIG_H -I/ffp/include -O2 -D_GNU_SOURCE -pthread  -o prompt.o prompt.c
+gcc -c -I. -I../Src -I../Src -I../Src/Zle -I.  -DHAVE_CONFIG_H -I/ffp/include -O2 -D_GNU_SOURCE -pthread  -o signals.o signals.c
+gcc -c -I. -I../Src -I../Src -I../Src/Zle -I.  -DHAVE_CONFIG_H -I/ffp/include -O2 -D_GNU_SOURCE -pthread  -o signames.o signames.c
+gcc -c -I. -I../Src -I../Src -I../Src/Zle -I.  -DHAVE_CONFIG_H -I/ffp/include -O2 -D_GNU_SOURCE -pthread  -o sort.o sort.c
+gcc -c -I. -I../Src -I../Src -I../Src/Zle -I.  -DHAVE_CONFIG_H -I/ffp/include -O2 -D_GNU_SOURCE -pthread  -o string.o string.c
+gcc -c -I. -I../Src -I../Src -I../Src/Zle -I.  -DHAVE_CONFIG_H -I/ffp/include -O2 -D_GNU_SOURCE -pthread  -o subst.o subst.c
+gcc -c -I. -I../Src -I../Src -I../Src/Zle -I.  -DHAVE_CONFIG_H -I/ffp/include -O2 -D_GNU_SOURCE -pthread  -o text.o text.c
+gcc -c -I. -I../Src -I../Src -I../Src/Zle -I.  -DHAVE_CONFIG_H -I/ffp/include -O2 -D_GNU_SOURCE -pthread  -o utils.o utils.c
+gcc -c -I. -I../Src -I../Src -I../Src/Zle -I.  -DHAVE_CONFIG_H -I/ffp/include -O2 -D_GNU_SOURCE -pthread  -o watch.o watch.c
+echo '' builtin.o compat.o cond.o exec.o glob.o hashtable.o hashnameddir.o hist.o init.o input.o jobs.o lex.o linklist.o loop.o math.o mem.o module.o options.o params.o parse.o pattern.o prompt.o signals.o signames.o sort.o string.o subst.o text.o utils.o watch.o >> ../Src/stamp-modobjs.tmp
+make[3]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Builtins'
+make[3]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Builtins'
+make[3]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[3]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[3]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+make[3]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+make[2]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src'
+Updated `stamp-modobjs'.
+make[2]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src'
+gawk -f ../Src/makepro.awk main.c Src > main.syms
+(echo '/* Generated automatically */'; sed -n '/^E/{s/^E//;p;}' < main.syms) \
+		> main.epro
+(echo '/* Generated automatically */'; sed -n '/^L/{s/^L//;p;}' < main.syms) \
+		> `echo main.epro | sed 's/\.epro$/.pro/'`
+gcc -c -I. -I../Src  -DHAVE_CONFIG_H -I/ffp/include -O2 -D_GNU_SOURCE -pthread -o main.o ./main.c
+make[2]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src'
+make[2]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src'
+( echo '#!'; cat builtin.syms compat.syms cond.syms exec.syms glob.syms hashtable.syms hashnameddir.syms hist.syms init.syms input.syms jobs.syms lex.syms linklist.syms loop.syms math.syms mem.syms module.syms options.syms params.syms parse.syms pattern.syms prompt.syms signals.syms signames.syms sort.syms string.syms subst.syms text.syms utils.syms watch.syms  | sed -n '/^X/{s/^X//;p;}' | sort -u ) > zsh.export
+make[2]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src'
+rm -f zsh
+gcc -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread   -rdynamic -o zsh main.o  `cat stamp-modobjs`   -liconv -ldl -lncursesw -lrt -lm  -lc
+make[2]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src'
+make[3]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Builtins'
+gawk -f ./rlimits.awk /ffp/include/bits/resource.h /dev/null > rlimits.h
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o rlimits..o rlimits.c
+( echo '#!'; cat rlimits.syms  | sed -n '/^X/{s/^X//;p;}' | sort -u ) > rlimits.export
+rm -f rlimits.so
+gcc -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread   -shared -o rlimits.so   rlimits..o    -liconv -ldl -lncursesw -lrt -lm  -lc 
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o sched..o sched.c
+( echo '#!'; cat sched.syms  | sed -n '/^X/{s/^X//;p;}' | sort -u ) > sched.export
+rm -f sched.so
+gcc -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread   -shared -o sched.so   sched..o    -liconv -ldl -lncursesw -lrt -lm  -lc 
+make[3]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Builtins'
+make[3]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o attr..o attr.c
+( echo '#!'; cat attr.syms  | sed -n '/^X/{s/^X//;p;}' | sort -u ) > attr.export
+rm -f attr.so
+gcc -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread   -shared -o attr.so   attr..o    -liconv -ldl -lncursesw -lrt -lm  -lc 
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o cap..o cap.c
+( echo '#!'; cat cap.syms  | sed -n '/^X/{s/^X//;p;}' | sort -u ) > cap.export
+rm -f cap.so
+gcc -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread   -shared -o cap.so   cap..o    -liconv -ldl -lncursesw -lrt -lm  -lc 
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o clone..o clone.c
+( echo '#!'; cat clone.syms  | sed -n '/^X/{s/^X//;p;}' | sort -u ) > clone.export
+rm -f clone.so
+gcc -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread   -shared -o clone.so   clone..o    -liconv -ldl -lncursesw -lrt -lm  -lc 
+gawk -f ./curses_keys.awk /ffp/include/ncursesw/ncurses.h /dev/null >curses_keys.h
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o curses..o curses.c
+( echo '#!'; cat curses.syms  | sed -n '/^X/{s/^X//;p;}' | sort -u ) > curses.export
+rm -f curses.so
+gcc -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread   -shared -o curses.so   curses..o    -liconv -ldl -lncursesw -lrt -lm  -lc 
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o datetime..o datetime.c
+( echo '#!'; cat datetime.syms  | sed -n '/^X/{s/^X//;p;}' | sort -u ) > datetime.export
+rm -f datetime.so
+gcc -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread   -shared -o datetime.so   datetime..o    -liconv -ldl -lncursesw -lrt -lm  -lc 
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o example..o example.c
+( echo '#!'; cat example.syms  | sed -n '/^X/{s/^X//;p;}' | sort -u ) > example.export
+rm -f example.so
+gcc -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread   -shared -o example.so   example..o    -liconv -ldl -lncursesw -lrt -lm  -lc 
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o files..o files.c
+( echo '#!'; cat files.syms  | sed -n '/^X/{s/^X//;p;}' | sort -u ) > files.export
+rm -f files.so
+gcc -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread   -shared -o files.so   files..o    -liconv -ldl -lncursesw -lrt -lm  -lc 
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o langinfo..o langinfo.c
+( echo '#!'; cat langinfo.syms  | sed -n '/^X/{s/^X//;p;}' | sort -u ) > langinfo.export
+rm -f langinfo.so
+gcc -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread   -shared -o langinfo.so   langinfo..o    -liconv -ldl -lncursesw -lrt -lm  -lc 
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o mapfile..o mapfile.c
+( echo '#!'; cat mapfile.syms  | sed -n '/^X/{s/^X//;p;}' | sort -u ) > mapfile.export
+rm -f mapfile.so
+gcc -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread   -shared -o mapfile.so   mapfile..o    -liconv -ldl -lncursesw -lrt -lm  -lc 
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o mathfunc..o mathfunc.c
+( echo '#!'; cat mathfunc.syms  | sed -n '/^X/{s/^X//;p;}' | sort -u ) > mathfunc.export
+rm -f mathfunc.so
+gcc -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread   -shared -o mathfunc.so   mathfunc..o    -liconv -ldl -lncursesw -lrt -lm  -lc 
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o newuser..o newuser.c
+( echo '#!'; cat newuser.syms  | sed -n '/^X/{s/^X//;p;}' | sort -u ) > newuser.export
+rm -f newuser.so
+gcc -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread   -shared -o newuser.so   newuser..o    -liconv -ldl -lncursesw -lrt -lm  -lc 
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o parameter..o parameter.c
+( echo '#!'; cat parameter.syms  | sed -n '/^X/{s/^X//;p;}' | sort -u ) > parameter.export
+rm -f parameter.so
+gcc -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread   -shared -o parameter.so   parameter..o    -liconv -ldl -lncursesw -lrt -lm  -lc 
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o regex..o regex.c
+( echo '#!'; cat regex.syms  | sed -n '/^X/{s/^X//;p;}' | sort -u ) > regex.export
+rm -f regex.so
+gcc -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread   -shared -o regex.so   regex..o    -liconv -ldl -lncursesw -lrt -lm  -lc 
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o socket..o socket.c
+( echo '#!'; cat socket.syms  | sed -n '/^X/{s/^X//;p;}' | sort -u ) > socket.export
+rm -f socket.so
+gcc -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread   -shared -o socket.so   socket..o    -liconv -ldl -lncursesw -lrt -lm  -lc 
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o stat..o stat.c
+( echo '#!'; cat stat.syms  | sed -n '/^X/{s/^X//;p;}' | sort -u ) > stat.export
+rm -f stat.so
+gcc -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread   -shared -o stat.so   stat..o    -liconv -ldl -lncursesw -lrt -lm  -lc 
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o system..o system.c
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o errnames..o errnames.c
+( echo '#!'; cat system.syms errnames.syms  | sed -n '/^X/{s/^X//;p;}' | sort -u ) > system.export
+rm -f system.so
+gcc -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread   -shared -o system.so   system..o errnames..o    -liconv -ldl -lncursesw -lrt -lm  -lc 
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o tcp..o tcp.c
+( echo '#!'; cat tcp.syms  | sed -n '/^X/{s/^X//;p;}' | sort -u ) > tcp.export
+rm -f tcp.so
+gcc -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread   -shared -o tcp.so   tcp..o    -liconv -ldl -lncursesw -lrt -lm  -lc 
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o termcap..o termcap.c
+( echo '#!'; cat termcap.syms  | sed -n '/^X/{s/^X//;p;}' | sort -u ) > termcap.export
+rm -f termcap.so
+gcc -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread   -shared -o termcap.so   termcap..o    -liconv -ldl -lncursesw -lrt -lm  -lc 
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o terminfo..o terminfo.c
+( echo '#!'; cat terminfo.syms  | sed -n '/^X/{s/^X//;p;}' | sort -u ) > terminfo.export
+rm -f terminfo.so
+gcc -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread   -shared -o terminfo.so   terminfo..o    -liconv -ldl -lncursesw -lrt -lm  -lc 
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o zftp..o zftp.c
+( echo '#!'; cat zftp.syms  | sed -n '/^X/{s/^X//;p;}' | sort -u ) > zftp.export
+rm -f zftp.so
+gcc -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread   -shared -o zftp.so   zftp..o    -liconv -ldl -lncursesw -lrt -lm  -lc 
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o zprof..o zprof.c
+( echo '#!'; cat zprof.syms  | sed -n '/^X/{s/^X//;p;}' | sort -u ) > zprof.export
+rm -f zprof.so
+gcc -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread   -shared -o zprof.so   zprof..o    -liconv -ldl -lncursesw -lrt -lm  -lc 
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o zpty..o zpty.c
+( echo '#!'; cat zpty.syms  | sed -n '/^X/{s/^X//;p;}' | sort -u ) > zpty.export
+rm -f zpty.so
+gcc -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread   -shared -o zpty.so   zpty..o    -liconv -ldl -lncursesw -lrt -lm  -lc 
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o zselect..o zselect.c
+( echo '#!'; cat zselect.syms  | sed -n '/^X/{s/^X//;p;}' | sort -u ) > zselect.export
+rm -f zselect.so
+gcc -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread   -shared -o zselect.so   zselect..o    -liconv -ldl -lncursesw -lrt -lm  -lc 
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+make[4]: `complete.mdh' is up to date.
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o zutil..o zutil.c
+( echo '#!'; cat zutil.syms  | sed -n '/^X/{s/^X//;p;}' | sort -u ) > zutil.export
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+( echo '#!'; cat complete.syms compcore.syms compmatch.syms compresult.syms  | sed -n '/^X/{s/^X//;p;}' | sort -u ) > complete.export
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+rm -f zutil.so
+gcc -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread   -shared -o zutil.so   zutil..o    -liconv -ldl -lncursesw -lrt -lm  -lc 
+make[3]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[3]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o compctl..o compctl.c
+( echo '#!'; cat compctl.syms  | sed -n '/^X/{s/^X//;p;}' | sort -u ) > compctl.export
+( echo '#!'; cat zle_bindings.syms zle_hist.syms zle_keymap.syms zle_main.syms zle_misc.syms zle_move.syms zle_params.syms zle_refresh.syms zle_thingy.syms zle_tricky.syms zle_utils.syms zle_vi.syms zle_word.syms  | sed -n '/^X/{s/^X//;p;}' | sort -u ) > zle.export
+rm -f compctl.so
+gcc -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread   -shared -o compctl.so   compctl..o    -liconv -ldl -lncursesw -lrt -lm  -lc 
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o complete..o complete.c
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o compcore..o compcore.c
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o compmatch..o compmatch.c
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o compresult..o compresult.c
+rm -f complete.so
+gcc -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread   -shared -o complete.so   complete..o compcore..o compmatch..o compresult..o    -liconv -ldl -lncursesw -lrt -lm  -lc 
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o complist..o complist.c
+( echo '#!'; cat complist.syms  | sed -n '/^X/{s/^X//;p;}' | sort -u ) > complist.export
+rm -f complist.so
+gcc -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread   -shared -o complist.so   complist..o    -liconv -ldl -lncursesw -lrt -lm  -lc 
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o computil..o computil.c
+( echo '#!'; cat computil.syms  | sed -n '/^X/{s/^X//;p;}' | sort -u ) > computil.export
+rm -f computil.so
+gcc -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread   -shared -o computil.so   computil..o    -liconv -ldl -lncursesw -lrt -lm  -lc 
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o deltochar..o deltochar.c
+( echo '#!'; cat deltochar.syms  | sed -n '/^X/{s/^X//;p;}' | sort -u ) > deltochar.export
+rm -f deltochar.so
+gcc -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread   -shared -o deltochar.so   deltochar..o    -liconv -ldl -lncursesw -lrt -lm  -lc 
+( \
+	    echo '/** widgets.list                               **/'; \
+	    echo '/** widget structures for the internal widgets **/'; \
+	    echo; \
+	    echo '/* format: W(ZLE_FLAGS, t_firstname, functionname) */'; \
+	    echo; \
+	    sed -e 's/#.*//; /^$/d; s/-//g' \
+		-e 's/^"\(.*\)" *, *\([^ ]*\) *, *\(.*\)/W(\3, t_\1, \2)/' \
+		< ./iwidgets.list; \
+	) > widgets.list
+( \
+	    echo '/** zle_widget.h                                **/'; \
+	    echo '/** indices of and pointers to internal widgets **/'; \
+	    echo; \
+	    echo 'enum {'; \
+	    sed -n -f ./zle_widget.sed < widgets.list; \
+	    echo '    ZLE_BUILTIN_WIDGET_COUNT'; \
+	    echo '};'; \
+	) > zle_widget.h
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o zle_bindings..o zle_bindings.c
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o zle_hist..o zle_hist.c
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o zle_keymap..o zle_keymap.c
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o zle_main..o zle_main.c
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o zle_misc..o zle_misc.c
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o zle_move..o zle_move.c
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o zle_params..o zle_params.c
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o zle_refresh..o zle_refresh.c
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o zle_thingy..o zle_thingy.c
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o zle_tricky..o zle_tricky.c
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o zle_utils..o zle_utils.c
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o zle_vi..o zle_vi.c
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o zle_word..o zle_word.c
+rm -f zle.so
+gcc -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread   -shared -o zle.so   zle_bindings..o zle_hist..o zle_keymap..o zle_main..o zle_misc..o zle_move..o zle_params..o zle_refresh..o zle_thingy..o zle_tricky..o zle_utils..o zle_vi..o zle_word..o    -liconv -ldl -lncursesw -lrt -lm  -lc 
+gcc -c -I. -I../../Src -I../../Src -I../../Src/Zle -I.  -DHAVE_CONFIG_H -DMODULE -I/ffp/include -O2 -D_GNU_SOURCE -pthread -fPIC -o zleparameter..o zleparameter.c
+( echo '#!'; cat zleparameter.syms  | sed -n '/^X/{s/^X//;p;}' | sort -u ) > zleparameter.export
+rm -f zleparameter.so
+gcc -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread   -shared -o zleparameter.so   zleparameter..o    -liconv -ldl -lncursesw -lrt -lm  -lc 
+make[3]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+make[2]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src'
+make[1]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src'
+make[1]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Doc'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Doc'
++ make DESTDIR=/tmp/zsh.a0jf4c/pkg install
+make[1]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src'
+make[2]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src'
+make[3]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Builtins'
+make[3]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Builtins'
+make[3]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+make[4]: `complete.mdh' is up to date.
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+make[3]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[3]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+make[3]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+make[2]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src'
+rm -f stamp-modobjs.tmp
+make[2]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src'
+echo '' builtin.o compat.o cond.o exec.o glob.o hashtable.o hashnameddir.o hist.o init.o input.o jobs.o lex.o linklist.o loop.o math.o mem.o module.o options.o params.o parse.o pattern.o prompt.o signals.o signames.o sort.o string.o subst.o text.o utils.o watch.o >> ../Src/stamp-modobjs.tmp
+make[3]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Builtins'
+make[3]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Builtins'
+make[3]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[3]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[3]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+make[3]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+make[2]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src'
+`stamp-modobjs' is up to date.
+/bin/sh ../mkinstalldirs /tmp/zsh.a0jf4c/pkg/ffp/bin
+mkdir -m 755 -p -- /tmp/zsh.a0jf4c/pkg/ffp/bin
+/ffp/bin/install -c  zsh /tmp/zsh.a0jf4c/pkg/ffp/bin/zsh-5.0.2
+if test -f /tmp/zsh.a0jf4c/pkg/ffp/bin/zsh; then \
+	    rm -f /tmp/zsh.a0jf4c/pkg/ffp/bin/zsh.old; \
+	    ln /tmp/zsh.a0jf4c/pkg/ffp/bin/zsh /tmp/zsh.a0jf4c/pkg/ffp/bin/zsh.old; \
+	else :; fi
+rm -f /tmp/zsh.a0jf4c/pkg/ffp/bin/zsh.new
+ln /tmp/zsh.a0jf4c/pkg/ffp/bin/zsh-5.0.2 /tmp/zsh.a0jf4c/pkg/ffp/bin/zsh.new
+mv /tmp/zsh.a0jf4c/pkg/ffp/bin/zsh.new /tmp/zsh.a0jf4c/pkg/ffp/bin/zsh
+make[1]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src'
+make[1]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src'
+make[2]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src'
+make[3]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Builtins'
+/bin/sh ../../mkinstalldirs /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh
+mkdir -m 755 -p -- /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh
+/ffp/bin/install -c  rlimits.so /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh/rlimits.so
+/bin/sh ../../mkinstalldirs /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh
+/ffp/bin/install -c  sched.so /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh/sched.so
+make[3]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Builtins'
+make[3]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+/bin/sh ../../mkinstalldirs /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh
+/ffp/bin/install -c  attr.so /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh/attr.so
+/bin/sh ../../mkinstalldirs /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh
+/ffp/bin/install -c  cap.so /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh/cap.so
+/bin/sh ../../mkinstalldirs /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh
+/ffp/bin/install -c  clone.so /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh/clone.so
+/bin/sh ../../mkinstalldirs /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh
+/ffp/bin/install -c  curses.so /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh/curses.so
+/bin/sh ../../mkinstalldirs /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh
+/ffp/bin/install -c  datetime.so /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh/datetime.so
+/bin/sh ../../mkinstalldirs /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh
+/ffp/bin/install -c  example.so /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh/example.so
+/bin/sh ../../mkinstalldirs /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh
+/ffp/bin/install -c  files.so /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh/files.so
+/bin/sh ../../mkinstalldirs /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh
+/ffp/bin/install -c  langinfo.so /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh/langinfo.so
+/bin/sh ../../mkinstalldirs /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh
+/ffp/bin/install -c  mapfile.so /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh/mapfile.so
+/bin/sh ../../mkinstalldirs /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh
+/ffp/bin/install -c  mathfunc.so /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh/mathfunc.so
+/bin/sh ../../mkinstalldirs /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh
+/ffp/bin/install -c  newuser.so /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh/newuser.so
+/bin/sh ../../mkinstalldirs /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh
+/ffp/bin/install -c  parameter.so /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh/parameter.so
+/bin/sh ../../mkinstalldirs /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh
+/ffp/bin/install -c  regex.so /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh/regex.so
+/bin/sh ../../mkinstalldirs /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh/net
+mkdir -m 755 -p -- /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh/net
+/ffp/bin/install -c  socket.so /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh/net/socket.so
+/bin/sh ../../mkinstalldirs /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh
+/ffp/bin/install -c  stat.so /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh/stat.so
+/bin/sh ../../mkinstalldirs /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh
+/ffp/bin/install -c  system.so /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh/system.so
+/bin/sh ../../mkinstalldirs /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh/net
+/ffp/bin/install -c  tcp.so /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh/net/tcp.so
+/bin/sh ../../mkinstalldirs /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh
+/ffp/bin/install -c  termcap.so /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh/termcap.so
+/bin/sh ../../mkinstalldirs /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh
+/ffp/bin/install -c  terminfo.so /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh/terminfo.so
+/bin/sh ../../mkinstalldirs /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh
+/ffp/bin/install -c  zftp.so /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh/zftp.so
+/bin/sh ../../mkinstalldirs /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh
+/ffp/bin/install -c  zprof.so /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh/zprof.so
+/bin/sh ../../mkinstalldirs /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh
+/ffp/bin/install -c  zpty.so /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh/zpty.so
+/bin/sh ../../mkinstalldirs /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh
+/ffp/bin/install -c  zselect.so /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh/zselect.so
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+make[4]: `complete.mdh' is up to date.
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+make[4]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+make[4]: `complete.export' is up to date.
+make[4]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+/bin/sh ../../mkinstalldirs /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh
+/ffp/bin/install -c  zutil.so /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh/zutil.so
+make[3]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Modules'
+make[3]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+/bin/sh ../../mkinstalldirs /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh
+/ffp/bin/install -c  compctl.so /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh/compctl.so
+/bin/sh ../../mkinstalldirs /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh
+/ffp/bin/install -c  complete.so /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh/complete.so
+/bin/sh ../../mkinstalldirs /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh
+/ffp/bin/install -c  complist.so /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh/complist.so
+/bin/sh ../../mkinstalldirs /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh
+/ffp/bin/install -c  computil.so /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh/computil.so
+/bin/sh ../../mkinstalldirs /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh
+/ffp/bin/install -c  deltochar.so /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh/deltochar.so
+/bin/sh ../../mkinstalldirs /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh
+/ffp/bin/install -c  zle.so /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh/zle.so
+/bin/sh ../../mkinstalldirs /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh
+/ffp/bin/install -c  zleparameter.so /tmp/zsh.a0jf4c/pkg/ffp/lib/zsh/5.0.2/zsh/zleparameter.so
+make[3]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src/Zle'
+make[2]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src'
+make[1]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Src'
+if test x/ffp/share/zsh/5.0.2/functions != x && test x/ffp/share/zsh/5.0.2/functions != xno; then \
+	  test x/ffp/share/zsh/site-functions != xno && \
+	    /bin/sh ./mkinstalldirs /tmp/zsh.a0jf4c/pkg/ffp/share/zsh/site-functions; \
+	  sdir_top="." fndir="/ffp/share/zsh/5.0.2/functions" dir_top="." \
+	  scriptdir="/ffp/share/zsh/5.0.2/scripts" \
+	  FUNCTIONS_SUBDIRS="no" \
+	  INSTALL_DATA="/ffp/bin/install -c -m 644" \
+	  INSTALL_PROGRAM="/ffp/bin/install -c" \
+	  DESTDIR="/tmp/zsh.a0jf4c/pkg" VERSION="5.0.2" \
+	  /bin/sh ./Config/installfns.sh || exit 1; \
+	fi; \
+	exit 0
+mkdir -m 755 -p -- /tmp/zsh.a0jf4c/pkg/ffp/share/zsh/site-functions
+mkdir -m 755 -p -- /tmp/zsh.a0jf4c/pkg/ffp/share/zsh/5.0.2/functions
+mkdir -m 755 -p -- /tmp/zsh.a0jf4c/pkg/ffp/share/zsh/5.0.2/scripts
+make[1]: Entering directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Doc'
+/bin/sh ../mkinstalldirs /tmp/zsh.a0jf4c/pkg/ffp/share/man/man1
+mkdir -m 755 -p -- /tmp/zsh.a0jf4c/pkg/ffp/share/man/man1
+for file in zsh.1 zshbuiltins.1 zshcalsys.1 zshcompctl.1 zshcompwid.1 zshcompsys.1 zshcontrib.1 zshexpn.1 zshmisc.1 zshmodules.1 zshoptions.1 zshparam.1 zshroadmap.1 zshtcpsys.1 zshzftpsys.1 zshzle.1 zshall.1; do \
+	    test -s ./$file || exit 1; \
+	    /ffp/bin/install -c -m 644 ./$file /tmp/zsh.a0jf4c/pkg/ffp/share/man/man1/`echo $file | sed 's|zsh|zsh|'` || exit 1; \
+	done
+make[1]: Leaving directory `/tmp/zsh.a0jf4c/zsh-5.0.2/Doc'
++ mkdir -p /tmp/zsh.a0jf4c/pkg/install
++ cp /ffp/home/root/fun_plug/ffp_packages/zsh/DESCR /ffp/home/root/fun_plug/ffp_packages/zsh/HOMEPAGE /tmp/zsh.a0jf4c/pkg/install/
++ cd /tmp/zsh.a0jf4c/pkg
++ makepkg zsh 5.0.2 1
+Creating /tmp/zsh-5.0.2-arm-1.tar ...
+stdin: is not a tty
+sending incremental file list
+zsh-5.0.2-arm-1.tar
+
+sent 2070747 bytes  received 31 bytes  88118.21 bytes/sec
+total size is 1467555840  speedup is 708.70
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libatomic_ops-git-20130417-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/ghostscript-9.06-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/most-pre5.1-14-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/beautifulsoup4-4.0.0b9-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gnunet-0.9.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/guile-2.0.9-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/parted-3.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/cmake-2.8.7-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libsigc++-2.2.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1192-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/harfbuzz-0.9.9-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/Python-3.3.0-arm-1.txz
+stdin: is not a tty
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/par-1.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/dtach-0.8-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1218-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/vim-7.3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gnuplot-4.4.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1283-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/tor-0.2.3.25-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/fontconfig-2.8.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/rtmpdump-2.3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libev-4.11-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/setuptools-0.6c11-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/tokyotyrant-1.1.41-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/less-457-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libmicrohttpd-0.9.19-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/lzo-2.06-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/cairo-1.12.8-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/Django-1.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libspectre-0.2.7-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/protobuf-2.4.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/unrar-4.1.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/php-5.4.11-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/openssl-1.0.0g-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libgpg-error-1.10-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/node-v0.6.10-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/xvidcore-1.3.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/Python-2.7.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gcc-solibs-4.6.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1260-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/BeautifulSoup-3.2.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libunistring-0.9.3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gnuplot-4.4.4-arm-2.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/nut-2.6.5-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/fontconfig-2.10.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/freetype-2.4.8-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/pango-1.32.3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/sshpass-1.05-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/tokyocabinet-1.4.47-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/nzbget-0.8.0r394-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libgcrypt-1.5.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1267-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/swig-2.0.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1182-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/netatalk-3.0.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/par2cmdline-0.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/neon-0.29.6-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/berkeleydb-5.1.19-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/cherokee-130207-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/attr-2.4.46-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gcc-4.6.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/php-5.4.13-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/openssh-6.1p1-arm-4-node.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/sendmail-8.14.5-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/openssl-1.0.1c-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/php-5.4.14-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/mysecureshell-1.30-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/bdwgc-git-20130417-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libextractor-0.6.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/Python-2.7.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/Python-2.7.3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gnupg-1.4.8-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/cksfv-1.3.14-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/git-1.8.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gnufdisk-2.0.0a-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/nail-20120224-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1217-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/slang-pre2.3.0-68-arm-1.txz
+ADD /home2/memiksfr/subdomains/ffp/pkg/zsh-5.0.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/php-5.5.0beta3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/ImageMagick-6.8.2-9-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/wdfs-1.4.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/seeks-20120224-arm-2.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/opencv-2.3.1-arm-2.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/p7zip-9.20.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libmms-0.6.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/links-2.7-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/node-0.8.21-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1214-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libgd-2.0.33-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/M2Crypto-0.21.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/cifs-utils-git-20120302-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1359-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/git-1.8.2.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/rrdtool-1.4.5-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libpar2-0.2-arm-2.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libpar2-0.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/node-0.8.21-arm-2.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/openssh-6.1p1-arm-4.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/pixman-0.28.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/zlib-1.2.6-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/glib-2.35.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1222-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MPlayer-1.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/isync-1.0.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libffi-3.0.11-arm-1.txz
+95f341c4aaf4ea5118d10bb529c15a94  BeautifulSoup-3.2.1-arm-1.txz
+a1e0ad986d101c81735bcdaa73ed1120  Django-1.4-arm-1.txz
+8a03198597eb048966609fa7e85081cb  ImageMagick-6.8.2-9-arm-1.txz
+ed100bdde17d72a8de04fe76bf507c27  M2Crypto-0.21.1-arm-1.txz
+982aeaa56561d1a47906af083a198b4e  MCServer-1182-arm-1.txz
+f43e8c2fa9ed0649943984454f93e205  MCServer-1192-arm-1.txz
+59fcfcf1b1ce120f0667436648288811  MCServer-1214-arm-1.txz
+286cba7502f2e28048679877cfdaadcf  MCServer-1217-arm-1.txz
+a196fc6af4ffdc1332a30aedf7b9a8b7  MCServer-1218-arm-1.txz
+866887febd98b38b784f3eaf8a2211b4  MCServer-1222-arm-1.txz
+28bffa04cd4865b1116b9ac2953462ef  MCServer-1260-arm-1.txz
+2a04bdde5efc99df870f2afc1c823038  MCServer-1267-arm-1.txz
+acd360f67af8840035ce045ab8187e3f  MCServer-1283-arm-1.txz
+65cae87083e7251844f83940a019aea5  MCServer-1359-arm-1.txz
+0db42aed04763a412e09295b7879ce42  MPlayer-1.1-arm-1.txz
+a3d7a6d1f4d1ead00ef46940ba2f3bcc  Python-2.7.2-arm-1.txz
+0c0c5ee79714df0686e52cf9775c16bc  Python-2.7.3-arm-1.txz
+7fd7c65f6db3f5080db928f916170028  Python-2.7.4-arm-1.txz
+55a2f685c893cfd91fd418db3e26be35  Python-3.3.0-arm-1.txz
+032ac662c6dd9de1b3cd9b11f533b116  attr-2.4.46-arm-1.txz
+a9c00879a9952577e76bc54f1a523501  bdwgc-git-20130417-arm-1.txz
+85ef9e1adaa758c1f8587c4556799f69  beautifulsoup4-4.0.0b9-arm-1.txz
+6ff8d6a390e744dd99e8d7a7e61b6de2  berkeleydb-5.1.19-arm-1.txz
+32d26bc2fb54e3151a3b10029b310a0e  cairo-1.12.8-arm-1.txz
+01effab30ea00b69d40f4b9f509f55ff  cherokee-130207-arm-1.txz
+49ecff75fd683d7bd3b219c955593780  cifs-utils-git-20120302-arm-1.txz
+d33d4de033f5734caa97fb64d220a52b  cksfv-1.3.14-arm-1.txz
+ac0cd5691e28b0bcf1f1de6733a86460  cmake-2.8.7-arm-1.txz
+fd44ad8cf4a284e8ae90798467fd345b  dtach-0.8-arm-1.txz
+473b0116a2dbd50121f48097b2e5a829  fontconfig-2.10.2-arm-1.txz
+6be66afb530ab8c7c079e91a13e65ca3  fontconfig-2.8.0-arm-1.txz
+f77c4c8c754b164d05ed1b6e0c4c3ec3  freetype-2.4.8-arm-1.txz
+d2c81249d4bf660ba5c20991c8e86fb4  gcc-4.6.2-arm-1.txz
+e9ee3add43dea9b356feaa4fdbca5fe2  gcc-solibs-4.6.2-arm-1.txz
+fdedc4578b52177d1d36dc48c019e359  ghostscript-9.06-arm-1.txz
+4f283bc42de500a9fe9d6a2e7dae7be4  git-1.8.0-arm-1.txz
+124e02a1eec50b33d8f1c72cf768c572  git-1.8.2.1-arm-1.txz
+102f8bf9b770e8e7701b8ac9cf4e938c  glib-2.35.2-arm-1.txz
+dd86ef680e23d649c7034ceb70f1e420  gnufdisk-2.0.0a-arm-1.txz
+03f8318c94b5154ff9370961ace3567e  gnunet-0.9.2-arm-1.txz
+338c45bfe0571d896fdf12833397b8a6  gnupg-1.4.8-arm-1.txz
+3da6e410046d049a9de0952ced17d207  gnuplot-4.4.4-arm-1.txz
+9e22f867fddbb011ae97fbb522027188  gnuplot-4.4.4-arm-2.txz
+c8e04d19ce6c1be113de2e80dfe388e0  guile-2.0.9-arm-1.txz
+d863b220986066854ac7c9b0afb20faa  harfbuzz-0.9.9-arm-1.txz
+704d33fe923ead8b65f73ec35eee3993  isync-1.0.4-arm-1.txz
+82a6edbe7ba4f8e27d76dc36b1fb0fa3  less-457-arm-1.txz
+cdf7b3acf8e021921e1e2f696b21b12f  libatomic_ops-git-20130417-arm-1.txz
+0c54f33ceaa95ff640e77ec2378a124e  libev-4.11-arm-1.txz
+cbfd7cd569281a9ed6fa2313c30939ed  libextractor-0.6.2-arm-1.txz
+2d1b88015a8dd263f557fb27043e53f8  libffi-3.0.11-arm-1.txz
+f729e959f7a3bc84258d734f81214621  libgcrypt-1.5.0-arm-1.txz
+664311c312926ca30c077a89baebce93  libgd-2.0.33-arm-1.txz
+8ba41420fa0aab68345956455934bc00  libgpg-error-1.10-arm-1.txz
+1c150a8bb838d5c6fec063b67d324c59  libmicrohttpd-0.9.19-arm-1.txz
+c9e9f52bd5ac9f9e2512345223a3b274  libmms-0.6.2-arm-1.txz
+d0ba07ffb41f8c8072c3a72c642fd6ed  libpar2-0.2-arm-1.txz
+3c5701c05ab95f986e01253ad94a8650  libpar2-0.2-arm-2.txz
+1e1c96e71aef38f9bbba4d5b203342fe  libsigc++-2.2.0-arm-1.txz
+549f4f792f3f414dc11a2543aa27a0ff  libspectre-0.2.7-arm-1.txz
+362fecb4327b4db509cc27c8377e3da5  libunistring-0.9.3-arm-1.txz
+aa138e6d77ad3953671610579cc3d42b  links-2.7-arm-1.txz
+aff618deb5ab34b9ac7a03e0d8154838  lzo-2.06-arm-1.txz
+f855d164949e7acc18fa4aaf101c0d04  most-pre5.1-14-arm-1.txz
+e96e21b39bfa4d7eb5d44b5228fe7b70  mysecureshell-1.30-arm-1.txz
+cfb7825ee4f94260672690d154f2b6e3  nail-20120224-arm-1.txz
+0a14881eadc441ccdcfcd31bea56bcdd  neon-0.29.6-arm-1.txz
+9a89b60c336964997604fae4ed17695e  netatalk-3.0.2-arm-1.txz
+6029909b3d503980c034bd39478c0be1  node-0.8.21-arm-1.txz
+8a7d226e05c96bbcb6d53615c8358a7b  node-0.8.21-arm-2.txz
+87293f8ac425e78b4fd4ea49597b9cb0  node-v0.6.10-arm-1.txz
+71de0746bef03bd0f6edcfc667d19a6c  nut-2.6.5-arm-1.txz
+3a2df95f41ab7e1b0f0b81e874fb0812  nzbget-0.8.0r394-arm-1.txz
+083f7fd632357f1cce627207fb4552d3  opencv-2.3.1-arm-2.txz
+74894e01f5a6c68dc684a058883adce1  openssh-6.1p1-arm-4-node.txz
+ca1211de85f0f37d3a8e91d62fc63ab9  openssh-6.1p1-arm-4.txz
+c446b1a2cdfb22283d06cdc1696f69ef  openssl-1.0.0g-arm-1.txz
+1a6b123a0d2d852c49cd3b59dd162587  openssl-1.0.1c-arm-1.txz
+2739d61c04fef5e9c14703d3414a12b4  p7zip-9.20.1-arm-1.txz
+b6587c19ed46af536599c44164f30062  pango-1.32.3-arm-1.txz
+31aab821d024ee722d8086de0aaec3af  par-1.1-arm-1.txz
+40e39f90d6ffc36a13ed1266eaa233af  par2cmdline-0.4-arm-1.txz
+b0bf2733a984c43aa5ae222caf6ed652  parted-3.1-arm-1.txz
+50bb839f538148a881ce720ac210d8cb  php-5.4.11-arm-1.txz
+54868d5f85ba92baadd3f4dfafaebcbe  php-5.4.13-arm-1.txz
+28fccad42a83e371f834863b7a6acf65  php-5.4.14-arm-1.txz
+60cf27986a25f0c1e48759e28f30b39e  php-5.5.0beta3-arm-1.txz
+ac2a6618d9bff07b61619eb43e444f76  pixman-0.28.0-arm-1.txz
+6193b8bc9c34ed897730111343822d4f  protobuf-2.4.1-arm-1.txz
+16e33376597489b17fc80cc37d00fc5c  rrdtool-1.4.5-arm-1.txz
+a9950a1a97c267804ff19d08aa6d9525  rtmpdump-2.3-arm-1.txz
+4fa15a6145d7b868d687b8eba8279abc  seeks-20120224-arm-2.txz
+d949e5826b587dfcbb4fc5127b9914bc  sendmail-8.14.5-arm-1.txz
+3b684329a947e339bcf852abccb64a72  setuptools-0.6c11-arm-1.txz
+97642aff8413275eadf07642783a7570  slang-pre2.3.0-68-arm-1.txz
+672ee83f6e2b613bbbf9aad110c52a8f  sshpass-1.05-arm-1.txz
+50001317da06eb57e8898c2e2c590c20  swig-2.0.4-arm-1.txz
+6c49bfc80064b5760b761b57f119c8ed  tokyocabinet-1.4.47-arm-1.txz
+276175e3bd3f5f00e0f5729b013790b0  tokyotyrant-1.1.41-arm-1.txz
+d800d890172e3b93db736db52bdb6de8  tor-0.2.3.25-arm-1.txz
+175f16b06006a17e1ce953e370f369c8  unrar-4.1.4-arm-1.txz
+51da0ea5b5cd3b92dc196ce0ccee8789  vim-7.3-arm-1.txz
+012b27f2e1bc2848263c6d1879589e0d  wdfs-1.4.2-arm-1.txz
+5f93016524482301a080ccbceeaa1413  xvidcore-1.3.2-arm-1.txz
+18c2e4aa1dcfa44fe7f49784d7414846  zlib-1.2.6-arm-1.txz
+4deac8f4478776eb8988b0949dce9854  zsh-5.0.2-arm-1.txz
