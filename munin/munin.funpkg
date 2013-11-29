@@ -1,0 +1,35 @@
+#!/ffp/bin/sh -xe
+
+PN=$(basename $0 .funpkg)
+PR=1
+
+. ./config.ffp
+
+X=$(pwd)
+W=$(mktemp -t -d $PN.XXXXXX)
+D=$W/pkg
+
+cd $W
+cat $X/SRC_URI | xargs wget -O munin-2.0.9.tar.gz
+PV=$(ls $PN-*.tar* | egrep -o '[0-9][0-9.]*[0-9]')
+tar xf $PN-$PV.tar*
+cd $PN-*
+
+LDFLAGS="$FFP_LDFLAGS" \
+./configure \
+	--prefix=/ffp \
+	--build=$GNU_BUILD \
+	--host=$GNU_HOST \
+	--mandir=$mandir \
+	--infodir=$infodir
+    
+make
+make DESTDIR=$D install
+
+mkdir -p $D/install
+cp $X/{DESCR,HOMEPAGE} $D/install/
+
+cd $D
+makepkg $PN $PV $PR
+
+
