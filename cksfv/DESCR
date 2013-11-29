@@ -1,0 +1,22 @@
+Check SFV (Simple File Verification)
+Description
+Some files that you download will come with a .sfv file. 
+
+This is used to verify that the files that you received are the same 
+as the originals. 
+
+cksfv is a program that can use the .sfv file to verify the downloaded files. 
+
+Also, it can be used to create new .sfv files.
+
+IMPORTANT:
+Originally this is Bryan Call's project. 
+
+I decided to start maintain this project since I (Heikki Orsila) 
+couldn't reach the developer with a 64-bit architecture fix. 
+
+I'd be happy to let him maintain this useful tool, 
+if he contacted me. 
+
+Homepage: http://zakalwe.fi/~shd/foss/cksfv/
+
