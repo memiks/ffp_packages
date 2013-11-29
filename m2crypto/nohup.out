@@ -1,0 +1,294 @@
+++ basename ./m2crypto.funpkg .funpkg
++ PN=m2crypto
+++ ls m2crypto-0.21.1.tar.gz
+++ egrep -o '0\.[0-9][0-9.]*[0-9]'
++ PV=0.21.1
++ PR=1
++ . ./config.ffp
+++ GNU_HOST=
+++ GNU_TARGET=
+++ FFP_CFLAGS='-I/ffp/include -O2'
+++ FFP_LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
+++ '[' '!' -d '' ']'
+++ TMPDIR=/tmp
+++ export TMPDIR
+++ mandir=/ffp/share/man
+++ infodir=/ffp/share/info
+++ docdir=/ffp/share/doc
+++ pwd
++ X=/ffp/home/root/src/m2crypto
+++ mktemp -t -d m2crypto.XXXXXX
++ W=/tmp/m2crypto.h0VQA8
++ D=/tmp/m2crypto.h0VQA8/pkg
++ cd /tmp/m2crypto.h0VQA8
++ tar xf /ffp/home/root/src/m2crypto/m2crypto-0.21.1.tar.gz
++ cd M2Crypto-0.21.1
+++ which python
++ LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
++ /ffp/bin/python setup.py build
+/ffp/lib/python2.7/distutils/dist.py:267: UserWarning: Unknown distribution option: 'test_suite'
+  warnings.warn(msg)
+running build
+running build_py
+creating build/lib.linux-armv5tejl-2.7
+creating build/lib.linux-armv5tejl-2.7/M2Crypto
+copying M2Crypto/Rand.py -> build/lib.linux-armv5tejl-2.7/M2Crypto
+copying M2Crypto/m2.py -> build/lib.linux-armv5tejl-2.7/M2Crypto
+copying M2Crypto/BIO.py -> build/lib.linux-armv5tejl-2.7/M2Crypto
+copying M2Crypto/RSA.py -> build/lib.linux-armv5tejl-2.7/M2Crypto
+copying M2Crypto/EVP.py -> build/lib.linux-armv5tejl-2.7/M2Crypto
+copying M2Crypto/__init__.py -> build/lib.linux-armv5tejl-2.7/M2Crypto
+copying M2Crypto/callback.py -> build/lib.linux-armv5tejl-2.7/M2Crypto
+copying M2Crypto/util.py -> build/lib.linux-armv5tejl-2.7/M2Crypto
+copying M2Crypto/SMIME.py -> build/lib.linux-armv5tejl-2.7/M2Crypto
+copying M2Crypto/Engine.py -> build/lib.linux-armv5tejl-2.7/M2Crypto
+copying M2Crypto/Err.py -> build/lib.linux-armv5tejl-2.7/M2Crypto
+copying M2Crypto/ASN1.py -> build/lib.linux-armv5tejl-2.7/M2Crypto
+copying M2Crypto/m2urllib.py -> build/lib.linux-armv5tejl-2.7/M2Crypto
+copying M2Crypto/httpslib.py -> build/lib.linux-armv5tejl-2.7/M2Crypto
+copying M2Crypto/X509.py -> build/lib.linux-armv5tejl-2.7/M2Crypto
+copying M2Crypto/RC4.py -> build/lib.linux-armv5tejl-2.7/M2Crypto
+copying M2Crypto/ftpslib.py -> build/lib.linux-armv5tejl-2.7/M2Crypto
+copying M2Crypto/threading.py -> build/lib.linux-armv5tejl-2.7/M2Crypto
+copying M2Crypto/EC.py -> build/lib.linux-armv5tejl-2.7/M2Crypto
+copying M2Crypto/m2xmlrpclib.py -> build/lib.linux-armv5tejl-2.7/M2Crypto
+copying M2Crypto/m2urllib2.py -> build/lib.linux-armv5tejl-2.7/M2Crypto
+copying M2Crypto/DH.py -> build/lib.linux-armv5tejl-2.7/M2Crypto
+copying M2Crypto/DSA.py -> build/lib.linux-armv5tejl-2.7/M2Crypto
+copying M2Crypto/BN.py -> build/lib.linux-armv5tejl-2.7/M2Crypto
+copying M2Crypto/AuthCookie.py -> build/lib.linux-armv5tejl-2.7/M2Crypto
+creating build/lib.linux-armv5tejl-2.7/M2Crypto/SSL
+copying M2Crypto/SSL/Session.py -> build/lib.linux-armv5tejl-2.7/M2Crypto/SSL
+copying M2Crypto/SSL/__init__.py -> build/lib.linux-armv5tejl-2.7/M2Crypto/SSL
+copying M2Crypto/SSL/Checker.py -> build/lib.linux-armv5tejl-2.7/M2Crypto/SSL
+copying M2Crypto/SSL/timeout.py -> build/lib.linux-armv5tejl-2.7/M2Crypto/SSL
+copying M2Crypto/SSL/Cipher.py -> build/lib.linux-armv5tejl-2.7/M2Crypto/SSL
+copying M2Crypto/SSL/ssl_dispatcher.py -> build/lib.linux-armv5tejl-2.7/M2Crypto/SSL
+copying M2Crypto/SSL/Context.py -> build/lib.linux-armv5tejl-2.7/M2Crypto/SSL
+copying M2Crypto/SSL/Connection.py -> build/lib.linux-armv5tejl-2.7/M2Crypto/SSL
+copying M2Crypto/SSL/TwistedProtocolWrapper.py -> build/lib.linux-armv5tejl-2.7/M2Crypto/SSL
+copying M2Crypto/SSL/cb.py -> build/lib.linux-armv5tejl-2.7/M2Crypto/SSL
+copying M2Crypto/SSL/SSLServer.py -> build/lib.linux-armv5tejl-2.7/M2Crypto/SSL
+creating build/lib.linux-armv5tejl-2.7/M2Crypto/PGP
+copying M2Crypto/PGP/RSA.py -> build/lib.linux-armv5tejl-2.7/M2Crypto/PGP
+copying M2Crypto/PGP/constants.py -> build/lib.linux-armv5tejl-2.7/M2Crypto/PGP
+copying M2Crypto/PGP/__init__.py -> build/lib.linux-armv5tejl-2.7/M2Crypto/PGP
+copying M2Crypto/PGP/PublicKey.py -> build/lib.linux-armv5tejl-2.7/M2Crypto/PGP
+copying M2Crypto/PGP/PublicKeyRing.py -> build/lib.linux-armv5tejl-2.7/M2Crypto/PGP
+copying M2Crypto/PGP/packet.py -> build/lib.linux-armv5tejl-2.7/M2Crypto/PGP
+running build_ext
+building 'M2Crypto.__m2crypto' extension
+swigging SWIG/_m2crypto.i to SWIG/_m2crypto_wrap.c
+swig -python -I/ffp/include/python2.7 -I/ffp/include -includeall -o SWIG/_m2crypto_wrap.c SWIG/_m2crypto.i
+SWIG/_bio.i:64: Warning 454: Setting a pointer/reference variable may leak memory.
+SWIG/_rand.i:21: Warning 454: Setting a pointer/reference variable may leak memory.
+SWIG/_evp.i:160: Warning 454: Setting a pointer/reference variable may leak memory.
+SWIG/_dh.i:36: Warning 454: Setting a pointer/reference variable may leak memory.
+SWIG/_rsa.i:43: Warning 454: Setting a pointer/reference variable may leak memory.
+SWIG/_dsa.i:31: Warning 454: Setting a pointer/reference variable may leak memory.
+SWIG/_ssl.i:214: Warning 454: Setting a pointer/reference variable may leak memory.
+SWIG/_x509.i:323: Warning 454: Setting a pointer/reference variable may leak memory.
+SWIG/_pkcs7.i:44: Warning 454: Setting a pointer/reference variable may leak memory.
+SWIG/_pkcs7.i:44: Warning 454: Setting a pointer/reference variable may leak memory.
+SWIG/_util.i:11: Warning 454: Setting a pointer/reference variable may leak memory.
+SWIG/_ec.i:111: Warning 454: Setting a pointer/reference variable may leak memory.
+SWIG/_engine.i:168: Warning 454: Setting a pointer/reference variable may leak memory.
+creating build/temp.linux-armv5tejl-2.7
+creating build/temp.linux-armv5tejl-2.7/SWIG
+gcc -pthread -fno-strict-aliasing -g -O2 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -I/ffp/include/python2.7 -I/ffp/include -I/tmp/m2crypto.h0VQA8/M2Crypto-0.21.1/SWIG -c SWIG/_m2crypto_wrap.c -o build/temp.linux-armv5tejl-2.7/SWIG/_m2crypto_wrap.o -DTHREADING
+SWIG/_m2crypto_wrap.c:6380:2: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+SWIG/_m2crypto_wrap.c: In function 'x509v3_lhash':
+SWIG/_m2crypto_wrap.c:6381:5: warning: return from incompatible pointer type [enabled by default]
+SWIG/_m2crypto_wrap.c: In function 'mpi_to_bn':
+SWIG/_m2crypto_wrap.c:3601:5: warning: 'vlen' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c: In function 'bin_to_bn':
+SWIG/_m2crypto_wrap.c:3627:5: warning: 'vlen' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c: In function 'bio_write':
+SWIG/_m2crypto_wrap.c:3892:9: warning: 'flen' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c: In function 'rand_seed':
+SWIG/_m2crypto_wrap.c:4110:14: warning: 'len' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c: In function 'rand_add':
+SWIG/_m2crypto_wrap.c:4122:13: warning: 'len' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c: In function 'pkcs5_pbkdf2_hmac_sha1':
+SWIG/_m2crypto_wrap.c:4239:27: warning: 'saltlen' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c:4239:27: warning: 'passlen' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c: In function 'hmac_init':
+SWIG/_m2crypto_wrap.c:4311:14: warning: 'klen' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c: In function 'hmac':
+SWIG/_m2crypto_wrap.c:4359:9: warning: 'klen' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c: In function 'bytes_to_key':
+SWIG/_m2crypto_wrap.c:4397:10: warning: 'dlen' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c: In function 'cipher_update':
+SWIG/_m2crypto_wrap.c:4431:35: warning: 'len' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c: In function 'verify_final':
+SWIG/_m2crypto_wrap.c:4520:27: warning: 'len' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c: In function 'rc4_set_key':
+SWIG/_m2crypto_wrap.c:4748:16: warning: 'vlen' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c: In function 'dh_compute_key':
+SWIG/_m2crypto_wrap.c:4841:8: warning: 'pklen' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c: In function 'dh_set_p':
+SWIG/_m2crypto_wrap.c:4902:8: warning: 'vlen' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c: In function 'dh_set_g':
+SWIG/_m2crypto_wrap.c:4921:8: warning: 'vlen' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c: In function 'rsa_set_e':
+SWIG/_m2crypto_wrap.c:5019:8: warning: 'vlen' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c: In function 'rsa_set_n':
+SWIG/_m2crypto_wrap.c:5038:8: warning: 'vlen' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c: In function 'rsa_set_e_bin':
+SWIG/_m2crypto_wrap.c:5057:8: warning: 'vlen' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c: In function 'rsa_set_n_bin':
+SWIG/_m2crypto_wrap.c:5076:8: warning: 'vlen' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c: In function 'rsa_private_encrypt':
+SWIG/_m2crypto_wrap.c:5100:10: warning: 'flen' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c: In function 'rsa_public_decrypt':
+SWIG/_m2crypto_wrap.c:5125:10: warning: 'flen' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c: In function 'rsa_public_encrypt':
+SWIG/_m2crypto_wrap.c:5150:10: warning: 'flen' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c: In function 'rsa_private_decrypt':
+SWIG/_m2crypto_wrap.c:5175:10: warning: 'flen' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c: In function 'dsa_set_p':
+SWIG/_m2crypto_wrap.c:5432:8: warning: 'vlen' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c: In function 'dsa_set_q':
+SWIG/_m2crypto_wrap.c:5451:8: warning: 'vlen' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c: In function 'dsa_set_g':
+SWIG/_m2crypto_wrap.c:5470:8: warning: 'vlen' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c: In function 'dsa_sign':
+SWIG/_m2crypto_wrap.c:5562:8: warning: 'vlen' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c: In function 'dsa_verify':
+SWIG/_m2crypto_wrap.c:5597:29: warning: 'slen' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c:5592:29: warning: 'rlen' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c:5602:9: warning: 'vlen' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c: In function 'dsa_sign_asn1':
+SWIG/_m2crypto_wrap.c:5623:18: warning: 'vlen' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c: In function 'dsa_verify_asn1':
+SWIG/_m2crypto_wrap.c:5643:8: warning: 'slen' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c:5643:8: warning: 'vlen' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c: In function 'ssl_ctx_set_session_id_context':
+SWIG/_m2crypto_wrap.c:5782:42: warning: 'len' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c: In function 'ssl_set_session_id_context':
+SWIG/_m2crypto_wrap.c:5851:38: warning: 'len' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c: In function 'ssl_write':
+SWIG/_m2crypto_wrap.c:6054:7: warning: 'len' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c: In function 'ssl_write_nbio':
+SWIG/_m2crypto_wrap.c:6099:7: warning: 'len' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c: In function 'ecdsa_sign':
+SWIG/_m2crypto_wrap.c:7021:8: warning: 'vlen' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c: In function 'ecdsa_verify':
+SWIG/_m2crypto_wrap.c:7056:19: warning: 'slen' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c:7051:19: warning: 'rlen' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c:7061:9: warning: 'vlen' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c: In function 'ecdsa_sign_asn1':
+SWIG/_m2crypto_wrap.c:7083:20: warning: 'vlen' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c: In function 'ecdsa_verify_asn1':
+SWIG/_m2crypto_wrap.c:7104:8: warning: 'slen' may be used uninitialized in this function [-Wuninitialized]
+SWIG/_m2crypto_wrap.c:7104:8: warning: 'vlen' may be used uninitialized in this function [-Wuninitialized]
+gcc -pthread -shared -L/ffp/lib -Wl,-rpath,/ffp/lib -L/ffp/lib -Wl,-rpath,/ffp/lib build/temp.linux-armv5tejl-2.7/SWIG/_m2crypto_wrap.o -L/ffp/lib -lssl -lcrypto -o build/lib.linux-armv5tejl-2.7/M2Crypto/__m2crypto.so
+++ which python
++ /ffp/bin/python setup.py install --prefix=/tmp/m2crypto.h0VQA8/pkg/ffp/
+/ffp/lib/python2.7/distutils/dist.py:267: UserWarning: Unknown distribution option: 'test_suite'
+  warnings.warn(msg)
+running install
+running build
+running build_py
+running build_ext
+running install_lib
+creating /tmp/m2crypto.h0VQA8/pkg
+creating /tmp/m2crypto.h0VQA8/pkg/ffp
+creating /tmp/m2crypto.h0VQA8/pkg/ffp/lib
+creating /tmp/m2crypto.h0VQA8/pkg/ffp/lib/python2.7
+creating /tmp/m2crypto.h0VQA8/pkg/ffp/lib/python2.7/site-packages
+creating /tmp/m2crypto.h0VQA8/pkg/ffp/lib/python2.7/site-packages/M2Crypto
+copying build/lib.linux-armv5tejl-2.7/M2Crypto/Rand.py -> /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto
+copying build/lib.linux-armv5tejl-2.7/M2Crypto/m2.py -> /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto
+copying build/lib.linux-armv5tejl-2.7/M2Crypto/BIO.py -> /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto
+copying build/lib.linux-armv5tejl-2.7/M2Crypto/RSA.py -> /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto
+copying build/lib.linux-armv5tejl-2.7/M2Crypto/EVP.py -> /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto
+copying build/lib.linux-armv5tejl-2.7/M2Crypto/__init__.py -> /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto
+copying build/lib.linux-armv5tejl-2.7/M2Crypto/callback.py -> /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto
+copying build/lib.linux-armv5tejl-2.7/M2Crypto/util.py -> /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto
+copying build/lib.linux-armv5tejl-2.7/M2Crypto/SMIME.py -> /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto
+creating /tmp/m2crypto.h0VQA8/pkg/ffp/lib/python2.7/site-packages/M2Crypto/PGP
+copying build/lib.linux-armv5tejl-2.7/M2Crypto/PGP/RSA.py -> /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/PGP
+copying build/lib.linux-armv5tejl-2.7/M2Crypto/PGP/constants.py -> /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/PGP
+copying build/lib.linux-armv5tejl-2.7/M2Crypto/PGP/__init__.py -> /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/PGP
+copying build/lib.linux-armv5tejl-2.7/M2Crypto/PGP/PublicKey.py -> /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/PGP
+copying build/lib.linux-armv5tejl-2.7/M2Crypto/PGP/PublicKeyRing.py -> /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/PGP
+copying build/lib.linux-armv5tejl-2.7/M2Crypto/PGP/packet.py -> /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/PGP
+copying build/lib.linux-armv5tejl-2.7/M2Crypto/Engine.py -> /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto
+copying build/lib.linux-armv5tejl-2.7/M2Crypto/Err.py -> /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto
+copying build/lib.linux-armv5tejl-2.7/M2Crypto/ASN1.py -> /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto
+copying build/lib.linux-armv5tejl-2.7/M2Crypto/m2urllib.py -> /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto
+creating /tmp/m2crypto.h0VQA8/pkg/ffp/lib/python2.7/site-packages/M2Crypto/SSL
+copying build/lib.linux-armv5tejl-2.7/M2Crypto/SSL/Session.py -> /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/SSL
+copying build/lib.linux-armv5tejl-2.7/M2Crypto/SSL/__init__.py -> /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/SSL
+copying build/lib.linux-armv5tejl-2.7/M2Crypto/SSL/Checker.py -> /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/SSL
+copying build/lib.linux-armv5tejl-2.7/M2Crypto/SSL/timeout.py -> /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/SSL
+copying build/lib.linux-armv5tejl-2.7/M2Crypto/SSL/Cipher.py -> /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/SSL
+copying build/lib.linux-armv5tejl-2.7/M2Crypto/SSL/ssl_dispatcher.py -> /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/SSL
+copying build/lib.linux-armv5tejl-2.7/M2Crypto/SSL/Context.py -> /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/SSL
+copying build/lib.linux-armv5tejl-2.7/M2Crypto/SSL/Connection.py -> /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/SSL
+copying build/lib.linux-armv5tejl-2.7/M2Crypto/SSL/TwistedProtocolWrapper.py -> /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/SSL
+copying build/lib.linux-armv5tejl-2.7/M2Crypto/SSL/cb.py -> /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/SSL
+copying build/lib.linux-armv5tejl-2.7/M2Crypto/SSL/SSLServer.py -> /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/SSL
+copying build/lib.linux-armv5tejl-2.7/M2Crypto/httpslib.py -> /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto
+copying build/lib.linux-armv5tejl-2.7/M2Crypto/X509.py -> /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto
+copying build/lib.linux-armv5tejl-2.7/M2Crypto/RC4.py -> /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto
+copying build/lib.linux-armv5tejl-2.7/M2Crypto/ftpslib.py -> /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto
+copying build/lib.linux-armv5tejl-2.7/M2Crypto/threading.py -> /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto
+copying build/lib.linux-armv5tejl-2.7/M2Crypto/EC.py -> /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto
+copying build/lib.linux-armv5tejl-2.7/M2Crypto/m2xmlrpclib.py -> /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto
+copying build/lib.linux-armv5tejl-2.7/M2Crypto/m2urllib2.py -> /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto
+copying build/lib.linux-armv5tejl-2.7/M2Crypto/DH.py -> /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto
+copying build/lib.linux-armv5tejl-2.7/M2Crypto/DSA.py -> /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto
+copying build/lib.linux-armv5tejl-2.7/M2Crypto/BN.py -> /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto
+copying build/lib.linux-armv5tejl-2.7/M2Crypto/__m2crypto.so -> /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto
+copying build/lib.linux-armv5tejl-2.7/M2Crypto/AuthCookie.py -> /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto
+byte-compiling /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/Rand.py to Rand.pyc
+byte-compiling /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/m2.py to m2.pyc
+byte-compiling /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/BIO.py to BIO.pyc
+byte-compiling /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/RSA.py to RSA.pyc
+byte-compiling /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/EVP.py to EVP.pyc
+byte-compiling /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/__init__.py to __init__.pyc
+byte-compiling /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/callback.py to callback.pyc
+byte-compiling /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/util.py to util.pyc
+byte-compiling /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/SMIME.py to SMIME.pyc
+byte-compiling /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/PGP/RSA.py to RSA.pyc
+byte-compiling /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/PGP/constants.py to constants.pyc
+byte-compiling /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/PGP/__init__.py to __init__.pyc
+byte-compiling /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/PGP/PublicKey.py to PublicKey.pyc
+byte-compiling /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/PGP/PublicKeyRing.py to PublicKeyRing.pyc
+byte-compiling /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/PGP/packet.py to packet.pyc
+byte-compiling /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/Engine.py to Engine.pyc
+byte-compiling /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/Err.py to Err.pyc
+byte-compiling /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/ASN1.py to ASN1.pyc
+byte-compiling /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/m2urllib.py to m2urllib.pyc
+byte-compiling /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/SSL/Session.py to Session.pyc
+byte-compiling /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/SSL/__init__.py to __init__.pyc
+byte-compiling /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/SSL/Checker.py to Checker.pyc
+byte-compiling /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/SSL/timeout.py to timeout.pyc
+byte-compiling /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/SSL/Cipher.py to Cipher.pyc
+byte-compiling /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/SSL/ssl_dispatcher.py to ssl_dispatcher.pyc
+byte-compiling /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/SSL/Context.py to Context.pyc
+byte-compiling /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/SSL/Connection.py to Connection.pyc
+byte-compiling /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/SSL/TwistedProtocolWrapper.py to TwistedProtocolWrapper.pyc
+byte-compiling /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/SSL/cb.py to cb.pyc
+byte-compiling /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/SSL/SSLServer.py to SSLServer.pyc
+byte-compiling /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/httpslib.py to httpslib.pyc
+byte-compiling /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/X509.py to X509.pyc
+byte-compiling /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/RC4.py to RC4.pyc
+byte-compiling /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/ftpslib.py to ftpslib.pyc
+byte-compiling /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/threading.py to threading.pyc
+byte-compiling /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/EC.py to EC.pyc
+byte-compiling /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/m2xmlrpclib.py to m2xmlrpclib.pyc
+byte-compiling /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/m2urllib2.py to m2urllib2.pyc
+byte-compiling /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/DH.py to DH.pyc
+byte-compiling /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/DSA.py to DSA.pyc
+byte-compiling /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/BN.py to BN.pyc
+byte-compiling /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto/AuthCookie.py to AuthCookie.pyc
+running install_egg_info
+Writing /tmp/m2crypto.h0VQA8/pkg/ffp//lib/python2.7/site-packages/M2Crypto-0.21.1-py2.7.egg-info
++ mkdir -p /tmp/m2crypto.h0VQA8/pkg/install
++ cp /ffp/home/root/src/m2crypto/DESCR /ffp/home/root/src/m2crypto/HOMEPAGE /tmp/m2crypto.h0VQA8/pkg/install/
++ cd /tmp/m2crypto.h0VQA8/pkg
++ makepkg m2crypto 0.21.1 1
+Creating /tmp/m2crypto-0.21.1-oarm-1.tar ...
