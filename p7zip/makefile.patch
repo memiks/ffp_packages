@@ -1,0 +1,10 @@
+--- makefile.orig	2012-03-05 10:06:51.000000000 +0100
++++ makefile	2012-03-05 10:07:44.000000000 +0100
+@@ -1,6 +1,6 @@
+ MKDIR = mkdir -p
+ 
+-DEST_HOME=/usr/local
++DEST_HOME=/ffp
+ DEST_BIN=$(DEST_HOME)/bin
+ DEST_SHARE=$(DEST_HOME)/lib/p7zip
+ DEST_SHARE_DOC=$(DEST_HOME)/share/doc/p7zip
