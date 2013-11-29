@@ -1,0 +1,82 @@
+--- makedefs.orig	2012-03-13 14:47:18.000000000 +0100
++++ makedefs	2012-03-13 14:49:24.000000000 +0100
+@@ -271,12 +271,12 @@
+ 		;;
+     Linux.2*)	SYSTYPE=LINUX2
+ 		# Postfix no longer needs DB 1.85 compatibility
+-		if [ -f /usr/include/db.h ]
++		if [ -f /ffp/include/db.h ]
+ 		then
+ 		    : we are all set
+-		elif [ -f /usr/include/db/db.h ]
++		elif [ -f /ffp/include/db/db.h ]
+ 		then
+-		    CCARGS="$CCARGS -I/usr/include/db"
++		    CCARGS="$CCARGS -I/ffp/include/db"
+ 		else
+ 		    # No, we're not going to try db1 db2 db3 etc.
+ 		    # On a properly installed system, Postfix builds
+@@ -287,11 +287,11 @@
+ 		    exit 1
+ 		fi
+ 		# GDBM locks the DBM .pag file after open. This breaks postmap.
+-		# if [ -f /usr/include/gdbm-ndbm.h ]
++		# if [ -f /ffp/include/gdbm-ndbm.h ]
+ 		# then
+ 		#     CCARGS="$CCARGS -DHAS_DBM -DPATH_NDBM_H='<gdbm-ndbm.h>'"
+ 		#     GDBM_LIBS=gdbm
+-		# elif [ -f /usr/include/gdbm/ndbm.h ]
++		# elif [ -f /ffp/include/gdbm/ndbm.h ]
+ 		# then
+ 		#     CCARGS="$CCARGS -DHAS_DBM -DPATH_NDBM_H='<gdbm/ndbm.h>'"
+ 		#     GDBM_LIBS=gdbm
+@@ -319,7 +319,7 @@
+ 		       if [ `expr "X$CCARGS" : "X.*-DNO_EPOLL"` -gt 0 ]
+                        then
+                            :
+-                       elif [ ! -e /usr/include/sys/epoll.h ]
++                       elif [ ! -e /ffp/include/sys/epoll.h ]
+                        then
+                            echo CCARGS="$CCARGS -DNO_EPOLL"
+                        else
+@@ -350,12 +350,12 @@
+ 		esac
+ 		;;
+     Linux.3*)	SYSTYPE=LINUX3
+-		if [ -f /usr/include/db.h ]
++		if [ -f /ffp/include/db.h ]
+ 		then
+ 		    : we are all set
+-		elif [ -f /usr/include/db/db.h ]
++		elif [ -f /ffp/include/db/db.h ]
+ 		then
+-		    CCARGS="$CCARGS -I/usr/include/db"
++		    CCARGS="$CCARGS -I/ffp/include/db"
+ 		else
+ 		    # On a properly installed system, Postfix builds
+ 		    # by including <db.h> and by linking with -ldb
+@@ -379,12 +379,12 @@
+      GNU.0*|GNU/kFreeBSD.[567]*)
+      		SYSTYPE=GNU0
+ 		# Postfix no longer needs DB 1.85 compatibility
+-		if [ -f /usr/include/db.h ]
++		if [ -f /ffp/include/db.h ]
+ 		then
+ 		    : we are all set
+-		elif [ -f /usr/include/db/db.h ]
++		elif [ -f /ffp/include/db/db.h ]
+ 		then
+-		    CCARGS="$CCARGS -I/usr/include/db"
++		    CCARGS="$CCARGS -I/ffp/include/db"
+ 		else
+ 		    # No, we're not going to try db1 db2 db3 etc.
+ 		    # On a properly installed system, Postfix builds
+@@ -607,7 +607,7 @@
+ 
+ #
+ # OpenSSL has no configuration query utility, but we don't try to
+-# guess. We assume includes in /usr/include/openssl and libraries in
++# guess. We assume includes in /ffp/include/openssl and libraries in
+ # /usr/lib, or in their /usr/local equivalents. If the OpenSSL files
+ # are in a non-standard place, their locations need to be specified.
+ #

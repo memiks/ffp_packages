@@ -1,0 +1,67 @@
+#!/ffp/bin/sh -xe
+
+PN=$(basename $0 .funpkg)
+PR=1
+
+. ./config.ffp
+
+X=$(pwd)
+W=$(mktemp -t -d $PN.XXXXXX)
+D=$W/pkg
+
+cd $W
+cat $X/SRC_URI | xargs wget 
+PV=$(ls $PN-*.tar* | egrep -o '[0-9][0-9.]*[0-9]')
+tar xf $PN-$PV.tar*
+cd $PN-*
+
+patch makedefs $X/makedefs.patch
+echo -e "\n\n#undef HAS_NIS" >> ./src/util/sys_defs.h
+
+
+LDFLAGS="$FFP_LDFLAGS" \
+make -f Makefile.init makefiles
+
+LDFLAGS="$FFP_LDFLAGS" \
+make tidy
+
+LDFLAGS="$FFP_LDFLAGS" \
+make makefiles CCARGS='-DDEF_COMMAND_DIR=\"/ffp/sbin\" \
+	-DDEF_CONFIG_DIR=\"/ffp/etc/postfix\" \
+	-DDEF_DAEMON_DIR=\"/ffp/libexec/postfix\" \
+	-DDEF_DATA_DIR=\"/ffp/var/lib/postfix\" \
+	-DDEF_MAILQ_PATH=\"/ffp/bin/mailq\" \
+	-DDEF_MANPAGE_DIR=\"/ffp/man\"'
+
+
+LDFLAGS="$FFP_LDFLAGS" \
+make
+
+postfixgrp=$(groups postfix 2>/dev/null | wc -l)
+postfixusr=$(users postfix 2>/dev/null | wc -l)
+
+if [ 0 -eq $postfixgrp ]
+then
+	addgroup postfix
+fi
+
+if [ 0 -eq $postfixusr ]
+then
+	adduser postfix
+fi
+
+
+sh postfix-install daemon_directory=$D/ffp/sbin \
+                   manpage_directory=$D/ffp/share/man \
+                   sample_directory=$D/ffp/share/doc/postfix \
+                   -non-interactive
+
+#make DESTDIR=$D install
+
+mkdir -p $D/install
+cp $X/{DESCR,HOMEPAGE} $D/install/
+
+cd $D
+makepkg $PN $PV $PR
+
+
