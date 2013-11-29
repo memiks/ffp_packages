@@ -1,0 +1,47 @@
+#!/ffp/bin/sh -xe
+
+PN=$(basename $0 .funpkg)
+DATE=`date +%Y%m%d`
+PV=git-$DATE
+PR=1
+
+. ./config.ffp
+
+X=$(pwd)
+W=$(mktemp -t -d $PN.XXXXXX)
+D=$W/pkg
+
+cd $W
+cat $X/SRC_URI | xargs git clone 
+cd $PN
+
+for file in `ls $X/patches/*.patch`
+do
+        patch -p0 -i $file
+done
+
+LDFLAGS="$FFP_LDFLAGS" \
+./autogen.sh
+
+LDFLAGS="$FFP_LDFLAGS" \
+./configure \
+	--prefix=/ffp \
+	--build=$GNU_BUILD \
+	--host=$GNU_HOST \
+	--mandir=$mandir \
+	--infodir=$infodir \
+    --enable-shared \
+    --disable-static \
+    --disable-libtool-lock \
+    --enable-assertions
+    
+make
+make DESTDIR=$D install
+
+mkdir -p $D/install
+cp $X/{DESCR,HOMEPAGE} $D/install/
+
+cd $D
+makepkg $PN $PV $PR
+
+

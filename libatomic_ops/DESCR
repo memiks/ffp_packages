@@ -1,0 +1,43 @@
+ The most recent version of this package can be found in the source tree 
+for the Boehm-Demers-Weiser garbage collector (bdwgc) on Github. It 
+should be possible to just extract the libatomic_ops source tree and 
+build it independently. Recent versions are identified by bdwgc version 
+numbers. 
+
+Provides implementations for atomic memory update operations on a number 
+of architectures. This allows direct use of these in reasonably portable 
+code. Unlike earlier similar packages, this one explicitly considers 
+memory barrier semantics, and allows the construction of code that 
+involves minimum overhead across a variety of architectures. 
+
+The package has been at least minimally tested on X86, Itanium, Alpha, 
+PA-RISC, PowerPC, and SPARC, with Linux, Microsoft Windows, HP/UX, 
+Solaris, and MACOSX operating systems. Some implementations are more 
+complete than others. 
+
+It should be useful both for high performance multi-threaded code which 
+can't afford to use the standard locking primitives, or for code that 
+has to access shared data structures from signal handlers. For details, 
+see README.txt in the distribution. 
+
+The most recent version adds support for operations on data of different 
+sizes, and adds an optional library providing almost-lock-free stacks 
+(see Boehm, "An almost non-blocking stack", also here) and a 
+signal-handler-safe memory allocator based on it. See README_stack.txt 
+and README_malloc.txt for details. 
+
+Note that experience with this package contributed to the design of C11 
+and C++11 atomics, which represent a careful refinement of the API. If 
+your platform supports well-implemented C11 or C++11 atomics, please use 
+those instead. 
+	
+project links
+	» 	project home
+	» 	using atomic_ops
+	» 	example
+	» 	downloads
+	» 	license
+	» 	people
+
+Homepage: http://www.hpl.hp.com/research/linux/atomic_ops/
+
