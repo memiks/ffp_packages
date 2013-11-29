@@ -1,0 +1,59 @@
+#!/ffp/bin/sh -xe
+
+#PV=$(ls $PN-*.tar* | egrep -o '[0-9.][0-9.]*[0-9]g')
+PR=1
+
+. ./config.ffp
+
+X=$(pwd)
+W=$(mktemp -t -d opensslssh.XXXXXX)
+D=$W/pkg
+
+PN='openssl'
+cd $W
+cat $X/SRC_URI_SSL | xargs wget
+PV=$(ls $PN-*.tar* | egrep -o '[0-9.][0-9.]*[0-9][a-z]')
+tar xf $PN-*.tar*
+cd $PN-$PV
+
+LDFLAGS="$FFP_LDFLAGS -lc" ./config \
+	--prefix=/ffp \
+	--openssldir=/ffp/etc/ssl \
+	shared \
+	no-threads \
+	zlib-dynamic
+
+LDFLAGS="$FFP_LDFLAGS -lc" make
+LDFLAGS="$FFP_LDFLAGS -lc" make MANDIR=/ffp/share/man INSTALL_PREFIX=$D install
+
+PN=$(basename $0 .funpkg)
+
+cd $W
+cat $X/SRC_URI | xargs wget
+PV=$(ls $PN-*.tar* | egrep -o '[0-9.][0-9.]*[0-9][a-z][0-9]')
+tar xf $PN-*.tar*
+cd $PN-$PV
+
+LDFLAGS="$FFP_LDFLAGS -lc" \
+	./configure \
+    --prefix=/ffp \
+    --sysconfdir=/ffp/etc/ssh \
+    --with-privsep-user=nobody \
+    --with-privsep-path=/ffp/etc/ssh/empty \
+    --with-ssl-dir=$D
+
+LDFLAGS="$FFP_LDFLAGS -lc" make
+
+cp Makefile Makefile.orig
+sed -e "s#^DESTDIR=#DESTDIR=$D#g" Makefile.orig > Makefile
+
+LDFLAGS="$FFP_LDFLAGS -lc" make install	
+
+mkdir -p $D/install
+cp $X/{DESCR,HOMEPAGE} $D/install/
+
+cp -r $X/pkg/* $D/
+
+cd $D
+makepkg $PN $PV $PR
+

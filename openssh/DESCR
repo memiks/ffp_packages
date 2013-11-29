@@ -1,0 +1,46 @@
+OpenSSH is a FREE version of the SSH connectivity tools that technical users 
+of the Internet rely on. Users of telnet, rlogin, and ftp may not realize 
+that their password is transmitted across the Internet unencrypted, but it is. 
+OpenSSH encrypts all traffic (including passwords) to effectively eliminate 
+eavesdropping, connection hijacking, and other attacks. 
+Additionally, OpenSSH provides secure tunneling capabilities and several 
+authentication methods, and supports all SSH protocol versions.
+
+The OpenSSH suite replaces rlogin and telnet with the ssh program, 
+rcp with scp, and ftp with sftp. Also included is sshd (the server side of 
+the package), and the other utilities like ssh-add, ssh-agent, ssh-keysign, 
+ssh-keyscan, ssh-keygen and sftp-server.
+
+OpenSSH is developed by the OpenBSD Project. 
+The software is developed in countries that permit cryptography export and 
+is freely useable and re-useable by everyone under a BSD license. 
+However, development has costs, so if you find OpenSSH useful (particularly 
+if you use it in a commercial system that is distributed) please consider 
+donating to help fund the project.
+
+OpenSSH is developed by two teams. 
+One team does strictly OpenBSD-based development, aiming to produce code
+ that is as clean, simple, and secure as possible. 
+We believe that simplicity without the portability "goop" allows for better 
+code quality control and easier review. 
+The other team then takes the clean version and makes it portable (adding 
+the "goop") to make it run on many operating systems -- the so-called -p 
+releases, ie "OpenSSH 4.0p1".
+
+We sell OpenSSH T-shirts and posters. Sales of these items also help to 
+fund development. 
+Donations and other contributions have come entirely from end-users.
+
+Please take note of our Who uses it page, which list just some of the vendors 
+who incorporate OpenSSH into their own products -- as a critically important 
+security / access feature -- instead of writing their own SSH implementation or
+purchasing one from another vendor. 
+This list specifically includes companies like Cisco, Juniper, Apple, Red Hat, 
+and Novell; but probably includes almost all router, switch or unix-like 
+operating system vendors. 
+In the 10 years since the inception of the OpenSSH project, 
+these companies have contributed not even a dime of thanks in support of the 
+OpenSSH project (despite numerous requests). 
+
+Homepage: http://www.openssh.com/
+
