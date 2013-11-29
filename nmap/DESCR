@@ -1,0 +1,26 @@
+Nmap and Zenmap (the graphical front end) are available in 
+several versions and formats. 
+
+Recent source releases and binary packages are described below. 
+
+Older version (and sometimes newer test releases) are 
+available from the dist directory 
+(and really old ones are in dist-old). 
+
+For the more security-paranoid (smart) users, 
+GPG detached signatures and SHA-1 hashes for each release 
+are available in the sigs directory (verification instructions). 
+
+Before downloading, be sure to read the relevant sections 
+for your platform from the Nmap Install Guide. 
+
+The most important changes (features, bugfixes, etc) in each 
+Nmap version are described in the Changelog. 
+
+Using Nmap is covered in the Reference Guide, and don't forget 
+to read the other available documentation, particularly the 
+new book Nmap Network Scanning! 
+
+
+Homepage: http://nmap.org/
+

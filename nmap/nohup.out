@@ -1,0 +1,1759 @@
+++ basename ./nmap.funpkg .funpkg
++ PN=nmap
++ PR=1
++ . ./config.ffp
+++ GNU_HOST=
+++ GNU_TARGET=
+++ FFP_CFLAGS='-I/ffp/include -O2'
+++ FFP_LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
+++ '[' '!' -d '' ']'
+++ TMPDIR=/tmp
+++ export TMPDIR
+++ mandir=/ffp/share/man
+++ infodir=/ffp/share/info
+++ docdir=/ffp/share/doc
+++ pwd
++ X=/ffp/home/root/src/nmap
+++ mktemp -t -d nmap.XXXXXX
++ W=/tmp/nmap.Fj8tqb
++ D=/tmp/nmap.Fj8tqb/pkg
++ cd /tmp/nmap.Fj8tqb
++ cat /ffp/home/root/src/nmap/SRC_URI
++ xargs wget
+--2012-02-29 15:41:27--  http://nmap.org/dist/nmap-5.51.tar.bz2
+Resolving nmap.org... 2600:3c01::f03c:91ff:fe96:967c, 74.207.254.18
+Connecting to nmap.org|2600:3c01::f03c:91ff:fe96:967c|:80... failed: Address family not supported by protocol.
+Connecting to nmap.org|74.207.254.18|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 16869068 (16M) [application/x-bzip2]
+Saving to: `nmap-5.51.tar.bz2'
+
+     0K .......... .......... .......... .......... ..........  0% 79.6K 3m26s
+    50K .......... .......... .......... .......... ..........  0%  191K 2m26s
+   100K .......... .......... .......... .......... ..........  0%  195K 2m5s
+   150K .......... .......... .......... .......... ..........  1%  208K 1m53s
+   200K .......... .......... .......... .......... ..........  1%  206K 1m46s
+   250K .......... .......... .......... .......... ..........  1%  224K 1m40s
+   300K .......... .......... .......... .......... ..........  2%  228K 95s
+   350K .......... .......... .......... .......... ..........  2%  230K 92s
+   400K .......... .......... .......... .......... ..........  2%  233K 89s
+   450K .......... .......... .......... .......... ..........  3%  270K 86s
+   500K .......... .......... .......... .......... ..........  3%  256K 84s
+   550K .......... .......... .......... .......... ..........  3%  273K 81s
+   600K .......... .......... .......... .......... ..........  3%  257K 79s
+   650K .......... .......... .......... .......... ..........  4%  273K 78s
+   700K .......... .......... .......... .......... ..........  4%  256K 76s
+   750K .......... .......... .......... .......... ..........  4%  276K 75s
+   800K .......... .......... .......... .......... ..........  5%  255K 74s
+   850K .......... .......... .......... .......... ..........  5%  273K 73s
+   900K .......... .......... .......... .......... ..........  5%  255K 72s
+   950K .......... .......... .......... .......... ..........  6%  275K 71s
+  1000K .......... .......... .......... .......... ..........  6%  276K 70s
+  1050K .......... .......... .......... .......... ..........  6%  248K 69s
+  1100K .......... .......... .......... .......... ..........  6%  258K 69s
+  1150K .......... .......... .......... .......... ..........  7%  276K 68s
+  1200K .......... .......... .......... .......... ..........  7%  273K 67s
+  1250K .......... .......... .......... .......... ..........  7%  100K 70s
+  1300K .......... .......... .......... .......... ..........  8%  501K 69s
+  1350K .......... .......... .......... .......... ..........  8%  627K 67s
+  1400K .......... .......... .......... .......... ..........  8%  652K 65s
+  1450K .......... .......... .......... .......... ..........  9%  256K 65s
+  1500K .......... .......... .......... .......... ..........  9%  273K 64s
+  1550K .......... .......... .......... .......... ..........  9%  276K 64s
+  1600K .......... .......... .......... .......... .......... 10% 90.1K 66s
+  1650K .......... .......... .......... .......... .......... 10%  793K 65s
+  1700K .......... .......... .......... .......... .......... 10% 3.10M 63s
+  1750K .......... .......... .......... .......... .......... 10%  270K 62s
+  1800K .......... .......... .......... .......... .......... 11%  262K 62s
+  1850K .......... .......... .......... .......... .......... 11%  273K 62s
+  1900K .......... .......... .......... .......... .......... 11%  254K 61s
+  1950K .......... .......... .......... .......... .......... 12%  275K 61s
+  2000K .......... .......... .......... .......... .......... 12%  273K 60s
+  2050K .......... .......... .......... .......... .......... 12%  229K 60s
+  2100K .......... .......... .......... .......... .......... 13%  211K 60s
+  2150K .......... .......... .......... .......... .......... 13%  232K 60s
+  2200K .......... .......... .......... .......... .......... 13%  276K 60s
+  2250K .......... .......... .......... .......... .......... 13%  273K 59s
+  2300K .......... .......... .......... .......... .......... 14%  256K 59s
+  2350K .......... .......... .......... .......... .......... 14%  276K 59s
+  2400K .......... .......... .......... .......... .......... 14%  259K 58s
+  2450K .......... .......... .......... .......... .......... 15%  269K 58s
+  2500K .......... .......... .......... .......... .......... 15%  256K 58s
+  2550K .......... .......... .......... .......... .......... 15%  276K 57s
+  2600K .......... .......... .......... .......... .......... 16%  256K 57s
+  2650K .......... .......... .......... .......... .......... 16%  273K 57s
+  2700K .......... .......... .......... .......... .......... 16%  276K 56s
+  2750K .......... .......... .......... .......... .......... 16%  256K 56s
+  2800K .......... .......... .......... .......... .......... 17%  273K 56s
+  2850K .......... .......... .......... .......... .......... 17%  272K 56s
+  2900K .......... .......... .......... .......... .......... 17%  256K 55s
+  2950K .......... .......... .......... .......... .......... 18%  276K 55s
+  3000K .......... .......... .......... .......... .......... 18%  256K 55s
+  3050K .......... .......... .......... .......... .......... 18%  276K 54s
+  3100K .......... .......... .......... .......... .......... 19%  273K 54s
+  3150K .......... .......... .......... .......... .......... 19%  256K 54s
+  3200K .......... .......... .......... .......... .......... 19%  273K 54s
+  3250K .......... .......... .......... .......... .......... 20%  258K 53s
+  3300K .......... .......... .......... .......... .......... 20%  273K 53s
+  3350K .......... .......... .......... .......... .......... 20%  276K 53s
+  3400K .......... .......... .......... .......... .......... 20%  256K 53s
+  3450K .......... .......... .......... .......... .......... 21% 95.6K 54s
+  3500K .......... .......... .......... .......... .......... 21%  616K 53s
+  3550K .......... .......... .......... .......... .......... 21%  645K 52s
+  3600K .......... .......... .......... .......... .......... 22%  813K 52s
+  3650K .......... .......... .......... .......... .......... 22%  259K 51s
+  3700K .......... .......... .......... .......... .......... 22%  253K 51s
+  3750K .......... .......... .......... .......... .......... 23%  276K 51s
+  3800K .......... .......... .......... .......... .......... 23%  276K 51s
+  3850K .......... .......... .......... .......... .......... 23%  253K 50s
+  3900K .......... .......... .......... .......... .......... 23%  276K 50s
+  3950K .......... .......... .......... .......... .......... 24%  276K 50s
+  4000K .......... .......... .......... .......... .......... 24%  250K 50s
+  4050K .......... .......... .......... .......... .......... 24%  276K 49s
+  4100K .......... .......... .......... .......... .......... 25%  256K 49s
+  4150K .......... .......... .......... .......... .......... 25% 94.2K 50s
+  4200K .......... .......... .......... .......... .......... 25% 1.51M 49s
+  4250K .......... .......... .......... .......... .......... 26%  221K 49s
+  4300K .......... .......... .......... .......... .......... 26% 22.5M 48s
+  4350K .......... .......... .......... .......... .......... 26%  360K 48s
+  4400K .......... .......... .......... .......... .......... 27%  261K 48s
+  4450K .......... .......... .......... .......... .......... 27%  264K 48s
+  4500K .......... .......... .......... .......... .......... 27%  279K 47s
+  4550K .......... .......... .......... .......... .......... 27%  261K 47s
+  4600K .......... .......... .......... .......... .......... 28%  264K 47s
+  4650K .......... .......... .......... .......... .......... 28%  279K 47s
+  4700K .......... .......... .......... .......... .......... 28%  248K 46s
+  4750K .......... .......... .......... .......... .......... 29%  279K 46s
+  4800K .......... .......... .......... .......... .......... 29%  261K 46s
+  4850K .......... .......... .......... .......... .......... 29%  265K 46s
+  4900K .......... .......... .......... .......... .......... 30%  264K 46s
+  4950K .......... .......... .......... .......... .......... 30%  264K 45s
+  5000K .......... .......... .......... .......... .......... 30%  276K 45s
+  5050K .......... .......... .......... .......... .......... 30%  264K 45s
+  5100K .......... .......... .......... .......... .......... 31%  261K 45s
+  5150K .......... .......... .......... .......... .......... 31%  266K 44s
+  5200K .......... .......... .......... .......... .......... 31%  276K 44s
+  5250K .......... .......... .......... .......... .......... 32%  261K 44s
+  5300K .......... .......... .......... .......... .......... 32%  263K 44s
+  5350K .......... .......... .......... .......... .......... 32%  265K 44s
+  5400K .......... .......... .......... .......... .......... 33%  263K 43s
+  5450K .......... .......... .......... .......... .......... 33%  264K 43s
+  5500K .......... .......... .......... .......... .......... 33%  261K 43s
+  5550K .......... .......... .......... .......... .......... 33%  279K 43s
+  5600K .......... .......... .......... .......... .......... 34%  264K 43s
+  5650K .......... .......... .......... .......... .......... 34%  261K 42s
+  5700K .......... .......... .......... .......... .......... 34%  262K 42s
+  5750K .......... .......... .......... .......... .......... 35%  274K 42s
+  5800K .......... .......... .......... .......... .......... 35%  261K 42s
+  5850K .......... .......... .......... .......... .......... 35%  264K 42s
+  5900K .......... .......... .......... .......... .......... 36%  264K 41s
+  5950K .......... .......... .......... .......... .......... 36%  104K 42s
+  6000K .......... .......... .......... .......... .......... 36%  396K 41s
+  6050K .......... .......... .......... .......... .......... 37%  786K 41s
+  6100K .......... .......... .......... .......... .......... 37%  626K 40s
+  6150K .......... .......... .......... .......... .......... 37%  270K 40s
+  6200K .......... .......... .......... .......... .......... 37%  264K 40s
+  6250K .......... .......... .......... .......... .......... 38%  265K 40s
+  6300K .......... .......... .......... .......... .......... 38%  279K 40s
+  6350K .......... .......... .......... .......... .......... 38%  256K 39s
+  6400K .......... .......... .......... .......... .......... 39%  267K 39s
+  6450K .......... .......... .......... .......... .......... 39%  270K 39s
+  6500K .......... .......... .......... .......... .......... 39%  261K 39s
+  6550K .......... .......... .......... .......... .......... 40%  279K 39s
+  6600K .......... .......... .......... .......... .......... 40%  261K 38s
+  6650K .......... .......... .......... .......... .......... 40% 92.7K 39s
+  6700K .......... .......... .......... .......... .......... 40% 21.2M 38s
+  6750K .......... .......... .......... .......... .......... 41%  318K 38s
+  6800K .......... .......... .......... .......... .......... 41%  883K 38s
+  6850K .......... .......... .......... .......... .......... 41%  275K 37s
+  6900K .......... .......... .......... .......... .......... 42%  269K 37s
+  6950K .......... .......... .......... .......... .......... 42%  259K 37s
+  7000K .......... .......... .......... .......... .......... 42%  279K 37s
+  7050K .......... .......... .......... .......... .......... 43%  258K 37s
+  7100K .......... .......... .......... .......... .......... 43%  270K 36s
+  7150K .......... .......... .......... .......... .......... 43%  273K 36s
+  7200K .......... .......... .......... .......... .......... 44%  256K 36s
+  7250K .......... .......... .......... .......... .......... 44%  270K 36s
+  7300K .......... .......... .......... .......... .......... 44%  265K 35s
+  7350K .......... .......... .......... .......... .......... 44%  273K 35s
+  7400K .......... .......... .......... .......... .......... 45%  259K 35s
+  7450K .......... .......... .......... .......... .......... 45%  273K 35s
+  7500K .......... .......... .......... .......... .......... 45%  261K 35s
+  7550K .......... .......... .......... .......... .......... 46%  273K 34s
+  7600K .......... .......... .......... .......... .......... 46%  273K 34s
+  7650K .......... .......... .......... .......... .......... 46%  270K 34s
+  7700K .......... .......... .......... .......... .......... 47%  256K 34s
+  7750K .......... .......... .......... .......... .......... 47%  273K 34s
+  7800K .......... .......... .......... .......... .......... 47%  259K 33s
+  7850K .......... .......... .......... .......... .......... 47%  273K 33s
+  7900K .......... .......... .......... .......... .......... 48%  256K 33s
+  7950K .......... .......... .......... .......... .......... 48%  276K 33s
+  8000K .......... .......... .......... .......... .......... 48%  253K 33s
+  8050K .......... .......... .......... .......... .......... 49%  276K 32s
+  8100K .......... .......... .......... .......... .......... 49%  276K 32s
+  8150K .......... .......... .......... .......... .......... 49%  253K 32s
+  8200K .......... .......... .......... .......... .......... 50%  276K 32s
+  8250K .......... .......... .......... .......... .......... 50%  276K 32s
+  8300K .......... .......... .......... .......... .......... 50%  253K 31s
+  8350K .......... .......... .......... .......... .......... 50%  276K 31s
+  8400K .......... .......... .......... .......... .......... 51%  259K 31s
+  8450K .......... .......... .......... .......... .......... 51%  269K 31s
+  8500K .......... .......... .......... .......... .......... 51%  114K 31s
+  8550K .......... .......... .......... .......... .......... 52%  318K 31s
+  8600K .......... .......... .......... .......... .......... 52% 22.6M 30s
+  8650K .......... .......... .......... .......... .......... 52%  320K 30s
+  8700K .......... .......... .......... .......... .......... 53%  273K 30s
+  8750K .......... .......... .......... .......... .......... 53%  256K 30s
+  8800K .......... .......... .......... .......... .......... 53%  276K 29s
+  8850K .......... .......... .......... .......... .......... 54%  256K 29s
+  8900K .......... .......... .......... .......... .......... 54%  273K 29s
+  8950K .......... .......... .......... .......... .......... 54%  276K 29s
+  9000K .......... .......... .......... .......... .......... 54%  256K 29s
+  9050K .......... .......... .......... .......... .......... 55%  273K 28s
+  9100K .......... .......... .......... .......... .......... 55%  276K 28s
+  9150K .......... .......... .......... .......... .......... 55%  110K 28s
+  9200K .......... .......... .......... .......... .......... 56% 21.8M 28s
+  9250K .......... .......... .......... .......... .......... 56%  420K 28s
+  9300K .......... .......... .......... .......... .......... 56%  276K 28s
+  9350K .......... .......... .......... .......... .......... 57%  256K 27s
+  9400K .......... .......... .......... .......... .......... 57%  273K 27s
+  9450K .......... .......... .......... .......... .......... 57%  276K 27s
+  9500K .......... .......... .......... .......... .......... 57%  256K 27s
+  9550K .......... .......... .......... .......... .......... 58%  273K 27s
+  9600K .......... .......... .......... .......... .......... 58%  259K 26s
+  9650K .......... .......... .......... .......... .......... 58%  276K 26s
+  9700K .......... .......... .......... .......... .......... 59%  254K 26s
+  9750K .......... .......... .......... .......... .......... 59%  276K 26s
+  9800K .......... .......... .......... .......... .......... 59%  276K 26s
+  9850K .......... .......... .......... .......... .......... 60%  253K 25s
+  9900K .......... .......... .......... .......... .......... 60%  276K 25s
+  9950K .......... .......... .......... .......... .......... 60%  255K 25s
+ 10000K .......... .......... .......... .......... .......... 61%  276K 25s
+ 10050K .......... .......... .......... .......... .......... 61%  273K 25s
+ 10100K .......... .......... .......... .......... .......... 61%  256K 24s
+ 10150K .......... .......... .......... .......... .......... 61%  276K 24s
+ 10200K .......... .......... .......... .......... .......... 62%  256K 24s
+ 10250K .......... .......... .......... .......... .......... 62%  272K 24s
+ 10300K .......... .......... .......... .......... .......... 62%  273K 24s
+ 10350K .......... .......... .......... .......... .......... 63%  259K 23s
+ 10400K .......... .......... .......... .......... .......... 63%  273K 23s
+ 10450K .......... .......... .......... .......... .......... 63%  259K 23s
+ 10500K .......... .......... .......... .......... .......... 64%  273K 23s
+ 10550K .......... .......... .......... .......... .......... 64%  255K 23s
+ 10600K .......... .......... .......... .......... .......... 64%  274K 22s
+ 10650K .......... .......... .......... .......... .......... 64%  258K 22s
+ 10700K .......... .......... .......... .......... .......... 65%  273K 22s
+ 10750K .......... .......... .......... .......... .......... 65%  276K 22s
+ 10800K .......... .......... .......... .......... .......... 65%  256K 22s
+ 10850K .......... .......... .......... .......... .......... 66%  271K 21s
+ 10900K .......... .......... .......... .......... .......... 66%  109K 21s
+ 10950K .......... .......... .......... .......... .......... 66%  365K 21s
+ 11000K .......... .......... .......... .......... .......... 67%  355K 21s
+ 11050K .......... .......... .......... .......... .......... 67% 2.46M 21s
+ 11100K .......... .......... .......... .......... .......... 67%  255K 20s
+ 11150K .......... .......... .......... .......... .......... 67%  273K 20s
+ 11200K .......... .......... .......... .......... .......... 68%  256K 20s
+ 11250K .......... .......... .......... .......... .......... 68%  276K 20s
+ 11300K .......... .......... .......... .......... .......... 68%  273K 20s
+ 11350K .......... .......... .......... .......... .......... 69%  256K 19s
+ 11400K .......... .......... .......... .......... .......... 69%  276K 19s
+ 11450K .......... .......... .......... .......... .......... 69%  259K 19s
+ 11500K .......... .......... .......... .......... .......... 70%  270K 19s
+ 11550K .......... .......... .......... .......... .......... 70%  258K 19s
+ 11600K .......... .......... .......... .......... .......... 70%  125K 19s
+ 11650K .......... .......... .......... .......... .......... 71%  249K 18s
+ 11700K .......... .......... .......... .......... .......... 71% 21.1M 18s
+ 11750K .......... .......... .......... .......... .......... 71%  359K 18s
+ 11800K .......... .......... .......... .......... .......... 71%  256K 18s
+ 11850K .......... .......... .......... .......... .......... 72%  276K 18s
+ 11900K .......... .......... .......... .......... .......... 72%  253K 17s
+ 11950K .......... .......... .......... .......... .......... 72%  268K 17s
+ 12000K .......... .......... .......... .......... .......... 73%  284K 17s
+ 12050K .......... .......... .......... .......... .......... 73%  256K 17s
+ 12100K .......... .......... .......... .......... .......... 73%  273K 17s
+ 12150K .......... .......... .......... .......... .......... 74%  276K 16s
+ 12200K .......... .......... .......... .......... .......... 74%  253K 16s
+ 12250K .......... .......... .......... .......... .......... 74%  276K 16s
+ 12300K .......... .......... .......... .......... .......... 74%  259K 16s
+ 12350K .......... .......... .......... .......... .......... 75%  270K 16s
+ 12400K .......... .......... .......... .......... .......... 75%  258K 15s
+ 12450K .......... .......... .......... .......... .......... 75%  273K 15s
+ 12500K .......... .......... .......... .......... .......... 76%  261K 15s
+ 12550K .......... .......... .......... .......... .......... 76%  264K 15s
+ 12600K .......... .......... .......... .......... .......... 76%  276K 15s
+ 12650K .......... .......... .......... .......... .......... 77%  263K 14s
+ 12700K .......... .......... .......... .......... .......... 77%  269K 14s
+ 12750K .......... .......... .......... .......... .......... 77%  257K 14s
+ 12800K .......... .......... .......... .......... .......... 78%  265K 14s
+ 12850K .......... .......... .......... .......... .......... 78%  261K 14s
+ 12900K .......... .......... .......... .......... .......... 78%  240K 14s
+ 12950K .......... .......... .......... .......... .......... 78%  245K 13s
+ 13000K .......... .......... .......... .......... .......... 79%  262K 13s
+ 13050K .......... .......... .......... .......... .......... 79%  251K 13s
+ 13100K .......... .......... .......... .......... .......... 79% 98.5K 13s
+ 13150K .......... .......... .......... .......... .......... 80%  312K 13s
+ 13200K .......... .......... .......... .......... .......... 80%  343K 12s
+ 13250K .......... .......... .......... .......... .......... 80% 78.9K 12s
+ 13300K .......... .......... .......... .......... .......... 81% 2.44M 12s
+ 13350K .......... .......... .......... .......... .......... 81%  316K 12s
+ 13400K .......... .......... .......... .......... .......... 81%  239K 12s
+ 13450K .......... .......... .......... .......... .......... 81%  149K 12s
+ 13500K .......... .......... .......... .......... .......... 82%  167K 11s
+ 13550K .......... .......... .......... .......... .......... 82%  157K 11s
+ 13600K .......... .......... .......... .......... .......... 82%  115K 11s
+ 13650K .......... .......... .......... .......... .......... 83%  317K 11s
+ 13700K .......... .......... .......... .......... .......... 83%  196K 11s
+ 13750K .......... .......... .......... .......... .......... 83%  211K 10s
+ 13800K .......... .......... .......... .......... .......... 84%  239K 10s
+ 13850K .......... .......... .......... .......... .......... 84%  227K 10s
+ 13900K .......... .......... .......... .......... .......... 84%  226K 10s
+ 13950K .......... .......... .......... .......... .......... 84%  196K 10s
+ 14000K .......... .......... .......... .......... .......... 85%  223K 10s
+ 14050K .......... .......... .......... .......... .......... 85%  255K 9s
+ 14100K .......... .......... .......... .......... .......... 85%  263K 9s
+ 14150K .......... .......... .......... .......... .......... 86%  242K 9s
+ 14200K .......... .......... .......... .......... .......... 86%  272K 9s
+ 14250K .......... .......... .......... .......... .......... 86%  261K 9s
+ 14300K .......... .......... .......... .......... .......... 87%  244K 8s
+ 14350K .......... .......... .......... .......... .......... 87%  261K 8s
+ 14400K .......... .......... .......... .......... .......... 87%  253K 8s
+ 14450K .......... .......... .......... .......... .......... 88%  258K 8s
+ 14500K .......... .......... .......... .......... .......... 88%  244K 8s
+ 14550K .......... .......... .......... .......... .......... 88%  258K 7s
+ 14600K .......... .......... .......... .......... .......... 88%  263K 7s
+ 14650K .......... .......... .......... .......... .......... 89%  250K 7s
+ 14700K .......... .......... .......... .......... .......... 89%  259K 7s
+ 14750K .......... .......... .......... .......... .......... 89%  256K 7s
+ 14800K .......... .......... .......... .......... .......... 90%  264K 6s
+ 14850K .......... .......... .......... .......... .......... 90%  256K 6s
+ 14900K .......... .......... .......... .......... .......... 90%  279K 6s
+ 14950K .......... .......... .......... .......... .......... 91%  259K 6s
+ 15000K .......... .......... .......... .......... .......... 91%  272K 6s
+ 15050K .......... .......... .......... .......... .......... 91%  267K 5s
+ 15100K .......... .......... .......... .......... .......... 91%  264K 5s
+ 15150K .......... .......... .......... .......... .......... 92%  270K 5s
+ 15200K .......... .......... .......... .......... .......... 92%  262K 5s
+ 15250K .......... .......... .......... .......... .......... 92%  264K 5s
+ 15300K .......... .......... .......... .......... .......... 93%  279K 4s
+ 15350K .......... .......... .......... .......... .......... 93%  265K 4s
+ 15400K .......... .......... .......... .......... .......... 93%  260K 4s
+ 15450K .......... .......... .......... .......... .......... 94%  270K 4s
+ 15500K .......... .......... .......... .......... .......... 94%  276K 4s
+ 15550K .......... .......... .......... .......... .......... 94%  125K 3s
+ 15600K .......... .......... .......... .......... .......... 94%  415K 3s
+ 15650K .......... .......... .......... .......... .......... 95%  490K 3s
+ 15700K .......... .......... .......... .......... .......... 95%  367K 3s
+ 15750K .......... .......... .......... .......... .......... 95%  254K 3s
+ 15800K .......... .......... .......... .......... .......... 96%  185K 2s
+ 15850K .......... .......... .......... .......... .......... 96%  106K 2s
+ 15900K .......... .......... .......... .......... .......... 96%  105K 2s
+ 15950K .......... .......... .......... .......... .......... 97% 21.5M 2s
+ 16000K .......... .......... .......... .......... .......... 97% 74.0K 2s
+ 16050K .......... .......... .......... .......... .......... 97%  258K 1s
+ 16100K .......... .......... .......... .......... .......... 98%  118K 1s
+ 16150K .......... .......... .......... .......... .......... 98%  126K 1s
+ 16200K .......... .......... .......... .......... .......... 98%  139K 1s
+ 16250K .......... .......... .......... .......... .......... 98%  149K 1s
+ 16300K .......... .......... .......... .......... .......... 99%  156K 0s
+ 16350K .......... .......... .......... .......... .......... 99%  156K 0s
+ 16400K .......... .......... .......... .......... .......... 99%  157K 0s
+ 16450K .......... .......... ...                             100%  155K=67s
+
+2012-02-29 15:42:34 (247 KB/s) - `nmap-5.51.tar.bz2' saved [16869068/16869068]
+
+++ ls nmap-5.51.tar.bz2
+++ egrep -o '[0-9][0-9.]*[0-9]'
++ PV=5.51
++ tar xjf nmap-5.51.tar.bz2
++ cd nmap-5.51 nmap-5.51.tar.bz2
++ LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
++ ./configure --prefix=/ffp --build= --host= --mandir=/ffp/share/man --infodir=/ffp/share/info
+checking whether NLS is requested... yes
+checking build system type... armv5tejl-unknown-linux-gnueabi
+checking host system type... armv5tejl-unknown-linux-gnueabi
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for inline... inline
+checking for gcc... (cached) gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to accept ISO C89... (cached) none needed
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking for ranlib... ranlib
+checking for a BSD-compatible install... /ffp/bin/install -c
+checking for __func__... yes
+checking for strip... /ffp/bin/strip
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /ffp/bin/grep
+checking for egrep... /ffp/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking pwd.h usability... yes
+checking pwd.h presence... yes
+checking for pwd.h... yes
+checking termios.h usability... yes
+checking termios.h presence... yes
+checking for termios.h... yes
+checking sys/sockio.h usability... no
+checking sys/sockio.h presence... no
+checking for sys/sockio.h... no
+checking sys/socket.h usability... yes
+checking sys/socket.h presence... yes
+checking for sys/socket.h... yes
+checking for net/if.h... yes
+checking for library containing setsockopt... none required
+checking for library containing gethostbyname... none required
+checking for a Python interpreter with version >= 2.4... python
+checking for python... /ffp/bin/python
+checking for python version... 2.7
+checking for python platform... linux2
+checking for python script directory... ${prefix}/lib/python2.7/site-packages
+checking for python extension module directory... ${exec_prefix}/lib/python2.7/site-packages
+checking whether /ffp/bin/python version >= 2.4... yes
+checking for /ffp/bin/python version... (cached) 2.7
+checking for /ffp/bin/python platform... (cached) linux2
+checking for /ffp/bin/python script directory... (cached) ${prefix}/lib/python2.7/site-packages
+checking for /ffp/bin/python extension module directory... (cached) ${exec_prefix}/lib/python2.7/site-packages
+checking openssl/ssl.h usability... yes
+checking openssl/ssl.h presence... yes
+checking for openssl/ssl.h... yes
+checking for BIO_int_ctrl in -lcrypto... yes
+checking for SSL_new in -lssl... yes
+checking pcap.h usability... no
+checking pcap.h presence... no
+checking for pcap.h... no
+checking pcre.h usability... yes
+checking pcre.h presence... yes
+checking for pcre.h... yes
+checking for pcre_version in -lpcre... yes
+checking pcre/pcre.h usability... no
+checking pcre/pcre.h presence... no
+checking for pcre/pcre.h... no
+checking for library containing dlopen... -ldl
+checking for library containing nl_handle_alloc... no
+checking lua.h usability... no
+checking lua.h presence... no
+checking for lua.h... no
+checking lua/lua.h usability... no
+checking lua/lua.h presence... no
+checking for lua/lua.h... no
+checking lua5.1/lua.h usability... no
+checking lua5.1/lua.h presence... no
+checking for lua5.1/lua.h... no
+checking for lua version >= 501... no
+checking if sockaddr{} has sa_len member... no
+checking whether byte ordering is bigendian... no
+checking if struct in_addr is a wacky huge structure (some Sun boxes)... no
+checking if struct icmp exists... yes
+checking if struct ip exists... yes
+checking if struct ip has ip_sum member... yes
+checking for strerror... yes
+checking for type of 6th argument to recvfrom()... socklen_t
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: WARNING:  'Makefile.in' seems to ignore the --datarootdir setting
+config.status: creating libnetutil/Makefile
+config.status: creating nmap_config.h
+=== configuring in nping (/tmp/nmap.Fj8tqb/nmap-5.51/nping)
+configure: running /ffp/bin/sh ./configure --disable-option-checking '--prefix=/ffp'  '--build=' '--host=' '--mandir=/ffp/share/man' '--infodir=/ffp/share/info' 'build_alias=' 'host_alias=' 'LDFLAGS=-L/ffp/lib -Wl,-rpath,/ffp/lib' --cache-file=/dev/null --srcdir=.
+checking build system type... armv5tejl-unknown-linux-gnueabi
+checking host system type... armv5tejl-unknown-linux-gnueabi
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for inline... inline
+checking for gcc... (cached) gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to accept ISO C89... (cached) none needed
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking for a BSD-compatible install... /ffp/bin/install -c
+checking whether the compiler is gcc 4 or greater... yes
+checking for __func__... yes
+checking for strip... /ffp/bin/strip
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /ffp/bin/grep
+checking for egrep... /ffp/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking pwd.h usability... yes
+checking pwd.h presence... yes
+checking for pwd.h... yes
+checking termios.h usability... yes
+checking termios.h presence... yes
+checking for termios.h... yes
+checking sys/sockio.h usability... no
+checking sys/sockio.h presence... no
+checking for sys/sockio.h... no
+checking for library containing setsockopt... none required
+checking for library containing gethostbyname... none required
+checking openssl/ssl.h usability... yes
+checking openssl/ssl.h presence... yes
+checking for openssl/ssl.h... yes
+checking for BIO_int_ctrl in -lcrypto... yes
+checking for SSL_new in -lssl... yes
+checking for EVP_sha256... yes
+checking pcap.h usability... no
+checking pcap.h presence... no
+checking for pcap.h... no
+checking for library containing dlopen... -ldl
+checking for library containing nl_handle_alloc... no
+checking if sockaddr{} has sa_len member... no
+checking if sockaddr_in{} has sin_len member... no
+checking if sockaddr_in6{} has sin6_len member... no
+checking whether byte ordering is bigendian... no
+checking if struct in_addr is a wacky huge structure (some Sun boxes)... no
+checking if struct ip has ip_sum member... yes
+checking if function signal is accessible... yes
+checking for strerror... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: WARNING:  'Makefile.in' seems to ignore the --datarootdir setting
+config.status: creating nping_config.h
+                        o         
+                         o        
+                          o       
+                   o       o      
+                    o       o     
+                     o       o    
+               o      o       o   
+                o      o      o   
+    888b    888  o     o      o   
+    8888b   888  o     o      o   
+    88888b  888  o     o      o   
+    888Y88b 888               o   
+    888 Y88b888               o   
+    888  Y88888                   
+    888   Y8888                   
+    888    Y888                   
+                                  
+    --[NPING]--                   
+Configuration complete.  Type make (or gmake on some *BSD machines) to compile.
+=== configuring in libpcap (/tmp/nmap.Fj8tqb/nmap-5.51/libpcap)
+configure: running /ffp/bin/sh ./configure --disable-option-checking '--prefix=/ffp'  '--build=' '--host=' '--mandir=/ffp/share/man' '--infodir=/ffp/share/info' 'build_alias=' 'host_alias=' 'LDFLAGS=-L/ffp/lib -Wl,-rpath,/ffp/lib' --cache-file=/dev/null --srcdir=.
+checking build system type... armv5tejl-unknown-linux-gnueabi
+checking host system type... armv5tejl-unknown-linux-gnueabi
+checking target system type... armv5tejl-unknown-linux-gnueabi
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking gcc version... 4
+checking for inline... inline
+checking for __attribute__... yes
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /ffp/bin/grep
+checking for egrep... /ffp/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking sys/bitypes.h usability... yes
+checking sys/bitypes.h presence... yes
+checking for sys/bitypes.h... yes
+checking for int8_t... yes
+checking for u_int8_t... yes
+checking for int16_t... yes
+checking for u_int16_t... yes
+checking for int32_t... yes
+checking for u_int32_t... yes
+checking for int64_t... yes
+checking for u_int64_t... yes
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... 64
+checking for _LARGEFILE_SOURCE value needed for large files... no
+checking sys/ioccom.h usability... no
+checking sys/ioccom.h presence... no
+checking for sys/ioccom.h... no
+checking sys/sockio.h usability... no
+checking sys/sockio.h presence... no
+checking for sys/sockio.h... no
+checking limits.h usability... yes
+checking limits.h presence... yes
+checking for limits.h... yes
+checking paths.h usability... yes
+checking paths.h presence... yes
+checking for paths.h... yes
+checking for net/pfvar.h... no
+checking for netinet/if_ether.h... yes
+checking for ANSI ioctl definitions... yes
+checking for strerror... yes
+checking for strlcpy... yes
+checking for vsnprintf... yes
+checking for snprintf... yes
+checking for library containing gethostbyname... none required
+checking for library containing socket... none required
+checking for library containing putmsg... no
+checking for ether_hostton... yes
+checking whether ether_hostton is declared... no
+checking netinet/ether.h usability... yes
+checking netinet/ether.h presence... yes
+checking for netinet/ether.h... yes
+checking whether ether_hostton is declared... yes
+checking if --disable-protochain option is specified... enabled
+checking packet capture type... null
+configure: WARNING: cannot determine packet capture interface
+configure: WARNING: (see the INSTALL doc for more info)
+checking for socklen_t... yes
+checking for getaddrinfo... yes
+checking whether to build optimizer debugging code... no
+checking whether to build parser debugging code... no
+checking whether we have DAG API headers... no (/usr/local/include)
+checking whether we have the DAG API... no
+checking whether we have Septel API... no
+checking whether we have Myricom Sniffer API... no (/opt/snf)
+checking for ranlib... ranlib
+checking if sockaddr struct has the sa_len member... no
+checking if sockaddr_storage struct exists... yes
+checking if dl_hp_ppa_info_t struct has dl_module_id_1 member... no
+checking if unaligned accesses fail... yes
+checking for USB sniffing support... yes
+configure: Device for USB sniffing is /dev/usbmon
+checking linux/usbdevice_fs.h usability... yes
+checking linux/usbdevice_fs.h presence... yes
+checking for linux/usbdevice_fs.h... yes
+checking if usbdevfs_ctrltransfer struct has bRequestType member... yes
+checking bluetooth/bluetooth.h usability... no
+checking bluetooth/bluetooth.h presence... no
+checking for bluetooth/bluetooth.h... no
+configure: Bluetooth sniffing is not supported; install bluez-lib devel to enable it
+checking for linux/can.h... no
+configure: CAN sniffing is not supported
+checking for a BSD-compatible install... /ffp/bin/install -c
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating pcap-filter.manmisc
+config.status: creating pcap-linktype.manmisc
+config.status: creating pcap-savefile.manfile
+config.status: creating pcap.3pcap
+config.status: creating pcap_compile.3pcap
+config.status: creating pcap_datalink.3pcap
+config.status: creating pcap_dump_open.3pcap
+config.status: creating pcap_list_datalinks.3pcap
+config.status: creating pcap_open_dead.3pcap
+config.status: creating pcap_open_offline.3pcap
+config.status: creating config.h
+=== configuring in libdnet-stripped (/tmp/nmap.Fj8tqb/nmap-5.51/libdnet-stripped)
+configure: running /ffp/bin/sh ./configure --disable-option-checking '--prefix=/ffp'  '--build=' '--host=' '--mandir=/ffp/share/man' '--infodir=/ffp/share/info' 'build_alias=' 'host_alias=' 'LDFLAGS=-L/ffp/lib -Wl,-rpath,/ffp/lib' --cache-file=/dev/null --srcdir=.
+checking for a BSD-compatible install... /ffp/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /ffp/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking build system type... armv5tejl-unknown-linux-gnueabi
+checking host system type... armv5tejl-unknown-linux-gnueabi
+checking for gcc... gcc
+checking for C compiler default output file name... a.out
+checking whether the C compiler works... yes
+checking whether we are cross compiling... no
+checking for suffix of executables... 
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for style of include used by make... GNU
+checking dependency style of gcc... gcc3
+checking for a BSD-compatible install... /ffp/bin/install -c
+checking for a sed that does not truncate output... /ffp/bin/sed
+checking for grep that handles long lines and -e... /ffp/bin/grep
+checking for egrep... /ffp/bin/grep -E
+checking for fgrep... /ffp/bin/grep -F
+checking for ld used by gcc... /ffp/bin/ld
+checking if the linker (/ffp/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /ffp/bin/nm -B
+checking the name lister (/ffp/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking for /ffp/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for ar... ar
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /ffp/bin/nm -B output from gcc object... ok
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/ffp/bin/ld) supports shared libraries... yes
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for shl_load... no
+checking for shl_load in -ldld... no
+checking for dlopen... no
+checking for dlopen in -ldl... yes
+checking whether a program can dlopen itself... yes
+checking whether a statically linked program can dlopen itself... no
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... no
+checking whether to build static libraries... yes
+checking for Python... checking for gethostbyname... yes
+checking for socket... yes
+checking for putmsg in -lstr... no
+checking for open_mib in -lnm... no
+checking for Check... no
+checking for ANSI C header files... (cached) yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking for unistd.h... (cached) yes
+checking sys/bufmod.h usability... no
+checking sys/bufmod.h presence... no
+checking for sys/bufmod.h... no
+checking sys/dlpi.h usability... no
+checking sys/dlpi.h presence... no
+checking for sys/dlpi.h... no
+checking sys/dlpihdr.h usability... no
+checking sys/dlpihdr.h presence... no
+checking for sys/dlpihdr.h... no
+checking sys/dlpi_ext.h usability... no
+checking sys/dlpi_ext.h presence... no
+checking for sys/dlpi_ext.h... no
+checking sys/ioctl.h usability... yes
+checking sys/ioctl.h presence... yes
+checking for sys/ioctl.h... yes
+checking sys/mib.h usability... no
+checking sys/mib.h presence... no
+checking for sys/mib.h... no
+checking sys/ndd_var.h usability... no
+checking sys/ndd_var.h presence... no
+checking for sys/ndd_var.h... no
+checking sys/socket.h usability... yes
+checking sys/socket.h presence... yes
+checking for sys/socket.h... yes
+checking sys/sockio.h usability... no
+checking sys/sockio.h presence... no
+checking for sys/sockio.h... no
+checking sys/sysctl.h usability... yes
+checking sys/sysctl.h presence... yes
+checking for sys/sysctl.h... yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking net/bpf.h usability... no
+checking net/bpf.h presence... no
+checking for net/bpf.h... no
+checking net/if.h usability... yes
+checking net/if.h presence... yes
+checking for net/if.h... yes
+checking net/if_var.h usability... no
+checking net/if_var.h presence... no
+checking for net/if_var.h... no
+checking net/if_arp.h usability... yes
+checking net/if_arp.h presence... yes
+checking for net/if_arp.h... yes
+checking net/if_dl.h usability... no
+checking net/if_dl.h presence... no
+checking for net/if_dl.h... no
+checking net/pfilt.h usability... no
+checking net/pfilt.h presence... no
+checking for net/pfilt.h... no
+checking net/pfvar.h usability... no
+checking net/pfvar.h presence... no
+checking for net/pfvar.h... no
+checking net/radix.h usability... no
+checking net/radix.h presence... no
+checking for net/radix.h... no
+checking net/raw.h usability... no
+checking net/raw.h presence... no
+checking for net/raw.h... no
+checking net/route.h usability... yes
+checking net/route.h presence... yes
+checking for net/route.h... yes
+checking netinet/in_var.h usability... no
+checking netinet/in_var.h presence... no
+checking for netinet/in_var.h... no
+checking net/if_tun.h usability... no
+checking net/if_tun.h presence... no
+checking for net/if_tun.h... no
+checking linux/if_tun.h usability... yes
+checking linux/if_tun.h presence... yes
+checking for linux/if_tun.h... yes
+checking netinet/ip_fw.h usability... no
+checking netinet/ip_fw.h presence... no
+checking for netinet/ip_fw.h... no
+checking linux/ip_fw.h usability... no
+checking linux/ip_fw.h presence... no
+checking for linux/ip_fw.h... no
+checking linux/ip_fwchains.h usability... no
+checking linux/ip_fwchains.h presence... no
+checking for linux/ip_fwchains.h... no
+checking linux/netfilter_ipv4/ipchains_core.h usability... no
+checking linux/netfilter_ipv4/ipchains_core.h presence... no
+checking for linux/netfilter_ipv4/ipchains_core.h... no
+checking ip_fil_compat.h usability... no
+checking ip_fil_compat.h presence... no
+checking for ip_fil_compat.h... no
+checking netinet/ip_fil_compat.h usability... no
+checking netinet/ip_fil_compat.h presence... no
+checking for netinet/ip_fil_compat.h... no
+checking ip_compat.h usability... no
+checking ip_compat.h presence... no
+checking for ip_compat.h... no
+checking netinet/ip_compat.h usability... no
+checking netinet/ip_compat.h presence... no
+checking for netinet/ip_compat.h... no
+checking ip_fil.h usability... no
+checking ip_fil.h presence... no
+checking for ip_fil.h... no
+checking netinet/ip_fil.h usability... no
+checking netinet/ip_fil.h presence... no
+checking for netinet/ip_fil.h... no
+checking hpsecurity.h usability... no
+checking hpsecurity.h presence... no
+checking for hpsecurity.h... no
+checking stropts.h usability... no
+checking stropts.h presence... no
+checking for stropts.h... no
+checking for an ANSI C-conforming const... yes
+checking for inline... inline
+checking for pid_t... yes
+checking for size_t... yes
+checking for sockaddr_in6 struct in <netinet/in.h>... yes
+checking for sa_len in sockaddr struct... no
+checking for arp_dev in arpreq struct... yes
+checking for rt_msghdr struct in <net/route.h>... no
+checking whether gcc needs -traditional... no
+checking for socklen_t... yes
+checking for working memcmp... yes
+checking for err... yes
+checking for strlcat... yes
+checking for strlcpy... yes
+checking for strsep... yes
+checking for Berkeley Packet Filter... no
+checking for Linux proc filesystem... yes
+checking whether ETH_P_ALL is declared... yes
+checking for Linux PF_PACKET sockets... yes
+checking for SNMP MIB2 STREAMS... no
+checking for route(7) STREAMS... no
+checking for arp(7) ioctls... yes
+checking for raw IP sockets ip_{len,off} host byte ordering... no
+checking for cooked raw IP sockets... no
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating dnet-config
+config.status: creating include/Makefile
+config.status: creating include/dnet/Makefile
+config.status: creating src/Makefile
+config.status: creating include/config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing default commands
+=== configuring in nbase (/tmp/nmap.Fj8tqb/nmap-5.51/nbase)
+configure: running /ffp/bin/sh ./configure --disable-option-checking '--prefix=/ffp'  '--build=' '--host=' '--mandir=/ffp/share/man' '--infodir=/ffp/share/info' 'build_alias=' 'host_alias=' 'LDFLAGS=-L/ffp/lib -Wl,-rpath,/ffp/lib' --cache-file=/dev/null --srcdir=.
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for ranlib... ranlib
+checking build system type... armv5tejl-unknown-linux-gnueabi
+checking host system type... armv5tejl-unknown-linux-gnueabi
+checking for inline... inline
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /ffp/bin/grep
+checking for egrep... /ffp/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for string.h... (cached) yes
+checking getopt.h usability... yes
+checking getopt.h presence... yes
+checking for getopt.h... yes
+checking for strings.h... (cached) yes
+checking sys/param.h usability... yes
+checking sys/param.h presence... yes
+checking for sys/param.h... yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking for unistd.h... (cached) yes
+checking errno.h usability... yes
+checking errno.h presence... yes
+checking for errno.h... yes
+checking for sys/types.h... (cached) yes
+checking sys/socket.h usability... yes
+checking sys/socket.h presence... yes
+checking for sys/socket.h... yes
+checking netinet/in.h usability... yes
+checking netinet/in.h presence... yes
+checking for netinet/in.h... yes
+checking arpa/inet.h usability... yes
+checking arpa/inet.h presence... yes
+checking for arpa/inet.h... yes
+checking for sys/stat.h... (cached) yes
+checking netdb.h usability... yes
+checking netdb.h presence... yes
+checking for netdb.h... yes
+checking sys/wait.h usability... yes
+checking sys/wait.h presence... yes
+checking for sys/wait.h... yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking sys/resource.h usability... yes
+checking sys/resource.h presence... yes
+checking for sys/resource.h... yes
+checking for inttypes.h... (cached) yes
+checking whether time.h and sys/time.h may both be included... yes
+checking for sys/socket.h... (cached) yes
+checking for net/if.h... yes
+checking for __attribute__... yes
+checking whether byte ordering is bigendian... no
+checking for int8_t... yes
+checking for int16_t... yes
+checking for int32_t... yes
+checking for int64_t... yes
+checking for uint8_t... yes
+checking for uint16_t... yes
+checking for uint32_t... yes
+checking for uint64_t... yes
+checking for snprintf... yes
+checking for vsnprintf... yes
+checking for nanosleep... yes
+checking for strerror... yes
+checking for strcasestr... yes
+checking for strcasecmp... yes
+checking for strncasecmp... yes
+checking for signal... yes
+checking for vsnprintf... (cached) yes
+checking for snprintf... (cached) yes
+checking for asprintf... yes
+checking for asnprintf... no
+checking for vasprintf... yes
+checking for vasnprintf... no
+checking for getopt... yes
+checking for getopt_long_only... yes
+checking for usleep... yes
+checking for gettimeofday... yes
+checking for sleep... yes
+checking for getopt_long_only... (cached) yes
+checking for strcasecmp... (cached) yes
+checking for strncasecmp... (cached) yes
+checking for library containing getaddrinfo... none required
+checking for library containing gai_strerror... none required
+checking for library containing getnameinfo... none required
+checking for gai_strerror... yes
+checking for inet_ntop... yes
+checking for inet_pton... yes
+checking for working getaddrinfo... yes
+checking for library containing inet_addr... none required
+checking for working getnameinfo... yes
+checking for sockaddr_in6... yes
+checking for sockaddr_storage... yes
+checking for AF_INET6 definition... yes
+checking for IPv6 support... yes
+checking openssl/ssl.h usability... yes
+checking openssl/ssl.h presence... yes
+checking for openssl/ssl.h... yes
+checking openssl/err.h usability... yes
+checking openssl/err.h presence... yes
+checking for openssl/err.h... yes
+checking openssl/rand.h usability... yes
+checking openssl/rand.h presence... yes
+checking for openssl/rand.h... yes
+checking for BIO_int_ctrl in -lcrypto... yes
+checking for SSL_new in -lssl... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: WARNING:  'Makefile.in' seems to ignore the --datarootdir setting
+config.status: creating nbase_config.h
+=== configuring in nsock/src (/tmp/nmap.Fj8tqb/nmap-5.51/nsock/src)
+configure: running /ffp/bin/sh ./configure --disable-option-checking '--prefix=/ffp'  '--build=' '--host=' '--mandir=/ffp/share/man' '--infodir=/ffp/share/info' 'build_alias=' 'host_alias=' 'LDFLAGS=-L/ffp/lib -Wl,-rpath,/ffp/lib' --cache-file=/dev/null --srcdir=.
+checking build system type... armv5tejl-unknown-linux-gnueabi
+checking host system type... armv5tejl-unknown-linux-gnueabi
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for ranlib... ranlib
+checking for gethostent... ./configure: line 1472: ac_fn_c_try_link: command not found
+no
+checking for gethostent in -lnsl... no
+checking for setsockopt... yes
+checking for nanosleep... yes
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /ffp/bin/grep
+checking for egrep... /ffp/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking net/bpf.h usability... no
+checking net/bpf.h presence... no
+checking for net/bpf.h... no
+checking sys/ioctl.h usability... yes
+checking sys/ioctl.h presence... yes
+checking for sys/ioctl.h... yes
+checking openssl/ssl.h usability... yes
+checking openssl/ssl.h presence... yes
+checking for openssl/ssl.h... yes
+checking for BIO_int_ctrl in -lcrypto... yes
+checking for SSL_new in -lssl... yes
+checking for library containing dlopen... -ldl
+checking for SSL_set_tlsext_host_name... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating ../include/nsock_config.h
+=== configuring in ncat (/tmp/nmap.Fj8tqb/nmap-5.51/ncat)
+configure: running /ffp/bin/sh ./configure --disable-option-checking '--prefix=/ffp'  '--build=' '--host=' '--mandir=/ffp/share/man' '--infodir=/ffp/share/info' 'build_alias=' 'host_alias=' 'LDFLAGS=-L/ffp/lib -Wl,-rpath,/ffp/lib' --cache-file=/dev/null --srcdir=.
+checking build system type... armv5tejl-unknown-linux-gnueabi
+checking host system type... armv5tejl-unknown-linux-gnueabi
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for a BSD-compatible install... /ffp/bin/install -c
+checking for strip... /ffp/bin/strip
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /ffp/bin/grep
+checking for egrep... /ffp/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking limits.h usability... yes
+checking limits.h presence... yes
+checking for limits.h... yes
+checking netdb.h usability... yes
+checking netdb.h presence... yes
+checking for netdb.h... yes
+checking netinet/in.h usability... yes
+checking netinet/in.h presence... yes
+checking for netinet/in.h... yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for strings.h... (cached) yes
+checking sys/param.h usability... yes
+checking sys/param.h presence... yes
+checking for sys/param.h... yes
+checking sys/socket.h usability... yes
+checking sys/socket.h presence... yes
+checking for sys/socket.h... yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking sys/timeb.h usability... yes
+checking sys/timeb.h presence... yes
+checking for sys/timeb.h... yes
+checking for unistd.h... (cached) yes
+checking whether stat file-mode macros are broken... no
+checking for an ANSI C-conforming const... yes
+checking whether time.h and sys/time.h may both be included... yes
+checking for pid_t... yes
+checking vfork.h usability... no
+checking vfork.h presence... no
+checking for vfork.h... no
+checking for fork... yes
+checking for vfork... yes
+checking for working fork... yes
+checking for working vfork... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible malloc... yes
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible realloc... yes
+checking sys/select.h usability... yes
+checking sys/select.h presence... yes
+checking for sys/select.h... yes
+checking for sys/socket.h... (cached) yes
+checking types of arguments for select... int,fd_set *,struct timeval *
+checking return type of signal handlers... void
+checking for vprintf... yes
+checking for _doprnt... no
+checking for dup2... yes
+checking for gettimeofday... yes
+checking for inet_ntoa... yes
+checking for memset... yes
+checking for select... yes
+checking for socket... yes
+checking for strcasecmp... yes
+checking for strchr... yes
+checking for strdup... yes
+checking for strerror... yes
+checking for strncasecmp... yes
+checking for strtol... yes
+checking for library containing setsockopt... none required
+checking for library containing gethostbyname... none required
+checking for library containing dlopen... -ldl
+checking openssl/ssl.h usability... yes
+checking openssl/ssl.h presence... yes
+checking for openssl/ssl.h... yes
+checking openssl/err.h usability... yes
+checking openssl/err.h presence... yes
+checking for openssl/err.h... yes
+checking openssl/rand.h usability... yes
+checking openssl/rand.h presence... yes
+checking for openssl/rand.h... yes
+checking for BIO_int_ctrl in -lcrypto... yes
+checking for SSL_new in -lssl... yes
+checking pcap.h usability... no
+checking pcap.h presence... no
+checking for pcap.h... no
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: WARNING:  'Makefile.in' seems to ignore the --datarootdir setting
+config.status: creating config.h
+            .       .
+            \`-"'"-'/
+             } 6 6 {
+            ==. Y ,==
+              /^^^\  .
+             /     \  )  Ncat: A modern interpretation of classic Netcat
+            (  )-(  )/
+            -""---""---   /
+           /   Ncat    \_/
+          (     ____
+           \_.=|____E
+Configuration complete.
+   (  )   /\   _                 (
+    \ |  (  \ ( \.(               )                      _____
+  \  \ \  `  `   ) \             (  ___                 / _   \
+ (_`    \+   . x  ( .\            \/   \____-----------/ (o)   \_
+- .-               \+  ;          (  O                           \____
+(__                +- .( -'.- <.   \_____________  `              \  /
+(_____            ._._: <_ - <- _- _  VVVVVVV VV V\                \/
+  .    /./.+-  . .- /  +--  - .    (--_AAAAAAA__A_/                |
+  (__ ' /x  / x _/ (                \______________//_              \_______
+ , x / ( '  . / .  /                                  \___'          \     /
+    /  /  _/ /    +                                       |           \   /
+   '  (__/                                               /              \/
+                                                       /                  \
+             NMAP IS A POWERFUL TOOL -- USE CAREFULLY AND RESPONSIBLY
+Configuration complete.  Type make (or gmake on some *BSD machines) to compile.
++ make
+Makefile:375: makefile.dep: No such file or directory
+g++ -MM -I./liblua -I./libdnet-stripped/include  -I./libpcap -I./nbase -I./nsock/include -DHAVE_CONFIG_H -DNMAP_NAME=\"Nmap\" -DNMAP_URL=\"http://nmap.org\" -DNMAP_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -DNMAPDATADIR=\"/ffp/share/nmap\" -D_FORTIFY_SOURCE=2 main.cc nmap.cc targets.cc tcpip.cc nmap_error.cc utils.cc idle_scan.cc osscan.cc osscan2.cc output.cc payload.cc scan_engine.cc timing.cc charpool.cc services.cc protocols.cc nmap_rpc.cc portlist.cc NmapOps.cc TargetGroup.cc Target.cc FingerPrintResults.cc service_scan.cc NmapOutputTable.cc MACLookup.cc nmap_tty.cc nmap_dns.cc traceroute.cc portreasons.cc xml.cc nse_main.cc nse_utility.cc nse_nsock.cc nse_dnet.cc nse_fs.cc nse_nmaplib.cc nse_debug.cc nse_pcrelib.cc nse_binlib.cc nse_bit.cc nse_openssl.cc nse_ssl_cert.cc  > makefile.dep
+Compiling liblua
+make[1]: Entering directory `/tmp/nmap.Fj8tqb/nmap-5.51/liblua'
+gcc -O2 -Wall -g -O2 -Wall -fno-strict-aliasing   -DLUA_USE_POSIX -DLUA_USE_DLOPEN   -c -o lapi.o lapi.c
+gcc -O2 -Wall -g -O2 -Wall -fno-strict-aliasing   -DLUA_USE_POSIX -DLUA_USE_DLOPEN   -c -o lcode.o lcode.c
+gcc -O2 -Wall -g -O2 -Wall -fno-strict-aliasing   -DLUA_USE_POSIX -DLUA_USE_DLOPEN   -c -o ldebug.o ldebug.c
+gcc -O2 -Wall -g -O2 -Wall -fno-strict-aliasing   -DLUA_USE_POSIX -DLUA_USE_DLOPEN   -c -o ldo.o ldo.c
+gcc -O2 -Wall -g -O2 -Wall -fno-strict-aliasing   -DLUA_USE_POSIX -DLUA_USE_DLOPEN   -c -o ldump.o ldump.c
+gcc -O2 -Wall -g -O2 -Wall -fno-strict-aliasing   -DLUA_USE_POSIX -DLUA_USE_DLOPEN   -c -o lfunc.o lfunc.c
+gcc -O2 -Wall -g -O2 -Wall -fno-strict-aliasing   -DLUA_USE_POSIX -DLUA_USE_DLOPEN   -c -o lgc.o lgc.c
+gcc -O2 -Wall -g -O2 -Wall -fno-strict-aliasing   -DLUA_USE_POSIX -DLUA_USE_DLOPEN   -c -o llex.o llex.c
+gcc -O2 -Wall -g -O2 -Wall -fno-strict-aliasing   -DLUA_USE_POSIX -DLUA_USE_DLOPEN   -c -o lmem.o lmem.c
+gcc -O2 -Wall -g -O2 -Wall -fno-strict-aliasing   -DLUA_USE_POSIX -DLUA_USE_DLOPEN   -c -o lobject.o lobject.c
+gcc -O2 -Wall -g -O2 -Wall -fno-strict-aliasing   -DLUA_USE_POSIX -DLUA_USE_DLOPEN   -c -o lopcodes.o lopcodes.c
+gcc -O2 -Wall -g -O2 -Wall -fno-strict-aliasing   -DLUA_USE_POSIX -DLUA_USE_DLOPEN   -c -o lparser.o lparser.c
+gcc -O2 -Wall -g -O2 -Wall -fno-strict-aliasing   -DLUA_USE_POSIX -DLUA_USE_DLOPEN   -c -o lstate.o lstate.c
+gcc -O2 -Wall -g -O2 -Wall -fno-strict-aliasing   -DLUA_USE_POSIX -DLUA_USE_DLOPEN   -c -o lstring.o lstring.c
+gcc -O2 -Wall -g -O2 -Wall -fno-strict-aliasing   -DLUA_USE_POSIX -DLUA_USE_DLOPEN   -c -o ltable.o ltable.c
+gcc -O2 -Wall -g -O2 -Wall -fno-strict-aliasing   -DLUA_USE_POSIX -DLUA_USE_DLOPEN   -c -o ltm.o ltm.c
+gcc -O2 -Wall -g -O2 -Wall -fno-strict-aliasing   -DLUA_USE_POSIX -DLUA_USE_DLOPEN   -c -o lundump.o lundump.c
+gcc -O2 -Wall -g -O2 -Wall -fno-strict-aliasing   -DLUA_USE_POSIX -DLUA_USE_DLOPEN   -c -o lvm.o lvm.c
+gcc -O2 -Wall -g -O2 -Wall -fno-strict-aliasing   -DLUA_USE_POSIX -DLUA_USE_DLOPEN   -c -o lzio.o lzio.c
+gcc -O2 -Wall -g -O2 -Wall -fno-strict-aliasing   -DLUA_USE_POSIX -DLUA_USE_DLOPEN   -c -o lauxlib.o lauxlib.c
+gcc -O2 -Wall -g -O2 -Wall -fno-strict-aliasing   -DLUA_USE_POSIX -DLUA_USE_DLOPEN   -c -o lbaselib.o lbaselib.c
+gcc -O2 -Wall -g -O2 -Wall -fno-strict-aliasing   -DLUA_USE_POSIX -DLUA_USE_DLOPEN   -c -o ldblib.o ldblib.c
+gcc -O2 -Wall -g -O2 -Wall -fno-strict-aliasing   -DLUA_USE_POSIX -DLUA_USE_DLOPEN   -c -o liolib.o liolib.c
+gcc -O2 -Wall -g -O2 -Wall -fno-strict-aliasing   -DLUA_USE_POSIX -DLUA_USE_DLOPEN   -c -o lmathlib.o lmathlib.c
+gcc -O2 -Wall -g -O2 -Wall -fno-strict-aliasing   -DLUA_USE_POSIX -DLUA_USE_DLOPEN   -c -o loslib.o loslib.c
+gcc -O2 -Wall -g -O2 -Wall -fno-strict-aliasing   -DLUA_USE_POSIX -DLUA_USE_DLOPEN   -c -o ltablib.o ltablib.c
+gcc -O2 -Wall -g -O2 -Wall -fno-strict-aliasing   -DLUA_USE_POSIX -DLUA_USE_DLOPEN   -c -o lstrlib.o lstrlib.c
+gcc -O2 -Wall -g -O2 -Wall -fno-strict-aliasing   -DLUA_USE_POSIX -DLUA_USE_DLOPEN   -c -o loadlib.o loadlib.c
+gcc -O2 -Wall -g -O2 -Wall -fno-strict-aliasing   -DLUA_USE_POSIX -DLUA_USE_DLOPEN   -c -o linit.o linit.c
+ar rcu liblua.a lapi.o lcode.o ldebug.o ldo.o ldump.o lfunc.o lgc.o llex.o lmem.o lobject.o lopcodes.o lparser.o lstate.o lstring.o ltable.o ltm.o lundump.o lvm.o lzio.o lauxlib.o lbaselib.o ldblib.o liolib.o lmathlib.o loslib.o ltablib.o lstrlib.o loadlib.o linit.o
+ranlib liblua.a
+make[1]: Leaving directory `/tmp/nmap.Fj8tqb/nmap-5.51/liblua'
+Compiling libpcap
+make[1]: Entering directory `/tmp/nmap.Fj8tqb/nmap-5.51/libpcap'
+gcc -g -O2 -O2 -fpic -I.  -DHAVE_CONFIG_H  -D_U_="__attribute__((unused))" -c ./pcap-null.c
+gcc -g -O2 -O2 -fpic -I.  -DHAVE_CONFIG_H  -D_U_="__attribute__((unused))" -c ./pcap-usb-linux.c
+gcc -g -O2 -O2 -fpic -I.  -DHAVE_CONFIG_H  -D_U_="__attribute__((unused))" -c ./fad-null.c
+if grep GIT ./VERSION >/dev/null; then \
+		read ver <./VERSION; \
+		echo $ver | tr -d '\012'; \
+		date +_%Y_%m_%d; \
+	else \
+		cat ./VERSION; \
+	fi | sed -e 's/.*/static const char pcap_version_string[] = "libpcap version &";/' > version.h
+gcc -g -O2 -O2 -fpic -I.  -DHAVE_CONFIG_H  -D_U_="__attribute__((unused))" -c ./pcap.c
+gcc -g -O2 -O2 -fpic -I.  -DHAVE_CONFIG_H  -D_U_="__attribute__((unused))" -c ./inet.c
+gcc -g -O2 -O2 -fpic -I.  -DHAVE_CONFIG_H  -D_U_="__attribute__((unused))" -c ./gencode.c
+gcc -g -O2 -O2 -fpic -I.  -DHAVE_CONFIG_H  -D_U_="__attribute__((unused))" -c ./optimize.c
+gcc -g -O2 -O2 -fpic -I.  -DHAVE_CONFIG_H  -D_U_="__attribute__((unused))" -c ./nametoaddr.c
+gcc -g -O2 -O2 -fpic -I.  -DHAVE_CONFIG_H  -D_U_="__attribute__((unused))" -c ./etherent.c
+gcc -g -O2 -O2 -fpic -I.  -DHAVE_CONFIG_H  -D_U_="__attribute__((unused))" -c ./savefile.c
+gcc -g -O2 -O2 -fpic -I.  -DHAVE_CONFIG_H  -D_U_="__attribute__((unused))" -c ./sf-pcap.c
+gcc -g -O2 -O2 -fpic -I.  -DHAVE_CONFIG_H  -D_U_="__attribute__((unused))" -c ./sf-pcap-ng.c
+gcc -g -O2 -O2 -fpic -I.  -DHAVE_CONFIG_H  -D_U_="__attribute__((unused))" -c ./pcap-common.c
+gcc -g -O2 -O2 -fpic -I.  -DHAVE_CONFIG_H  -D_U_="__attribute__((unused))" -c ./bpf_image.c
+gcc -g -O2 -O2 -fpic -I.  -DHAVE_CONFIG_H  -D_U_="__attribute__((unused))" -c ./bpf_dump.c
+gcc -g -O2 -O2 -fpic -I.  -DHAVE_CONFIG_H  -D_U_="__attribute__((unused))" -c scanner.c
+gcc -g -O2 -O2 -fpic -I.  -DHAVE_CONFIG_H  -D_U_="__attribute__((unused))" -Dyylval=pcap_lval -c grammar.c
+rm -f bpf_filter.c
+ln -s ./bpf/net/bpf_filter.c bpf_filter.c
+gcc -g -O2 -O2 -fpic -I.  -DHAVE_CONFIG_H  -D_U_="__attribute__((unused))" -c bpf_filter.c
+if grep GIT ./VERSION >/dev/null; then \
+		read ver <./VERSION; \
+		echo $ver | tr -d '\012'; \
+		date +_%Y_%m_%d; \
+	else \
+		cat ./VERSION; \
+	fi | sed -e 's/.*/char pcap_version[] = "&";/' > version.c
+gcc -g -O2 -O2 -fpic -I.  -DHAVE_CONFIG_H  -D_U_="__attribute__((unused))" -c version.c
+ar rc libpcap.a pcap-null.o pcap-usb-linux.o fad-null.o pcap.o inet.o gencode.o optimize.o nametoaddr.o etherent.o savefile.o sf-pcap.o sf-pcap-ng.o pcap-common.o bpf_image.o bpf_dump.o  scanner.o grammar.o bpf_filter.o version.o  
+ranlib libpcap.a
+VER=`cat ./VERSION`; \
+	MAJOR_VER=`sed 's/\([0-9][0-9]*\)\..*/\1/' ./VERSION`; \
+	gcc -shared -Wl,-soname,libpcap.so.$MAJOR_VER -L/ffp/lib -Wl,-rpath,/ffp/lib \
+	    -o libpcap.so.$VER pcap-null.o pcap-usb-linux.o fad-null.o pcap.o inet.o gencode.o optimize.o nametoaddr.o etherent.o savefile.o sf-pcap.o sf-pcap-ng.o pcap-common.o bpf_image.o bpf_dump.o  scanner.o grammar.o bpf_filter.o version.o   
+sed -e 's|@includedir[@]|/ffp/include|g' \
+	    -e 's|@libdir[@]|/ffp/lib|g' \
+	    -e 's|@LIBS[@]||g' \
+	    -e 's|@V_RPATH_OPT[@]|-Wl,-rpath,|g' \
+	    ./pcap-config.in >pcap-config.tmp
+mv pcap-config.tmp pcap-config
+chmod a+x pcap-config
+make[1]: Leaving directory `/tmp/nmap.Fj8tqb/nmap-5.51/libpcap'
+Compiling libdnet
+make[1]: Entering directory `/tmp/nmap.Fj8tqb/nmap-5.51/libdnet-stripped'
+Making all in include
+make[2]: Entering directory `/tmp/nmap.Fj8tqb/nmap-5.51/libdnet-stripped/include'
+make  all-recursive
+make[3]: Entering directory `/tmp/nmap.Fj8tqb/nmap-5.51/libdnet-stripped/include'
+Making all in dnet
+make[4]: Entering directory `/tmp/nmap.Fj8tqb/nmap-5.51/libdnet-stripped/include/dnet'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/tmp/nmap.Fj8tqb/nmap-5.51/libdnet-stripped/include/dnet'
+make[4]: Entering directory `/tmp/nmap.Fj8tqb/nmap-5.51/libdnet-stripped/include'
+make[4]: Nothing to be done for `all-am'.
+make[4]: Leaving directory `/tmp/nmap.Fj8tqb/nmap-5.51/libdnet-stripped/include'
+make[3]: Leaving directory `/tmp/nmap.Fj8tqb/nmap-5.51/libdnet-stripped/include'
+make[2]: Leaving directory `/tmp/nmap.Fj8tqb/nmap-5.51/libdnet-stripped/include'
+Making all in src
+make[2]: Entering directory `/tmp/nmap.Fj8tqb/nmap-5.51/libdnet-stripped/src'
+/ffp/bin/sh ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../include  -I../include   -g -O2 -Wall -c -o addr-util.lo addr-util.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../include -I../include -g -O2 -Wall -c addr-util.c -o addr-util.o
+/ffp/bin/sh ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../include  -I../include   -g -O2 -Wall -c -o addr.lo addr.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../include -I../include -g -O2 -Wall -c addr.c -o addr.o
+/ffp/bin/sh ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../include  -I../include   -g -O2 -Wall -c -o blob.lo blob.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../include -I../include -g -O2 -Wall -c blob.c -o blob.o
+/ffp/bin/sh ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../include  -I../include   -g -O2 -Wall -c -o ip-util.lo ip-util.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../include -I../include -g -O2 -Wall -c ip-util.c -o ip-util.o
+/ffp/bin/sh ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../include  -I../include   -g -O2 -Wall -c -o ip6.lo ip6.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../include -I../include -g -O2 -Wall -c ip6.c -o ip6.o
+/ffp/bin/sh ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../include  -I../include   -g -O2 -Wall -c -o rand.lo rand.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../include -I../include -g -O2 -Wall -c rand.c -o rand.o
+/ffp/bin/sh ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../include  -I../include   -g -O2 -Wall -c -o arp-ioctl.lo arp-ioctl.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../include -I../include -g -O2 -Wall -c arp-ioctl.c -o arp-ioctl.o
+/ffp/bin/sh ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../include  -I../include   -g -O2 -Wall -c -o eth-linux.lo eth-linux.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../include -I../include -g -O2 -Wall -c eth-linux.c -o eth-linux.o
+/ffp/bin/sh ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../include  -I../include   -g -O2 -Wall -c -o fw-none.lo fw-none.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../include -I../include -g -O2 -Wall -c fw-none.c -o fw-none.o
+/ffp/bin/sh ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../include  -I../include   -g -O2 -Wall -c -o intf.lo intf.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../include -I../include -g -O2 -Wall -c intf.c -o intf.o
+/ffp/bin/sh ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../include  -I../include   -g -O2 -Wall -c -o ip.lo ip.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../include -I../include -g -O2 -Wall -c ip.c -o ip.o
+/ffp/bin/sh ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../include  -I../include   -g -O2 -Wall -c -o route-linux.lo route-linux.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../include -I../include -g -O2 -Wall -c route-linux.c -o route-linux.o
+/ffp/bin/sh ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../include  -I../include   -g -O2 -Wall -c -o tun-linux.lo tun-linux.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../include -I../include -g -O2 -Wall -c tun-linux.c -o tun-linux.o
+/ffp/bin/sh ../libtool --tag=CC   --mode=link gcc  -g -O2 -Wall -version-info 1:1:0 -L/ffp/lib -Wl,-rpath,/ffp/lib -o libdnet.la -rpath /ffp/lib addr-util.lo addr.lo blob.lo ip-util.lo ip6.lo rand.lo arp-ioctl.lo eth-linux.lo fw-none.lo intf.lo ip.lo route-linux.lo tun-linux.lo 
+libtool: link: ar cru .libs/libdnet.a  addr-util.o addr.o blob.o ip-util.o ip6.o rand.o arp-ioctl.o eth-linux.o fw-none.o intf.o ip.o route-linux.o tun-linux.o
+libtool: link: ranlib .libs/libdnet.a
+libtool: link: ( cd ".libs" && rm -f "libdnet.la" && ln -s "../libdnet.la" "libdnet.la" )
+make[2]: Leaving directory `/tmp/nmap.Fj8tqb/nmap-5.51/libdnet-stripped/src'
+make[2]: Entering directory `/tmp/nmap.Fj8tqb/nmap-5.51/libdnet-stripped'
+make[2]: Nothing to be done for `all-am'.
+make[2]: Leaving directory `/tmp/nmap.Fj8tqb/nmap-5.51/libdnet-stripped'
+make[1]: Leaving directory `/tmp/nmap.Fj8tqb/nmap-5.51/libdnet-stripped'
+Compiling libnbase
+cd nbase && make
+make[1]: Entering directory `/tmp/nmap.Fj8tqb/nmap-5.51/nbase'
+gcc -g -O2 -Wall    -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2    -c -o snprintf.o snprintf.c
+gcc -g -O2 -Wall    -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2    -c -o nbase_str.o nbase_str.c
+gcc -g -O2 -Wall    -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2    -c -o nbase_misc.o nbase_misc.c
+gcc -g -O2 -Wall    -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2    -c -o nbase_memalloc.o nbase_memalloc.c
+gcc -g -O2 -Wall    -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2    -c -o nbase_rnd.o nbase_rnd.c
+rm -f libnbase.a
+ar cr libnbase.a snprintf.o nbase_str.o nbase_misc.o nbase_memalloc.o nbase_rnd.o
+ranlib libnbase.a
+make[1]: Leaving directory `/tmp/nmap.Fj8tqb/nmap-5.51/nbase'
+Compiling libnsock
+cd nsock/src && make
+make[1]: Entering directory `/tmp/nmap.Fj8tqb/nmap-5.51/nsock/src'
+Makefile:80: makefile.dep: No such file or directory
+gcc -MM -I../../nbase -DHAVE_CONFIG_H -DNSOCK_VERSION=\"0.02\" -D_FORTIFY_SOURCE=2 -I../include -I../../libpcap error.c filespace.c gh_list.c nsock_connect.c nsock_core.c nsock_iod.c nsock_read.c nsock_timers.c nsock_write.c nsock_ssl.c nsock_event.c nsock_pool.c netutils.c nsock_pcap.c  > makefile.dep
+make[1]: Leaving directory `/tmp/nmap.Fj8tqb/nmap-5.51/nsock/src'
+make[1]: Entering directory `/tmp/nmap.Fj8tqb/nmap-5.51/nsock/src'
+gcc -c -I../../nbase -DHAVE_CONFIG_H -DNSOCK_VERSION=\"0.02\" -D_FORTIFY_SOURCE=2 -I../include -I../../libpcap -g -O2 -Wall   error.c -o error.o
+gcc -c -I../../nbase -DHAVE_CONFIG_H -DNSOCK_VERSION=\"0.02\" -D_FORTIFY_SOURCE=2 -I../include -I../../libpcap -g -O2 -Wall   filespace.c -o filespace.o
+gcc -c -I../../nbase -DHAVE_CONFIG_H -DNSOCK_VERSION=\"0.02\" -D_FORTIFY_SOURCE=2 -I../include -I../../libpcap -g -O2 -Wall   gh_list.c -o gh_list.o
+gcc -c -I../../nbase -DHAVE_CONFIG_H -DNSOCK_VERSION=\"0.02\" -D_FORTIFY_SOURCE=2 -I../include -I../../libpcap -g -O2 -Wall   nsock_connect.c -o nsock_connect.o
+gcc -c -I../../nbase -DHAVE_CONFIG_H -DNSOCK_VERSION=\"0.02\" -D_FORTIFY_SOURCE=2 -I../include -I../../libpcap -g -O2 -Wall   nsock_core.c -o nsock_core.o
+gcc -c -I../../nbase -DHAVE_CONFIG_H -DNSOCK_VERSION=\"0.02\" -D_FORTIFY_SOURCE=2 -I../include -I../../libpcap -g -O2 -Wall   nsock_iod.c -o nsock_iod.o
+gcc -c -I../../nbase -DHAVE_CONFIG_H -DNSOCK_VERSION=\"0.02\" -D_FORTIFY_SOURCE=2 -I../include -I../../libpcap -g -O2 -Wall   nsock_read.c -o nsock_read.o
+gcc -c -I../../nbase -DHAVE_CONFIG_H -DNSOCK_VERSION=\"0.02\" -D_FORTIFY_SOURCE=2 -I../include -I../../libpcap -g -O2 -Wall   nsock_timers.c -o nsock_timers.o
+gcc -c -I../../nbase -DHAVE_CONFIG_H -DNSOCK_VERSION=\"0.02\" -D_FORTIFY_SOURCE=2 -I../include -I../../libpcap -g -O2 -Wall   nsock_write.c -o nsock_write.o
+gcc -c -I../../nbase -DHAVE_CONFIG_H -DNSOCK_VERSION=\"0.02\" -D_FORTIFY_SOURCE=2 -I../include -I../../libpcap -g -O2 -Wall   nsock_ssl.c -o nsock_ssl.o
+gcc -c -I../../nbase -DHAVE_CONFIG_H -DNSOCK_VERSION=\"0.02\" -D_FORTIFY_SOURCE=2 -I../include -I../../libpcap -g -O2 -Wall   nsock_event.c -o nsock_event.o
+gcc -c -I../../nbase -DHAVE_CONFIG_H -DNSOCK_VERSION=\"0.02\" -D_FORTIFY_SOURCE=2 -I../include -I../../libpcap -g -O2 -Wall   nsock_pool.c -o nsock_pool.o
+gcc -c -I../../nbase -DHAVE_CONFIG_H -DNSOCK_VERSION=\"0.02\" -D_FORTIFY_SOURCE=2 -I../include -I../../libpcap -g -O2 -Wall   netutils.c -o netutils.o
+gcc -c -I../../nbase -DHAVE_CONFIG_H -DNSOCK_VERSION=\"0.02\" -D_FORTIFY_SOURCE=2 -I../include -I../../libpcap -g -O2 -Wall   nsock_pcap.c -o nsock_pcap.o
+rm -f libnsock.a
+ar cr libnsock.a error.o filespace.o gh_list.o nsock_connect.o nsock_core.o nsock_iod.o nsock_read.o nsock_timers.o nsock_write.o nsock_ssl.o nsock_event.o nsock_pool.o netutils.o nsock_pcap.o 
+ranlib libnsock.a
+make[1]: Leaving directory `/tmp/nmap.Fj8tqb/nmap-5.51/nsock/src'
+cd ncat && make
+make[1]: Entering directory `/tmp/nmap.Fj8tqb/nmap-5.51/ncat'
+Makefile:176: makefile.dep: No such file or directory
+gcc -MM -I../libpcap -DHAVE_CONFIG_H -DNCAT_DATADIR="\"/ffp/share/ncat\"" -D_FORTIFY_SOURCE=2 -I. -I.. -I../nsock/include/ -I../nbase ncat_main.c ncat_connect.c ncat_core.c ncat_posix.c ncat_listen.c ncat_proxy.c ncat_broker.c ncat_hostmatch.c ncat_ssl.c base64.c http.c util.c sys_wrap.c http_digest.c > makefile.dep
+make[1]: Leaving directory `/tmp/nmap.Fj8tqb/nmap-5.51/ncat'
+make[1]: Entering directory `/tmp/nmap.Fj8tqb/nmap-5.51/ncat'
+gcc -I../libpcap -DHAVE_CONFIG_H -DNCAT_DATADIR="\"/ffp/share/ncat\"" -D_FORTIFY_SOURCE=2 -I. -I.. -I../nsock/include/ -I../nbase -g -O2 -Wall -c ncat_main.c -o ncat_main.o
+gcc -I../libpcap -DHAVE_CONFIG_H -DNCAT_DATADIR="\"/ffp/share/ncat\"" -D_FORTIFY_SOURCE=2 -I. -I.. -I../nsock/include/ -I../nbase -g -O2 -Wall -c ncat_connect.c -o ncat_connect.o
+gcc -I../libpcap -DHAVE_CONFIG_H -DNCAT_DATADIR="\"/ffp/share/ncat\"" -D_FORTIFY_SOURCE=2 -I. -I.. -I../nsock/include/ -I../nbase -g -O2 -Wall -c ncat_core.c -o ncat_core.o
+gcc -I../libpcap -DHAVE_CONFIG_H -DNCAT_DATADIR="\"/ffp/share/ncat\"" -D_FORTIFY_SOURCE=2 -I. -I.. -I../nsock/include/ -I../nbase -g -O2 -Wall -c ncat_posix.c -o ncat_posix.o
+gcc -I../libpcap -DHAVE_CONFIG_H -DNCAT_DATADIR="\"/ffp/share/ncat\"" -D_FORTIFY_SOURCE=2 -I. -I.. -I../nsock/include/ -I../nbase -g -O2 -Wall -c ncat_listen.c -o ncat_listen.o
+gcc -I../libpcap -DHAVE_CONFIG_H -DNCAT_DATADIR="\"/ffp/share/ncat\"" -D_FORTIFY_SOURCE=2 -I. -I.. -I../nsock/include/ -I../nbase -g -O2 -Wall -c ncat_proxy.c -o ncat_proxy.o
+gcc -I../libpcap -DHAVE_CONFIG_H -DNCAT_DATADIR="\"/ffp/share/ncat\"" -D_FORTIFY_SOURCE=2 -I. -I.. -I../nsock/include/ -I../nbase -g -O2 -Wall -c ncat_broker.c -o ncat_broker.o
+gcc -I../libpcap -DHAVE_CONFIG_H -DNCAT_DATADIR="\"/ffp/share/ncat\"" -D_FORTIFY_SOURCE=2 -I. -I.. -I../nsock/include/ -I../nbase -g -O2 -Wall -c ncat_hostmatch.c -o ncat_hostmatch.o
+gcc -I../libpcap -DHAVE_CONFIG_H -DNCAT_DATADIR="\"/ffp/share/ncat\"" -D_FORTIFY_SOURCE=2 -I. -I.. -I../nsock/include/ -I../nbase -g -O2 -Wall -c ncat_ssl.c -o ncat_ssl.o
+gcc -I../libpcap -DHAVE_CONFIG_H -DNCAT_DATADIR="\"/ffp/share/ncat\"" -D_FORTIFY_SOURCE=2 -I. -I.. -I../nsock/include/ -I../nbase -g -O2 -Wall -c base64.c -o base64.o
+gcc -I../libpcap -DHAVE_CONFIG_H -DNCAT_DATADIR="\"/ffp/share/ncat\"" -D_FORTIFY_SOURCE=2 -I. -I.. -I../nsock/include/ -I../nbase -g -O2 -Wall -c http.c -o http.o
+gcc -I../libpcap -DHAVE_CONFIG_H -DNCAT_DATADIR="\"/ffp/share/ncat\"" -D_FORTIFY_SOURCE=2 -I. -I.. -I../nsock/include/ -I../nbase -g -O2 -Wall -c util.c -o util.o
+gcc -I../libpcap -DHAVE_CONFIG_H -DNCAT_DATADIR="\"/ffp/share/ncat\"" -D_FORTIFY_SOURCE=2 -I. -I.. -I../nsock/include/ -I../nbase -g -O2 -Wall -c sys_wrap.c -o sys_wrap.o
+gcc -I../libpcap -DHAVE_CONFIG_H -DNCAT_DATADIR="\"/ffp/share/ncat\"" -D_FORTIFY_SOURCE=2 -I. -I.. -I../nsock/include/ -I../nbase -g -O2 -Wall -c http_digest.c -o http_digest.o
+gcc -o ncat -g -O2 -Wall -L../libpcap -L/ffp/lib -Wl,-rpath,/ffp/lib ncat_main.o ncat_connect.o ncat_core.o ncat_posix.o ncat_listen.o ncat_proxy.o ncat_broker.o ncat_hostmatch.o ncat_ssl.o base64.o http.o util.o sys_wrap.o http_digest.o ../nsock/src/libnsock.a ../nbase/libnbase.a -lssl -lcrypto -lpcap -lssl -lcrypto -ldl 
+gcc -I../libpcap -DHAVE_CONFIG_H -DNCAT_DATADIR="\"/ffp/share/ncat\"" -D_FORTIFY_SOURCE=2 -I. -I.. -I../nsock/include/ -I../nbase -g -O2 -Wall -c test/addrset.c -o test/addrset.o
+gcc -o test/addrset -g -O2 -Wall -L../libpcap -L/ffp/lib -Wl,-rpath,/ffp/lib test/addrset.o ncat_core.o ncat_hostmatch.o sys_wrap.o util.o ../nsock/src/libnsock.a ../nbase/libnbase.a -lssl -lcrypto -lpcap -lssl -lcrypto -ldl 
+gcc -I../libpcap -DHAVE_CONFIG_H -DNCAT_DATADIR="\"/ffp/share/ncat\"" -D_FORTIFY_SOURCE=2 -I. -I.. -I../nsock/include/ -I../nbase -g -O2 -Wall -c test/test-uri.c -o test/test-uri.o
+gcc -o test/test-uri -g -O2 -Wall -L../libpcap -L/ffp/lib -Wl,-rpath,/ffp/lib test/test-uri.o base64.o http.o ncat_core.o ncat_hostmatch.o sys_wrap.o util.o ../nsock/src/libnsock.a ../nbase/libnbase.a -lssl -lcrypto -lpcap -lssl -lcrypto -ldl 
+gcc -I../libpcap -DHAVE_CONFIG_H -DNCAT_DATADIR="\"/ffp/share/ncat\"" -D_FORTIFY_SOURCE=2 -I. -I.. -I../nsock/include/ -I../nbase -g -O2 -Wall -c test/test-cmdline-split.c -o test/test-cmdline-split.o
+gcc -o test/test-cmdline-split -g -O2 -Wall -L../libpcap -L/ffp/lib -Wl,-rpath,/ffp/lib test/test-cmdline-split.o ncat_posix.o ncat_core.o ncat_hostmatch.o sys_wrap.o util.o ../nsock/src/libnsock.a ../nbase/libnbase.a -lssl -lcrypto -lpcap -lssl -lcrypto -ldl 
+gcc -I../libpcap -DHAVE_CONFIG_H -DNCAT_DATADIR="\"/ffp/share/ncat\"" -D_FORTIFY_SOURCE=2 -I. -I.. -I../nsock/include/ -I../nbase -g -O2 -Wall -c test/test-wildcard.c -o test/test-wildcard.o
+gcc -o test/test-wildcard -g -O2 -Wall -L../libpcap -L/ffp/lib -Wl,-rpath,/ffp/lib test/test-wildcard.o ncat_core.o ncat_hostmatch.o ncat_ssl.o sys_wrap.o util.o ../nsock/src/libnsock.a ../nbase/libnbase.a -lssl -lcrypto -lpcap -lssl -lcrypto -ldl 
+make[1]: Leaving directory `/tmp/nmap.Fj8tqb/nmap-5.51/ncat'
+Compiling libnetutil
+cd libnetutil && make
+make[1]: Entering directory `/tmp/nmap.Fj8tqb/nmap-5.51/libnetutil'
+Makefile:41: makefile.dep: No such file or directory
+g++ -MM -I../liblua -I../libdnet-stripped/include  -I../libpcap -I../nbase -I../nsock/include -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 ./netutil.cc > makefile.dep
+make[1]: Leaving directory `/tmp/nmap.Fj8tqb/nmap-5.51/libnetutil'
+make[1]: Entering directory `/tmp/nmap.Fj8tqb/nmap-5.51/libnetutil'
+g++ -c -I../liblua -I../libdnet-stripped/include  -I../libpcap -I../nbase -I../nsock/include -DHAVE_CONFIG_H -D_FORTIFY_SOURCE=2 -g -O2 -Wall -fno-strict-aliasing netutil.cc -o netutil.o
+rm -f libnetutil.a
+ar cr libnetutil.a netutil.o
+ranlib libnetutil.a
+make[1]: Leaving directory `/tmp/nmap.Fj8tqb/nmap-5.51/libnetutil'
+make nmap build-zenmap build-ndiff build-nping
+make[1]: Entering directory `/tmp/nmap.Fj8tqb/nmap-5.51'
+g++ -c -I./liblua -I./libdnet-stripped/include  -I./libpcap -I./nbase -I./nsock/include -DHAVE_CONFIG_H -DNMAP_NAME=\"Nmap\" -DNMAP_URL=\"http://nmap.org\" -DNMAP_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -DNMAPDATADIR=\"/ffp/share/nmap\" -D_FORTIFY_SOURCE=2 -g -O2 -Wall -fno-strict-aliasing   main.cc -o main.o
+g++ -c -I./liblua -I./libdnet-stripped/include  -I./libpcap -I./nbase -I./nsock/include -DHAVE_CONFIG_H -DNMAP_NAME=\"Nmap\" -DNMAP_URL=\"http://nmap.org\" -DNMAP_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -DNMAPDATADIR=\"/ffp/share/nmap\" -D_FORTIFY_SOURCE=2 -g -O2 -Wall -fno-strict-aliasing   nmap.cc -o nmap.o
+g++ -c -I./liblua -I./libdnet-stripped/include  -I./libpcap -I./nbase -I./nsock/include -DHAVE_CONFIG_H -DNMAP_NAME=\"Nmap\" -DNMAP_URL=\"http://nmap.org\" -DNMAP_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -DNMAPDATADIR=\"/ffp/share/nmap\" -D_FORTIFY_SOURCE=2 -g -O2 -Wall -fno-strict-aliasing   targets.cc -o targets.o
+g++ -c -I./liblua -I./libdnet-stripped/include  -I./libpcap -I./nbase -I./nsock/include -DHAVE_CONFIG_H -DNMAP_NAME=\"Nmap\" -DNMAP_URL=\"http://nmap.org\" -DNMAP_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -DNMAPDATADIR=\"/ffp/share/nmap\" -D_FORTIFY_SOURCE=2 -g -O2 -Wall -fno-strict-aliasing   tcpip.cc -o tcpip.o
+g++ -c -I./liblua -I./libdnet-stripped/include  -I./libpcap -I./nbase -I./nsock/include -DHAVE_CONFIG_H -DNMAP_NAME=\"Nmap\" -DNMAP_URL=\"http://nmap.org\" -DNMAP_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -DNMAPDATADIR=\"/ffp/share/nmap\" -D_FORTIFY_SOURCE=2 -g -O2 -Wall -fno-strict-aliasing   nmap_error.cc -o nmap_error.o
+In file included from nmap_error.cc:93:0:
+output.h: In function 'void gh_perror(const char*, ...)':
+output.h:170:6: note: the mangling of 'va_list' has changed in GCC 4.4
+g++ -c -I./liblua -I./libdnet-stripped/include  -I./libpcap -I./nbase -I./nsock/include -DHAVE_CONFIG_H -DNMAP_NAME=\"Nmap\" -DNMAP_URL=\"http://nmap.org\" -DNMAP_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -DNMAPDATADIR=\"/ffp/share/nmap\" -D_FORTIFY_SOURCE=2 -g -O2 -Wall -fno-strict-aliasing   utils.cc -o utils.o
+g++ -c -I./liblua -I./libdnet-stripped/include  -I./libpcap -I./nbase -I./nsock/include -DHAVE_CONFIG_H -DNMAP_NAME=\"Nmap\" -DNMAP_URL=\"http://nmap.org\" -DNMAP_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -DNMAPDATADIR=\"/ffp/share/nmap\" -D_FORTIFY_SOURCE=2 -g -O2 -Wall -fno-strict-aliasing   idle_scan.cc -o idle_scan.o
+g++ -c -I./liblua -I./libdnet-stripped/include  -I./libpcap -I./nbase -I./nsock/include -DHAVE_CONFIG_H -DNMAP_NAME=\"Nmap\" -DNMAP_URL=\"http://nmap.org\" -DNMAP_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -DNMAPDATADIR=\"/ffp/share/nmap\" -D_FORTIFY_SOURCE=2 -g -O2 -Wall -fno-strict-aliasing   osscan.cc -o osscan.o
+g++ -c -I./liblua -I./libdnet-stripped/include  -I./libpcap -I./nbase -I./nsock/include -DHAVE_CONFIG_H -DNMAP_NAME=\"Nmap\" -DNMAP_URL=\"http://nmap.org\" -DNMAP_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -DNMAPDATADIR=\"/ffp/share/nmap\" -D_FORTIFY_SOURCE=2 -g -O2 -Wall -fno-strict-aliasing   osscan2.cc -o osscan2.o
+g++ -c -I./liblua -I./libdnet-stripped/include  -I./libpcap -I./nbase -I./nsock/include -DHAVE_CONFIG_H -DNMAP_NAME=\"Nmap\" -DNMAP_URL=\"http://nmap.org\" -DNMAP_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -DNMAPDATADIR=\"/ffp/share/nmap\" -D_FORTIFY_SOURCE=2 -g -O2 -Wall -fno-strict-aliasing   output.cc -o output.o
+output.cc:911:6: note: the mangling of 'va_list' has changed in GCC 4.4
+g++ -c -I./liblua -I./libdnet-stripped/include  -I./libpcap -I./nbase -I./nsock/include -DHAVE_CONFIG_H -DNMAP_NAME=\"Nmap\" -DNMAP_URL=\"http://nmap.org\" -DNMAP_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -DNMAPDATADIR=\"/ffp/share/nmap\" -D_FORTIFY_SOURCE=2 -g -O2 -Wall -fno-strict-aliasing   payload.cc -o payload.o
+g++ -c -I./liblua -I./libdnet-stripped/include  -I./libpcap -I./nbase -I./nsock/include -DHAVE_CONFIG_H -DNMAP_NAME=\"Nmap\" -DNMAP_URL=\"http://nmap.org\" -DNMAP_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -DNMAPDATADIR=\"/ffp/share/nmap\" -D_FORTIFY_SOURCE=2 -g -O2 -Wall -fno-strict-aliasing   scan_engine.cc -o scan_engine.o
+g++ -c -I./liblua -I./libdnet-stripped/include  -I./libpcap -I./nbase -I./nsock/include -DHAVE_CONFIG_H -DNMAP_NAME=\"Nmap\" -DNMAP_URL=\"http://nmap.org\" -DNMAP_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -DNMAPDATADIR=\"/ffp/share/nmap\" -D_FORTIFY_SOURCE=2 -g -O2 -Wall -fno-strict-aliasing   timing.cc -o timing.o
+g++ -c -I./liblua -I./libdnet-stripped/include  -I./libpcap -I./nbase -I./nsock/include -DHAVE_CONFIG_H -DNMAP_NAME=\"Nmap\" -DNMAP_URL=\"http://nmap.org\" -DNMAP_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -DNMAPDATADIR=\"/ffp/share/nmap\" -D_FORTIFY_SOURCE=2 -g -O2 -Wall -fno-strict-aliasing   charpool.cc -o charpool.o
+g++ -c -I./liblua -I./libdnet-stripped/include  -I./libpcap -I./nbase -I./nsock/include -DHAVE_CONFIG_H -DNMAP_NAME=\"Nmap\" -DNMAP_URL=\"http://nmap.org\" -DNMAP_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -DNMAPDATADIR=\"/ffp/share/nmap\" -D_FORTIFY_SOURCE=2 -g -O2 -Wall -fno-strict-aliasing   services.cc -o services.o
+g++ -c -I./liblua -I./libdnet-stripped/include  -I./libpcap -I./nbase -I./nsock/include -DHAVE_CONFIG_H -DNMAP_NAME=\"Nmap\" -DNMAP_URL=\"http://nmap.org\" -DNMAP_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -DNMAPDATADIR=\"/ffp/share/nmap\" -D_FORTIFY_SOURCE=2 -g -O2 -Wall -fno-strict-aliasing   protocols.cc -o protocols.o
+g++ -c -I./liblua -I./libdnet-stripped/include  -I./libpcap -I./nbase -I./nsock/include -DHAVE_CONFIG_H -DNMAP_NAME=\"Nmap\" -DNMAP_URL=\"http://nmap.org\" -DNMAP_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -DNMAPDATADIR=\"/ffp/share/nmap\" -D_FORTIFY_SOURCE=2 -g -O2 -Wall -fno-strict-aliasing   nmap_rpc.cc -o nmap_rpc.o
+g++ -c -I./liblua -I./libdnet-stripped/include  -I./libpcap -I./nbase -I./nsock/include -DHAVE_CONFIG_H -DNMAP_NAME=\"Nmap\" -DNMAP_URL=\"http://nmap.org\" -DNMAP_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -DNMAPDATADIR=\"/ffp/share/nmap\" -D_FORTIFY_SOURCE=2 -g -O2 -Wall -fno-strict-aliasing   portlist.cc -o portlist.o
+g++ -c -I./liblua -I./libdnet-stripped/include  -I./libpcap -I./nbase -I./nsock/include -DHAVE_CONFIG_H -DNMAP_NAME=\"Nmap\" -DNMAP_URL=\"http://nmap.org\" -DNMAP_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -DNMAPDATADIR=\"/ffp/share/nmap\" -D_FORTIFY_SOURCE=2 -g -O2 -Wall -fno-strict-aliasing   NmapOps.cc -o NmapOps.o
+g++ -c -I./liblua -I./libdnet-stripped/include  -I./libpcap -I./nbase -I./nsock/include -DHAVE_CONFIG_H -DNMAP_NAME=\"Nmap\" -DNMAP_URL=\"http://nmap.org\" -DNMAP_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -DNMAPDATADIR=\"/ffp/share/nmap\" -D_FORTIFY_SOURCE=2 -g -O2 -Wall -fno-strict-aliasing   TargetGroup.cc -o TargetGroup.o
+TargetGroup.cc: In member function 'int TargetGroup::parse_expr(const char*, int)':
+TargetGroup.cc:270:13: warning: value computed is not used
+g++ -c -I./liblua -I./libdnet-stripped/include  -I./libpcap -I./nbase -I./nsock/include -DHAVE_CONFIG_H -DNMAP_NAME=\"Nmap\" -DNMAP_URL=\"http://nmap.org\" -DNMAP_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -DNMAPDATADIR=\"/ffp/share/nmap\" -D_FORTIFY_SOURCE=2 -g -O2 -Wall -fno-strict-aliasing   Target.cc -o Target.o
+g++ -c -I./liblua -I./libdnet-stripped/include  -I./libpcap -I./nbase -I./nsock/include -DHAVE_CONFIG_H -DNMAP_NAME=\"Nmap\" -DNMAP_URL=\"http://nmap.org\" -DNMAP_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -DNMAPDATADIR=\"/ffp/share/nmap\" -D_FORTIFY_SOURCE=2 -g -O2 -Wall -fno-strict-aliasing   FingerPrintResults.cc -o FingerPrintResults.o
+g++ -c -I./liblua -I./libdnet-stripped/include  -I./libpcap -I./nbase -I./nsock/include -DHAVE_CONFIG_H -DNMAP_NAME=\"Nmap\" -DNMAP_URL=\"http://nmap.org\" -DNMAP_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -DNMAPDATADIR=\"/ffp/share/nmap\" -D_FORTIFY_SOURCE=2 -g -O2 -Wall -fno-strict-aliasing   service_scan.cc -o service_scan.o
+g++ -c -I./liblua -I./libdnet-stripped/include  -I./libpcap -I./nbase -I./nsock/include -DHAVE_CONFIG_H -DNMAP_NAME=\"Nmap\" -DNMAP_URL=\"http://nmap.org\" -DNMAP_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -DNMAPDATADIR=\"/ffp/share/nmap\" -D_FORTIFY_SOURCE=2 -g -O2 -Wall -fno-strict-aliasing   NmapOutputTable.cc -o NmapOutputTable.o
+g++ -c -I./liblua -I./libdnet-stripped/include  -I./libpcap -I./nbase -I./nsock/include -DHAVE_CONFIG_H -DNMAP_NAME=\"Nmap\" -DNMAP_URL=\"http://nmap.org\" -DNMAP_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -DNMAPDATADIR=\"/ffp/share/nmap\" -D_FORTIFY_SOURCE=2 -g -O2 -Wall -fno-strict-aliasing   MACLookup.cc -o MACLookup.o
+g++ -c -I./liblua -I./libdnet-stripped/include  -I./libpcap -I./nbase -I./nsock/include -DHAVE_CONFIG_H -DNMAP_NAME=\"Nmap\" -DNMAP_URL=\"http://nmap.org\" -DNMAP_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -DNMAPDATADIR=\"/ffp/share/nmap\" -D_FORTIFY_SOURCE=2 -g -O2 -Wall -fno-strict-aliasing   nmap_tty.cc -o nmap_tty.o
+g++ -c -I./liblua -I./libdnet-stripped/include  -I./libpcap -I./nbase -I./nsock/include -DHAVE_CONFIG_H -DNMAP_NAME=\"Nmap\" -DNMAP_URL=\"http://nmap.org\" -DNMAP_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -DNMAPDATADIR=\"/ffp/share/nmap\" -D_FORTIFY_SOURCE=2 -g -O2 -Wall -fno-strict-aliasing   nmap_dns.cc -o nmap_dns.o
+g++ -c -I./liblua -I./libdnet-stripped/include  -I./libpcap -I./nbase -I./nsock/include -DHAVE_CONFIG_H -DNMAP_NAME=\"Nmap\" -DNMAP_URL=\"http://nmap.org\" -DNMAP_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -DNMAPDATADIR=\"/ffp/share/nmap\" -D_FORTIFY_SOURCE=2 -g -O2 -Wall -fno-strict-aliasing   traceroute.cc -o traceroute.o
+g++ -c -I./liblua -I./libdnet-stripped/include  -I./libpcap -I./nbase -I./nsock/include -DHAVE_CONFIG_H -DNMAP_NAME=\"Nmap\" -DNMAP_URL=\"http://nmap.org\" -DNMAP_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -DNMAPDATADIR=\"/ffp/share/nmap\" -D_FORTIFY_SOURCE=2 -g -O2 -Wall -fno-strict-aliasing   portreasons.cc -o portreasons.o
+g++ -c -I./liblua -I./libdnet-stripped/include  -I./libpcap -I./nbase -I./nsock/include -DHAVE_CONFIG_H -DNMAP_NAME=\"Nmap\" -DNMAP_URL=\"http://nmap.org\" -DNMAP_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -DNMAPDATADIR=\"/ffp/share/nmap\" -D_FORTIFY_SOURCE=2 -g -O2 -Wall -fno-strict-aliasing   xml.cc -o xml.o
+xml.cc:296:5: note: the mangling of 'va_list' has changed in GCC 4.4
+g++ -c -I./liblua -I./libdnet-stripped/include  -I./libpcap -I./nbase -I./nsock/include -DHAVE_CONFIG_H -DNMAP_NAME=\"Nmap\" -DNMAP_URL=\"http://nmap.org\" -DNMAP_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -DNMAPDATADIR=\"/ffp/share/nmap\" -D_FORTIFY_SOURCE=2 -g -O2 -Wall -fno-strict-aliasing   nse_main.cc -o nse_main.o
+g++ -c -I./liblua -I./libdnet-stripped/include  -I./libpcap -I./nbase -I./nsock/include -DHAVE_CONFIG_H -DNMAP_NAME=\"Nmap\" -DNMAP_URL=\"http://nmap.org\" -DNMAP_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -DNMAPDATADIR=\"/ffp/share/nmap\" -D_FORTIFY_SOURCE=2 -g -O2 -Wall -fno-strict-aliasing   nse_utility.cc -o nse_utility.o
+g++ -c -I./liblua -I./libdnet-stripped/include  -I./libpcap -I./nbase -I./nsock/include -DHAVE_CONFIG_H -DNMAP_NAME=\"Nmap\" -DNMAP_URL=\"http://nmap.org\" -DNMAP_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -DNMAPDATADIR=\"/ffp/share/nmap\" -D_FORTIFY_SOURCE=2 -g -O2 -Wall -fno-strict-aliasing   nse_nsock.cc -o nse_nsock.o
+g++ -c -I./liblua -I./libdnet-stripped/include  -I./libpcap -I./nbase -I./nsock/include -DHAVE_CONFIG_H -DNMAP_NAME=\"Nmap\" -DNMAP_URL=\"http://nmap.org\" -DNMAP_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -DNMAPDATADIR=\"/ffp/share/nmap\" -D_FORTIFY_SOURCE=2 -g -O2 -Wall -fno-strict-aliasing   nse_dnet.cc -o nse_dnet.o
+g++ -c -I./liblua -I./libdnet-stripped/include  -I./libpcap -I./nbase -I./nsock/include -DHAVE_CONFIG_H -DNMAP_NAME=\"Nmap\" -DNMAP_URL=\"http://nmap.org\" -DNMAP_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -DNMAPDATADIR=\"/ffp/share/nmap\" -D_FORTIFY_SOURCE=2 -g -O2 -Wall -fno-strict-aliasing   nse_fs.cc -o nse_fs.o
+g++ -c -I./liblua -I./libdnet-stripped/include  -I./libpcap -I./nbase -I./nsock/include -DHAVE_CONFIG_H -DNMAP_NAME=\"Nmap\" -DNMAP_URL=\"http://nmap.org\" -DNMAP_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -DNMAPDATADIR=\"/ffp/share/nmap\" -D_FORTIFY_SOURCE=2 -g -O2 -Wall -fno-strict-aliasing   nse_nmaplib.cc -o nse_nmaplib.o
+g++ -c -I./liblua -I./libdnet-stripped/include  -I./libpcap -I./nbase -I./nsock/include -DHAVE_CONFIG_H -DNMAP_NAME=\"Nmap\" -DNMAP_URL=\"http://nmap.org\" -DNMAP_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -DNMAPDATADIR=\"/ffp/share/nmap\" -D_FORTIFY_SOURCE=2 -g -O2 -Wall -fno-strict-aliasing   nse_debug.cc -o nse_debug.o
+g++ -c -I./liblua -I./libdnet-stripped/include  -I./libpcap -I./nbase -I./nsock/include -DHAVE_CONFIG_H -DNMAP_NAME=\"Nmap\" -DNMAP_URL=\"http://nmap.org\" -DNMAP_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -DNMAPDATADIR=\"/ffp/share/nmap\" -D_FORTIFY_SOURCE=2 -g -O2 -Wall -fno-strict-aliasing   nse_pcrelib.cc -o nse_pcrelib.o
+g++ -c -I./liblua -I./libdnet-stripped/include  -I./libpcap -I./nbase -I./nsock/include -DHAVE_CONFIG_H -DNMAP_NAME=\"Nmap\" -DNMAP_URL=\"http://nmap.org\" -DNMAP_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -DNMAPDATADIR=\"/ffp/share/nmap\" -D_FORTIFY_SOURCE=2 -g -O2 -Wall -fno-strict-aliasing   nse_binlib.cc -o nse_binlib.o
+g++ -c -I./liblua -I./libdnet-stripped/include  -I./libpcap -I./nbase -I./nsock/include -DHAVE_CONFIG_H -DNMAP_NAME=\"Nmap\" -DNMAP_URL=\"http://nmap.org\" -DNMAP_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -DNMAPDATADIR=\"/ffp/share/nmap\" -D_FORTIFY_SOURCE=2 -g -O2 -Wall -fno-strict-aliasing   nse_bit.cc -o nse_bit.o
+g++ -c -I./liblua -I./libdnet-stripped/include  -I./libpcap -I./nbase -I./nsock/include -DHAVE_CONFIG_H -DNMAP_NAME=\"Nmap\" -DNMAP_URL=\"http://nmap.org\" -DNMAP_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -DNMAPDATADIR=\"/ffp/share/nmap\" -D_FORTIFY_SOURCE=2 -g -O2 -Wall -fno-strict-aliasing   nse_openssl.cc -o nse_openssl.o
+g++ -c -I./liblua -I./libdnet-stripped/include  -I./libpcap -I./nbase -I./nsock/include -DHAVE_CONFIG_H -DNMAP_NAME=\"Nmap\" -DNMAP_URL=\"http://nmap.org\" -DNMAP_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -DNMAPDATADIR=\"/ffp/share/nmap\" -D_FORTIFY_SOURCE=2 -g -O2 -Wall -fno-strict-aliasing   nse_ssl_cert.cc -o nse_ssl_cert.o
+Compiling nmap
+rm -f nmap
+g++ -Wl,-E -L/ffp/lib -Wl,-rpath,/ffp/lib -Lnbase -Lnsock/src/   -o nmap main.o nmap.o targets.o tcpip.o nmap_error.o utils.o idle_scan.o osscan.o osscan2.o output.o payload.o scan_engine.o timing.o charpool.o services.o protocols.o nmap_rpc.o portlist.o NmapOps.o TargetGroup.o Target.o FingerPrintResults.o service_scan.o NmapOutputTable.o MACLookup.o nmap_tty.o nmap_dns.o  traceroute.o portreasons.o xml.o nse_main.o nse_utility.o nse_nsock.o nse_dnet.o nse_fs.o nse_nmaplib.o nse_debug.o nse_pcrelib.o nse_binlib.o nse_bit.o nse_openssl.o nse_ssl_cert.o  -lnbase -lnsock -lpcre libpcap/libpcap.a -lssl -lcrypto libnetutil/libnetutil.a ./libdnet-stripped/src/.libs/libdnet.a ./liblua/liblua.a -ldl 
+cd zenmap && /ffp/bin/python setup.py build 
+running build
+running build_py
+creating build
+creating build/lib
+creating build/lib/zenmapCore
+copying zenmapCore/__init__.py -> build/lib/zenmapCore
+copying zenmapCore/Diff.py -> build/lib/zenmapCore
+copying zenmapCore/StringPool.py -> build/lib/zenmapCore
+copying zenmapCore/SearchResult.py -> build/lib/zenmapCore
+copying zenmapCore/UmitConfigParser.py -> build/lib/zenmapCore
+copying zenmapCore/UmitDB.py -> build/lib/zenmapCore
+copying zenmapCore/NmapParser.py -> build/lib/zenmapCore
+copying zenmapCore/BugRegister.py -> build/lib/zenmapCore
+copying zenmapCore/TargetList.py -> build/lib/zenmapCore
+copying zenmapCore/I18N.py -> build/lib/zenmapCore
+copying zenmapCore/UmitConf.py -> build/lib/zenmapCore
+copying zenmapCore/NSEDocParser.py -> build/lib/zenmapCore
+copying zenmapCore/ScriptMetadata.py -> build/lib/zenmapCore
+copying zenmapCore/NmapOptions.py -> build/lib/zenmapCore
+copying zenmapCore/NmapCommand.py -> build/lib/zenmapCore
+copying zenmapCore/BasePaths.py -> build/lib/zenmapCore
+copying zenmapCore/Paths.py -> build/lib/zenmapCore
+copying zenmapCore/Name.py -> build/lib/zenmapCore
+copying zenmapCore/UmitOptionParser.py -> build/lib/zenmapCore
+copying zenmapCore/RecentScans.py -> build/lib/zenmapCore
+copying zenmapCore/UmitLogging.py -> build/lib/zenmapCore
+copying zenmapCore/Version.py -> build/lib/zenmapCore
+copying zenmapCore/NetworkInventory.py -> build/lib/zenmapCore
+copying zenmapCore/ScriptArgsParser.py -> build/lib/zenmapCore
+creating build/lib/zenmapGUI
+copying zenmapGUI/App.py -> build/lib/zenmapGUI
+copying zenmapGUI/FilterBar.py -> build/lib/zenmapGUI
+copying zenmapGUI/ScanScanListPage.py -> build/lib/zenmapGUI
+copying zenmapGUI/__init__.py -> build/lib/zenmapGUI
+copying zenmapGUI/TargetCombo.py -> build/lib/zenmapGUI
+copying zenmapGUI/ScansListStore.py -> build/lib/zenmapGUI
+copying zenmapGUI/BugReport.py -> build/lib/zenmapGUI
+copying zenmapGUI/ScanNmapOutputPage.py -> build/lib/zenmapGUI
+copying zenmapGUI/ProfileEditor.py -> build/lib/zenmapGUI
+copying zenmapGUI/MainWindow.py -> build/lib/zenmapGUI
+copying zenmapGUI/ScriptInterface.py -> build/lib/zenmapGUI
+copying zenmapGUI/Print.py -> build/lib/zenmapGUI
+copying zenmapGUI/SearchWindow.py -> build/lib/zenmapGUI
+copying zenmapGUI/ScanHostsView.py -> build/lib/zenmapGUI
+copying zenmapGUI/ScanHostDetailsPage.py -> build/lib/zenmapGUI
+copying zenmapGUI/ScanOpenPortsPage.py -> build/lib/zenmapGUI
+copying zenmapGUI/ProfileHelp.py -> build/lib/zenmapGUI
+copying zenmapGUI/DiffCompare.py -> build/lib/zenmapGUI
+copying zenmapGUI/Icons.py -> build/lib/zenmapGUI
+copying zenmapGUI/About.py -> build/lib/zenmapGUI
+copying zenmapGUI/ProfileCombo.py -> build/lib/zenmapGUI
+copying zenmapGUI/NmapOutputProperties.py -> build/lib/zenmapGUI
+copying zenmapGUI/SearchGUI.py -> build/lib/zenmapGUI
+copying zenmapGUI/ScanRunDetailsPage.py -> build/lib/zenmapGUI
+copying zenmapGUI/ScanToolbar.py -> build/lib/zenmapGUI
+copying zenmapGUI/FileChoosers.py -> build/lib/zenmapGUI
+copying zenmapGUI/CrashReport.py -> build/lib/zenmapGUI
+copying zenmapGUI/ScanInterface.py -> build/lib/zenmapGUI
+copying zenmapGUI/TopologyPage.py -> build/lib/zenmapGUI
+copying zenmapGUI/NmapOutputViewer.py -> build/lib/zenmapGUI
+copying zenmapGUI/OptionBuilder.py -> build/lib/zenmapGUI
+creating build/lib/zenmapGUI/higwidgets
+copying zenmapGUI/higwidgets/higtables.py -> build/lib/zenmapGUI/higwidgets
+copying zenmapGUI/higwidgets/higframe.py -> build/lib/zenmapGUI/higwidgets
+copying zenmapGUI/higwidgets/__init__.py -> build/lib/zenmapGUI/higwidgets
+copying zenmapGUI/higwidgets/higlogindialogs.py -> build/lib/zenmapGUI/higwidgets
+copying zenmapGUI/higwidgets/utils.py -> build/lib/zenmapGUI/higwidgets
+copying zenmapGUI/higwidgets/gtkutils.py -> build/lib/zenmapGUI/higwidgets
+copying zenmapGUI/higwidgets/higentries.py -> build/lib/zenmapGUI/higwidgets
+copying zenmapGUI/higwidgets/higdialogs.py -> build/lib/zenmapGUI/higwidgets
+copying zenmapGUI/higwidgets/higexpanders.py -> build/lib/zenmapGUI/higwidgets
+copying zenmapGUI/higwidgets/higscrollers.py -> build/lib/zenmapGUI/higwidgets
+copying zenmapGUI/higwidgets/higtextviewers.py -> build/lib/zenmapGUI/higwidgets
+copying zenmapGUI/higwidgets/higprogressbars.py -> build/lib/zenmapGUI/higwidgets
+copying zenmapGUI/higwidgets/higbuttons.py -> build/lib/zenmapGUI/higwidgets
+copying zenmapGUI/higwidgets/hignotebooks.py -> build/lib/zenmapGUI/higwidgets
+copying zenmapGUI/higwidgets/higlabels.py -> build/lib/zenmapGUI/higwidgets
+copying zenmapGUI/higwidgets/higboxes.py -> build/lib/zenmapGUI/higwidgets
+copying zenmapGUI/higwidgets/higwindows.py -> build/lib/zenmapGUI/higwidgets
+copying zenmapGUI/higwidgets/higspinner.py -> build/lib/zenmapGUI/higwidgets
+creating build/lib/radialnet
+copying radialnet/__init__.py -> build/lib/radialnet
+creating build/lib/radialnet/bestwidgets
+copying radialnet/bestwidgets/frames.py -> build/lib/radialnet/bestwidgets
+copying radialnet/bestwidgets/__init__.py -> build/lib/radialnet/bestwidgets
+copying radialnet/bestwidgets/labels.py -> build/lib/radialnet/bestwidgets
+copying radialnet/bestwidgets/buttons.py -> build/lib/radialnet/bestwidgets
+copying radialnet/bestwidgets/expanders.py -> build/lib/radialnet/bestwidgets
+copying radialnet/bestwidgets/windows.py -> build/lib/radialnet/bestwidgets
+copying radialnet/bestwidgets/textview.py -> build/lib/radialnet/bestwidgets
+copying radialnet/bestwidgets/comboboxes.py -> build/lib/radialnet/bestwidgets
+copying radialnet/bestwidgets/boxes.py -> build/lib/radialnet/bestwidgets
+creating build/lib/radialnet/core
+copying radialnet/core/__init__.py -> build/lib/radialnet/core
+copying radialnet/core/Info.py -> build/lib/radialnet/core
+copying radialnet/core/Coordinate.py -> build/lib/radialnet/core
+copying radialnet/core/Interpolation.py -> build/lib/radialnet/core
+copying radialnet/core/Graph.py -> build/lib/radialnet/core
+copying radialnet/core/ArgvHandle.py -> build/lib/radialnet/core
+copying radialnet/core/XMLHandler.py -> build/lib/radialnet/core
+creating build/lib/radialnet/gui
+copying radialnet/gui/Toolbar.py -> build/lib/radialnet/gui
+copying radialnet/gui/HostsViewer.py -> build/lib/radialnet/gui
+copying radialnet/gui/__init__.py -> build/lib/radialnet/gui
+copying radialnet/gui/RadialNet.py -> build/lib/radialnet/gui
+copying radialnet/gui/SaveDialog.py -> build/lib/radialnet/gui
+copying radialnet/gui/Application.py -> build/lib/radialnet/gui
+copying radialnet/gui/Image.py -> build/lib/radialnet/gui
+copying radialnet/gui/Dialogs.py -> build/lib/radialnet/gui
+copying radialnet/gui/ControlWidget.py -> build/lib/radialnet/gui
+copying radialnet/gui/NodeWindow.py -> build/lib/radialnet/gui
+copying radialnet/gui/NodeNotebook.py -> build/lib/radialnet/gui
+creating build/lib/radialnet/util
+copying radialnet/util/__init__.py -> build/lib/radialnet/util
+copying radialnet/util/integration.py -> build/lib/radialnet/util
+copying radialnet/util/drawing.py -> build/lib/radialnet/util
+copying radialnet/util/misc.py -> build/lib/radialnet/util
+copying radialnet/util/geometry.py -> build/lib/radialnet/util
+running build_scripts
+creating build/scripts-2.7
+copying and adjusting zenmap -> build/scripts-2.7
+changing mode of build/scripts-2.7/zenmap from 644 to 755
+cd ndiff && /ffp/bin/python setup.py build 
+running build
+running build_scripts
+creating build
+creating build/scripts-2.7
+copying and adjusting ndiff -> build/scripts-2.7
+changing mode of build/scripts-2.7/ndiff from 644 to 755
+Compiling libnbase
+cd nbase && make
+make[2]: Entering directory `/tmp/nmap.Fj8tqb/nmap-5.51/nbase'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/tmp/nmap.Fj8tqb/nmap-5.51/nbase'
+Compiling libnsock
+cd nsock/src && make
+make[2]: Entering directory `/tmp/nmap.Fj8tqb/nmap-5.51/nsock/src'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/tmp/nmap.Fj8tqb/nmap-5.51/nsock/src'
+Compiling libnetutil
+cd libnetutil && make
+make[2]: Entering directory `/tmp/nmap.Fj8tqb/nmap-5.51/libnetutil'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/tmp/nmap.Fj8tqb/nmap-5.51/libnetutil'
+make[2]: Entering directory `/tmp/nmap.Fj8tqb/nmap-5.51/nping'
+Makefile:167: makefile.dep: No such file or directory
+g++ -MM -I../libdnet-stripped/include  -I../libpcap -I../nbase -I../nsock/include ArgParser.cc NetworkLayerElement.cc PacketElement.cc common.cc common_modified.cc nping.cc RawData.cc UDPHeader.cc NpingOps.cc TCPHeader.cc utils.cc utils_net.cc IPv4Header.cc IPv6Header.cc ICMPv4Header.cc output.cc TransportLayerElement.cc stats.cc NpingTargets.cc NpingTarget.cc EthernetHeader.cc ARPHeader.cc EchoHeader.cc EchoServer.cc EchoClient.cc ProbeMode.cc NEPContext.cc Crypto.cc PacketDiff.cc  > makefile.dep
+make[2]: Leaving directory `/tmp/nmap.Fj8tqb/nmap-5.51/nping'
+make[2]: Entering directory `/tmp/nmap.Fj8tqb/nmap-5.51/nping'
+make nping
+make[3]: Entering directory `/tmp/nmap.Fj8tqb/nmap-5.51/nping'
+g++ -c -I../libdnet-stripped/include  -I../libpcap -I../nbase -I../nsock/include -g -O2 -Wall  -fno-strict-aliasing   -DHAVE_CONFIG_H -DNPING_NAME=\"Nping\" -DNPING_URL=\"http://nmap.org/nping\" -DNPING_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -D_FORTIFY_SOURCE=2 ArgParser.cc -o ArgParser.o
+g++ -c -I../libdnet-stripped/include  -I../libpcap -I../nbase -I../nsock/include -g -O2 -Wall  -fno-strict-aliasing   -DHAVE_CONFIG_H -DNPING_NAME=\"Nping\" -DNPING_URL=\"http://nmap.org/nping\" -DNPING_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -D_FORTIFY_SOURCE=2 NetworkLayerElement.cc -o NetworkLayerElement.o
+g++ -c -I../libdnet-stripped/include  -I../libpcap -I../nbase -I../nsock/include -g -O2 -Wall  -fno-strict-aliasing   -DHAVE_CONFIG_H -DNPING_NAME=\"Nping\" -DNPING_URL=\"http://nmap.org/nping\" -DNPING_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -D_FORTIFY_SOURCE=2 PacketElement.cc -o PacketElement.o
+g++ -c -I../libdnet-stripped/include  -I../libpcap -I../nbase -I../nsock/include -g -O2 -Wall  -fno-strict-aliasing   -DHAVE_CONFIG_H -DNPING_NAME=\"Nping\" -DNPING_URL=\"http://nmap.org/nping\" -DNPING_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -D_FORTIFY_SOURCE=2 common.cc -o common.o
+g++ -c -I../libdnet-stripped/include  -I../libpcap -I../nbase -I../nsock/include -g -O2 -Wall  -fno-strict-aliasing   -DHAVE_CONFIG_H -DNPING_NAME=\"Nping\" -DNPING_URL=\"http://nmap.org/nping\" -DNPING_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -D_FORTIFY_SOURCE=2 common_modified.cc -o common_modified.o
+common_modified.cc: In member function 'int TargetGroup::parse_expr(const char*, int)':
+common_modified.cc:483:13: warning: value computed is not used
+g++ -c -I../libdnet-stripped/include  -I../libpcap -I../nbase -I../nsock/include -g -O2 -Wall  -fno-strict-aliasing   -DHAVE_CONFIG_H -DNPING_NAME=\"Nping\" -DNPING_URL=\"http://nmap.org/nping\" -DNPING_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -D_FORTIFY_SOURCE=2 nping.cc -o nping.o
+g++ -c -I../libdnet-stripped/include  -I../libpcap -I../nbase -I../nsock/include -g -O2 -Wall  -fno-strict-aliasing   -DHAVE_CONFIG_H -DNPING_NAME=\"Nping\" -DNPING_URL=\"http://nmap.org/nping\" -DNPING_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -D_FORTIFY_SOURCE=2 RawData.cc -o RawData.o
+g++ -c -I../libdnet-stripped/include  -I../libpcap -I../nbase -I../nsock/include -g -O2 -Wall  -fno-strict-aliasing   -DHAVE_CONFIG_H -DNPING_NAME=\"Nping\" -DNPING_URL=\"http://nmap.org/nping\" -DNPING_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -D_FORTIFY_SOURCE=2 UDPHeader.cc -o UDPHeader.o
+g++ -c -I../libdnet-stripped/include  -I../libpcap -I../nbase -I../nsock/include -g -O2 -Wall  -fno-strict-aliasing   -DHAVE_CONFIG_H -DNPING_NAME=\"Nping\" -DNPING_URL=\"http://nmap.org/nping\" -DNPING_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -D_FORTIFY_SOURCE=2 NpingOps.cc -o NpingOps.o
+g++ -c -I../libdnet-stripped/include  -I../libpcap -I../nbase -I../nsock/include -g -O2 -Wall  -fno-strict-aliasing   -DHAVE_CONFIG_H -DNPING_NAME=\"Nping\" -DNPING_URL=\"http://nmap.org/nping\" -DNPING_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -D_FORTIFY_SOURCE=2 TCPHeader.cc -o TCPHeader.o
+g++ -c -I../libdnet-stripped/include  -I../libpcap -I../nbase -I../nsock/include -g -O2 -Wall  -fno-strict-aliasing   -DHAVE_CONFIG_H -DNPING_NAME=\"Nping\" -DNPING_URL=\"http://nmap.org/nping\" -DNPING_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -D_FORTIFY_SOURCE=2 utils.cc -o utils.o
+g++ -c -I../libdnet-stripped/include  -I../libpcap -I../nbase -I../nsock/include -g -O2 -Wall  -fno-strict-aliasing   -DHAVE_CONFIG_H -DNPING_NAME=\"Nping\" -DNPING_URL=\"http://nmap.org/nping\" -DNPING_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -D_FORTIFY_SOURCE=2 utils_net.cc -o utils_net.o
+g++ -c -I../libdnet-stripped/include  -I../libpcap -I../nbase -I../nsock/include -g -O2 -Wall  -fno-strict-aliasing   -DHAVE_CONFIG_H -DNPING_NAME=\"Nping\" -DNPING_URL=\"http://nmap.org/nping\" -DNPING_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -D_FORTIFY_SOURCE=2 IPv4Header.cc -o IPv4Header.o
+g++ -c -I../libdnet-stripped/include  -I../libpcap -I../nbase -I../nsock/include -g -O2 -Wall  -fno-strict-aliasing   -DHAVE_CONFIG_H -DNPING_NAME=\"Nping\" -DNPING_URL=\"http://nmap.org/nping\" -DNPING_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -D_FORTIFY_SOURCE=2 ICMPv4Header.cc -o ICMPv4Header.o
+g++ -c -I../libdnet-stripped/include  -I../libpcap -I../nbase -I../nsock/include -g -O2 -Wall  -fno-strict-aliasing   -DHAVE_CONFIG_H -DNPING_NAME=\"Nping\" -DNPING_URL=\"http://nmap.org/nping\" -DNPING_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -D_FORTIFY_SOURCE=2 IPv6Header.cc -o IPv6Header.o
+g++ -c -I../libdnet-stripped/include  -I../libpcap -I../nbase -I../nsock/include -g -O2 -Wall  -fno-strict-aliasing   -DHAVE_CONFIG_H -DNPING_NAME=\"Nping\" -DNPING_URL=\"http://nmap.org/nping\" -DNPING_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -D_FORTIFY_SOURCE=2 output.cc -o output.o
+g++ -c -I../libdnet-stripped/include  -I../libpcap -I../nbase -I../nsock/include -g -O2 -Wall  -fno-strict-aliasing   -DHAVE_CONFIG_H -DNPING_NAME=\"Nping\" -DNPING_URL=\"http://nmap.org/nping\" -DNPING_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -D_FORTIFY_SOURCE=2 TransportLayerElement.cc -o TransportLayerElement.o
+g++ -c -I../libdnet-stripped/include  -I../libpcap -I../nbase -I../nsock/include -g -O2 -Wall  -fno-strict-aliasing   -DHAVE_CONFIG_H -DNPING_NAME=\"Nping\" -DNPING_URL=\"http://nmap.org/nping\" -DNPING_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -D_FORTIFY_SOURCE=2 stats.cc -o stats.o
+g++ -c -I../libdnet-stripped/include  -I../libpcap -I../nbase -I../nsock/include -g -O2 -Wall  -fno-strict-aliasing   -DHAVE_CONFIG_H -DNPING_NAME=\"Nping\" -DNPING_URL=\"http://nmap.org/nping\" -DNPING_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -D_FORTIFY_SOURCE=2 NpingTargets.cc -o NpingTargets.o
+g++ -c -I../libdnet-stripped/include  -I../libpcap -I../nbase -I../nsock/include -g -O2 -Wall  -fno-strict-aliasing   -DHAVE_CONFIG_H -DNPING_NAME=\"Nping\" -DNPING_URL=\"http://nmap.org/nping\" -DNPING_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -D_FORTIFY_SOURCE=2 NpingTarget.cc -o NpingTarget.o
+g++ -c -I../libdnet-stripped/include  -I../libpcap -I../nbase -I../nsock/include -g -O2 -Wall  -fno-strict-aliasing   -DHAVE_CONFIG_H -DNPING_NAME=\"Nping\" -DNPING_URL=\"http://nmap.org/nping\" -DNPING_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -D_FORTIFY_SOURCE=2 EthernetHeader.cc -o EthernetHeader.o
+g++ -c -I../libdnet-stripped/include  -I../libpcap -I../nbase -I../nsock/include -g -O2 -Wall  -fno-strict-aliasing   -DHAVE_CONFIG_H -DNPING_NAME=\"Nping\" -DNPING_URL=\"http://nmap.org/nping\" -DNPING_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -D_FORTIFY_SOURCE=2 ARPHeader.cc -o ARPHeader.o
+g++ -c -I../libdnet-stripped/include  -I../libpcap -I../nbase -I../nsock/include -g -O2 -Wall  -fno-strict-aliasing   -DHAVE_CONFIG_H -DNPING_NAME=\"Nping\" -DNPING_URL=\"http://nmap.org/nping\" -DNPING_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -D_FORTIFY_SOURCE=2 EchoHeader.cc -o EchoHeader.o
+g++ -c -I../libdnet-stripped/include  -I../libpcap -I../nbase -I../nsock/include -g -O2 -Wall  -fno-strict-aliasing   -DHAVE_CONFIG_H -DNPING_NAME=\"Nping\" -DNPING_URL=\"http://nmap.org/nping\" -DNPING_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -D_FORTIFY_SOURCE=2 EchoServer.cc -o EchoServer.o
+g++ -c -I../libdnet-stripped/include  -I../libpcap -I../nbase -I../nsock/include -g -O2 -Wall  -fno-strict-aliasing   -DHAVE_CONFIG_H -DNPING_NAME=\"Nping\" -DNPING_URL=\"http://nmap.org/nping\" -DNPING_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -D_FORTIFY_SOURCE=2 EchoClient.cc -o EchoClient.o
+g++ -c -I../libdnet-stripped/include  -I../libpcap -I../nbase -I../nsock/include -g -O2 -Wall  -fno-strict-aliasing   -DHAVE_CONFIG_H -DNPING_NAME=\"Nping\" -DNPING_URL=\"http://nmap.org/nping\" -DNPING_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -D_FORTIFY_SOURCE=2 ProbeMode.cc -o ProbeMode.o
+g++ -c -I../libdnet-stripped/include  -I../libpcap -I../nbase -I../nsock/include -g -O2 -Wall  -fno-strict-aliasing   -DHAVE_CONFIG_H -DNPING_NAME=\"Nping\" -DNPING_URL=\"http://nmap.org/nping\" -DNPING_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -D_FORTIFY_SOURCE=2 NEPContext.cc -o NEPContext.o
+g++ -c -I../libdnet-stripped/include  -I../libpcap -I../nbase -I../nsock/include -g -O2 -Wall  -fno-strict-aliasing   -DHAVE_CONFIG_H -DNPING_NAME=\"Nping\" -DNPING_URL=\"http://nmap.org/nping\" -DNPING_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -D_FORTIFY_SOURCE=2 Crypto.cc -o Crypto.o
+g++ -c -I../libdnet-stripped/include  -I../libpcap -I../nbase -I../nsock/include -g -O2 -Wall  -fno-strict-aliasing   -DHAVE_CONFIG_H -DNPING_NAME=\"Nping\" -DNPING_URL=\"http://nmap.org/nping\" -DNPING_PLATFORM=\"armv5tejl-unknown-linux-gnueabi\" -D_FORTIFY_SOURCE=2 PacketDiff.cc -o PacketDiff.o
+Compiling nping
+rm -f nping
+g++ -L/ffp/lib -Wl,-rpath,/ffp/lib   -o nping ArgParser.o NetworkLayerElement.o PacketElement.o common.o common_modified.o nping.o RawData.o UDPHeader.o  NpingOps.o TCPHeader.o utils.o utils_net.o IPv4Header.o ICMPv4Header.o IPv6Header.o output.o TransportLayerElement.o stats.o NpingTargets.o NpingTarget.o EthernetHeader.o ARPHeader.o EchoHeader.o EchoServer.o EchoClient.o ProbeMode.o NEPContext.o Crypto.o PacketDiff.o  ../nbase/libnbase.a ../nsock/src/libnsock.a ../libnetutil/libnetutil.a -lssl -lcrypto ../libpcap/libpcap.a ../libdnet-stripped/src/.libs/libdnet.a -ldl  -lpthread
+Nping compiled successfully!
+make[3]: Leaving directory `/tmp/nmap.Fj8tqb/nmap-5.51/nping'
+make[2]: Leaving directory `/tmp/nmap.Fj8tqb/nmap-5.51/nping'
+make[1]: Leaving directory `/tmp/nmap.Fj8tqb/nmap-5.51'
++ make DESTDIR=/tmp/nmap.Fj8tqb/pkg install
+/ffp/bin/install -c -d /tmp/nmap.Fj8tqb/pkg/ffp/bin /tmp/nmap.Fj8tqb/pkg/ffp/share/man/man1 /tmp/nmap.Fj8tqb/pkg/ffp/share/nmap
+/ffp/bin/install -c -c -m 755 nmap /tmp/nmap.Fj8tqb/pkg/ffp/bin/nmap
+/ffp/bin/strip -x /tmp/nmap.Fj8tqb/pkg/ffp/bin/nmap
+/ffp/bin/install -c -c -m 644 docs/nmap.1 /tmp/nmap.Fj8tqb/pkg/ffp/share/man/man1/
+if [ "yes" = "yes" ]; then \
+	  for ll in de es fr hr hu it jp pl pt_BR pt_PT ro ru sk zh; do \
+	    /ffp/bin/install -c -d /tmp/nmap.Fj8tqb/pkg/ffp/share/man/$ll/man1; \
+	    /ffp/bin/install -c -c -m 644 docs/man-xlate/nmap-$ll.1 /tmp/nmap.Fj8tqb/pkg/ffp/share/man/$ll/man1/nmap.1; \
+	  done; \
+	fi
+/ffp/bin/install -c -c -m 644 docs/nmap.xsl /tmp/nmap.Fj8tqb/pkg/ffp/share/nmap/
+/ffp/bin/install -c -c -m 644 docs/nmap.dtd /tmp/nmap.Fj8tqb/pkg/ffp/share/nmap/
+/ffp/bin/install -c -c -m 644 nmap-services /tmp/nmap.Fj8tqb/pkg/ffp/share/nmap/
+/ffp/bin/install -c -c -m 644 nmap-payloads /tmp/nmap.Fj8tqb/pkg/ffp/share/nmap/
+/ffp/bin/install -c -c -m 644 nmap-rpc /tmp/nmap.Fj8tqb/pkg/ffp/share/nmap/
+/ffp/bin/install -c -c -m 644 nmap-os-db /tmp/nmap.Fj8tqb/pkg/ffp/share/nmap/
+/ffp/bin/install -c -c -m 644 nmap-service-probes /tmp/nmap.Fj8tqb/pkg/ffp/share/nmap/
+/ffp/bin/install -c -c -m 644 nmap-protocols /tmp/nmap.Fj8tqb/pkg/ffp/share/nmap/
+/ffp/bin/install -c -c -m 644 nmap-mac-prefixes /tmp/nmap.Fj8tqb/pkg/ffp/share/nmap/
+/ffp/bin/install -c -d /tmp/nmap.Fj8tqb/pkg/ffp/share/nmap/scripts
+/ffp/bin/install -c -d /tmp/nmap.Fj8tqb/pkg/ffp/share/nmap/nselib
+(cd /tmp/nmap.Fj8tqb/pkg/ffp/share/nmap/scripts && rm -f anonFTP.nse ASN.nse brutePOP3.nse bruteTelnet.nse chargenTest.nse daytimeTest.nse dns-safe-recursion-port.nse dns-safe-recursion-txid.nse dns-test-open-recursion.nse domino-enum-passwords.nse echoTest.nse ftpbounce.nse HTTPAuth.nse HTTP_open_proxy.nse HTTPpasswd.nse HTTPtrace.nse iax2Detect.nse ircServerInfo.nse ircZombieTest.nse MSSQLm.nse MySQLinfo.nse netbios-smb-os-discovery.nse nfs-acls.nse nfs-dirlist.nse popcapa.nse PPTPversion.nse promiscuous.nse RealVNC_auth_bypass.nse ripeQuery.nse robots.nse showHTMLTitle.nse showHTTPVersion.nse showOwner.nse showSMTPVersion.nse showSSHVersion.nse skype_v2-version.nse smb-enumdomains.nse smb-enumsessions.nse smb-enumshares.nse smb-enumusers.nse smb-serverstats.nse smb-systeminfo.nse SMTPcommands.nse SMTP_openrelay_test.nse SNMPcommunitybrute.nse SNMPsysdescr.nse SQLInject.nse SSH-hostkey.nse SSHv1-support.nse SSLv2-support.nse strangeSMTPport.nse UPnP-info.nse xamppDefaultPass.nse zoneTrans.nse db2-info.nse db2-brute.nse html-title.nse robots.txt.nse)
+/ffp/bin/install -c -c -m 644 nse_main.lua /tmp/nmap.Fj8tqb/pkg/ffp/share/nmap/
+/ffp/bin/install -c -c -m 644 scripts/script.db scripts/*.nse /tmp/nmap.Fj8tqb/pkg/ffp/share/nmap/scripts
+/ffp/bin/install -c -c -m 644 nselib/*.lua /tmp/nmap.Fj8tqb/pkg/ffp/share/nmap/nselib
+/ffp/bin/install -c -d /tmp/nmap.Fj8tqb/pkg/ffp/share/nmap/nselib/data
+for f in `find nselib/data -name .svn -prune -o -type d -print`; do \
+		/ffp/bin/install -c -d /tmp/nmap.Fj8tqb/pkg/ffp/share/nmap/$f; \
+	done
+for f in `find nselib/data -name .svn -prune -o -type f -print`; do \
+		/ffp/bin/install -c -c -m 644 $f /tmp/nmap.Fj8tqb/pkg/ffp/share/nmap/$f; \
+	done
+/ffp/bin/install -c -d /tmp/nmap.Fj8tqb/pkg/ffp/bin /tmp/nmap.Fj8tqb/pkg/ffp/share/man/man1
+cd zenmap && /ffp/bin/python setup.py --quiet install --prefix "/ffp" --force --root "/tmp/nmap.Fj8tqb/pkg"
+/ffp/bin/install -c -c -m 644 docs/zenmap.1 /tmp/nmap.Fj8tqb/pkg/ffp/share/man/man1/
+if [ ! -f /tmp/nmap.Fj8tqb/pkg/ffp/bin/nmapfe -o -L /tmp/nmap.Fj8tqb/pkg/ffp/bin/nmapfe ]; then \
+		ln -sf zenmap /tmp/nmap.Fj8tqb/pkg/ffp/bin/nmapfe; \
+	fi
+ln -sf zenmap /tmp/nmap.Fj8tqb/pkg/ffp/bin/xnmap
+make[1]: Entering directory `/tmp/nmap.Fj8tqb/nmap-5.51/ncat'
+Installing Ncat
+../shtool mkdir -f -p -m 755 /tmp/nmap.Fj8tqb/pkg/ffp/bin /tmp/nmap.Fj8tqb/pkg/ffp/share/man/man1
+/ffp/bin/install -c -c -m 755 ncat /tmp/nmap.Fj8tqb/pkg/ffp/bin/ncat
+/ffp/bin/strip -x /tmp/nmap.Fj8tqb/pkg/ffp/bin/ncat
+if [ -n "certs/ca-bundle.crt" ]; then \
+		../shtool mkdir -f -p -m 755 /tmp/nmap.Fj8tqb/pkg/ffp/share/ncat; \
+		/ffp/bin/install -c -c -m 644 certs/ca-bundle.crt /tmp/nmap.Fj8tqb/pkg/ffp/share/ncat/; \
+	fi
+/ffp/bin/install -c -c -m 644 docs/ncat.1 /tmp/nmap.Fj8tqb/pkg/ffp/share/man/man1/ncat.1
+make[1]: Leaving directory `/tmp/nmap.Fj8tqb/nmap-5.51/ncat'
+cd ndiff && /ffp/bin/python setup.py install --prefix "/ffp" --root "/tmp/nmap.Fj8tqb/pkg"
+running install
+running build
+running build_scripts
+running install_scripts
+copying build/scripts-2.7/ndiff -> /tmp/nmap.Fj8tqb/pkg/ffp/bin
+changing mode of /tmp/nmap.Fj8tqb/pkg/ffp/bin/ndiff to 755
+running install_data
+copying docs/ndiff.1 -> /tmp/nmap.Fj8tqb/pkg/ffp/share/man/man1
+running install_egg_info
+make[1]: Entering directory `/tmp/nmap.Fj8tqb/nmap-5.51/nping'
+/ffp/bin/install -c -d /tmp/nmap.Fj8tqb/pkg/ffp/bin /tmp/nmap.Fj8tqb/pkg/ffp/share/man/man1
+/ffp/bin/install -c -c -m 755 nping /tmp/nmap.Fj8tqb/pkg/ffp/bin/nping
+/ffp/bin/strip -x /tmp/nmap.Fj8tqb/pkg/ffp/bin/nping
+/ffp/bin/install -c -c -m 644 docs/nping.1 /tmp/nmap.Fj8tqb/pkg/ffp/share/man/man1/
+NPING SUCCESSFULLY INSTALLED
+make[1]: Leaving directory `/tmp/nmap.Fj8tqb/nmap-5.51/nping'
+NMAP SUCCESSFULLY INSTALLED
++ mkdir -p /tmp/nmap.Fj8tqb/pkg/install
++ cp /ffp/home/root/src/nmap/DESCR /ffp/home/root/src/nmap/HOMEPAGE /tmp/nmap.Fj8tqb/pkg/install/
++ cd /tmp/nmap.Fj8tqb/pkg
++ makepkg nmap 5.51 1
+Creating /tmp/nmap-5.51-arm-1.tar ...
