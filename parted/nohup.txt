@@ -1,0 +1,1375 @@
+++ basename ./parted.funpkg .funpkg
++ PN=parted
++ PR=1
++ . ./config.ffp
+++ GNU_HOST=
+++ GNU_TARGET=
+++ FFP_CFLAGS='-I/ffp/include -O2'
+++ FFP_LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
+++ '[' '!' -d '' ']'
+++ TMPDIR=/tmp
+++ export TMPDIR
+++ mandir=/ffp/share/man
+++ infodir=/ffp/share/info
+++ docdir=/ffp/share/doc
+++ pwd
++ X=/ffp/home/root/fun_plug/ffp_packages/parted
+++ mktemp -t -d parted.XXXXXX
++ W=/tmp/parted.jFEWCM
++ D=/tmp/parted.jFEWCM/pkg
++ cd /tmp/parted.jFEWCM
++ cat /ffp/home/root/fun_plug/ffp_packages/parted/SRC_URI
++ xargs wget
+--2013-04-19 11:53:01--  http://ftp.gnu.org/gnu/parted/parted-3.1.tar.xz
+Resolving ftp.gnu.org... 2001:4830:134:3::b, 208.118.235.20
+Connecting to ftp.gnu.org|2001:4830:134:3::b|:80... failed: Address family not supported by protocol.
+Connecting to ftp.gnu.org|208.118.235.20|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1524344 (1.5M) [application/x-tar]
+Saving to: `parted-3.1.tar.xz'
+
+     0K .......... .......... .......... .......... ..........  3%  146K 10s
+    50K .......... .......... .......... .......... ..........  6%  400K 6s
+   100K .......... .......... .......... .......... .......... 10%  426K 5s
+   150K .......... .......... .......... .......... .......... 13%  457K 4s
+   200K .......... .......... .......... .......... .......... 16% 1.33M 4s
+   250K .......... .......... .......... .......... .......... 20%  256K 4s
+   300K .......... .......... .......... .......... .......... 23% 16.7M 3s
+   350K .......... .......... .......... .......... .......... 26%  255K 3s
+   400K .......... .......... .......... .......... .......... 30%  404K 3s
+   450K .......... .......... .......... .......... .......... 33%  453K 3s
+   500K .......... .......... .......... .......... .......... 36%  323K 3s
+   550K .......... .......... .......... .......... .......... 40% 18.9M 2s
+   600K .......... .......... .......... .......... .......... 43%  495K 2s
+   650K .......... .......... .......... .......... .......... 47%  449K 2s
+   700K .......... .......... .......... .......... .......... 50%  413K 2s
+   750K .......... .......... .......... .......... .......... 53%  417K 2s
+   800K .......... .......... .......... .......... .......... 57%  313K 2s
+   850K .......... .......... .......... .......... .......... 60%  333K 1s
+   900K .......... .......... .......... .......... .......... 63%  421K 1s
+   950K .......... .......... .......... .......... .......... 67%  441K 1s
+  1000K .......... .......... .......... .......... .......... 70%  427K 1s
+  1050K .......... .......... .......... .......... .......... 73%  423K 1s
+  1100K .......... .......... .......... .......... .......... 77%  423K 1s
+  1150K .......... .......... .......... .......... .......... 80%  259K 1s
+  1200K .......... .......... .......... .......... .......... 83%  900K 1s
+  1250K .......... .......... .......... .......... .......... 87%  266K 0s
+  1300K .......... .......... .......... .......... .......... 90%  260K 0s
+  1350K .......... .......... .......... .......... .......... 94%  304K 0s
+  1400K .......... .......... .......... .......... .......... 97%  284K 0s
+  1450K .......... .......... .......... ........             100%  259K=4.0s
+
+2013-04-19 11:53:05 (374 KB/s) - `parted-3.1.tar.xz' saved [1524344/1524344]
+
+++ ls parted-3.1.tar.xz
+++ egrep -o '[0-9][0-9.]*[0-9]'
++ PV=3.1
++ tar xf parted-3.1.tar.xz
++ cd parted-3.1 parted-3.1.tar.xz
+++ ls '/ffp/home/root/fun_plug/ffp_packages/parted/patches/*.patch'
+ls: cannot access /ffp/home/root/fun_plug/ffp_packages/parted/patches/*.patch: No such file or directory
++ CFLAGS='-I/ffp/include -O2 -D_GNU_SOURCE -pthread'
++ CXXFLAGS='-I/ffp/include -O2 -D_GNU_SOURCE -pthread'
++ LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread '
++ ./configure --prefix=/ffp --build= --host= --mandir=/ffp/share/man --infodir=/ffp/share/info --enable-shared --disable-readline --disable-device-mapper --disable-static
+configure: WARNING: unrecognized options: --disable-readline
+checking for a BSD-compatible install... /ffp/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /ffp/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking build system type... armv5tejl-unknown-linux-gnueabi
+checking host system type... armv5tejl-unknown-linux-gnueabi
+checking for style of include used by make... GNU
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking dependency style of gcc... gcc3
+checking for library containing strerror... none required
+checking for gcc... (cached) gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to accept ISO C89... (cached) none needed
+checking dependency style of gcc... (cached) gcc3
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /ffp/bin/grep
+checking for egrep... /ffp/bin/grep -E
+checking whether gcc needs -traditional... no
+checking whether gcc and cc understand -c and -o together... yes
+checking for Minix Amsterdam compiler... no
+checking for ar... ar
+checking for ranlib... ranlib
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... 64
+checking for gcc option to accept ISO C99... -std=gnu99
+checking for gcc -std=gnu99 option to accept ISO Standard C... (cached) -std=gnu99
+checking for a usable (O_DIRECT-supporting) temporary dir... .
+checking for special C compiler options needed for large files... (cached) no
+checking for _FILE_OFFSET_BITS value needed for large files... (cached) 64
+checking for size_t... yes
+checking for working alloca.h... yes
+checking for alloca... yes
+checking whether <wchar.h> uses 'inline' correctly... yes
+checking for btowc... yes
+checking for canonicalize_file_name... yes
+checking for getcwd... yes
+checking for readlink... yes
+checking for realpath... yes
+checking for _set_invalid_parameter_handler... no
+checking for fchdir... yes
+checking for symlink... yes
+checking for __fpending... yes
+checking for fsync... yes
+checking for gettimeofday... yes
+checking for lstat... yes
+checking for mbsinit... yes
+checking for mbrtowc... yes
+checking for mkstemp... yes
+checking for nl_langinfo... yes
+checking for isblank... yes
+checking for iswctype... yes
+checking for wcscoll... yes
+checking for sleep... yes
+checking for strdup... yes
+checking for strerror_r... yes
+checking for __xpg_strerror_r... yes
+checking for strndup... yes
+checking for usleep... yes
+checking for wcrtomb... yes
+checking for iswcntrl... yes
+checking for newlocale... no
+checking for setenv... yes
+checking for mprotect... yes
+checking for wctob... yes
+checking for nl_langinfo and CODESET... yes
+checking for a traditional french locale... none
+checking whether malloc, realloc, calloc are POSIX compliant... yes
+checking whether // is distinct from /... no
+checking whether realpath works... no
+checking for sys/param.h... yes
+checking for sys/socket.h... yes
+checking for unistd.h... (cached) yes
+checking for stdio_ext.h... yes
+checking for getopt.h... yes
+checking for sys/time.h... yes
+checking for wchar.h... yes
+checking for stdint.h... (cached) yes
+checking for inttypes.h... (cached) yes
+checking for langinfo.h... yes
+checking for strings.h... (cached) yes
+checking for sys/stat.h... (cached) yes
+checking for features.h... yes
+checking for wctype.h... yes
+checking for xlocale.h... no
+checking for priv.h... no
+checking for sys/mman.h... yes
+checking for blkid/blkid.h... yes
+checking whether the preprocessor supports include_next... yes
+checking whether system header files limit the line length... no
+checking for complete errno.h... yes
+checking whether strerror_r is declared... yes
+checking for strerror_r... (cached) yes
+checking whether strerror_r returns char *... yes
+checking for inline... inline
+checking for working fcntl.h... yes
+checking for pid_t... yes
+checking for mode_t... yes
+checking for getopt.h... (cached) yes
+checking for getopt_long_only... yes
+checking whether getopt is POSIX compatible... yes
+checking for working GNU getopt function... no
+checking whether getenv is declared... yes
+checking for C/C++ restrict keyword... __restrict
+checking for struct timeval... yes
+checking for correct struct timeval.tv_sec member... yes
+checking whether gettimeofday is declared without a macro... yes
+checking for unsigned long long int... yes
+checking for long long int... yes
+checking whether stdint.h conforms to C99... no
+checking sys/inttypes.h usability... no
+checking sys/inttypes.h presence... no
+checking for sys/inttypes.h... no
+checking sys/bitypes.h usability... yes
+checking sys/bitypes.h presence... yes
+checking for sys/bitypes.h... yes
+checking for bit size of ptrdiff_t... 32
+checking for bit size of size_t... 32
+checking for bit size of sig_atomic_t... 32
+checking for bit size of wchar_t... 32
+checking for bit size of wint_t... 32
+checking whether sig_atomic_t is signed... yes
+checking whether wchar_t is signed... no
+checking whether wint_t is signed... no
+checking for ptrdiff_t integer literal suffix... 
+checking for size_t integer literal suffix... u
+checking for sig_atomic_t integer literal suffix... 
+checking for wchar_t integer literal suffix... u
+checking for wint_t integer literal suffix... u
+checking whether imaxabs is declared without a macro... yes
+checking whether imaxdiv is declared without a macro... yes
+checking whether strtoimax is declared without a macro... yes
+checking whether strtoumax is declared without a macro... yes
+checking for inttypes.h... (cached) yes
+checking whether the inttypes.h PRIxNN macros are broken... no
+checking whether getc_unlocked is declared... yes
+checking whether we are using the GNU C Library >= 2.1 or uClibc... yes
+checking whether lstat correctly handles trailing slash... yes
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible malloc... yes
+checking for mbstate_t... yes
+checking for a traditional japanese locale... none
+checking for a transitional chinese locale... none
+checking for a french Unicode locale... none
+checking for ssize_t... yes
+checking for stdbool.h that conforms to C99... yes
+checking for _Bool... yes
+checking for wchar_t... yes
+checking whether strdup is declared... yes
+checking whether strerror(0) succeeds... yes
+checking for strerror_r with POSIX signature... no
+checking whether __xpg_strerror_r works... yes
+checking whether ffsl is declared without a macro... yes
+checking whether ffsll is declared without a macro... yes
+checking whether memmem is declared without a macro... yes
+checking whether mempcpy is declared without a macro... yes
+checking whether memrchr is declared without a macro... yes
+checking whether rawmemchr is declared without a macro... yes
+checking whether stpcpy is declared without a macro... yes
+checking whether stpncpy is declared without a macro... yes
+checking whether strchrnul is declared without a macro... yes
+checking whether strdup is declared without a macro... yes
+checking whether strncat is declared without a macro... yes
+checking whether strndup is declared without a macro... yes
+checking whether strnlen is declared without a macro... yes
+checking whether strpbrk is declared without a macro... yes
+checking whether strsep is declared without a macro... yes
+checking whether strcasestr is declared without a macro... yes
+checking whether strtok_r is declared without a macro... yes
+checking whether strerror_r is declared without a macro... yes
+checking whether strsignal is declared without a macro... yes
+checking whether strverscmp is declared without a macro... yes
+checking whether ffs is declared without a macro... yes
+checking whether strcasecmp is declared without a macro... yes
+checking whether strncasecmp is declared without a macro... yes
+checking whether strndup is declared... (cached) yes
+checking whether strnlen is declared... (cached) yes
+checking whether stat file-mode macros are broken... no
+checking for struct timespec in <time.h>... yes
+checking for wint_t... yes
+checking if environ is properly declared... yes
+checking whether getcwd (NULL, 0) allocates memory for result... yes
+checking for getcwd with POSIX signature... yes
+checking for LC_MESSAGES... yes
+checking for CFPreferencesCopyAppValue... no
+checking for CFLocaleCopyCurrent... no
+checking for ld used by GCC... /ffp/bin/ld
+checking if the linker (/ffp/bin/ld) is GNU ld... yes
+checking for shared library run path origin... done
+checking whether imported symbols can be declared weak... yes
+checking pthread.h usability... yes
+checking pthread.h presence... yes
+checking for pthread.h... yes
+checking for pthread_kill in -lpthread... yes
+checking for multithread API to use... posix
+checking for promoted mode_t type... mode_t
+checking whether setenv is declared... yes
+checking search.h usability... yes
+checking search.h presence... yes
+checking for search.h... yes
+checking for tsearch... yes
+checking whether alarm is declared... yes
+checking whether unsetenv is declared... yes
+checking for alloca as a compiler built-in... yes
+checking whether to enable assertions... yes
+checking whether btowc(0) is correct... yes
+checking whether btowc(EOF) is correct... guessing yes
+checking for GNU libc compatible calloc... yes
+checking whether // is distinct from /... (cached) no
+checking for error_at_line... yes
+checking whether fcntl is declared without a macro... yes
+checking whether openat is declared without a macro... yes
+checking whether __fpending is declared... yes
+checking whether gettimeofday clobbers localtime buffer... no
+checking for gettimeofday with POSIX signature... almost
+checking whether the compiler generally respects inline... yes
+checking whether INT32_MAX < INTMAX_MAX... yes
+checking whether INT64_MAX == LONG_MAX... no
+checking whether UINT32_MAX < UINTMAX_MAX... yes
+checking whether UINT64_MAX == ULONG_MAX... no
+checking whether langinfo.h defines CODESET... yes
+checking whether langinfo.h defines T_FMT_AMPM... yes
+checking whether langinfo.h defines ERA... yes
+checking whether langinfo.h defines YESEXPR... yes
+checking whether nl_langinfo is declared without a macro... yes
+checking for C compiler flag to ignore unused libraries... -Wl,--as-needed
+checking whether lseek detects pipes... yes
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible malloc... (cached) yes
+checking whether mbrtowc handles incomplete characters... guessing yes
+checking whether mbrtowc works as well as mbtowc... guessing yes
+checking whether mbrtowc handles a NULL pwc argument... guessing yes
+checking whether mbrtowc handles a NULL string argument... guessing yes
+checking whether mbrtowc has a correct return value... guessing yes
+checking whether mbrtowc returns 0 when parsing a NUL character... guessing yes
+checking whether mbrtowc handles incomplete characters... (cached) guessing yes
+checking whether mbrtowc works as well as mbtowc... (cached) guessing yes
+checking for working mkstemp... yes
+checking whether YESEXPR works... yes
+checking whether program_invocation_name is declared... yes
+checking whether program_invocation_short_name is declared... yes
+checking whether readlink signature is correct... yes
+checking whether readlink handles trailing slash correctly... yes
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible realloc... yes
+checking for working re_compile_pattern... no
+checking libintl.h usability... yes
+checking libintl.h presence... yes
+checking for libintl.h... yes
+checking whether isblank is declared... yes
+checking for rpmatch... no
+checking for nl_langinfo and YESEXPR... yes
+checking whether sleep is declared... yes
+checking for working sleep... yes
+checking for ssize_t... (cached) yes
+checking whether stat handles trailing slashes on directories... yes
+checking whether stat handles trailing slashes on files... yes
+checking for va_copy... yes
+checking whether NULL can be used in arbitrary expressions... yes
+checking whether _Exit is declared without a macro... yes
+checking whether atoll is declared without a macro... yes
+checking whether canonicalize_file_name is declared without a macro... yes
+checking whether getloadavg is declared without a macro... no
+checking whether getsubopt is declared without a macro... yes
+checking whether grantpt is declared without a macro... yes
+checking whether initstate is declared without a macro... yes
+checking whether initstate_r is declared without a macro... yes
+checking whether mkdtemp is declared without a macro... yes
+checking whether mkostemp is declared without a macro... no
+checking whether mkostemps is declared without a macro... no
+checking whether mkstemp is declared without a macro... yes
+checking whether mkstemps is declared without a macro... no
+checking whether posix_openpt is declared without a macro... yes
+checking whether ptsname is declared without a macro... yes
+checking whether ptsname_r is declared without a macro... yes
+checking whether random is declared without a macro... yes
+checking whether random_r is declared without a macro... yes
+checking whether realpath is declared without a macro... yes
+checking whether rpmatch is declared without a macro... no
+checking whether setenv is declared without a macro... yes
+checking whether setstate is declared without a macro... yes
+checking whether setstate_r is declared without a macro... yes
+checking whether srandom is declared without a macro... yes
+checking whether srandom_r is declared without a macro... yes
+checking whether strtod is declared without a macro... yes
+checking whether strtoll is declared without a macro... yes
+checking whether strtoull is declared without a macro... yes
+checking whether unlockpt is declared without a macro... yes
+checking whether unsetenv is declared without a macro... yes
+checking for strcasecmp... yes
+checking for strncasecmp... yes
+checking whether strncasecmp is declared... (cached) yes
+checking for working strerror function... yes
+checking for working strndup... yes
+checking for working strnlen... yes
+checking for strtoll... yes
+checking for strtoull... yes
+checking for nlink_t... yes
+checking whether fchmodat is declared without a macro... yes
+checking whether fstat is declared without a macro... yes
+checking whether fstatat is declared without a macro... yes
+checking whether futimens is declared without a macro... yes
+checking whether lchmod is declared without a macro... no
+checking whether lstat is declared without a macro... yes
+checking whether mkdirat is declared without a macro... yes
+checking whether mkfifo is declared without a macro... yes
+checking whether mkfifoat is declared without a macro... yes
+checking whether mknod is declared without a macro... yes
+checking whether mknodat is declared without a macro... yes
+checking whether stat is declared without a macro... yes
+checking whether utimensat is declared without a macro... yes
+checking whether chdir is declared without a macro... yes
+checking whether chown is declared without a macro... yes
+checking whether dup is declared without a macro... yes
+checking whether dup2 is declared without a macro... yes
+checking whether dup3 is declared without a macro... no
+checking whether environ is declared without a macro... yes
+checking whether euidaccess is declared without a macro... no
+checking whether faccessat is declared without a macro... yes
+checking whether fchdir is declared without a macro... yes
+checking whether fchownat is declared without a macro... yes
+checking whether fdatasync is declared without a macro... yes
+checking whether fsync is declared without a macro... yes
+checking whether ftruncate is declared without a macro... yes
+checking whether getcwd is declared without a macro... yes
+checking whether getdomainname is declared without a macro... yes
+checking whether getdtablesize is declared without a macro... yes
+checking whether getgroups is declared without a macro... yes
+checking whether gethostname is declared without a macro... yes
+checking whether getlogin is declared without a macro... yes
+checking whether getlogin_r is declared without a macro... yes
+checking whether getpagesize is declared without a macro... yes
+checking whether getusershell is declared without a macro... yes
+checking whether setusershell is declared without a macro... yes
+checking whether endusershell is declared without a macro... yes
+checking whether group_member is declared without a macro... no
+checking whether isatty is declared without a macro... yes
+checking whether lchown is declared without a macro... yes
+checking whether link is declared without a macro... yes
+checking whether linkat is declared without a macro... yes
+checking whether lseek is declared without a macro... yes
+checking whether pipe is declared without a macro... yes
+checking whether pipe2 is declared without a macro... yes
+checking whether pread is declared without a macro... yes
+checking whether pwrite is declared without a macro... yes
+checking whether readlink is declared without a macro... yes
+checking whether readlinkat is declared without a macro... yes
+checking whether rmdir is declared without a macro... yes
+checking whether sethostname is declared without a macro... yes
+checking whether sleep is declared without a macro... yes
+checking whether symlink is declared without a macro... yes
+checking whether symlinkat is declared without a macro... yes
+checking whether ttyname_r is declared without a macro... yes
+checking whether unlink is declared without a macro... yes
+checking whether unlinkat is declared without a macro... yes
+checking whether usleep is declared without a macro... yes
+checking whether unlink honors trailing slashes... yes
+checking whether unlink of a parent directory fails as it should... guessing yes
+checking for useconds_t... yes
+checking whether usleep allows large arguments... yes
+checking whether btowc is declared without a macro... yes
+checking whether wctob is declared without a macro... yes
+checking whether mbsinit is declared without a macro... yes
+checking whether mbrtowc is declared without a macro... yes
+checking whether mbrlen is declared without a macro... yes
+checking whether mbsrtowcs is declared without a macro... yes
+checking whether mbsnrtowcs is declared without a macro... yes
+checking whether wcrtomb is declared without a macro... yes
+checking whether wcsrtombs is declared without a macro... yes
+checking whether wcsnrtombs is declared without a macro... yes
+checking whether wcwidth is declared without a macro... yes
+checking whether wmemchr is declared without a macro... yes
+checking whether wmemcmp is declared without a macro... yes
+checking whether wmemcpy is declared without a macro... yes
+checking whether wmemmove is declared without a macro... yes
+checking whether wmemset is declared without a macro... yes
+checking whether wcslen is declared without a macro... yes
+checking whether wcsnlen is declared without a macro... yes
+checking whether wcscpy is declared without a macro... yes
+checking whether wcpcpy is declared without a macro... yes
+checking whether wcsncpy is declared without a macro... yes
+checking whether wcpncpy is declared without a macro... yes
+checking whether wcscat is declared without a macro... yes
+checking whether wcsncat is declared without a macro... yes
+checking whether wcscmp is declared without a macro... yes
+checking whether wcsncmp is declared without a macro... yes
+checking whether wcscasecmp is declared without a macro... yes
+checking whether wcsncasecmp is declared without a macro... yes
+checking whether wcscoll is declared without a macro... yes
+checking whether wcsxfrm is declared without a macro... yes
+checking whether wcsdup is declared without a macro... yes
+checking whether wcschr is declared without a macro... yes
+checking whether wcsrchr is declared without a macro... yes
+checking whether wcscspn is declared without a macro... yes
+checking whether wcsspn is declared without a macro... yes
+checking whether wcspbrk is declared without a macro... yes
+checking whether wcsstr is declared without a macro... yes
+checking whether wcstok is declared without a macro... yes
+checking whether wcswidth is declared without a macro... yes
+checking whether mbrtowc handles incomplete characters... (cached) guessing yes
+checking whether mbrtowc works as well as mbtowc... (cached) guessing yes
+checking whether wcrtomb return value is correct... guessing yes
+checking whether iswcntrl works... yes
+checking for towlower... yes
+checking for wctype_t... yes
+checking for wctrans_t... yes
+checking whether wctype is declared without a macro... yes
+checking whether iswctype is declared without a macro... yes
+checking whether wctrans is declared without a macro... yes
+checking whether towctrans is declared without a macro... yes
+checking for long long int... (cached) yes
+checking for a traditional french locale... (cached) none
+checking for a french Unicode locale... (cached) none
+checking for a traditional french locale... (cached) none
+checking for a turkish Unicode locale... none
+checking whether dup2 works... yes
+checking whether fdopen sets errno... yes
+checking for getpagesize... yes
+checking whether getpagesize is declared... (cached) yes
+checking whether locale.h conforms to POSIX:2001... yes
+checking whether setlocale is declared without a macro... yes
+checking whether duplocale is declared without a macro... no
+checking for setlocale... yes
+checking for uselocale... no
+checking for pthread_rwlock_t... yes
+checking for a traditional french locale... (cached) none
+checking for a french Unicode locale... (cached) none
+checking for a traditional japanese locale... (cached) none
+checking for a transitional chinese locale... (cached) none
+checking for a french Unicode locale... (cached) none
+checking for a traditional french locale... (cached) none
+checking for a french Unicode locale... (cached) none
+checking whether open recognizes a trailing slash... yes
+checking for getppriv... no
+checking for putenv compatible with GNU and SVID... yes
+checking whether setenv validates arguments... no
+checking for a traditional french locale... (cached) none
+checking for a french Unicode locale... (cached) none
+checking for a traditional japanese locale... (cached) none
+checking for a transitional chinese locale... (cached) none
+checking for wchar_t... (cached) yes
+checking for wint_t... (cached) yes
+checking whether dprintf is declared without a macro... yes
+checking whether fpurge is declared without a macro... no
+checking whether fseeko is declared without a macro... yes
+checking whether ftello is declared without a macro... yes
+checking whether getdelim is declared without a macro... yes
+checking whether getline is declared without a macro... yes
+checking whether pclose is declared without a macro... yes
+checking whether popen is declared without a macro... yes
+checking whether renameat is declared without a macro... yes
+checking whether snprintf is declared without a macro... yes
+checking whether tmpfile is declared without a macro... yes
+checking whether vdprintf is declared without a macro... yes
+checking whether vsnprintf is declared without a macro... yes
+checking for mmap... yes
+checking for MAP_ANONYMOUS... yes
+checking whether symlink handles trailing slash correctly... yes
+checking for pthread_atfork... yes
+checking for unsetenv... yes
+checking for unsetenv() return type... int
+checking whether unsetenv obeys POSIX... yes
+checking for a traditional french locale... (cached) none
+checking for a french Unicode locale... (cached) none
+checking for a traditional japanese locale... (cached) none
+checking for a transitional chinese locale... (cached) none
+checking whether wctob works... guessing yes
+checking whether wctob is declared... (cached) yes
+checking for sched_yield in -lrt... yes
+checking size of off_t... 8
+checking how to print strings... printf
+checking for a sed that does not truncate output... /ffp/bin/sed
+checking for fgrep... /ffp/bin/grep -F
+checking for ld used by gcc -std=gnu99... /ffp/bin/ld
+checking if the linker (/ffp/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /ffp/bin/nm -B
+checking the name lister (/ffp/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert armv5tejl-unknown-linux-gnueabi file names to armv5tejl-unknown-linux-gnueabi format... func_convert_file_noop
+checking how to convert armv5tejl-unknown-linux-gnueabi file names to toolchain format... func_convert_file_noop
+checking for /ffp/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... (cached) ranlib
+checking command to parse /ffp/bin/nm -B output from gcc -std=gnu99 object... ok
+checking for sysroot... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc -std=gnu99 supports -fno-rtti -fno-exceptions... no
+checking for gcc -std=gnu99 option to produce PIC... -fPIC -DPIC
+checking if gcc -std=gnu99 PIC flag -fPIC -DPIC works... yes
+checking if gcc -std=gnu99 static flag -static works... yes
+checking if gcc -std=gnu99 supports -c -o file.o... yes
+checking if gcc -std=gnu99 supports -c -o file.o... (cached) yes
+checking whether the gcc -std=gnu99 linker (/ffp/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking whether NLS is requested... yes
+checking for msgfmt... /ffp/bin/msgfmt
+checking for gmsgfmt... /ffp/bin/msgfmt
+checking for xgettext... /ffp/bin/xgettext
+checking for msgmerge... /ffp/bin/msgmerge
+checking for CFPreferencesCopyAppValue... (cached) no
+checking for CFLocaleCopyCurrent... (cached) no
+checking for GNU gettext in libc... no
+checking for iconv... yes
+checking for working iconv... yes
+checking how to link with libiconv... /ffp/lib/libiconv.so -Wl,-rpath -Wl,/ffp/lib
+checking for GNU gettext in libintl... yes
+checking whether to use NLS... yes
+checking where the gettext function comes from... external libintl
+checking how to link with libintl... /ffp/lib/libintl.so /ffp/lib/libiconv.so /ffp/lib/libc.so -Wl,-rpath -Wl,/ffp/lib
+checking for dlopen in -ldl... yes
+checking for uuid_generate in -luuid... yes
+checking for library containing tgetent... -lncurses
+checking for readline in -lreadline... yes
+checking for rl_variable_value in -lreadline... yes
+checking uuid/uuid.h usability... yes
+checking uuid/uuid.h presence... yes
+checking for uuid/uuid.h... yes
+checking for getopt.h... (cached) yes
+checking linux/ext2_fs.h usability... yes
+checking linux/ext2_fs.h presence... yes
+checking for linux/ext2_fs.h... yes
+checking linux/unistd.h usability... yes
+checking linux/unistd.h presence... yes
+checking for linux/unistd.h... yes
+checking readline/readline.h usability... yes
+checking readline/readline.h presence... yes
+checking for readline/readline.h... yes
+checking readline/history.h usability... yes
+checking readline/history.h presence... yes
+checking for readline/history.h... yes
+checking termcap.h usability... no
+checking termcap.h presence... no
+checking for termcap.h... no
+checking for wctype.h... (cached) yes
+checking execinfo.h usability... no
+checking execinfo.h presence... no
+checking for execinfo.h... no
+checking for pkg-config... /ffp/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for CHECK... no
+Unable to locate check version 0.9.3 or higher: not building
+checking for ld used by gcc -std=gnu99... (cached) /ffp/bin/ld
+checking if the linker (/ffp/bin/ld) is GNU ld... (cached) yes
+checking whether byte ordering is bigendian... no
+checking for inline... (cached) inline
+checking for an ANSI C-conforming const... yes
+checking for C/C++ restrict keyword... (cached) __restrict
+checking for sigaction... yes
+checking for getuid... yes
+checking for rl_completion_matches... yes
+checking for canonicalize_file_name... (cached) yes
+checking for library containing blkid_probe_get_topology... -lblkid
+checking for blkid_probe_get_topology... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating lib/Makefile
+config.status: creating include/Makefile
+config.status: creating include/parted/Makefile
+config.status: creating libparted/Makefile
+config.status: creating libparted/labels/Makefile
+config.status: creating libparted/fs/Makefile
+config.status: creating libparted/tests/Makefile
+config.status: creating libparted.pc
+config.status: creating parted/Makefile
+config.status: creating partprobe/Makefile
+config.status: creating doc/Makefile
+config.status: creating doc/C/Makefile
+config.status: creating doc/pt_BR/Makefile
+config.status: creating debug/Makefile
+config.status: creating debug/test/Makefile
+config.status: creating tests/Makefile
+config.status: creating po/Makefile.in
+config.status: creating lib/config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing po-directories commands
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+configure: WARNING: unrecognized options: --disable-readline
+
+Type 'make' to compile parted.
++ CFLAGS='-I/ffp/include -O2 -D_GNU_SOURCE -pthread'
++ CXXFLAGS='-I/ffp/include -O2 -D_GNU_SOURCE -pthread'
++ LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread '
++ make
+make  all-recursive
+make[1]: Entering directory `/tmp/parted.jFEWCM/parted-3.1'
+Making all in po
+make[2]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/po'
+make[2]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/po'
+Making all in lib
+make[2]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/lib'
+  GEN      alloca.h
+  GEN      configmake.h
+mv -f configmake.h-t configmake.h
+  GEN      c++defs.h
+  GEN      arg-nonnull.h
+  GEN      warn-on-use.h
+  GEN      fcntl.h
+  GEN      getopt.h
+  GEN      inttypes.h
+  GEN      langinfo.h
+  GEN      stdint.h
+  GEN      stdlib.h
+  GEN      string.h
+  GEN      strings.h
+  GEN      sys/stat.h
+  GEN      sys/time.h
+  GEN      sys/types.h
+  GEN      time.h
+  GEN      unistd.h
+  GEN      wchar.h
+  GEN      wctype.h
+make  all-am
+make[3]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/lib'
+  CC       argmatch.lo
+  CC       c-ctype.lo
+  CC       c-strcasecmp.lo
+  CC       c-strncasecmp.lo
+  CC       close-stream.lo
+  CC       closeout.lo
+  CC       dirname.lo
+  CC       basename.lo
+  CC       dirname-lgpl.lo
+  CC       basename-lgpl.lo
+  CC       stripslash.lo
+  CC       exitfail.lo
+  CC       fd-hook.lo
+  CC       localcharset.lo
+  CC       long-options.lo
+  CC       malloca.lo
+  CC       progname.lo
+  CC       quote.lo
+  CC       quotearg.lo
+  CC       safe-read.lo
+  CC       tempname.lo
+  CC       version-etc.lo
+  CC       version-etc-fsf.lo
+  CC       xmalloc.lo
+  CC       xalloc-die.lo
+  CC       xstrndup.lo
+  CC       xstrtol.lo
+  CC       xstrtoul.lo
+  CC       xstrtol-error.lo
+  CC       canonicalize-lgpl.lo
+  CC       getopt.lo
+  CC       getopt1.lo
+  CC       regex.lo
+regex.c:23:11: warning: unknown option after '#pragma GCC diagnostic' kind
+In file included from regex.c:67:0:
+regcomp.c: In function 'init_word_char':
+regcomp.c:961:4: warning: large integer implicitly truncated to unsigned type
+regcomp.c:962:4: warning: large integer implicitly truncated to unsigned type
+  CC       rpmatch.lo
+  CC       xstrtoll.lo
+  CC       xstrtoull.lo
+  CCLD     libgnulib.la
+  GEN      charset.alias
+  GEN      ref-add.sed
+  GEN      ref-del.sed
+make[3]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/lib'
+make[2]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/lib'
+Making all in include
+make[2]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/include'
+Making all in parted
+make[3]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/include/parted'
+make  all-am
+make[4]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/include/parted'
+make[4]: Nothing to be done for `all-am'.
+make[4]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/include/parted'
+make[3]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/include/parted'
+make[3]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/include'
+make[3]: Nothing to be done for `all-am'.
+make[3]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/include'
+make[2]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/include'
+Making all in libparted
+make[2]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/libparted'
+Makefile:1295: warning: overriding commands for target `linux.lo'
+Makefile:1288: warning: ignoring old commands for target `linux.lo'
+Making all in labels
+make[3]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/libparted/labels'
+make  all-am
+make[4]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/libparted/labels'
+  CC       aix.lo
+  CC       bsd.lo
+  CC       dos.lo
+  CC       dvh.lo
+  CC       efi_crc32.lo
+  CC       gpt.lo
+  CC       loop.lo
+  CC       mac.lo
+  CC       pc98.lo
+  CC       pt-tools.lo
+  CC       rdb.lo
+  CC       sun.lo
+  CCLD     liblabels.la
+make[4]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/libparted/labels'
+make[3]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/libparted/labels'
+Making all in fs
+make[3]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/libparted/fs'
+  CC       r/filesys.lo
+  CC       r/fat/bootsector.lo
+  CC       r/fat/calc.lo
+  CC       r/fat/clstdup.lo
+  CC       r/fat/context.lo
+  CC       r/fat/count.lo
+  CC       r/fat/fat.lo
+  CC       r/fat/fatio.lo
+  CC       r/fat/resize.lo
+  CC       r/fat/table.lo
+  CC       r/fat/traverse.lo
+  CC       r/hfs/advfs.lo
+  CC       r/hfs/advfs_plus.lo
+  CC       r/hfs/cache.lo
+  CC       r/hfs/file.lo
+  CC       r/hfs/file_plus.lo
+  CC       r/hfs/hfs.lo
+  CC       r/hfs/journal.lo
+  CC       r/hfs/probe.lo
+  CC       r/hfs/reloc.lo
+  CC       r/hfs/reloc_plus.lo
+  CCLD     libparted-fs-resize.la
+  CC       amiga/affs.lo
+  CC       amiga/amiga.lo
+  CC       amiga/apfs.lo
+  CC       amiga/asfs.lo
+  CC       amiga/a-interface.lo
+  CC       ext2/interface.lo
+  CC       fat/bootsector.lo
+  CC       fat/fat.lo
+  CC       hfs/hfs.lo
+  CC       hfs/probe.lo
+  CC       jfs/jfs.lo
+  CC       linux_swap/linux_swap.lo
+  CC       nilfs2/nilfs2.lo
+  CC       ntfs/ntfs.lo
+  CC       reiserfs/reiserfs.lo
+  CC       ufs/ufs.lo
+  CC       xfs/xfs.lo
+  CCLD     libfs.la
+make[3]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/libparted/fs'
+Making all in .
+make[3]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/libparted'
+Makefile:1295: warning: overriding commands for target `linux.lo'
+Makefile:1288: warning: ignoring old commands for target `linux.lo'
+  CC       debug.lo
+  CC       architecture.lo
+  CC       device.lo
+  CC       exception.lo
+  CC       filesys.lo
+  CC       libparted.lo
+  CC       timer.lo
+  CC       unit.lo
+  CC       disk.lo
+  CC       geom.lo
+  CC       constraint.lo
+  CC       natmath.lo
+  CC       linux.lo
+  CCLD     libparted.la
+make[3]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/libparted'
+make[2]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/libparted'
+Making all in parted
+make[2]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/parted'
+  GEN      version.c
+  GEN      version.h
+make  all-am
+make[3]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/parted'
+  CC       version.o
+  AR       libver.a
+  CC       command.o
+  CC       parted.o
+  CC       strlist.o
+  CC       ui.o
+  CC       table.o
+  CCLD     parted
+make[3]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/parted'
+make[2]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/parted'
+Making all in partprobe
+make[2]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/partprobe'
+  CC       partprobe.o
+  CCLD     partprobe
+make[2]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/partprobe'
+Making all in doc
+make[2]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/doc'
+Making all in C
+make[3]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/doc/C'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/doc/C'
+Making all in pt_BR
+make[3]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/doc/pt_BR'
+for po in `ls -1 ./*.pt_BR.po 2>/dev/null`; do \
+		make $(basename ${po%.pt_BR.po}); \
+	done
+make[3]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/doc/pt_BR'
+make[3]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/doc'
+make[3]: Nothing to be done for `all-am'.
+make[3]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/doc'
+make[2]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/doc'
+Making all in debug
+make[2]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/debug'
+Making all in test
+make[3]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/debug/test'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/debug/test'
+make[3]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/debug'
+make[3]: Nothing to be done for `all-am'.
+make[3]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/debug'
+make[2]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/debug'
+Making all in tests
+make[2]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/tests'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/tests'
+make[2]: Entering directory `/tmp/parted.jFEWCM/parted-3.1'
+make[2]: Nothing to be done for `all-am'.
+make[2]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1'
+make[1]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1'
++ make DESTDIR=/tmp/parted.jFEWCM/pkg install
+make  install-recursive
+make[1]: Entering directory `/tmp/parted.jFEWCM/parted-3.1'
+Making install in po
+make[2]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/po'
+installing ca.gmo as /tmp/parted.jFEWCM/pkg/ffp/share/locale/ca/LC_MESSAGES/parted.mo
+installing cs.gmo as /tmp/parted.jFEWCM/pkg/ffp/share/locale/cs/LC_MESSAGES/parted.mo
+installing da.gmo as /tmp/parted.jFEWCM/pkg/ffp/share/locale/da/LC_MESSAGES/parted.mo
+installing de.gmo as /tmp/parted.jFEWCM/pkg/ffp/share/locale/de/LC_MESSAGES/parted.mo
+installing es.gmo as /tmp/parted.jFEWCM/pkg/ffp/share/locale/es/LC_MESSAGES/parted.mo
+installing fr.gmo as /tmp/parted.jFEWCM/pkg/ffp/share/locale/fr/LC_MESSAGES/parted.mo
+installing gl.gmo as /tmp/parted.jFEWCM/pkg/ffp/share/locale/gl/LC_MESSAGES/parted.mo
+installing id.gmo as /tmp/parted.jFEWCM/pkg/ffp/share/locale/id/LC_MESSAGES/parted.mo
+installing it.gmo as /tmp/parted.jFEWCM/pkg/ffp/share/locale/it/LC_MESSAGES/parted.mo
+installing ja.gmo as /tmp/parted.jFEWCM/pkg/ffp/share/locale/ja/LC_MESSAGES/parted.mo
+installing nl.gmo as /tmp/parted.jFEWCM/pkg/ffp/share/locale/nl/LC_MESSAGES/parted.mo
+installing nn.gmo as /tmp/parted.jFEWCM/pkg/ffp/share/locale/nn/LC_MESSAGES/parted.mo
+installing pl.gmo as /tmp/parted.jFEWCM/pkg/ffp/share/locale/pl/LC_MESSAGES/parted.mo
+installing pt.gmo as /tmp/parted.jFEWCM/pkg/ffp/share/locale/pt/LC_MESSAGES/parted.mo
+installing pt_BR.gmo as /tmp/parted.jFEWCM/pkg/ffp/share/locale/pt_BR/LC_MESSAGES/parted.mo
+installing ro.gmo as /tmp/parted.jFEWCM/pkg/ffp/share/locale/ro/LC_MESSAGES/parted.mo
+installing ru.gmo as /tmp/parted.jFEWCM/pkg/ffp/share/locale/ru/LC_MESSAGES/parted.mo
+installing rw.gmo as /tmp/parted.jFEWCM/pkg/ffp/share/locale/rw/LC_MESSAGES/parted.mo
+installing sk.gmo as /tmp/parted.jFEWCM/pkg/ffp/share/locale/sk/LC_MESSAGES/parted.mo
+installing sl.gmo as /tmp/parted.jFEWCM/pkg/ffp/share/locale/sl/LC_MESSAGES/parted.mo
+installing sr.gmo as /tmp/parted.jFEWCM/pkg/ffp/share/locale/sr/LC_MESSAGES/parted.mo
+installing sv.gmo as /tmp/parted.jFEWCM/pkg/ffp/share/locale/sv/LC_MESSAGES/parted.mo
+installing tr.gmo as /tmp/parted.jFEWCM/pkg/ffp/share/locale/tr/LC_MESSAGES/parted.mo
+installing uk.gmo as /tmp/parted.jFEWCM/pkg/ffp/share/locale/uk/LC_MESSAGES/parted.mo
+installing vi.gmo as /tmp/parted.jFEWCM/pkg/ffp/share/locale/vi/LC_MESSAGES/parted.mo
+installing zh_CN.gmo as /tmp/parted.jFEWCM/pkg/ffp/share/locale/zh_CN/LC_MESSAGES/parted.mo
+installing zh_TW.gmo as /tmp/parted.jFEWCM/pkg/ffp/share/locale/zh_TW/LC_MESSAGES/parted.mo
+if test "parted" = "gettext-tools"; then \
+	  /ffp/bin/mkdir -p /tmp/parted.jFEWCM/pkg/ffp/share/gettext/po; \
+	  for file in Makefile.in.in remove-potcdate.sin quot.sed boldquot.sed en@quot.header en@boldquot.header insert-header.sin Rules-quot   Makevars.template; do \
+	    /ffp/bin/install -c -m 644 ./$file \
+			    /tmp/parted.jFEWCM/pkg/ffp/share/gettext/po/$file; \
+	  done; \
+	  for file in Makevars; do \
+	    rm -f /tmp/parted.jFEWCM/pkg/ffp/share/gettext/po/$file; \
+	  done; \
+	else \
+	  : ; \
+	fi
+make[2]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/po'
+Making install in lib
+make[2]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/lib'
+make  install-am
+make[3]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/lib'
+make[4]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/lib'
+if test yes = no; then \
+	  case 'linux-gnueabi' in \
+	    darwin[56]*) \
+	      need_charset_alias=true ;; \
+	    darwin* | cygwin* | mingw* | pw32* | cegcc*) \
+	      need_charset_alias=false ;; \
+	    *) \
+	      need_charset_alias=true ;; \
+	  esac ; \
+	else \
+	  need_charset_alias=false ; \
+	fi ; \
+	if $need_charset_alias; then \
+	  /ffp/bin/sh /tmp/parted.jFEWCM/parted-3.1/build-aux/install-sh -d /tmp/parted.jFEWCM/pkg/ffp/lib ; \
+	fi ; \
+	if test -f /tmp/parted.jFEWCM/pkg/ffp/lib/charset.alias; then \
+	  sed -f ref-add.sed /tmp/parted.jFEWCM/pkg/ffp/lib/charset.alias > /tmp/parted.jFEWCM/pkg/ffp/lib/charset.tmp ; \
+	  /ffp/bin/install -c -m 644 /tmp/parted.jFEWCM/pkg/ffp/lib/charset.tmp /tmp/parted.jFEWCM/pkg/ffp/lib/charset.alias ; \
+	  rm -f /tmp/parted.jFEWCM/pkg/ffp/lib/charset.tmp ; \
+	else \
+	  if $need_charset_alias; then \
+	    sed -f ref-add.sed charset.alias > /tmp/parted.jFEWCM/pkg/ffp/lib/charset.tmp ; \
+	    /ffp/bin/install -c -m 644 /tmp/parted.jFEWCM/pkg/ffp/lib/charset.tmp /tmp/parted.jFEWCM/pkg/ffp/lib/charset.alias ; \
+	    rm -f /tmp/parted.jFEWCM/pkg/ffp/lib/charset.tmp ; \
+	  fi ; \
+	fi
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/lib'
+make[3]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/lib'
+make[2]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/lib'
+Making install in include
+make[2]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/include'
+Making install in parted
+make[3]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/include/parted'
+make  install-am
+make[4]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/include/parted'
+make[5]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/include/parted'
+make[5]: Nothing to be done for `install-exec-am'.
+test -z "/ffp/include/parted" || /ffp/bin/mkdir -p "/tmp/parted.jFEWCM/pkg/ffp/include/parted"
+ /ffp/bin/install -c -m 644 constraint.h debug.h device.h disk.h exception.h filesys.h geom.h natmath.h timer.h unit.h parted.h '/tmp/parted.jFEWCM/pkg/ffp/include/parted'
+make[5]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/include/parted'
+make[4]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/include/parted'
+make[3]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/include/parted'
+make[3]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/include'
+make[4]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/include'
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/include'
+make[3]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/include'
+make[2]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/include'
+Making install in libparted
+make[2]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/libparted'
+Makefile:1295: warning: overriding commands for target `linux.lo'
+Makefile:1288: warning: ignoring old commands for target `linux.lo'
+Making install in labels
+make[3]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/libparted/labels'
+make  install-am
+make[4]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/libparted/labels'
+make[5]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/libparted/labels'
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+make[5]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/libparted/labels'
+make[4]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/libparted/labels'
+make[3]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/libparted/labels'
+Making install in fs
+make[3]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/libparted/fs'
+make[4]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/libparted/fs'
+test -z "/ffp/lib" || /ffp/bin/mkdir -p "/tmp/parted.jFEWCM/pkg/ffp/lib"
+ /ffp/bin/sh ../../libtool   --mode=install /ffp/bin/install -c   libparted-fs-resize.la '/tmp/parted.jFEWCM/pkg/ffp/lib'
+libtool: install: /ffp/bin/install -c .libs/libparted-fs-resize.so.0.0.0 /tmp/parted.jFEWCM/pkg/ffp/lib/libparted-fs-resize.so.0.0.0
+libtool: install: (cd /tmp/parted.jFEWCM/pkg/ffp/lib && { ln -s -f libparted-fs-resize.so.0.0.0 libparted-fs-resize.so.0 || { rm -f libparted-fs-resize.so.0 && ln -s libparted-fs-resize.so.0.0.0 libparted-fs-resize.so.0; }; })
+libtool: install: (cd /tmp/parted.jFEWCM/pkg/ffp/lib && { ln -s -f libparted-fs-resize.so.0.0.0 libparted-fs-resize.so || { rm -f libparted-fs-resize.so && ln -s libparted-fs-resize.so.0.0.0 libparted-fs-resize.so; }; })
+libtool: install: /ffp/bin/install -c .libs/libparted-fs-resize.lai /tmp/parted.jFEWCM/pkg/ffp/lib/libparted-fs-resize.la
+libtool: install: warning: remember to run `libtool --finish /ffp/lib'
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/libparted/fs'
+make[3]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/libparted/fs'
+Making install in .
+make[3]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/libparted'
+Makefile:1295: warning: overriding commands for target `linux.lo'
+Makefile:1288: warning: ignoring old commands for target `linux.lo'
+make[4]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/libparted'
+Makefile:1295: warning: overriding commands for target `linux.lo'
+Makefile:1288: warning: ignoring old commands for target `linux.lo'
+test -z "/ffp/lib" || /ffp/bin/mkdir -p "/tmp/parted.jFEWCM/pkg/ffp/lib"
+ /ffp/bin/sh ../libtool   --mode=install /ffp/bin/install -c   libparted.la '/tmp/parted.jFEWCM/pkg/ffp/lib'
+libtool: install: /ffp/bin/install -c .libs/libparted.so.2.0.0 /tmp/parted.jFEWCM/pkg/ffp/lib/libparted.so.2.0.0
+libtool: install: (cd /tmp/parted.jFEWCM/pkg/ffp/lib && { ln -s -f libparted.so.2.0.0 libparted.so.2 || { rm -f libparted.so.2 && ln -s libparted.so.2.0.0 libparted.so.2; }; })
+libtool: install: (cd /tmp/parted.jFEWCM/pkg/ffp/lib && { ln -s -f libparted.so.2.0.0 libparted.so || { rm -f libparted.so && ln -s libparted.so.2.0.0 libparted.so; }; })
+libtool: install: /ffp/bin/install -c .libs/libparted.lai /tmp/parted.jFEWCM/pkg/ffp/lib/libparted.la
+libtool: install: warning: remember to run `libtool --finish /ffp/lib'
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/libparted'
+make[3]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/libparted'
+make[2]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/libparted'
+Making install in parted
+make[2]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/parted'
+make  install-am
+make[3]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/parted'
+make[4]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/parted'
+test -z "/ffp/sbin" || /ffp/bin/mkdir -p "/tmp/parted.jFEWCM/pkg/ffp/sbin"
+  /ffp/bin/sh ../libtool   --mode=install /ffp/bin/install -c parted '/tmp/parted.jFEWCM/pkg/ffp/sbin'
+libtool: install: /ffp/bin/install -c .libs/parted /tmp/parted.jFEWCM/pkg/ffp/sbin/parted
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/parted'
+make[3]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/parted'
+make[2]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/parted'
+Making install in partprobe
+make[2]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/partprobe'
+make[3]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/partprobe'
+test -z "/ffp/sbin" || /ffp/bin/mkdir -p "/tmp/parted.jFEWCM/pkg/ffp/sbin"
+  /ffp/bin/sh ../libtool   --mode=install /ffp/bin/install -c partprobe '/tmp/parted.jFEWCM/pkg/ffp/sbin'
+libtool: install: /ffp/bin/install -c .libs/partprobe /tmp/parted.jFEWCM/pkg/ffp/sbin/partprobe
+make[3]: Nothing to be done for `install-data-am'.
+make[3]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/partprobe'
+make[2]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/partprobe'
+Making install in doc
+make[2]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/doc'
+Making install in C
+make[3]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/doc/C'
+make[4]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/doc/C'
+make[4]: Nothing to be done for `install-exec-am'.
+test -z "/ffp/share/man/man8" || /ffp/bin/mkdir -p "/tmp/parted.jFEWCM/pkg/ffp/share/man/man8"
+ /ffp/bin/install -c -m 644 parted.8 partprobe.8 '/tmp/parted.jFEWCM/pkg/ffp/share/man/man8'
+make[4]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/doc/C'
+make[3]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/doc/C'
+Making install in pt_BR
+make[3]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/doc/pt_BR'
+for po in `ls -1 ./*.pt_BR.po 2>/dev/null`; do \
+		make $(basename ${po%.pt_BR.po}); \
+	done
+make[4]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/doc/pt_BR'
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/doc/pt_BR'
+make[3]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/doc/pt_BR'
+make[3]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/doc'
+make[4]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/doc'
+make[4]: Nothing to be done for `install-exec-am'.
+test -z "/ffp/share/info" || /ffp/bin/mkdir -p "/tmp/parted.jFEWCM/pkg/ffp/share/info"
+ /ffp/bin/install -c -m 644 ./parted.info '/tmp/parted.jFEWCM/pkg/ffp/share/info'
+ install-info --info-dir='/tmp/parted.jFEWCM/pkg/ffp/share/info' '/tmp/parted.jFEWCM/pkg/ffp/share/info/parted.info'
+make[4]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/doc'
+make[3]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/doc'
+make[2]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/doc'
+Making install in debug
+make[2]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/debug'
+Making install in test
+make[3]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/debug/test'
+make[4]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/debug/test'
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/debug/test'
+make[3]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/debug/test'
+make[3]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/debug'
+make[4]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/debug'
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/debug'
+make[3]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/debug'
+make[2]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/debug'
+Making install in tests
+make[2]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/tests'
+make[3]: Entering directory `/tmp/parted.jFEWCM/parted-3.1/tests'
+make[3]: Nothing to be done for `install-exec-am'.
+make[3]: Nothing to be done for `install-data-am'.
+make[3]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/tests'
+make[2]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1/tests'
+make[2]: Entering directory `/tmp/parted.jFEWCM/parted-3.1'
+make[3]: Entering directory `/tmp/parted.jFEWCM/parted-3.1'
+make[3]: Nothing to be done for `install-exec-am'.
+test -z "/ffp/lib/pkgconfig" || /ffp/bin/mkdir -p "/tmp/parted.jFEWCM/pkg/ffp/lib/pkgconfig"
+ /ffp/bin/install -c -m 644 libparted.pc '/tmp/parted.jFEWCM/pkg/ffp/lib/pkgconfig'
+make[3]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1'
+make[2]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1'
+make[1]: Leaving directory `/tmp/parted.jFEWCM/parted-3.1'
++ mkdir -p /tmp/parted.jFEWCM/pkg/install
++ cp /ffp/home/root/fun_plug/ffp_packages/parted/DESCR /ffp/home/root/fun_plug/ffp_packages/parted/HOMEPAGE /tmp/parted.jFEWCM/pkg/install/
++ cd /tmp/parted.jFEWCM/pkg
++ makepkg parted 3.1 1
+Creating /tmp/parted-3.1-arm-1.tar ...
+stdin: is not a tty
+sending incremental file list
+parted-3.1-arm-1.tar
+
+sent 214268 bytes  received 8737 bytes  34308.46 bytes/sec
+total size is 1390008320  speedup is 6233.08
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libatomic_ops-git-20130417-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/ghostscript-9.06-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/most-pre5.1-14-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/beautifulsoup4-4.0.0b9-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gnunet-0.9.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/guile-2.0.9-arm-1.txz
+UPDATE /home2/memiksfr/subdomains/ffp/pkg/parted-3.1-arm-1.txz
+stdin: is not a tty
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/cmake-2.8.7-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libsigc++-2.2.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1192-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/harfbuzz-0.9.9-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/Python-3.3.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/par-1.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/dtach-0.8-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1218-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/vim-7.3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gnuplot-4.4.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1283-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/tor-0.2.3.25-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/fontconfig-2.8.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/rtmpdump-2.3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libev-4.11-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/setuptools-0.6c11-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/tokyotyrant-1.1.41-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/less-457-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libmicrohttpd-0.9.19-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/lzo-2.06-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/cairo-1.12.8-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/Django-1.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libspectre-0.2.7-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/protobuf-2.4.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/unrar-4.1.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/php-5.4.11-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/openssl-1.0.0g-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libgpg-error-1.10-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/node-v0.6.10-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/xvidcore-1.3.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/Python-2.7.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gcc-solibs-4.6.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1260-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/BeautifulSoup-3.2.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libunistring-0.9.3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gnuplot-4.4.4-arm-2.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/nut-2.6.5-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/fontconfig-2.10.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/freetype-2.4.8-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/pango-1.32.3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/sshpass-1.05-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/tokyocabinet-1.4.47-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/nzbget-0.8.0r394-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libgcrypt-1.5.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1267-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/swig-2.0.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1182-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/netatalk-3.0.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/par2cmdline-0.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/neon-0.29.6-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/berkeleydb-5.1.19-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/cherokee-130207-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/attr-2.4.46-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gcc-4.6.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/openssh-6.1p1-arm-4-node.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/sendmail-8.14.5-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/openssl-1.0.1c-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/mysecureshell-1.30-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/bdwgc-git-20130417-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libextractor-0.6.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/Python-2.7.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/Python-2.7.3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gnupg-1.4.8-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/cksfv-1.3.14-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/git-1.8.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gnufdisk-2.0.0a-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/nail-20120224-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1217-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/slang-pre2.3.0-68-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/php-5.5.0beta3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/ImageMagick-6.8.2-9-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/wdfs-1.4.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/seeks-20120224-arm-2.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/opencv-2.3.1-arm-2.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/p7zip-9.20.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libmms-0.6.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/links-2.7-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/node-0.8.21-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1214-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libgd-2.0.33-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/M2Crypto-0.21.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/cifs-utils-git-20120302-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1359-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/rrdtool-1.4.5-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libpar2-0.2-arm-2.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libpar2-0.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/node-0.8.21-arm-2.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/openssh-6.1p1-arm-4.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/pixman-0.28.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/zlib-1.2.6-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/glib-2.35.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1222-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MPlayer-1.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/isync-1.0.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libffi-3.0.11-arm-1.txz
+95f341c4aaf4ea5118d10bb529c15a94  BeautifulSoup-3.2.1-arm-1.txz
+a1e0ad986d101c81735bcdaa73ed1120  Django-1.4-arm-1.txz
+8a03198597eb048966609fa7e85081cb  ImageMagick-6.8.2-9-arm-1.txz
+ed100bdde17d72a8de04fe76bf507c27  M2Crypto-0.21.1-arm-1.txz
+982aeaa56561d1a47906af083a198b4e  MCServer-1182-arm-1.txz
+f43e8c2fa9ed0649943984454f93e205  MCServer-1192-arm-1.txz
+59fcfcf1b1ce120f0667436648288811  MCServer-1214-arm-1.txz
+286cba7502f2e28048679877cfdaadcf  MCServer-1217-arm-1.txz
+a196fc6af4ffdc1332a30aedf7b9a8b7  MCServer-1218-arm-1.txz
+866887febd98b38b784f3eaf8a2211b4  MCServer-1222-arm-1.txz
+28bffa04cd4865b1116b9ac2953462ef  MCServer-1260-arm-1.txz
+2a04bdde5efc99df870f2afc1c823038  MCServer-1267-arm-1.txz
+acd360f67af8840035ce045ab8187e3f  MCServer-1283-arm-1.txz
+65cae87083e7251844f83940a019aea5  MCServer-1359-arm-1.txz
+0db42aed04763a412e09295b7879ce42  MPlayer-1.1-arm-1.txz
+a3d7a6d1f4d1ead00ef46940ba2f3bcc  Python-2.7.2-arm-1.txz
+0c0c5ee79714df0686e52cf9775c16bc  Python-2.7.3-arm-1.txz
+7fd7c65f6db3f5080db928f916170028  Python-2.7.4-arm-1.txz
+55a2f685c893cfd91fd418db3e26be35  Python-3.3.0-arm-1.txz
+032ac662c6dd9de1b3cd9b11f533b116  attr-2.4.46-arm-1.txz
+a9c00879a9952577e76bc54f1a523501  bdwgc-git-20130417-arm-1.txz
+85ef9e1adaa758c1f8587c4556799f69  beautifulsoup4-4.0.0b9-arm-1.txz
+6ff8d6a390e744dd99e8d7a7e61b6de2  berkeleydb-5.1.19-arm-1.txz
+32d26bc2fb54e3151a3b10029b310a0e  cairo-1.12.8-arm-1.txz
+01effab30ea00b69d40f4b9f509f55ff  cherokee-130207-arm-1.txz
+49ecff75fd683d7bd3b219c955593780  cifs-utils-git-20120302-arm-1.txz
+d33d4de033f5734caa97fb64d220a52b  cksfv-1.3.14-arm-1.txz
+ac0cd5691e28b0bcf1f1de6733a86460  cmake-2.8.7-arm-1.txz
+fd44ad8cf4a284e8ae90798467fd345b  dtach-0.8-arm-1.txz
+473b0116a2dbd50121f48097b2e5a829  fontconfig-2.10.2-arm-1.txz
+6be66afb530ab8c7c079e91a13e65ca3  fontconfig-2.8.0-arm-1.txz
+f77c4c8c754b164d05ed1b6e0c4c3ec3  freetype-2.4.8-arm-1.txz
+d2c81249d4bf660ba5c20991c8e86fb4  gcc-4.6.2-arm-1.txz
+e9ee3add43dea9b356feaa4fdbca5fe2  gcc-solibs-4.6.2-arm-1.txz
+fdedc4578b52177d1d36dc48c019e359  ghostscript-9.06-arm-1.txz
+4f283bc42de500a9fe9d6a2e7dae7be4  git-1.8.0-arm-1.txz
+102f8bf9b770e8e7701b8ac9cf4e938c  glib-2.35.2-arm-1.txz
+dd86ef680e23d649c7034ceb70f1e420  gnufdisk-2.0.0a-arm-1.txz
+03f8318c94b5154ff9370961ace3567e  gnunet-0.9.2-arm-1.txz
+338c45bfe0571d896fdf12833397b8a6  gnupg-1.4.8-arm-1.txz
+3da6e410046d049a9de0952ced17d207  gnuplot-4.4.4-arm-1.txz
+9e22f867fddbb011ae97fbb522027188  gnuplot-4.4.4-arm-2.txz
+c8e04d19ce6c1be113de2e80dfe388e0  guile-2.0.9-arm-1.txz
+d863b220986066854ac7c9b0afb20faa  harfbuzz-0.9.9-arm-1.txz
+704d33fe923ead8b65f73ec35eee3993  isync-1.0.4-arm-1.txz
+82a6edbe7ba4f8e27d76dc36b1fb0fa3  less-457-arm-1.txz
+cdf7b3acf8e021921e1e2f696b21b12f  libatomic_ops-git-20130417-arm-1.txz
+0c54f33ceaa95ff640e77ec2378a124e  libev-4.11-arm-1.txz
+cbfd7cd569281a9ed6fa2313c30939ed  libextractor-0.6.2-arm-1.txz
+2d1b88015a8dd263f557fb27043e53f8  libffi-3.0.11-arm-1.txz
+f729e959f7a3bc84258d734f81214621  libgcrypt-1.5.0-arm-1.txz
+664311c312926ca30c077a89baebce93  libgd-2.0.33-arm-1.txz
+8ba41420fa0aab68345956455934bc00  libgpg-error-1.10-arm-1.txz
+4f162fbadfa6abc502a045ef4093c4ed  libmicrohttpd-0.9.19-arm-1.txz
+c9e9f52bd5ac9f9e2512345223a3b274  libmms-0.6.2-arm-1.txz
+d0ba07ffb41f8c8072c3a72c642fd6ed  libpar2-0.2-arm-1.txz
+3c5701c05ab95f986e01253ad94a8650  libpar2-0.2-arm-2.txz
+1e1c96e71aef38f9bbba4d5b203342fe  libsigc++-2.2.0-arm-1.txz
+549f4f792f3f414dc11a2543aa27a0ff  libspectre-0.2.7-arm-1.txz
+362fecb4327b4db509cc27c8377e3da5  libunistring-0.9.3-arm-1.txz
+aa138e6d77ad3953671610579cc3d42b  links-2.7-arm-1.txz
+aff618deb5ab34b9ac7a03e0d8154838  lzo-2.06-arm-1.txz
+f855d164949e7acc18fa4aaf101c0d04  most-pre5.1-14-arm-1.txz
+e96e21b39bfa4d7eb5d44b5228fe7b70  mysecureshell-1.30-arm-1.txz
+cfb7825ee4f94260672690d154f2b6e3  nail-20120224-arm-1.txz
+0a14881eadc441ccdcfcd31bea56bcdd  neon-0.29.6-arm-1.txz
+9a89b60c336964997604fae4ed17695e  netatalk-3.0.2-arm-1.txz
+6029909b3d503980c034bd39478c0be1  node-0.8.21-arm-1.txz
+8a7d226e05c96bbcb6d53615c8358a7b  node-0.8.21-arm-2.txz
+87293f8ac425e78b4fd4ea49597b9cb0  node-v0.6.10-arm-1.txz
+71de0746bef03bd0f6edcfc667d19a6c  nut-2.6.5-arm-1.txz
+3a2df95f41ab7e1b0f0b81e874fb0812  nzbget-0.8.0r394-arm-1.txz
+083f7fd632357f1cce627207fb4552d3  opencv-2.3.1-arm-2.txz
+74894e01f5a6c68dc684a058883adce1  openssh-6.1p1-arm-4-node.txz
+ca1211de85f0f37d3a8e91d62fc63ab9  openssh-6.1p1-arm-4.txz
+c446b1a2cdfb22283d06cdc1696f69ef  openssl-1.0.0g-arm-1.txz
+1a6b123a0d2d852c49cd3b59dd162587  openssl-1.0.1c-arm-1.txz
+2739d61c04fef5e9c14703d3414a12b4  p7zip-9.20.1-arm-1.txz
+b6587c19ed46af536599c44164f30062  pango-1.32.3-arm-1.txz
+31aab821d024ee722d8086de0aaec3af  par-1.1-arm-1.txz
+40e39f90d6ffc36a13ed1266eaa233af  par2cmdline-0.4-arm-1.txz
+b0bf2733a984c43aa5ae222caf6ed652  parted-3.1-arm-1.txz
+50bb839f538148a881ce720ac210d8cb  php-5.4.11-arm-1.txz
+60cf27986a25f0c1e48759e28f30b39e  php-5.5.0beta3-arm-1.txz
+ac2a6618d9bff07b61619eb43e444f76  pixman-0.28.0-arm-1.txz
+6193b8bc9c34ed897730111343822d4f  protobuf-2.4.1-arm-1.txz
+16e33376597489b17fc80cc37d00fc5c  rrdtool-1.4.5-arm-1.txz
+a9950a1a97c267804ff19d08aa6d9525  rtmpdump-2.3-arm-1.txz
+4fa15a6145d7b868d687b8eba8279abc  seeks-20120224-arm-2.txz
+d949e5826b587dfcbb4fc5127b9914bc  sendmail-8.14.5-arm-1.txz
+3b684329a947e339bcf852abccb64a72  setuptools-0.6c11-arm-1.txz
+97642aff8413275eadf07642783a7570  slang-pre2.3.0-68-arm-1.txz
+672ee83f6e2b613bbbf9aad110c52a8f  sshpass-1.05-arm-1.txz
+50001317da06eb57e8898c2e2c590c20  swig-2.0.4-arm-1.txz
+6c49bfc80064b5760b761b57f119c8ed  tokyocabinet-1.4.47-arm-1.txz
+276175e3bd3f5f00e0f5729b013790b0  tokyotyrant-1.1.41-arm-1.txz
+d800d890172e3b93db736db52bdb6de8  tor-0.2.3.25-arm-1.txz
+175f16b06006a17e1ce953e370f369c8  unrar-4.1.4-arm-1.txz
+51da0ea5b5cd3b92dc196ce0ccee8789  vim-7.3-arm-1.txz
+012b27f2e1bc2848263c6d1879589e0d  wdfs-1.4.2-arm-1.txz
+5f93016524482301a080ccbceeaa1413  xvidcore-1.3.2-arm-1.txz
+18c2e4aa1dcfa44fe7f49784d7414846  zlib-1.2.6-arm-1.txz
