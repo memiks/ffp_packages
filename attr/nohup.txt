@@ -1,0 +1,186 @@
+++ basename ./attr.funpkg .funpkg
++ PN=attr
++ PR=1
++ . ./config.ffp
+++ GNU_HOST=
+++ GNU_TARGET=
+++ FFP_CFLAGS='-I/ffp/include -O2'
+++ FFP_LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
+++ '[' '!' -d '' ']'
+++ TMPDIR=/tmp
+++ export TMPDIR
+++ mandir=/ffp/share/man
+++ infodir=/ffp/share/info
+++ docdir=/ffp/share/doc
+++ pwd
++ X=/ffp/home/root/fun_plug/ffp_packages/attr
+++ mktemp -t -d attr.XXXXXX
++ W=/tmp/attr.5wkkYG
++ D=/tmp/attr.5wkkYG/pkg
++ cd /tmp/attr.5wkkYG
++ cat /ffp/home/root/fun_plug/ffp_packages/attr/SRC_URI
++ xargs wget
+--2013-02-18 11:31:19--  http://download.savannah.gnu.org/releases/attr/attr-2.4.46.src.tar.gz
+Resolving download.savannah.gnu.org... 140.186.70.73
+Connecting to download.savannah.gnu.org|140.186.70.73|:80... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: http://download.savannah.gnu.org/releases-redirect/attr/attr-2.4.46.src.tar.gz [following]
+--2013-02-18 11:31:19--  http://download.savannah.gnu.org/releases-redirect/attr/attr-2.4.46.src.tar.gz
+Reusing existing connection to download.savannah.gnu.org:80.
+HTTP request sent, awaiting response... 302 Found
+Location: http://ftp.igh.cnrs.fr/pub/nongnu//attr/attr-2.4.46.src.tar.gz [following]
+--2013-02-18 11:31:19--  http://ftp.igh.cnrs.fr/pub/nongnu//attr/attr-2.4.46.src.tar.gz
+Resolving ftp.igh.cnrs.fr... 193.50.6.138
+Connecting to ftp.igh.cnrs.fr|193.50.6.138|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 338181 (330K) [application/octet-stream]
+Saving to: `attr-2.4.46.src.tar.gz'
+
+     0K .......... .......... .......... .......... .......... 15%  329K 1s
+    50K .......... .......... .......... .......... .......... 30%  681K 1s
+   100K .......... .......... .......... .......... .......... 45%  866K 0s
+   150K .......... .......... .......... .......... .......... 60%  754K 0s
+   200K .......... .......... .......... .......... .......... 75%  808K 0s
+   250K .......... .......... .......... .......... .......... 90%  780K 0s
+   300K .......... .......... ..........                      100%  752K=0.5s
+
+2013-02-18 11:31:20 (641 KB/s) - `attr-2.4.46.src.tar.gz' saved [338181/338181]
+
+++ ls attr-2.4.46.src.tar.gz
+++ egrep -o '[0-9][0-9.]*[0-9]'
++ PV=2.4.46
++ tar xf attr-2.4.46.src.tar.gz
++ cd attr-2.4.46 attr-2.4.46.src.tar.gz
+++ ls '/ffp/home/root/fun_plug/ffp_packages/attr/patches/*.patch'
+ls: cannot access /ffp/home/root/fun_plug/ffp_packages/attr/patches/*.patch: No such file or directory
++ LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
++ ./configure --prefix=/ffp --build= --host= --mandir=/ffp/share/man --infodir=/ffp/share/info
+checking build system type... armv5tejl-unknown-linux-gnueabi
+checking host system type... armv5tejl-unknown-linux-gnueabi
+checking how to print strings... printf
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for a sed that does not truncate output... /ffp/bin/sed
+checking for grep that handles long lines and -e... /ffp/bin/grep
+checking for egrep... /ffp/bin/grep -E
+checking for fgrep... /ffp/bin/grep -F
+checking for ld used by gcc... /ffp/bin/ld
+checking if the linker (/ffp/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /ffp/bin/nm -B
+checking the name lister (/ffp/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert armv5tejl-unknown-linux-gnueabi file names to armv5tejl-unknown-linux-gnueabi format... func_convert_file_noop
+checking how to convert armv5tejl-unknown-linux-gnueabi file names to toolchain format... func_convert_file_noop
+checking for /ffp/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking for gawk... gawk
+checking command to parse /ffp/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/ffp/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for gcc... (cached) gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to accept ISO C89... (cached) none needed
+checking for gcc... (cached) gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to accept ISO C89... (cached) none needed
+checking for gmake... no
+checking for make... /ffp/bin/make
+checking for tar... /ffp/bin/tar
+checking for gzip... /ffp/bin/gzip
+checking for makedepend... /bin/true
+checking for awk... /ffp/bin/awk
+checking for sed... (cached) /ffp/bin/sed
+checking for echo... /ffp/bin/echo
+checking for sort... /ffp/bin/sort
+checking whether ln -s works... yes
+checking for msgfmt... /ffp/bin/msgfmt
+checking for msgmerge... /ffp/bin/msgmerge
+checking for xgettext... /ffp/bin/xgettext
+checking for rpm... no
+checking for an ANSI C-conforming const... yes
+checking for mode_t... yes
+checking for size_t... yes
+checking for working alloca.h... yes
+checking for alloca... yes
+configure: creating ./config.status
+config.status: creating include/builddefs
+config.status: creating include/config.h
+config.status: executing libtool commands
++ make
+/ffp/bin/make include libmisc libattr attr getfattr setfattr examples test m4 man doc po debian build
+make[1]: Entering directory `/tmp/attr.5wkkYG/attr-2.4.46'
+/ffp/bin/make -C include
+make[2]: Entering directory `/tmp/attr.5wkkYG/attr-2.4.46/include'
+ln -s . attr
+make[2]: Leaving directory `/tmp/attr.5wkkYG/attr-2.4.46/include'
+/ffp/bin/make -C libmisc
+make[2]: Entering directory `/tmp/attr.5wkkYG/attr-2.4.46/libmisc'
+/bin/sh ../libtool --mode=compile gcc -g -O2 -DDEBUG -funsigned-char -fno-strict-aliasing -Wall -DVERSION=\"2.4.46\" -DLOCALEDIR=\"/ffp/share/locale\" -DPACKAGE=\"attr\" -I../include -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64   -c quote.c
+../libtool: eval: line 1: base_compile+= gcc: not found
+../libtool: eval: line 1: base_compile+= -g: not found
+../libtool: eval: line 1: base_compile+= -O2: not found
+../libtool: eval: line 1: base_compile+= -DDEBUG: not found
+../libtool: eval: line 1: base_compile+= -funsigned-char: not found
+../libtool: eval: line 1: base_compile+= -fno-strict-aliasing: not found
+../libtool: eval: line 1: base_compile+= -Wall: not found
+../libtool: eval: line 1: base_compile+= -DVERSION=\"2.4.46\": not found
+../libtool: eval: line 1: base_compile+= -DLOCALEDIR=\"/ffp/share/locale\": not found
+../libtool: eval: line 1: base_compile+= -DPACKAGE=\"attr\": not found
+../libtool: eval: line 1: base_compile+= -I../include: not found
+../libtool: eval: line 1: base_compile+= -D_GNU_SOURCE: not found
+../libtool: eval: line 1: base_compile+= -D_FILE_OFFSET_BITS=64: not found
+../libtool: eval: line 1: base_compile+= -c: not found
+libtool: compile: you must specify a compilation command
+libtool: compile: Try `libtool --help --mode=compile' for more information.
+make[2]: *** [quote.lo] Error 1
+make[2]: Leaving directory `/tmp/attr.5wkkYG/attr-2.4.46/libmisc'
+make[1]: *** [libmisc] Error 2
+make[1]: Leaving directory `/tmp/attr.5wkkYG/attr-2.4.46'
+make: *** [default] Error 2

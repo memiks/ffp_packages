@@ -1,0 +1,5 @@
+The attr package contains utilities to administer the extended 
+attributes on filesystem objects. 
+
+Homepage: http://savannah.nongnu.org/projects/attr
+
