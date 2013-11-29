@@ -1,0 +1,1322 @@
+nohup: ignoring input
+++ basename ./libpar2.funpkg .funpkg
++ PN=libpar2
++ PR=1
++ . ./config.ffp
+++ GNU_HOST=
+++ GNU_TARGET=
+++ FFP_CFLAGS='-I/ffp/include -O2'
+++ FFP_LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
+++ '[' '!' -d '' ']'
+++ TMPDIR=/tmp
+++ export TMPDIR
+++ mandir=/ffp/share/man
+++ infodir=/ffp/share/info
+++ docdir=/ffp/share/doc
+++ pwd
++ X=/ffp/home/root/fun_plug/ffp_packages/libpar2
+++ mktemp -t -d libpar2.XXXXXX
++ W=/tmp/libpar2.IZW0TU
++ D=/tmp/libpar2.IZW0TU/pkg
++ cd /tmp/libpar2.IZW0TU
++ cp /ffp/home/root/fun_plug/ffp_packages/libpar2/libpar2-0.2.tar.gz .
+++ ls libpar2-0.2.tar.gz
+++ egrep -o '[0-9][0-9.]*[0-9]'
++ PV=0.2
++ tar xf libpar2-0.2.tar.gz
++ cd libpar2-0.2 libpar2-0.2.tar.gz
+++ ls /ffp/home/root/fun_plug/ffp_packages/libpar2/patches/001-libpar2-0.2-cancel.patch /ffp/home/root/fun_plug/ffp_packages/libpar2/patches/002-libpar2-0.2-bugfixes.patch
++ for file in '`ls $X/patches/*.patch`'
++ patch -p0 -i /ffp/home/root/fun_plug/ffp_packages/libpar2/patches/001-libpar2-0.2-cancel.patch
+patching file ../libpar2-0.2/par2repairer.cpp
+Hunk #2 succeeded at 405 (offset -1 lines).
+Hunk #3 succeeded at 587 (offset -1 lines).
+Hunk #4 succeeded at 841 (offset -1 lines).
+Hunk #5 succeeded at 890 (offset -1 lines).
+Hunk #6 succeeded at 1243 (offset -1 lines).
+Hunk #7 succeeded at 1600 (offset -1 lines).
+Hunk #8 succeeded at 1693 (offset -1 lines).
+Hunk #9 succeeded at 2338 (offset -1 lines).
+Hunk #10 succeeded at 2404 (offset -1 lines).
+Hunk #11 succeeded at 2427 (offset -1 lines).
+patching file ../libpar2-0.2/par2repairer.h
+Hunk #1 succeeded at 181 (offset -5 lines).
++ for file in '`ls $X/patches/*.patch`'
++ patch -p0 -i /ffp/home/root/fun_plug/ffp_packages/libpar2/patches/002-libpar2-0.2-bugfixes.patch
+patching file ../libpar2-0.2/par2repairer.cpp
+Hunk #1 succeeded at 78 (offset 2 lines).
+Hunk #2 succeeded at 1301 (offset 41 lines).
+Hunk #3 succeeded at 1853 (offset 50 lines).
+patching file ../libpar2-0.2/par2repairer.h
++ LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
++ ./configure --prefix=/ffp --build= --host= --mandir=/ffp/share/man --infodir=/ffp/share/info
+checking build system type... armv5tejl-unknown-linux-gnu
+checking host system type... armv5tejl-unknown-linux-gnu
+checking for a BSD-compatible install... /ffp/bin/install -c
+checking whether build environment is sane... yes
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking for g++... g++
+checking for C++ compiler default output file name... a.out
+checking whether the C++ compiler works... yes
+checking whether we are cross compiling... no
+checking for suffix of executables... 
+checking for suffix of object files... o
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking for style of include used by make... GNU
+checking dependency style of g++... gcc3
+checking for a BSD-compatible install... /ffp/bin/install -c
+checking for gcc... gcc
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ANSI C... none needed
+checking dependency style of gcc... gcc3
+checking for a sed that does not truncate output... /ffp/bin/sed
+checking for egrep... grep -E
+checking for ld used by gcc... /ffp/bin/ld
+checking if the linker (/ffp/bin/ld) is GNU ld... yes
+checking for /ffp/bin/ld option to reload object files... -r
+checking for BSD-compatible nm... /ffp/bin/nm -B
+checking whether ln -s works... yes
+checking how to recognise dependent libraries... pass_all
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking dlfcn.h usability... yes
+checking dlfcn.h presence... yes
+checking for dlfcn.h... yes
+checking how to run the C++ preprocessor... g++ -E
+checking for g77... no
+checking for f77... no
+checking for xlf... no
+checking for frt... no
+checking for pgf77... no
+checking for fort77... no
+checking for fl32... no
+checking for af77... no
+checking for f90... no
+checking for xlf90... no
+checking for pgf90... no
+checking for epcf90... no
+checking for f95... no
+checking for fort... no
+checking for xlf95... no
+checking for ifc... no
+checking for efc... no
+checking for pgf95... no
+checking for lf95... no
+checking for gfortran... no
+checking whether we are using the GNU Fortran 77 compiler... no
+checking whether  accepts -g... no
+checking the maximum length of command line arguments... 32768
+checking command to parse /ffp/bin/nm -B output from gcc object... ok
+checking for objdir... .libs
+checking for ar... ar
+checking for ranlib... ranlib
+checking for strip... strip
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC
+checking if gcc PIC flag -fPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking whether the gcc linker (/ffp/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+configure: creating libtool
+appending configuration tag "CXX" to libtool
+checking for ld used by g++... /ffp/bin/ld
+checking if the linker (/ffp/bin/ld) is GNU ld... yes
+checking whether the g++ linker (/ffp/bin/ld) supports shared libraries... yes
+checking for g++ option to produce PIC... -fPIC
+checking if g++ PIC flag -fPIC works... yes
+checking if g++ static flag -static works... yes
+checking if g++ supports -c -o file.o... yes
+checking whether the g++ linker (/ffp/bin/ld) supports shared libraries... yes
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+appending configuration tag "F77" to libtool
+checking for main in -lstdc++... yes
+checking for main in -lsigc-2.0... yes
+checking for dirent.h that defines DIR... yes
+checking for library containing opendir... none required
+checking for stdbool.h that conforms to C99... yes
+checking for _Bool... no
+checking for ANSI C header files... (cached) yes
+checking stdio.h usability... yes
+checking stdio.h presence... yes
+checking for stdio.h... yes
+checking endian.h usability... yes
+checking endian.h presence... yes
+checking for endian.h... yes
+checking getopt.h usability... yes
+checking getopt.h presence... yes
+checking for getopt.h... yes
+checking for pkg-config... /ffp/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for SIGC... yes
+checking for size_t... yes
+checking whether byte ordering is bigendian... no
+checking for an ANSI C-conforming const... yes
+checking for inline... inline
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... 64
+checking for _LARGE_FILES value needed for large files... no
+checking for _LARGEFILE_SOURCE value needed for large files... no
+checking for fseeko... yes
+checking for working memcmp... yes
+checking for stricmp... no
+checking for strcasecmp... yes
+checking for strchr... yes
+checking for memcpy... yes
+checking for getopt... yes
+checking for getopt_long... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
++ make
+make  all-am
+make[1]: Entering directory `/tmp/libpar2.IZW0TU/libpar2-0.2'
+if /ffp/bin/sh ./libtool --tag=CXX --mode=compile g++ -DHAVE_CONFIG_H -I. -I. -I. `pkg-config sigc++-2.0 --cflags`   -Wall -g -O2 -MT libpar2.lo -MD -MP -MF ".deps/libpar2.Tpo" -c -o libpar2.lo libpar2.cpp; \
+	then mv -f ".deps/libpar2.Tpo" ".deps/libpar2.Plo"; else rm -f ".deps/libpar2.Tpo"; exit 1; fi
+mkdir .libs
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT libpar2.lo -MD -MP -MF .deps/libpar2.Tpo -c libpar2.cpp  -fPIC -DPIC -o .libs/libpar2.o
+In file included from par2cmdline.h:264:0,
+                 from libpar2.h:5,
+                 from libpar2.cpp:1:
+par2fileformat.h:67:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::hash'
+par2fileformat.h:68:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::setid'
+par2fileformat.h:79:18: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONENTRY::hash'
+par2fileformat.h:84:25: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEVERIFICATIONPACKET::header'
+par2fileformat.h:86:25: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONPACKET::fileid'
+par2fileformat.h:87:33: warning: ignoring packed attribute because of unpacked non-POD field 'FILEVERIFICATIONENTRY FILEVERIFICATIONPACKET::entries [0]'
+par2fileformat.h:99:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEDESCRIPTIONPACKET::header'
+par2fileformat.h:101:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::fileid'
+par2fileformat.h:102:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hashfull'
+par2fileformat.h:103:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hash16k'
+par2fileformat.h:127:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER MAINPACKET::header'
+par2fileformat.h:131:28: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash MAINPACKET::fileid [0]'
+par2fileformat.h:141:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER CREATORPACKET::header'
+par2fileformat.h:151:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER RECOVERYBLOCKPACKET::header'
+In file included from par2cmdline.h:283:0,
+                 from libpar2.h:5,
+                 from libpar2.cpp:1:
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator<(const VerificationHashEntry&) const':
+verificationhashtable.h:69:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator>(const VerificationHashEntry&) const':
+verificationhashtable.h:73:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In static member function 'static const VerificationHashEntry* VerificationHashEntry::Search(const VerificationHashEntry*, const MD5Hash&)':
+verificationhashtable.h:186:64: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:190:69: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'const VerificationHashEntry* VerificationHashTable::FindMatch(const VerificationHashEntry*, const Par2RepairerSourceFile*, FileCheckSummer&, bool&) const':
+verificationhashtable.h:405:126: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:283:0,
+                 from libpar2.h:5,
+                 from libpar2.cpp:1:
+verificationhashtable.h:412:128: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:429:118: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:288:0,
+                 from libpar2.h:5,
+                 from libpar2.cpp:1:
+par1fileformat.h: At global scope:
+par1fileformat.h:41:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::controlhash'
+par1fileformat.h:42:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::sethash'
+par1fileformat.h:56:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hashfull'
+par1fileformat.h:57:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hash16k'
+libpar2.cpp: In member function 'Result LibPar2::PreProcess()':
+libpar2.cpp:41:10: warning: 'result' may be used uninitialized in this function
+libpar2.cpp: In member function 'Result LibPar2::Process(bool)':
+libpar2.cpp:61:10: warning: 'result' may be used uninitialized in this function
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT libpar2.lo -MD -MP -MF .deps/libpar2.Tpo -c libpar2.cpp -o libpar2.o >/dev/null 2>&1
+if /ffp/bin/sh ./libtool --tag=CXX --mode=compile g++ -DHAVE_CONFIG_H -I. -I. -I. `pkg-config sigc++-2.0 --cflags`   -Wall -g -O2 -MT parheaders.lo -MD -MP -MF ".deps/parheaders.Tpo" -c -o parheaders.lo parheaders.cpp; \
+	then mv -f ".deps/parheaders.Tpo" ".deps/parheaders.Plo"; else rm -f ".deps/parheaders.Tpo"; exit 1; fi
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT parheaders.lo -MD -MP -MF .deps/parheaders.Tpo -c parheaders.cpp  -fPIC -DPIC -o .libs/parheaders.o
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT parheaders.lo -MD -MP -MF .deps/parheaders.Tpo -c parheaders.cpp -o parheaders.o >/dev/null 2>&1
+if /ffp/bin/sh ./libtool --tag=CXX --mode=compile g++ -DHAVE_CONFIG_H -I. -I. -I. `pkg-config sigc++-2.0 --cflags`   -Wall -g -O2 -MT par2cmdline.lo -MD -MP -MF ".deps/par2cmdline.Tpo" -c -o par2cmdline.lo par2cmdline.cpp; \
+	then mv -f ".deps/par2cmdline.Tpo" ".deps/par2cmdline.Plo"; else rm -f ".deps/par2cmdline.Tpo"; exit 1; fi
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT par2cmdline.lo -MD -MP -MF .deps/par2cmdline.Tpo -c par2cmdline.cpp  -fPIC -DPIC -o .libs/par2cmdline.o
+In file included from par2cmdline.h:264:0,
+                 from par2cmdline.cpp:20:
+par2fileformat.h:67:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::hash'
+par2fileformat.h:68:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::setid'
+par2fileformat.h:79:18: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONENTRY::hash'
+par2fileformat.h:84:25: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEVERIFICATIONPACKET::header'
+par2fileformat.h:86:25: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONPACKET::fileid'
+par2fileformat.h:87:33: warning: ignoring packed attribute because of unpacked non-POD field 'FILEVERIFICATIONENTRY FILEVERIFICATIONPACKET::entries [0]'
+par2fileformat.h:99:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEDESCRIPTIONPACKET::header'
+par2fileformat.h:101:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::fileid'
+par2fileformat.h:102:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hashfull'
+par2fileformat.h:103:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hash16k'
+par2fileformat.h:127:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER MAINPACKET::header'
+par2fileformat.h:131:28: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash MAINPACKET::fileid [0]'
+par2fileformat.h:141:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER CREATORPACKET::header'
+par2fileformat.h:151:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER RECOVERYBLOCKPACKET::header'
+In file included from par2cmdline.h:283:0,
+                 from par2cmdline.cpp:20:
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator<(const VerificationHashEntry&) const':
+verificationhashtable.h:69:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator>(const VerificationHashEntry&) const':
+verificationhashtable.h:73:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In static member function 'static const VerificationHashEntry* VerificationHashEntry::Search(const VerificationHashEntry*, const MD5Hash&)':
+verificationhashtable.h:186:64: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:190:69: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'const VerificationHashEntry* VerificationHashTable::FindMatch(const VerificationHashEntry*, const Par2RepairerSourceFile*, FileCheckSummer&, bool&) const':
+verificationhashtable.h:405:126: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:283:0,
+                 from par2cmdline.cpp:20:
+verificationhashtable.h:412:128: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:429:118: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:288:0,
+                 from par2cmdline.cpp:20:
+par1fileformat.h: At global scope:
+par1fileformat.h:41:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::controlhash'
+par1fileformat.h:42:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::sethash'
+par1fileformat.h:56:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hashfull'
+par1fileformat.h:57:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hash16k'
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT par2cmdline.lo -MD -MP -MF .deps/par2cmdline.Tpo -c par2cmdline.cpp -o par2cmdline.o >/dev/null 2>&1
+if /ffp/bin/sh ./libtool --tag=CXX --mode=compile g++ -DHAVE_CONFIG_H -I. -I. -I. `pkg-config sigc++-2.0 --cflags`   -Wall -g -O2 -MT commandline.lo -MD -MP -MF ".deps/commandline.Tpo" -c -o commandline.lo commandline.cpp; \
+	then mv -f ".deps/commandline.Tpo" ".deps/commandline.Plo"; else rm -f ".deps/commandline.Tpo"; exit 1; fi
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT commandline.lo -MD -MP -MF .deps/commandline.Tpo -c commandline.cpp  -fPIC -DPIC -o .libs/commandline.o
+In file included from par2cmdline.h:264:0,
+                 from commandline.cpp:20:
+par2fileformat.h:67:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::hash'
+par2fileformat.h:68:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::setid'
+par2fileformat.h:79:18: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONENTRY::hash'
+par2fileformat.h:84:25: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEVERIFICATIONPACKET::header'
+par2fileformat.h:86:25: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONPACKET::fileid'
+par2fileformat.h:87:33: warning: ignoring packed attribute because of unpacked non-POD field 'FILEVERIFICATIONENTRY FILEVERIFICATIONPACKET::entries [0]'
+par2fileformat.h:99:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEDESCRIPTIONPACKET::header'
+par2fileformat.h:101:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::fileid'
+par2fileformat.h:102:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hashfull'
+par2fileformat.h:103:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hash16k'
+par2fileformat.h:127:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER MAINPACKET::header'
+par2fileformat.h:131:28: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash MAINPACKET::fileid [0]'
+par2fileformat.h:141:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER CREATORPACKET::header'
+par2fileformat.h:151:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER RECOVERYBLOCKPACKET::header'
+In file included from par2cmdline.h:283:0,
+                 from commandline.cpp:20:
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator<(const VerificationHashEntry&) const':
+verificationhashtable.h:69:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator>(const VerificationHashEntry&) const':
+verificationhashtable.h:73:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In static member function 'static const VerificationHashEntry* VerificationHashEntry::Search(const VerificationHashEntry*, const MD5Hash&)':
+verificationhashtable.h:186:64: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:190:69: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'const VerificationHashEntry* VerificationHashTable::FindMatch(const VerificationHashEntry*, const Par2RepairerSourceFile*, FileCheckSummer&, bool&) const':
+verificationhashtable.h:405:126: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:283:0,
+                 from commandline.cpp:20:
+verificationhashtable.h:412:128: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:429:118: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:288:0,
+                 from commandline.cpp:20:
+par1fileformat.h: At global scope:
+par1fileformat.h:41:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::controlhash'
+par1fileformat.h:42:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::sethash'
+par1fileformat.h:56:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hashfull'
+par1fileformat.h:57:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hash16k'
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT commandline.lo -MD -MP -MF .deps/commandline.Tpo -c commandline.cpp -o commandline.o >/dev/null 2>&1
+if /ffp/bin/sh ./libtool --tag=CXX --mode=compile g++ -DHAVE_CONFIG_H -I. -I. -I. `pkg-config sigc++-2.0 --cflags`   -Wall -g -O2 -MT crc.lo -MD -MP -MF ".deps/crc.Tpo" -c -o crc.lo crc.cpp; \
+	then mv -f ".deps/crc.Tpo" ".deps/crc.Plo"; else rm -f ".deps/crc.Tpo"; exit 1; fi
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT crc.lo -MD -MP -MF .deps/crc.Tpo -c crc.cpp  -fPIC -DPIC -o .libs/crc.o
+In file included from par2cmdline.h:264:0,
+                 from crc.cpp:20:
+par2fileformat.h:67:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::hash'
+par2fileformat.h:68:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::setid'
+par2fileformat.h:79:18: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONENTRY::hash'
+par2fileformat.h:84:25: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEVERIFICATIONPACKET::header'
+par2fileformat.h:86:25: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONPACKET::fileid'
+par2fileformat.h:87:33: warning: ignoring packed attribute because of unpacked non-POD field 'FILEVERIFICATIONENTRY FILEVERIFICATIONPACKET::entries [0]'
+par2fileformat.h:99:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEDESCRIPTIONPACKET::header'
+par2fileformat.h:101:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::fileid'
+par2fileformat.h:102:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hashfull'
+par2fileformat.h:103:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hash16k'
+par2fileformat.h:127:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER MAINPACKET::header'
+par2fileformat.h:131:28: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash MAINPACKET::fileid [0]'
+par2fileformat.h:141:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER CREATORPACKET::header'
+par2fileformat.h:151:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER RECOVERYBLOCKPACKET::header'
+In file included from par2cmdline.h:283:0,
+                 from crc.cpp:20:
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator<(const VerificationHashEntry&) const':
+verificationhashtable.h:69:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator>(const VerificationHashEntry&) const':
+verificationhashtable.h:73:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In static member function 'static const VerificationHashEntry* VerificationHashEntry::Search(const VerificationHashEntry*, const MD5Hash&)':
+verificationhashtable.h:186:64: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:190:69: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'const VerificationHashEntry* VerificationHashTable::FindMatch(const VerificationHashEntry*, const Par2RepairerSourceFile*, FileCheckSummer&, bool&) const':
+verificationhashtable.h:405:126: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:283:0,
+                 from crc.cpp:20:
+verificationhashtable.h:412:128: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:429:118: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:288:0,
+                 from crc.cpp:20:
+par1fileformat.h: At global scope:
+par1fileformat.h:41:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::controlhash'
+par1fileformat.h:42:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::sethash'
+par1fileformat.h:56:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hashfull'
+par1fileformat.h:57:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hash16k'
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT crc.lo -MD -MP -MF .deps/crc.Tpo -c crc.cpp -o crc.o >/dev/null 2>&1
+if /ffp/bin/sh ./libtool --tag=CXX --mode=compile g++ -DHAVE_CONFIG_H -I. -I. -I. `pkg-config sigc++-2.0 --cflags`   -Wall -g -O2 -MT creatorpacket.lo -MD -MP -MF ".deps/creatorpacket.Tpo" -c -o creatorpacket.lo creatorpacket.cpp; \
+	then mv -f ".deps/creatorpacket.Tpo" ".deps/creatorpacket.Plo"; else rm -f ".deps/creatorpacket.Tpo"; exit 1; fi
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT creatorpacket.lo -MD -MP -MF .deps/creatorpacket.Tpo -c creatorpacket.cpp  -fPIC -DPIC -o .libs/creatorpacket.o
+In file included from par2cmdline.h:264:0,
+                 from creatorpacket.cpp:20:
+par2fileformat.h:67:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::hash'
+par2fileformat.h:68:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::setid'
+par2fileformat.h:79:18: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONENTRY::hash'
+par2fileformat.h:84:25: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEVERIFICATIONPACKET::header'
+par2fileformat.h:86:25: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONPACKET::fileid'
+par2fileformat.h:87:33: warning: ignoring packed attribute because of unpacked non-POD field 'FILEVERIFICATIONENTRY FILEVERIFICATIONPACKET::entries [0]'
+par2fileformat.h:99:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEDESCRIPTIONPACKET::header'
+par2fileformat.h:101:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::fileid'
+par2fileformat.h:102:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hashfull'
+par2fileformat.h:103:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hash16k'
+par2fileformat.h:127:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER MAINPACKET::header'
+par2fileformat.h:131:28: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash MAINPACKET::fileid [0]'
+par2fileformat.h:141:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER CREATORPACKET::header'
+par2fileformat.h:151:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER RECOVERYBLOCKPACKET::header'
+In file included from par2cmdline.h:283:0,
+                 from creatorpacket.cpp:20:
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator<(const VerificationHashEntry&) const':
+verificationhashtable.h:69:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator>(const VerificationHashEntry&) const':
+verificationhashtable.h:73:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In static member function 'static const VerificationHashEntry* VerificationHashEntry::Search(const VerificationHashEntry*, const MD5Hash&)':
+verificationhashtable.h:186:64: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:190:69: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'const VerificationHashEntry* VerificationHashTable::FindMatch(const VerificationHashEntry*, const Par2RepairerSourceFile*, FileCheckSummer&, bool&) const':
+verificationhashtable.h:405:126: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:283:0,
+                 from creatorpacket.cpp:20:
+verificationhashtable.h:412:128: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:429:118: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:288:0,
+                 from creatorpacket.cpp:20:
+par1fileformat.h: At global scope:
+par1fileformat.h:41:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::controlhash'
+par1fileformat.h:42:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::sethash'
+par1fileformat.h:56:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hashfull'
+par1fileformat.h:57:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hash16k'
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT creatorpacket.lo -MD -MP -MF .deps/creatorpacket.Tpo -c creatorpacket.cpp -o creatorpacket.o >/dev/null 2>&1
+if /ffp/bin/sh ./libtool --tag=CXX --mode=compile g++ -DHAVE_CONFIG_H -I. -I. -I. `pkg-config sigc++-2.0 --cflags`   -Wall -g -O2 -MT criticalpacket.lo -MD -MP -MF ".deps/criticalpacket.Tpo" -c -o criticalpacket.lo criticalpacket.cpp; \
+	then mv -f ".deps/criticalpacket.Tpo" ".deps/criticalpacket.Plo"; else rm -f ".deps/criticalpacket.Tpo"; exit 1; fi
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT criticalpacket.lo -MD -MP -MF .deps/criticalpacket.Tpo -c criticalpacket.cpp  -fPIC -DPIC -o .libs/criticalpacket.o
+In file included from par2cmdline.h:264:0,
+                 from criticalpacket.cpp:20:
+par2fileformat.h:67:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::hash'
+par2fileformat.h:68:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::setid'
+par2fileformat.h:79:18: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONENTRY::hash'
+par2fileformat.h:84:25: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEVERIFICATIONPACKET::header'
+par2fileformat.h:86:25: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONPACKET::fileid'
+par2fileformat.h:87:33: warning: ignoring packed attribute because of unpacked non-POD field 'FILEVERIFICATIONENTRY FILEVERIFICATIONPACKET::entries [0]'
+par2fileformat.h:99:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEDESCRIPTIONPACKET::header'
+par2fileformat.h:101:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::fileid'
+par2fileformat.h:102:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hashfull'
+par2fileformat.h:103:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hash16k'
+par2fileformat.h:127:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER MAINPACKET::header'
+par2fileformat.h:131:28: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash MAINPACKET::fileid [0]'
+par2fileformat.h:141:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER CREATORPACKET::header'
+par2fileformat.h:151:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER RECOVERYBLOCKPACKET::header'
+In file included from par2cmdline.h:283:0,
+                 from criticalpacket.cpp:20:
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator<(const VerificationHashEntry&) const':
+verificationhashtable.h:69:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator>(const VerificationHashEntry&) const':
+verificationhashtable.h:73:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In static member function 'static const VerificationHashEntry* VerificationHashEntry::Search(const VerificationHashEntry*, const MD5Hash&)':
+verificationhashtable.h:186:64: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:190:69: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'const VerificationHashEntry* VerificationHashTable::FindMatch(const VerificationHashEntry*, const Par2RepairerSourceFile*, FileCheckSummer&, bool&) const':
+verificationhashtable.h:405:126: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:283:0,
+                 from criticalpacket.cpp:20:
+verificationhashtable.h:412:128: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:429:118: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:288:0,
+                 from criticalpacket.cpp:20:
+par1fileformat.h: At global scope:
+par1fileformat.h:41:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::controlhash'
+par1fileformat.h:42:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::sethash'
+par1fileformat.h:56:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hashfull'
+par1fileformat.h:57:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hash16k'
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT criticalpacket.lo -MD -MP -MF .deps/criticalpacket.Tpo -c criticalpacket.cpp -o criticalpacket.o >/dev/null 2>&1
+if /ffp/bin/sh ./libtool --tag=CXX --mode=compile g++ -DHAVE_CONFIG_H -I. -I. -I. `pkg-config sigc++-2.0 --cflags`   -Wall -g -O2 -MT datablock.lo -MD -MP -MF ".deps/datablock.Tpo" -c -o datablock.lo datablock.cpp; \
+	then mv -f ".deps/datablock.Tpo" ".deps/datablock.Plo"; else rm -f ".deps/datablock.Tpo"; exit 1; fi
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT datablock.lo -MD -MP -MF .deps/datablock.Tpo -c datablock.cpp  -fPIC -DPIC -o .libs/datablock.o
+In file included from par2cmdline.h:264:0,
+                 from datablock.cpp:20:
+par2fileformat.h:67:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::hash'
+par2fileformat.h:68:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::setid'
+par2fileformat.h:79:18: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONENTRY::hash'
+par2fileformat.h:84:25: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEVERIFICATIONPACKET::header'
+par2fileformat.h:86:25: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONPACKET::fileid'
+par2fileformat.h:87:33: warning: ignoring packed attribute because of unpacked non-POD field 'FILEVERIFICATIONENTRY FILEVERIFICATIONPACKET::entries [0]'
+par2fileformat.h:99:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEDESCRIPTIONPACKET::header'
+par2fileformat.h:101:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::fileid'
+par2fileformat.h:102:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hashfull'
+par2fileformat.h:103:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hash16k'
+par2fileformat.h:127:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER MAINPACKET::header'
+par2fileformat.h:131:28: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash MAINPACKET::fileid [0]'
+par2fileformat.h:141:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER CREATORPACKET::header'
+par2fileformat.h:151:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER RECOVERYBLOCKPACKET::header'
+In file included from par2cmdline.h:283:0,
+                 from datablock.cpp:20:
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator<(const VerificationHashEntry&) const':
+verificationhashtable.h:69:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator>(const VerificationHashEntry&) const':
+verificationhashtable.h:73:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In static member function 'static const VerificationHashEntry* VerificationHashEntry::Search(const VerificationHashEntry*, const MD5Hash&)':
+verificationhashtable.h:186:64: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:190:69: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'const VerificationHashEntry* VerificationHashTable::FindMatch(const VerificationHashEntry*, const Par2RepairerSourceFile*, FileCheckSummer&, bool&) const':
+verificationhashtable.h:405:126: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:283:0,
+                 from datablock.cpp:20:
+verificationhashtable.h:412:128: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:429:118: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:288:0,
+                 from datablock.cpp:20:
+par1fileformat.h: At global scope:
+par1fileformat.h:41:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::controlhash'
+par1fileformat.h:42:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::sethash'
+par1fileformat.h:56:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hashfull'
+par1fileformat.h:57:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hash16k'
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT datablock.lo -MD -MP -MF .deps/datablock.Tpo -c datablock.cpp -o datablock.o >/dev/null 2>&1
+if /ffp/bin/sh ./libtool --tag=CXX --mode=compile g++ -DHAVE_CONFIG_H -I. -I. -I. `pkg-config sigc++-2.0 --cflags`   -Wall -g -O2 -MT descriptionpacket.lo -MD -MP -MF ".deps/descriptionpacket.Tpo" -c -o descriptionpacket.lo descriptionpacket.cpp; \
+	then mv -f ".deps/descriptionpacket.Tpo" ".deps/descriptionpacket.Plo"; else rm -f ".deps/descriptionpacket.Tpo"; exit 1; fi
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT descriptionpacket.lo -MD -MP -MF .deps/descriptionpacket.Tpo -c descriptionpacket.cpp  -fPIC -DPIC -o .libs/descriptionpacket.o
+In file included from par2cmdline.h:264:0,
+                 from descriptionpacket.cpp:20:
+par2fileformat.h:67:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::hash'
+par2fileformat.h:68:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::setid'
+par2fileformat.h:79:18: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONENTRY::hash'
+par2fileformat.h:84:25: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEVERIFICATIONPACKET::header'
+par2fileformat.h:86:25: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONPACKET::fileid'
+par2fileformat.h:87:33: warning: ignoring packed attribute because of unpacked non-POD field 'FILEVERIFICATIONENTRY FILEVERIFICATIONPACKET::entries [0]'
+par2fileformat.h:99:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEDESCRIPTIONPACKET::header'
+par2fileformat.h:101:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::fileid'
+par2fileformat.h:102:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hashfull'
+par2fileformat.h:103:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hash16k'
+par2fileformat.h:127:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER MAINPACKET::header'
+par2fileformat.h:131:28: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash MAINPACKET::fileid [0]'
+par2fileformat.h:141:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER CREATORPACKET::header'
+par2fileformat.h:151:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER RECOVERYBLOCKPACKET::header'
+In file included from par2cmdline.h:283:0,
+                 from descriptionpacket.cpp:20:
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator<(const VerificationHashEntry&) const':
+verificationhashtable.h:69:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator>(const VerificationHashEntry&) const':
+verificationhashtable.h:73:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In static member function 'static const VerificationHashEntry* VerificationHashEntry::Search(const VerificationHashEntry*, const MD5Hash&)':
+verificationhashtable.h:186:64: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:190:69: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'const VerificationHashEntry* VerificationHashTable::FindMatch(const VerificationHashEntry*, const Par2RepairerSourceFile*, FileCheckSummer&, bool&) const':
+verificationhashtable.h:405:126: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:283:0,
+                 from descriptionpacket.cpp:20:
+verificationhashtable.h:412:128: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:429:118: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:288:0,
+                 from descriptionpacket.cpp:20:
+par1fileformat.h: At global scope:
+par1fileformat.h:41:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::controlhash'
+par1fileformat.h:42:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::sethash'
+par1fileformat.h:56:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hashfull'
+par1fileformat.h:57:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hash16k'
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT descriptionpacket.lo -MD -MP -MF .deps/descriptionpacket.Tpo -c descriptionpacket.cpp -o descriptionpacket.o >/dev/null 2>&1
+if /ffp/bin/sh ./libtool --tag=CXX --mode=compile g++ -DHAVE_CONFIG_H -I. -I. -I. `pkg-config sigc++-2.0 --cflags`   -Wall -g -O2 -MT diskfile.lo -MD -MP -MF ".deps/diskfile.Tpo" -c -o diskfile.lo diskfile.cpp; \
+	then mv -f ".deps/diskfile.Tpo" ".deps/diskfile.Plo"; else rm -f ".deps/diskfile.Tpo"; exit 1; fi
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT diskfile.lo -MD -MP -MF .deps/diskfile.Tpo -c diskfile.cpp  -fPIC -DPIC -o .libs/diskfile.o
+In file included from par2cmdline.h:264:0,
+                 from diskfile.cpp:20:
+par2fileformat.h:67:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::hash'
+par2fileformat.h:68:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::setid'
+par2fileformat.h:79:18: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONENTRY::hash'
+par2fileformat.h:84:25: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEVERIFICATIONPACKET::header'
+par2fileformat.h:86:25: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONPACKET::fileid'
+par2fileformat.h:87:33: warning: ignoring packed attribute because of unpacked non-POD field 'FILEVERIFICATIONENTRY FILEVERIFICATIONPACKET::entries [0]'
+par2fileformat.h:99:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEDESCRIPTIONPACKET::header'
+par2fileformat.h:101:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::fileid'
+par2fileformat.h:102:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hashfull'
+par2fileformat.h:103:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hash16k'
+par2fileformat.h:127:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER MAINPACKET::header'
+par2fileformat.h:131:28: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash MAINPACKET::fileid [0]'
+par2fileformat.h:141:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER CREATORPACKET::header'
+par2fileformat.h:151:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER RECOVERYBLOCKPACKET::header'
+In file included from par2cmdline.h:283:0,
+                 from diskfile.cpp:20:
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator<(const VerificationHashEntry&) const':
+verificationhashtable.h:69:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator>(const VerificationHashEntry&) const':
+verificationhashtable.h:73:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In static member function 'static const VerificationHashEntry* VerificationHashEntry::Search(const VerificationHashEntry*, const MD5Hash&)':
+verificationhashtable.h:186:64: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:190:69: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'const VerificationHashEntry* VerificationHashTable::FindMatch(const VerificationHashEntry*, const Par2RepairerSourceFile*, FileCheckSummer&, bool&) const':
+verificationhashtable.h:405:126: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:283:0,
+                 from diskfile.cpp:20:
+verificationhashtable.h:412:128: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:429:118: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:288:0,
+                 from diskfile.cpp:20:
+par1fileformat.h: At global scope:
+par1fileformat.h:41:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::controlhash'
+par1fileformat.h:42:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::sethash'
+par1fileformat.h:56:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hashfull'
+par1fileformat.h:57:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hash16k'
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT diskfile.lo -MD -MP -MF .deps/diskfile.Tpo -c diskfile.cpp -o diskfile.o >/dev/null 2>&1
+if /ffp/bin/sh ./libtool --tag=CXX --mode=compile g++ -DHAVE_CONFIG_H -I. -I. -I. `pkg-config sigc++-2.0 --cflags`   -Wall -g -O2 -MT filechecksummer.lo -MD -MP -MF ".deps/filechecksummer.Tpo" -c -o filechecksummer.lo filechecksummer.cpp; \
+	then mv -f ".deps/filechecksummer.Tpo" ".deps/filechecksummer.Plo"; else rm -f ".deps/filechecksummer.Tpo"; exit 1; fi
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT filechecksummer.lo -MD -MP -MF .deps/filechecksummer.Tpo -c filechecksummer.cpp  -fPIC -DPIC -o .libs/filechecksummer.o
+In file included from par2cmdline.h:264:0,
+                 from filechecksummer.cpp:20:
+par2fileformat.h:67:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::hash'
+par2fileformat.h:68:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::setid'
+par2fileformat.h:79:18: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONENTRY::hash'
+par2fileformat.h:84:25: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEVERIFICATIONPACKET::header'
+par2fileformat.h:86:25: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONPACKET::fileid'
+par2fileformat.h:87:33: warning: ignoring packed attribute because of unpacked non-POD field 'FILEVERIFICATIONENTRY FILEVERIFICATIONPACKET::entries [0]'
+par2fileformat.h:99:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEDESCRIPTIONPACKET::header'
+par2fileformat.h:101:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::fileid'
+par2fileformat.h:102:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hashfull'
+par2fileformat.h:103:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hash16k'
+par2fileformat.h:127:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER MAINPACKET::header'
+par2fileformat.h:131:28: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash MAINPACKET::fileid [0]'
+par2fileformat.h:141:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER CREATORPACKET::header'
+par2fileformat.h:151:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER RECOVERYBLOCKPACKET::header'
+In file included from par2cmdline.h:283:0,
+                 from filechecksummer.cpp:20:
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator<(const VerificationHashEntry&) const':
+verificationhashtable.h:69:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator>(const VerificationHashEntry&) const':
+verificationhashtable.h:73:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In static member function 'static const VerificationHashEntry* VerificationHashEntry::Search(const VerificationHashEntry*, const MD5Hash&)':
+verificationhashtable.h:186:64: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:190:69: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'const VerificationHashEntry* VerificationHashTable::FindMatch(const VerificationHashEntry*, const Par2RepairerSourceFile*, FileCheckSummer&, bool&) const':
+verificationhashtable.h:405:126: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:283:0,
+                 from filechecksummer.cpp:20:
+verificationhashtable.h:412:128: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:429:118: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:288:0,
+                 from filechecksummer.cpp:20:
+par1fileformat.h: At global scope:
+par1fileformat.h:41:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::controlhash'
+par1fileformat.h:42:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::sethash'
+par1fileformat.h:56:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hashfull'
+par1fileformat.h:57:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hash16k'
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT filechecksummer.lo -MD -MP -MF .deps/filechecksummer.Tpo -c filechecksummer.cpp -o filechecksummer.o >/dev/null 2>&1
+if /ffp/bin/sh ./libtool --tag=CXX --mode=compile g++ -DHAVE_CONFIG_H -I. -I. -I. `pkg-config sigc++-2.0 --cflags`   -Wall -g -O2 -MT galois.lo -MD -MP -MF ".deps/galois.Tpo" -c -o galois.lo galois.cpp; \
+	then mv -f ".deps/galois.Tpo" ".deps/galois.Plo"; else rm -f ".deps/galois.Tpo"; exit 1; fi
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT galois.lo -MD -MP -MF .deps/galois.Tpo -c galois.cpp  -fPIC -DPIC -o .libs/galois.o
+In file included from par2cmdline.h:264:0,
+                 from galois.cpp:20:
+par2fileformat.h:67:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::hash'
+par2fileformat.h:68:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::setid'
+par2fileformat.h:79:18: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONENTRY::hash'
+par2fileformat.h:84:25: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEVERIFICATIONPACKET::header'
+par2fileformat.h:86:25: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONPACKET::fileid'
+par2fileformat.h:87:33: warning: ignoring packed attribute because of unpacked non-POD field 'FILEVERIFICATIONENTRY FILEVERIFICATIONPACKET::entries [0]'
+par2fileformat.h:99:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEDESCRIPTIONPACKET::header'
+par2fileformat.h:101:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::fileid'
+par2fileformat.h:102:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hashfull'
+par2fileformat.h:103:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hash16k'
+par2fileformat.h:127:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER MAINPACKET::header'
+par2fileformat.h:131:28: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash MAINPACKET::fileid [0]'
+par2fileformat.h:141:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER CREATORPACKET::header'
+par2fileformat.h:151:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER RECOVERYBLOCKPACKET::header'
+In file included from par2cmdline.h:283:0,
+                 from galois.cpp:20:
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator<(const VerificationHashEntry&) const':
+verificationhashtable.h:69:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator>(const VerificationHashEntry&) const':
+verificationhashtable.h:73:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In static member function 'static const VerificationHashEntry* VerificationHashEntry::Search(const VerificationHashEntry*, const MD5Hash&)':
+verificationhashtable.h:186:64: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:190:69: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'const VerificationHashEntry* VerificationHashTable::FindMatch(const VerificationHashEntry*, const Par2RepairerSourceFile*, FileCheckSummer&, bool&) const':
+verificationhashtable.h:405:126: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:283:0,
+                 from galois.cpp:20:
+verificationhashtable.h:412:128: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:429:118: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:288:0,
+                 from galois.cpp:20:
+par1fileformat.h: At global scope:
+par1fileformat.h:41:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::controlhash'
+par1fileformat.h:42:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::sethash'
+par1fileformat.h:56:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hashfull'
+par1fileformat.h:57:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hash16k'
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT galois.lo -MD -MP -MF .deps/galois.Tpo -c galois.cpp -o galois.o >/dev/null 2>&1
+if /ffp/bin/sh ./libtool --tag=CXX --mode=compile g++ -DHAVE_CONFIG_H -I. -I. -I. `pkg-config sigc++-2.0 --cflags`   -Wall -g -O2 -MT mainpacket.lo -MD -MP -MF ".deps/mainpacket.Tpo" -c -o mainpacket.lo mainpacket.cpp; \
+	then mv -f ".deps/mainpacket.Tpo" ".deps/mainpacket.Plo"; else rm -f ".deps/mainpacket.Tpo"; exit 1; fi
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT mainpacket.lo -MD -MP -MF .deps/mainpacket.Tpo -c mainpacket.cpp  -fPIC -DPIC -o .libs/mainpacket.o
+In file included from par2cmdline.h:264:0,
+                 from mainpacket.cpp:20:
+par2fileformat.h:67:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::hash'
+par2fileformat.h:68:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::setid'
+par2fileformat.h:79:18: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONENTRY::hash'
+par2fileformat.h:84:25: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEVERIFICATIONPACKET::header'
+par2fileformat.h:86:25: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONPACKET::fileid'
+par2fileformat.h:87:33: warning: ignoring packed attribute because of unpacked non-POD field 'FILEVERIFICATIONENTRY FILEVERIFICATIONPACKET::entries [0]'
+par2fileformat.h:99:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEDESCRIPTIONPACKET::header'
+par2fileformat.h:101:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::fileid'
+par2fileformat.h:102:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hashfull'
+par2fileformat.h:103:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hash16k'
+par2fileformat.h:127:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER MAINPACKET::header'
+par2fileformat.h:131:28: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash MAINPACKET::fileid [0]'
+par2fileformat.h:141:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER CREATORPACKET::header'
+par2fileformat.h:151:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER RECOVERYBLOCKPACKET::header'
+In file included from par2cmdline.h:283:0,
+                 from mainpacket.cpp:20:
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator<(const VerificationHashEntry&) const':
+verificationhashtable.h:69:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator>(const VerificationHashEntry&) const':
+verificationhashtable.h:73:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In static member function 'static const VerificationHashEntry* VerificationHashEntry::Search(const VerificationHashEntry*, const MD5Hash&)':
+verificationhashtable.h:186:64: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:190:69: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'const VerificationHashEntry* VerificationHashTable::FindMatch(const VerificationHashEntry*, const Par2RepairerSourceFile*, FileCheckSummer&, bool&) const':
+verificationhashtable.h:405:126: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:283:0,
+                 from mainpacket.cpp:20:
+verificationhashtable.h:412:128: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:429:118: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:288:0,
+                 from mainpacket.cpp:20:
+par1fileformat.h: At global scope:
+par1fileformat.h:41:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::controlhash'
+par1fileformat.h:42:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::sethash'
+par1fileformat.h:56:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hashfull'
+par1fileformat.h:57:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hash16k'
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT mainpacket.lo -MD -MP -MF .deps/mainpacket.Tpo -c mainpacket.cpp -o mainpacket.o >/dev/null 2>&1
+if /ffp/bin/sh ./libtool --tag=CXX --mode=compile g++ -DHAVE_CONFIG_H -I. -I. -I. `pkg-config sigc++-2.0 --cflags`   -Wall -g -O2 -MT md5.lo -MD -MP -MF ".deps/md5.Tpo" -c -o md5.lo md5.cpp; \
+	then mv -f ".deps/md5.Tpo" ".deps/md5.Plo"; else rm -f ".deps/md5.Tpo"; exit 1; fi
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT md5.lo -MD -MP -MF .deps/md5.Tpo -c md5.cpp  -fPIC -DPIC -o .libs/md5.o
+In file included from par2cmdline.h:264:0,
+                 from md5.cpp:20:
+par2fileformat.h:67:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::hash'
+par2fileformat.h:68:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::setid'
+par2fileformat.h:79:18: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONENTRY::hash'
+par2fileformat.h:84:25: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEVERIFICATIONPACKET::header'
+par2fileformat.h:86:25: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONPACKET::fileid'
+par2fileformat.h:87:33: warning: ignoring packed attribute because of unpacked non-POD field 'FILEVERIFICATIONENTRY FILEVERIFICATIONPACKET::entries [0]'
+par2fileformat.h:99:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEDESCRIPTIONPACKET::header'
+par2fileformat.h:101:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::fileid'
+par2fileformat.h:102:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hashfull'
+par2fileformat.h:103:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hash16k'
+par2fileformat.h:127:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER MAINPACKET::header'
+par2fileformat.h:131:28: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash MAINPACKET::fileid [0]'
+par2fileformat.h:141:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER CREATORPACKET::header'
+par2fileformat.h:151:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER RECOVERYBLOCKPACKET::header'
+In file included from par2cmdline.h:283:0,
+                 from md5.cpp:20:
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator<(const VerificationHashEntry&) const':
+verificationhashtable.h:69:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator>(const VerificationHashEntry&) const':
+verificationhashtable.h:73:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In static member function 'static const VerificationHashEntry* VerificationHashEntry::Search(const VerificationHashEntry*, const MD5Hash&)':
+verificationhashtable.h:186:64: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:190:69: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'const VerificationHashEntry* VerificationHashTable::FindMatch(const VerificationHashEntry*, const Par2RepairerSourceFile*, FileCheckSummer&, bool&) const':
+verificationhashtable.h:405:126: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:283:0,
+                 from md5.cpp:20:
+verificationhashtable.h:412:128: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:429:118: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:288:0,
+                 from md5.cpp:20:
+par1fileformat.h: At global scope:
+par1fileformat.h:41:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::controlhash'
+par1fileformat.h:42:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::sethash'
+par1fileformat.h:56:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hashfull'
+par1fileformat.h:57:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hash16k'
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT md5.lo -MD -MP -MF .deps/md5.Tpo -c md5.cpp -o md5.o >/dev/null 2>&1
+if /ffp/bin/sh ./libtool --tag=CXX --mode=compile g++ -DHAVE_CONFIG_H -I. -I. -I. `pkg-config sigc++-2.0 --cflags`   -Wall -g -O2 -MT par1fileformat.lo -MD -MP -MF ".deps/par1fileformat.Tpo" -c -o par1fileformat.lo par1fileformat.cpp; \
+	then mv -f ".deps/par1fileformat.Tpo" ".deps/par1fileformat.Plo"; else rm -f ".deps/par1fileformat.Tpo"; exit 1; fi
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT par1fileformat.lo -MD -MP -MF .deps/par1fileformat.Tpo -c par1fileformat.cpp  -fPIC -DPIC -o .libs/par1fileformat.o
+In file included from par2cmdline.h:264:0,
+                 from par1fileformat.cpp:20:
+par2fileformat.h:67:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::hash'
+par2fileformat.h:68:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::setid'
+par2fileformat.h:79:18: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONENTRY::hash'
+par2fileformat.h:84:25: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEVERIFICATIONPACKET::header'
+par2fileformat.h:86:25: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONPACKET::fileid'
+par2fileformat.h:87:33: warning: ignoring packed attribute because of unpacked non-POD field 'FILEVERIFICATIONENTRY FILEVERIFICATIONPACKET::entries [0]'
+par2fileformat.h:99:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEDESCRIPTIONPACKET::header'
+par2fileformat.h:101:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::fileid'
+par2fileformat.h:102:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hashfull'
+par2fileformat.h:103:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hash16k'
+par2fileformat.h:127:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER MAINPACKET::header'
+par2fileformat.h:131:28: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash MAINPACKET::fileid [0]'
+par2fileformat.h:141:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER CREATORPACKET::header'
+par2fileformat.h:151:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER RECOVERYBLOCKPACKET::header'
+In file included from par2cmdline.h:283:0,
+                 from par1fileformat.cpp:20:
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator<(const VerificationHashEntry&) const':
+verificationhashtable.h:69:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator>(const VerificationHashEntry&) const':
+verificationhashtable.h:73:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In static member function 'static const VerificationHashEntry* VerificationHashEntry::Search(const VerificationHashEntry*, const MD5Hash&)':
+verificationhashtable.h:186:64: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:190:69: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'const VerificationHashEntry* VerificationHashTable::FindMatch(const VerificationHashEntry*, const Par2RepairerSourceFile*, FileCheckSummer&, bool&) const':
+verificationhashtable.h:405:126: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:283:0,
+                 from par1fileformat.cpp:20:
+verificationhashtable.h:412:128: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:429:118: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:288:0,
+                 from par1fileformat.cpp:20:
+par1fileformat.h: At global scope:
+par1fileformat.h:41:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::controlhash'
+par1fileformat.h:42:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::sethash'
+par1fileformat.h:56:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hashfull'
+par1fileformat.h:57:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hash16k'
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT par1fileformat.lo -MD -MP -MF .deps/par1fileformat.Tpo -c par1fileformat.cpp -o par1fileformat.o >/dev/null 2>&1
+if /ffp/bin/sh ./libtool --tag=CXX --mode=compile g++ -DHAVE_CONFIG_H -I. -I. -I. `pkg-config sigc++-2.0 --cflags`   -Wall -g -O2 -MT par1repairer.lo -MD -MP -MF ".deps/par1repairer.Tpo" -c -o par1repairer.lo par1repairer.cpp; \
+	then mv -f ".deps/par1repairer.Tpo" ".deps/par1repairer.Plo"; else rm -f ".deps/par1repairer.Tpo"; exit 1; fi
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT par1repairer.lo -MD -MP -MF .deps/par1repairer.Tpo -c par1repairer.cpp  -fPIC -DPIC -o .libs/par1repairer.o
+In file included from par2cmdline.h:264:0,
+                 from par1repairer.cpp:20:
+par2fileformat.h:67:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::hash'
+par2fileformat.h:68:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::setid'
+par2fileformat.h:79:18: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONENTRY::hash'
+par2fileformat.h:84:25: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEVERIFICATIONPACKET::header'
+par2fileformat.h:86:25: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONPACKET::fileid'
+par2fileformat.h:87:33: warning: ignoring packed attribute because of unpacked non-POD field 'FILEVERIFICATIONENTRY FILEVERIFICATIONPACKET::entries [0]'
+par2fileformat.h:99:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEDESCRIPTIONPACKET::header'
+par2fileformat.h:101:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::fileid'
+par2fileformat.h:102:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hashfull'
+par2fileformat.h:103:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hash16k'
+par2fileformat.h:127:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER MAINPACKET::header'
+par2fileformat.h:131:28: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash MAINPACKET::fileid [0]'
+par2fileformat.h:141:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER CREATORPACKET::header'
+par2fileformat.h:151:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER RECOVERYBLOCKPACKET::header'
+In file included from par2cmdline.h:283:0,
+                 from par1repairer.cpp:20:
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator<(const VerificationHashEntry&) const':
+verificationhashtable.h:69:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator>(const VerificationHashEntry&) const':
+verificationhashtable.h:73:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In static member function 'static const VerificationHashEntry* VerificationHashEntry::Search(const VerificationHashEntry*, const MD5Hash&)':
+verificationhashtable.h:186:64: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:190:69: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'const VerificationHashEntry* VerificationHashTable::FindMatch(const VerificationHashEntry*, const Par2RepairerSourceFile*, FileCheckSummer&, bool&) const':
+verificationhashtable.h:405:126: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:283:0,
+                 from par1repairer.cpp:20:
+verificationhashtable.h:412:128: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:429:118: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:288:0,
+                 from par1repairer.cpp:20:
+par1fileformat.h: At global scope:
+par1fileformat.h:41:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::controlhash'
+par1fileformat.h:42:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::sethash'
+par1fileformat.h:56:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hashfull'
+par1fileformat.h:57:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hash16k'
+par1repairer.cpp: In member function 'bool Par1Repairer::LoadRecoveryFile(std::string)':
+par1repairer.cpp:327:284: warning: suggest parentheses around '&&' within '||'
+par1repairer.cpp: In member function 'bool Par1Repairer::LoadOtherRecoveryFiles(std::string)':
+par1repairer.cpp:523:48: warning: suggest parentheses around '&&' within '||'
+par1repairer.cpp: In member function 'bool Par1Repairer::LoadExtraRecoveryFiles(const std::list<CommandLine::ExtraFile>&)':
+par1repairer.cpp:554:48: warning: suggest parentheses around '&&' within '||'
+par1repairer.cpp: In member function 'bool Par1Repairer::VerifyExtraFiles(const std::list<CommandLine::ExtraFile>&)':
+par1repairer.cpp:657:48: warning: suggest parentheses around '&&' within '||'
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT par1repairer.lo -MD -MP -MF .deps/par1repairer.Tpo -c par1repairer.cpp -o par1repairer.o >/dev/null 2>&1
+if /ffp/bin/sh ./libtool --tag=CXX --mode=compile g++ -DHAVE_CONFIG_H -I. -I. -I. `pkg-config sigc++-2.0 --cflags`   -Wall -g -O2 -MT par1repairersourcefile.lo -MD -MP -MF ".deps/par1repairersourcefile.Tpo" -c -o par1repairersourcefile.lo par1repairersourcefile.cpp; \
+	then mv -f ".deps/par1repairersourcefile.Tpo" ".deps/par1repairersourcefile.Plo"; else rm -f ".deps/par1repairersourcefile.Tpo"; exit 1; fi
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT par1repairersourcefile.lo -MD -MP -MF .deps/par1repairersourcefile.Tpo -c par1repairersourcefile.cpp  -fPIC -DPIC -o .libs/par1repairersourcefile.o
+In file included from par2cmdline.h:264:0,
+                 from par1repairersourcefile.cpp:20:
+par2fileformat.h:67:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::hash'
+par2fileformat.h:68:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::setid'
+par2fileformat.h:79:18: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONENTRY::hash'
+par2fileformat.h:84:25: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEVERIFICATIONPACKET::header'
+par2fileformat.h:86:25: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONPACKET::fileid'
+par2fileformat.h:87:33: warning: ignoring packed attribute because of unpacked non-POD field 'FILEVERIFICATIONENTRY FILEVERIFICATIONPACKET::entries [0]'
+par2fileformat.h:99:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEDESCRIPTIONPACKET::header'
+par2fileformat.h:101:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::fileid'
+par2fileformat.h:102:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hashfull'
+par2fileformat.h:103:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hash16k'
+par2fileformat.h:127:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER MAINPACKET::header'
+par2fileformat.h:131:28: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash MAINPACKET::fileid [0]'
+par2fileformat.h:141:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER CREATORPACKET::header'
+par2fileformat.h:151:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER RECOVERYBLOCKPACKET::header'
+In file included from par2cmdline.h:283:0,
+                 from par1repairersourcefile.cpp:20:
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator<(const VerificationHashEntry&) const':
+verificationhashtable.h:69:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator>(const VerificationHashEntry&) const':
+verificationhashtable.h:73:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In static member function 'static const VerificationHashEntry* VerificationHashEntry::Search(const VerificationHashEntry*, const MD5Hash&)':
+verificationhashtable.h:186:64: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:190:69: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'const VerificationHashEntry* VerificationHashTable::FindMatch(const VerificationHashEntry*, const Par2RepairerSourceFile*, FileCheckSummer&, bool&) const':
+verificationhashtable.h:405:126: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:283:0,
+                 from par1repairersourcefile.cpp:20:
+verificationhashtable.h:412:128: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:429:118: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:288:0,
+                 from par1repairersourcefile.cpp:20:
+par1fileformat.h: At global scope:
+par1fileformat.h:41:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::controlhash'
+par1fileformat.h:42:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::sethash'
+par1fileformat.h:56:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hashfull'
+par1fileformat.h:57:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hash16k'
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT par1repairersourcefile.lo -MD -MP -MF .deps/par1repairersourcefile.Tpo -c par1repairersourcefile.cpp -o par1repairersourcefile.o >/dev/null 2>&1
+if /ffp/bin/sh ./libtool --tag=CXX --mode=compile g++ -DHAVE_CONFIG_H -I. -I. -I. `pkg-config sigc++-2.0 --cflags`   -Wall -g -O2 -MT par2creator.lo -MD -MP -MF ".deps/par2creator.Tpo" -c -o par2creator.lo par2creator.cpp; \
+	then mv -f ".deps/par2creator.Tpo" ".deps/par2creator.Plo"; else rm -f ".deps/par2creator.Tpo"; exit 1; fi
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT par2creator.lo -MD -MP -MF .deps/par2creator.Tpo -c par2creator.cpp  -fPIC -DPIC -o .libs/par2creator.o
+In file included from par2cmdline.h:264:0,
+                 from par2creator.cpp:20:
+par2fileformat.h:67:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::hash'
+par2fileformat.h:68:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::setid'
+par2fileformat.h:79:18: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONENTRY::hash'
+par2fileformat.h:84:25: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEVERIFICATIONPACKET::header'
+par2fileformat.h:86:25: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONPACKET::fileid'
+par2fileformat.h:87:33: warning: ignoring packed attribute because of unpacked non-POD field 'FILEVERIFICATIONENTRY FILEVERIFICATIONPACKET::entries [0]'
+par2fileformat.h:99:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEDESCRIPTIONPACKET::header'
+par2fileformat.h:101:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::fileid'
+par2fileformat.h:102:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hashfull'
+par2fileformat.h:103:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hash16k'
+par2fileformat.h:127:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER MAINPACKET::header'
+par2fileformat.h:131:28: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash MAINPACKET::fileid [0]'
+par2fileformat.h:141:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER CREATORPACKET::header'
+par2fileformat.h:151:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER RECOVERYBLOCKPACKET::header'
+In file included from par2cmdline.h:283:0,
+                 from par2creator.cpp:20:
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator<(const VerificationHashEntry&) const':
+verificationhashtable.h:69:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator>(const VerificationHashEntry&) const':
+verificationhashtable.h:73:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In static member function 'static const VerificationHashEntry* VerificationHashEntry::Search(const VerificationHashEntry*, const MD5Hash&)':
+verificationhashtable.h:186:64: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:190:69: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'const VerificationHashEntry* VerificationHashTable::FindMatch(const VerificationHashEntry*, const Par2RepairerSourceFile*, FileCheckSummer&, bool&) const':
+verificationhashtable.h:405:126: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:283:0,
+                 from par2creator.cpp:20:
+verificationhashtable.h:412:128: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:429:118: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:288:0,
+                 from par2creator.cpp:20:
+par1fileformat.h: At global scope:
+par1fileformat.h:41:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::controlhash'
+par1fileformat.h:42:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::sethash'
+par1fileformat.h:56:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hashfull'
+par1fileformat.h:57:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hash16k'
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT par2creator.lo -MD -MP -MF .deps/par2creator.Tpo -c par2creator.cpp -o par2creator.o >/dev/null 2>&1
+if /ffp/bin/sh ./libtool --tag=CXX --mode=compile g++ -DHAVE_CONFIG_H -I. -I. -I. `pkg-config sigc++-2.0 --cflags`   -Wall -g -O2 -MT par2creatorsourcefile.lo -MD -MP -MF ".deps/par2creatorsourcefile.Tpo" -c -o par2creatorsourcefile.lo par2creatorsourcefile.cpp; \
+	then mv -f ".deps/par2creatorsourcefile.Tpo" ".deps/par2creatorsourcefile.Plo"; else rm -f ".deps/par2creatorsourcefile.Tpo"; exit 1; fi
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT par2creatorsourcefile.lo -MD -MP -MF .deps/par2creatorsourcefile.Tpo -c par2creatorsourcefile.cpp  -fPIC -DPIC -o .libs/par2creatorsourcefile.o
+In file included from par2cmdline.h:264:0,
+                 from par2creatorsourcefile.cpp:20:
+par2fileformat.h:67:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::hash'
+par2fileformat.h:68:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::setid'
+par2fileformat.h:79:18: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONENTRY::hash'
+par2fileformat.h:84:25: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEVERIFICATIONPACKET::header'
+par2fileformat.h:86:25: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONPACKET::fileid'
+par2fileformat.h:87:33: warning: ignoring packed attribute because of unpacked non-POD field 'FILEVERIFICATIONENTRY FILEVERIFICATIONPACKET::entries [0]'
+par2fileformat.h:99:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEDESCRIPTIONPACKET::header'
+par2fileformat.h:101:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::fileid'
+par2fileformat.h:102:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hashfull'
+par2fileformat.h:103:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hash16k'
+par2fileformat.h:127:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER MAINPACKET::header'
+par2fileformat.h:131:28: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash MAINPACKET::fileid [0]'
+par2fileformat.h:141:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER CREATORPACKET::header'
+par2fileformat.h:151:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER RECOVERYBLOCKPACKET::header'
+In file included from par2cmdline.h:283:0,
+                 from par2creatorsourcefile.cpp:20:
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator<(const VerificationHashEntry&) const':
+verificationhashtable.h:69:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator>(const VerificationHashEntry&) const':
+verificationhashtable.h:73:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In static member function 'static const VerificationHashEntry* VerificationHashEntry::Search(const VerificationHashEntry*, const MD5Hash&)':
+verificationhashtable.h:186:64: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:190:69: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'const VerificationHashEntry* VerificationHashTable::FindMatch(const VerificationHashEntry*, const Par2RepairerSourceFile*, FileCheckSummer&, bool&) const':
+verificationhashtable.h:405:126: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:283:0,
+                 from par2creatorsourcefile.cpp:20:
+verificationhashtable.h:412:128: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:429:118: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:288:0,
+                 from par2creatorsourcefile.cpp:20:
+par1fileformat.h: At global scope:
+par1fileformat.h:41:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::controlhash'
+par1fileformat.h:42:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::sethash'
+par1fileformat.h:56:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hashfull'
+par1fileformat.h:57:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hash16k'
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT par2creatorsourcefile.lo -MD -MP -MF .deps/par2creatorsourcefile.Tpo -c par2creatorsourcefile.cpp -o par2creatorsourcefile.o >/dev/null 2>&1
+if /ffp/bin/sh ./libtool --tag=CXX --mode=compile g++ -DHAVE_CONFIG_H -I. -I. -I. `pkg-config sigc++-2.0 --cflags`   -Wall -g -O2 -MT par2fileformat.lo -MD -MP -MF ".deps/par2fileformat.Tpo" -c -o par2fileformat.lo par2fileformat.cpp; \
+	then mv -f ".deps/par2fileformat.Tpo" ".deps/par2fileformat.Plo"; else rm -f ".deps/par2fileformat.Tpo"; exit 1; fi
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT par2fileformat.lo -MD -MP -MF .deps/par2fileformat.Tpo -c par2fileformat.cpp  -fPIC -DPIC -o .libs/par2fileformat.o
+In file included from par2cmdline.h:264:0,
+                 from par2fileformat.cpp:20:
+par2fileformat.h:67:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::hash'
+par2fileformat.h:68:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::setid'
+par2fileformat.h:79:18: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONENTRY::hash'
+par2fileformat.h:84:25: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEVERIFICATIONPACKET::header'
+par2fileformat.h:86:25: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONPACKET::fileid'
+par2fileformat.h:87:33: warning: ignoring packed attribute because of unpacked non-POD field 'FILEVERIFICATIONENTRY FILEVERIFICATIONPACKET::entries [0]'
+par2fileformat.h:99:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEDESCRIPTIONPACKET::header'
+par2fileformat.h:101:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::fileid'
+par2fileformat.h:102:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hashfull'
+par2fileformat.h:103:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hash16k'
+par2fileformat.h:127:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER MAINPACKET::header'
+par2fileformat.h:131:28: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash MAINPACKET::fileid [0]'
+par2fileformat.h:141:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER CREATORPACKET::header'
+par2fileformat.h:151:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER RECOVERYBLOCKPACKET::header'
+In file included from par2cmdline.h:283:0,
+                 from par2fileformat.cpp:20:
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator<(const VerificationHashEntry&) const':
+verificationhashtable.h:69:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator>(const VerificationHashEntry&) const':
+verificationhashtable.h:73:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In static member function 'static const VerificationHashEntry* VerificationHashEntry::Search(const VerificationHashEntry*, const MD5Hash&)':
+verificationhashtable.h:186:64: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:190:69: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'const VerificationHashEntry* VerificationHashTable::FindMatch(const VerificationHashEntry*, const Par2RepairerSourceFile*, FileCheckSummer&, bool&) const':
+verificationhashtable.h:405:126: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:283:0,
+                 from par2fileformat.cpp:20:
+verificationhashtable.h:412:128: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:429:118: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:288:0,
+                 from par2fileformat.cpp:20:
+par1fileformat.h: At global scope:
+par1fileformat.h:41:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::controlhash'
+par1fileformat.h:42:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::sethash'
+par1fileformat.h:56:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hashfull'
+par1fileformat.h:57:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hash16k'
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT par2fileformat.lo -MD -MP -MF .deps/par2fileformat.Tpo -c par2fileformat.cpp -o par2fileformat.o >/dev/null 2>&1
+if /ffp/bin/sh ./libtool --tag=CXX --mode=compile g++ -DHAVE_CONFIG_H -I. -I. -I. `pkg-config sigc++-2.0 --cflags`   -Wall -g -O2 -MT par2repairer.lo -MD -MP -MF ".deps/par2repairer.Tpo" -c -o par2repairer.lo par2repairer.cpp; \
+	then mv -f ".deps/par2repairer.Tpo" ".deps/par2repairer.Plo"; else rm -f ".deps/par2repairer.Tpo"; exit 1; fi
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT par2repairer.lo -MD -MP -MF .deps/par2repairer.Tpo -c par2repairer.cpp  -fPIC -DPIC -o .libs/par2repairer.o
+In file included from par2cmdline.h:264:0,
+                 from par2repairer.cpp:20:
+par2fileformat.h:67:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::hash'
+par2fileformat.h:68:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::setid'
+par2fileformat.h:79:18: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONENTRY::hash'
+par2fileformat.h:84:25: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEVERIFICATIONPACKET::header'
+par2fileformat.h:86:25: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONPACKET::fileid'
+par2fileformat.h:87:33: warning: ignoring packed attribute because of unpacked non-POD field 'FILEVERIFICATIONENTRY FILEVERIFICATIONPACKET::entries [0]'
+par2fileformat.h:99:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEDESCRIPTIONPACKET::header'
+par2fileformat.h:101:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::fileid'
+par2fileformat.h:102:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hashfull'
+par2fileformat.h:103:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hash16k'
+par2fileformat.h:127:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER MAINPACKET::header'
+par2fileformat.h:131:28: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash MAINPACKET::fileid [0]'
+par2fileformat.h:141:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER CREATORPACKET::header'
+par2fileformat.h:151:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER RECOVERYBLOCKPACKET::header'
+In file included from par2cmdline.h:283:0,
+                 from par2repairer.cpp:20:
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator<(const VerificationHashEntry&) const':
+verificationhashtable.h:69:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator>(const VerificationHashEntry&) const':
+verificationhashtable.h:73:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In static member function 'static const VerificationHashEntry* VerificationHashEntry::Search(const VerificationHashEntry*, const MD5Hash&)':
+verificationhashtable.h:186:64: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:190:69: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'const VerificationHashEntry* VerificationHashTable::FindMatch(const VerificationHashEntry*, const Par2RepairerSourceFile*, FileCheckSummer&, bool&) const':
+verificationhashtable.h:405:126: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:283:0,
+                 from par2repairer.cpp:20:
+verificationhashtable.h:412:128: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:429:118: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:288:0,
+                 from par2repairer.cpp:20:
+par1fileformat.h: At global scope:
+par1fileformat.h:41:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::controlhash'
+par1fileformat.h:42:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::sethash'
+par1fileformat.h:56:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hashfull'
+par1fileformat.h:57:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hash16k'
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT par2repairer.lo -MD -MP -MF .deps/par2repairer.Tpo -c par2repairer.cpp -o par2repairer.o >/dev/null 2>&1
+if /ffp/bin/sh ./libtool --tag=CXX --mode=compile g++ -DHAVE_CONFIG_H -I. -I. -I. `pkg-config sigc++-2.0 --cflags`   -Wall -g -O2 -MT par2repairersourcefile.lo -MD -MP -MF ".deps/par2repairersourcefile.Tpo" -c -o par2repairersourcefile.lo par2repairersourcefile.cpp; \
+	then mv -f ".deps/par2repairersourcefile.Tpo" ".deps/par2repairersourcefile.Plo"; else rm -f ".deps/par2repairersourcefile.Tpo"; exit 1; fi
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT par2repairersourcefile.lo -MD -MP -MF .deps/par2repairersourcefile.Tpo -c par2repairersourcefile.cpp  -fPIC -DPIC -o .libs/par2repairersourcefile.o
+In file included from par2cmdline.h:264:0,
+                 from par2repairersourcefile.cpp:20:
+par2fileformat.h:67:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::hash'
+par2fileformat.h:68:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::setid'
+par2fileformat.h:79:18: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONENTRY::hash'
+par2fileformat.h:84:25: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEVERIFICATIONPACKET::header'
+par2fileformat.h:86:25: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONPACKET::fileid'
+par2fileformat.h:87:33: warning: ignoring packed attribute because of unpacked non-POD field 'FILEVERIFICATIONENTRY FILEVERIFICATIONPACKET::entries [0]'
+par2fileformat.h:99:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEDESCRIPTIONPACKET::header'
+par2fileformat.h:101:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::fileid'
+par2fileformat.h:102:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hashfull'
+par2fileformat.h:103:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hash16k'
+par2fileformat.h:127:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER MAINPACKET::header'
+par2fileformat.h:131:28: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash MAINPACKET::fileid [0]'
+par2fileformat.h:141:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER CREATORPACKET::header'
+par2fileformat.h:151:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER RECOVERYBLOCKPACKET::header'
+In file included from par2cmdline.h:283:0,
+                 from par2repairersourcefile.cpp:20:
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator<(const VerificationHashEntry&) const':
+verificationhashtable.h:69:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator>(const VerificationHashEntry&) const':
+verificationhashtable.h:73:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In static member function 'static const VerificationHashEntry* VerificationHashEntry::Search(const VerificationHashEntry*, const MD5Hash&)':
+verificationhashtable.h:186:64: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:190:69: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'const VerificationHashEntry* VerificationHashTable::FindMatch(const VerificationHashEntry*, const Par2RepairerSourceFile*, FileCheckSummer&, bool&) const':
+verificationhashtable.h:405:126: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:283:0,
+                 from par2repairersourcefile.cpp:20:
+verificationhashtable.h:412:128: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:429:118: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:288:0,
+                 from par2repairersourcefile.cpp:20:
+par1fileformat.h: At global scope:
+par1fileformat.h:41:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::controlhash'
+par1fileformat.h:42:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::sethash'
+par1fileformat.h:56:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hashfull'
+par1fileformat.h:57:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hash16k'
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT par2repairersourcefile.lo -MD -MP -MF .deps/par2repairersourcefile.Tpo -c par2repairersourcefile.cpp -o par2repairersourcefile.o >/dev/null 2>&1
+if /ffp/bin/sh ./libtool --tag=CXX --mode=compile g++ -DHAVE_CONFIG_H -I. -I. -I. `pkg-config sigc++-2.0 --cflags`   -Wall -g -O2 -MT recoverypacket.lo -MD -MP -MF ".deps/recoverypacket.Tpo" -c -o recoverypacket.lo recoverypacket.cpp; \
+	then mv -f ".deps/recoverypacket.Tpo" ".deps/recoverypacket.Plo"; else rm -f ".deps/recoverypacket.Tpo"; exit 1; fi
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT recoverypacket.lo -MD -MP -MF .deps/recoverypacket.Tpo -c recoverypacket.cpp  -fPIC -DPIC -o .libs/recoverypacket.o
+In file included from par2cmdline.h:264:0,
+                 from recoverypacket.cpp:20:
+par2fileformat.h:67:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::hash'
+par2fileformat.h:68:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::setid'
+par2fileformat.h:79:18: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONENTRY::hash'
+par2fileformat.h:84:25: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEVERIFICATIONPACKET::header'
+par2fileformat.h:86:25: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONPACKET::fileid'
+par2fileformat.h:87:33: warning: ignoring packed attribute because of unpacked non-POD field 'FILEVERIFICATIONENTRY FILEVERIFICATIONPACKET::entries [0]'
+par2fileformat.h:99:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEDESCRIPTIONPACKET::header'
+par2fileformat.h:101:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::fileid'
+par2fileformat.h:102:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hashfull'
+par2fileformat.h:103:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hash16k'
+par2fileformat.h:127:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER MAINPACKET::header'
+par2fileformat.h:131:28: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash MAINPACKET::fileid [0]'
+par2fileformat.h:141:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER CREATORPACKET::header'
+par2fileformat.h:151:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER RECOVERYBLOCKPACKET::header'
+In file included from par2cmdline.h:283:0,
+                 from recoverypacket.cpp:20:
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator<(const VerificationHashEntry&) const':
+verificationhashtable.h:69:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator>(const VerificationHashEntry&) const':
+verificationhashtable.h:73:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In static member function 'static const VerificationHashEntry* VerificationHashEntry::Search(const VerificationHashEntry*, const MD5Hash&)':
+verificationhashtable.h:186:64: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:190:69: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'const VerificationHashEntry* VerificationHashTable::FindMatch(const VerificationHashEntry*, const Par2RepairerSourceFile*, FileCheckSummer&, bool&) const':
+verificationhashtable.h:405:126: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:283:0,
+                 from recoverypacket.cpp:20:
+verificationhashtable.h:412:128: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:429:118: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:288:0,
+                 from recoverypacket.cpp:20:
+par1fileformat.h: At global scope:
+par1fileformat.h:41:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::controlhash'
+par1fileformat.h:42:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::sethash'
+par1fileformat.h:56:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hashfull'
+par1fileformat.h:57:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hash16k'
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT recoverypacket.lo -MD -MP -MF .deps/recoverypacket.Tpo -c recoverypacket.cpp -o recoverypacket.o >/dev/null 2>&1
+if /ffp/bin/sh ./libtool --tag=CXX --mode=compile g++ -DHAVE_CONFIG_H -I. -I. -I. `pkg-config sigc++-2.0 --cflags`   -Wall -g -O2 -MT reedsolomon.lo -MD -MP -MF ".deps/reedsolomon.Tpo" -c -o reedsolomon.lo reedsolomon.cpp; \
+	then mv -f ".deps/reedsolomon.Tpo" ".deps/reedsolomon.Plo"; else rm -f ".deps/reedsolomon.Tpo"; exit 1; fi
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT reedsolomon.lo -MD -MP -MF .deps/reedsolomon.Tpo -c reedsolomon.cpp  -fPIC -DPIC -o .libs/reedsolomon.o
+In file included from par2cmdline.h:264:0,
+                 from reedsolomon.cpp:20:
+par2fileformat.h:67:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::hash'
+par2fileformat.h:68:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::setid'
+par2fileformat.h:79:18: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONENTRY::hash'
+par2fileformat.h:84:25: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEVERIFICATIONPACKET::header'
+par2fileformat.h:86:25: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONPACKET::fileid'
+par2fileformat.h:87:33: warning: ignoring packed attribute because of unpacked non-POD field 'FILEVERIFICATIONENTRY FILEVERIFICATIONPACKET::entries [0]'
+par2fileformat.h:99:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEDESCRIPTIONPACKET::header'
+par2fileformat.h:101:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::fileid'
+par2fileformat.h:102:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hashfull'
+par2fileformat.h:103:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hash16k'
+par2fileformat.h:127:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER MAINPACKET::header'
+par2fileformat.h:131:28: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash MAINPACKET::fileid [0]'
+par2fileformat.h:141:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER CREATORPACKET::header'
+par2fileformat.h:151:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER RECOVERYBLOCKPACKET::header'
+In file included from par2cmdline.h:283:0,
+                 from reedsolomon.cpp:20:
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator<(const VerificationHashEntry&) const':
+verificationhashtable.h:69:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator>(const VerificationHashEntry&) const':
+verificationhashtable.h:73:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In static member function 'static const VerificationHashEntry* VerificationHashEntry::Search(const VerificationHashEntry*, const MD5Hash&)':
+verificationhashtable.h:186:64: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:190:69: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'const VerificationHashEntry* VerificationHashTable::FindMatch(const VerificationHashEntry*, const Par2RepairerSourceFile*, FileCheckSummer&, bool&) const':
+verificationhashtable.h:405:126: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:283:0,
+                 from reedsolomon.cpp:20:
+verificationhashtable.h:412:128: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:429:118: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:288:0,
+                 from reedsolomon.cpp:20:
+par1fileformat.h: At global scope:
+par1fileformat.h:41:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::controlhash'
+par1fileformat.h:42:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::sethash'
+par1fileformat.h:56:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hashfull'
+par1fileformat.h:57:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hash16k'
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT reedsolomon.lo -MD -MP -MF .deps/reedsolomon.Tpo -c reedsolomon.cpp -o reedsolomon.o >/dev/null 2>&1
+if /ffp/bin/sh ./libtool --tag=CXX --mode=compile g++ -DHAVE_CONFIG_H -I. -I. -I. `pkg-config sigc++-2.0 --cflags`   -Wall -g -O2 -MT verificationhashtable.lo -MD -MP -MF ".deps/verificationhashtable.Tpo" -c -o verificationhashtable.lo verificationhashtable.cpp; \
+	then mv -f ".deps/verificationhashtable.Tpo" ".deps/verificationhashtable.Plo"; else rm -f ".deps/verificationhashtable.Tpo"; exit 1; fi
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT verificationhashtable.lo -MD -MP -MF .deps/verificationhashtable.Tpo -c verificationhashtable.cpp  -fPIC -DPIC -o .libs/verificationhashtable.o
+In file included from par2cmdline.h:264:0,
+                 from verificationhashtable.cpp:20:
+par2fileformat.h:67:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::hash'
+par2fileformat.h:68:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::setid'
+par2fileformat.h:79:18: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONENTRY::hash'
+par2fileformat.h:84:25: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEVERIFICATIONPACKET::header'
+par2fileformat.h:86:25: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONPACKET::fileid'
+par2fileformat.h:87:33: warning: ignoring packed attribute because of unpacked non-POD field 'FILEVERIFICATIONENTRY FILEVERIFICATIONPACKET::entries [0]'
+par2fileformat.h:99:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEDESCRIPTIONPACKET::header'
+par2fileformat.h:101:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::fileid'
+par2fileformat.h:102:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hashfull'
+par2fileformat.h:103:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hash16k'
+par2fileformat.h:127:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER MAINPACKET::header'
+par2fileformat.h:131:28: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash MAINPACKET::fileid [0]'
+par2fileformat.h:141:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER CREATORPACKET::header'
+par2fileformat.h:151:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER RECOVERYBLOCKPACKET::header'
+In file included from par2cmdline.h:283:0,
+                 from verificationhashtable.cpp:20:
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator<(const VerificationHashEntry&) const':
+verificationhashtable.h:69:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator>(const VerificationHashEntry&) const':
+verificationhashtable.h:73:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In static member function 'static const VerificationHashEntry* VerificationHashEntry::Search(const VerificationHashEntry*, const MD5Hash&)':
+verificationhashtable.h:186:64: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:190:69: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'const VerificationHashEntry* VerificationHashTable::FindMatch(const VerificationHashEntry*, const Par2RepairerSourceFile*, FileCheckSummer&, bool&) const':
+verificationhashtable.h:405:126: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:283:0,
+                 from verificationhashtable.cpp:20:
+verificationhashtable.h:412:128: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:429:118: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:288:0,
+                 from verificationhashtable.cpp:20:
+par1fileformat.h: At global scope:
+par1fileformat.h:41:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::controlhash'
+par1fileformat.h:42:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::sethash'
+par1fileformat.h:56:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hashfull'
+par1fileformat.h:57:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hash16k'
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT verificationhashtable.lo -MD -MP -MF .deps/verificationhashtable.Tpo -c verificationhashtable.cpp -o verificationhashtable.o >/dev/null 2>&1
+if /ffp/bin/sh ./libtool --tag=CXX --mode=compile g++ -DHAVE_CONFIG_H -I. -I. -I. `pkg-config sigc++-2.0 --cflags`   -Wall -g -O2 -MT verificationpacket.lo -MD -MP -MF ".deps/verificationpacket.Tpo" -c -o verificationpacket.lo verificationpacket.cpp; \
+	then mv -f ".deps/verificationpacket.Tpo" ".deps/verificationpacket.Plo"; else rm -f ".deps/verificationpacket.Tpo"; exit 1; fi
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT verificationpacket.lo -MD -MP -MF .deps/verificationpacket.Tpo -c verificationpacket.cpp  -fPIC -DPIC -o .libs/verificationpacket.o
+In file included from par2cmdline.h:264:0,
+                 from verificationpacket.cpp:20:
+par2fileformat.h:67:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::hash'
+par2fileformat.h:68:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PACKET_HEADER::setid'
+par2fileformat.h:79:18: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONENTRY::hash'
+par2fileformat.h:84:25: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEVERIFICATIONPACKET::header'
+par2fileformat.h:86:25: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEVERIFICATIONPACKET::fileid'
+par2fileformat.h:87:33: warning: ignoring packed attribute because of unpacked non-POD field 'FILEVERIFICATIONENTRY FILEVERIFICATIONPACKET::entries [0]'
+par2fileformat.h:99:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER FILEDESCRIPTIONPACKET::header'
+par2fileformat.h:101:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::fileid'
+par2fileformat.h:102:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hashfull'
+par2fileformat.h:103:20: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hash16k'
+par2fileformat.h:127:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER MAINPACKET::header'
+par2fileformat.h:131:28: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash MAINPACKET::fileid [0]'
+par2fileformat.h:141:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER CREATORPACKET::header'
+par2fileformat.h:151:20: warning: ignoring packed attribute because of unpacked non-POD field 'PACKET_HEADER RECOVERYBLOCKPACKET::header'
+In file included from par2cmdline.h:283:0,
+                 from verificationpacket.cpp:20:
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator<(const VerificationHashEntry&) const':
+verificationhashtable.h:69:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'bool VerificationHashEntry::operator>(const VerificationHashEntry&) const':
+verificationhashtable.h:73:52: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In static member function 'static const VerificationHashEntry* VerificationHashEntry::Search(const VerificationHashEntry*, const MD5Hash&)':
+verificationhashtable.h:186:64: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:190:69: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h: In member function 'const VerificationHashEntry* VerificationHashTable::FindMatch(const VerificationHashEntry*, const Par2RepairerSourceFile*, FileCheckSummer&, bool&) const':
+verificationhashtable.h:405:126: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:283:0,
+                 from verificationpacket.cpp:20:
+verificationhashtable.h:412:128: warning: suggest parentheses around '&&' within '||'
+verificationhashtable.h:429:118: warning: suggest parentheses around '&&' within '||'
+In file included from par2cmdline.h:288:0,
+                 from verificationpacket.cpp:20:
+par1fileformat.h: At global scope:
+par1fileformat.h:41:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::controlhash'
+par1fileformat.h:42:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEHEADER::sethash'
+par1fileformat.h:56:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hashfull'
+par1fileformat.h:57:15: warning: ignoring packed attribute because of unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hash16k'
+ g++ -DHAVE_CONFIG_H -I. -I. -I. -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include -Wall -g -O2 -MT verificationpacket.lo -MD -MP -MF .deps/verificationpacket.Tpo -c verificationpacket.cpp -o verificationpacket.o >/dev/null 2>&1
+/ffp/bin/sh ./libtool --tag=CXX --mode=link g++ -Wall -g -O2  -L/ffp/lib -Wl,-rpath,/ffp/lib -o libpar2.la -rpath /ffp/lib -version-info 0:1:0 libpar2.lo parheaders.lo par2cmdline.lo commandline.lo crc.lo creatorpacket.lo criticalpacket.lo datablock.lo descriptionpacket.lo diskfile.lo filechecksummer.lo galois.lo mainpacket.lo md5.lo par1fileformat.lo par1repairer.lo par1repairersourcefile.lo par2creator.lo par2creatorsourcefile.lo par2fileformat.lo par2repairer.lo par2repairersourcefile.lo recoverypacket.lo reedsolomon.lo verificationhashtable.lo verificationpacket.lo  -lsigc-2.0 -lstdc++ 
+g++ -shared -nostdlib /mnt/HD/HD_a2/ffp/bin/../lib/gcc/arm-ffp-linux-uclibcgnueabi/4.5.4/../../../crti.o /mnt/HD/HD_a2/ffp/bin/../lib/gcc/arm-ffp-linux-uclibcgnueabi/4.5.4/crtbeginS.o  .libs/libpar2.o .libs/parheaders.o .libs/par2cmdline.o .libs/commandline.o .libs/crc.o .libs/creatorpacket.o .libs/criticalpacket.o .libs/datablock.o .libs/descriptionpacket.o .libs/diskfile.o .libs/filechecksummer.o .libs/galois.o .libs/mainpacket.o .libs/md5.o .libs/par1fileformat.o .libs/par1repairer.o .libs/par1repairersourcefile.o .libs/par2creator.o .libs/par2creatorsourcefile.o .libs/par2fileformat.o .libs/par2repairer.o .libs/par2repairersourcefile.o .libs/recoverypacket.o .libs/reedsolomon.o .libs/verificationhashtable.o .libs/verificationpacket.o  -Wl,--rpath -Wl,/ffp/lib -Wl,--rpath -Wl,/ffp/lib -L/ffp/lib /ffp/lib/libsigc-2.0.so -L/mnt/HD/HD_a2/ffp/bin/../lib/gcc/arm-ffp-linux-uclibcgnueabi/4.5.4 -L/mnt/HD/HD_a2/ffp/bin/../lib/gcc -L/mnt/HD/HD_a2/ffp/bin/../lib/gcc/arm-ffp-linux-uclibcgnueabi/4.5.4/../../.. /ffp/lib/libstdc++.so -lm -lc -lgcc_s /mnt/HD/HD_a2/ffp/bin/../lib/gcc/arm-ffp-linux-uclibcgnueabi/4.5.4/crtendS.o /mnt/HD/HD_a2/ffp/bin/../lib/gcc/arm-ffp-linux-uclibcgnueabi/4.5.4/../../../crtn.o  -Wl,-rpath -Wl,/ffp/lib -Wl,-soname -Wl,libpar2.so.0 -o .libs/libpar2.so.0.0.1
+(cd .libs && rm -f libpar2.so.0 && ln -s libpar2.so.0.0.1 libpar2.so.0)
+(cd .libs && rm -f libpar2.so && ln -s libpar2.so.0.0.1 libpar2.so)
+ar cru .libs/libpar2.a  libpar2.o parheaders.o par2cmdline.o commandline.o crc.o creatorpacket.o criticalpacket.o datablock.o descriptionpacket.o diskfile.o filechecksummer.o galois.o mainpacket.o md5.o par1fileformat.o par1repairer.o par1repairersourcefile.o par2creator.o par2creatorsourcefile.o par2fileformat.o par2repairer.o par2repairersourcefile.o recoverypacket.o reedsolomon.o verificationhashtable.o verificationpacket.o
+ranlib .libs/libpar2.a
+creating libpar2.la
+(cd .libs && rm -f libpar2.la && ln -s ../libpar2.la libpar2.la)
+make[1]: Leaving directory `/tmp/libpar2.IZW0TU/libpar2-0.2'
++ make DESTDIR=/tmp/libpar2.IZW0TU/pkg install
+make[1]: Entering directory `/tmp/libpar2.IZW0TU/libpar2-0.2'
+test -z "/ffp/lib" || mkdir -p -- "/tmp/libpar2.IZW0TU/pkg/ffp/lib"
+ /ffp/bin/sh ./libtool --mode=install /ffp/bin/install -c  'libpar2.la' '/tmp/libpar2.IZW0TU/pkg/ffp/lib/libpar2.la'
+/ffp/bin/install -c .libs/libpar2.so.0.0.1 /tmp/libpar2.IZW0TU/pkg/ffp/lib/libpar2.so.0.0.1
+(cd /tmp/libpar2.IZW0TU/pkg/ffp/lib && { ln -s -f libpar2.so.0.0.1 libpar2.so.0 || { rm -f libpar2.so.0 && ln -s libpar2.so.0.0.1 libpar2.so.0; }; })
+(cd /tmp/libpar2.IZW0TU/pkg/ffp/lib && { ln -s -f libpar2.so.0.0.1 libpar2.so || { rm -f libpar2.so && ln -s libpar2.so.0.0.1 libpar2.so; }; })
+/ffp/bin/install -c .libs/libpar2.lai /tmp/libpar2.IZW0TU/pkg/ffp/lib/libpar2.la
+/ffp/bin/install -c .libs/libpar2.a /tmp/libpar2.IZW0TU/pkg/ffp/lib/libpar2.a
+chmod 644 /tmp/libpar2.IZW0TU/pkg/ffp/lib/libpar2.a
+ranlib /tmp/libpar2.IZW0TU/pkg/ffp/lib/libpar2.a
+libtool: install: warning: remember to run `libtool --finish /ffp/lib'
+test -z "/ffp/lib/libpar2/include" || mkdir -p -- "/tmp/libpar2.IZW0TU/pkg/ffp/lib/libpar2/include"
+ /ffp/bin/install -c -m 644 'config.h' '/tmp/libpar2.IZW0TU/pkg/ffp/lib/libpar2/include/config.h'
+test -z "/ffp/include/libpar2" || mkdir -p -- "/tmp/libpar2.IZW0TU/pkg/ffp/include/libpar2"
+ /ffp/bin/install -c -m 644 'commandline.h' '/tmp/libpar2.IZW0TU/pkg/ffp/include/libpar2/commandline.h'
+ /ffp/bin/install -c -m 644 'config.h' '/tmp/libpar2.IZW0TU/pkg/ffp/include/libpar2/config.h'
+ /ffp/bin/install -c -m 644 'crc.h' '/tmp/libpar2.IZW0TU/pkg/ffp/include/libpar2/crc.h'
+ /ffp/bin/install -c -m 644 'creatorpacket.h' '/tmp/libpar2.IZW0TU/pkg/ffp/include/libpar2/creatorpacket.h'
+ /ffp/bin/install -c -m 644 'criticalpacket.h' '/tmp/libpar2.IZW0TU/pkg/ffp/include/libpar2/criticalpacket.h'
+ /ffp/bin/install -c -m 644 'datablock.h' '/tmp/libpar2.IZW0TU/pkg/ffp/include/libpar2/datablock.h'
+ /ffp/bin/install -c -m 644 'descriptionpacket.h' '/tmp/libpar2.IZW0TU/pkg/ffp/include/libpar2/descriptionpacket.h'
+ /ffp/bin/install -c -m 644 'diskfile.h' '/tmp/libpar2.IZW0TU/pkg/ffp/include/libpar2/diskfile.h'
+ /ffp/bin/install -c -m 644 'filechecksummer.h' '/tmp/libpar2.IZW0TU/pkg/ffp/include/libpar2/filechecksummer.h'
+ /ffp/bin/install -c -m 644 'galois.h' '/tmp/libpar2.IZW0TU/pkg/ffp/include/libpar2/galois.h'
+ /ffp/bin/install -c -m 644 'letype.h' '/tmp/libpar2.IZW0TU/pkg/ffp/include/libpar2/letype.h'
+ /ffp/bin/install -c -m 644 'libpar2.h' '/tmp/libpar2.IZW0TU/pkg/ffp/include/libpar2/libpar2.h'
+ /ffp/bin/install -c -m 644 'mainpacket.h' '/tmp/libpar2.IZW0TU/pkg/ffp/include/libpar2/mainpacket.h'
+ /ffp/bin/install -c -m 644 'md5.h' '/tmp/libpar2.IZW0TU/pkg/ffp/include/libpar2/md5.h'
+ /ffp/bin/install -c -m 644 'par1fileformat.h' '/tmp/libpar2.IZW0TU/pkg/ffp/include/libpar2/par1fileformat.h'
+ /ffp/bin/install -c -m 644 'par1repairer.h' '/tmp/libpar2.IZW0TU/pkg/ffp/include/libpar2/par1repairer.h'
+ /ffp/bin/install -c -m 644 'par1repairersourcefile.h' '/tmp/libpar2.IZW0TU/pkg/ffp/include/libpar2/par1repairersourcefile.h'
+ /ffp/bin/install -c -m 644 'par2cmdline.h' '/tmp/libpar2.IZW0TU/pkg/ffp/include/libpar2/par2cmdline.h'
+ /ffp/bin/install -c -m 644 'par2creator.h' '/tmp/libpar2.IZW0TU/pkg/ffp/include/libpar2/par2creator.h'
+ /ffp/bin/install -c -m 644 'par2creatorsourcefile.h' '/tmp/libpar2.IZW0TU/pkg/ffp/include/libpar2/par2creatorsourcefile.h'
+ /ffp/bin/install -c -m 644 'par2fileformat.h' '/tmp/libpar2.IZW0TU/pkg/ffp/include/libpar2/par2fileformat.h'
+ /ffp/bin/install -c -m 644 'par2repairer.h' '/tmp/libpar2.IZW0TU/pkg/ffp/include/libpar2/par2repairer.h'
+ /ffp/bin/install -c -m 644 'par2repairersourcefile.h' '/tmp/libpar2.IZW0TU/pkg/ffp/include/libpar2/par2repairersourcefile.h'
+ /ffp/bin/install -c -m 644 'parheaders.h' '/tmp/libpar2.IZW0TU/pkg/ffp/include/libpar2/parheaders.h'
+ /ffp/bin/install -c -m 644 'recoverypacket.h' '/tmp/libpar2.IZW0TU/pkg/ffp/include/libpar2/recoverypacket.h'
+ /ffp/bin/install -c -m 644 'reedsolomon.h' '/tmp/libpar2.IZW0TU/pkg/ffp/include/libpar2/reedsolomon.h'
+ /ffp/bin/install -c -m 644 'verificationhashtable.h' '/tmp/libpar2.IZW0TU/pkg/ffp/include/libpar2/verificationhashtable.h'
+ /ffp/bin/install -c -m 644 'verificationpacket.h' '/tmp/libpar2.IZW0TU/pkg/ffp/include/libpar2/verificationpacket.h'
+make[1]: Leaving directory `/tmp/libpar2.IZW0TU/libpar2-0.2'
++ mkdir -p /tmp/libpar2.IZW0TU/pkg/install
++ cp /ffp/home/root/fun_plug/ffp_packages/libpar2/DESCR /ffp/home/root/fun_plug/ffp_packages/libpar2/HOMEPAGE /tmp/libpar2.IZW0TU/pkg/install/
++ cd /tmp/libpar2.IZW0TU/pkg
++ makepkg libpar2 0.2 1
+Creating /tmp/libpar2-0.2-arm-1.tar ...

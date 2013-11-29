@@ -1,0 +1,6 @@
+LibPar2 allows for the generation, modification, verification,
+ and repair of PAR v1.0 and PAR v2.0(PAR2) recovery sets, as
+ described in http://parchive.sourceforge.net/docs/specifications/parity-volume-spec/article-spec.html
+
+Homepage: https://launchpad.net/libpar2
+
