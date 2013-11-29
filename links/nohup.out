@@ -1,0 +1,379 @@
+++ basename ./pango.funpkg .funpkg
++ PN=pango
++ PR=1
++ . ./config.ffp
+++ GNU_HOST=
+++ GNU_TARGET=
+++ FFP_CFLAGS='-I/ffp/include -O2'
+++ FFP_LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
+++ '[' '!' -d '' ']'
+++ TMPDIR=/tmp
+++ export TMPDIR
+++ mandir=/ffp/share/man
+++ infodir=/ffp/share/info
+++ docdir=/ffp/share/doc
+++ pwd
++ X=/ffp/home/root/fun_plug/ffp_packages/pango
+++ mktemp -t -d pango.XXXXXX
++ W=/tmp/pango.7ueQSR
++ D=/tmp/pango.7ueQSR/pkg
++ cd /tmp/pango.7ueQSR
++ cat /ffp/home/root/fun_plug/ffp_packages/pango/SRC_URI
++ xargs wget
+--2012-12-11 11:27:49--  http://ftp.acc.umu.se/pub/GNOME/sources/pango/1.32/pango-1.32.3.tar.xz
+Resolving ftp.acc.umu.se... 2001:6b0:e:2018::138, 130.239.18.138, 130.239.18.137
+Connecting to ftp.acc.umu.se|2001:6b0:e:2018::138|:80... failed: Address family not supported by protocol.
+Connecting to ftp.acc.umu.se|130.239.18.138|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1036360 (1012K) [application/x-tar]
+Saving to: `pango-1.32.3.tar.xz'
+
+     0K .......... .......... .......... .......... ..........  4%  223K 4s
+    50K .......... .......... .......... .......... ..........  9%  590K 3s
+   100K .......... .......... .......... .......... .......... 14%  679K 2s
+   150K .......... .......... .......... .......... .......... 19%  789K 2s
+   200K .......... .......... .......... .......... .......... 24% 1.40M 1s
+   250K .......... .......... .......... .......... .......... 29% 1.16M 1s
+   300K .......... .......... .......... .......... .......... 34% 1.01M 1s
+   350K .......... .......... .......... .......... .......... 39% 1.40M 1s
+   400K .......... .......... .......... .......... .......... 44% 1.45M 1s
+   450K .......... .......... .......... .......... .......... 49%  322K 1s
+   500K .......... .......... .......... .......... .......... 54% 11.4M 1s
+   550K .......... .......... .......... .......... .......... 59% 21.1M 1s
+   600K .......... .......... .......... .......... .......... 64% 22.2M 0s
+   650K .......... .......... .......... .......... .......... 69%  345K 0s
+   700K .......... .......... .......... .......... .......... 74%  321K 0s
+   750K .......... .......... .......... .......... .......... 79%  582K 0s
+   800K .......... .......... .......... .......... .......... 83%  685K 0s
+   850K .......... .......... .......... .......... .......... 88% 1.42M 0s
+   900K .......... .......... .......... .......... .......... 93%  838K 0s
+   950K .......... .......... .......... .......... .......... 98% 1.46M 0s
+  1000K .......... ..                                         100% 1.50M=1.4s
+
+2012-12-11 11:27:51 (724 KB/s) - `pango-1.32.3.tar.xz' saved [1036360/1036360]
+
+++ ls pango-1.32.3.tar.xz
+++ egrep -o '[0-9][0-9.]*[0-9]'
++ PV=1.32.3
++ tar xf pango-1.32.3.tar.xz
++ cd pango-1.32.3 pango-1.32.3.tar.xz
+++ ls /ffp/home/root/fun_plug/ffp_packages/pango/patches/001-configure.patch
++ for file in '`ls $X/patches/*.patch`'
++ patch -p0 -i /ffp/home/root/fun_plug/ffp_packages/pango/patches/001-configure.patch
+patching file configure
++ LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
++ ./configure --prefix=/ffp --build= --host= --mandir=/ffp/share/man --infodir=/ffp/share/info
+checking for a BSD-compatible install... /ffp/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /ffp/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking build system type... armv5tejl-unknown-linux-gnueabi
+checking host system type... armv5tejl-unknown-linux-gnueabi
+checking for native Win32... no
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for style of include used by make... GNU
+checking dependency style of gcc... gcc3
+checking for c++... c++
+checking whether we are using the GNU C++ compiler... yes
+checking whether c++ accepts -g... yes
+checking dependency style of c++... gcc3
+checking for sysconf... yes
+checking for getpagesize... yes
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /ffp/bin/grep
+checking for egrep... /ffp/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for unistd.h... (cached) yes
+checking sys/mman.h usability... yes
+checking sys/mman.h presence... yes
+checking for sys/mman.h... yes
+checking how to print strings... printf
+checking for a sed that does not truncate output... /ffp/bin/sed
+checking for fgrep... /ffp/bin/grep -F
+checking for ld used by gcc... /ffp/bin/ld
+checking if the linker (/ffp/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /ffp/bin/nm -B
+checking the name lister (/ffp/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert armv5tejl-unknown-linux-gnueabi file names to armv5tejl-unknown-linux-gnueabi format... func_convert_file_noop
+checking how to convert armv5tejl-unknown-linux-gnueabi file names to toolchain format... func_convert_file_noop
+checking for /ffp/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... dlltool
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /ffp/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/ffp/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking how to run the C++ preprocessor... c++ -E
+checking for ld used by c++... /ffp/bin/ld
+checking if the linker (/ffp/bin/ld) is GNU ld... yes
+checking whether the c++ linker (/ffp/bin/ld) supports shared libraries... yes
+checking for c++ option to produce PIC... -fPIC -DPIC
+checking if c++ PIC flag -fPIC -DPIC works... yes
+checking if c++ static flag -static works... yes
+checking if c++ supports -c -o file.o... yes
+checking if c++ supports -c -o file.o... (cached) yes
+checking whether the c++ linker (/ffp/bin/ld) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+configure: creating ./config.lt
+config.lt: creating libtool
+checking for some Win32 platform... no
+checking for pkg-config... /ffp/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for HARFBUZZ... no
+no
+checking for CoreText availability... no
+checking for CAIRO... yes
+checking which cairo font backends could be used... freetype 
+checking for GLIB... yes
+checking for LIBTHAI... no
+checking for gobject-introspection... no
+checking modules to link statically... 
+checking dynamic modules to build... arabic-lang,basic-fc,basic-win32,basic-coretext,indic-lang, (those built into Pango will be excluded)
+checking for flockfile... yes
+checking for strtok_r... yes
+checking for gtkdoc-check... no
+checking for gtkdoc-rebase... no
+checking for gtkdoc-mkpdf... no
+checking whether to build gtk-doc documentation... no
+checking Whether to write dependencies into .pc files... no
+checking for dirent.h that defines DIR... yes
+checking for library containing opendir... none required
+checking for unistd.h... (cached) yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating pango/Makefile
+config.status: creating pango/mini-fribidi/Makefile
+config.status: creating pango/pango.rc
+config.status: creating pango/pangoft2.rc
+config.status: creating pango/pangowin32.rc
+config.status: creating pango/pangocairo.rc
+config.status: creating pango/pangoxft.rc
+config.status: creating pango-view/Makefile
+config.status: creating modules/Makefile
+config.status: creating modules/arabic/Makefile
+config.status: creating modules/basic/Makefile
+config.status: creating modules/indic/Makefile
+config.status: creating modules/thai/Makefile
+config.status: creating examples/Makefile
+config.status: creating docs/Makefile
+config.status: creating docs/version.xml
+config.status: creating tools/Makefile
+config.status: creating tests/Makefile
+config.status: creating build/Makefile
+config.status: creating build/win32/Makefile
+config.status: creating build/win32/vs9/Makefile
+config.status: creating build/win32/vs10/Makefile
+config.status: creating pango.pc
+config.status: creating pangowin32.pc
+config.status: creating pangoft2.pc
+config.status: creating pangoxft.pc
+config.status: creating pangocairo.pc
+config.status: creating pango-uninstalled.pc
+config.status: creating pangowin32-uninstalled.pc
+config.status: creating pangoft2-uninstalled.pc
+config.status: creating pangoxft-uninstalled.pc
+config.status: creating pangocairo-uninstalled.pc
+config.status: creating pango-zip.sh
+config.status: creating config.h.win32
+config.status: creating tests/runtests.sh
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing pango/module-defs.h commands
+config.status: executing pango/module-defs-fc.c commands
+config.status: executing pango/module-defs-win32.c commands
+config.status: executing pango/module-defs-coretext.c commands
+config.status: executing pango/module-defs-lang.c commands
+config.status: executing pango/pango-features.h commands
+config.status: creating pango/pango-features.h
+config.status: pango/pango-features.h is unchanged
+configuration:
+	backends: Cairo
++ make
+make  all-recursive
+make[1]: Entering directory `/tmp/pango.7ueQSR/pango-1.32.3'
+Making all in pango
+make[2]: Entering directory `/tmp/pango.7ueQSR/pango-1.32.3/pango'
+  GEN      s-enum-types-h
+  GEN      s-enum-types-c
+make  all-recursive
+make[3]: Entering directory `/tmp/pango.7ueQSR/pango-1.32.3/pango'
+Making all in mini-fribidi
+make[4]: Entering directory `/tmp/pango.7ueQSR/pango-1.32.3/pango/mini-fribidi'
+  CC       fribidi.lo
+  CC       fribidi_char_type.lo
+  CC       fribidi_types.lo
+  CCLD     libmini-fribidi.la
+make[4]: Leaving directory `/tmp/pango.7ueQSR/pango-1.32.3/pango/mini-fribidi'
+make[4]: Entering directory `/tmp/pango.7ueQSR/pango-1.32.3/pango'
+  CC       break.lo
+  CC       ellipsize.lo
+  CC       fonts.lo
+  CC       glyphstring.lo
+  CC       modules.lo
+modules.c: In function 'init_modules':
+modules.c:594:7: warning: 'g_type_init' is deprecated (declared at /ffp/include/glib-2.0/gobject/gtype.h:669)
+  CC       pango-attributes.lo
+  CC       pango-bidi-type.lo
+  CC       pango-color.lo
+  CC       pango-context.lo
+pango-context.c: In function 'string_from_script':
+pango-context.c:1375:3: warning: dereferencing type-punned pointer will break strict-aliasing rules
+pango-context.c:1375:3: warning: dereferencing type-punned pointer will break strict-aliasing rules
+pango-context.c:1376:5: warning: dereferencing type-punned pointer will break strict-aliasing rules
+pango-context.c:1376:5: warning: dereferencing type-punned pointer will break strict-aliasing rules
+  CC       pango-coverage.lo
+  CC       pango-engine.lo
+pango-engine.c: In function 'pango_fallback_engine_class_init':
+pango-engine.c:199:23: warning: assignment from incompatible pointer type
+pango-engine.c: In function '_pango_get_fallback_shaper':
+pango-engine.c:206:3: warning: dereferencing type-punned pointer will break strict-aliasing rules
+pango-engine.c:206:3: warning: dereferencing type-punned pointer will break strict-aliasing rules
+pango-engine.c:207:5: warning: dereferencing type-punned pointer will break strict-aliasing rules
+pango-engine.c:207:5: warning: dereferencing type-punned pointer will break strict-aliasing rules
+  CC       pango-fontmap.lo
+  CC       pango-fontset.lo
+  CC       pango-glyph-item.lo
+  CC       pango-gravity.lo
+  CC       pango-item.lo
+  CC       pango-language.lo
+In file included from pango-language.c:506:0:
+pango-language-sample-table.h:53:17: warning: extra tokens at end of #ifndef directive
+In file included from pango-language.c:516:0:
+pango-language-sample-table.h:53:17: warning: extra tokens at end of #ifndef directive
+In file included from pango-language.c:521:0:
+pango-language-sample-table.h:53:17: warning: extra tokens at end of #ifndef directive
+  CC       pango-layout.lo
+  CC       pango-markup.lo
+  CC       pango-matrix.lo
+  CC       pango-renderer.lo
+  CC       pango-script.lo
+  CC       pango-tabs.lo
+  CC       pango-utils.lo
+pango-utils.c: In function 'read_config':
+pango-utils.c:619:3: warning: dereferencing type-punned pointer will break strict-aliasing rules
+pango-utils.c:619:3: warning: dereferencing type-punned pointer will break strict-aliasing rules
+pango-utils.c:638:7: warning: dereferencing type-punned pointer will break strict-aliasing rules
+pango-utils.c:638:7: warning: dereferencing type-punned pointer will break strict-aliasing rules
+pango-utils.c: In function 'pango_get_sysconf_subdirectory':
+pango-utils.c:731:3: warning: dereferencing type-punned pointer will break strict-aliasing rules
+pango-utils.c:731:3: warning: dereferencing type-punned pointer will break strict-aliasing rules
+pango-utils.c:745:7: warning: dereferencing type-punned pointer will break strict-aliasing rules
+pango-utils.c:745:7: warning: dereferencing type-punned pointer will break strict-aliasing rules
+pango-utils.c: In function 'pango_get_lib_subdirectory':
+pango-utils.c:766:3: warning: dereferencing type-punned pointer will break strict-aliasing rules
+pango-utils.c:766:3: warning: dereferencing type-punned pointer will break strict-aliasing rules
+pango-utils.c:786:7: warning: dereferencing type-punned pointer will break strict-aliasing rules
+pango-utils.c:786:7: warning: dereferencing type-punned pointer will break strict-aliasing rules
+  CC       reorder-items.lo
+  CC       shape.lo
+  CC       pango-enum-types.lo
+  CC       module-defs-lang.lo
+  CCLD     libpango-1.0.la
+  CC       pangocairo-context.lo
+  CC       pangocairo-font.lo
+  CC       pangocairo-fontmap.lo
+pangocairo-fontmap.c: In function 'pango_cairo_font_map_new':
+pangocairo-fontmap.c:70:3: warning: 'g_type_init' is deprecated (declared at /ffp/include/glib-2.0/gobject/gtype.h:669)
+pangocairo-fontmap.c: In function 'pango_cairo_font_map_new_for_font_type':
+pangocairo-fontmap.c:106:3: warning: 'g_type_init' is deprecated (declared at /ffp/include/glib-2.0/gobject/gtype.h:669)
+pangocairo-fontmap.c: In function 'pango_cairo_font_map_get_default':
+pangocairo-fontmap.c:152:3: warning: dereferencing type-punned pointer will break strict-aliasing rules
+pangocairo-fontmap.c:152:3: warning: dereferencing type-punned pointer will break strict-aliasing rules
+pangocairo-fontmap.c:153:5: warning: dereferencing type-punned pointer will break strict-aliasing rules
+pangocairo-fontmap.c:153:5: warning: dereferencing type-punned pointer will break strict-aliasing rules
+  CC       pangocairo-render.lo
+  CC       pangocairo-fcfont.lo
+pangocairo-fcfont.c: In function 'get_gravity_class':
+pangocairo-fcfont.c:190:3: warning: dereferencing type-punned pointer will break strict-aliasing rules
+pangocairo-fcfont.c:190:3: warning: dereferencing type-punned pointer will break strict-aliasing rules
+pangocairo-fcfont.c:191:5: warning: dereferencing type-punned pointer will break strict-aliasing rules
+pangocairo-fcfont.c:191:5: warning: dereferencing type-punned pointer will break strict-aliasing rules
+  CC       pangocairo-fcfontmap.lo
+  CC       pangofc-font.lo
+  CC       pangofc-fontmap.lo
+pangofc-fontmap.c: In function 'get_gravity_class':
+pangofc-fontmap.c:240:3: warning: dereferencing type-punned pointer will break strict-aliasing rules
+pangofc-fontmap.c:240:3: warning: dereferencing type-punned pointer will break strict-aliasing rules
+pangofc-fontmap.c:241:5: warning: dereferencing type-punned pointer will break strict-aliasing rules
+pangofc-fontmap.c:241:5: warning: dereferencing type-punned pointer will break strict-aliasing rules
+  CC       pangofc-decoder.lo
+  CC       pangoft2.lo
+pangoft2.c: In function 'pango_ft2_font_real_lock_face':
+pangoft2.c:427:3: warning: 'pango_ft2_font_get_face' is deprecated (declared at pangoft2.c:168): Use 'pango_fc_font_lock_face' instead
+pangoft2.c: In function 'pango_ft2_get_unknown_glyph':
+pangoft2.c:502:3: warning: 'pango_ft2_font_get_face' is deprecated (declared at pangoft2.c:168): Use 'pango_fc_font_lock_face' instead
+  CC       module-defs-fc.lo
+  CC       pangoft2-fontmap.lo
+pangoft2-fontmap.c: In function 'pango_ft2_font_map_new':
+pangoft2-fontmap.c:131:3: warning: 'g_type_init' is deprecated (declared at /ffp/include/glib-2.0/gobject/gtype.h:669)
+pangoft2-fontmap.c: In function 'pango_ft2_get_context':
+pangoft2-fontmap.c:252:3: warning: 'pango_ft2_font_map_for_display' is deprecated (declared at ../pango/pangoft2.h:101): Use 'pango_ft2_font_map_new' instead
+pangoft2-fontmap.c: In function 'pango_ft2_font_map_for_display':
+pangoft2-fontmap.c:272:3: warning: dereferencing type-punned pointer will break strict-aliasing rules
+pangoft2-fontmap.c:272:3: warning: dereferencing type-punned pointer will break strict-aliasing rules
+pangoft2-fontmap.c:273:5: warning: dereferencing type-punned pointer will break strict-aliasing rules
+pangoft2-fontmap.c:273:5: warning: dereferencing type-punned pointer will break strict-aliasing rules
+  CC       pangoft2-render.lo
+pangoft2-render.c: In function 'pango_ft2_font_render_glyph':
+pangoft2-render.c:213:3: warning: 'pango_ft2_font_get_face' is deprecated (declared at ../pango/pangoft2.h:112): Use 'pango_fc_font_lock_face' instead
+  CC       pango-ot-buffer.lo
+In file included from pango-ot-buffer.c:24:0:
+pango-ot-private.h:28:19: fatal error: hb-ot.h: No such file or directory
+compilation terminated.
+make[4]: *** [pango-ot-buffer.lo] Error 1
+make[4]: Leaving directory `/tmp/pango.7ueQSR/pango-1.32.3/pango'
+make[3]: *** [all-recursive] Error 1
+make[3]: Leaving directory `/tmp/pango.7ueQSR/pango-1.32.3/pango'
+make[2]: *** [all] Error 2
+make[2]: Leaving directory `/tmp/pango.7ueQSR/pango-1.32.3/pango'
+make[1]: *** [all-recursive] Error 1
+make[1]: Leaving directory `/tmp/pango.7ueQSR/pango-1.32.3'
+make: *** [all] Error 2

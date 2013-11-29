@@ -1,0 +1,35 @@
+ Links is a graphics and text mode web browser, released under GPL. 
+Links is a free software. 
+
+Links runs on Linux, BSD, UNIX in general, OS/2, Cygwin under Windows, 
+AtheOS, BeOS, FreeMint. Links runs in graphics mode (mouse required) on 
+X Window System (UN*X, Cygwin), SVGAlib, Linux Framebuffer, OS/2 
+PMShell, AtheOS GUI Links runs in text mode (mouse optional) on UN*X 
+console, ssh/telnet virtual terminal, vt100 terminal, xterm, and 
+virtually any other text terminal. Mouse is supported for GPM, xterm, 
+and OS/2. Links supports colors on terminal. Easy and quick user control 
+via pull-down menu in both text and graphics mode, in 25 languages. 
+HTML 4.0 support (without CSS) HTTP 1.1 support Tables, frames in both 
+graphics and text mode, builtin image display in graphics mode Builtin 
+image display for GIF, JPEG, PNG, XBM, TIFF in graphics mode 
+Anti-advertisement animation filter in animated GIFs Bookmarks 
+Background file downloads Automatic reconnection in case of TCP 
+connection breakdown Keepalive connections Background (asynchronous) DNS 
+lookup Possibility to hook up external programs for all MIME types, 
+possibility to choose one of more programs at every opening. 48-bit 
+high-quality image gamma correction, resampling and Floyd-Steinberg 
+dithering in all color depths. Font resampling (antialiasing) for 
+virtually unlimited pitch range, LCD optimization of fonts and images. 
+Builtin fonts in the executable without reliance on any fonts installed 
+in the system User-adjustable menu, HTML font size and image zoom 
+factor. User-adjustable display gammas (red, green, blue), 
+viewing-condition correction gamma and precise calibration of both 
+monitor and Links on a calibration pattern Automatic aspect ratio 
+correction for modes like 640x200, 640x400, 320x200 with user-adjustable 
+manual aspect ratio correction. Support for one-wheel mice (vertical 
+scroll), two-wheel mice (vertical and horizontal scroll) and smooth 
+scrolling by grabbing the plane with a mouse (no wheel needed). Easy 
+installation, the browser is just one executable and no more files. 
+
+Homepage: http://links.twibright.com/
+
