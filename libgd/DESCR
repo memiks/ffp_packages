@@ -1,12 +1,4 @@
-autoconf - Generates configuration scripts
+GD is an open source code library for the dynamic creation of images by programmers. GD is written in C, and "wrappers" are available for Perl, PHP and other languages. GD creates PNG, JPEG, GIF, WebP, XPM, BMP images, among other formats. GD is commonly used to generate charts, graphics, thumbnails, and most anything else, on the fly. While not restricted to use on the web, the most common applications of GD involve website development.
 
-Autoconf is an extensible package of M4 macros that produce shell
-scripts to automatically configure software source code
-packages. These scripts can adapt the packages to many kinds of
-UNIX-like systems without manual user intervention. Autoconf creates a
-configuration script for a package from a template file that lists the
-operating system features that the package can use, in the form of M4
-macro calls.
-
-Homepage: http://www.gnu.org/software/autoconf/
+Homepage: https://bitbucket.org/libgd/gd-libgd/
 

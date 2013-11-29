@@ -1,12 +1,9 @@
-autoconf - Generates configuration scripts
+isync is a command line application which synchronizes mailboxes; currently Maildir and IMAP4 mailboxes are supported. New messages, message deletions and flag changes can be propagated both ways. isync is suitable for use in IMAP-disconnected mode.
 
-Autoconf is an extensible package of M4 macros that produce shell
-scripts to automatically configure software source code
-packages. These scripts can adapt the packages to many kinds of
-UNIX-like systems without manual user intervention. Autoconf creates a
-configuration script for a package from a template file that lists the
-operating system features that the package can use, in the form of M4
-macro calls.
+Synchronization is based on unique message identifiers (UIDs), so no identification conflicts can occur (as opposed to some other mail synchronizers).
+Synchronization state is kept in one local text file per mailbox pair; multiple replicas of a mailbox can be maintained.
 
-Homepage: http://www.gnu.org/software/autoconf/
+isync is free software in the sense of the GNU GPL. 
+
+Homepage: http://isync.sourceforge.net/
 

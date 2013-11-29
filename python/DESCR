@@ -1,8 +1,4 @@
-automake - a tool for automatically generating `Makefile.in' files
+Python is a programming language that lets you work more quickly and integrate your systems more effectively. You can learn to use Python and see almost immediate gains in productivity and lower maintenance costs.
 
-Automake is a tool for automatically generating `Makefile.in' files
-compliant with the GNU Coding Standards. Automake requires the use of
-Autoconf.
-
-Homepage: http://www.gnu.org/software/automake/
+Homepage: http://www.python.org/
 

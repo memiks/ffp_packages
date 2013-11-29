@@ -805,17 +805,11 @@ Homepage: http://www.mysql.com/
 
 wdfs
 ===
-autoconf - Generates configuration scripts
+wdfs - webdav filesystem for fuse
 
-Autoconf is an extensible package of M4 macros that produce shell
-scripts to automatically configure software source code
-packages. These scripts can adapt the packages to many kinds of
-UNIX-like systems without manual user intervention. Autoconf creates a
-configuration script for a package from a template file that lists the
-operating system features that the package can use, in the form of M4
-macro calls.
+        wdfs is a webdav filesystem that makes it possible to *mount a webdav share* under linux, freebsd and apple mac os x. wdfs has some special features for accessing subversion repositories via webdav. it's based on fuse and neon.
 
-Homepage: http://www.gnu.org/software/autoconf/
+Homepage: http://noedler.de/projekte/wdfs/
 
 
 
@@ -1360,23 +1354,6 @@ Homepage: http://www.openssl.org/
 
 
 
-minidlna
-===
-autoconf - Generates configuration scripts
-
-Autoconf is an extensible package of M4 macros that produce shell
-scripts to automatically configure software source code
-packages. These scripts can adapt the packages to many kinds of
-UNIX-like systems without manual user intervention. Autoconf creates a
-configuration script for a package from a template file that lists the
-operating system features that the package can use, in the form of M4
-macro calls.
-
-Homepage: http://www.gnu.org/software/autoconf/
-
-
-
-
 libatomic_ops
 ===
  The most recent version of this package can be found in the source tree 
@@ -1502,17 +1479,11 @@ Homepage: http://www.gnu.org/software/libiconv/
 
 gpodder
 ===
-autoconf - Generates configuration scripts
+gPodder downloads and manages free audio and video content ("podcasts") for you. Listen directly on your computer or on your mobile devices.
 
-Autoconf is an extensible package of M4 macros that produce shell
-scripts to automatically configure software source code
-packages. These scripts can adapt the packages to many kinds of
-UNIX-like systems without manual user intervention. Autoconf creates a
-configuration script for a package from a template file that lists the
-operating system features that the package can use, in the form of M4
-macro calls.
+Available for Linux, FreeBSD, Windows, Mac OS X, the Nokia N9, Blackberry 10 and Sailfish OS.
 
-Homepage: http://www.gnu.org/software/autoconf/
+Homepage: http://gpodder.org/
 
 
 
@@ -2500,7 +2471,7 @@ p7zip is a quick port of 7z.exe and 7za.exe
 7-Zip is a file archiver with highest compression ratio.
 Since 4.10, p7zip (like 7-zip) supports little-endian and big-endian machines.
 
-Homepage: http://www.gnu.org/software/autoconf/
+Homepage: http://p7zip.sourceforge.net/
 
 
 
@@ -2523,13 +2494,9 @@ Homepage: http://heirloom.sourceforge.net/mailx.html
 
 python
 ===
-automake - a tool for automatically generating `Makefile.in' files
+Python is a programming language that lets you work more quickly and integrate your systems more effectively. You can learn to use Python and see almost immediate gains in productivity and lower maintenance costs.
 
-Automake is a tool for automatically generating `Makefile.in' files
-compliant with the GNU Coding Standards. Automake requires the use of
-Autoconf.
-
-Homepage: http://www.gnu.org/software/automake/
+Homepage: http://www.python.org/
 
 
 
@@ -2605,17 +2572,14 @@ Homepage: http://savannah.nongnu.org/projects/attr
 
 isync
 ===
-autoconf - Generates configuration scripts
+isync is a command line application which synchronizes mailboxes; currently Maildir and IMAP4 mailboxes are supported. New messages, message deletions and flag changes can be propagated both ways. isync is suitable for use in IMAP-disconnected mode.
 
-Autoconf is an extensible package of M4 macros that produce shell
-scripts to automatically configure software source code
-packages. These scripts can adapt the packages to many kinds of
-UNIX-like systems without manual user intervention. Autoconf creates a
-configuration script for a package from a template file that lists the
-operating system features that the package can use, in the form of M4
-macro calls.
+Synchronization is based on unique message identifiers (UIDs), so no identification conflicts can occur (as opposed to some other mail synchronizers).
+Synchronization state is kept in one local text file per mailbox pair; multiple replicas of a mailbox can be maintained.
 
-Homepage: http://www.gnu.org/software/autoconf/
+isync is free software in the sense of the GNU GPL. 
+
+Homepage: http://isync.sourceforge.net/
 
 
 
@@ -2728,17 +2692,9 @@ Homepage: http://sourceware.org/libffi/
 
 libgd
 ===
-autoconf - Generates configuration scripts
+GD is an open source code library for the dynamic creation of images by programmers. GD is written in C, and "wrappers" are available for Perl, PHP and other languages. GD creates PNG, JPEG, GIF, WebP, XPM, BMP images, among other formats. GD is commonly used to generate charts, graphics, thumbnails, and most anything else, on the fly. While not restricted to use on the web, the most common applications of GD involve website development.
 
-Autoconf is an extensible package of M4 macros that produce shell
-scripts to automatically configure software source code
-packages. These scripts can adapt the packages to many kinds of
-UNIX-like systems without manual user intervention. Autoconf creates a
-configuration script for a package from a template file that lists the
-operating system features that the package can use, in the form of M4
-macro calls.
-
-Homepage: http://www.gnu.org/software/autoconf/
+Homepage: https://bitbucket.org/libgd/gd-libgd/
 
 
 
@@ -2754,32 +2710,9 @@ Homepage: http://www.musicpd.org/
 
 
 
-liburi
-===
-autoconf - Generates configuration scripts
-
-Autoconf is an extensible package of M4 macros that produce shell
-scripts to automatically configure software source code
-packages. These scripts can adapt the packages to many kinds of
-UNIX-like systems without manual user intervention. Autoconf creates a
-configuration script for a package from a template file that lists the
-operating system features that the package can use, in the form of M4
-macro calls.
-
-Homepage: http://www.gnu.org/software/autoconf/
-
-
-
-
 glib
 ===
-GLib fournit les éléments applicatifs de base pour les bibliothèques et 
-les applications écrites en C. Elle fournit le système central des 
-objets employés dans GNOME, l'implémentation de la boucle principale, 
-ainsi qu'un vaste ensemble de fonctions utilitaires pour le traitement 
-des chaînes et d'autres structures de données courantes. 
-
-
+GLib provides the core application building blocks for libraries and applications written in C. It provides the core object system used in GNOME, the main loop implementation, and a large set of utility functions for strings and common data structures.
 
 Homepage: http://developer.gnome.org/glib/ 
 
@@ -2788,17 +2721,9 @@ Homepage: http://developer.gnome.org/glib/
 
 most
 ===
-autoconf - Generates configuration scripts
+MOST is a powerful paging program for Unix, VMS, MSDOS, and win32 systems. Unlike other well-known paging programs most supports multiple windows and can scroll left and right. Why settle for less?
 
-Autoconf is an extensible package of M4 macros that produce shell
-scripts to automatically configure software source code
-packages. These scripts can adapt the packages to many kinds of
-UNIX-like systems without manual user intervention. Autoconf creates a
-configuration script for a package from a template file that lists the
-operating system features that the package can use, in the form of M4
-macro calls.
-
-Homepage: http://www.gnu.org/software/autoconf/
+Homepage: http://www.jedsoft.org/most/
 
 
 
@@ -3034,17 +2959,13 @@ Homepage: http://www.serviio.org/
 
 pyplay
 ===
-autoconf - Generates configuration scripts
+PyPlay
 
-Autoconf is an extensible package of M4 macros that produce shell
-scripts to automatically configure software source code
-packages. These scripts can adapt the packages to many kinds of
-UNIX-like systems without manual user intervention. Autoconf creates a
-configuration script for a package from a template file that lists the
-operating system features that the package can use, in the form of M4
-macro calls.
+Multimedia player with touch-friendly interface. The main characteristics is support for dynamic playlist, filtering by genre/artist/album, support for replaygain and rating. It runs on Windows and any Linux desktop distribution. Support for Android is planned once PySide is ported to it.
 
-Homepage: http://www.gnu.org/software/autoconf/
+The UI is written using QML, the background is in Python. Playback currently uses Phonon, API, but switch to either Qt Multimedia or GStreamer is planned. After that, video support will be added.
+
+Homepage: http://sourceforge.net/projects/pythonplayer/
 
 
 

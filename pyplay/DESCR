@@ -1,12 +1,8 @@
-autoconf - Generates configuration scripts
+PyPlay
 
-Autoconf is an extensible package of M4 macros that produce shell
-scripts to automatically configure software source code
-packages. These scripts can adapt the packages to many kinds of
-UNIX-like systems without manual user intervention. Autoconf creates a
-configuration script for a package from a template file that lists the
-operating system features that the package can use, in the form of M4
-macro calls.
+Multimedia player with touch-friendly interface. The main characteristics is support for dynamic playlist, filtering by genre/artist/album, support for replaygain and rating. It runs on Windows and any Linux desktop distribution. Support for Android is planned once PySide is ported to it.
 
-Homepage: http://www.gnu.org/software/autoconf/
+The UI is written using QML, the background is in Python. Playback currently uses Phonon, API, but switch to either Qt Multimedia or GStreamer is planned. After that, video support will be added.
+
+Homepage: http://sourceforge.net/projects/pythonplayer/
 

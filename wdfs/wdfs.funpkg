@@ -22,7 +22,8 @@ LDFLAGS="$FFP_LDFLAGS" \
 	--host=$GNU_HOST \
 	--mandir=$mandir \
 	--infodir=$infodir
-    
+
+LDFLAGS="$FFP_LDFLAGS" \
 make
 make DESTDIR=$D install
 
