@@ -1,0 +1,17 @@
+GNU Guix is a purely functional package manager for the GNU system, and 
+a distribution thereof. 
+
+Dependable. In addition to standard package management features, Guix 
+supports transactional upgrades and roll-backs, unprivileged package 
+management, per-user profiles, and garbage collection. Read more... 
+
+Hackable. It provides Guile Scheme APIs, including high-level embedded 
+domain-specific languages (EDSLs), to describe how packages are built 
+and composed. Read more... 
+
+Liberating. A user-land free software distribution for GNU/Linux comes 
+as part of Guix. Read more... 
+
+Guix is based on the Nix package manager. 
+
+Homepage: http://www.gnu.org/software/guix/
