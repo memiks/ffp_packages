@@ -1,0 +1,36 @@
+#!/ffp/bin/sh -xe
+
+PN=$(basename $0 .funpkg)
+PR=1
+
+. ./config.ffp
+
+X=$(pwd)
+W=$(mktemp -t -d $PN.XXXXXX)
+D=$W/pkg
+
+
+cd $W
+cat $X/SRC_URI | xargs wget 
+PV=$(ls ${PN}src-*.tar* | egrep -o '[0-9][0-9.]*[0-9]')
+tar xf ${PN}src-$PV.tar*
+cd $PN
+
+mv makefile.unix makefile
+patch makefile $X/makefile.patch
+
+LDFLAGS="$FFP_LDFLAGS" make all
+LDFLAGS="$FFP_LDFLAGS" make lib
+
+mkdir -p $D/ffp/bin $D/ffp/lib
+
+make DESTDIR=$D/ffp/ install
+make DESTDIR=$D/ffp/ install-lib
+
+mkdir -p $D/install
+cp $X/{DESCR,HOMEPAGE} $D/install/
+
+cd $D
+makepkg $PN $PV $PR
+
+

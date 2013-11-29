@@ -1,0 +1,11 @@
+--- makefile.orig	2012-03-05 11:24:16.000000000 +0100
++++ makefile.unix	2012-03-05 11:24:43.000000000 +0100
+@@ -10,7 +10,7 @@
+ CXXFLAGS=-O2
+ DEFINES=-D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
+ STRIP=strip
+-DESTDIR=/usr
++#DESTDIR=/usr
+ 
+ # Linux using LCC
+ #CXX=lcc
