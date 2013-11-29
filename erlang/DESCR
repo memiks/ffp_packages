@@ -1,0 +1,19 @@
+Erlang is a programming language designed at the Ericsson Computer Science 
+Laboratory. 
+
+Open-source Erlang is being released to help encourage the spread of 
+Erlang outside Ericsson. 
+
+We are releasing free of charge: The entire source code of the current 
+Erlang system. 
+
+Extensive libraries of code for building robust fault-tolerant distributed 
+applications. 
+
+All with documentation. 
+
+All the above software has been battle tested in a number of Ericsson 
+products, for example AXD301 (ATM switch). 
+
+Homepage: http://www.erlang.org/
+
