@@ -1,0 +1,42 @@
+--- Makefile.orig	2013-07-31 08:47:08.000000000 +0200
++++ Makefile.in	2013-07-31 08:54:13.000000000 +0200
+@@ -34,12 +34,12 @@
+ # Pathname of directory to install the man page.
+ MANDIR = @mandir@
+ # Pathname of directory to install the CGI programs.
+-WEBDIR = $(prefix)/www
++WEBDIR = $(prefix)/var/www
+ 
+ # CONFIGURE: The group that the web directory belongs to.  This is so that
+ # the makeweb program can be installed set-group-id to that group, and make
+ # subdirectories.  If you're not going to use makeweb, ignore this.
+-WEBGROUP =	www
++WEBGROUP =	httpd
+ 
+ # CONFIGURE: Directory for CGI executables.
+ CGIBINDIR =	$(WEBDIR)/cgi-bin
+@@ -110,11 +110,11 @@
+ 
+ installthis:
+ 	-mkdir -p $(DESTDIR)$(BINDIR)
+-	$(INSTALL) -m 555 -o bin -g bin thttpd $(DESTDIR)$(BINDIR)
++	$(INSTALL) -m 555 -o root -g root thttpd $(DESTDIR)$(BINDIR)
+ 
+ install-man:
+ 	-mkdir -p $(DESTDIR)$(MANDIR)/man8
+-	$(INSTALL) -m 444 -o bin -g bin thttpd.8 $(DESTDIR)$(MANDIR)/man8
++	$(INSTALL) -m 444 -o root -g root thttpd.8 $(DESTDIR)$(MANDIR)/man8
+ 
+ installsubdirs:
+ 	for i in $(SUBDIRS) ; do ( \
+@@ -122,9 +122,9 @@
+ 	    pwd ; \
+ 	    $(MAKE) $(MFLAGS) \
+ 		WEBDIR=$(WEBDIR) \
+-		CGIBINDIR=$(CGIBINDIR) \
+ 		MANDIR=$(MANDIR) \
+ 		WEBGROUP=$(WEBGROUP) \
++		DESTDIR=$(DESTDIR) \
+ 		install \
+ 	) ; done
+ 
