@@ -1,0 +1,55 @@
+#!/ffp/bin/sh -xe
+
+PN=$(basename $0 .funpkg)
+PR=1
+
+. ./config.ffp
+
+X=$(pwd)
+W=$(mktemp -t -d $PN.XXXXXX)
+D=$W/pkg
+
+cd $W
+cat $X/SRC_URI | xargs wget --no-check-certificate 
+PV=$(ls $PN-*.tar* | egrep -o '[0-9][0-9.]*[0-9]')
+tar xf $PN-$PV.tar*
+cd $PN-*
+
+for file in `ls $X/patches/*.patch`
+do
+        patch -p0 -i $file
+done
+
+CFLAGS="$FFP_CFLAGS -D_GNU_SOURCE -pthread" \
+CXXFLAGS="$FFP_CFLAGS -D_GNU_SOURCE -pthread" \
+LDFLAGS="$FFP_LDFLAGS -lpthread " \
+./configure \
+	--prefix=/ffp \
+	--build=$GNU_BUILD \
+	--with-distro=none \
+	--host=$GNU_HOST \
+	--disable-glib \
+	--disable-gobject \
+	--disable-qt3 \
+	--disable-qt4 \
+	--disable-gtk \
+	--disable-gtk3 \
+	--disable-pygtk \
+	--disable-dbus \
+	--disable-python-dbus \
+	--mandir=$mandir \
+	--infodir=$infodir
+    
+CFLAGS="$FFP_CFLAGS -D_GNU_SOURCE -pthread" \
+CXXFLAGS="$FFP_CFLAGS -D_GNU_SOURCE -pthread" \
+LDFLAGS="$FFP_LDFLAGS -lpthread " \
+make
+make DESTDIR=$D install
+
+mkdir -p $D/install
+cp $X/{DESCR,HOMEPAGE} $D/install/
+
+cd $D
+makepkg $PN $PV $PR
+
+
