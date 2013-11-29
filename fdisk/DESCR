@@ -1,0 +1,15 @@
+GNU fdisk provides alternatives to the following programs:
+
+    util-linux fdisk (compatible clone lfdisk, extended clone gfdisk)
+    util-linux cfdisk
+
+Note: The standard interface offered via the fdisk link is gfdisk.
+
+In the future it may also offer alternatives to
+
+    util-linux sfdisk
+    Apple's mac-fdisk
+    FreeBSD fdisk
+
+Homepage: http://www.gnu.org/software/fdisk/
+
