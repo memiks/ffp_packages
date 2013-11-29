@@ -1,0 +1,13 @@
+Parchive parity files (or par files for short) create redundant data 
+that can be used later in case parts of the original data is 
+lost or corrupted. 
+
+Par files allow file level recovery of data. 
+
+That is, out of a group of many files, if a limited number of files 
+are lost or corrupted, they can be recovered. 
+
+These files will have the extensions of .par, .p01, .p02 etc.
+
+Homepage: http://www.par2.net/index.php
+
