@@ -1,0 +1,10 @@
+Liboop provides a generic, callback-based event dispatch interface, and 
+aims to ease the development of multiplexed, non-blocking, event-driven 
+modular applications, components, and libraries under POSIX-based 
+operating systems. 
+
+It includes adapters for select(), poll(), the glib event loop, the TCL 
+event loop, the W3C libwww, asynchronous DNS, and GNU readline. 
+
+Homepage: http://freecode.com/projects/liboop
+
