@@ -1,0 +1,11 @@
+Heirloom mailx (previously known as nail) 
+is a mail user agent for Unix systems. Highlights are:
+
+Derived from Berkeley Mail 8.1. An interface like 
+the original Berkeley one is still optionally available.
+
+Is a free implementation of the System V 
+mailx command and features an interface like that by default. 
+
+Homepage: http://heirloom.sourceforge.net/mailx.html
+

@@ -1,0 +1,144 @@
+++ basename ./nail.funpkg .funpkg
++ PN=nail
+++ ls 'nail-*.tar*'
+ls: cannot access nail-*.tar*: No such file or directory
+++ egrep -o '[0-9]*'
++ PV=
+++ basename ./nail.funpkg .funpkg
++ PN=nail
+++ ls nail-20120224.tar.bz2
+++ egrep -o '[0-9]*'
++ PV='20120224
+2'
++ PR=1
++ . ./config.ffp
+++ GNU_HOST=
+++ GNU_TARGET=
+++ FFP_CFLAGS='-I/ffp/include -O2'
+++ FFP_LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
+++ '[' '!' -d '' ']'
+++ TMPDIR=/tmp
+++ export TMPDIR
+++ mandir=/ffp/share/man
+++ infodir=/ffp/share/info
+++ docdir=/ffp/share/doc
+++ pwd
++ X=/ffp/home/root/src/nail
+++ mktemp -t -d nail.XXXXXX
++ W=/tmp/nail.lfh6PD
++ D=/tmp/nail.lfh6PD/pkg
++ cd /tmp/nail.lfh6PD
++ tar xf /ffp/home/root/src/nail/nail-20120224 '2.tar*'
+tar: /ffp/home/root/src/nail/nail-20120224: Cannot open: No such file or directory
+tar: Error is not recoverable: exiting now
+++ basename ./nail.funpkg .funpkg
++ PN=nail
+++ ls nail-20120224.tar.gz
+++ egrep -o '[0-9]*'
++ PV=20120224
++ PR=1
++ . ./config.ffp
+++ GNU_HOST=
+++ GNU_TARGET=
+++ FFP_CFLAGS='-I/ffp/include -O2'
+++ FFP_LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
+++ '[' '!' -d '' ']'
+++ TMPDIR=/tmp
+++ export TMPDIR
+++ mandir=/ffp/share/man
+++ infodir=/ffp/share/info
+++ docdir=/ffp/share/doc
+++ pwd
++ X=/ffp/home/root/src/nail
+++ mktemp -t -d nail.XXXXXX
++ W=/tmp/nail.H36uuG
++ D=/tmp/nail.H36uuG/pkg
++ cd /tmp/nail.H36uuG
++ tar xf /ffp/home/root/src/nail/nail-20120224.tar.gz
++ cd 'nail-*'
+./nail.funpkg: line 15: cd: nail-*: No such file or directory
+++ basename ./nail.funpkg .funpkg
++ PN=nail
+++ ls nail-20120224.tar.gz
+++ egrep -o '[0-9]*'
++ PV=20120224
++ PR=1
++ . ./config.ffp
+++ GNU_HOST=
+++ GNU_TARGET=
+++ FFP_CFLAGS='-I/ffp/include -O2'
+++ FFP_LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
+++ '[' '!' -d '' ']'
+++ TMPDIR=/tmp
+++ export TMPDIR
+++ mandir=/ffp/share/man
+++ infodir=/ffp/share/info
+++ docdir=/ffp/share/doc
+++ pwd
++ X=/ffp/home/root/src/nail
+++ mktemp -t -d nail.XXXXXX
++ W=/tmp/nail.0xsVLz
++ D=/tmp/nail.0xsVLz/pkg
++ cd /tmp/nail.0xsVLz
++ tar xf /ffp/home/root/src/nail/nail-20120224.tar.gz
++ cd nail
++ LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
++ make PREFIX=/ffp SYSCONFDIR=/ffp/etc DESTDIR=/tmp/nail.0xsVLz/pkg UCBINSTALL=/ffp/bin/install
+cc   -DMAILRC='"/ffp/etc/nail.rc"' -DMAILSPOOL='"/var/mail"' -DSENDMAIL='"/usr/lib/sendmail"'    -c aux.c
+cc   -DMAILRC='"/ffp/etc/nail.rc"' -DMAILSPOOL='"/var/mail"' -DSENDMAIL='"/usr/lib/sendmail"'    -c base64.c
+cc   -DMAILRC='"/ffp/etc/nail.rc"' -DMAILSPOOL='"/var/mail"' -DSENDMAIL='"/usr/lib/sendmail"'    -c cache.c
+cc   -DMAILRC='"/ffp/etc/nail.rc"' -DMAILSPOOL='"/var/mail"' -DSENDMAIL='"/usr/lib/sendmail"'    -c cmd1.c
+cc   -DMAILRC='"/ffp/etc/nail.rc"' -DMAILSPOOL='"/var/mail"' -DSENDMAIL='"/usr/lib/sendmail"'    -c cmd2.c
+cc   -DMAILRC='"/ffp/etc/nail.rc"' -DMAILSPOOL='"/var/mail"' -DSENDMAIL='"/usr/lib/sendmail"'    -c cmd3.c
+cc   -DMAILRC='"/ffp/etc/nail.rc"' -DMAILSPOOL='"/var/mail"' -DSENDMAIL='"/usr/lib/sendmail"'    -c cmdtab.c
+cc   -DMAILRC='"/ffp/etc/nail.rc"' -DMAILSPOOL='"/var/mail"' -DSENDMAIL='"/usr/lib/sendmail"'    -c collect.c
+cc   -DMAILRC='"/ffp/etc/nail.rc"' -DMAILSPOOL='"/var/mail"' -DSENDMAIL='"/usr/lib/sendmail"'    -c dotlock.c
+cc   -DMAILRC='"/ffp/etc/nail.rc"' -DMAILSPOOL='"/var/mail"' -DSENDMAIL='"/usr/lib/sendmail"'    -c edit.c
+cc   -DMAILRC='"/ffp/etc/nail.rc"' -DMAILSPOOL='"/var/mail"' -DSENDMAIL='"/usr/lib/sendmail"'    -c fio.c
+cc   -DMAILRC='"/ffp/etc/nail.rc"' -DMAILSPOOL='"/var/mail"' -DSENDMAIL='"/usr/lib/sendmail"'    -c getname.c
+cc   -DMAILRC='"/ffp/etc/nail.rc"' -DMAILSPOOL='"/var/mail"' -DSENDMAIL='"/usr/lib/sendmail"'    -c getopt.c
+cc   -DMAILRC='"/ffp/etc/nail.rc"' -DMAILSPOOL='"/var/mail"' -DSENDMAIL='"/usr/lib/sendmail"'    -c head.c
+cc   -DMAILRC='"/ffp/etc/nail.rc"' -DMAILSPOOL='"/var/mail"' -DSENDMAIL='"/usr/lib/sendmail"'    -c hmac.c
+cc   -DMAILRC='"/ffp/etc/nail.rc"' -DMAILSPOOL='"/var/mail"' -DSENDMAIL='"/usr/lib/sendmail"'    -c imap.c
+cc   -DMAILRC='"/ffp/etc/nail.rc"' -DMAILSPOOL='"/var/mail"' -DSENDMAIL='"/usr/lib/sendmail"'    -c imap_search.c
+cc   -DMAILRC='"/ffp/etc/nail.rc"' -DMAILSPOOL='"/var/mail"' -DSENDMAIL='"/usr/lib/sendmail"'    -c junk.c
+cc   -DMAILRC='"/ffp/etc/nail.rc"' -DMAILSPOOL='"/var/mail"' -DSENDMAIL='"/usr/lib/sendmail"'    -c lex.c
+cc   -DMAILRC='"/ffp/etc/nail.rc"' -DMAILSPOOL='"/var/mail"' -DSENDMAIL='"/usr/lib/sendmail"'    -c list.c
+cc   -DMAILRC='"/ffp/etc/nail.rc"' -DMAILSPOOL='"/var/mail"' -DSENDMAIL='"/usr/lib/sendmail"'    -c lzw.c
+cc   -DMAILRC='"/ffp/etc/nail.rc"' -DMAILSPOOL='"/var/mail"' -DSENDMAIL='"/usr/lib/sendmail"'    -c macro.c
+cc   -DMAILRC='"/ffp/etc/nail.rc"' -DMAILSPOOL='"/var/mail"' -DSENDMAIL='"/usr/lib/sendmail"'    -c maildir.c
+cc   -DMAILRC='"/ffp/etc/nail.rc"' -DMAILSPOOL='"/var/mail"' -DSENDMAIL='"/usr/lib/sendmail"'    -c main.c
+cc   -DMAILRC='"/ffp/etc/nail.rc"' -DMAILSPOOL='"/var/mail"' -DSENDMAIL='"/usr/lib/sendmail"'    -c md5.c
+cc   -DMAILRC='"/ffp/etc/nail.rc"' -DMAILSPOOL='"/var/mail"' -DSENDMAIL='"/usr/lib/sendmail"'    -c mime.c
+cc   -DMAILRC='"/ffp/etc/nail.rc"' -DMAILSPOOL='"/var/mail"' -DSENDMAIL='"/usr/lib/sendmail"'    -c names.c
+cc   -DMAILRC='"/ffp/etc/nail.rc"' -DMAILSPOOL='"/var/mail"' -DSENDMAIL='"/usr/lib/sendmail"'    -c nss.c
+cc   -DMAILRC='"/ffp/etc/nail.rc"' -DMAILSPOOL='"/var/mail"' -DSENDMAIL='"/usr/lib/sendmail"'    -c openssl.c
+cc   -DMAILRC='"/ffp/etc/nail.rc"' -DMAILSPOOL='"/var/mail"' -DSENDMAIL='"/usr/lib/sendmail"'    -c pop3.c
+cc   -DMAILRC='"/ffp/etc/nail.rc"' -DMAILSPOOL='"/var/mail"' -DSENDMAIL='"/usr/lib/sendmail"'    -c popen.c
+cc   -DMAILRC='"/ffp/etc/nail.rc"' -DMAILSPOOL='"/var/mail"' -DSENDMAIL='"/usr/lib/sendmail"'    -c quit.c
+cc   -DMAILRC='"/ffp/etc/nail.rc"' -DMAILSPOOL='"/var/mail"' -DSENDMAIL='"/usr/lib/sendmail"'    -c send.c
+cc   -DMAILRC='"/ffp/etc/nail.rc"' -DMAILSPOOL='"/var/mail"' -DSENDMAIL='"/usr/lib/sendmail"'    -c sendout.c
+cc   -DMAILRC='"/ffp/etc/nail.rc"' -DMAILSPOOL='"/var/mail"' -DSENDMAIL='"/usr/lib/sendmail"'    -c smtp.c
+cc   -DMAILRC='"/ffp/etc/nail.rc"' -DMAILSPOOL='"/var/mail"' -DSENDMAIL='"/usr/lib/sendmail"'    -c ssl.c
+cc   -DMAILRC='"/ffp/etc/nail.rc"' -DMAILSPOOL='"/var/mail"' -DSENDMAIL='"/usr/lib/sendmail"'    -c strings.c
+cc   -DMAILRC='"/ffp/etc/nail.rc"' -DMAILSPOOL='"/var/mail"' -DSENDMAIL='"/usr/lib/sendmail"'    -c temp.c
+cc   -DMAILRC='"/ffp/etc/nail.rc"' -DMAILSPOOL='"/var/mail"' -DSENDMAIL='"/usr/lib/sendmail"'    -c thread.c
+cc   -DMAILRC='"/ffp/etc/nail.rc"' -DMAILSPOOL='"/var/mail"' -DSENDMAIL='"/usr/lib/sendmail"'    -c tty.c
+cc   -DMAILRC='"/ffp/etc/nail.rc"' -DMAILSPOOL='"/var/mail"' -DSENDMAIL='"/usr/lib/sendmail"'    -c v7.local.c
+cc   -DMAILRC='"/ffp/etc/nail.rc"' -DMAILSPOOL='"/var/mail"' -DSENDMAIL='"/usr/lib/sendmail"'    -c vars.c
+cc   -DMAILRC='"/ffp/etc/nail.rc"' -DMAILSPOOL='"/var/mail"' -DSENDMAIL='"/usr/lib/sendmail"'    -c version.c
+cc -L/ffp/lib -Wl,-rpath,/ffp/lib aux.o base64.o cache.o cmd1.o cmd2.o cmd3.o cmdtab.o collect.o dotlock.o edit.o fio.o getname.o getopt.o head.o hmac.o imap.o imap_search.o junk.o lex.o list.o lzw.o macro.o maildir.o main.o md5.o mime.o names.o nss.o openssl.o pop3.o popen.o quit.o send.o sendout.o smtp.o ssl.o strings.o temp.o thread.o tty.o v7.local.o vars.o version.o `grep '^[^#]' LIBS`  -o mailx
++ make PREFIX=/ffp SYSCONFDIR=/ffp/etc DESTDIR=/tmp/nail.0xsVLz/pkg UCBINSTALL=/ffp/bin/install install
+test -d /tmp/nail.0xsVLz/pkg/ffp/bin || mkdir -p /tmp/nail.0xsVLz/pkg/ffp/bin
+/ffp/bin/install -c mailx /tmp/nail.0xsVLz/pkg/ffp/bin/mailx
+strip /tmp/nail.0xsVLz/pkg/ffp/bin/mailx
+test -d /tmp/nail.0xsVLz/pkg/ffp/share/man/man1 || mkdir -p /tmp/nail.0xsVLz/pkg/ffp/share/man/man1
+/ffp/bin/install -c -m 644 mailx.1 /tmp/nail.0xsVLz/pkg/ffp/share/man/man1/mailx.1
+test -d /tmp/nail.0xsVLz/pkg/ffp/etc || mkdir -p /tmp/nail.0xsVLz/pkg/ffp/etc
+test -f /tmp/nail.0xsVLz/pkg/ffp/etc/nail.rc || \
+		/ffp/bin/install -c -m 644 nail.rc /tmp/nail.0xsVLz/pkg/ffp/etc/nail.rc
++ mkdir -p /tmp/nail.0xsVLz/pkg/install
++ cp /ffp/home/root/src/nail/DESCR /ffp/home/root/src/nail/HOMEPAGE /tmp/nail.0xsVLz/pkg/install/
++ cd /tmp/nail.0xsVLz/pkg
++ makepkg nail 20120224 1
+Creating /tmp/nail-20120224-arm-1.txz ...
