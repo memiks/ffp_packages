@@ -1,0 +1,10 @@
+--- Makefile.orig	2012-02-29 12:23:36.000000000 +0100
++++ Makefile	2012-02-29 12:24:28.000000000 +0100
+@@ -1,6 +1,6 @@
+ VERSION=v2.3
+ 
+-prefix=/usr/local
++prefix=/ffp/
+ 
+ CC=$(CROSS_COMPILE)gcc
+ LD=$(CROSS_COMPILE)ld

@@ -1,0 +1,15 @@
+rtmpdump is a toolkit for RTMP streams. 
+
+All forms of RTMP are supported, 
+including rtmp://,
+ rtmpt://,
+ rtmpe://,
+ rtmpte://,
+ and rtmps://.
+
+License: GPLv2
+Copyright (C) 2009 Andrej Stepanchuk
+Copyright (C) 2010-2011 Howard Chu 
+
+Homepage: http://rtmpdump.mplayerhq.hu/
+
