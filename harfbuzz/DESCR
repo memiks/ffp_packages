@@ -1,0 +1,12 @@
+HarfBuzz is an OpenType text shaping engine. There are two HarfBuzz code 
+trees in existence today: 
+
+The current HarfBuzz tree, also known as harfbuzz-ng, is under active 
+development and is what is used in Firefox 4. It is available here. 
+
+The old HarfBuzz tree, derived from FreeType, Pango, and Qt, is 
+available here. It is not actively developed or maintained. All users 
+are encouraged to switch over to the new HarfBuzz. 
+
+Homepage: http://www.freedesktop.org/wiki/Software/HarfBuzz
+
