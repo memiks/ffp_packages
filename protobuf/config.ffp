@@ -1,0 +1,17 @@
+
+GNU_HOST=$GNU_BUILD
+GNU_TARGET=$GNU_HOST
+
+FFP_CFLAGS="-I/ffp/include -O2"
+FFP_LDFLAGS="-L/ffp/lib -Wl,-rpath,/ffp/lib"
+
+if [ ! -d "$TMPDIR" ]; then
+	TMPDIR=/tmp
+fi
+export TMPDIR
+
+mandir=/ffp/share/man
+infodir=/ffp/share/info
+docdir=/ffp/share/doc
+
+
