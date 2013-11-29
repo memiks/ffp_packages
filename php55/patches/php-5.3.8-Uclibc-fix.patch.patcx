@@ -1,0 +1,30 @@
+--- ext/standard/php_crypt_r.c	2011-08-23 11:09:55.000000000 +0300
++++ ext/standard/php_crypt_r.c	2011-12-14 20:36:21.903999665 +0300
+@@ -42,7 +42,7 @@
+ # include <Wincrypt.h>
+ #endif
+ 
+-#ifdef HAVE_ATOMIC_H /* Solaris 10 defines atomic API within */
++#if defined(HAVE_ATOMIC_H) && !defined(__UCLIBC__) /* Solaris 10 defines atomic API within */
+ # include <atomic.h>
+ #else
+ # include <signal.h>
+@@ -81,7 +81,7 @@
+ {
+ #ifdef PHP_WIN32
+ 	LONG volatile initialized = 0;
+-#elif defined(HAVE_ATOMIC_H) /* Solaris 10 defines atomic API within */
++#elif defined(HAVE_ATOMIC_H) && !defined(__UCLIBC__) /* Solaris 10 defines atomic API within */
+ 	volatile unsigned int initialized = 0;
+ #else
+ 	static volatile sig_atomic_t initialized = 0;
+@@ -97,7 +97,7 @@
+ #elif (defined(__GNUC__) && !defined(__hpux) && (__GNUC__ > 4 || \
+     (__GNUC__ == 4 && (__GNUC_MINOR__ > 1 || (__GNUC_MINOR__ == 1 && __GNUC_PATCHLEVEL__ > 1)))))
+ 		__sync_fetch_and_add(&initialized, 1);
+-#elif defined(HAVE_ATOMIC_H) /* Solaris 10 defines atomic API within */
++#elif defined(HAVE_ATOMIC_H) && !defined(__UCLIBC__) /* Solaris 10 defines atomic API within */
+ 		membar_producer();
+ 		atomic_add_int(&initialized, 1);
+ #endif
+

@@ -1,0 +1,120 @@
+#!/ffp/bin/sh -xe
+
+PN=$(basename $0 .funpkg)
+PR=1
+
+. ./config.ffp
+
+X=$(pwd)
+W=$(mktemp -t -d $PN.XXXXXX)
+D=$W/pkg
+
+cd $W
+cat $X/SRC_URI | xargs wget --no-check-certificate 
+PV=$(ls $PN-*.tar* | egrep -o '[0-9.][0-9.]*[0-9]')
+tar xf $PN-$PV.tar*
+cd $PN*
+
+#PV=$(echo "$PV" | sed -e 's#-#\.#i')
+
+for file in `ls $X/patches/*.patch`
+do
+        patch -p0 -i $file
+done
+
+CFLAGS="$FFP_CFLAGS -D_GNU_SOURCE -pthread" \
+CXXFLAGS="$FFP_CFLAGS -D_GNU_SOURCE -pthread" \
+LDFLAGS="$FFP_LDFLAGS -lpthread " \
+./configure \
+	--prefix=/ffp \
+	--build=$GNU_BUILD \
+	--host=$GNU_HOST \
+	--mandir=$mandir \
+	--infodir=$infodir \
+	--disable-nls \
+	--with-tsrm-pthreads \
+	--with-config-file-path=/ffp/etc \
+	--enable-shared=yes --enable-static=no \
+	--enable-calendar=shared \
+	--enable-ctype=shared \
+	--enable-xml --with-libxml-dir=/ffp --with-xml --enable-libxml \
+	--enable-simplexml --enable-soap \
+	--enable-mbstring=shared --enable-mbregex \
+	--enable-pdo=shared \
+	--without-sqlite --with-sqlite3=shared --with-pdo-sqlite=shared,/ffp \
+	--with-mysql=shared,/ffp \
+	--with-pdo-mysql=shared,/ffp \
+	--with-mysql-sock=/ffp/var/run/mysql \
+	--enable-tokenizer=shared \
+	--with-zlib=shared --with-zlib-dir=/ffp \
+	--with-openssl=/ffp \
+	--enable-pcntl \
+	--enable-sigchild \
+	--enable-ftp=shared \
+	--with-gd=shared \
+	--with-curl=/ffp \
+	--with-curlwrappers \
+	--with-jpeg-dir=/ffp \
+	--with-png-dir=/ffp \
+	--with-bz2=/ffp \
+	--with-iconv=/ffp \
+	--enable-mod-charset \ 
+	--enable-fpm \ 
+	--with-litespeed \ 
+	--enable-roxen-zts \ 
+	--enable-sigchild \ 
+	--enable-dmalloc \ 
+	--enable-fd-setsize \ 
+	--enable-bcmath \ 
+	--enable-calendar \ 
+	--enable-dba \ 
+	--enable-exif \ 
+	--with-pcre-dir \ 
+	--enable-ftp \ 
+	--enable-gd-native-ttf \ 
+	--enable-gd-jis-conv \ 
+	--enable-intl \ 
+	--enable-mbstring \ 
+	--enable-opcache \ 
+	--enable-pcntl \ 
+	--enable-shmop \ 
+	--enable-soap \ 
+	--enable-sockets \ 
+	--enable-sysvmsg \ 
+	--enable-sysvsem \ 
+	--enable-sysvshm \ 
+	--enable-wddx \ 
+	--enable-zip \ 
+	--with-pcre-dir \ 
+	--enable-mysqlnd \ 
+	--enable-zend-signals \ 
+	--with-tsrm-st \ 
+	--with-tsrm-pthreads
+#        --with-sqlite=shared --enable-sqlite-utf8 --with-pdo-sqlite=shared \
+
+
+CFLAGS="$FFP_CFLAGS -D_GNU_SOURCE -pthread" \
+CXXFLAGS="$FFP_CFLAGS -D_GNU_SOURCE -pthread" \
+LDFLAGS="$FFP_LDFLAGS -lpthread " \
+make
+
+CFLAGS="$FFP_CFLAGS -D_GNU_SOURCE -pthread" \
+CXXFLAGS="$FFP_CFLAGS -D_GNU_SOURCE -pthread" \
+LDFLAGS="$FFP_LDFLAGS -lpthread " \
+make INSTALL_ROOT=$D install
+
+# install php.ini examples
+mkdir -p $D/ffp/etc/examples
+install -m 0644 -o root -g root php.ini-* $D/ffp/etc/examples/
+
+cp -r $X/start $D/ffp/start
+
+mkdir -p $D/install
+cp $X/{DESCR,HOMEPAGE} $D/install/
+
+cd $D
+rm -rf .registry .channels .filemap .lock .depdblock .depdb
+
+makepkg $PN $PV $PR
+
+
