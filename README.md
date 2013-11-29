@@ -4,7 +4,7 @@ ffp_packages
 My repository of packages source for fun_plug 0.7
 
 
-./beautifulsoup4/DESCR
+beautifulsoup4
 ===
 Beautiful Soup is a Python library designed for quick turnaround 
 projects like screen-scraping. Three features make it powerful:
@@ -38,7 +38,7 @@ Homepage: http://www.crummy.com/software/BeautifulSoup/
 
 
 
-./dtach/DESCR
+dtach
 ===
 dtach - A program that emulates the detach feature of screen
 dtach is a tiny program that emulates the detach feature of screen, 
@@ -76,7 +76,7 @@ Homepage: http://dtach.sourceforge.net/
 
 
 
-./freetype/DESCR
+freetype
 ===
 FreeType 2 is a software font engine that is designed to be small, 
 efficient, highly customizable, and portable while capable of 
@@ -90,7 +90,7 @@ Homepage: http://www.freetype.org/
 
 
 
-./ntfs-3g/DESCR
+ntfs-3g
 ===
 NTFS-3G is a stable, full-featured, read-write NTFS driver for Linux, 
 Android, Mac OS X, FreeBSD, NetBSD, OpenSolaris, QNX, Haiku, 
@@ -108,7 +108,7 @@ Homepage: http://www.tuxera.com/community/ntfs-3g-download/
 
 
 
-./tokyocabinet/DESCR
+tokyocabinet
 ===
 autoconf - Generates configuration scripts
 
@@ -125,7 +125,7 @@ Homepage: http://www.gnu.org/software/autoconf/
 
 
 
-./cifs-utils/DESCR
+cifs-utils
 ===
 The in-kernel CIFS filesystem is generally the preferred method 
 for mounting SMB/CIFS shares on Linux. 
@@ -148,7 +148,7 @@ Homepage: http://wiki.samba.org/index.php/LinuxCIFS_utils
 
 
 
-./gnunet/DESCR
+gnunet
 ===
 GNUnet is a framework for secure peer-to-peer networking that does not 
 use any centralized or otherwise trusted services. 
@@ -174,7 +174,7 @@ Homepage: https://gnunet.org/
 
 
 
-./rrdtool/DESCR
+rrdtool
 ===
 RRDtool is the OpenSource industry standard, high performance data logging 
 and graphing system for time series data. 
@@ -187,7 +187,7 @@ Homepage: http://oss.oetiker.ch/rrdtool/index.en.html
 
 
 
-./duplicity/DESCR
+duplicity
 ===
 What is it? 
 
@@ -208,7 +208,7 @@ Homepage: http://duplicity.nongnu.org/index.html
 
 
 
-./mpc/DESCR
+mpc
 ===
 Music Player Daemon
 
@@ -222,7 +222,7 @@ Homepage: http://www.musicpd.org/
 
 
 
-./libextractor/DESCR
+libextractor
 ===
 GNU libextractor is a library used to extract meta data from files of 
 arbitrary type. 
@@ -264,7 +264,7 @@ Homepage: http://www.gnu.org/software/libextractor/
 
 
 
-./nut/DESCR
+nut
 ===
 The primary goal of the Network UPS Tools (NUT) project is to provide 
 support for Power Devices, such as Uninterruptible Power Supplies, Power 
@@ -283,7 +283,7 @@ Homepage: http://buildbot.networkupstools.org/~buildbot/cayenne/docs/latest/webs
 
 
 
-./xupnpd/DESCR
+xupnpd
 ===
 xupnpd - eXtensible UPnP agent 
 
@@ -302,7 +302,7 @@ Homepage: http://xupnpd.org/t/
 
 
 
-./sendmail/DESCR
+sendmail
 ===
 Sendmail, Inc. continues to support Open Source solutions
 and to advance the Open Source sendmail MTA. 
@@ -316,7 +316,7 @@ Homepage: http://www.sendmail.com/sm/open_source/
 
 
 
-./MCServer/DESCR
+MCServer
 ===
 What is MCServer? MCServer is a custom Minecraft server, written 
 completely in C++. It's designed to be a fast, lightweight and easy to 
@@ -327,7 +327,7 @@ Homepage: http://www.mc-server.org/
 
 
 
-./guile/DESCR
+guile
 ===
  Guile is the GNU Ubiquitous Intelligent Language for Extensions, the 
 official extension language for the GNU operating system. 
@@ -349,7 +349,7 @@ Homepage: http://www.gnu.org/software/guile/
 
 
 
-./nginx/DESCR
+nginx
 ===
 nginx [engine x] is an HTTP and reverse proxy server, as well as a mail proxy 
 server, written by Igor Sysoev. 
@@ -370,7 +370,7 @@ Homepage: http://nginx.org/
 
 
 
-./zlib/DESCR
+zlib
 ===
 zlib - compression/decompression library
 
@@ -381,7 +381,7 @@ Homepage: http://www.zlib.net/
 
 
 
-./postfix/DESCR
+postfix
 ===
 What is Postfix? 
 It is Wietse Venema's mail server that started life at 
@@ -397,7 +397,7 @@ Homepage: http://www.postfix.org/
 
 
 
-./jsoncpp/DESCR
+jsoncpp
 ===
 JSON (JavaScript Object Notation) is a lightweight data-interchange format. 
 
@@ -409,7 +409,7 @@ Homepage: http://jsoncpp.sourceforge.net/
 
 
 
-./harfbuzz/DESCR
+harfbuzz
 ===
 HarfBuzz is an OpenType text shaping engine. There are two HarfBuzz code 
 trees in existence today: 
@@ -426,7 +426,7 @@ Homepage: http://www.freedesktop.org/wiki/Software/HarfBuzz
 
 
 
-./protobuf/DESCR
+protobuf
 ===
 Protocol buffers are a flexible, efficient, automated mechanism 
 for serializing structured data . think XML, but smaller, faster,
@@ -442,7 +442,7 @@ Homepage: http://code.google.com/p/protobuf/
 
 
 
-./vim/DESCR
+vim
 ===
 Vim is an advanced text editor that seeks to provide the power of 
 the de-facto Unix editor 'Vi', with a more complete feature set. 
@@ -456,7 +456,7 @@ Homepage: http://www.vim.org/
 
 
 
-./gnulib/DESCR
+gnulib
 ===
 Gnulib is a central location for common GNU code, intended to be shared 
 among GNU packages. GCC has libiberty, but this is hard to disentangle 
@@ -477,7 +477,7 @@ Homepage: http://www.gnu.org/software/gnulib/
 
 
 
-./libev/DESCR
+libev
 ===
 libev
 
@@ -491,7 +491,7 @@ Homepage: http://software.schmorp.de/pkg/libev.html
 
 
 
-./Django/DESCR
+Django
 ===
 Django is a high-level Python Web framework that encourages rapid 
 development and clean, pragmatic design.
@@ -510,7 +510,7 @@ Homepage: https://www.djangoproject.com/
 
 
 
-./thttpd/DESCR
+thttpd
 ===
  thttpd is a simple, small, portable, fast, and secure HTTP server.
 
@@ -532,7 +532,7 @@ Homepage: http://acme.com/software/thttpd/
 
 
 
-./libpar2/DESCR
+libpar2
 ===
 LibPar2 allows for the generation, modification, verification,
  and repair of PAR v1.0 and PAR v2.0(PAR2) recovery sets, as
@@ -543,7 +543,7 @@ Homepage: https://launchpad.net/libpar2
 
 
 
-./uClibc/DESCR
+uClibc
 ===
 uClibc - A C library for embedded Linux
 
@@ -556,7 +556,7 @@ Homepage: http://www.uclibc.org/
 
 
 
-./libxslt/DESCR
+libxslt
 ===
 Libxslt is the XSLT C library developed for the GNOME project. 
 XSLT itself is a an XML language to define transformation for XML. 
@@ -573,7 +573,7 @@ Homepage: http://xmlsoft.org/XSLT/index.html
 
 
 
-./libevent/DESCR
+libevent
 ===
 The libevent API provides a mechanism to execute a callback function when a 
 specific event occurs on a file descriptor or after a timeout has been reached. 
@@ -608,7 +608,7 @@ Homepage: http://libevent.org/
 
 
 
-./parted/DESCR
+parted
 ===
 GNU Parted manipulates partition tables. This is useful for creating 
 space for new operating systems, reorganizing disk usage, copying data 
@@ -621,7 +621,7 @@ Homepage: http://www.gnu.org/software/parted/
 
 
 
-./libgpg-error/DESCR
+libgpg-error
 ===
 The GNU Privacy Guard
 
@@ -642,7 +642,7 @@ Homepage: http://www.gnupg.org/
 
 
 
-./python3/DESCR
+python3
 ===
 Python is a programming language that lets you work more quickly and 
 integrate your systems more effectively. You can learn to use Python and 
@@ -653,7 +653,7 @@ Homepage: http://www.python.org/
 
 
 
-./openvpn/DESCR
+openvpn
 ===
 OpenVPN is a full-featured SSL VPN which implements OSI layer 2 or 3 secure 
 network extension using the industry standard SSL/TLS protocol, supports 
@@ -672,7 +672,7 @@ Homepage: http://openvpn.net/
 
 
 
-./erlang/DESCR
+erlang
 ===
 Erlang is a programming language designed at the Ericsson Computer Science 
 Laboratory. 
@@ -696,7 +696,7 @@ Homepage: http://www.erlang.org/
 
 
 
-./tokyotyrant/DESCR
+tokyotyrant
 ===
 Tokyo Tyrant is a package of network interface to the DBM called Tokyo Cabinet.
  Though the DBM has high performance, you might bother in case that multiple 
@@ -716,7 +716,7 @@ Homepage: http://fallabs.com/tokyotyrant/
 
 
 
-./kyotocabinet/DESCR
+kyotocabinet
 ===
 Kyoto Cabinet is a library of routines for managing a database. The 
 database is a simple data file containing records, each is a pair of a 
@@ -746,7 +746,7 @@ Homepage: http://fallabs.com/kyotocabinet/
 
 
 
-./ncmpc/DESCR
+ncmpc
 ===
 Music Player Daemon
 
@@ -760,7 +760,7 @@ Homepage: http://www.musicpd.org/
 
 
 
-./zsh/DESCR
+zsh
 ===
  Zsh is a shell designed for interactive use, although it is also a 
 powerful scripting language. Many of the useful features of bash, ksh, 
@@ -779,7 +779,7 @@ Homepage: http://www.zsh.org/
 
 
 
-./debianutils/DESCR
+debianutils
 ===
 debianutils
 Miscellaneous utilities specific to Debian
@@ -789,7 +789,7 @@ Homepage: http://packages.qa.debian.org/d/debianutils.html
 
 
 
-./mysql/DESCR
+mysql
 ===
 
 Homepage: 
@@ -797,7 +797,7 @@ Homepage:
 
 
 
-./wdfs/DESCR
+wdfs
 ===
 autoconf - Generates configuration scripts
 
@@ -814,7 +814,7 @@ Homepage: http://www.gnu.org/software/autoconf/
 
 
 
-./guix/DESCR
+guix
 ===
 GNU Guix is a purely functional package manager for the GNU system, and 
 a distribution thereof. 
@@ -836,7 +836,7 @@ Homepage: http://www.gnu.org/software/guix/
 
 
 
-./cmake/DESCR
+cmake
 ===
 cmake - Cross-Platform Makefile Generator
 
@@ -850,7 +850,7 @@ Homepage: http://cmake.org/
 
 
 
-./miniupnpc/DESCR
+miniupnpc
 ===
 MiniUPnP download zone 
 
@@ -906,7 +906,7 @@ Homepage: http://miniupnp.tuxfamily.org/
 
 
 
-./libmicrohttpd/DESCR
+libmicrohttpd
 ===
 GNU libmicrohttpd is a small C library that is supposed to make it easy to 
 run an HTTP server as part of another application. 
@@ -948,7 +948,7 @@ Homepage: http://www.gnu.org/software/libmicrohttpd/
 
 
 
-./libebml/DESCR
+libebml
 ===
 MKVToolNix -- Cross-platform tools for Matroska
 
@@ -957,7 +957,7 @@ Homepage: http://www.bunkus.org/videotools/mkvtoolnix/source.html
 
 
 
-./fontconfig/DESCR
+fontconfig
 ===
 Fontconfig is a library for configuring and customizing font access. 
 
@@ -990,7 +990,7 @@ Homepage: http://www.freedesktop.org/wiki/Software/fontconfig
 
 
 
-./php/DESCR
+php
 ===
 php - Hypertext Preprocessor
 
@@ -1002,7 +1002,7 @@ Homepage: http://php.net/
 
 
 
-./weboob/DESCR
+weboob
 ===
 What is Weboob
 
@@ -1023,7 +1023,7 @@ Homepage: http://weboob.org/
 
 
 
-./gzip/DESCR
+gzip
 ===
 GNU Gzip is a popular data compression program originally written by 
 Jean-loup Gailly for the GNU project. 
@@ -1041,7 +1041,7 @@ Homepage: http://www.gnu.org/software/gzip/
 
 
 
-./avahi/DESCR
+avahi
 ===
 What is Avahi?
 
@@ -1060,7 +1060,7 @@ Homepage: http://avahi.org/
 
 
 
-./neon/DESCR
+neon
 ===
 neon is an HTTP and WebDAV client library, with a C interface. Features:
 
@@ -1085,7 +1085,7 @@ Homepage : http://www.webdav.org/neon/
 
 
 
-./mmsrip/DESCR
+mmsrip
 ===
 MMSRIP is a client for the proprietary protocol MMS://.
 It actually saves to a file the content being streamed.
@@ -1103,7 +1103,7 @@ Homepage: http://nbenoit.tuxfamily.org/index.php?page=MMSRIP#Overview
 
 
 
-./ffmpeg/DESCR
+ffmpeg
 ===
 ffmpeg - record, convert and stream audio and video
 
@@ -1116,7 +1116,7 @@ Homepage: http://ffmpeg.org/
 
 
 
-./git/DESCR
+git
 ===
 Git is a free and open source distributed version control system designed 
 to handle everything from small to very large projects with speed and 
@@ -1133,7 +1133,7 @@ Homepage: http://git-scm.com/
 
 
 
-./gnuplot/DESCR
+gnuplot
 ===
 Gnuplot is a portable command-line driven graphing utility 
 for linux, OS/2, MS Windows, OSX, VMS, and many other platforms. 
@@ -1154,7 +1154,7 @@ Homepage: http://www.gnuplot.info/
 
 
 
-./ejabberd/DESCR
+ejabberd
 ===
 Ejabberd 3.0 provides the ability to connect to mobile applications with a 
 set of reliable mobile features that enables mobile apps to propose a 
@@ -1167,7 +1167,7 @@ Homepage: http://www.process-one.net/en/ejabberd/
 
 
 
-./cherokee/DESCR
+cherokee
 ===
 
 Homepage: 
@@ -1175,7 +1175,7 @@ Homepage:
 
 
 
-./m2crypto/DESCR
+m2crypto
 ===
 =========
  M2Crypto
@@ -1241,7 +1241,7 @@ Have fun! Your feedback is welcome.
 
 
 
-./par2cmdline/DESCR
+par2cmdline
 ===
 Parchive: Parity Archive Volume Set
 
@@ -1279,7 +1279,7 @@ Homepage: http://parchive.sourceforge.net/
 
 
 
-./lsh/DESCR
+lsh
 ===
 A GNU implementation of the Secure Shell protocols 
 
@@ -1293,7 +1293,7 @@ Homepage: http://www.lysator.liu.se/~nisse/lsh/
 
 
 
-./systemd/DESCR
+systemd
 ===
 systemd is a system and service manager for Linux, compatible with SysV 
 and LSB init scripts. systemd provides aggressive parallelization 
@@ -1309,7 +1309,7 @@ Homepage: http://www.freedesktop.org/wiki/Software/systemd
 
 
 
-./gnufdisk/DESCR
+gnufdisk
 ===
 GNU fdisk provides alternatives to the following programs:
 
@@ -1329,7 +1329,7 @@ Homepage: http://www.gnu.org/software/fdisk/
 
 
 
-./openssl/DESCR
+openssl
 ===
 The OpenSSL Project is a collaborative effort to develop a robust, 
 commercial-grade, full-featured, and Open Source toolkit implementing 
@@ -1354,7 +1354,7 @@ Homepage: http://www.openssl.org/
 
 
 
-./minidlna/DESCR
+minidlna
 ===
 autoconf - Generates configuration scripts
 
@@ -1371,7 +1371,7 @@ Homepage: http://www.gnu.org/software/autoconf/
 
 
 
-./libatomic_ops/DESCR
+libatomic_ops
 ===
  The most recent version of this package can be found in the source tree 
 for the Boehm-Demers-Weiser garbage collector (bdwgc) on Github. It 
@@ -1419,7 +1419,7 @@ Homepage: http://www.hpl.hp.com/research/linux/atomic_ops/
 
 
 
-./boost/DESCR
+boost
 ===
 Boost provides free peer-reviewed portable C++ source libraries.
 
@@ -1442,7 +1442,7 @@ Homepage: http://www.boost.org/
 
 
 
-./libxml2/DESCR
+libxml2
 ===
 Libxslt is the XSLT C library developed for the GNOME project. 
 XSLT itself is a an XML language to define transformation for XML. 
@@ -1459,7 +1459,7 @@ Homepage: http://xmlsoft.org/XSLT/index.html
 
 
 
-./exemple/DESCR
+exemple
 ===
 
 Homepage: 
@@ -1467,7 +1467,7 @@ Homepage:
 
 
 
-./libiconv/DESCR
+libiconv
 ===
 Introduction to libiconv For historical reasons, international text is 
 often encoded using a language or country dependent character encoding. 
@@ -1494,7 +1494,7 @@ Homepage: http://www.gnu.org/software/libiconv/
 
 
 
-./gpodder/DESCR
+gpodder
 ===
 autoconf - Generates configuration scripts
 
@@ -1511,7 +1511,7 @@ Homepage: http://www.gnu.org/software/autoconf/
 
 
 
-./php55/DESCR
+php55
 ===
 php - Hypertext Preprocessor
 
@@ -1523,7 +1523,7 @@ Homepage: http://php.net/
 
 
 
-./retroshare/DESCR
+retroshare
 ===
 RetroShare is a Open Source cross-platform, Friend-2-Friend and secure 
 decentralised communication platform. 
@@ -1539,7 +1539,7 @@ Homepage: http://retroshare.sourceforge.net/
 
 
 
-./burp/DESCR
+burp
 ===
 CouchPotato is an automatic NZB and torrent downloader.
 You can keep a "want to watch"-list and it will search for NZBs/torrents
@@ -1552,7 +1552,7 @@ Homepage: http://couchpota.to/
 
 
 
-./netatalk/DESCR
+netatalk
 ===
 Netatalk is an OpenSource software package, that can be used to turn a 
 *NIX machine into an extremely high-performance and reliable file server 
@@ -1569,7 +1569,7 @@ Homepage: http://netatalk.sourceforge.net/
 
 
 
-./berkeleydb/DESCR
+berkeleydb
 ===
 Berkeley DB enables the development of custom data management solutions, 
 without the overhead traditionally associated with such custom projects. 
@@ -1585,7 +1585,7 @@ Homepage: http://www.oracle.com/technetwork/database/berkeleydb/overview/index.h
 
 
 
-./pango/DESCR
+pango
 ===
 Pango is a library for laying out and rendering of text, with an emphasis on 
 internationalization. 
@@ -1600,7 +1600,7 @@ Homepage: http://www.pango.org/
 
 
 
-./eglibc/DESCR
+eglibc
 ===
 Embedded GLIBC (EGLIBC) is a variant of the GNU C Library (GLIBC) that 
 is designed to work well on embedded systems. EGLIBC strives to be 
@@ -1613,7 +1613,7 @@ Homepage: http://www.eglibc.org/home
 
 
 
-./par/DESCR
+par
 ===
 Parchive parity files (or par files for short) create redundant data 
 that can be used later in case parts of the original data is 
@@ -1631,7 +1631,7 @@ Homepage: http://www.par2.net/index.php
 
 
 
-./openssh/DESCR
+openssh
 ===
 OpenSSH is a FREE version of the SSH connectivity tools that technical users 
 of the Internet rely on. Users of telnet, rlogin, and ftp may not realize 
@@ -1682,7 +1682,7 @@ Homepage: http://www.openssh.com/
 
 
 
-./mpd/DESCR
+mpd
 ===
 Music Player Daemon
 
@@ -1696,7 +1696,7 @@ Homepage: http://www.musicpd.org/
 
 
 
-./links/DESCR
+links
 ===
  Links is a graphics and text mode web browser, released under GPL. 
 Links is a free software. 
@@ -1736,7 +1736,7 @@ Homepage: http://links.twibright.com/
 
 
 
-./nzbget/DESCR
+nzbget
 ===
 NZBGet is a command-line based binary newsgrabber for nzb files, 
 written in C++. 
@@ -1752,7 +1752,7 @@ Homepage: http://nzbget.sourceforge.net
 
 
 
-./BeautifulSoup/DESCR
+BeautifulSoup
 ===
 Beautiful Soup is a Python library designed for quick turnaround 
 projects like screen-scraping. Three features make it powerful:
@@ -1786,7 +1786,7 @@ Homepage: http://www.crummy.com/software/BeautifulSoup/
 
 
 
-./btsync/install/DESCR
+install
 ===
 Bittorent Sync
 
@@ -1802,7 +1802,7 @@ Homepage: http://labs.bittorrent.com/experiments/sync.html
 
 
 
-./module-init-tools/DESCR
+module-init-tools
 ===
 The modutils package contains utilities that are intended to make a 
 Linux modular kernel manageable for all users, administrators, and 
@@ -1813,7 +1813,7 @@ Homepage: http://freecode.com/projects/modutils
 
 
 
-./node/DESCR
+node
 ===
 Node.js is a platform built on Chrome's JavaScript runtime 
 for easily building fast, scalable network applications.
@@ -1828,7 +1828,7 @@ Homepage: http://www.nodejs.org/
 
 
 
-./swig/DESCR
+swig
 ===
 SWIG is a software development tool that connects programs written in C and C++ with a variety of high-level programming languages.
 
@@ -1852,7 +1852,7 @@ Homepage: http://www.swig.org
 
 
 
-./qt/DESCR
+qt
 ===
 Qt is a cross-platform application and UI framework for developers using 
 C++ or QML, a CSS & JavaScript like language. Qt Creator is the 
@@ -1867,7 +1867,7 @@ Homepage: http://qt-project.org/
 
 
 
-./seeks/DESCR
+seeks
 ===
 iSeeks implements a decentralized Peer-to-Peer architecture:
 install Seeks on your machine, server or laptop, 
@@ -1895,7 +1895,7 @@ Homepage: http://www.seeks-project.info/site/
 
 
 
-./xvidcore/DESCR
+xvidcore
 ===
 What is Xvid?
 
@@ -1912,7 +1912,7 @@ Homepage: http://www.xvid.org/
 
 
 
-./monit/DESCR
+monit
 ===
 Monit is a free open source utility for managing and monitoring, 
 processes, programs, files, directories and filesystems on a UNIX 
@@ -1927,7 +1927,7 @@ Homepage: http://mmonit.com/monit/
 
 
 
-./ghostscript/DESCR
+ghostscript
 ===
 Ghostscript is a package of software that provides: 
 
@@ -1964,7 +1964,7 @@ Homepage: http://www.ghostscript.com/
 
 
 
-./MPlayer/DESCR
+MPlayer
 ===
 MPlayer Features
 
@@ -1996,7 +1996,7 @@ Homepage: http://www.mplayerhq.hu/design7/news.html
 
 
 
-./x264/DESCR
+x264
 ===
 264 is a free software library and application for encoding video 
 streams into the H.264/MPEG-4 AVC format, and is released under 
@@ -2024,7 +2024,7 @@ Homepage: http://www.videolan.org/developers/x264.html
 
 
 
-./wiimms-iso-tools/DESCR
+wiimms-iso-tools
 ===
 Wiimms ISO Tools is a set of command line tools to manipulate Wii and 
 GameCube ISO images and WBFS containers. 
@@ -2063,7 +2063,7 @@ Homepage: http://wit.wiimm.de/
 
 
 
-./iptables/DESCR
+iptables
 ===
 Netfilter.org is home to the software of the packet filtering framework 
 inside the Linux 2.4.x and 2.6.x kernel series. Software commonly associated 
@@ -2091,7 +2091,7 @@ Homepage: http://www.netfilter.org/
 
 
 
-./lzo/DESCR
+lzo
 ===
 LZO 2.06 configured.
 
@@ -2116,7 +2116,7 @@ Homepage: http://www.oberhumer.com/opensource/lzo/
 
 
 
-./ImageMagick/DESCR
+ImageMagick
 ===
 ImageMagick� is a software suite to create, edit, compose, or convert 
 bitmap images. It can read and write images in a variety of formats 
@@ -2152,7 +2152,7 @@ HomePage: http://www.imagemagick.org/script/index.php
 
 
 
-./libmcrypt/DESCR
+libmcrypt
 ===
 
 Homepage: 
@@ -2160,7 +2160,7 @@ Homepage:
 
 
 
-./opencv/DESCR
+opencv
 ===
 OpenCV (Open Source Computer Vision) is a library of programming
  functions for real time computer vision.
@@ -2178,7 +2178,7 @@ Homepage: http://opencv.willowgarage.com/
 
 
 
-./mimms/DESCR
+mimms
 ===
 mimms is an mms (e.g. mms://) stream downloader
 
@@ -2216,7 +2216,7 @@ Homepage: http://savannah.nongnu.org/projects/mimms/
 
 
 
-./cksfv/DESCR
+cksfv
 ===
 Check SFV (Simple File Verification)
 Description
@@ -2243,7 +2243,7 @@ Homepage: http://zakalwe.fi/~shd/foss/cksfv/
 
 
 
-./docbook2X/DESCR
+docbook2X
 ===
 docbook2X is a software package that converts DocBook documents into 
 the traditional Unix man page format and the GNU Texinfo format.
@@ -2262,7 +2262,7 @@ Homepage: http://docbook2x.sourceforge.net/
 
 
 
-./sshpasss/DESCR
+sshpasss
 ===
  This is the Non-interactive ssh password auth project ("sshpass") 
 
@@ -2279,7 +2279,7 @@ Homepage: http://sshpass.sourceforge.net/
 
 
 
-./librsync/DESCR
+librsync
 ===
 ibrsync is a free software library that implements the rsync remote-delta 
 algorithm. 
@@ -2309,7 +2309,7 @@ Homepage: http://librsync.sourceforge.net/
 
 
 
-./fdisk/DESCR
+fdisk
 ===
 GNU fdisk provides alternatives to the following programs:
 
@@ -2329,7 +2329,7 @@ Homepage: http://www.gnu.org/software/fdisk/
 
 
 
-./mcrypt/DESCR
+mcrypt
 ===
  MCrypt is a replacement for the old crypt() package and crypt(1) 
 command, with extensions. It allows developers to use a wide range of 
@@ -2347,7 +2347,7 @@ Homepage: http://mcrypt.sourceforge.net/
 
 
 
-./gnupg/DESCR
+gnupg
 ===
 The GNU Privacy Guard
 
@@ -2368,7 +2368,7 @@ Homepage: http://www.gnupg.org/
 
 
 
-./easy-rsa/DESCR
+easy-rsa
 ===
 easy-rsa - Simple shell based CA utility
 
@@ -2392,7 +2392,7 @@ Homepage:  http://github.com/OpenVPN/easy-rsa
 
 
 
-./mysecureshell/DESCR
+mysecureshell
 ===
 You are looking for a ftp server very secure, easy to install, to 
 administrate and to configure ? 
@@ -2415,7 +2415,7 @@ Homepage: http://mysecureshell.sourceforge.net/en/index.html
 
 
 
-./httrack/DESCR
+httrack
 ===
 HTTrack is a free (GPL, libre/free software) and easy-to-use offline browser 
 utility.
@@ -2437,7 +2437,7 @@ Homepage: http://www.httrack.com
 
 
 
-./less/DESCR
+less
 ===
 Less is a free, open-source file pager. It can be found on most versions 
 of Linux, Unix and Mac OS, as well as on many other operating systems. 
@@ -2446,7 +2446,7 @@ Homepage: http://www.greenwoodsoftware.com/less/less-457.tar.gz
 
 
 
-./pixman/DESCR
+pixman
 ===
 Pixman is a low-level software library for pixel manipulation, 
 providing features such as image compositing and trapezoid rasterization. 
@@ -2465,7 +2465,7 @@ Homepage: http://pixman.org/
 
 
 
-./bdwgc/DESCR
+bdwgc
 ===
 What is MCServer? MCServer is a custom Minecraft server, written 
 completely in C++. It's designed to be a fast, lightweight and easy to 
@@ -2476,7 +2476,7 @@ Homepage: http://www.mc-server.org/
 
 
 
-./dfc/DESCR
+dfc
 ===
 dfc
  Display file system space usage using graphs and colors.
@@ -2486,7 +2486,7 @@ Homepage: http://projects.gw-computing.net/projects/dfc
 
 
 
-./p7zip/DESCR
+p7zip
 ===
 p7zip is a quick port of 7z.exe and 7za.exe 
 (command line version of 7zip, see www.7-zip.org) for Unix.
@@ -2499,7 +2499,7 @@ Homepage: http://www.gnu.org/software/autoconf/
 
 
 
-./nail/DESCR
+nail
 ===
 Heirloom mailx (previously known as nail) 
 is a mail user agent for Unix systems. Highlights are:
@@ -2515,7 +2515,7 @@ Homepage: http://heirloom.sourceforge.net/mailx.html
 
 
 
-./python/DESCR
+python
 ===
 automake - a tool for automatically generating `Makefile.in' files
 
@@ -2528,7 +2528,7 @@ Homepage: http://www.gnu.org/software/automake/
 
 
 
-./gcc/DESCR
+gcc
 ===
 gcc - GNU project C and C++ compiler
 
@@ -2542,7 +2542,7 @@ Homepage: http://gcc.gnu.org/
 
 
 
-./dos2unix/DESCR
+dos2unix
 ===
 This is an update of Benjamin Lin's implementations of dos2unix 
 and unix2dos. 
@@ -2574,7 +2574,7 @@ Homepage: http://dos2unix.sourceforge.net/
 
 
 
-./lftp/DESCR
+lftp
 ===
 LFTP is sophisticated ftp/http client, file transfer program supporting 
 a number of network protocols. Like BASH, it has job control and uses 
@@ -2587,7 +2587,7 @@ Homepage: http://lftp.yar.ru/
 
 
 
-./attr/DESCR
+attr
 ===
 The attr package contains utilities to administer the extended 
 attributes on filesystem objects. 
@@ -2597,7 +2597,7 @@ Homepage: http://savannah.nongnu.org/projects/attr
 
 
 
-./isync/DESCR
+isync
 ===
 autoconf - Generates configuration scripts
 
@@ -2614,7 +2614,7 @@ Homepage: http://www.gnu.org/software/autoconf/
 
 
 
-./libmms/DESCR
+libmms
 ===
 libmms is a library for downloading (streaming) media files using 
 the mmst and mmsh protocols.
@@ -2624,7 +2624,7 @@ Homepage: http://sourceforge.net/projects/libmms/
 
 
 
-./libsigc++/DESCR
+libsigc++
 ===
 bsigc++ implements a typesafe callback system for standard C++. 
 It allows you to define signals and to connect those signals 
@@ -2643,7 +2643,7 @@ Homepage: http://libsigc.sourceforge.net/
 
 
 
-./bridge-utils/DESCR
+bridge-utils
 ===
 A bridge is a way to connect two Ethernet segments together in a protocol independent way. Packets are forwarded based on Ethernet address, rather than IP address (like a router). Since forwarding is done at Layer 2, all protocols can go transparently through a bridge.
 
@@ -2654,7 +2654,7 @@ Homepage: http://www.linuxfoundation.org/collaborate/workgroups/networking/bridg
 
 
 
-./sysstat/DESCR
+sysstat
 ===
 Introduction to sysstat
 
@@ -2687,7 +2687,7 @@ Homepage: http://sebastien.godard.pagesperso-orange.fr/
 
 
 
-./libffi/DESCR
+libffi
 ===
 What is libffi? Compilers for high level languages generate code that 
 follows certain conventions. These conventions are necessary, in part, 
@@ -2720,7 +2720,7 @@ Homepage: http://sourceware.org/libffi/
 
 
 
-./libgd/DESCR
+libgd
 ===
 autoconf - Generates configuration scripts
 
@@ -2737,7 +2737,7 @@ Homepage: http://www.gnu.org/software/autoconf/
 
 
 
-./libmpdclient/DESCR
+libmpdclient
 ===
 libmpdclient 2.8 released
 
@@ -2748,7 +2748,7 @@ Homepage: http://www.musicpd.org/
 
 
 
-./liburi/DESCR
+liburi
 ===
 autoconf - Generates configuration scripts
 
@@ -2765,7 +2765,7 @@ Homepage: http://www.gnu.org/software/autoconf/
 
 
 
-./glib/DESCR
+glib
 ===
 GLib fournit les éléments applicatifs de base pour les bibliothèques et 
 les applications écrites en C. Elle fournit le système central des 
@@ -2780,7 +2780,7 @@ Homepage: http://developer.gnome.org/glib/
 
 
 
-./most/DESCR
+most
 ===
 autoconf - Generates configuration scripts
 
@@ -2797,7 +2797,7 @@ Homepage: http://www.gnu.org/software/autoconf/
 
 
 
-./setuptools/DESCR
+setuptools
 ===
 Easy Install is a python module (easy_install) bundled with setuptools 
 that lets you automatically download, build, install, and manage 
@@ -2824,7 +2824,7 @@ Homepage: http://pypi.python.org/pypi/setuptools
 
 
 
-./libargp/DESCR
+libargp
 ===
 libargp is an implementation of argp of glibc
 
@@ -2833,7 +2833,7 @@ Homepage: http://cygwin.com/packages/libargp/
 
 
 
-./nmap/DESCR
+nmap
 ===
 Nmap and Zenmap (the graphical front end) are available in 
 several versions and formats. 
@@ -2864,7 +2864,7 @@ Homepage: http://nmap.org/
 
 
 
-./rtmpdump/DESCR
+rtmpdump
 ===
 rtmpdump is a toolkit for RTMP streams. 
 
@@ -2884,7 +2884,7 @@ Homepage: http://rtmpdump.mplayerhq.hu/
 
 
 
-./libspectre/DESCR
+libspectre
 ===
 What is libspectre 
 
@@ -2906,7 +2906,7 @@ Homepage: http://www.freedesktop.org/wiki/Software/libspectre
 
 
 
-./liboop/DESCR
+liboop
 ===
 Liboop provides a generic, callback-based event dispatch interface, and 
 aims to ease the development of multiplexed, non-blocking, event-driven 
@@ -2921,7 +2921,7 @@ Homepage: http://freecode.com/projects/liboop
 
 
 
-./shellinabox/DESCR
+shellinabox
 ===
 Shell In A Box implements a web server that can export arbitrary command line 
 tools to a web based terminal emulator. 
@@ -2944,7 +2944,7 @@ Homepage: http://shellinabox.googlecode.com/
 
 
 
-./libunistring/DESCR
+libunistring
 ===
 Introduction to libunistring
 Text files are nowadays usually encoded in Unicode, and may consist of 
@@ -2965,7 +2965,7 @@ Homepage: http://www.gnu.org/software/libunistring/
 
 
 
-./lvm2/DESCR
+lvm2
 ===
  Introduction to LVM2 
 
@@ -2982,7 +2982,7 @@ Homepage: http://sourceware.org/lvm2/
 
 
 
-./cairo/DESCR
+cairo
 ===
 Cairo is a 2D graphics library with support for multiple output devices. 
 
@@ -2998,7 +2998,7 @@ Homepage: http://cairographics.org/
 
 
 
-./scons/DESCR
+scons
 ===
 SCons is an Open Source software construction tool.
 that is, a next-generation build tool. 
@@ -3013,7 +3013,7 @@ Homepage: http://www.scons.org/
 
 
 
-./serviio/DESCR
+serviio
 ===
 Serviio is a free media server. 
 
@@ -3026,7 +3026,7 @@ Homepage: http://www.serviio.org/
 
 
 
-./pyplay/DESCR
+pyplay
 ===
 autoconf - Generates configuration scripts
 
@@ -3043,7 +3043,7 @@ Homepage: http://www.gnu.org/software/autoconf/
 
 
 
-./unrar/DESCR
+unrar
 ===
 WinRAR is a powerful archive manager. 
 
@@ -3056,7 +3056,7 @@ Homepage: http://www.rarlab.com
 
 
 
-./slang/DESCR
+slang
 ===
 S-Lang is a multi-platform programmer's library designed to allow a developer 
 to create robust multi-platform software. 
@@ -3080,7 +3080,7 @@ Homepage: http://www.jedsoft.org/slang/index.html
 
 
 
-./libgcrypt/DESCR
+libgcrypt
 ===
 The GNU Privacy Guard
 
@@ -3101,7 +3101,7 @@ Homepage: http://www.gnupg.org/
 
 
 
-./munin/DESCR
+munin
 ===
  Munin is a networked resource monitoring tool that can help analyze resource trends and 
 "what just happened to kill our performance?" problems. 
@@ -3118,7 +3118,7 @@ Homepage: http://munin-monitoring.org/
 
 
 
-./davfs2/DESCR
+davfs2
 ===
 Mount a WebDAV resource as a regular file system
 
