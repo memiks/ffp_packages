@@ -1,0 +1,37 @@
+#!/ffp/bin/sh -xe
+
+PN=$(basename $0 .funpkg)
+PR=1
+
+. ./config.ffp
+
+X=$(pwd)
+W=$(mktemp -t -d $PN.XXXXXX)
+D=$W/pkg
+
+cd $W
+cat $X/SRC_URI | xargs wget 
+PV=$(ls $PN-*.tar* | egrep -o '[0-9][0-9.]*[0-9]')
+tar xf $PN-$PV.tar*
+cd $PN-$PV
+
+mkdir cmake-build
+cd cmake-build
+
+LDFLAGS="$FFP_LDFLAGS" \
+$CONFIG_SHELL ../bootstrap \
+	--prefix=/ffp \
+	--docdir=${docdir#/ffp}/$P \
+	--mandir=${mandir#/ffp} \
+	--system-libs
+
+make
+make DESTDIR=$D install
+rm -f $D$docdir/$P/*.docbook
+
+mkdir -p $D/install
+cp $X/{DESCR,HOMEPAGE} $D/install/
+
+cd $D
+makepkg $PN $PV $PR
+

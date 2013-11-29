@@ -1,0 +1,1346 @@
+++ basename ./cmake.funpkg .funpkg
++ PN=cmake
++ PR=1
++ . ./config.ffp
+++ case "$FFP_ARCH" in
+++ GNU_BUILD=arm-ffp-linux-uclibcgnueabi
+++ GNU_HOST=arm-ffp-linux-uclibcgnueabi
+++ GNU_TARGET=arm-ffp-linux-uclibcgnueabi
+++ FFP_CFLAGS='-I/ffp/include -O2'
+++ FFP_LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
+++ '[' '!' -d '' ']'
+++ TMPDIR=/tmp
+++ export TMPDIR
+++ mandir=/ffp/share/man
+++ infodir=/ffp/share/info
+++ docdir=/ffp/share/doc
+++ pwd
++ X=/ffp/home/root/src/cmake
+++ mktemp -t -d cmake.XXXXXX
++ W=/tmp/cmake.9ZTnCV
++ D=/tmp/cmake.9ZTnCV/pkg
++ cd /tmp/cmake.9ZTnCV
++ cat /ffp/home/root/src/cmake/SRC_URI
++ xargs wget
+--2012-03-02 11:09:42--  http://www.cmake.org/files/v2.8/cmake-2.8.7.tar.gz
+Resolving www.cmake.org... 66.194.253.19
+Connecting to www.cmake.org|66.194.253.19|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 5667409 (5.4M) [application/x-gzip]
+Saving to: `cmake-2.8.7.tar.gz'
+
+     0K .......... .......... .......... .......... ..........  0%  441K 12s
+    50K .......... .......... .......... .......... ..........  1%  381K 13s
+   100K .......... .......... .......... .......... ..........  2%  422K 13s
+   150K .......... .......... .......... .......... ..........  3%  573K 12s
+   200K .......... .......... .......... .......... ..........  4% 1.31M 10s
+   250K .......... .......... .......... .......... ..........  5% 1.82M 9s
+   300K .......... .......... .......... .......... ..........  6%  702K 9s
+   350K .......... .......... .......... .......... ..........  7% 1.83M 8s
+   400K .......... .......... .......... .......... ..........  8% 1.81M 7s
+   450K .......... .......... .......... .......... ..........  9%  836K 7s
+   500K .......... .......... .......... .......... ..........  9% 1.82M 7s
+   550K .......... .......... .......... .......... .......... 10% 1.87M 6s
+   600K .......... .......... .......... .......... .......... 11% 1.85M 6s
+   650K .......... .......... .......... .......... .......... 12%  963K 6s
+   700K .......... .......... .......... .......... .......... 13% 1.79M 5s
+   750K .......... .......... .......... .......... .......... 14% 1.88M 5s
+   800K .......... .......... .......... .......... .......... 15% 1.83M 5s
+   850K .......... .......... .......... .......... .......... 16%  229K 6s
+   900K .......... .......... .......... .......... .......... 17% 22.5M 5s
+   950K .......... .......... .......... .......... .......... 18% 22.6M 5s
+  1000K .......... .......... .......... .......... .......... 18%  285K 6s
+  1050K .......... .......... .......... .......... .......... 19%  390K 6s
+  1100K .......... .......... .......... .......... .......... 20% 1.83M 6s
+  1150K .......... .......... .......... .......... .......... 21%  225K 6s
+  1200K .......... .......... .......... .......... .......... 22% 20.5M 6s
+  1250K .......... .......... .......... .......... .......... 23% 1.12M 6s
+  1300K .......... .......... .......... .......... .......... 24%  630K 6s
+  1350K .......... .......... .......... .......... .......... 25%  191K 6s
+  1400K .......... .......... .......... .......... .......... 26% 1.07M 6s
+  1450K .......... .......... .......... .......... .......... 27%  260K 6s
+  1500K .......... .......... .......... .......... .......... 28% 17.7M 6s
+  1550K .......... .......... .......... .......... .......... 28%  761K 6s
+  1600K .......... .......... .......... .......... .......... 29%  438K 6s
+  1650K .......... .......... .......... .......... .......... 30%  580K 6s
+  1700K .......... .......... .......... .......... .......... 31%  876K 6s
+  1750K .......... .......... .......... .......... .......... 32%  443K 6s
+  1800K .......... .......... .......... .......... .......... 33%  443K 6s
+  1850K .......... .......... .......... .......... .......... 34%  456K 6s
+  1900K .......... .......... .......... .......... .......... 35% 1.56M 6s
+  1950K .......... .......... .......... .......... .......... 36%  441K 6s
+  2000K .......... .......... .......... .......... .......... 37%  448K 5s
+  2050K .......... .......... .......... .......... .......... 37%  534K 5s
+  2100K .......... .......... .......... .......... .......... 38% 1008K 5s
+  2150K .......... .......... .......... .......... .......... 39% 95.3K 6s
+  2200K .......... .......... .......... .......... .......... 40% 18.8M 6s
+  2250K .......... .......... .......... .......... .......... 41% 22.4M 5s
+  2300K .......... .......... .......... .......... .......... 42% 22.4M 5s
+  2350K .......... .......... .......... .......... .......... 43%  417K 5s
+  2400K .......... .......... .......... .......... .......... 44%  210K 5s
+  2450K .......... .......... .......... .......... .......... 45% 4.72M 5s
+  2500K .......... .......... .......... .......... .......... 46% 1.89M 5s
+  2550K .......... .......... .......... .......... .......... 46%  400K 5s
+  2600K .......... .......... .......... .......... .......... 47%  406K 5s
+  2650K .......... .......... .......... .......... .......... 48%  418K 5s
+  2700K .......... .......... .......... .......... .......... 49%  152K 5s
+  2750K .......... .......... .......... .......... .......... 50% 19.6M 5s
+  2800K .......... .......... .......... .......... .......... 51%  683K 5s
+  2850K .......... .......... .......... .......... .......... 52%  419K 5s
+  2900K .......... .......... .......... .......... .......... 53%  588K 5s
+  2950K .......... .......... .......... .......... .......... 54%  613K 5s
+  3000K .......... .......... .......... .......... .......... 55%  426K 4s
+  3050K .......... .......... .......... .......... .......... 56%  492K 4s
+  3100K .......... .......... .......... .......... .......... 56%  422K 4s
+  3150K .......... .......... .......... .......... .......... 57%  438K 4s
+  3200K .......... .......... .......... .......... .......... 58%  425K 4s
+  3250K .......... .......... .......... .......... .......... 59% 1.01M 4s
+  3300K .......... .......... .......... .......... .......... 60%  339K 4s
+  3350K .......... .......... .......... .......... .......... 61%  441K 4s
+  3400K .......... .......... .......... .......... .......... 62%  352K 4s
+  3450K .......... .......... .......... .......... .......... 63%  484K 4s
+  3500K .......... .......... .......... .......... .......... 64%  405K 4s
+  3550K .......... .......... .......... .......... .......... 65%  408K 4s
+  3600K .......... .......... .......... .......... .......... 65%  401K 4s
+  3650K .......... .......... .......... .......... .......... 66%  412K 3s
+  3700K .......... .......... .......... .......... .......... 67%  404K 3s
+  3750K .......... .......... .......... .......... .......... 68%  407K 3s
+  3800K .......... .......... .......... .......... .......... 69%  413K 3s
+  3850K .......... .......... .......... .......... .......... 70%  411K 3s
+  3900K .......... .......... .......... .......... .......... 71%  407K 3s
+  3950K .......... .......... .......... .......... .......... 72%  404K 3s
+  4000K .......... .......... .......... .......... .......... 73%  222K 3s
+  4050K .......... .......... .......... .......... .......... 74%  933K 3s
+  4100K .......... .......... .......... .......... .......... 74%  572K 3s
+  4150K .......... .......... .......... .......... .......... 75%  409K 3s
+  4200K .......... .......... .......... .......... .......... 76%  587K 3s
+  4250K .......... .......... .......... .......... .......... 77%  409K 2s
+  4300K .......... .......... .......... .......... .......... 78%  416K 2s
+  4350K .......... .......... .......... .......... .......... 79%  419K 2s
+  4400K .......... .......... .......... .......... .......... 80%  417K 2s
+  4450K .......... .......... .......... .......... .......... 81%  395K 2s
+  4500K .......... .......... .......... .......... .......... 82%  484K 2s
+  4550K .......... .......... .......... .......... .......... 83%  439K 2s
+  4600K .......... .......... .......... .......... .......... 84%  328K 2s
+  4650K .......... .......... .......... .......... .......... 84%  406K 2s
+  4700K .......... .......... .......... .......... .......... 85%  714K 2s
+  4750K .......... .......... .......... .......... .......... 86%  524K 1s
+  4800K .......... .......... .......... .......... .......... 87%  428K 1s
+  4850K .......... .......... .......... .......... .......... 88%  423K 1s
+  4900K .......... .......... .......... .......... .......... 89%  486K 1s
+  4950K .......... .......... .......... .......... .......... 90%  434K 1s
+  5000K .......... .......... .......... .......... .......... 91%  754K 1s
+  5050K .......... .......... .......... .......... .......... 92%  296K 1s
+  5100K .......... .......... .......... .......... .......... 93% 1.09M 1s
+  5150K .......... .......... .......... .......... .......... 93%  646K 1s
+  5200K .......... .......... .......... .......... .......... 94%  863K 1s
+  5250K .......... .......... .......... .......... .......... 95%  662K 0s
+  5300K .......... .......... .......... .......... .......... 96%  963K 0s
+  5350K .......... .......... .......... .......... .......... 97%  569K 0s
+  5400K .......... .......... .......... .......... .......... 98%  978K 0s
+  5450K .......... .......... .......... .......... .......... 99%  705K 0s
+  5500K .......... .......... .......... ....                 100%  654K=11s
+
+2012-03-02 11:09:54 (512 KB/s) - `cmake-2.8.7.tar.gz' saved [5667409/5667409]
+
+++ egrep -o '[0-9][0-9.]*[0-9]'
+++ ls cmake-2.8.7.tar.gz
++ PV=2.8.7
++ tar xf cmake-2.8.7.tar.gz
++ cd cmake-2.8.7
++ mkdir cmake-build
++ cd cmake-build
++ LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
++ ../bootstrap --prefix=/ffp --docdir=/share/doc/ --mandir=/share/man --system-libs
+---------------------------------------------
+CMake 2.8.7, Copyright 2000-2009 Kitware, Inc.
+Found GNU toolchain
+C compiler on this system is: gcc 
+C++ compiler on this system is: g++ 
+Makefile processor on this system is: make
+g++ is GNU compiler
+g++ has STL in std:: namespace
+g++ has ANSI streams
+g++ has streams in std:: namespace
+g++ has sstream
+g++ has operator!=(string, char*)
+g++ has stl iterator_traits
+g++ has standard template allocator
+g++ has allocator<>::rebind<>
+g++ does not have non-standard allocator<>::max_size argument
+g++ has stl containers supporting allocator objects
+g++ has header cstddef
+g++ requires template friends to use <>
+g++ supports member templates
+g++ has standard template specialization syntax
+g++ has argument dependent lookup
+g++ has struct stat with st_mtim member
+g++ has ios::binary openmode
+g++ has ANSI for scoping
+---------------------------------------------
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmStandardIncludes.cxx -o cmStandardIncludes.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmake.cxx -o cmake.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmakemain.cxx -o cmakemain.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmakewizard.cxx -o cmakewizard.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmCommandArgumentLexer.cxx -o cmCommandArgumentLexer.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmCommandArgumentParser.cxx -o cmCommandArgumentParser.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmCommandArgumentParserHelper.cxx -o cmCommandArgumentParserHelper.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmDefinitions.cxx -o cmDefinitions.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmDepends.cxx -o cmDepends.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmDependsC.cxx -o cmDependsC.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmDocumentationFormatter.cxx -o cmDocumentationFormatter.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmDocumentationFormatterText.cxx -o cmDocumentationFormatterText.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmPolicies.cxx -o cmPolicies.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmProperty.cxx -o cmProperty.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmPropertyMap.cxx -o cmPropertyMap.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmPropertyDefinition.cxx -o cmPropertyDefinition.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmPropertyDefinitionMap.cxx -o cmPropertyDefinitionMap.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmMakeDepend.cxx -o cmMakeDepend.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmMakefile.cxx -o cmMakefile.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmExportFileGenerator.cxx -o cmExportFileGenerator.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmExportInstallFileGenerator.cxx -o cmExportInstallFileGenerator.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmInstallDirectoryGenerator.cxx -o cmInstallDirectoryGenerator.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmGeneratedFileStream.cxx -o cmGeneratedFileStream.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmGeneratorExpression.cxx -o cmGeneratorExpression.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmGlobalGenerator.cxx -o cmGlobalGenerator.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmLocalGenerator.cxx -o cmLocalGenerator.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmInstallGenerator.cxx -o cmInstallGenerator.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmInstallExportGenerator.cxx -o cmInstallExportGenerator.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmInstallFilesGenerator.cxx -o cmInstallFilesGenerator.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmInstallScriptGenerator.cxx -o cmInstallScriptGenerator.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmInstallTargetGenerator.cxx -o cmInstallTargetGenerator.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmScriptGenerator.cxx -o cmScriptGenerator.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmSourceFile.cxx -o cmSourceFile.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmSourceFileLocation.cxx -o cmSourceFileLocation.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmSystemTools.cxx -o cmSystemTools.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmTestGenerator.cxx -o cmTestGenerator.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmVersion.cxx -o cmVersion.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmFileTimeComparison.cxx -o cmFileTimeComparison.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmGlobalUnixMakefileGenerator3.cxx -o cmGlobalUnixMakefileGenerator3.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmLocalUnixMakefileGenerator3.cxx -o cmLocalUnixMakefileGenerator3.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmMakefileExecutableTargetGenerator.cxx -o cmMakefileExecutableTargetGenerator.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmMakefileLibraryTargetGenerator.cxx -o cmMakefileLibraryTargetGenerator.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmMakefileTargetGenerator.cxx -o cmMakefileTargetGenerator.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmMakefileUtilityTargetGenerator.cxx -o cmMakefileUtilityTargetGenerator.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmNewLineStyle.cxx -o cmNewLineStyle.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmBootstrapCommands.cxx -o cmBootstrapCommands.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmCommands.cxx -o cmCommands.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmTarget.cxx -o cmTarget.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmTest.cxx -o cmTest.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmCustomCommand.cxx -o cmCustomCommand.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmCustomCommandGenerator.cxx -o cmCustomCommandGenerator.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmDocumentVariables.cxx -o cmDocumentVariables.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmCacheManager.cxx -o cmCacheManager.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmListFileCache.cxx -o cmListFileCache.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmComputeLinkDepends.cxx -o cmComputeLinkDepends.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmComputeLinkInformation.cxx -o cmComputeLinkInformation.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmOrderDirectories.cxx -o cmOrderDirectories.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmComputeTargetDepends.cxx -o cmComputeTargetDepends.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmComputeComponentGraph.cxx -o cmComputeComponentGraph.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmExprLexer.cxx -o cmExprLexer.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmExprParser.cxx -o cmExprParser.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmExprParserHelper.cxx -o cmExprParserHelper.o
+gcc -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/cmListFileLexer.c -o cmListFileLexer.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -DKWSYS_NAMESPACE=cmsys -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/kwsys/Directory.cxx -o Directory.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -DKWSYS_NAMESPACE=cmsys -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/kwsys/Glob.cxx -o Glob.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -DKWSYS_NAMESPACE=cmsys -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/kwsys/RegularExpression.cxx -o RegularExpression.o
+g++  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -DKWSYS_NAMESPACE=cmsys -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/kwsys/SystemTools.cxx -o SystemTools.o
+/tmp/cmake.9ZTnCV/cmake-2.8.7/Source/kwsys/SystemTools.cxx:1400:5: note: the mangling of 'va_list' has changed in GCC 4.4
+gcc -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -DKWSYS_NAMESPACE=cmsys  -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/kwsys/ProcessUNIX.c -o ProcessUNIX.o
+gcc -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -DKWSYS_NAMESPACE=cmsys -DKWSYS_STRING_C -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/kwsys/String.c -o String.o
+gcc -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -DKWSYS_NAMESPACE=cmsys  -c /tmp/cmake.9ZTnCV/cmake-2.8.7/Source/kwsys/System.c -o System.o
+g++ -L/ffp/lib -Wl,-rpath,/ffp/lib  -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk -I/tmp/cmake.9ZTnCV/cmake-2.8.7/Source   -I/tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk  cmStandardIncludes.o cmake.o cmakemain.o cmakewizard.o cmCommandArgumentLexer.o cmCommandArgumentParser.o cmCommandArgumentParserHelper.o cmDefinitions.o cmDepends.o cmDependsC.o cmDocumentationFormatter.o cmDocumentationFormatterText.o cmPolicies.o cmProperty.o cmPropertyMap.o cmPropertyDefinition.o cmPropertyDefinitionMap.o cmMakeDepend.o cmMakefile.o cmExportFileGenerator.o cmExportInstallFileGenerator.o cmInstallDirectoryGenerator.o cmGeneratedFileStream.o cmGeneratorExpression.o cmGlobalGenerator.o cmLocalGenerator.o cmInstallGenerator.o cmInstallExportGenerator.o cmInstallFilesGenerator.o cmInstallScriptGenerator.o cmInstallTargetGenerator.o cmScriptGenerator.o cmSourceFile.o cmSourceFileLocation.o cmSystemTools.o cmTestGenerator.o cmVersion.o cmFileTimeComparison.o cmGlobalUnixMakefileGenerator3.o cmLocalUnixMakefileGenerator3.o cmMakefileExecutableTargetGenerator.o cmMakefileLibraryTargetGenerator.o cmMakefileTargetGenerator.o cmMakefileUtilityTargetGenerator.o cmNewLineStyle.o cmBootstrapCommands.o cmCommands.o cmTarget.o cmTest.o cmCustomCommand.o cmCustomCommandGenerator.o cmDocumentVariables.o cmCacheManager.o cmListFileCache.o cmComputeLinkDepends.o cmComputeLinkInformation.o cmOrderDirectories.o cmComputeTargetDepends.o cmComputeComponentGraph.o cmExprLexer.o cmExprParser.o cmExprParserHelper.o cmListFileLexer.o Directory.o Glob.o RegularExpression.o SystemTools.o ProcessUNIX.o String.o System.o -o cmake
+loading initial cache file /tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build/Bootstrap.cmk/InitialCacheFlags.cmake
+-- The C compiler identification is GNU
+-- The CXX compiler identification is GNU
+-- Check for working C compiler: /ffp/bin/gcc
+-- Check for working C compiler: /ffp/bin/gcc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working CXX compiler: /ffp/bin/g++
+-- Check for working CXX compiler: /ffp/bin/g++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Looking for C++ include iostream
+-- Looking for C++ include iostream - found
+-- Check for STD namespace
+-- Check for STD namespace - found
+-- Check for ANSI scope
+-- Check for ANSI scope - found
+-- Check for sstream
+-- Check for sstream - found
+-- Looking for unsetenv
+-- Looking for unsetenv - found
+-- Looking for environ
+-- Looking for environ - not found.
+-- Checking whether header cstdio is available
+-- Checking whether header cstdio is available - yes
+-- Checking for Large File Support
+-- Checking for Large File Support - yes
+-- Checking whether STL classes are in std namespace
+-- Checking whether STL classes are in std namespace - yes
+-- Checking whether ANSI stream headers are available
+-- Checking whether ANSI stream headers are available - yes
+-- Checking whether ANSI streams are in std namespace
+-- Checking whether ANSI streams are in std namespace - yes
+-- Checking whether ANSI string stream is available
+-- Checking whether ANSI string stream is available - yes
+-- Checking whether header cstddef is available
+-- Checking whether header cstddef is available - yes
+-- Checking whether stl string has operator!= for char*
+-- Checking whether stl string has operator!= for char* - yes
+-- Checking whether stl has iterator_traits
+-- Checking whether stl has iterator_traits - yes
+-- Checking whether stl has standard template allocator
+-- Checking whether stl has standard template allocator - yes
+-- Checking for rebind member of stl allocator
+-- Checking for rebind member of stl allocator - yes
+-- Checking for non-standard argument to stl allocator<>::max_size
+-- Checking for non-standard argument to stl allocator<>::max_size - no
+-- Checking whether stl containers support allocator objects.
+-- Checking whether stl containers support allocator objects. - yes
+-- Checking whether ios has binary openmode
+-- Checking whether ios has binary openmode - yes
+-- Checking whether "<>" is needed for template friends
+-- Checking whether "<>" is needed for template friends - yes
+-- Checking for member template support
+-- Checking for member template support - yes
+-- Checking for standard template specialization syntax
+-- Checking for standard template specialization syntax - yes
+-- Checking whether argument dependent lookup is supported
+-- Checking whether argument dependent lookup is supported - yes
+-- Checking whether struct stat has st_mtim member
+-- Checking whether struct stat has st_mtim member - yes
+-- Checking for C type size macros
+-- Checking for C type size macros - compiled
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of char
+-- Check size of char - done
+-- Check size of __int64
+-- Check size of __int64 - failed
+-- Checking whether char is signed
+-- Checking whether char is signed - no
+-- Checking whether C++ compiler has 'long long'
+-- Checking whether C++ compiler has 'long long' - yes
+-- Checking if istream supports long long
+-- Checking if istream supports long long - yes
+-- Checking if ostream supports long long
+-- Checking if ostream supports long long - yes
+-- Checking whether C compiler has ptrdiff_t in stddef.h
+-- Checking whether C compiler has ptrdiff_t in stddef.h - yes
+-- Checking whether C compiler has ssize_t in unistd.h
+-- Checking whether C compiler has ssize_t in unistd.h - yes
+-- Using system-installed BZIP2
+-- Using system-installed CURL
+-- Using system-installed EXPAT
+-- Using system-installed LIBARCHIVE
+-- Using system-installed ZLIB
+-- Found ZLIB: /ffp/lib/libz.so (found version "1.2.6")
+-- Found CURL: /ffp/lib/libcurl.so 
+-- Found BZip2: /ffp/lib/libbz2.so 
+-- Looking for BZ2_bzCompressInit in /ffp/lib/libbz2.so
+-- Looking for BZ2_bzCompressInit in /ffp/lib/libbz2.so - found
+-- Found LibArchive: /ffp/lib/libarchive.so 
+-- Found EXPAT: /lib/libexpat.so 
+-- Looking for wsyncup in /ffp/lib/libcurses.so
+-- Looking for wsyncup in /ffp/lib/libcurses.so - found
+-- Looking for elf.h
+-- Looking for elf.h - found
+-- Looking for a Fortran compiler
+-- Looking for a Fortran compiler - NOTFOUND
+-- Could NOT find Qt4 (missing:  QT_QMAKE_EXECUTABLE QT_MOC_EXECUTABLE QT_RCC_EXECUTABLE QT_UIC_EXECUTABLE QT_INCLUDE_DIR QT_LIBRARY_DIR QT_QTCORE_LIBRARY) 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /tmp/cmake.9ZTnCV/cmake-2.8.7/cmake-build
+---------------------------------------------
+CMake has bootstrapped.  Now run make.
++ make
+Scanning dependencies of target cmIML_test
+[  0%] Building C object Utilities/KWIML/test/CMakeFiles/cmIML_test.dir/test.c.o
+[  1%] Building C object Utilities/KWIML/test/CMakeFiles/cmIML_test.dir/test_ABI_C.c.o
+[  1%] Building C object Utilities/KWIML/test/CMakeFiles/cmIML_test.dir/test_INT_C.c.o
+[  1%] Building C object Utilities/KWIML/test/CMakeFiles/cmIML_test.dir/test_include_C.c.o
+[  2%] Building CXX object Utilities/KWIML/test/CMakeFiles/cmIML_test.dir/test_ABI_CXX.cxx.o
+[  2%] Building CXX object Utilities/KWIML/test/CMakeFiles/cmIML_test.dir/test_INT_CXX.cxx.o
+[  3%] Building CXX object Utilities/KWIML/test/CMakeFiles/cmIML_test.dir/test_include_CXX.cxx.o
+Linking CXX executable cmIML_test
+[  3%] Built target cmIML_test
+Scanning dependencies of target cmsys
+[  4%] Building C object Source/kwsys/CMakeFiles/cmsys.dir/ProcessUNIX.c.o
+[  4%] Building C object Source/kwsys/CMakeFiles/cmsys.dir/Base64.c.o
+[  5%] Building C object Source/kwsys/CMakeFiles/cmsys.dir/MD5.c.o
+[  5%] Building C object Source/kwsys/CMakeFiles/cmsys.dir/Terminal.c.o
+[  5%] Building C object Source/kwsys/CMakeFiles/cmsys.dir/System.c.o
+[  6%] Building C object Source/kwsys/CMakeFiles/cmsys.dir/String.c.o
+[  6%] Building CXX object Source/kwsys/CMakeFiles/cmsys.dir/Directory.cxx.o
+[  7%] Building CXX object Source/kwsys/CMakeFiles/cmsys.dir/DynamicLoader.cxx.o
+[  7%] Building CXX object Source/kwsys/CMakeFiles/cmsys.dir/Glob.cxx.o
+[  7%] Building CXX object Source/kwsys/CMakeFiles/cmsys.dir/RegularExpression.cxx.o
+[  8%] Building CXX object Source/kwsys/CMakeFiles/cmsys.dir/SystemTools.cxx.o
+/tmp/cmake.9ZTnCV/cmake-2.8.7/Source/kwsys/SystemTools.cxx:1400:5: note: the mangling of 'va_list' has changed in GCC 4.4
+[  8%] Building CXX object Source/kwsys/CMakeFiles/cmsys.dir/CommandLineArguments.cxx.o
+[  9%] Building CXX object Source/kwsys/CMakeFiles/cmsys.dir/Registry.cxx.o
+[  9%] Building CXX object Source/kwsys/CMakeFiles/cmsys.dir/IOStream.cxx.o
+[  9%] Building CXX object Source/kwsys/CMakeFiles/cmsys.dir/SystemInformation.cxx.o
+Linking CXX static library libcmsys.a
+[  9%] Built target cmsys
+Scanning dependencies of target cmsysTestDynload
+[ 10%] Building C object Source/kwsys/CMakeFiles/cmsysTestDynload.dir/testDynload.c.o
+Linking C shared module libcmsysTestDynload.so
+[ 10%] Built target cmsysTestDynload
+Scanning dependencies of target cmsys_c
+[ 10%] Building C object Source/kwsys/CMakeFiles/cmsys_c.dir/ProcessUNIX.c.o
+[ 10%] Building C object Source/kwsys/CMakeFiles/cmsys_c.dir/Base64.c.o
+[ 11%] Building C object Source/kwsys/CMakeFiles/cmsys_c.dir/MD5.c.o
+[ 11%] Building C object Source/kwsys/CMakeFiles/cmsys_c.dir/Terminal.c.o
+[ 12%] Building C object Source/kwsys/CMakeFiles/cmsys_c.dir/System.c.o
+[ 12%] Building C object Source/kwsys/CMakeFiles/cmsys_c.dir/String.c.o
+Linking C static library libcmsys_c.a
+[ 12%] Built target cmsys_c
+Scanning dependencies of target cmsysTestProcess
+[ 12%] Building C object Source/kwsys/CMakeFiles/cmsysTestProcess.dir/testProcess.c.o
+Linking C executable cmsysTestProcess
+[ 12%] Built target cmsysTestProcess
+Scanning dependencies of target cmsysTestSharedForward
+[ 12%] Building C object Source/kwsys/CMakeFiles/cmsysTestSharedForward.dir/testSharedForward.c.o
+Linking C executable cmsysTestSharedForward
+[ 12%] Built target cmsysTestSharedForward
+Scanning dependencies of target cmsysTestsC
+[ 13%] Building C object Source/kwsys/CMakeFiles/cmsysTestsC.dir/cmsysTestsC.c.o
+[ 13%] Building C object Source/kwsys/CMakeFiles/cmsysTestsC.dir/testEncode.c.o
+[ 14%] Building C object Source/kwsys/CMakeFiles/cmsysTestsC.dir/testTerminal.c.o
+Linking C executable cmsysTestsC
+[ 14%] Built target cmsysTestsC
+Scanning dependencies of target cmsysTestsCxx
+[ 14%] Building CXX object Source/kwsys/CMakeFiles/cmsysTestsCxx.dir/cmsysTestsCxx.cxx.o
+[ 14%] Building CXX object Source/kwsys/CMakeFiles/cmsysTestsCxx.dir/testAutoPtr.cxx.o
+[ 15%] Building CXX object Source/kwsys/CMakeFiles/cmsysTestsCxx.dir/testHashSTL.cxx.o
+[ 15%] Building CXX object Source/kwsys/CMakeFiles/cmsysTestsCxx.dir/testRegistry.cxx.o
+[ 16%] Building CXX object Source/kwsys/CMakeFiles/cmsysTestsCxx.dir/testIOS.cxx.o
+[ 16%] Building CXX object Source/kwsys/CMakeFiles/cmsysTestsCxx.dir/testSystemTools.cxx.o
+[ 16%] Building CXX object Source/kwsys/CMakeFiles/cmsysTestsCxx.dir/testCommandLineArguments.cxx.o
+[ 17%] Building CXX object Source/kwsys/CMakeFiles/cmsysTestsCxx.dir/testCommandLineArguments1.cxx.o
+[ 17%] Building CXX object Source/kwsys/CMakeFiles/cmsysTestsCxx.dir/testSystemInformation.cxx.o
+[ 18%] Building CXX object Source/kwsys/CMakeFiles/cmsysTestsCxx.dir/testDynamicLoader.cxx.o
+Linking CXX executable cmsysTestsCxx
+[ 18%] Built target cmsysTestsCxx
+Scanning dependencies of target cmcompress
+[ 18%] Building C object Utilities/cmcompress/CMakeFiles/cmcompress.dir/cmcompress.c.o
+Linking C static library libcmcompress.a
+[ 18%] Built target cmcompress
+Scanning dependencies of target cmForm
+[ 19%] Building C object Source/CursesDialog/form/CMakeFiles/cmForm.dir/fld_arg.c.o
+[ 19%] Building C object Source/CursesDialog/form/CMakeFiles/cmForm.dir/fld_attr.c.o
+[ 20%] Building C object Source/CursesDialog/form/CMakeFiles/cmForm.dir/fld_current.c.o
+[ 20%] Building C object Source/CursesDialog/form/CMakeFiles/cmForm.dir/fld_def.c.o
+[ 20%] Building C object Source/CursesDialog/form/CMakeFiles/cmForm.dir/fld_dup.c.o
+[ 21%] Building C object Source/CursesDialog/form/CMakeFiles/cmForm.dir/fld_ftchoice.c.o
+[ 21%] Building C object Source/CursesDialog/form/CMakeFiles/cmForm.dir/fld_ftlink.c.o
+[ 22%] Building C object Source/CursesDialog/form/CMakeFiles/cmForm.dir/fld_info.c.o
+[ 22%] Building C object Source/CursesDialog/form/CMakeFiles/cmForm.dir/fld_just.c.o
+[ 22%] Building C object Source/CursesDialog/form/CMakeFiles/cmForm.dir/fld_link.c.o
+[ 23%] Building C object Source/CursesDialog/form/CMakeFiles/cmForm.dir/fld_max.c.o
+[ 23%] Building C object Source/CursesDialog/form/CMakeFiles/cmForm.dir/fld_move.c.o
+[ 24%] Building C object Source/CursesDialog/form/CMakeFiles/cmForm.dir/fld_newftyp.c.o
+[ 24%] Building C object Source/CursesDialog/form/CMakeFiles/cmForm.dir/fld_opts.c.o
+[ 24%] Building C object Source/CursesDialog/form/CMakeFiles/cmForm.dir/fld_pad.c.o
+[ 25%] Building C object Source/CursesDialog/form/CMakeFiles/cmForm.dir/fld_page.c.o
+[ 25%] Building C object Source/CursesDialog/form/CMakeFiles/cmForm.dir/fld_stat.c.o
+[ 26%] Building C object Source/CursesDialog/form/CMakeFiles/cmForm.dir/fld_type.c.o
+[ 26%] Building C object Source/CursesDialog/form/CMakeFiles/cmForm.dir/fld_user.c.o
+[ 26%] Building C object Source/CursesDialog/form/CMakeFiles/cmForm.dir/frm_cursor.c.o
+[ 27%] Building C object Source/CursesDialog/form/CMakeFiles/cmForm.dir/frm_data.c.o
+[ 27%] Building C object Source/CursesDialog/form/CMakeFiles/cmForm.dir/frm_def.c.o
+[ 28%] Building C object Source/CursesDialog/form/CMakeFiles/cmForm.dir/frm_driver.c.o
+[ 28%] Building C object Source/CursesDialog/form/CMakeFiles/cmForm.dir/frm_hook.c.o
+[ 28%] Building C object Source/CursesDialog/form/CMakeFiles/cmForm.dir/frm_opts.c.o
+[ 29%] Building C object Source/CursesDialog/form/CMakeFiles/cmForm.dir/frm_page.c.o
+[ 29%] Building C object Source/CursesDialog/form/CMakeFiles/cmForm.dir/frm_post.c.o
+[ 30%] Building C object Source/CursesDialog/form/CMakeFiles/cmForm.dir/frm_req_name.c.o
+[ 30%] Building C object Source/CursesDialog/form/CMakeFiles/cmForm.dir/frm_scale.c.o
+[ 30%] Building C object Source/CursesDialog/form/CMakeFiles/cmForm.dir/frm_sub.c.o
+[ 31%] Building C object Source/CursesDialog/form/CMakeFiles/cmForm.dir/frm_user.c.o
+[ 31%] Building C object Source/CursesDialog/form/CMakeFiles/cmForm.dir/frm_win.c.o
+[ 31%] Building C object Source/CursesDialog/form/CMakeFiles/cmForm.dir/fty_alnum.c.o
+[ 32%] Building C object Source/CursesDialog/form/CMakeFiles/cmForm.dir/fty_alpha.c.o
+[ 32%] Building C object Source/CursesDialog/form/CMakeFiles/cmForm.dir/fty_enum.c.o
+[ 33%] Building C object Source/CursesDialog/form/CMakeFiles/cmForm.dir/fty_int.c.o
+[ 33%] Building C object Source/CursesDialog/form/CMakeFiles/cmForm.dir/fty_ipv4.c.o
+[ 33%] Building C object Source/CursesDialog/form/CMakeFiles/cmForm.dir/fty_num.c.o
+[ 34%] Building C object Source/CursesDialog/form/CMakeFiles/cmForm.dir/fty_regex.c.o
+Linking C static library libcmForm.a
+[ 34%] Built target cmForm
+Scanning dependencies of target CMakeLib
+[ 34%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmStandardIncludes.cxx.o
+[ 34%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmArchiveWrite.cxx.o
+[ 35%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmBootstrapCommands.cxx.o
+[ 35%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmCacheManager.cxx.o
+[ 35%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmCommands.cxx.o
+[ 36%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmCommandArgumentLexer.cxx.o
+[ 36%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmCommandArgumentParser.cxx.o
+[ 37%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmCommandArgumentParserHelper.cxx.o
+[ 37%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmComputeComponentGraph.cxx.o
+[ 37%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmComputeLinkDepends.cxx.o
+[ 38%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmComputeLinkInformation.cxx.o
+[ 38%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmComputeTargetDepends.cxx.o
+[ 39%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmCryptoHash.cxx.o
+[ 39%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmCustomCommand.cxx.o
+[ 39%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmCustomCommandGenerator.cxx.o
+[ 40%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmDefinitions.cxx.o
+[ 40%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmDepends.cxx.o
+[ 41%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmDependsC.cxx.o
+[ 41%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmDependsFortran.cxx.o
+[ 41%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmDependsFortranLexer.cxx.o
+[ 42%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmDependsFortranParser.cxx.o
+[ 42%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmDependsJava.cxx.o
+[ 43%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmDependsJavaLexer.cxx.o
+[ 43%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmDependsJavaParser.cxx.o
+[ 43%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmDependsJavaParserHelper.cxx.o
+[ 44%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmDocumentation.cxx.o
+[ 44%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmDocumentationFormatter.cxx.o
+[ 45%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmDocumentationFormatterHTML.cxx.o
+[ 45%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmDocumentationFormatterDocbook.cxx.o
+[ 45%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmDocumentationFormatterMan.cxx.o
+[ 46%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmDocumentationFormatterText.cxx.o
+[ 46%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmDocumentationFormatterUsage.cxx.o
+[ 46%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmDocumentationSection.cxx.o
+[ 47%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmDocumentVariables.cxx.o
+[ 47%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmDynamicLoader.cxx.o
+[ 48%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmELF.cxx.o
+[ 48%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmExprLexer.cxx.o
+[ 48%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmExprParser.cxx.o
+[ 49%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmExprParserHelper.cxx.o
+[ 49%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmExportBuildFileGenerator.cxx.o
+[ 50%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmExportFileGenerator.cxx.o
+[ 50%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmExportInstallFileGenerator.cxx.o
+[ 50%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmExtraCodeBlocksGenerator.cxx.o
+[ 51%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmExtraEclipseCDT4Generator.cxx.o
+[ 51%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmFileTimeComparison.cxx.o
+[ 52%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmGeneratedFileStream.cxx.o
+[ 52%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmGeneratorExpression.cxx.o
+[ 52%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmGlobalGenerator.cxx.o
+[ 53%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmGlobalUnixMakefileGenerator3.cxx.o
+[ 53%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmGraphVizWriter.cxx.o
+[ 54%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmInstallGenerator.cxx.o
+[ 54%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmInstallExportGenerator.cxx.o
+[ 54%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmInstallFilesGenerator.cxx.o
+[ 55%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmInstallScriptGenerator.cxx.o
+[ 55%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmInstallTargetGenerator.cxx.o
+[ 56%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmInstallDirectoryGenerator.cxx.o
+[ 56%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmListFileCache.cxx.o
+[ 56%] Building C object Source/CMakeFiles/CMakeLib.dir/cmListFileLexer.c.o
+[ 57%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmLocalGenerator.cxx.o
+[ 57%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmLocalUnixMakefileGenerator3.cxx.o
+[ 58%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmMakeDepend.cxx.o
+[ 58%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmMakefile.cxx.o
+[ 58%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmMakefileTargetGenerator.cxx.o
+[ 59%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmMakefileExecutableTargetGenerator.cxx.o
+[ 59%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmMakefileLibraryTargetGenerator.cxx.o
+[ 59%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmMakefileUtilityTargetGenerator.cxx.o
+[ 60%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmNewLineStyle.cxx.o
+[ 60%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmOrderDirectories.cxx.o
+[ 61%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmPolicies.cxx.o
+[ 61%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmProcessTools.cxx.o
+[ 61%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmProperty.cxx.o
+[ 62%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmPropertyDefinition.cxx.o
+[ 62%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmPropertyDefinitionMap.cxx.o
+[ 63%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmPropertyMap.cxx.o
+[ 63%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmQtAutomoc.cxx.o
+[ 63%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmScriptGenerator.cxx.o
+[ 64%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmSourceFile.cxx.o
+[ 64%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmSourceFileLocation.cxx.o
+[ 65%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmSourceGroup.cxx.o
+[ 65%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmSystemTools.cxx.o
+[ 65%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmTarget.cxx.o
+[ 66%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmTest.cxx.o
+[ 66%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmTestGenerator.cxx.o
+[ 67%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmVariableWatch.cxx.o
+[ 67%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmVersion.cxx.o
+[ 67%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmXMLParser.cxx.o
+[ 68%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmXMLSafe.cxx.o
+[ 68%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmake.cxx.o
+[ 69%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmakewizard.cxx.o
+[ 69%] Building C object Source/CMakeFiles/CMakeLib.dir/cm_sha2.c.o
+[ 69%] Building C object Source/CMakeFiles/CMakeLib.dir/cm_utf8.c.o
+[ 70%] Building CXX object Source/CMakeFiles/CMakeLib.dir/cmGlobalKdevelopGenerator.cxx.o
+Linking CXX static library libCMakeLib.a
+[ 70%] Built target CMakeLib
+Scanning dependencies of target CPackLib
+[ 71%] Building CXX object Source/CMakeFiles/CPackLib.dir/CPack/cmCPackArchiveGenerator.cxx.o
+[ 71%] Building CXX object Source/CMakeFiles/CPackLib.dir/CPack/cmCPackComponentGroup.cxx.o
+[ 71%] Building CXX object Source/CMakeFiles/CPackLib.dir/CPack/cmCPackGeneratorFactory.cxx.o
+[ 72%] Building CXX object Source/CMakeFiles/CPackLib.dir/CPack/cmCPackGenerator.cxx.o
+[ 72%] Building CXX object Source/CMakeFiles/CPackLib.dir/CPack/cmCPackLog.cxx.o
+[ 73%] Building CXX object Source/CMakeFiles/CPackLib.dir/CPack/cmCPackNSISGenerator.cxx.o
+[ 73%] Building CXX object Source/CMakeFiles/CPackLib.dir/CPack/cmCPackSTGZGenerator.cxx.o
+[ 73%] Building CXX object Source/CMakeFiles/CPackLib.dir/CPack/cmCPackTGZGenerator.cxx.o
+[ 74%] Building CXX object Source/CMakeFiles/CPackLib.dir/CPack/cmCPackTarBZip2Generator.cxx.o
+[ 74%] Building CXX object Source/CMakeFiles/CPackLib.dir/CPack/cmCPackTarCompressGenerator.cxx.o
+[ 75%] Building CXX object Source/CMakeFiles/CPackLib.dir/CPack/cmCPackZIPGenerator.cxx.o
+[ 75%] Building CXX object Source/CMakeFiles/CPackLib.dir/CPack/cmCPackDebGenerator.cxx.o
+[ 75%] Building CXX object Source/CMakeFiles/CPackLib.dir/CPack/cmCPackRPMGenerator.cxx.o
+Linking CXX static library libCPackLib.a
+[ 75%] Built target CPackLib
+Scanning dependencies of target CTestLib
+[ 76%] Building CXX object Source/CMakeFiles/CTestLib.dir/cmCTest.cxx.o
+[ 76%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cmProcess.cxx.o
+[ 77%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cmCTestBatchTestHandler.cxx.o
+[ 77%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cmCTestBuildAndTestHandler.cxx.o
+[ 77%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cmCTestBuildCommand.cxx.o
+[ 78%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cmCTestBuildHandler.cxx.o
+[ 78%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cmCTestConfigureCommand.cxx.o
+[ 79%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cmCTestConfigureHandler.cxx.o
+[ 79%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cmCTestCoverageCommand.cxx.o
+[ 79%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cmCTestCoverageHandler.cxx.o
+[ 80%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cmParsePHPCoverage.cxx.o
+[ 80%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cmCTestEmptyBinaryDirectoryCommand.cxx.o
+[ 81%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cmCTestGenericHandler.cxx.o
+[ 81%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cmCTestHandlerCommand.cxx.o
+[ 81%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cmCTestLaunch.cxx.o
+[ 82%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cmCTestMemCheckCommand.cxx.o
+[ 82%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cmCTestMemCheckHandler.cxx.o
+[ 83%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cmCTestMultiProcessHandler.cxx.o
+[ 83%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cmCTestReadCustomFilesCommand.cxx.o
+[ 83%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cmCTestRunScriptCommand.cxx.o
+[ 84%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cmCTestRunTest.cxx.o
+[ 84%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cmCTestScriptHandler.cxx.o
+[ 84%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cmCTestSleepCommand.cxx.o
+[ 85%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cmCTestStartCommand.cxx.o
+[ 85%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cmCTestSubmitCommand.cxx.o
+[ 86%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cmCTestSubmitHandler.cxx.o
+[ 86%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cmCTestTestCommand.cxx.o
+[ 86%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cmCTestTestHandler.cxx.o
+[ 87%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cmCTestUpdateCommand.cxx.o
+[ 87%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cmCTestUpdateHandler.cxx.o
+[ 88%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cmCTestUploadCommand.cxx.o
+[ 88%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cmCTestUploadHandler.cxx.o
+[ 88%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cmCTestVC.cxx.o
+[ 89%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cmCTestGlobalVC.cxx.o
+[ 89%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cmCTestCVS.cxx.o
+[ 90%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cmCTestSVN.cxx.o
+[ 90%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cmCTestBZR.cxx.o
+[ 90%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cmCTestGIT.cxx.o
+[ 91%] Building CXX object Source/CMakeFiles/CTestLib.dir/CTest/cmCTestHG.cxx.o
+Linking CXX static library libCTestLib.a
+[ 91%] Built target CTestLib
+Scanning dependencies of target ccmake
+[ 91%] Building CXX object Source/CMakeFiles/ccmake.dir/CursesDialog/cmCursesBoolWidget.cxx.o
+[ 92%] Building CXX object Source/CMakeFiles/ccmake.dir/CursesDialog/cmCursesCacheEntryComposite.cxx.o
+[ 92%] Building CXX object Source/CMakeFiles/ccmake.dir/CursesDialog/cmCursesDummyWidget.cxx.o
+[ 92%] Building CXX object Source/CMakeFiles/ccmake.dir/CursesDialog/cmCursesFilePathWidget.cxx.o
+[ 93%] Building CXX object Source/CMakeFiles/ccmake.dir/CursesDialog/cmCursesForm.cxx.o
+[ 93%] Building CXX object Source/CMakeFiles/ccmake.dir/CursesDialog/cmCursesLabelWidget.cxx.o
+[ 94%] Building CXX object Source/CMakeFiles/ccmake.dir/CursesDialog/cmCursesLongMessageForm.cxx.o
+[ 94%] Building CXX object Source/CMakeFiles/ccmake.dir/CursesDialog/cmCursesMainForm.cxx.o
+[ 94%] Building CXX object Source/CMakeFiles/ccmake.dir/CursesDialog/cmCursesPathWidget.cxx.o
+[ 95%] Building CXX object Source/CMakeFiles/ccmake.dir/CursesDialog/cmCursesStringWidget.cxx.o
+[ 95%] Building CXX object Source/CMakeFiles/ccmake.dir/CursesDialog/cmCursesWidget.cxx.o
+[ 95%] Building CXX object Source/CMakeFiles/ccmake.dir/CursesDialog/ccmake.cxx.o
+Linking CXX executable ../bin/ccmake
+[ 95%] Built target ccmake
+Scanning dependencies of target cmake
+[ 95%] Building CXX object Source/CMakeFiles/cmake.dir/cmakemain.cxx.o
+Linking CXX executable ../bin/cmake
+[ 95%] Built target cmake
+Scanning dependencies of target cpack
+[ 95%] Building CXX object Source/CMakeFiles/cpack.dir/CPack/cpack.cxx.o
+Linking CXX executable ../bin/cpack
+[ 95%] Built target cpack
+Scanning dependencies of target ctest
+[ 96%] Building CXX object Source/CMakeFiles/ctest.dir/ctest.cxx.o
+Linking CXX executable ../bin/ctest
+[ 96%] Built target ctest
+Scanning dependencies of target documentation
+[ 96%] Generating ../Docs/ctest.txt
+[ 97%] Generating ../Docs/cpack.txt
+[ 97%] Generating ../Docs/ccmake.txt
+[ 97%] Generating ../Docs/cmake.txt
+[ 97%] Built target documentation
+Scanning dependencies of target CMakeLibTests
+[ 97%] Building CXX object Tests/CMakeLib/CMakeFiles/CMakeLibTests.dir/CMakeLibTests.cxx.o
+[ 98%] Building CXX object Tests/CMakeLib/CMakeFiles/CMakeLibTests.dir/testUTF8.cxx.o
+[ 98%] Building CXX object Tests/CMakeLib/CMakeFiles/CMakeLibTests.dir/testXMLParser.cxx.o
+[ 98%] Building CXX object Tests/CMakeLib/CMakeFiles/CMakeLibTests.dir/testXMLSafe.cxx.o
+Linking CXX executable CMakeLibTests
+[ 98%] Built target CMakeLibTests
+Scanning dependencies of target runcompilecommands
+[ 98%] Building CXX object Tests/CMakeLib/CMakeFiles/runcompilecommands.dir/run_compile_commands.cxx.o
+Linking CXX executable runcompilecommands
+[ 98%] Built target runcompilecommands
+Scanning dependencies of target foo
+[100%] Building CXX object Tests/FindPackageModeMakefileTest/CMakeFiles/foo.dir/foo.cpp.o
+Linking CXX static library libfoo.a
+[100%] Built target foo
++ make DESTDIR=/tmp/cmake.9ZTnCV/pkg install
+[  3%] Built target cmIML_test
+[  9%] Built target cmsys
+[ 10%] Built target cmsysTestDynload
+[ 12%] Built target cmsys_c
+[ 12%] Built target cmsysTestProcess
+[ 12%] Built target cmsysTestSharedForward
+[ 14%] Built target cmsysTestsC
+[ 18%] Built target cmsysTestsCxx
+[ 18%] Built target cmcompress
+[ 34%] Built target cmForm
+[ 70%] Built target CMakeLib
+[ 75%] Built target CPackLib
+[ 91%] Built target CTestLib
+[ 95%] Built target ccmake
+[ 95%] Built target cmake
+[ 95%] Built target cpack
+[ 96%] Built target ctest
+[ 97%] Built target documentation
+[ 98%] Built target CMakeLibTests
+[ 98%] Built target runcompilecommands
+[100%] Built target foo
+Install the project...
+-- Install configuration: ""
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/doc/Copyright.txt
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindSDL_ttf.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindArmadillo.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindFLEX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindosgGA.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindPostgreSQL.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindFLTK.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeFortranCompilerABI.F
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Findosg.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/TestForANSIForScope.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeDetermineCompilerABI.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindCoin3D.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeTestRCCompiler.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindwxWidgets.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CheckCCompilerFlag.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakePlatformId.h.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeCCompilerABI.c
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/TestForANSIStreamHeaders.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/readme.txt
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CPack.Description.plist.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeNMakeFindMake.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeGenericSystem.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/ITKCompatibility.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeTestWatcomVersion.c
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindRuby.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindLibXml2.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindSDL_mixer.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindBullet.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindosgDB.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CheckTypeSize.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeSystem.cmake.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/BundleUtilities.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindCUDA
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindCUDA/run_nvcc.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindCUDA/make2cmake.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindCUDA/parse_cubin.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeTestASM_MASMCompiler.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeTestCCompiler.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindLibXslt.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeTestGNU.c
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindGIF.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeCInformation.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/IntelVSImplicitPath
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/IntelVSImplicitPath/hello.f
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/IntelVSImplicitPath/CMakeLists.txt
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/IntelVSImplicitPath/detect.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindLAPACK.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Qt4ConfigDependentSettings.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeVS7FindMake.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/UseSWIG.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindosgUtil.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/MacOSXFrameworkInfo.plist.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindHTMLHelp.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CheckFunctionExists.c
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindOpenSSL.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeJOMFindMake.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindSDL_net.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindosgAnimation.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeASM_MASMInformation.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeDetermineVSServicePack.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeFindWMake.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeDetermineCCompiler.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CheckForPthreads.c
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindGnuplot.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindAVIFile.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Dart.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/AddFileDependencies.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeTestCXXCompiler.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/kde3init_dummy.cpp.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMake.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/SystemInformation.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindJNI.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindBLAS.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeBuildSettings.cmake.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindosgManipulator.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/Intel-CXX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/Clang-C.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/PathScale-C.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/G95-Fortran.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/MIPSpro-C.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/MIPSpro-Fortran.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/TinyCC-C.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/SunPro-Fortran.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/PathScale-Fortran.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/PGI-Fortran.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/MIPSpro-CXX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/VisualAge-CXX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/Absoft-Fortran.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/XL.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/HP-CXX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/Intel-C.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/SCO-C.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/GNU-Fortran.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/XL-Fortran.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/PGI-C.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/Cray-CXX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/PathScale.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/GNU-C.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/HP-C.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/VisualAge-C.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/Clang-CXX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/Intel-ASM.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/PathScale-CXX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/XL-C.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/PGI-CXX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/Intel-Fortran.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/GNU-CXX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/XL-ASM.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/SCO-CXX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/SunPro-C.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/Cray-Fortran.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/XL-CXX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/Cray-C.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/SCO.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/PGI.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/GNU-ASM.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/SunPro-ASM.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/GNU.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/SunPro-CXX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/HP-ASM.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/NAG-Fortran.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/HP-Fortran.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Compiler/VisualAge-Fortran.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeDetermineASM_MASMCompiler.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/InstallRequiredSystemLibraries.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeASMInformation.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindWget.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CheckLibraryExists.lists.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/ProcessorCount.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindCABLE.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeFortranCompilerId.F.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindPythonLibs.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeTestCompilerCommon.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeFortranInformation.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CPackBundle.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeFindCodeBlocks.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindLibArchive.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/UseVTK40.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CPack.RuntimeScript.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CheckSizeOf.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/TestEndianess.c.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CPack.OSXScriptLauncher.rsrc.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/WriteBasicConfigVersionFile.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindosgParticle.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeJavaInformation.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeParseImplicitLinkInfo.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/DeployQt4.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CPack.Info.plist.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindPNG.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/KDE3Macros.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindMPEG2.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindSelfPackers.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeBorlandFindMake.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/TestForSTDNamespace.cxx
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CTest.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeExtraGeneratorDetermineCompilerMacrosAndIncludeDirs.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/SquishRunTestCase.bat
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CPackComponent.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/AutomocInfo.cmake.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindDevIL.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindGettext.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindQt4.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindThreads.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CheckIncludeFile.cxx.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindPackageHandleStandardArgs.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindMotif.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindosgVolume.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindDCMTK.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeFortranCompiler.cmake.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindGit.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Use_wxWindows.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindMPEG.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindSDL_sound.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindLua51.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/kde3uic.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeVS7BackwardCompatibility.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeTestForFreeVC.cxx
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindCUDA.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeCXXCompiler.cmake.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/MacroAddFileDependencies.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeASMCompiler.cmake.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindSubversion.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeASM_NASMInformation.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindPHP4.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/TestForSSTREAM.cxx
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindGDAL.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CPackRPM.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindosgWidget.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeRCCompiler.cmake.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeDetermineASM-ATTCompiler.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeTestNMakeCLVersion.c
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindLATEX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeTestASMCompiler.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeRCInformation.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindOpenGL.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeFindPackageMode.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindLua50.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeASM-ATTInformation.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/UseJavaClassFilelist.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CPackDeb.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeParseArguments.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CheckSymbolExists.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CTestScriptMode.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/TestBigEndian.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindGLUT.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/TestForSTDNamespace.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindPackageMessage.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindJasper.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindQt.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindFreetype.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeCCompiler.cmake.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeConfigurableFile.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindQuickTime.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeCXXInformation.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindPhysFS.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeTestFortranCompiler.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CheckCXXSourceRuns.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindPerlLibs.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindProtobuf.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindKDE3.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/RepositoryInfo.txt.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeDetermineFortranCompiler.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindX11.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CPack.STGZ_Header.sh.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeDetermineASM_NASMCompiler.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/UseVTKConfig40.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeDetermineJavaCompiler.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeTestASM_NASMCompiler.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindDoxygen.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeTestASM-ATTCompiler.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Documentation.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeForceCompiler.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/UseJavaSymlinks.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindGCCXML.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeFindXCode.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CPack.OSXX11.Info.plist.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeCXXCompilerId.cpp.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CPack.DS_Store.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CheckIncludeFile.c.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeExportBuildSettings.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CheckFunctionExists.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/UseEcos.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindITK.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindEXPAT.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindGnuTLS.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindGTK2.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeBackwardCompatibilityC.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindGLU.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CPackZIP.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindMatlab.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindJPEG.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/DummyCXXFile.cxx
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/NSIS.InstallOptions.ini.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindMFC.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindWish.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeUnixFindMake.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindRTI.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeTestJavaCompiler.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindFLTK2.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FortranCInterface.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindSDL.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeAddNewLanguage.txt
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindosgTerrain.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/TestForSSTREAM.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeVerifyManifest.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindOpenAL.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindPerl.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CheckVariableExists.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CheckCXXSourceCompiles.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CheckCSourceCompiles.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindosgViewer.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeMSYSFindMake.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindwxWindows.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CPack.OSXScriptLauncher.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/GenerateExportHeader.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/VTKCompatibility.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeBackwardCompatibilityCXX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/UseQt4.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeFindKDevelop3.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindCurses.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CheckCXXCompilerFlag.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CheckTypeSizeMap.cmake.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindQt3.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/UsePkgConfig.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeFindFrameworks.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/UsewxWidgets.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindTclsh.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/UseVTKBuildSettings40.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeCCompilerId.c.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FortranCInterface
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FortranCInterface/mymodule_.c
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FortranCInterface/mymodule.f90
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FortranCInterface/my_module.f90
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FortranCInterface/call_mod.f90
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FortranCInterface/my_sub.f
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FortranCInterface/CMakeLists.txt
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FortranCInterface/Macro.h.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FortranCInterface/Verify
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FortranCInterface/Verify/CMakeLists.txt
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FortranCInterface/Verify/main.c
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FortranCInterface/Verify/VerifyFortran.f
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FortranCInterface/Verify/VerifyCXX.cxx
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FortranCInterface/Verify/VerifyC.c
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FortranCInterface/my_module_.c
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FortranCInterface/main.F
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FortranCInterface/call_sub.f
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FortranCInterface/symbol.c.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FortranCInterface/Input.cmake.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FortranCInterface/mysub.f
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FortranCInterface/Detect.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FortranCInterface/Output.cmake.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CheckIncludeFile.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/NSIS.template.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeDetermineCompilerId.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindKDE4.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CheckTypeSize.c.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindZLIB.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindGTest.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindASPELL.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindosgProducer.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindJava.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/ecos_clean.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FLTKCompatibility.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindMPI.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CheckIncludeFiles.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeDetermineASMCompiler.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeFindBinUtils.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/exportheader.cmake.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/UseJava.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CheckFortranFunctionExists.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Darwin-icpc.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/AIX-XL-ASM.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Linux-VisualAge-Fortran.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Windows-Borland-CXX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/SunOS-GNU-CXX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/GNUtoMS_lib.bat.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Xenix.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/SunOS-GNU.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Linux-Intel.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/QNX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Windows-cl.cmake.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Windows-Intel-Fortran.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Windows-GNU.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Windows-wcl386.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/AIX-VisualAge-Fortran.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Darwin-VisualAge-CXX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/FreeBSD.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/SunOS-GNU-Fortran.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Windows-GNU-CXX-ABI.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/AIX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Linux-NAG-Fortran.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/BlueGeneP-dynamic-XL-Fortran.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Linux-PathScale-CXX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Linux-SunPro-CXX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/UnixPaths.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/RISCos.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/HP-UX-GNU.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/BlueGeneP-dynamic-GNU-C.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/OpenBSD.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Linux-PGI-Fortran.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/BeOS.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/BlueGeneP-static-XL-CXX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/BlueGeneP-dynamic-GNU-CXX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/AIX-XL-CXX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Darwin-VisualAge-C.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Darwin-GNU-C.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/AIX-VisualAge-C.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Windows-cl.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/BlueGeneP-static-GNU-C.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Generic-ADSP-C.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Linux-Clang-CXX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/SunOS-GNU-C.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/AIX-GNU-C.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/BlueGeneP-dynamic-GNU-Fortran.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/NetBSD.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/IRIX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Windows-GNU-C-ABI.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/BlueGeneP-static-XL-Fortran.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Darwin-GNU-CXX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Generic-ADSP-CXX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Linux-VisualAge-C.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Darwin-Absoft-Fortran.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/CYGWIN-GNU-CXX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/AIX-XL-C.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/AIX-VisualAge-CXX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/OpenVMS.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Linux-XL-CXX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Windows-GNU-Fortran.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/CYGWIN-windres.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/BSDOS.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Catamount.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Generic.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Generic-ADSP-Common.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/WindowsPaths.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/AIX-GNU-Fortran.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/BlueGeneP-dynamic-XL-CXX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/HP-UX-HP.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/CYGWIN-GNU-C.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/BlueGeneP-static-GNU-CXX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Linux-PGI.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Windows-Borland-C.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Linux-PGI-C.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Linux-Intel-CXX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Linux-XL-Fortran.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Linux-GNU-C.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/HP-UX-GNU-C.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Windows-GNU-C.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Linux-VisualAge-CXX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/HP-UX-HP-Fortran.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/AIX-GNU-CXX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/HP-UX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/CYGWIN.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Linux-GNU-Fortran.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/AIX-XL.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Linux-XL-C.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Darwin-XL-C.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/UnixWare.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/HP-UX-GNU-Fortran.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/SINIX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Windows-GNU-CXX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Windows.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/MP-RAS.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/BlueGeneL.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Windows-Intel-C.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/syllable.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Windows-Intel.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Linux-PGI-CXX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/CYGWIN-GNU-Fortran.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/IRIX64.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Linux-PathScale.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/BlueGeneP-static-XL-C.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/eCos.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/OSF1.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Windows-df.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/CYGWIN-GNU.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/HP-UX-GNU-CXX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/kFreeBSD.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Darwin-XL-CXX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Darwin-NAG-Fortran.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Generic-ADSP-ASM.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Windows-Borland.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Generic-SDCC-C.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/AIX-XL-Fortran.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Darwin-icc.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/gas.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Linux-PathScale-Fortran.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Linux-Intel-C.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Linux-Intel-Fortran.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Windows-windres.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/BlueGeneP-static-GNU-Fortran.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/BlueGeneP-dynamic-XL-C.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/GNUtoMS_lib.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/BlueGeneP-static.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Linux-GNU.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Linux.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/HP-UX-HP-ASM.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/cl.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Linux-Clang-C.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Linux-como.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Tru64.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/HP-UX-HP-CXX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Darwin.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/AIX-GNU.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/SCO_SV.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Windows-Intel-ASM.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Linux-Absoft-Fortran.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/BlueGeneP-dynamic.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Windows-NMcl.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Linux-PathScale-C.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Linux-GNU-CXX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Darwin-GNU.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Windows-G95-Fortran.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Darwin-GNU-Fortran.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/GNU.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/UNIX_SV.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/HP-UX-HP-C.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Linux-TinyCC-C.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/ULTRIX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/SunOS.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Haiku.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/DragonFly.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Windows-GNU-Fortran-ABI.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/BlueGeneP-base.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Platform/Windows-Intel-CXX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeVS6BackwardCompatibility.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindSDL_image.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/SelectLibraryConfigurations.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/BasicConfigVersion-SameMajorVersion.cmake.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/TestForAnsiForScope.cxx
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindosgIntrospection.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindosgShadow.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindosgSim.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindCVS.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindPythonInterp.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindHSPELL.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindVTK.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CheckPrototypeDefinition.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindImageMagick.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/MacOSXBundleInfo.plist.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CPack.distribution.dist.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindGTK.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindosgText.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CPack.background.png.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeVS71FindMake.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakePushCheckState.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindCxxTest.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/TestCXXAcceptsFlag.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindTIFF.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CheckIncludeFileCXX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeMinGWFindMake.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Qt4Macros.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindOpenSceneGraph.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/ExternalProject.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindDart.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FeatureSummary.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeDependentOption.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CheckStructHasMember.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/SquishTestScript.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CheckVariableExists.c
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindOpenThreads.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindCygwin.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeDetermineCXXCompiler.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeDetermineRCCompiler.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeSystemSpecificInformation.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindSquish.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CheckLibraryExists.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/GNUInstallDirs.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindosgFX.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CheckCXXSymbolExists.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindSWIG.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindBISON.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeDetermineSystem.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CheckCSourceRuns.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeCompilerABI.h
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeVS9FindMake.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/GetPrerequisites.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CTestTargets.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindTclStub.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/SystemInformation.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CPack.VolumeIcon.icns.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindUnixCommands.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindCURL.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeVS11FindMake.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeCommonLanguageInclude.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CheckPrototypeDefinition.c.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CPack.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindBoost.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindHDF5.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindPkgConfig.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CPack.OSXX11.main.scpt.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/TestForANSIStreamHeaders.cxx
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindProducer.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindXMLRPC.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindALSA.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/Findosg_functions.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeFindEclipseCDT4.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindBZip2.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeJavaCompiler.cmake.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeImportBuildSettings.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/SquishRunTestCase.sh
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CPackNSIS.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeVS10FindMake.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakePrintSystemInformation.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindOpenMP.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/DartConfiguration.tcl.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeVS6FindMake.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindTCL.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/CMakeVS8FindMake.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindCups.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Modules/FindPike.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Templates
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Templates/EXEHeader.dsptemplate
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Templates/CMakeVisualStudio6Configurations.cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Templates/EXEFooter.dsptemplate
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Templates/EXEWinHeader.dsptemplate
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Templates/UtilityFooter.dsptemplate
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Templates/CMakeVSMacros2.vsmacros
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Templates/CPackConfig.cmake.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Templates/CTestScript.cmake.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Templates/DLLHeader.dsptemplate
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Templates/CPack.GenericDescription.txt
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Templates/staticLibFooter.dsptemplate
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Templates/CMakeVSMacros1.vsmacros
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Templates/staticLibHeader.dsptemplate
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Templates/DLLFooter.dsptemplate
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Templates/CPack.GenericLicense.txt
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Templates/CPack.GenericWelcome.txt
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Templates/cygwin-package.sh.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Templates/TestDriver.cxx.in
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Templates/AppleInfo.plist
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/Templates/UtilityHeader.dsptemplate
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/doc/cmsys/Copyright.txt
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/doc/cmcompress/Copyright.txt
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/cmake-2.8/include/cmCPluginAPI.h
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/bin/ccmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/bin/cmake
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/bin/cpack
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/bin/ctest
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/man/man1/cmake.1
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/man/man1/cmakecommands.1
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/man/man1/cmakecompat.1
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/man/man1/cmakeprops.1
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/man/man1/cmakepolicies.1
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/man/man1/cmakevars.1
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/man/man1/cmakemodules.1
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/man/man1/ctest.1
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/man/man1/cpack.1
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/man/man1/ccmake.1
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/doc/cmake.html
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/doc/cmake-policies.html
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/doc/cmake-properties.html
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/doc/cmake-variables.html
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/doc/cmake-modules.html
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/doc/cmake-commands.html
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/doc/cmake-compatcommands.html
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/doc/ctest.html
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/doc/cpack.html
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/doc/ccmake.html
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/doc/cmake.txt
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/doc/cmake.docbook
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/doc/cmake-policies.txt
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/doc/cmake-properties.txt
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/doc/cmake-variables.txt
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/doc/cmake-modules.txt
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/doc/cmake-commands.txt
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/doc/cmake-compatcommands.txt
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/doc/ctest.txt
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/doc/ctest.docbook
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/doc/cpack.txt
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/doc/cpack.docbook
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/doc/ccmake.txt
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/doc/ccmake.docbook
+-- Installing: /tmp/cmake.9ZTnCV/pkg/ffp/share/aclocal/cmake.m4
++ rm -f /tmp/cmake.9ZTnCV/pkg/ffp/share/doc//ccmake.docbook /tmp/cmake.9ZTnCV/pkg/ffp/share/doc//cmake.docbook /tmp/cmake.9ZTnCV/pkg/ffp/share/doc//cpack.docbook /tmp/cmake.9ZTnCV/pkg/ffp/share/doc//ctest.docbook
++ mkdir -p /tmp/cmake.9ZTnCV/pkg/install
++ cp /ffp/home/root/src/cmake/DESCR /ffp/home/root/src/cmake/HOMEPAGE /tmp/cmake.9ZTnCV/pkg/install/
++ cd /tmp/cmake.9ZTnCV/pkg
++ makepkg cmake 2.8.7 1
+Creating /tmp/cmake-2.8.7-arm-1.tar ...
