@@ -1,0 +1,198 @@
+++ basename ./nzbget.funpkg .funpkg
++ PN=nzbget
+++ ls nzbget-0.8.0r394.tar.gz
+++ egrep -o '[0-9][0-9.]*[0-9]r[0-9]*'
++ PV=0.8.0r394
++ PR=1
++ . ./config.ffp
+++ GNU_HOST=
+++ GNU_TARGET=
+++ FFP_CFLAGS='-I/ffp/include -O2'
+++ FFP_LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
+++ '[' '!' -d '' ']'
+++ TMPDIR=/tmp
+++ export TMPDIR
+++ mandir=/ffp/share/man
+++ infodir=/ffp/share/info
+++ docdir=/ffp/share/doc
+++ pwd
++ X=/ffp/home/root/src/nzbget
+++ mktemp -t -d nzbget.XXXXXX
++ W=/tmp/nzbget.B0ruIS
++ D=/tmp/nzbget.B0ruIS/pkg
++ cd /tmp/nzbget.B0ruIS
++ tar xf /ffp/home/root/src/nzbget/nzbget-0.8.0r394.tar.gz
++ cd nzbget-0.8.0-testing
++ patch ./TLS.cpp /ffp/home/root/src/nzbget/tls.cpp.patch
+patching file ./TLS.cpp
+Hunk #1 succeeded at 91 with fuzz 1.
++ patch ./Options.cpp /ffp/home/root/src/nzbget/options.cpp.patch
+patching file ./Options.cpp
++ LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib -lcrypto'
++ ./configure --prefix=/ffp --build= --host= --mandir=/ffp/share/man --infodir=/ffp/share/info
+checking for a BSD-compatible install... /ffp/bin/install -c
+checking whether build environment is sane... yes
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking build system type... armv5tejl-unknown-linux-gnu
+checking host system type... armv5tejl-unknown-linux-gnu
+checking for g++... g++
+checking whether the C++ compiler works... yes
+checking for C++ compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking for style of include used by make... GNU
+checking dependency style of g++... gcc3
+checking for tar... /ffp/bin/tar
+checking for make... /ffp/bin/make
+checking how to run the C++ preprocessor... g++ -E
+checking for grep that handles long lines and -e... /ffp/bin/grep
+checking for egrep... /ffp/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking sys/prctl.h usability... yes
+checking sys/prctl.h presence... yes
+checking for sys/prctl.h... yes
+checking for library containing pthread_create... -lpthread
+checking for library containing socket... none required
+checking for library containing inet_addr... none required
+checking for library containing hstrerror... none required
+checking for getopt_long... yes
+checking for stat64... yes
+checking for ctime_r... yes, and it takes 2 arguments
+checking for getaddrinfo... yes
+checking for library containing getaddrinfo... none required
+checking for pthread_spin_init... yes
+checking for library containing pthread_spin_init... none required
+checking for type of socket length (socklen_t)... socklen_t
+checking for pkg-config... /ffp/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for libxml2... yes
+checking libxml/tree.h usability... yes
+checking libxml/tree.h presence... yes
+checking for libxml/tree.h... yes
+checking for library containing xmlNewNode... none required
+checking whether to use curses... yes
+checking ncurses.h usability... yes
+checking ncurses.h presence... yes
+checking for ncurses.h... yes
+checking for library containing refresh... -lncurses
+checking whether to include code for par-checking... yes
+checking for libsigc... yes
+checking sigc++/type_traits.h usability... yes
+checking sigc++/type_traits.h presence... yes
+checking for sigc++/type_traits.h... yes
+checking libpar2/libpar2.h usability... yes
+checking libpar2/libpar2.h presence... yes
+checking for libpar2/libpar2.h... yes
+checking for library containing _ZN12Par2RepairerC1Ev... -lpar2
+checking for libpar2 linking... yes
+checking whether libpar2 supports cancelling... no
+checking whether to use TLS/SSL... yes
+checking gnutls/gnutls.h usability... no
+checking gnutls/gnutls.h presence... no
+checking for gnutls/gnutls.h... no
+checking openssl/ssl.h usability... yes
+checking openssl/ssl.h presence... yes
+checking for openssl/ssl.h... yes
+checking for library containing SSL_library_init... -lssl
+checking whether to include all debugging code... no
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
++ make
+/ffp/bin/make  all-am
+make[1]: Entering directory `/tmp/nzbget.B0ruIS/nzbget-0.8.0-testing'
+if g++ -DHAVE_CONFIG_H -I. -I. -I.   -I/ffp/include/libxml2   -I/usr/include -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include   -I/usr/include -I/usr/include -I/usr/include  -g -O2 -MT ArticleDownloader.o -MD -MP -MF ".deps/ArticleDownloader.Tpo" -c -o ArticleDownloader.o ArticleDownloader.cpp; \
+	then mv -f ".deps/ArticleDownloader.Tpo" ".deps/ArticleDownloader.Po"; else rm -f ".deps/ArticleDownloader.Tpo"; exit 1; fi
+if g++ -DHAVE_CONFIG_H -I. -I. -I.   -I/ffp/include/libxml2   -I/usr/include -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include   -I/usr/include -I/usr/include -I/usr/include  -g -O2 -MT BinRpc.o -MD -MP -MF ".deps/BinRpc.Tpo" -c -o BinRpc.o BinRpc.cpp; \
+	then mv -f ".deps/BinRpc.Tpo" ".deps/BinRpc.Po"; else rm -f ".deps/BinRpc.Tpo"; exit 1; fi
+if g++ -DHAVE_CONFIG_H -I. -I. -I.   -I/ffp/include/libxml2   -I/usr/include -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include   -I/usr/include -I/usr/include -I/usr/include  -g -O2 -MT ColoredFrontend.o -MD -MP -MF ".deps/ColoredFrontend.Tpo" -c -o ColoredFrontend.o ColoredFrontend.cpp; \
+	then mv -f ".deps/ColoredFrontend.Tpo" ".deps/ColoredFrontend.Po"; else rm -f ".deps/ColoredFrontend.Tpo"; exit 1; fi
+if g++ -DHAVE_CONFIG_H -I. -I. -I.   -I/ffp/include/libxml2   -I/usr/include -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include   -I/usr/include -I/usr/include -I/usr/include  -g -O2 -MT Connection.o -MD -MP -MF ".deps/Connection.Tpo" -c -o Connection.o Connection.cpp; \
+	then mv -f ".deps/Connection.Tpo" ".deps/Connection.Po"; else rm -f ".deps/Connection.Tpo"; exit 1; fi
+if g++ -DHAVE_CONFIG_H -I. -I. -I.   -I/ffp/include/libxml2   -I/usr/include -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include   -I/usr/include -I/usr/include -I/usr/include  -g -O2 -MT Decoder.o -MD -MP -MF ".deps/Decoder.Tpo" -c -o Decoder.o Decoder.cpp; \
+	then mv -f ".deps/Decoder.Tpo" ".deps/Decoder.Po"; else rm -f ".deps/Decoder.Tpo"; exit 1; fi
+if g++ -DHAVE_CONFIG_H -I. -I. -I.   -I/ffp/include/libxml2   -I/usr/include -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include   -I/usr/include -I/usr/include -I/usr/include  -g -O2 -MT DiskState.o -MD -MP -MF ".deps/DiskState.Tpo" -c -o DiskState.o DiskState.cpp; \
+	then mv -f ".deps/DiskState.Tpo" ".deps/DiskState.Po"; else rm -f ".deps/DiskState.Tpo"; exit 1; fi
+if g++ -DHAVE_CONFIG_H -I. -I. -I.   -I/ffp/include/libxml2   -I/usr/include -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include   -I/usr/include -I/usr/include -I/usr/include  -g -O2 -MT DownloadInfo.o -MD -MP -MF ".deps/DownloadInfo.Tpo" -c -o DownloadInfo.o DownloadInfo.cpp; \
+	then mv -f ".deps/DownloadInfo.Tpo" ".deps/DownloadInfo.Po"; else rm -f ".deps/DownloadInfo.Tpo"; exit 1; fi
+if g++ -DHAVE_CONFIG_H -I. -I. -I.   -I/ffp/include/libxml2   -I/usr/include -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include   -I/usr/include -I/usr/include -I/usr/include  -g -O2 -MT Frontend.o -MD -MP -MF ".deps/Frontend.Tpo" -c -o Frontend.o Frontend.cpp; \
+	then mv -f ".deps/Frontend.Tpo" ".deps/Frontend.Po"; else rm -f ".deps/Frontend.Tpo"; exit 1; fi
+if g++ -DHAVE_CONFIG_H -I. -I. -I.   -I/ffp/include/libxml2   -I/usr/include -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include   -I/usr/include -I/usr/include -I/usr/include  -g -O2 -MT Log.o -MD -MP -MF ".deps/Log.Tpo" -c -o Log.o Log.cpp; \
+	then mv -f ".deps/Log.Tpo" ".deps/Log.Po"; else rm -f ".deps/Log.Tpo"; exit 1; fi
+if g++ -DHAVE_CONFIG_H -I. -I. -I.   -I/ffp/include/libxml2   -I/usr/include -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include   -I/usr/include -I/usr/include -I/usr/include  -g -O2 -MT LoggableFrontend.o -MD -MP -MF ".deps/LoggableFrontend.Tpo" -c -o LoggableFrontend.o LoggableFrontend.cpp; \
+	then mv -f ".deps/LoggableFrontend.Tpo" ".deps/LoggableFrontend.Po"; else rm -f ".deps/LoggableFrontend.Tpo"; exit 1; fi
+if g++ -DHAVE_CONFIG_H -I. -I. -I.   -I/ffp/include/libxml2   -I/usr/include -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include   -I/usr/include -I/usr/include -I/usr/include  -g -O2 -MT NCursesFrontend.o -MD -MP -MF ".deps/NCursesFrontend.Tpo" -c -o NCursesFrontend.o NCursesFrontend.cpp; \
+	then mv -f ".deps/NCursesFrontend.Tpo" ".deps/NCursesFrontend.Po"; else rm -f ".deps/NCursesFrontend.Tpo"; exit 1; fi
+if g++ -DHAVE_CONFIG_H -I. -I. -I.   -I/ffp/include/libxml2   -I/usr/include -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include   -I/usr/include -I/usr/include -I/usr/include  -g -O2 -MT NNTPConnection.o -MD -MP -MF ".deps/NNTPConnection.Tpo" -c -o NNTPConnection.o NNTPConnection.cpp; \
+	then mv -f ".deps/NNTPConnection.Tpo" ".deps/NNTPConnection.Po"; else rm -f ".deps/NNTPConnection.Tpo"; exit 1; fi
+if g++ -DHAVE_CONFIG_H -I. -I. -I.   -I/ffp/include/libxml2   -I/usr/include -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include   -I/usr/include -I/usr/include -I/usr/include  -g -O2 -MT NZBFile.o -MD -MP -MF ".deps/NZBFile.Tpo" -c -o NZBFile.o NZBFile.cpp; \
+	then mv -f ".deps/NZBFile.Tpo" ".deps/NZBFile.Po"; else rm -f ".deps/NZBFile.Tpo"; exit 1; fi
+if g++ -DHAVE_CONFIG_H -I. -I. -I.   -I/ffp/include/libxml2   -I/usr/include -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include   -I/usr/include -I/usr/include -I/usr/include  -g -O2 -MT NetAddress.o -MD -MP -MF ".deps/NetAddress.Tpo" -c -o NetAddress.o NetAddress.cpp; \
+	then mv -f ".deps/NetAddress.Tpo" ".deps/NetAddress.Po"; else rm -f ".deps/NetAddress.Tpo"; exit 1; fi
+if g++ -DHAVE_CONFIG_H -I. -I. -I.   -I/ffp/include/libxml2   -I/usr/include -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include   -I/usr/include -I/usr/include -I/usr/include  -g -O2 -MT NewsServer.o -MD -MP -MF ".deps/NewsServer.Tpo" -c -o NewsServer.o NewsServer.cpp; \
+	then mv -f ".deps/NewsServer.Tpo" ".deps/NewsServer.Po"; else rm -f ".deps/NewsServer.Tpo"; exit 1; fi
+if g++ -DHAVE_CONFIG_H -I. -I. -I.   -I/ffp/include/libxml2   -I/usr/include -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include   -I/usr/include -I/usr/include -I/usr/include  -g -O2 -MT Observer.o -MD -MP -MF ".deps/Observer.Tpo" -c -o Observer.o Observer.cpp; \
+	then mv -f ".deps/Observer.Tpo" ".deps/Observer.Po"; else rm -f ".deps/Observer.Tpo"; exit 1; fi
+if g++ -DHAVE_CONFIG_H -I. -I. -I.   -I/ffp/include/libxml2   -I/usr/include -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include   -I/usr/include -I/usr/include -I/usr/include  -g -O2 -MT Options.o -MD -MP -MF ".deps/Options.Tpo" -c -o Options.o Options.cpp; \
+	then mv -f ".deps/Options.Tpo" ".deps/Options.Po"; else rm -f ".deps/Options.Tpo"; exit 1; fi
+if g++ -DHAVE_CONFIG_H -I. -I. -I.   -I/ffp/include/libxml2   -I/usr/include -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include   -I/usr/include -I/usr/include -I/usr/include  -g -O2 -MT ParChecker.o -MD -MP -MF ".deps/ParChecker.Tpo" -c -o ParChecker.o ParChecker.cpp; \
+	then mv -f ".deps/ParChecker.Tpo" ".deps/ParChecker.Po"; else rm -f ".deps/ParChecker.Tpo"; exit 1; fi
+if g++ -DHAVE_CONFIG_H -I. -I. -I.   -I/ffp/include/libxml2   -I/usr/include -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include   -I/usr/include -I/usr/include -I/usr/include  -g -O2 -MT PrePostProcessor.o -MD -MP -MF ".deps/PrePostProcessor.Tpo" -c -o PrePostProcessor.o PrePostProcessor.cpp; \
+	then mv -f ".deps/PrePostProcessor.Tpo" ".deps/PrePostProcessor.Po"; else rm -f ".deps/PrePostProcessor.Tpo"; exit 1; fi
+if g++ -DHAVE_CONFIG_H -I. -I. -I.   -I/ffp/include/libxml2   -I/usr/include -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include   -I/usr/include -I/usr/include -I/usr/include  -g -O2 -MT QueueCoordinator.o -MD -MP -MF ".deps/QueueCoordinator.Tpo" -c -o QueueCoordinator.o QueueCoordinator.cpp; \
+	then mv -f ".deps/QueueCoordinator.Tpo" ".deps/QueueCoordinator.Po"; else rm -f ".deps/QueueCoordinator.Tpo"; exit 1; fi
+if g++ -DHAVE_CONFIG_H -I. -I. -I.   -I/ffp/include/libxml2   -I/usr/include -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include   -I/usr/include -I/usr/include -I/usr/include  -g -O2 -MT QueueEditor.o -MD -MP -MF ".deps/QueueEditor.Tpo" -c -o QueueEditor.o QueueEditor.cpp; \
+	then mv -f ".deps/QueueEditor.Tpo" ".deps/QueueEditor.Po"; else rm -f ".deps/QueueEditor.Tpo"; exit 1; fi
+if g++ -DHAVE_CONFIG_H -I. -I. -I.   -I/ffp/include/libxml2   -I/usr/include -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include   -I/usr/include -I/usr/include -I/usr/include  -g -O2 -MT RemoteClient.o -MD -MP -MF ".deps/RemoteClient.Tpo" -c -o RemoteClient.o RemoteClient.cpp; \
+	then mv -f ".deps/RemoteClient.Tpo" ".deps/RemoteClient.Po"; else rm -f ".deps/RemoteClient.Tpo"; exit 1; fi
+if g++ -DHAVE_CONFIG_H -I. -I. -I.   -I/ffp/include/libxml2   -I/usr/include -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include   -I/usr/include -I/usr/include -I/usr/include  -g -O2 -MT RemoteServer.o -MD -MP -MF ".deps/RemoteServer.Tpo" -c -o RemoteServer.o RemoteServer.cpp; \
+	then mv -f ".deps/RemoteServer.Tpo" ".deps/RemoteServer.Po"; else rm -f ".deps/RemoteServer.Tpo"; exit 1; fi
+if g++ -DHAVE_CONFIG_H -I. -I. -I.   -I/ffp/include/libxml2   -I/usr/include -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include   -I/usr/include -I/usr/include -I/usr/include  -g -O2 -MT Scanner.o -MD -MP -MF ".deps/Scanner.Tpo" -c -o Scanner.o Scanner.cpp; \
+	then mv -f ".deps/Scanner.Tpo" ".deps/Scanner.Po"; else rm -f ".deps/Scanner.Tpo"; exit 1; fi
+if g++ -DHAVE_CONFIG_H -I. -I. -I.   -I/ffp/include/libxml2   -I/usr/include -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include   -I/usr/include -I/usr/include -I/usr/include  -g -O2 -MT Scheduler.o -MD -MP -MF ".deps/Scheduler.Tpo" -c -o Scheduler.o Scheduler.cpp; \
+	then mv -f ".deps/Scheduler.Tpo" ".deps/Scheduler.Po"; else rm -f ".deps/Scheduler.Tpo"; exit 1; fi
+if g++ -DHAVE_CONFIG_H -I. -I. -I.   -I/ffp/include/libxml2   -I/usr/include -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include   -I/usr/include -I/usr/include -I/usr/include  -g -O2 -MT ScriptController.o -MD -MP -MF ".deps/ScriptController.Tpo" -c -o ScriptController.o ScriptController.cpp; \
+	then mv -f ".deps/ScriptController.Tpo" ".deps/ScriptController.Po"; else rm -f ".deps/ScriptController.Tpo"; exit 1; fi
+if g++ -DHAVE_CONFIG_H -I. -I. -I.   -I/ffp/include/libxml2   -I/usr/include -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include   -I/usr/include -I/usr/include -I/usr/include  -g -O2 -MT ServerPool.o -MD -MP -MF ".deps/ServerPool.Tpo" -c -o ServerPool.o ServerPool.cpp; \
+	then mv -f ".deps/ServerPool.Tpo" ".deps/ServerPool.Po"; else rm -f ".deps/ServerPool.Tpo"; exit 1; fi
+if g++ -DHAVE_CONFIG_H -I. -I. -I.   -I/ffp/include/libxml2   -I/usr/include -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include   -I/usr/include -I/usr/include -I/usr/include  -g -O2 -MT svn_version.o -MD -MP -MF ".deps/svn_version.Tpo" -c -o svn_version.o svn_version.cpp; \
+	then mv -f ".deps/svn_version.Tpo" ".deps/svn_version.Po"; else rm -f ".deps/svn_version.Tpo"; exit 1; fi
+if g++ -DHAVE_CONFIG_H -I. -I. -I.   -I/ffp/include/libxml2   -I/usr/include -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include   -I/usr/include -I/usr/include -I/usr/include  -g -O2 -MT TLS.o -MD -MP -MF ".deps/TLS.Tpo" -c -o TLS.o TLS.cpp; \
+	then mv -f ".deps/TLS.Tpo" ".deps/TLS.Po"; else rm -f ".deps/TLS.Tpo"; exit 1; fi
+if g++ -DHAVE_CONFIG_H -I. -I. -I.   -I/ffp/include/libxml2   -I/usr/include -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include   -I/usr/include -I/usr/include -I/usr/include  -g -O2 -MT Thread.o -MD -MP -MF ".deps/Thread.Tpo" -c -o Thread.o Thread.cpp; \
+	then mv -f ".deps/Thread.Tpo" ".deps/Thread.Po"; else rm -f ".deps/Thread.Tpo"; exit 1; fi
+if g++ -DHAVE_CONFIG_H -I. -I. -I.   -I/ffp/include/libxml2   -I/usr/include -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include   -I/usr/include -I/usr/include -I/usr/include  -g -O2 -MT Util.o -MD -MP -MF ".deps/Util.Tpo" -c -o Util.o Util.cpp; \
+	then mv -f ".deps/Util.Tpo" ".deps/Util.Po"; else rm -f ".deps/Util.Tpo"; exit 1; fi
+if g++ -DHAVE_CONFIG_H -I. -I. -I.   -I/ffp/include/libxml2   -I/usr/include -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include   -I/usr/include -I/usr/include -I/usr/include  -g -O2 -MT XmlRpc.o -MD -MP -MF ".deps/XmlRpc.Tpo" -c -o XmlRpc.o XmlRpc.cpp; \
+	then mv -f ".deps/XmlRpc.Tpo" ".deps/XmlRpc.Po"; else rm -f ".deps/XmlRpc.Tpo"; exit 1; fi
+if g++ -DHAVE_CONFIG_H -I. -I. -I.   -I/ffp/include/libxml2   -I/usr/include -I/ffp/include/sigc++-2.0 -I/ffp/lib/sigc++-2.0/include   -I/usr/include -I/usr/include -I/usr/include  -g -O2 -MT nzbget.o -MD -MP -MF ".deps/nzbget.Tpo" -c -o nzbget.o nzbget.cpp; \
+	then mv -f ".deps/nzbget.Tpo" ".deps/nzbget.Po"; else rm -f ".deps/nzbget.Tpo"; exit 1; fi
+g++  -g -O2  -L/ffp/lib -Wl,-rpath,/ffp/lib -lcrypto -L/ffp/lib -lxml2   -L/usr/lib -L/ffp/lib -lsigc-2.0   -L/usr/lib -L/usr/lib -L/usr/lib -o nzbget  ArticleDownloader.o BinRpc.o ColoredFrontend.o Connection.o Decoder.o DiskState.o DownloadInfo.o Frontend.o Log.o LoggableFrontend.o NCursesFrontend.o NNTPConnection.o NZBFile.o NetAddress.o NewsServer.o Observer.o Options.o ParChecker.o PrePostProcessor.o QueueCoordinator.o QueueEditor.o RemoteClient.o RemoteServer.o Scanner.o Scheduler.o ScriptController.o ServerPool.o svn_version.o TLS.o Thread.o Util.o XmlRpc.o nzbget.o  -lssl -lpar2 -lncurses -lpthread 
+make[1]: Leaving directory `/tmp/nzbget.B0ruIS/nzbget-0.8.0-testing'
++ make DESTDIR=/tmp/nzbget.B0ruIS/pkg install
+make[1]: Entering directory `/tmp/nzbget.B0ruIS/nzbget-0.8.0-testing'
+test -z "/ffp/bin" || mkdir -p -- "/tmp/nzbget.B0ruIS/pkg/ffp/bin"
+  /ffp/bin/install -c 'nzbget' '/tmp/nzbget.B0ruIS/pkg/ffp/bin/nzbget'
+make[1]: Nothing to be done for `install-data-am'.
+make[1]: Leaving directory `/tmp/nzbget.B0ruIS/nzbget-0.8.0-testing'
++ mkdir -p /tmp/nzbget.B0ruIS/pkg/install
++ cp /ffp/home/root/src/nzbget/DESCR /ffp/home/root/src/nzbget/HOMEPAGE /tmp/nzbget.B0ruIS/pkg/install/
++ mkdir -p /tmp/nzbget.B0ruIS/pkg/ffp/etc/
++ cp /ffp/home/root/src/nzbget/nzbget.conf /tmp/nzbget.B0ruIS/pkg/ffp/etc/
++ cd /tmp/nzbget.B0ruIS/pkg
++ makepkg nzbget 0.8.0r394 1
+Creating /tmp/nzbget-0.8.0r394-arm-1.tar ...

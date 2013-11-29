@@ -1,0 +1,11 @@
+--- Options.cpp.orig	2012-02-28 16:39:35.000000000 +0100
++++ Options.cpp	2012-02-28 16:40:59.000000000 +0100
+@@ -170,6 +170,8 @@
+ const char* PossibleConfigLocations[] =
+ 	{
+ 		"~/.nzbget",
++		"/ffp/etc/nzbget.conf",
++		"/ffp/local/etc/nzbget.conf",
+ 		"/etc/nzbget.conf",
+ 		"/usr/etc/nzbget.conf",
+ 		"/usr/local/etc/nzbget.conf",

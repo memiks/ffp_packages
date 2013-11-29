@@ -1,0 +1,18 @@
+@@ -91,6 +91,8 @@
+ #define xstrdup strdup
+ #define _(a) (a)
+ 
++#define STACK stack_st_GENERAL_NAME
++
+ char* xasprintf(const char* msg, ...)
+ {
+     char* szResult = (char*)malloc(2048); // should be enough for all messages
+@@ -1105,7 +1107,7 @@
+ 
+ #ifdef HAVE_OPENSSL
+     
+-    SSL_METHOD *ssl_method = NULL;
++    const SSL_METHOD *ssl_method = NULL;
+     
+     ssl_method = force_sslv3 ? SSLv3_client_method() : SSLv23_client_method();
+     if (!ssl_method)
