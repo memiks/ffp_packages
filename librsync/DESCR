@@ -1,0 +1,25 @@
+ibrsync is a free software library that implements the rsync remote-delta 
+algorithm. 
+This algorithm allows efficient remote updates of a file, without requiring 
+the old and new versions to both be present at the sending end. 
+The library uses a "streaming" design similar to that of zlib with the aim 
+of allowing it to be embedded into many different applications.
+
+librsync is currently pre-1.0, with most important functionality working.
+
+librsync is not wire-compatible with rsync 2.x, and is not likely to be in 
+the future.
+
+This is a new codebase, designed to allow a fresh start on the problem and 
+a cleaner design. 
+It may be used in a future version of rsync or a successor project. 
+Early steps towards that are visible in Wayne's rZync prototype, and 
+Martin's superlifter design.
+
+The librsync project was created by Martin Pool and is now being enhanced 
+and finished by the folks you can find on the project page.
+
+The librsync algorithm is based on the well-known and trustworthy rsync 
+software by Andrew Tridgell. 
+
+Homepage: http://librsync.sourceforge.net/
