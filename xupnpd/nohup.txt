@@ -1,0 +1,564 @@
+++ basename ./xupnpd.funpkg .funpkg
++ PN=xupnpd
++ PR=1
++ . ./config.ffp
+++ GNU_HOST=
+++ GNU_TARGET=
+++ FFP_CFLAGS='-I/ffp/include -O2'
+++ FFP_LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
+++ '[' '!' -d '' ']'
+++ TMPDIR=/tmp
+++ export TMPDIR
+++ mandir=/ffp/share/man
+++ infodir=/ffp/share/info
+++ docdir=/ffp/share/doc
+++ pwd
++ X=/ffp/home/root/fun_plug/ffp_packages/xupnpd
+++ mktemp -t -d xupnpd.XXXXXX
++ W=/tmp/xupnpd.IDYxjf
++ D=/tmp/xupnpd.IDYxjf/pkg
++ cd /tmp/xupnpd.IDYxjf
++ cat /ffp/home/root/fun_plug/ffp_packages/xupnpd/SRC_URI
++ xargs svn co
+A    xupnpd/LICENSE
+A    xupnpd/src
+A    xupnpd/src/debian
+A    xupnpd/src/debian/control
+A    xupnpd/src/debian/deb.sh
+A    xupnpd/src/profiles
+A    xupnpd/src/profiles/lg.lua
+A    xupnpd/src/profiles/wmp.lua
+A    xupnpd/src/profiles/bravia.lua
+A    xupnpd/src/profiles/wdtv.lua
+A    xupnpd/src/profiles/vlc-1_0_6.lua
+A    xupnpd/src/profiles/xbox360.lua
+A    xupnpd/src/profiles/samsung.lua
+A    xupnpd/src/profiles/skel
+A    xupnpd/src/profiles/skel/skel.lua
+A    xupnpd/src/www
+A    xupnpd/src/www/vk-flash-format-only.mp4
+A    xupnpd/src/www/msr.xml
+A    xupnpd/src/www/logo_youtube.jpeg
+A    xupnpd/src/www/cms.xml
+A    xupnpd/src/www/logo_vimeo.jpeg
+A    xupnpd/src/www/wmc.xml
+A    xupnpd/src/www/corrupted.mp4
+A    xupnpd/src/www/icon-48x48.png
+A    xupnpd/src/www/cds.xml
+A    xupnpd/src/www/index.html
+A    xupnpd/src/www/vk-private-video.mp4
+A    xupnpd/src/www/dev.xml
+A    xupnpd/src/www/favicon.ico
+A    xupnpd/src/luaxlib.h
+A    xupnpd/src/xupnpd_ssdp.lua
+A    xupnpd/src/soap.h
+A    xupnpd/src/mcast.cpp
+A    xupnpd/src/build-static.sh
+A    xupnpd/src/mem.cpp
+A    xupnpd/src/luajson.h
+A    xupnpd/src/xupnpd_main.lua
+A    xupnpd/src/luaxcore.cpp
+A    xupnpd/src/xupnpd_mime.lua
+A    xupnpd/src/main.cpp
+A    xupnpd/src/build.sh
+A    xupnpd/src/luacompat.h
+A    xupnpd/src/md5.h
+A    xupnpd/src/Makefile
+A    xupnpd/src/xupnpd_soap.lua
+A    xupnpd/src/lua-5.2.0
+A    xupnpd/src/lua-5.2.0/lauxlib.c
+A    xupnpd/src/lua-5.2.0/ldebug.c
+A    xupnpd/src/lua-5.2.0/lcorolib.c
+A    xupnpd/src/lua-5.2.0/lauxlib.h
+A    xupnpd/src/lua-5.2.0/ldebug.h
+A    xupnpd/src/lua-5.2.0/ltablib.c
+A    xupnpd/src/lua-5.2.0/liolib.c
+A    xupnpd/src/lua-5.2.0/lstrlib.c
+A    xupnpd/src/lua-5.2.0/lualib.h
+A    xupnpd/src/lua-5.2.0/ldo.c
+A    xupnpd/src/lua-5.2.0/lbitlib.c
+A    xupnpd/src/lua-5.2.0/ldump.c
+A    xupnpd/src/lua-5.2.0/ldo.h
+A    xupnpd/src/lua-5.2.0/luac.c
+A    xupnpd/src/lua-5.2.0/loslib.c
+A    xupnpd/src/lua-5.2.0/lundump.c
+A    xupnpd/src/lua-5.2.0/lua.hpp
+A    xupnpd/src/lua-5.2.0/ldblib.c
+A    xupnpd/src/lua-5.2.0/lundump.h
+A    xupnpd/src/lua-5.2.0/lmem.c
+A    xupnpd/src/lua-5.2.0/ltm.c
+A    xupnpd/src/lua-5.2.0/lmathlib.c
+A    xupnpd/src/lua-5.2.0/Makefile
+A    xupnpd/src/lua-5.2.0/lstate.c
+A    xupnpd/src/lua-5.2.0/lvm.c
+A    xupnpd/src/lua-5.2.0/lmem.h
+A    xupnpd/src/lua-5.2.0/lctype.c
+A    xupnpd/src/lua-5.2.0/lstate.h
+A    xupnpd/src/lua-5.2.0/ltm.h
+A    xupnpd/src/lua-5.2.0/ltable.c
+A    xupnpd/src/lua-5.2.0/lvm.h
+A    xupnpd/src/lua-5.2.0/llex.c
+A    xupnpd/src/lua-5.2.0/lgc.c
+A    xupnpd/src/lua-5.2.0/lctype.h
+A    xupnpd/src/lua-5.2.0/loadlib.c
+A    xupnpd/src/lua-5.2.0/lfunc.c
+A    xupnpd/src/lua-5.2.0/lopcodes.c
+A    xupnpd/src/lua-5.2.0/ltable.h
+A    xupnpd/src/lua-5.2.0/lparser.c
+A    xupnpd/src/lua-5.2.0/llex.h
+A    xupnpd/src/lua-5.2.0/lgc.h
+A    xupnpd/src/lua-5.2.0/lfunc.h
+A    xupnpd/src/lua-5.2.0/lopcodes.h
+A    xupnpd/src/lua-5.2.0/lbaselib.c
+A    xupnpd/src/lua-5.2.0/lzio.c
+A    xupnpd/src/lua-5.2.0/lparser.h
+A    xupnpd/src/lua-5.2.0/linit.c
+A    xupnpd/src/lua-5.2.0/lua.c
+A    xupnpd/src/lua-5.2.0/llimits.h
+A    xupnpd/src/lua-5.2.0/lobject.c
+A    xupnpd/src/lua-5.2.0/lstring.c
+A    xupnpd/src/lua-5.2.0/lzio.h
+A    xupnpd/src/lua-5.2.0/lapi.c
+A    xupnpd/src/lua-5.2.0/lcode.c
+A    xupnpd/src/lua-5.2.0/lua.h
+A    xupnpd/src/lua-5.2.0/lstring.h
+A    xupnpd/src/lua-5.2.0/lobject.h
+A    xupnpd/src/lua-5.2.0/lapi.h
+A    xupnpd/src/lua-5.2.0/lcode.h
+A    xupnpd/src/lua-5.2.0/luaconf.h
+A    xupnpd/src/plugins
+A    xupnpd/src/plugins/xupnpd_dreambox.lua
+A    xupnpd/src/plugins/xupnpd_giantbomb.lua
+A    xupnpd/src/plugins/xupnpd_arjlover.lua
+A    xupnpd/src/plugins/staff
+A    xupnpd/src/plugins/staff/xupnpd_mango.lua
+A    xupnpd/src/plugins/staff/xupnpd_ex.lua
+A    xupnpd/src/plugins/staff/xupnpd_18plus.lua
+A    xupnpd/src/plugins/staff/xupnpd_orttv.lua
+A    xupnpd/src/plugins/staff/xupnpd_minaev.lua
+A    xupnpd/src/plugins/xupnpd_vkontakte.lua
+A    xupnpd/src/plugins/xupnpd_ag.lua
+A    xupnpd/src/plugins/xupnpd_ivi.lua
+A    xupnpd/src/plugins/xupnpd_netstreamsat.lua
+A    xupnpd/src/plugins/xupnpd_youtube.lua
+A    xupnpd/src/plugins/xupnpd_generic.lua
+A    xupnpd/src/plugins/xupnpd_gametrailers.lua
+A    xupnpd/src/plugins/xupnpd_vimeo.lua
+A    xupnpd/src/plugins/skel
+A    xupnpd/src/plugins/skel/skel.lua
+A    xupnpd/src/luaxlib.cpp
+A    xupnpd/src/xupnpd_m3u.lua
+A    xupnpd/src/soap.cpp
+A    xupnpd/src/lua-5.1.4
+A    xupnpd/src/lua-5.1.4/lauxlib.c
+A    xupnpd/src/lua-5.1.4/ldebug.c
+A    xupnpd/src/lua-5.1.4/lauxlib.h
+A    xupnpd/src/lua-5.1.4/ldebug.h
+A    xupnpd/src/lua-5.1.4/ltablib.c
+A    xupnpd/src/lua-5.1.4/liolib.c
+A    xupnpd/src/lua-5.1.4/lstrlib.c
+A    xupnpd/src/lua-5.1.4/lualib.h
+A    xupnpd/src/lua-5.1.4/ldo.c
+A    xupnpd/src/lua-5.1.4/ldump.c
+A    xupnpd/src/lua-5.1.4/ldo.h
+A    xupnpd/src/lua-5.1.4/luac.c
+A    xupnpd/src/lua-5.1.4/loslib.c
+A    xupnpd/src/lua-5.1.4/lundump.c
+A    xupnpd/src/lua-5.1.4/ldblib.c
+A    xupnpd/src/lua-5.1.4/lundump.h
+A    xupnpd/src/lua-5.1.4/lmem.c
+A    xupnpd/src/lua-5.1.4/ltm.c
+A    xupnpd/src/lua-5.1.4/lmathlib.c
+A    xupnpd/src/lua-5.1.4/Makefile
+A    xupnpd/src/lua-5.1.4/lstate.c
+A    xupnpd/src/lua-5.1.4/lvm.c
+A    xupnpd/src/lua-5.1.4/lmem.h
+A    xupnpd/src/lua-5.1.4/lstate.h
+A    xupnpd/src/lua-5.1.4/ltm.h
+A    xupnpd/src/lua-5.1.4/ltable.c
+A    xupnpd/src/lua-5.1.4/lvm.h
+A    xupnpd/src/lua-5.1.4/llex.c
+A    xupnpd/src/lua-5.1.4/lgc.c
+A    xupnpd/src/lua-5.1.4/loadlib.c
+A    xupnpd/src/lua-5.1.4/lfunc.c
+A    xupnpd/src/lua-5.1.4/lopcodes.c
+A    xupnpd/src/lua-5.1.4/ltable.h
+A    xupnpd/src/lua-5.1.4/lparser.c
+A    xupnpd/src/lua-5.1.4/llex.h
+A    xupnpd/src/lua-5.1.4/lgc.h
+A    xupnpd/src/lua-5.1.4/lfunc.h
+A    xupnpd/src/lua-5.1.4/lopcodes.h
+A    xupnpd/src/lua-5.1.4/lbaselib.c
+A    xupnpd/src/lua-5.1.4/lzio.c
+A    xupnpd/src/lua-5.1.4/lparser.h
+A    xupnpd/src/lua-5.1.4/linit.c
+A    xupnpd/src/lua-5.1.4/lua.c
+A    xupnpd/src/lua-5.1.4/llimits.h
+A    xupnpd/src/lua-5.1.4/lobject.c
+A    xupnpd/src/lua-5.1.4/lstring.c
+A    xupnpd/src/lua-5.1.4/lzio.h
+A    xupnpd/src/lua-5.1.4/lapi.c
+A    xupnpd/src/lua-5.1.4/lcode.c
+A    xupnpd/src/lua-5.1.4/lua.h
+A    xupnpd/src/lua-5.1.4/lstring.h
+A    xupnpd/src/lua-5.1.4/lobject.h
+A    xupnpd/src/lua-5.1.4/lapi.h
+A    xupnpd/src/lua-5.1.4/lcode.h
+A    xupnpd/src/lua-5.1.4/print.c
+A    xupnpd/src/lua-5.1.4/luaconf.h
+A    xupnpd/src/playlists
+A    xupnpd/src/playlists/vimeo_channel_hdxs.m3u
+A    xupnpd/src/playlists/ag_videos.m3u
+A    xupnpd/src/playlists/ivi_new.m3u
+A    xupnpd/src/playlists/vimeo_channel_hd.m3u
+A    xupnpd/src/playlists/gametrailers_ps3.m3u
+A    xupnpd/src/playlists/youtube_channel_top_rated.m3u
+A    xupnpd/src/playlists/bf.m3u
+A    xupnpd/src/playlists/example
+A    xupnpd/src/playlists/example/butovocom_iptv.m3u
+A    xupnpd/src/playlists/example/service.m3u
+A    xupnpd/src/playlists/example/mozhay.m3u
+A    xupnpd/src/playlists/example/iskra.m3u
+A    xupnpd/src/playlists/example/example.m3u
+A    xupnpd/src/playlists/vimeo_channel_mtb.m3u
+A    xupnpd/src/playlists/giantbomb_all.m3u
+A    xupnpd/src/playlists/bf3epic.m3u
+A    xupnpd/src/localmedia
+A    xupnpd/src/luajson.cpp
+A    xupnpd/src/mcast.h
+A    xupnpd/src/xupnpd_http.lua
+A    xupnpd/src/xupnpd.lua
+A    xupnpd/src/contrib
+A    xupnpd/src/contrib/Keenetic
+A    xupnpd/src/contrib/Keenetic/files
+A    xupnpd/src/contrib/Keenetic/files/K27xupnpd
+A    xupnpd/src/contrib/Keenetic/patches
+A    xupnpd/src/contrib/Keenetic/patches/020-keenetic-config.patch
+A    xupnpd/src/contrib/Keenetic/patches/010-keenetic-path.patch
+A    xupnpd/src/contrib/Keenetic/Makefile
+A    xupnpd/src/contrib/OpenEmbedded
+A    xupnpd/src/contrib/OpenEmbedded/xupnpd.bb
+A    xupnpd/src/contrib/OpenEmbedded/files
+A    xupnpd/src/contrib/OpenEmbedded/files/xupnpd.init
+A    xupnpd/src/contrib/OpenEmbedded/files/xupnpd.lua
+A    xupnpd/src/contrib/gentoo
+A    xupnpd/src/contrib/gentoo/portage
+A    xupnpd/src/contrib/gentoo/portage/net-misc
+A    xupnpd/src/contrib/gentoo/portage/net-misc/xupnpd
+A    xupnpd/src/contrib/gentoo/portage/net-misc/xupnpd/files
+A    xupnpd/src/contrib/gentoo/portage/net-misc/xupnpd/files/xupnpd.init
+A    xupnpd/src/contrib/gentoo/portage/net-misc/xupnpd/files/xupnpd.envd
+A    xupnpd/src/contrib/gentoo/portage/net-misc/xupnpd/files/makefile.patch
+A    xupnpd/src/contrib/gentoo/portage/net-misc/xupnpd/xupnpd-9999.ebuild
+A    xupnpd/src/contrib/gentoo/portage/net-misc/xupnpd/Manifest
+A    xupnpd/src/contrib/gentoo/portage/profiles
+A    xupnpd/src/contrib/gentoo/portage/profiles/repo_name
+A    xupnpd/src/contrib/gentoo/layman
+A    xupnpd/src/contrib/gentoo/layman/xupnpd.xml
+A    xupnpd/src/contrib/OpenWrt
+A    xupnpd/src/contrib/OpenWrt/files
+A    xupnpd/src/contrib/OpenWrt/files/xupnpd.init
+A    xupnpd/src/contrib/OpenWrt/Makefile
+A    xupnpd/src/mem.h
+A    xupnpd/src/config
+A    xupnpd/src/config/postinit
+A    xupnpd/src/luaxcore.h
+A    xupnpd/src/luajson_parser.cpp
+A    xupnpd/src/compat.h
+A    xupnpd/src/md5c.c
+A    xupnpd/src/ui
+A    xupnpd/src/ui/ui_main.html
+A    xupnpd/src/ui/ui_config.html
+A    xupnpd/src/ui/bootstrap.min.css
+A    xupnpd/src/ui/api.txt
+A    xupnpd/src/ui/xupnpd_ui.lua
+A    xupnpd/src/ui/ui_template.html
+A    xupnpd/README
+Checked out revision 383.
++ cd xupnpd/src
+++ svnversion .
++ PV=383
+++ ls /ffp/home/root/fun_plug/ffp_packages/xupnpd/patches/001_xupnpd_lua.patch
++ for file in '`ls $X/patches/*.patch`'
++ patch -p0 -i /ffp/home/root/fun_plug/ffp_packages/xupnpd/patches/001_xupnpd_lua.patch
+patching file xupnpd.lua
++ CFLAGS='-I/ffp/include -O2 -D_GNU_SOURCE -pthread'
++ CXXFLAGS='-I/ffp/include -O2 -D_GNU_SOURCE -pthread'
++ LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread '
++ make
+make -C lua-5.1.4 CC=gcc a
+make[1]: Entering directory `/tmp/xupnpd.IDYxjf/xupnpd/src/lua-5.1.4'
+gcc -O2 -Wall -DLUA_USE_LINUX   -c -o lapi.o lapi.c
+gcc -O2 -Wall -DLUA_USE_LINUX   -c -o lcode.o lcode.c
+gcc -O2 -Wall -DLUA_USE_LINUX   -c -o ldebug.o ldebug.c
+gcc -O2 -Wall -DLUA_USE_LINUX   -c -o ldo.o ldo.c
+gcc -O2 -Wall -DLUA_USE_LINUX   -c -o ldump.o ldump.c
+gcc -O2 -Wall -DLUA_USE_LINUX   -c -o lfunc.o lfunc.c
+gcc -O2 -Wall -DLUA_USE_LINUX   -c -o lgc.o lgc.c
+gcc -O2 -Wall -DLUA_USE_LINUX   -c -o llex.o llex.c
+gcc -O2 -Wall -DLUA_USE_LINUX   -c -o lmem.o lmem.c
+gcc -O2 -Wall -DLUA_USE_LINUX   -c -o lobject.o lobject.c
+gcc -O2 -Wall -DLUA_USE_LINUX   -c -o lopcodes.o lopcodes.c
+gcc -O2 -Wall -DLUA_USE_LINUX   -c -o lparser.o lparser.c
+gcc -O2 -Wall -DLUA_USE_LINUX   -c -o lstate.o lstate.c
+gcc -O2 -Wall -DLUA_USE_LINUX   -c -o lstring.o lstring.c
+gcc -O2 -Wall -DLUA_USE_LINUX   -c -o ltable.o ltable.c
+gcc -O2 -Wall -DLUA_USE_LINUX   -c -o ltm.o ltm.c
+gcc -O2 -Wall -DLUA_USE_LINUX   -c -o lundump.o lundump.c
+gcc -O2 -Wall -DLUA_USE_LINUX   -c -o lvm.o lvm.c
+gcc -O2 -Wall -DLUA_USE_LINUX   -c -o lzio.o lzio.c
+gcc -O2 -Wall -DLUA_USE_LINUX   -c -o lauxlib.o lauxlib.c
+gcc -O2 -Wall -DLUA_USE_LINUX   -c -o lbaselib.o lbaselib.c
+gcc -O2 -Wall -DLUA_USE_LINUX   -c -o ldblib.o ldblib.c
+gcc -O2 -Wall -DLUA_USE_LINUX   -c -o liolib.o liolib.c
+gcc -O2 -Wall -DLUA_USE_LINUX   -c -o lmathlib.o lmathlib.c
+gcc -O2 -Wall -DLUA_USE_LINUX   -c -o loslib.o loslib.c
+gcc -O2 -Wall -DLUA_USE_LINUX   -c -o ltablib.o ltablib.c
+gcc -O2 -Wall -DLUA_USE_LINUX   -c -o lstrlib.o lstrlib.c
+gcc -O2 -Wall -DLUA_USE_LINUX   -c -o loadlib.o loadlib.c
+gcc -O2 -Wall -DLUA_USE_LINUX   -c -o linit.o linit.c
+ar rcu liblua.a lapi.o lcode.o ldebug.o ldo.o ldump.o lfunc.o lgc.o llex.o lmem.o lobject.o lopcodes.o lparser.o lstate.o lstring.o ltable.o ltm.o lundump.o lvm.o lzio.o lauxlib.o lbaselib.o ldblib.o liolib.o lmathlib.o loslib.o ltablib.o lstrlib.o loadlib.o linit.o
+ranlib liblua.a
+make[1]: Leaving directory `/tmp/xupnpd.IDYxjf/xupnpd/src/lua-5.1.4'
+gcc -O2 -c -o md5.o md5c.c
+gcc -fno-exceptions -fno-rtti -O2 -Ilua-5.1.4 -Llua-5.1.4 -DWITH_LIBUUID -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -o xupnpd main.cpp soap.cpp mem.cpp mcast.cpp luaxlib.cpp luaxcore.cpp luajson.cpp luajson_parser.cpp md5.o -llua -ldl -lm -luuid
+strip xupnpd
++ mkdir -p /tmp/xupnpd.IDYxjf/pkg/ffp/bin/
++ mkdir -p /tmp/xupnpd.IDYxjf/pkg/ffp/start/
++ mkdir -p /tmp/xupnpd.IDYxjf/pkg/ffp/share/xupnpd/localmedia
++ cp xupnpd /tmp/xupnpd.IDYxjf/pkg/ffp/bin/
++ cp /ffp/home/root/fun_plug/ffp_packages/xupnpd/xupnpd.sh /tmp/xupnpd.IDYxjf/pkg/ffp/start/
++ cp xupnpd.lua xupnpd_http.lua xupnpd_m3u.lua xupnpd_main.lua xupnpd_mime.lua xupnpd_soap.lua xupnpd_ssdp.lua /tmp/xupnpd.IDYxjf/pkg/ffp/share/xupnpd
++ cp -r ui /tmp/xupnpd.IDYxjf/pkg/ffp/share/xupnpd/
++ cp -r www /tmp/xupnpd.IDYxjf/pkg/ffp/share/xupnpd/
++ cp -r plugins /tmp/xupnpd.IDYxjf/pkg/ffp/share/xupnpd/
++ cp -r playlists /tmp/xupnpd.IDYxjf/pkg/ffp/share/xupnpd/
++ cp -r profiles /tmp/xupnpd.IDYxjf/pkg/ffp/share/xupnpd/
++ mkdir -p /tmp/xupnpd.IDYxjf/pkg/install
++ cp /ffp/home/root/fun_plug/ffp_packages/xupnpd/DESCR /ffp/home/root/fun_plug/ffp_packages/xupnpd/HOMEPAGE /tmp/xupnpd.IDYxjf/pkg/install/
++ cd /tmp/xupnpd.IDYxjf/pkg
++ makepkg xupnpd 383 1
+Creating /tmp/xupnpd-383-arm-1.tar ...
+stdin: is not a tty
+sending incremental file list
+xupnpd-383-arm-1.tar
+
+sent 12963 bytes  received 4975 bytes  2391.73 bytes/sec
+total size is 1468385280  speedup is 81858.92
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libatomic_ops-git-20130417-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/ghostscript-9.06-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/most-pre5.1-14-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/beautifulsoup4-4.0.0b9-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gnunet-0.9.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/guile-2.0.9-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/parted-3.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/cmake-2.8.7-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libsigc++-2.2.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1192-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/harfbuzz-0.9.9-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/Python-3.3.0-arm-1.txz
+stdin: is not a tty
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/par-1.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/dtach-0.8-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1218-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/vim-7.3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gnuplot-4.4.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1283-arm-1.txz
+UPDATE /home2/memiksfr/subdomains/ffp/pkg/xupnpd-383-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/tor-0.2.3.25-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/fontconfig-2.8.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/rtmpdump-2.3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libev-4.11-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/setuptools-0.6c11-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/tokyotyrant-1.1.41-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/less-457-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libmicrohttpd-0.9.19-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/lzo-2.06-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/cairo-1.12.8-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/Django-1.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libspectre-0.2.7-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/protobuf-2.4.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/unrar-4.1.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/php-5.4.11-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/openssl-1.0.0g-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libgpg-error-1.10-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/node-v0.6.10-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/xvidcore-1.3.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/Python-2.7.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gcc-solibs-4.6.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1260-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/BeautifulSoup-3.2.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libunistring-0.9.3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gnuplot-4.4.4-arm-2.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/nut-2.6.5-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/fontconfig-2.10.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/freetype-2.4.8-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/pango-1.32.3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/sshpass-1.05-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/miniupnpc-1.8.20130503-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/tokyocabinet-1.4.47-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/nzbget-0.8.0r394-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libgcrypt-1.5.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1267-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/swig-2.0.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1182-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/netatalk-3.0.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/par2cmdline-0.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/neon-0.29.6-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/berkeleydb-5.1.19-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/cherokee-130207-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/attr-2.4.46-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gcc-4.6.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/php-5.4.13-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/openssh-6.1p1-arm-4-node.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/sendmail-8.14.5-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/openssl-1.0.1c-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/php-5.4.14-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/mysecureshell-1.30-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/bdwgc-git-20130417-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libextractor-0.6.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/Python-2.7.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/Python-2.7.3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gnupg-1.4.8-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/cksfv-1.3.14-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/git-1.8.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gnufdisk-2.0.0a-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/nail-20120224-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1217-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/slang-pre2.3.0-68-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/zsh-5.0.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/php-5.5.0beta3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/ImageMagick-6.8.2-9-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/wdfs-1.4.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/seeks-20120224-arm-2.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/opencv-2.3.1-arm-2.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/p7zip-9.20.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libmms-0.6.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/links-2.7-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/node-0.8.21-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1214-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libgd-2.0.33-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/M2Crypto-0.21.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/cifs-utils-git-20120302-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1359-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/git-1.8.2.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/rrdtool-1.4.5-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libpar2-0.2-arm-2.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libpar2-0.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/node-0.8.21-arm-2.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/openssh-6.1p1-arm-4.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/pixman-0.28.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/zlib-1.2.6-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/glib-2.35.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1222-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MPlayer-1.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/isync-1.0.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libffi-3.0.11-arm-1.txz
+95f341c4aaf4ea5118d10bb529c15a94  BeautifulSoup-3.2.1-arm-1.txz
+a1e0ad986d101c81735bcdaa73ed1120  Django-1.4-arm-1.txz
+8a03198597eb048966609fa7e85081cb  ImageMagick-6.8.2-9-arm-1.txz
+ed100bdde17d72a8de04fe76bf507c27  M2Crypto-0.21.1-arm-1.txz
+982aeaa56561d1a47906af083a198b4e  MCServer-1182-arm-1.txz
+f43e8c2fa9ed0649943984454f93e205  MCServer-1192-arm-1.txz
+59fcfcf1b1ce120f0667436648288811  MCServer-1214-arm-1.txz
+286cba7502f2e28048679877cfdaadcf  MCServer-1217-arm-1.txz
+a196fc6af4ffdc1332a30aedf7b9a8b7  MCServer-1218-arm-1.txz
+866887febd98b38b784f3eaf8a2211b4  MCServer-1222-arm-1.txz
+28bffa04cd4865b1116b9ac2953462ef  MCServer-1260-arm-1.txz
+2a04bdde5efc99df870f2afc1c823038  MCServer-1267-arm-1.txz
+acd360f67af8840035ce045ab8187e3f  MCServer-1283-arm-1.txz
+65cae87083e7251844f83940a019aea5  MCServer-1359-arm-1.txz
+0db42aed04763a412e09295b7879ce42  MPlayer-1.1-arm-1.txz
+a3d7a6d1f4d1ead00ef46940ba2f3bcc  Python-2.7.2-arm-1.txz
+0c0c5ee79714df0686e52cf9775c16bc  Python-2.7.3-arm-1.txz
+7fd7c65f6db3f5080db928f916170028  Python-2.7.4-arm-1.txz
+55a2f685c893cfd91fd418db3e26be35  Python-3.3.0-arm-1.txz
+032ac662c6dd9de1b3cd9b11f533b116  attr-2.4.46-arm-1.txz
+a9c00879a9952577e76bc54f1a523501  bdwgc-git-20130417-arm-1.txz
+85ef9e1adaa758c1f8587c4556799f69  beautifulsoup4-4.0.0b9-arm-1.txz
+6ff8d6a390e744dd99e8d7a7e61b6de2  berkeleydb-5.1.19-arm-1.txz
+32d26bc2fb54e3151a3b10029b310a0e  cairo-1.12.8-arm-1.txz
+01effab30ea00b69d40f4b9f509f55ff  cherokee-130207-arm-1.txz
+49ecff75fd683d7bd3b219c955593780  cifs-utils-git-20120302-arm-1.txz
+d33d4de033f5734caa97fb64d220a52b  cksfv-1.3.14-arm-1.txz
+ac0cd5691e28b0bcf1f1de6733a86460  cmake-2.8.7-arm-1.txz
+fd44ad8cf4a284e8ae90798467fd345b  dtach-0.8-arm-1.txz
+473b0116a2dbd50121f48097b2e5a829  fontconfig-2.10.2-arm-1.txz
+6be66afb530ab8c7c079e91a13e65ca3  fontconfig-2.8.0-arm-1.txz
+f77c4c8c754b164d05ed1b6e0c4c3ec3  freetype-2.4.8-arm-1.txz
+d2c81249d4bf660ba5c20991c8e86fb4  gcc-4.6.2-arm-1.txz
+e9ee3add43dea9b356feaa4fdbca5fe2  gcc-solibs-4.6.2-arm-1.txz
+fdedc4578b52177d1d36dc48c019e359  ghostscript-9.06-arm-1.txz
+4f283bc42de500a9fe9d6a2e7dae7be4  git-1.8.0-arm-1.txz
+124e02a1eec50b33d8f1c72cf768c572  git-1.8.2.1-arm-1.txz
+102f8bf9b770e8e7701b8ac9cf4e938c  glib-2.35.2-arm-1.txz
+dd86ef680e23d649c7034ceb70f1e420  gnufdisk-2.0.0a-arm-1.txz
+03f8318c94b5154ff9370961ace3567e  gnunet-0.9.2-arm-1.txz
+338c45bfe0571d896fdf12833397b8a6  gnupg-1.4.8-arm-1.txz
+3da6e410046d049a9de0952ced17d207  gnuplot-4.4.4-arm-1.txz
+9e22f867fddbb011ae97fbb522027188  gnuplot-4.4.4-arm-2.txz
+c8e04d19ce6c1be113de2e80dfe388e0  guile-2.0.9-arm-1.txz
+d863b220986066854ac7c9b0afb20faa  harfbuzz-0.9.9-arm-1.txz
+704d33fe923ead8b65f73ec35eee3993  isync-1.0.4-arm-1.txz
+82a6edbe7ba4f8e27d76dc36b1fb0fa3  less-457-arm-1.txz
+cdf7b3acf8e021921e1e2f696b21b12f  libatomic_ops-git-20130417-arm-1.txz
+0c54f33ceaa95ff640e77ec2378a124e  libev-4.11-arm-1.txz
+cbfd7cd569281a9ed6fa2313c30939ed  libextractor-0.6.2-arm-1.txz
+2d1b88015a8dd263f557fb27043e53f8  libffi-3.0.11-arm-1.txz
+f729e959f7a3bc84258d734f81214621  libgcrypt-1.5.0-arm-1.txz
+664311c312926ca30c077a89baebce93  libgd-2.0.33-arm-1.txz
+8ba41420fa0aab68345956455934bc00  libgpg-error-1.10-arm-1.txz
+1c150a8bb838d5c6fec063b67d324c59  libmicrohttpd-0.9.19-arm-1.txz
+c9e9f52bd5ac9f9e2512345223a3b274  libmms-0.6.2-arm-1.txz
+d0ba07ffb41f8c8072c3a72c642fd6ed  libpar2-0.2-arm-1.txz
+3c5701c05ab95f986e01253ad94a8650  libpar2-0.2-arm-2.txz
+1e1c96e71aef38f9bbba4d5b203342fe  libsigc++-2.2.0-arm-1.txz
+549f4f792f3f414dc11a2543aa27a0ff  libspectre-0.2.7-arm-1.txz
+362fecb4327b4db509cc27c8377e3da5  libunistring-0.9.3-arm-1.txz
+aa138e6d77ad3953671610579cc3d42b  links-2.7-arm-1.txz
+aff618deb5ab34b9ac7a03e0d8154838  lzo-2.06-arm-1.txz
+93e07aea57558da5c62ae0554a2a63f2  miniupnpc-1.8.20130503-arm-1.txz
+f855d164949e7acc18fa4aaf101c0d04  most-pre5.1-14-arm-1.txz
+e96e21b39bfa4d7eb5d44b5228fe7b70  mysecureshell-1.30-arm-1.txz
+cfb7825ee4f94260672690d154f2b6e3  nail-20120224-arm-1.txz
+0a14881eadc441ccdcfcd31bea56bcdd  neon-0.29.6-arm-1.txz
+9a89b60c336964997604fae4ed17695e  netatalk-3.0.2-arm-1.txz
+6029909b3d503980c034bd39478c0be1  node-0.8.21-arm-1.txz
+8a7d226e05c96bbcb6d53615c8358a7b  node-0.8.21-arm-2.txz
+87293f8ac425e78b4fd4ea49597b9cb0  node-v0.6.10-arm-1.txz
+71de0746bef03bd0f6edcfc667d19a6c  nut-2.6.5-arm-1.txz
+3a2df95f41ab7e1b0f0b81e874fb0812  nzbget-0.8.0r394-arm-1.txz
+083f7fd632357f1cce627207fb4552d3  opencv-2.3.1-arm-2.txz
+74894e01f5a6c68dc684a058883adce1  openssh-6.1p1-arm-4-node.txz
+ca1211de85f0f37d3a8e91d62fc63ab9  openssh-6.1p1-arm-4.txz
+c446b1a2cdfb22283d06cdc1696f69ef  openssl-1.0.0g-arm-1.txz
+1a6b123a0d2d852c49cd3b59dd162587  openssl-1.0.1c-arm-1.txz
+2739d61c04fef5e9c14703d3414a12b4  p7zip-9.20.1-arm-1.txz
+b6587c19ed46af536599c44164f30062  pango-1.32.3-arm-1.txz
+31aab821d024ee722d8086de0aaec3af  par-1.1-arm-1.txz
+40e39f90d6ffc36a13ed1266eaa233af  par2cmdline-0.4-arm-1.txz
+b0bf2733a984c43aa5ae222caf6ed652  parted-3.1-arm-1.txz
+50bb839f538148a881ce720ac210d8cb  php-5.4.11-arm-1.txz
+54868d5f85ba92baadd3f4dfafaebcbe  php-5.4.13-arm-1.txz
+28fccad42a83e371f834863b7a6acf65  php-5.4.14-arm-1.txz
+60cf27986a25f0c1e48759e28f30b39e  php-5.5.0beta3-arm-1.txz
+ac2a6618d9bff07b61619eb43e444f76  pixman-0.28.0-arm-1.txz
+6193b8bc9c34ed897730111343822d4f  protobuf-2.4.1-arm-1.txz
+16e33376597489b17fc80cc37d00fc5c  rrdtool-1.4.5-arm-1.txz
+a9950a1a97c267804ff19d08aa6d9525  rtmpdump-2.3-arm-1.txz
+4fa15a6145d7b868d687b8eba8279abc  seeks-20120224-arm-2.txz
+d949e5826b587dfcbb4fc5127b9914bc  sendmail-8.14.5-arm-1.txz
+3b684329a947e339bcf852abccb64a72  setuptools-0.6c11-arm-1.txz
+97642aff8413275eadf07642783a7570  slang-pre2.3.0-68-arm-1.txz
+672ee83f6e2b613bbbf9aad110c52a8f  sshpass-1.05-arm-1.txz
+50001317da06eb57e8898c2e2c590c20  swig-2.0.4-arm-1.txz
+6c49bfc80064b5760b761b57f119c8ed  tokyocabinet-1.4.47-arm-1.txz
+276175e3bd3f5f00e0f5729b013790b0  tokyotyrant-1.1.41-arm-1.txz
+d800d890172e3b93db736db52bdb6de8  tor-0.2.3.25-arm-1.txz
+175f16b06006a17e1ce953e370f369c8  unrar-4.1.4-arm-1.txz
+51da0ea5b5cd3b92dc196ce0ccee8789  vim-7.3-arm-1.txz
+012b27f2e1bc2848263c6d1879589e0d  wdfs-1.4.2-arm-1.txz
+262e997d805600f7080e12cec9e094a8  xupnpd-383-arm-1.txz
+5f93016524482301a080ccbceeaa1413  xvidcore-1.3.2-arm-1.txz
+18c2e4aa1dcfa44fe7f49784d7414846  zlib-1.2.6-arm-1.txz
+4deac8f4478776eb8988b0949dce9854  zsh-5.0.2-arm-1.txz
