@@ -1,0 +1,51 @@
+MiniUPnP download zone 
+
+Find on this page the source of miniupnp and some related files. You 
+will also find precompiled binaries of the UPnP client sample program 
+for windows compiled using MinGW. 
+
+If you just need one of the software installed on your machine, you 
+probably don't need to download and compile the source files. It is very 
+likely that a package/port already exists for your system/distribution. 
+Refer to your system documentation to find how to search and install a 
+package/port. Mac OS X does have port systems too : see MacPorts or 
+Homebrew or Fink. 
+
+The miniupnpc (client) sources have been successfully compiled under 
+Windows XP/vista/etc. (using MinGW or Cygwin), Linux, OpenBSD, FreeBSD, 
+NetBSD, DragonFlyBSD, Solaris, MacOS X and AmigaOS. The Makefile of the 
+client is made for GNU make : check which version your system have with 
+the command "make --version". On some systems, such as OpenBSD, you have 
+to use "gmake". Under Windows with MinGW, GNU make is called 
+"mingw32-make" and a sligthly modified version of the Makefile should be 
+used : Makefile.mingw. Run "mingw32make.bat" to compile. If you have any 
+compatibility problem, please post on the forum or contact me by email. 
+
+See OS4Depot for miniupnpc under AmigaOS 4 : 
+http://os4depot.net/index.php?function=showfile&file=network/misc/miniup 
+npc.lha. 
+
+Dario Meloni has made a Ruby Gem embedding miniupnpc : 
+https://rubyforge.org/projects/mupnp. 
+
+The daemon (starting in November 2006) compiles with BSD make under BSD 
+and Solaris. To compile the daemon under linux, use "make -f 
+Makefile.linux" To compile for OpenWRT please read the README.openwrt 
+file. The X-Wrt project is providing precompiled ipkg packages for 
+OpenWrt for both OpenWrt White Russian and OpenWrt kamikaze. Check 
+ftp://ftp.berlios.de/pub/xwrt/. For White Russian, take a look at this. 
+pfSense users are advised to use the miniupnpd port available for their 
+system. Recent versions of pfSense include MiniUPnPd in the base system. 
+For Linksys WRT54G and WRT54GL owners, Tarifa firmware is another 
+alternative to get miniUPnPd running on the router. 
+
+Please read README and LICENCE files included with the distribution for 
+further informations. 
+
+The MiniUPnP daemon (miniupnpd) is working under OpenBSD, NetBSD, 
+FreeBSD, DragonFlyBSD, Mac OS X and (Open)Solaris with pf, with IP 
+Filter or with ipfw. The linux version uses libiptc which permits to 
+access netfilter rules inside the kernel the same way as iptables. 
+
+Homepage: http://miniupnp.tuxfamily.org/
+
