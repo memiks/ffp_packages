@@ -794,8 +794,11 @@ Homepage: http://packages.qa.debian.org/d/debianutils.html
 
 mysql
 ===
+MySQL Community Edition is a freely downloadable version of the world's most popular open source database that is supported by an active community of open source developers and enthusiasts.
 
-Homepage: 
+MySQL Cluster Community Edition is available as a separate download. The reason for this change is so that MySQL Cluster can provide more frequent updates and support using the latest sources of MySQL Cluster Carrier Grade Edition.
+
+Homepage: http://www.mysql.com/
 
 
 

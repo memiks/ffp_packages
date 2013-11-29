@@ -12,7 +12,9 @@ D=$W/pkg
 cd $W
 cat $X/SRC_URI | xargs wget 
 PV=$(ls $PN-*.tar* | egrep -o '[0-9][0-9.]*[0-9]')
+
 tar xf $PN-$PV.tar*
+
 cd $PN-*
 
 for file in `ls $X/patches/*.patch`
@@ -20,14 +22,10 @@ do
         patch -p0 -i $file
 done
 
+
 LDFLAGS="$FFP_LDFLAGS" \
-./configure \
-	--prefix=/ffp \
-	--build=$GNU_BUILD \
-	--host=$GNU_HOST \
-	--mandir=$mandir \
-	--infodir=$infodir
-    
+cmake .
+
 make
 make DESTDIR=$D install
 
@@ -36,5 +34,4 @@ cp $X/{DESCR,HOMEPAGE} $D/install/
 
 cd $D
 makepkg $PN $PV $PR
-
 
