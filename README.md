@@ -110,17 +110,20 @@ Homepage: http://www.tuxera.com/community/ntfs-3g-download/
 
 tokyocabinet
 ===
-autoconf - Generates configuration scripts
+Tokyo Cabinet is a library of routines for managing a database. The database is a simple data file containing records, each is a pair of a key and a value. Every key and value is serial bytes with variable length. Both binary data and character string can be used as a key and a value. There is neither concept of data tables nor data types. Records are organized in hash table, B+ tree, or fixed-length array.
 
-Autoconf is an extensible package of M4 macros that produce shell
-scripts to automatically configure software source code
-packages. These scripts can adapt the packages to many kinds of
-UNIX-like systems without manual user intervention. Autoconf creates a
-configuration script for a package from a template file that lists the
-operating system features that the package can use, in the form of M4
-macro calls.
+Tokyo Cabinet is developed as the successor of GDBM and QDBM on the following purposes. They are achieved and Tokyo Cabinet replaces conventional DBM products.
 
-Homepage: http://www.gnu.org/software/autoconf/
+    improves space efficiency : smaller size of database file.
+    improves time efficiency : faster processing speed.
+    improves parallelism : higher performance in multi-thread environment.
+    improves usability : simplified API.
+    improves robustness : database file is not corrupted even under catastrophic situation.
+    supports 64-bit architecture : enormous memory space and database file are available.
+
+Tokyo Cabinet is written in the C language, and provided as API of C, Perl, Ruby, Java, and Lua. Tokyo Cabinet is available on platforms which have API conforming to C99 and POSIX. Tokyo Cabinet is a free software licensed under the GNU Lesser General Public License.
+
+Homepage: http://fallabs.com/tokyocabinet/
 
 
 
