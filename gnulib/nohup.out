@@ -1,0 +1,29 @@
+++ basename ./gnulib.funpkg .funpkg
++ PN=gnulib
++ PR=1
++ . ./config.ffp
+++ GNU_HOST=
+++ GNU_TARGET=
+++ FFP_CFLAGS='-I/ffp/include -O2'
+++ FFP_LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
+++ '[' '!' -d '' ']'
+++ TMPDIR=/tmp
+++ export TMPDIR
+++ mandir=/ffp/share/man
+++ infodir=/ffp/share/info
+++ docdir=/ffp/share/doc
+++ pwd
++ X=/ffp/home/root/src/gnulib
+++ mktemp -t -d gnulib.XXXXXX
++ W=/tmp/gnulib.oEX5I8
++ D=/tmp/gnulib.oEX5I8/pkg
++ cd /tmp/gnulib.oEX5I8
++ cat /ffp/home/root/src/gnulib/SRC_URI
++ xargs git clone
+Cloning into 'gnulib'...
+++ date +%y%m%d
++ PV=120323
++ cd gnulib
++ LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
++ ./configure --prefix=/ffp --build= --host= --mandir=/ffp/share/man --infodir=/ffp/share/info
+./gnulib.funpkg: line 17: ./configure: No such file or directory
