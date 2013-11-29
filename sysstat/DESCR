@@ -1,0 +1,28 @@
+Introduction to sysstat
+
+The sysstat package contains utilities to monitor system performance and 
+usage activity. Sysstat contains various utilities, common to many 
+commercial Unixes, and tools you can schedule via cron to collect and 
+historize performance and activity data.
+
+    iostat(1) reports CPU statistics and input/output statistics for devices, 
+partitions and network filesystems.
+    mpstat(1) reports individual or combined processor related statistics.
+    pidstat(1) reports statistics for Linux tasks (processes) : I/O, CPU, 
+memory, etc.
+    sar(1) collects, reports and saves system activity information (CPU, 
+memory, disks, interrupts, network interfaces, TTY, kernel tables,etc.)
+    sadc(8) is the system activity data collector, used as a backend for sar.
+    sa1(8) collects and stores binary data in the system activity daily 
+data file. It is a front end to sadc designed to be run from cron.
+    sa2(8) writes a summarized daily activity report. It is a front end 
+to sar designed to be run from cron.
+    sadf(1) displays data collected by sar in multiple formats 
+(CSV, XML, etc.) This is useful to load performance data into a database, 
+or import them in a spreadsheet to make graphs.
+    nfsiostat(1) reports input/output statistics for network filesystems (NFS).
+    cifsiostat(1) reports CIFS statistics.
+
+
+Homepage: http://sebastien.godard.pagesperso-orange.fr/
+

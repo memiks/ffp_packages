@@ -1,0 +1,42 @@
+#!/ffp/bin/sh -xe
+
+PN=$(basename $0 .funpkg)
+PR=1
+
+. ./config.ffp
+
+X=$(pwd)
+W=$(mktemp -t -d $PN.XXXXXX)
+D=$W/pkg
+
+cd $W
+cat $X/SRC_URI | xargs wget 
+PV=$(ls $PN-*.tar* | egrep -o '[0-9][0-9.]*[0-9]')
+tar xf $PN-$PV.tar*
+cd $PN-*
+
+LDFLAGS="$FFP_LDFLAGS" CFLAGS=" -lintl" \
+sa_dir="/ffp/var/log/sa" conf_dir="/ffp/etc/sysstat" \
+./configure \
+	--prefix=/ffp \
+	--sysconfdir=/ffp/etc \
+	--localstatedir=/ffp/var \
+	--enable-collect-all \
+	--enable-yesterday \
+	--build=$GNU_BUILD \
+	--host=$GNU_HOST \
+	--mandir=$mandir \
+	--infodir=$infodir \
+	 LIBS=-lintl
+    
+make
+make DESTDIR=$D install
+
+mkdir -p $D/install
+cp $X/{DESCR,HOMEPAGE} $D/install/
+
+cd $D
+
+makepkg $PN $PV $PR
+
+
