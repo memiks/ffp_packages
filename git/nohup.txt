@@ -1,0 +1,1504 @@
+++ basename ./git.funpkg .funpkg
++ PN=git
++ PR=1
++ . ./config.ffp
+++ GNU_HOST=
+++ GNU_TARGET=
+++ FFP_CFLAGS='-I/ffp/include -O2'
+++ FFP_LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
+++ '[' '!' -d '' ']'
+++ TMPDIR=/tmp
+++ export TMPDIR
+++ mandir=/ffp/share/man
+++ infodir=/ffp/share/info
+++ docdir=/ffp/share/doc
+++ pwd
++ X=/ffp/home/root/fun_plug/ffp_packages/git
+++ mktemp -t -d git.XXXXXX
++ W=/tmp/git.vdldlx
++ D=/tmp/git.vdldlx/pkg
++ cd /tmp/git.vdldlx
++ cat /ffp/home/root/fun_plug/ffp_packages/git/SRC_URI
++ xargs wget
+--2013-04-24 16:25:27--  http://git-core.googlecode.com/files/git-1.8.2.1.tar.gz
+Resolving git-core.googlecode.com... 2a00:1450:400c:c06::52, 74.125.132.82
+Connecting to git-core.googlecode.com|2a00:1450:400c:c06::52|:80... failed: Address family not supported by protocol.
+Connecting to git-core.googlecode.com|74.125.132.82|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 4400440 (4.2M) [application/x-gzip]
+Saving to: `git-1.8.2.1.tar.gz'
+
+     0K .......... .......... .......... .......... ..........  1%  195K 22s
+    50K .......... .......... .......... .......... ..........  2%  563K 14s
+   100K .......... .......... .......... .......... ..........  3% 1.26M 11s
+   150K .......... .......... .......... .......... ..........  4%  866K 9s
+   200K .......... .......... .......... .......... ..........  5% 1.38M 8s
+   250K .......... .......... .......... .......... ..........  6% 1.12M 7s
+   300K .......... .......... .......... .......... ..........  8% 1.38M 6s
+   350K .......... .......... .......... .......... ..........  9% 1.39M 6s
+   400K .......... .......... .......... .......... .......... 10% 1.39M 5s
+   450K .......... .......... .......... .......... .......... 11% 1.34M 5s
+   500K .......... .......... .......... .......... .......... 12% 1.39M 5s
+   550K .......... .......... .......... .......... .......... 13% 1.39M 5s
+   600K .......... .......... .......... .......... .......... 15% 1.39M 4s
+   650K .......... .......... .......... .......... .......... 16% 1.39M 4s
+   700K .......... .......... .......... .......... .......... 17% 1.40M 4s
+   750K .......... .......... .......... .......... .......... 18% 1.38M 4s
+   800K .......... .......... .......... .......... .......... 19% 1.38M 4s
+   850K .......... .......... .......... .......... .......... 20% 1.40M 4s
+   900K .......... .......... .......... .......... .......... 22% 1.34M 3s
+   950K .......... .......... .......... .......... .......... 23% 1.39M 3s
+  1000K .......... .......... .......... .......... .......... 24% 1.39M 3s
+  1050K .......... .......... .......... .......... .......... 25% 1.39M 3s
+  1100K .......... .......... .......... .......... .......... 26% 1.38M 3s
+  1150K .......... .......... .......... .......... .......... 27% 1.40M 3s
+  1200K .......... .......... .......... .......... .......... 29% 1.39M 3s
+  1250K .......... .......... .......... .......... .......... 30% 1.38M 3s
+  1300K .......... .......... .......... .......... .......... 31% 1.37M 3s
+  1350K .......... .......... .......... .......... .......... 32% 1.36M 3s
+  1400K .......... .......... .......... .......... .......... 33% 1.38M 3s
+  1450K .......... .......... .......... .......... .......... 34% 1.39M 3s
+  1500K .......... .......... .......... .......... .......... 36% 1.39M 2s
+  1550K .......... .......... .......... .......... .......... 37% 1.37M 2s
+  1600K .......... .......... .......... .......... .......... 38%  397K 3s
+  1650K .......... .......... .......... .......... .......... 39% 18.0M 2s
+  1700K .......... .......... .......... .......... .......... 40% 1.58M 2s
+  1750K .......... .......... .......... .......... .......... 41% 19.5M 2s
+  1800K .......... .......... .......... .......... .......... 43% 1.05M 2s
+  1850K .......... .......... .......... .......... .......... 44% 1.36M 2s
+  1900K .......... .......... .......... .......... .......... 45% 1.39M 2s
+  1950K .......... .......... .......... .......... .......... 46% 1.40M 2s
+  2000K .......... .......... .......... .......... .......... 47% 1.39M 2s
+  2050K .......... .......... .......... .......... .......... 48% 1.38M 2s
+  2100K .......... .......... .......... .......... .......... 50% 1.40M 2s
+  2150K .......... .......... .......... .......... .......... 51% 1.39M 2s
+  2200K .......... .......... .......... .......... .......... 52% 1.40M 2s
+  2250K .......... .......... .......... .......... .......... 53% 1.39M 2s
+  2300K .......... .......... .......... .......... .......... 54% 1.33M 2s
+  2350K .......... .......... .......... .......... .......... 55% 1.36M 2s
+  2400K .......... .......... .......... .......... .......... 57% 1.43M 2s
+  2450K .......... .......... .......... .......... .......... 58% 1.39M 2s
+  2500K .......... .......... .......... .......... .......... 59% 1.38M 1s
+  2550K .......... .......... .......... .......... .......... 60% 1.40M 1s
+  2600K .......... .......... .......... .......... .......... 61% 1.39M 1s
+  2650K .......... .......... .......... .......... .......... 62% 1.38M 1s
+  2700K .......... .......... .......... .......... .......... 63% 1.40M 1s
+  2750K .......... .......... .......... .......... .......... 65% 1.34M 1s
+  2800K .......... .......... .......... .......... .......... 66% 1.40M 1s
+  2850K .......... .......... .......... .......... .......... 67% 1.38M 1s
+  2900K .......... .......... .......... .......... .......... 68% 1.38M 1s
+  2950K .......... .......... .......... .......... .......... 69% 1.38M 1s
+  3000K .......... .......... .......... .......... .......... 70% 1.40M 1s
+  3050K .......... .......... .......... .......... .......... 72% 1.39M 1s
+  3100K .......... .......... .......... .......... .......... 73% 1.38M 1s
+  3150K .......... .......... .......... .......... .......... 74% 1.40M 1s
+  3200K .......... .......... .......... .......... .......... 75% 1.39M 1s
+  3250K .......... .......... .......... .......... .......... 76% 1.36M 1s
+  3300K .......... .......... .......... .......... .......... 77% 1.39M 1s
+  3350K .......... .......... .......... .......... .......... 79% 1.38M 1s
+  3400K .......... .......... .......... .......... .......... 80% 1.40M 1s
+  3450K .......... .......... .......... .......... .......... 81% 1.38M 1s
+  3500K .......... .......... .......... .......... .......... 82% 1.37M 1s
+  3550K .......... .......... .......... .......... .......... 83% 1.39M 1s
+  3600K .......... .......... .......... .......... .......... 84% 1.40M 1s
+  3650K .......... .......... .......... .......... .......... 86% 1.39M 0s
+  3700K .......... .......... .......... .......... .......... 87% 1.35M 0s
+  3750K .......... .......... .......... .......... .......... 88% 1.39M 0s
+  3800K .......... .......... .......... .......... .......... 89% 1.39M 0s
+  3850K .......... .......... .......... .......... .......... 90% 1.39M 0s
+  3900K .......... .......... .......... .......... .......... 91% 1.39M 0s
+  3950K .......... .......... .......... .......... .......... 93% 1.39M 0s
+  4000K .......... .......... .......... .......... .......... 94% 1.40M 0s
+  4050K .......... .......... .......... .......... .......... 95% 1.39M 0s
+  4100K .......... .......... .......... .......... .......... 96% 1.38M 0s
+  4150K .......... .......... .......... .......... .......... 97% 1.33M 0s
+  4200K .......... .......... .......... .......... .......... 98% 1.40M 0s
+  4250K .......... .......... .......... .......... .......   100% 1.40M=3.4s
+
+2013-04-24 16:25:31 (1.24 MB/s) - `git-1.8.2.1.tar.gz' saved [4400440/4400440]
+
+++ ls git-1.8.2.1.tar.gz
+++ egrep -o '[0-9][0-9.]*[0-9]'
++ PV=1.8.2.1
++ tar xf git-1.8.2.1.tar.gz
++ cd git-1.8.2.1 git-1.8.2.1.tar.gz
+++ which perl
++ PERLPATH=/ffp/bin/perl
+++ which python
++ PYTHONPATH=/ffp/bin/python
++ LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
++ ./configure --prefix=/ffp --with-perl=/ffp/bin/perl --with-python=/ffp/bin/python --build= --host= --mandir=/ffp/share/man --infodir=/ffp/share/info
+configure: Setting lib to 'lib' (the default)
+configure: Will try -pthread then -lpthread to enable POSIX Threads.
+configure: CHECKS for site configuration
+configure: Setting PERL_PATH to /ffp/bin/perl
+configure: Setting PYTHON_PATH to /ffp/bin/python
+configure: CHECKS for programs
+checking for cc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether cc accepts -g... yes
+checking for cc option to accept ISO C89... none needed
+checking for inline... inline
+checking if linker supports -R... no
+checking if linker supports -Wl,-rpath,... yes
+checking for gar... no
+checking for ar... ar
+checking for gtar... no
+checking for tar... tar
+checking for gnudiff... no
+checking for gdiff... no
+checking for diff... diff
+checking for asciidoc... no
+configure: CHECKS for libraries
+checking for SHA1_Init in -lcrypto... yes
+checking for curl_global_init in -lcurl... yes
+checking for XML_ParserCreate in -lexpat... yes
+checking for iconv in -lc... no
+checking for iconv in -liconv... yes
+checking for deflateBound in -lz... yes
+checking for socket in -lc... yes
+checking for inet_ntop... yes
+checking for inet_pton... yes
+checking for hstrerror... yes
+checking for basename in -lc... yes
+checking for gettext in -lc... no
+checking how to run the C preprocessor... cc -E
+checking for grep that handles long lines and -e... /ffp/bin/grep
+checking for egrep... /ffp/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking libintl.h usability... yes
+checking libintl.h presence... yes
+checking for libintl.h... yes
+configure: CHECKS for header files
+checking sys/select.h usability... yes
+checking sys/select.h presence... yes
+checking for sys/select.h... yes
+checking sys/poll.h usability... yes
+checking sys/poll.h presence... yes
+checking for sys/poll.h... yes
+checking for inttypes.h... (cached) yes
+checking for old iconv()... no
+configure: CHECKS for typedefs, structures, and compiler characteristics
+checking for socklen_t... yes
+checking for struct dirent.d_ino... yes
+checking for struct dirent.d_type... yes
+checking for struct passwd.pw_gecos... yes
+checking for struct sockaddr_storage... yes
+checking for struct addrinfo... yes
+checking for getaddrinfo... yes
+checking for library containing getaddrinfo... none required
+checking whether the platform regex can handle null bytes... yes
+checking whether system succeeds to read fopen'ed directory... no
+checking whether snprintf() and/or vsnprintf() return bogus value... no
+configure: CHECKS for library functions
+checking libgen.h usability... yes
+checking libgen.h presence... yes
+checking for libgen.h... yes
+checking paths.h usability... yes
+checking paths.h presence... yes
+checking for paths.h... yes
+checking libcharset.h usability... yes
+checking libcharset.h presence... yes
+checking for libcharset.h... yes
+checking for strings.h... (cached) yes
+checking for locale_charset in -liconv... no
+checking for locale_charset in -lcharset... yes
+checking for strcasestr... yes
+checking for library containing strcasestr... none required
+checking for fnmatch... yes
+checking for library containing fnmatch... none required
+checking whether the fnmatch function supports the FNMATCH_CASEFOLD GNU extension... yes
+checking for memmem... yes
+checking for library containing memmem... none required
+checking for strlcpy... yes
+checking for library containing strlcpy... none required
+checking for uintmax_t... yes
+checking for strtoumax... yes
+checking for library containing strtoumax... none required
+checking for setenv... yes
+checking for library containing setenv... none required
+checking for unsetenv... yes
+checking for library containing unsetenv... none required
+checking for mkdtemp... yes
+checking for library containing mkdtemp... none required
+checking for mkstemps... no
+checking for initgroups... yes
+checking for library containing initgroups... none required
+checking for POSIX Threads with ''... no
+checking for POSIX Threads with '-mt'... no
+checking for POSIX Threads with '-pthread'... yes
+configure: creating ./config.status
+config.status: creating config.mak.autogen
+config.status: executing config.mak.autogen commands
++ LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
++ make all
+GIT_VERSION = 1.8.2.1
+    * new build flags
+    CC credential-store.o
+    * new link flags
+    CC abspath.o
+    CC advice.o
+    CC alias.o
+    CC alloc.o
+    CC archive.o
+    CC archive-tar.o
+    CC archive-zip.o
+    CC argv-array.o
+    * new prefix flags
+    CC attr.o
+    CC base85.o
+    CC bisect.o
+    CC blob.o
+    CC branch.o
+    CC bulk-checkin.o
+    CC bundle.o
+    CC cache-tree.o
+    CC color.o
+    CC column.o
+    CC combine-diff.o
+    CC commit.o
+    CC compat/obstack.o
+    CC compat/terminal.o
+    CC config.o
+    CC connect.o
+    CC connected.o
+    CC convert.o
+    CC copy.o
+    CC credential.o
+    CC csum-file.o
+    CC ctype.o
+    CC date.o
+    CC decorate.o
+    CC diffcore-break.o
+    CC diffcore-delta.o
+    CC diffcore-order.o
+    CC diffcore-pickaxe.o
+    CC diffcore-rename.o
+    CC diff-delta.o
+    CC diff-lib.o
+    CC diff-no-index.o
+    CC diff.o
+    CC dir.o
+    CC editor.o
+    CC entry.o
+    CC environment.o
+    CC exec_cmd.o
+    CC fetch-pack.o
+    CC fsck.o
+    CC gettext.o
+    CC gpg-interface.o
+    CC graph.o
+    CC grep.o
+    CC hash.o
+    GEN common-cmds.h
+    CC help.o
+    CC hex.o
+    CC ident.o
+    CC kwset.o
+    CC levenshtein.o
+    CC list-objects.o
+    CC ll-merge.o
+    CC lockfile.o
+    CC log-tree.o
+    CC mailmap.o
+    CC match-trees.o
+    CC merge.o
+    CC merge-blobs.o
+    CC merge-recursive.o
+    CC mergesort.o
+    CC name-hash.o
+    CC notes.o
+    CC notes-cache.o
+    CC notes-merge.o
+    CC object.o
+    CC pack-check.o
+    CC pack-refs.o
+    CC pack-revindex.o
+    CC pack-write.o
+    CC pager.o
+    CC parse-options.o
+    CC parse-options-cb.o
+    CC patch-delta.o
+    CC patch-ids.o
+    CC path.o
+    CC pathspec.o
+    CC pkt-line.o
+    CC preload-index.o
+    CC pretty.o
+    CC progress.o
+    CC prompt.o
+    CC quote.o
+    CC reachable.o
+    CC read-cache.o
+    CC reflog-walk.o
+    CC refs.o
+    CC remote.o
+    CC replace_object.o
+    CC rerere.o
+    CC resolve-undo.o
+    CC revision.o
+    CC run-command.o
+    CC send-pack.o
+    CC sequencer.o
+    CC server-info.o
+    CC setup.o
+    CC sha1-array.o
+    CC sha1-lookup.o
+    CC sha1_file.o
+    CC sha1_name.o
+    CC shallow.o
+    CC sideband.o
+    CC sigchain.o
+    CC strbuf.o
+    CC streaming.o
+    CC string-list.o
+    CC submodule.o
+    CC symlinks.o
+    CC tag.o
+    CC trace.o
+    CC transport.o
+    CC transport-helper.o
+    CC tree-diff.o
+    CC tree.o
+    CC tree-walk.o
+    CC unpack-trees.o
+    CC url.o
+    CC usage.o
+    CC userdiff.o
+    CC utf8.o
+    CC varint.o
+    CC version.o
+    CC walker.o
+    CC wildmatch.o
+    CC wrapper.o
+    CC write_or_die.o
+    CC ws.o
+    CC wt-status.o
+    CC xdiff-interface.o
+    CC zlib.o
+    CC unix-socket.o
+    CC thread-utils.o
+    AR libgit.a
+    CC xdiff/xdiffi.o
+    CC xdiff/xprepare.o
+    CC xdiff/xutils.o
+    CC xdiff/xemit.o
+    CC xdiff/xmerge.o
+    CC xdiff/xpatience.o
+    CC xdiff/xhistogram.o
+    AR xdiff/lib.a
+    LINK git-credential-store
+    CC daemon.o
+    LINK git-daemon
+    CC fast-import.o
+    LINK git-fast-import
+    CC http-backend.o
+    LINK git-http-backend
+    CC imap-send.o
+    LINK git-imap-send
+    CC sh-i18n--envsubst.o
+    LINK git-sh-i18n--envsubst
+    CC shell.o
+    LINK git-shell
+    CC show-index.o
+    LINK git-show-index
+    CC upload-pack.o
+    LINK git-upload-pack
+    CC remote-testsvn.o
+    CC vcs-svn/line_buffer.o
+    CC vcs-svn/sliding_window.o
+    CC vcs-svn/repo_tree.o
+    CC vcs-svn/fast_export.o
+    CC vcs-svn/svndiff.o
+    CC vcs-svn/svndump.o
+    AR vcs-svn/lib.a
+    LINK git-remote-testsvn
+    CC http.o
+    CC http-walker.o
+    CC http-fetch.o
+    LINK git-http-fetch
+    CC http-push.o
+    LINK git-http-push
+    CC credential-cache.o
+    LINK git-credential-cache
+    CC credential-cache--daemon.o
+    LINK git-credential-cache--daemon
+    CC remote-curl.o
+    LINK git-remote-http
+    LN/CP git-remote-https
+    LN/CP git-remote-ftp
+    LN/CP git-remote-ftps
+    * new script parameters
+    GEN git-am
+    GEN git-bisect
+    GEN git-difftool--helper
+    GEN git-filter-branch
+    GEN git-lost-found
+    GEN git-merge-octopus
+    GEN git-merge-one-file
+    GEN git-merge-resolve
+    GEN git-mergetool
+    GEN git-pull
+    GEN git-quiltimport
+    GEN git-rebase
+    GEN git-repack
+    GEN git-request-pull
+    GEN git-stash
+    GEN git-submodule
+    GEN git-web--browse
+    GEN perl/PM.stamp
+    SUBDIR perl
+/ffp/bin/perl Makefile.PL PREFIX='/ffp' INSTALL_BASE='' --localedir='/ffp/share/locale'
+Writing perl.mak for Git
+Writing MYMETA.yml
+    GEN git-add--interactive
+    GEN git-difftool
+    GEN git-archimport
+    GEN git-cvsexportcommit
+    GEN git-cvsimport
+    GEN git-cvsserver
+    GEN git-relink
+    GEN git-send-email
+    GEN git-svn
+    * new Python interpreter location
+    GEN git-remote-testpy
+    GEN git-p4
+    SUBDIR gitweb
+    SUBDIR ../
+make[2]: `GIT-VERSION-FILE' is up to date.
+    GEN gitweb.cgi
+    GEN static/gitweb.js
+    GEN git-instaweb
+    GEN git-mergetool--lib
+    GEN git-parse-remote
+    GEN git-rebase--am
+    GEN git-rebase--interactive
+    GEN git-rebase--merge
+    GEN git-sh-setup
+    GEN git-sh-i18n
+    CC git.o
+    CC builtin/add.o
+    CC builtin/annotate.o
+    CC builtin/apply.o
+    CC builtin/archive.o
+    CC builtin/bisect--helper.o
+    CC builtin/blame.o
+    CC builtin/branch.o
+    CC builtin/bundle.o
+    CC builtin/cat-file.o
+    CC builtin/check-attr.o
+    CC builtin/check-ignore.o
+    CC builtin/check-ref-format.o
+    CC builtin/checkout-index.o
+    CC builtin/checkout.o
+    CC builtin/clean.o
+    CC builtin/clone.o
+    CC builtin/column.o
+    CC builtin/commit-tree.o
+    CC builtin/commit.o
+    CC builtin/config.o
+    CC builtin/count-objects.o
+    CC builtin/credential.o
+    CC builtin/describe.o
+    CC builtin/diff-files.o
+    CC builtin/diff-index.o
+    CC builtin/diff-tree.o
+    CC builtin/diff.o
+    CC builtin/fast-export.o
+    CC builtin/fetch-pack.o
+    CC builtin/fetch.o
+    CC builtin/fmt-merge-msg.o
+    CC builtin/for-each-ref.o
+    CC builtin/fsck.o
+    CC builtin/gc.o
+    CC builtin/grep.o
+    CC builtin/hash-object.o
+    CC builtin/help.o
+    CC builtin/index-pack.o
+    CC builtin/init-db.o
+    CC builtin/log.o
+    CC builtin/ls-files.o
+    CC builtin/ls-remote.o
+    CC builtin/ls-tree.o
+    CC builtin/mailinfo.o
+    CC builtin/mailsplit.o
+    CC builtin/merge.o
+    CC builtin/merge-base.o
+    CC builtin/merge-file.o
+    CC builtin/merge-index.o
+    CC builtin/merge-ours.o
+    CC builtin/merge-recursive.o
+    CC builtin/merge-tree.o
+    CC builtin/mktag.o
+    CC builtin/mktree.o
+    CC builtin/mv.o
+    CC builtin/name-rev.o
+    CC builtin/notes.o
+    CC builtin/pack-objects.o
+    CC builtin/pack-redundant.o
+    CC builtin/pack-refs.o
+    CC builtin/patch-id.o
+    CC builtin/prune-packed.o
+    CC builtin/prune.o
+    CC builtin/push.o
+    CC builtin/read-tree.o
+    CC builtin/receive-pack.o
+    CC builtin/reflog.o
+    CC builtin/remote.o
+    CC builtin/remote-ext.o
+    CC builtin/remote-fd.o
+    CC builtin/replace.o
+    CC builtin/rerere.o
+    CC builtin/reset.o
+    CC builtin/rev-list.o
+    CC builtin/rev-parse.o
+    CC builtin/revert.o
+    CC builtin/rm.o
+    CC builtin/send-pack.o
+    CC builtin/shortlog.o
+    CC builtin/show-branch.o
+    CC builtin/show-ref.o
+    CC builtin/stripspace.o
+    CC builtin/symbolic-ref.o
+    CC builtin/tag.o
+    CC builtin/tar-tree.o
+    CC builtin/unpack-file.o
+    CC builtin/unpack-objects.o
+    CC builtin/update-index.o
+    CC builtin/update-ref.o
+    CC builtin/update-server-info.o
+    CC builtin/upload-archive.o
+    CC builtin/var.o
+    CC builtin/verify-pack.o
+    CC builtin/verify-tag.o
+    CC builtin/write-tree.o
+    LINK git
+    BUILTIN git-add
+    BUILTIN git-annotate
+    BUILTIN git-apply
+    BUILTIN git-archive
+    BUILTIN git-bisect--helper
+    BUILTIN git-blame
+    BUILTIN git-branch
+    BUILTIN git-bundle
+    BUILTIN git-cat-file
+    BUILTIN git-check-attr
+    BUILTIN git-check-ignore
+    BUILTIN git-check-ref-format
+    BUILTIN git-checkout-index
+    BUILTIN git-checkout
+    BUILTIN git-clean
+    BUILTIN git-clone
+    BUILTIN git-column
+    BUILTIN git-commit-tree
+    BUILTIN git-commit
+    BUILTIN git-config
+    BUILTIN git-count-objects
+    BUILTIN git-credential
+    BUILTIN git-describe
+    BUILTIN git-diff-files
+    BUILTIN git-diff-index
+    BUILTIN git-diff-tree
+    BUILTIN git-diff
+    BUILTIN git-fast-export
+    BUILTIN git-fetch-pack
+    BUILTIN git-fetch
+    BUILTIN git-fmt-merge-msg
+    BUILTIN git-for-each-ref
+    BUILTIN git-fsck
+    BUILTIN git-gc
+    BUILTIN git-grep
+    BUILTIN git-hash-object
+    BUILTIN git-help
+    BUILTIN git-index-pack
+    BUILTIN git-init-db
+    BUILTIN git-log
+    BUILTIN git-ls-files
+    BUILTIN git-ls-remote
+    BUILTIN git-ls-tree
+    BUILTIN git-mailinfo
+    BUILTIN git-mailsplit
+    BUILTIN git-merge
+    BUILTIN git-merge-base
+    BUILTIN git-merge-file
+    BUILTIN git-merge-index
+    BUILTIN git-merge-ours
+    BUILTIN git-merge-recursive
+    BUILTIN git-merge-tree
+    BUILTIN git-mktag
+    BUILTIN git-mktree
+    BUILTIN git-mv
+    BUILTIN git-name-rev
+    BUILTIN git-notes
+    BUILTIN git-pack-objects
+    BUILTIN git-pack-redundant
+    BUILTIN git-pack-refs
+    BUILTIN git-patch-id
+    BUILTIN git-prune-packed
+    BUILTIN git-prune
+    BUILTIN git-push
+    BUILTIN git-read-tree
+    BUILTIN git-receive-pack
+    BUILTIN git-reflog
+    BUILTIN git-remote
+    BUILTIN git-remote-ext
+    BUILTIN git-remote-fd
+    BUILTIN git-replace
+    BUILTIN git-rerere
+    BUILTIN git-reset
+    BUILTIN git-rev-list
+    BUILTIN git-rev-parse
+    BUILTIN git-revert
+    BUILTIN git-rm
+    BUILTIN git-send-pack
+    BUILTIN git-shortlog
+    BUILTIN git-show-branch
+    BUILTIN git-show-ref
+    BUILTIN git-stripspace
+    BUILTIN git-symbolic-ref
+    BUILTIN git-tag
+    BUILTIN git-tar-tree
+    BUILTIN git-unpack-file
+    BUILTIN git-unpack-objects
+    BUILTIN git-update-index
+    BUILTIN git-update-ref
+    BUILTIN git-update-server-info
+    BUILTIN git-upload-archive
+    BUILTIN git-var
+    BUILTIN git-verify-pack
+    BUILTIN git-verify-tag
+    BUILTIN git-write-tree
+    BUILTIN git-cherry
+    BUILTIN git-cherry-pick
+    BUILTIN git-format-patch
+    BUILTIN git-fsck-objects
+    BUILTIN git-get-tar-commit-id
+    BUILTIN git-init
+    BUILTIN git-merge-subtree
+    BUILTIN git-peek-remote
+    BUILTIN git-repo-config
+    BUILTIN git-show
+    BUILTIN git-stage
+    BUILTIN git-status
+    BUILTIN git-whatchanged
+    SUBDIR git-gui
+GITGUI_VERSION = 0.16.0.15.gf6dd78
+    * new locations or Tcl/Tk interpreter
+    GEN git-gui
+    INDEX lib/
+    * tclsh failed; using unoptimized loading
+    MSGFMT    po/de.msg 520 translated.
+    MSGFMT    po/el.msg 381 translated, 4 fuzzy, 6 untranslated.
+    MSGFMT    po/fr.msg 520 translated.
+    MSGFMT    po/hu.msg 514 translated.
+    MSGFMT    po/it.msg 519 translated, 1 untranslated.
+    MSGFMT    po/ja.msg 520 translated.
+    MSGFMT    po/nb.msg 474 translated, 39 untranslated.
+    MSGFMT po/pt_br.msg 520 translated.
+    MSGFMT    po/ru.msg 516 translated, 4 untranslated.
+    MSGFMT    po/sv.msg 521 translated.
+    MSGFMT po/zh_cn.msg 366 translated, 7 fuzzy, 17 untranslated.
+    SUBDIR gitk-git
+    * new Tcl/Tk interpreter location
+    GEN gitk-wish
+Generating catalog po/de.msg
+msgfmt --statistics --tcl po/de.po -l de -d po/
+289 translated messages.
+Generating catalog po/es.msg
+msgfmt --statistics --tcl po/es.po -l es -d po/
+200 translated messages, 7 untranslated messages.
+Generating catalog po/fr.msg
+msgfmt --statistics --tcl po/fr.po -l fr -d po/
+276 translated messages, 4 fuzzy translations.
+Generating catalog po/hu.msg
+msgfmt --statistics --tcl po/hu.po -l hu -d po/
+288 translated messages.
+Generating catalog po/it.msg
+msgfmt --statistics --tcl po/it.po -l it -d po/
+283 translated messages, 6 untranslated messages.
+Generating catalog po/ja.msg
+msgfmt --statistics --tcl po/ja.po -l ja -d po/
+284 translated messages.
+Generating catalog po/pt_br.msg
+msgfmt --statistics --tcl po/pt_br.po -l pt_br -d po/
+290 translated messages.
+Generating catalog po/ru.msg
+msgfmt --statistics --tcl po/ru.po -l ru -d po/
+245 translated messages.
+Generating catalog po/sv.msg
+msgfmt --statistics --tcl po/sv.po -l sv -d po/
+296 translated messages.
+    SUBDIR perl
+/mnt/HD/HD_a2/ffp/bin/perl -pe "s<\Q++LOCALEDIR++\E></ffp/share/locale>" <Git/SVN/Migration.pm >blib/lib/Git/SVN/Migration.pm
+/mnt/HD/HD_a2/ffp/bin/perl -pe "s<\Q++LOCALEDIR++\E></ffp/share/locale>" <Git/SVN/Editor.pm >blib/lib/Git/SVN/Editor.pm
+/mnt/HD/HD_a2/ffp/bin/perl -pe "s<\Q++LOCALEDIR++\E></ffp/share/locale>" <Git/SVN/Log.pm >blib/lib/Git/SVN/Log.pm
+/mnt/HD/HD_a2/ffp/bin/perl -pe "s<\Q++LOCALEDIR++\E></ffp/share/locale>" <Git/SVN.pm >blib/lib/Git/SVN.pm
+/mnt/HD/HD_a2/ffp/bin/perl -pe "s<\Q++LOCALEDIR++\E></ffp/share/locale>" <Git/SVN/Memoize/YAML.pm >blib/lib/Git/SVN/Memoize/YAML.pm
+/mnt/HD/HD_a2/ffp/bin/perl -pe "s<\Q++LOCALEDIR++\E></ffp/share/locale>" <Git/I18N.pm >blib/lib/Git/I18N.pm
+/mnt/HD/HD_a2/ffp/bin/perl -pe "s<\Q++LOCALEDIR++\E></ffp/share/locale>" <Git/SVN/Ra.pm >blib/lib/Git/SVN/Ra.pm
+/mnt/HD/HD_a2/ffp/bin/perl -pe "s<\Q++LOCALEDIR++\E></ffp/share/locale>" <Git/SVN/Prompt.pm >blib/lib/Git/SVN/Prompt.pm
+/mnt/HD/HD_a2/ffp/bin/perl -pe "s<\Q++LOCALEDIR++\E></ffp/share/locale>" <Git/SVN/GlobSpec.pm >blib/lib/Git/SVN/GlobSpec.pm
+/mnt/HD/HD_a2/ffp/bin/perl -pe "s<\Q++LOCALEDIR++\E></ffp/share/locale>" <Git/SVN/Fetcher.pm >blib/lib/Git/SVN/Fetcher.pm
+/mnt/HD/HD_a2/ffp/bin/perl -pe "s<\Q++LOCALEDIR++\E></ffp/share/locale>" <Git/IndexInfo.pm >blib/lib/Git/IndexInfo.pm
+/mnt/HD/HD_a2/ffp/bin/perl -pe "s<\Q++LOCALEDIR++\E></ffp/share/locale>" <Git/SVN/Utils.pm >blib/lib/Git/SVN/Utils.pm
+/mnt/HD/HD_a2/ffp/bin/perl -pe "s<\Q++LOCALEDIR++\E></ffp/share/locale>" <Git.pm >blib/lib/Git.pm
+Manifying blib/man3/Git::SVN::Editor.3
+Manifying blib/man3/Git::SVN::Memoize::YAML.3
+Manifying blib/man3/Git::I18N.3
+Manifying blib/man3/Git::SVN::Ra.3
+Manifying blib/man3/Git::SVN::Prompt.3
+Manifying blib/man3/Git::SVN::Fetcher.3
+Manifying blib/man3/Git::SVN::Utils.3
+Manifying blib/man3/Git.3
+    SUBDIR git_remote_helpers
+    SUBDIR templates
+    MSGFMT po/build/locale/da/LC_MESSAGES/git.mo
+0 translated messages, 724 untranslated messages.
+    MSGFMT po/build/locale/de/LC_MESSAGES/git.mo
+2007 translated messages, 2 untranslated messages.
+    MSGFMT po/build/locale/is/LC_MESSAGES/git.mo
+14 translated messages.
+    MSGFMT po/build/locale/it/LC_MESSAGES/git.mo
+716 translated messages, 350 untranslated messages.
+    MSGFMT po/build/locale/nl/LC_MESSAGES/git.mo
+0 translated messages, 722 untranslated messages.
+    MSGFMT po/build/locale/pt_PT/LC_MESSAGES/git.mo
+306 translated messages, 687 untranslated messages.
+    MSGFMT po/build/locale/sv/LC_MESSAGES/git.mo
+2009 translated messages.
+    MSGFMT po/build/locale/vi/LC_MESSAGES/git.mo
+2009 translated messages.
+    MSGFMT po/build/locale/zh_CN/LC_MESSAGES/git.mo
+2009 translated messages.
+    CC test-chmtime.o
+    LINK test-chmtime
+    CC test-ctype.o
+    LINK test-ctype
+    CC test-date.o
+    LINK test-date
+    CC test-delta.o
+    LINK test-delta
+    CC test-dump-cache-tree.o
+    LINK test-dump-cache-tree
+    CC test-genrandom.o
+    LINK test-genrandom
+    CC test-index-version.o
+    LINK test-index-version
+    CC test-line-buffer.o
+    LINK test-line-buffer
+    CC test-match-trees.o
+    LINK test-match-trees
+    CC test-mergesort.o
+    LINK test-mergesort
+    CC test-mktemp.o
+    LINK test-mktemp
+    CC test-parse-options.o
+    LINK test-parse-options
+    CC test-path-utils.o
+    LINK test-path-utils
+    CC test-regex.o
+    LINK test-regex
+    CC test-revision-walking.o
+    LINK test-revision-walking
+    CC test-run-command.o
+    LINK test-run-command
+    CC test-scrap-cache-tree.o
+    LINK test-scrap-cache-tree
+    CC test-sha1.o
+    LINK test-sha1
+    CC test-sigchain.o
+    LINK test-sigchain
+    CC test-string-list.o
+    LINK test-string-list
+    CC test-subprocess.o
+    LINK test-subprocess
+    CC test-svn-fe.o
+    LINK test-svn-fe
+    CC test-wildmatch.o
+    LINK test-wildmatch
+    GEN bin-wrappers/git
+    GEN bin-wrappers/git-upload-pack
+    GEN bin-wrappers/git-receive-pack
+    GEN bin-wrappers/git-upload-archive
+    GEN bin-wrappers/git-shell
+    GEN bin-wrappers/git-cvsserver
+    GEN bin-wrappers/test-chmtime
+    GEN bin-wrappers/test-ctype
+    GEN bin-wrappers/test-date
+    GEN bin-wrappers/test-delta
+    GEN bin-wrappers/test-dump-cache-tree
+    GEN bin-wrappers/test-genrandom
+    GEN bin-wrappers/test-index-version
+    GEN bin-wrappers/test-line-buffer
+    GEN bin-wrappers/test-match-trees
+    GEN bin-wrappers/test-mergesort
+    GEN bin-wrappers/test-mktemp
+    GEN bin-wrappers/test-parse-options
+    GEN bin-wrappers/test-path-utils
+    GEN bin-wrappers/test-regex
+    GEN bin-wrappers/test-revision-walking
+    GEN bin-wrappers/test-run-command
+    GEN bin-wrappers/test-scrap-cache-tree
+    GEN bin-wrappers/test-sha1
+    GEN bin-wrappers/test-sigchain
+    GEN bin-wrappers/test-string-list
+    GEN bin-wrappers/test-subprocess
+    GEN bin-wrappers/test-svn-fe
+    GEN bin-wrappers/test-wildmatch
++ LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
++ make DESTDIR=/tmp/git.vdldlx/pkg install
+    GEN perl/PM.stamp
+    SUBDIR perl
+/ffp/bin/perl Makefile.PL PREFIX='/ffp' INSTALL_BASE='' --localedir='/ffp/share/locale'
+Writing perl.mak for Git
+Writing MYMETA.yml
+    GEN git-add--interactive
+    GEN git-difftool
+    GEN git-archimport
+    GEN git-cvsexportcommit
+    GEN git-cvsimport
+    GEN git-cvsserver
+    GEN git-relink
+    GEN git-send-email
+    GEN git-svn
+    SUBDIR gitweb
+    SUBDIR ../
+make[2]: `GIT-VERSION-FILE' is up to date.
+    GEN git-instaweb
+    SUBDIR git-gui
+    SUBDIR gitk-git
+    SUBDIR perl
+/mnt/HD/HD_a2/ffp/bin/perl -pe "s<\Q++LOCALEDIR++\E></ffp/share/locale>" <Git/SVN/Migration.pm >blib/lib/Git/SVN/Migration.pm
+/mnt/HD/HD_a2/ffp/bin/perl -pe "s<\Q++LOCALEDIR++\E></ffp/share/locale>" <Git/SVN/Editor.pm >blib/lib/Git/SVN/Editor.pm
+/mnt/HD/HD_a2/ffp/bin/perl -pe "s<\Q++LOCALEDIR++\E></ffp/share/locale>" <Git/SVN/Log.pm >blib/lib/Git/SVN/Log.pm
+/mnt/HD/HD_a2/ffp/bin/perl -pe "s<\Q++LOCALEDIR++\E></ffp/share/locale>" <Git/SVN.pm >blib/lib/Git/SVN.pm
+/mnt/HD/HD_a2/ffp/bin/perl -pe "s<\Q++LOCALEDIR++\E></ffp/share/locale>" <Git/SVN/Memoize/YAML.pm >blib/lib/Git/SVN/Memoize/YAML.pm
+/mnt/HD/HD_a2/ffp/bin/perl -pe "s<\Q++LOCALEDIR++\E></ffp/share/locale>" <Git/I18N.pm >blib/lib/Git/I18N.pm
+/mnt/HD/HD_a2/ffp/bin/perl -pe "s<\Q++LOCALEDIR++\E></ffp/share/locale>" <Git/SVN/Ra.pm >blib/lib/Git/SVN/Ra.pm
+/mnt/HD/HD_a2/ffp/bin/perl -pe "s<\Q++LOCALEDIR++\E></ffp/share/locale>" <Git/SVN/Prompt.pm >blib/lib/Git/SVN/Prompt.pm
+/mnt/HD/HD_a2/ffp/bin/perl -pe "s<\Q++LOCALEDIR++\E></ffp/share/locale>" <Git/SVN/GlobSpec.pm >blib/lib/Git/SVN/GlobSpec.pm
+/mnt/HD/HD_a2/ffp/bin/perl -pe "s<\Q++LOCALEDIR++\E></ffp/share/locale>" <Git/SVN/Fetcher.pm >blib/lib/Git/SVN/Fetcher.pm
+/mnt/HD/HD_a2/ffp/bin/perl -pe "s<\Q++LOCALEDIR++\E></ffp/share/locale>" <Git/IndexInfo.pm >blib/lib/Git/IndexInfo.pm
+/mnt/HD/HD_a2/ffp/bin/perl -pe "s<\Q++LOCALEDIR++\E></ffp/share/locale>" <Git/SVN/Utils.pm >blib/lib/Git/SVN/Utils.pm
+/mnt/HD/HD_a2/ffp/bin/perl -pe "s<\Q++LOCALEDIR++\E></ffp/share/locale>" <Git.pm >blib/lib/Git.pm
+    SUBDIR git_remote_helpers
+    SUBDIR templates
+install -d -m 755 '/tmp/git.vdldlx/pkg/ffp/bin'
+install -d -m 755 '/tmp/git.vdldlx/pkg/ffp/libexec/git-core'
+install   git-credential-store git-daemon git-fast-import git-http-backend git-imap-send git-sh-i18n--envsubst git-shell git-show-index git-upload-pack git-remote-testsvn git-http-fetch git-http-push git-credential-cache git-credential-cache--daemon git-remote-http git-remote-https git-remote-ftp git-remote-ftps git-am git-bisect git-difftool--helper git-filter-branch git-lost-found git-merge-octopus git-merge-one-file git-merge-resolve git-mergetool git-pull git-quiltimport git-rebase git-repack git-request-pull git-stash git-submodule git-web--browse git-add--interactive git-difftool git-archimport git-cvsexportcommit git-cvsimport git-cvsserver git-relink git-send-email git-svn git-remote-testpy git-p4 git-instaweb '/tmp/git.vdldlx/pkg/ffp/libexec/git-core'
+install -m 644  git-mergetool--lib git-parse-remote git-rebase--am git-rebase--interactive git-rebase--merge git-sh-setup git-sh-i18n '/tmp/git.vdldlx/pkg/ffp/libexec/git-core'
+install git git-upload-pack git-receive-pack git-upload-archive git-shell git-cvsserver '/tmp/git.vdldlx/pkg/ffp/bin'
+make -C templates DESTDIR='/tmp/git.vdldlx/pkg' install
+make[1]: Entering directory `/tmp/git.vdldlx/git-1.8.2.1/templates'
+install -d -m 755 '/tmp/git.vdldlx/pkg/ffp/share/git-core/templates'
+(cd blt && tar cf - .) | \
+	(cd '/tmp/git.vdldlx/pkg/ffp/share/git-core/templates' && umask 022 && tar xof -)
+make[1]: Leaving directory `/tmp/git.vdldlx/git-1.8.2.1/templates'
+install -d -m 755 '/tmp/git.vdldlx/pkg/ffp/libexec/git-core/mergetools'
+install -m 644 mergetools/* '/tmp/git.vdldlx/pkg/ffp/libexec/git-core/mergetools'
+install -d -m 755 '/tmp/git.vdldlx/pkg/ffp/share/locale'
+(cd po/build/locale && tar cf - .) | \
+	(cd '/tmp/git.vdldlx/pkg/ffp/share/locale' && umask 022 && tar xof -)
+make -C perl prefix='/ffp' DESTDIR='/tmp/git.vdldlx/pkg' install
+make[1]: Entering directory `/tmp/git.vdldlx/git-1.8.2.1/perl'
+make[2]: Entering directory `/tmp/git.vdldlx/git-1.8.2.1/perl'
+Installing /tmp/git.vdldlx/pkg/ffp/lib/perl5/site_perl/5.14.2/Git.pm
+Installing /tmp/git.vdldlx/pkg/ffp/lib/perl5/site_perl/5.14.2/Git/I18N.pm
+Installing /tmp/git.vdldlx/pkg/ffp/lib/perl5/site_perl/5.14.2/Git/IndexInfo.pm
+Installing /tmp/git.vdldlx/pkg/ffp/lib/perl5/site_perl/5.14.2/Git/SVN.pm
+Installing /tmp/git.vdldlx/pkg/ffp/lib/perl5/site_perl/5.14.2/Git/SVN/GlobSpec.pm
+Installing /tmp/git.vdldlx/pkg/ffp/lib/perl5/site_perl/5.14.2/Git/SVN/Ra.pm
+Installing /tmp/git.vdldlx/pkg/ffp/lib/perl5/site_perl/5.14.2/Git/SVN/Migration.pm
+Installing /tmp/git.vdldlx/pkg/ffp/lib/perl5/site_perl/5.14.2/Git/SVN/Log.pm
+Installing /tmp/git.vdldlx/pkg/ffp/lib/perl5/site_perl/5.14.2/Git/SVN/Editor.pm
+Installing /tmp/git.vdldlx/pkg/ffp/lib/perl5/site_perl/5.14.2/Git/SVN/Fetcher.pm
+Installing /tmp/git.vdldlx/pkg/ffp/lib/perl5/site_perl/5.14.2/Git/SVN/Utils.pm
+Installing /tmp/git.vdldlx/pkg/ffp/lib/perl5/site_perl/5.14.2/Git/SVN/Prompt.pm
+Installing /tmp/git.vdldlx/pkg/ffp/lib/perl5/site_perl/5.14.2/Git/SVN/Memoize/YAML.pm
+Installing /tmp/git.vdldlx/pkg/ffp/share/man/man3/Git::SVN::Ra.3
+Installing /tmp/git.vdldlx/pkg/ffp/share/man/man3/Git.3
+Installing /tmp/git.vdldlx/pkg/ffp/share/man/man3/Git::SVN::Fetcher.3
+Installing /tmp/git.vdldlx/pkg/ffp/share/man/man3/Git::I18N.3
+Installing /tmp/git.vdldlx/pkg/ffp/share/man/man3/Git::SVN::Prompt.3
+Installing /tmp/git.vdldlx/pkg/ffp/share/man/man3/Git::SVN::Utils.3
+Installing /tmp/git.vdldlx/pkg/ffp/share/man/man3/Git::SVN::Memoize::YAML.3
+Installing /tmp/git.vdldlx/pkg/ffp/share/man/man3/Git::SVN::Editor.3
+Appending installation info to /tmp/git.vdldlx/pkg/ffp/lib/perl5/5.14.2/arm-linux-thread-multi-64int/perllocal.pod
+make[2]: Leaving directory `/tmp/git.vdldlx/git-1.8.2.1/perl'
+make[1]: Leaving directory `/tmp/git.vdldlx/git-1.8.2.1/perl'
+make -C gitweb install
+make[1]: Entering directory `/tmp/git.vdldlx/git-1.8.2.1/gitweb'
+make[2]: Entering directory `/tmp/git.vdldlx/git-1.8.2.1'
+make[2]: `GIT-VERSION-FILE' is up to date.
+make[2]: Leaving directory `/tmp/git.vdldlx/git-1.8.2.1'
+install -d -m 755 '/tmp/git.vdldlx/pkg/ffp/share/gitweb'
+install -m 755 gitweb.cgi '/tmp/git.vdldlx/pkg/ffp/share/gitweb'
+install -d -m 755 '/tmp/git.vdldlx/pkg/ffp/share/gitweb/static'
+install -m 644 static/gitweb.js static/gitweb.css static/git-logo.png static/git-favicon.png '/tmp/git.vdldlx/pkg/ffp/share/gitweb/static'
+make[1]: Leaving directory `/tmp/git.vdldlx/git-1.8.2.1/gitweb'
+make -C git_remote_helpers prefix='/ffp' DESTDIR='/tmp/git.vdldlx/pkg' install
+make[1]: Entering directory `/tmp/git.vdldlx/git-1.8.2.1/git_remote_helpers'
+/ffp/bin/python setup.py install --prefix /tmp/git.vdldlx/pkg/ffp
+running install
+running build
+running build_py
+running install_lib
+creating /tmp/git.vdldlx/pkg/ffp/lib/python2.7
+creating /tmp/git.vdldlx/pkg/ffp/lib/python2.7/site-packages
+creating /tmp/git.vdldlx/pkg/ffp/lib/python2.7/site-packages/git_remote_helpers
+copying build/lib/git_remote_helpers/__init__.py -> /tmp/git.vdldlx/pkg/ffp/lib/python2.7/site-packages/git_remote_helpers
+copying build/lib/git_remote_helpers/util.py -> /tmp/git.vdldlx/pkg/ffp/lib/python2.7/site-packages/git_remote_helpers
+creating /tmp/git.vdldlx/pkg/ffp/lib/python2.7/site-packages/git_remote_helpers/git
+copying build/lib/git_remote_helpers/git/__init__.py -> /tmp/git.vdldlx/pkg/ffp/lib/python2.7/site-packages/git_remote_helpers/git
+copying build/lib/git_remote_helpers/git/non_local.py -> /tmp/git.vdldlx/pkg/ffp/lib/python2.7/site-packages/git_remote_helpers/git
+copying build/lib/git_remote_helpers/git/repo.py -> /tmp/git.vdldlx/pkg/ffp/lib/python2.7/site-packages/git_remote_helpers/git
+copying build/lib/git_remote_helpers/git/importer.py -> /tmp/git.vdldlx/pkg/ffp/lib/python2.7/site-packages/git_remote_helpers/git
+copying build/lib/git_remote_helpers/git/exporter.py -> /tmp/git.vdldlx/pkg/ffp/lib/python2.7/site-packages/git_remote_helpers/git
+copying build/lib/git_remote_helpers/git/git.py -> /tmp/git.vdldlx/pkg/ffp/lib/python2.7/site-packages/git_remote_helpers/git
+byte-compiling /tmp/git.vdldlx/pkg/ffp/lib/python2.7/site-packages/git_remote_helpers/__init__.py to __init__.pyc
+byte-compiling /tmp/git.vdldlx/pkg/ffp/lib/python2.7/site-packages/git_remote_helpers/util.py to util.pyc
+byte-compiling /tmp/git.vdldlx/pkg/ffp/lib/python2.7/site-packages/git_remote_helpers/git/__init__.py to __init__.pyc
+byte-compiling /tmp/git.vdldlx/pkg/ffp/lib/python2.7/site-packages/git_remote_helpers/git/non_local.py to non_local.pyc
+byte-compiling /tmp/git.vdldlx/pkg/ffp/lib/python2.7/site-packages/git_remote_helpers/git/repo.py to repo.pyc
+byte-compiling /tmp/git.vdldlx/pkg/ffp/lib/python2.7/site-packages/git_remote_helpers/git/importer.py to importer.pyc
+byte-compiling /tmp/git.vdldlx/pkg/ffp/lib/python2.7/site-packages/git_remote_helpers/git/exporter.py to exporter.pyc
+byte-compiling /tmp/git.vdldlx/pkg/ffp/lib/python2.7/site-packages/git_remote_helpers/git/git.py to git.pyc
+running install_egg_info
+Writing /tmp/git.vdldlx/pkg/ffp/lib/python2.7/site-packages/git_remote_helpers-0.1.0-py2.7.egg-info
+make[1]: Leaving directory `/tmp/git.vdldlx/git-1.8.2.1/git_remote_helpers'
+make -C gitk-git install
+make[1]: Entering directory `/tmp/git.vdldlx/git-1.8.2.1/gitk-git'
+install -m 755 gitk-wish '/tmp/git.vdldlx/pkg/ffp/bin'/gitk
+install -d -m 755 '/tmp/git.vdldlx/pkg/ffp/share/gitk/lib/msgs'
+install -m 644 po/de.msg '/tmp/git.vdldlx/pkg/ffp/share/gitk/lib/msgs' &&  install -m 644 po/es.msg '/tmp/git.vdldlx/pkg/ffp/share/gitk/lib/msgs' &&  install -m 644 po/fr.msg '/tmp/git.vdldlx/pkg/ffp/share/gitk/lib/msgs' &&  install -m 644 po/hu.msg '/tmp/git.vdldlx/pkg/ffp/share/gitk/lib/msgs' &&  install -m 644 po/it.msg '/tmp/git.vdldlx/pkg/ffp/share/gitk/lib/msgs' &&  install -m 644 po/ja.msg '/tmp/git.vdldlx/pkg/ffp/share/gitk/lib/msgs' &&  install -m 644 po/pt_br.msg '/tmp/git.vdldlx/pkg/ffp/share/gitk/lib/msgs' &&  install -m 644 po/ru.msg '/tmp/git.vdldlx/pkg/ffp/share/gitk/lib/msgs' &&  install -m 644 po/sv.msg '/tmp/git.vdldlx/pkg/ffp/share/gitk/lib/msgs' && true
+make[1]: Leaving directory `/tmp/git.vdldlx/git-1.8.2.1/gitk-git'
+make -C git-gui gitexecdir='/ffp/libexec/git-core' install
+make[1]: Entering directory `/tmp/git.vdldlx/git-1.8.2.1/git-gui'
+  DEST /tmp/git.vdldlx/pkg/ffp/libexec/git-core
+    INSTALL 755 git-gui
+    INSTALL 755 git-gui--askpass
+    LINK        git-citool -> git-gui
+  DEST /tmp/git.vdldlx/pkg/ffp/share/git-gui/lib
+    INSTALL 644 tclIndex
+    INSTALL 644 about.tcl
+    INSTALL 644 blame.tcl
+    INSTALL 644 branch.tcl
+    INSTALL 644 branch_checkout.tcl
+    INSTALL 644 branch_create.tcl
+    INSTALL 644 branch_delete.tcl
+    INSTALL 644 branch_rename.tcl
+    INSTALL 644 browser.tcl
+    INSTALL 644 checkout_op.tcl
+    INSTALL 644 choose_font.tcl
+    INSTALL 644 choose_repository.tcl
+    INSTALL 644 choose_rev.tcl
+    INSTALL 644 class.tcl
+    INSTALL 644 commit.tcl
+    INSTALL 644 console.tcl
+    INSTALL 644 database.tcl
+    INSTALL 644 date.tcl
+    INSTALL 644 diff.tcl
+    INSTALL 644 encoding.tcl
+    INSTALL 644 error.tcl
+    INSTALL 644 index.tcl
+    INSTALL 644 line.tcl
+    INSTALL 644 logo.tcl
+    INSTALL 644 merge.tcl
+    INSTALL 644 mergetool.tcl
+    INSTALL 644 option.tcl
+    INSTALL 644 remote.tcl
+    INSTALL 644 remote_add.tcl
+    INSTALL 644 remote_branch_delete.tcl
+    INSTALL 644 search.tcl
+    INSTALL 644 shortcut.tcl
+    INSTALL 644 spellcheck.tcl
+    INSTALL 644 sshkey.tcl
+    INSTALL 644 status_bar.tcl
+    INSTALL 644 themed.tcl
+    INSTALL 644 tools.tcl
+    INSTALL 644 tools_dlg.tcl
+    INSTALL 644 transport.tcl
+    INSTALL 644 win32.tcl
+    INSTALL 644 git-gui.ico
+    INSTALL 644 win32_shortcut.js
+  DEST /tmp/git.vdldlx/pkg/ffp/share/git-gui/lib/msgs
+    INSTALL 644 de.msg
+    INSTALL 644 el.msg
+    INSTALL 644 fr.msg
+    INSTALL 644 hu.msg
+    INSTALL 644 it.msg
+    INSTALL 644 ja.msg
+    INSTALL 644 nb.msg
+    INSTALL 644 pt_br.msg
+    INSTALL 644 ru.msg
+    INSTALL 644 sv.msg
+    INSTALL 644 zh_cn.msg
+make[1]: Leaving directory `/tmp/git.vdldlx/git-1.8.2.1/git-gui'
+bindir=$(cd '/tmp/git.vdldlx/pkg/ffp/bin' && pwd) && \
+	execdir=$(cd '/tmp/git.vdldlx/pkg/ffp/libexec/git-core' && pwd) && \
+	{ test "$bindir/" = "$execdir/" || \
+	  for p in git git-shell git-upload-pack git-cvsserver; do \
+		rm -f "$execdir/$p" && \
+		test -z "" && \
+		ln "$bindir/$p" "$execdir/$p" 2>/dev/null || \
+		cp "$bindir/$p" "$execdir/$p" || exit; \
+	  done; \
+	} && \
+	for p in git-receive-pack git-upload-archive; do \
+		rm -f "$bindir/$p" && \
+		test -z "" && \
+		ln "$bindir/git" "$bindir/$p" 2>/dev/null || \
+		ln -s "git" "$bindir/$p" 2>/dev/null || \
+		cp "$bindir/git" "$bindir/$p" || exit; \
+	done && \
+	for p in  git-add git-annotate git-apply git-archive git-bisect--helper git-blame git-branch git-bundle git-cat-file git-check-attr git-check-ignore git-check-ref-format git-checkout-index git-checkout git-clean git-clone git-column git-commit-tree git-commit git-config git-count-objects git-credential git-describe git-diff-files git-diff-index git-diff-tree git-diff git-fast-export git-fetch-pack git-fetch git-fmt-merge-msg git-for-each-ref git-fsck git-gc git-grep git-hash-object git-help git-index-pack git-init-db git-log git-ls-files git-ls-remote git-ls-tree git-mailinfo git-mailsplit git-merge git-merge-base git-merge-file git-merge-index git-merge-ours git-merge-recursive git-merge-tree git-mktag git-mktree git-mv git-name-rev git-notes git-pack-objects git-pack-redundant git-pack-refs git-patch-id git-prune-packed git-prune git-push git-read-tree git-receive-pack git-reflog git-remote git-remote-ext git-remote-fd git-replace git-rerere git-reset git-rev-list git-rev-parse git-revert git-rm git-send-pack git-shortlog git-show-branch git-show-ref git-stripspace git-symbolic-ref git-tag git-tar-tree git-unpack-file git-unpack-objects git-update-index git-update-ref git-update-server-info git-upload-archive git-var git-verify-pack git-verify-tag git-write-tree git-cherry git-cherry-pick git-format-patch git-fsck-objects git-get-tar-commit-id git-init git-merge-subtree git-peek-remote git-repo-config git-show git-stage git-status git-whatchanged; do \
+		rm -f "$execdir/$p" && \
+		test -z "" && \
+		ln "$execdir/git" "$execdir/$p" 2>/dev/null || \
+		ln -s "git" "$execdir/$p" 2>/dev/null || \
+		cp "$execdir/git" "$execdir/$p" || exit; \
+	done && \
+	remote_curl_aliases="git-remote-https git-remote-ftp git-remote-ftps" && \
+	for p in $remote_curl_aliases; do \
+		rm -f "$execdir/$p" && \
+		test -z "" && \
+		ln "$execdir/git-remote-http" "$execdir/$p" 2>/dev/null || \
+		ln -s "git-remote-http" "$execdir/$p" 2>/dev/null || \
+		cp "$execdir/git-remote-http" "$execdir/$p" || exit; \
+	done && \
+	./check_bindir "z$bindir" "z$execdir" "$bindir/git-add"
++ cd /tmp/git.vdldlx
++ cat /ffp/home/root/fun_plug/ffp_packages/git/SRC_MAN
++ xargs wget
+--2013-04-24 16:54:47--  http://git-core.googlecode.com/files/git-manpages-1.8.2.1.tar.gz
+Resolving git-core.googlecode.com... 2a00:1450:400c:c05::52, 74.125.132.82
+Connecting to git-core.googlecode.com|2a00:1450:400c:c05::52|:80... failed: Address family not supported by protocol.
+Connecting to git-core.googlecode.com|74.125.132.82|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 536718 (524K) [application/x-gzip]
+Saving to: `git-manpages-1.8.2.1.tar.gz'
+
+     0K .......... .......... .......... .......... ..........  9%  553K 1s
+    50K .......... .......... .......... .......... .......... 19% 1.33M 1s
+   100K .......... .......... .......... .......... .......... 28% 1.36M 0s
+   150K .......... .......... .......... .......... .......... 38% 1.42M 0s
+   200K .......... .......... .......... .......... .......... 47% 1.39M 0s
+   250K .......... .......... .......... .......... .......... 57% 1.39M 0s
+   300K .......... .......... .......... .......... .......... 66% 1.36M 0s
+   350K .......... .......... .......... .......... .......... 76% 1.38M 0s
+   400K .......... .......... .......... .......... .......... 85% 1.40M 0s
+   450K .......... .......... .......... .......... .......... 95% 1.38M 0s
+   500K .......... .......... ....                            100% 1.45M=0.4s
+
+2013-04-24 16:54:48 (1.20 MB/s) - `git-manpages-1.8.2.1.tar.gz' saved [536718/536718]
+
++ mkdir -p /tmp/git.vdldlx/pkg//ffp/share/man
++ cd /tmp/git.vdldlx/pkg//ffp/share/man
++ tar xvf /tmp/git.vdldlx/git-manpages-1.8.2.1.tar.gz
+./
+./man7/
+./man7/gitnamespaces.7
+./man7/gitcli.7
+./man7/gitworkflows.7
+./man7/gitdiffcore.7
+./man7/gittutorial-2.7
+./man7/gitglossary.7
+./man7/gitrevisions.7
+./man7/gitcvs-migration.7
+./man7/gitcredentials.7
+./man7/gittutorial.7
+./man7/gitcore-tutorial.7
+./man5/
+./man5/gitweb.conf.5
+./man5/githooks.5
+./man5/gitattributes.5
+./man5/gitmodules.5
+./man5/gitrepository-layout.5
+./man5/gitignore.5
+./man1/
+./man1/git-update-index.1
+./man1/git-fetch-pack.1
+./man1/git-push.1
+./man1/git-stage.1
+./man1/git-sh-setup.1
+./man1/git-am.1
+./man1/git-merge-index.1
+./man1/git-show-index.1
+./man1/git-init-db.1
+./man1/git-reset.1
+./man1/git-merge-base.1
+./man1/git-index-pack.1
+./man1/git-diff.1
+./man1/git-show.1
+./man1/gitk.1
+./man1/git-send-email.1
+./man1/git-difftool.1
+./man1/git-check-ignore.1
+./man1/git-shortlog.1
+./man1/git-mergetool--lib.1
+./man1/git-reflog.1
+./man1/git-tag.1
+./man1/git-daemon.1
+./man1/git-status.1
+./man1/git-column.1
+./man1/git-help.1
+./man1/git-quiltimport.1
+./man1/git-archimport.1
+./man1/git-ls-remote.1
+./man1/git-merge-tree.1
+./man1/git-pack-objects.1
+./man1/git-bisect.1
+./man1/git-describe.1
+./man1/git-log.1
+./man1/git-patch-id.1
+./man1/git-receive-pack.1
+./man1/git-mergetool.1
+./man1/git-mktree.1
+./man1/git-sh-i18n.1
+./man1/git-peek-remote.1
+./man1/git-credential-cache--daemon.1
+./man1/git-parse-remote.1
+./man1/git-http-fetch.1
+./man1/git-http-push.1
+./man1/git-diff-tree.1
+./man1/git-repo-config.1
+./man1/git-filter-branch.1
+./man1/git-gc.1
+./man1/git-pull.1
+./man1/git-merge.1
+./man1/git-stripspace.1
+./man1/git-check-ref-format.1
+./man1/git-upload-pack.1
+./man1/git-relink.1
+./man1/git-mailsplit.1
+./man1/git-upload-archive.1
+./man1/git-credential.1
+./man1/gitremote-helpers.1
+./man1/git-remote-testgit.1
+./man1/git-notes.1
+./man1/git-clone.1
+./man1/git-verify-pack.1
+./man1/git-show-ref.1
+./man1/git-fmt-merge-msg.1
+./man1/git-shell.1
+./man1/git-write-tree.1
+./man1/git-credential-cache.1
+./man1/git-config.1
+./man1/git-lost-found.1
+./man1/git-whatchanged.1
+./man1/git-mv.1
+./man1/git-http-backend.1
+./man1/git-merge-file.1
+./man1/git-fsck-objects.1
+./man1/git-request-pull.1
+./man1/git-ls-files.1
+./man1/git-rev-list.1
+./man1/git-checkout.1
+./man1/git-rerere.1
+./man1/git-name-rev.1
+./man1/git-get-tar-commit-id.1
+./man1/git-repack.1
+./man1/git-web--browse.1
+./man1/git-checkout-index.1
+./man1/git-apply.1
+./man1/git-unpack-file.1
+./man1/git-fsck.1
+./man1/git-diff-files.1
+./man1/git-svn.1
+./man1/git-mailinfo.1
+./man1/git-replace.1
+./man1/git-cherry.1
+./man1/git-cvsexportcommit.1
+./man1/git-rev-parse.1
+./man1/git-add.1
+./man1/git-commit-tree.1
+./man1/git-verify-tag.1
+./man1/git-submodule.1
+./man1/git-cherry-pick.1
+./man1/git-send-pack.1
+./man1/git-revert.1
+./man1/git-credential-store.1
+./man1/git-init.1
+./man1/git-hash-object.1
+./man1/git-stash.1
+./man1/git-bundle.1
+./man1/gitweb.1
+./man1/git-commit.1
+./man1/git-remote-ext.1
+./man1/git-format-patch.1
+./man1/git-remote.1
+./man1/git-cat-file.1
+./man1/git-fetch.1
+./man1/git-diff-index.1
+./man1/git-rm.1
+./man1/git-read-tree.1
+./man1/git-gui.1
+./man1/git-p4.1
+./man1/git-prune-packed.1
+./man1/git-sh-i18n--envsubst.1
+./man1/git-clean.1
+./man1/git-annotate.1
+./man1/git-grep.1
+./man1/git-citool.1
+./man1/git-fast-export.1
+./man1/git-blame.1
+./man1/git-remote-fd.1
+./man1/git-var.1
+./man1/git-check-attr.1
+./man1/git-archive.1
+./man1/git-cvsserver.1
+./man1/git-ls-tree.1
+./man1/git-show-branch.1
+./man1/git-cvsimport.1
+./man1/git-for-each-ref.1
+./man1/git-prune.1
+./man1/git-update-server-info.1
+./man1/git-unpack-objects.1
+./man1/git-branch.1
+./man1/git-pack-redundant.1
+./man1/git-fast-import.1
+./man1/git.1
+./man1/git-update-ref.1
+./man1/git-count-objects.1
+./man1/git-rebase.1
+./man1/git-merge-one-file.1
+./man1/git-imap-send.1
+./man1/git-mktag.1
+./man1/git-pack-refs.1
+./man1/git-symbolic-ref.1
+./man1/git-instaweb.1
+./man1/git-tar-tree.1
++ mkdir -p /tmp/git.vdldlx/pkg/install
++ cp /ffp/home/root/fun_plug/ffp_packages/git/DESCR /ffp/home/root/fun_plug/ffp_packages/git/HOMEPAGE /tmp/git.vdldlx/pkg/install/
++ cd /tmp/git.vdldlx/pkg
++ makepkg git 1.8.2.1 1
+Creating /tmp/git-1.8.2.1-arm-1.tar ...
+stdin: is not a tty
+sending incremental file list
+git-1.8.2.1-arm-1.tar
+
+sent 866450 bytes  received 21325 bytes  65761.11 bytes/sec
+total size is 1432606720  speedup is 1613.70
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libatomic_ops-git-20130417-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/ghostscript-9.06-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/most-pre5.1-14-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/beautifulsoup4-4.0.0b9-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gnunet-0.9.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/guile-2.0.9-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/parted-3.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/cmake-2.8.7-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libsigc++-2.2.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1192-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/harfbuzz-0.9.9-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/Python-3.3.0-arm-1.txz
+stdin: is not a tty
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/par-1.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/dtach-0.8-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1218-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/vim-7.3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gnuplot-4.4.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1283-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/tor-0.2.3.25-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/fontconfig-2.8.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/rtmpdump-2.3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libev-4.11-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/setuptools-0.6c11-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/tokyotyrant-1.1.41-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/less-457-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libmicrohttpd-0.9.19-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/lzo-2.06-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/cairo-1.12.8-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/Django-1.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libspectre-0.2.7-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/protobuf-2.4.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/unrar-4.1.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/php-5.4.11-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/openssl-1.0.0g-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libgpg-error-1.10-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/node-v0.6.10-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/xvidcore-1.3.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/Python-2.7.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gcc-solibs-4.6.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1260-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/BeautifulSoup-3.2.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libunistring-0.9.3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gnuplot-4.4.4-arm-2.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/nut-2.6.5-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/fontconfig-2.10.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/freetype-2.4.8-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/pango-1.32.3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/sshpass-1.05-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/tokyocabinet-1.4.47-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/nzbget-0.8.0r394-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libgcrypt-1.5.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1267-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/swig-2.0.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1182-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/netatalk-3.0.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/par2cmdline-0.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/neon-0.29.6-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/berkeleydb-5.1.19-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/cherokee-130207-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/attr-2.4.46-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gcc-4.6.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/php-5.4.13-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/openssh-6.1p1-arm-4-node.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/sendmail-8.14.5-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/openssl-1.0.1c-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/mysecureshell-1.30-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/bdwgc-git-20130417-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libextractor-0.6.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/Python-2.7.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/Python-2.7.3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gnupg-1.4.8-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/cksfv-1.3.14-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/git-1.8.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gnufdisk-2.0.0a-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/nail-20120224-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1217-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/slang-pre2.3.0-68-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/php-5.5.0beta3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/ImageMagick-6.8.2-9-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/wdfs-1.4.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/seeks-20120224-arm-2.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/opencv-2.3.1-arm-2.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/p7zip-9.20.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libmms-0.6.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/links-2.7-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/node-0.8.21-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1214-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libgd-2.0.33-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/M2Crypto-0.21.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/cifs-utils-git-20120302-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1359-arm-1.txz
+UPDATE /home2/memiksfr/subdomains/ffp/pkg/git-1.8.2.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/rrdtool-1.4.5-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libpar2-0.2-arm-2.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libpar2-0.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/node-0.8.21-arm-2.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/openssh-6.1p1-arm-4.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/pixman-0.28.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/zlib-1.2.6-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/glib-2.35.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1222-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MPlayer-1.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/isync-1.0.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libffi-3.0.11-arm-1.txz
+95f341c4aaf4ea5118d10bb529c15a94  BeautifulSoup-3.2.1-arm-1.txz
+a1e0ad986d101c81735bcdaa73ed1120  Django-1.4-arm-1.txz
+8a03198597eb048966609fa7e85081cb  ImageMagick-6.8.2-9-arm-1.txz
+ed100bdde17d72a8de04fe76bf507c27  M2Crypto-0.21.1-arm-1.txz
+982aeaa56561d1a47906af083a198b4e  MCServer-1182-arm-1.txz
+f43e8c2fa9ed0649943984454f93e205  MCServer-1192-arm-1.txz
+59fcfcf1b1ce120f0667436648288811  MCServer-1214-arm-1.txz
+286cba7502f2e28048679877cfdaadcf  MCServer-1217-arm-1.txz
+a196fc6af4ffdc1332a30aedf7b9a8b7  MCServer-1218-arm-1.txz
+866887febd98b38b784f3eaf8a2211b4  MCServer-1222-arm-1.txz
+28bffa04cd4865b1116b9ac2953462ef  MCServer-1260-arm-1.txz
+2a04bdde5efc99df870f2afc1c823038  MCServer-1267-arm-1.txz
+acd360f67af8840035ce045ab8187e3f  MCServer-1283-arm-1.txz
+65cae87083e7251844f83940a019aea5  MCServer-1359-arm-1.txz
+0db42aed04763a412e09295b7879ce42  MPlayer-1.1-arm-1.txz
+a3d7a6d1f4d1ead00ef46940ba2f3bcc  Python-2.7.2-arm-1.txz
+0c0c5ee79714df0686e52cf9775c16bc  Python-2.7.3-arm-1.txz
+7fd7c65f6db3f5080db928f916170028  Python-2.7.4-arm-1.txz
+55a2f685c893cfd91fd418db3e26be35  Python-3.3.0-arm-1.txz
+032ac662c6dd9de1b3cd9b11f533b116  attr-2.4.46-arm-1.txz
+a9c00879a9952577e76bc54f1a523501  bdwgc-git-20130417-arm-1.txz
+85ef9e1adaa758c1f8587c4556799f69  beautifulsoup4-4.0.0b9-arm-1.txz
+6ff8d6a390e744dd99e8d7a7e61b6de2  berkeleydb-5.1.19-arm-1.txz
+32d26bc2fb54e3151a3b10029b310a0e  cairo-1.12.8-arm-1.txz
+01effab30ea00b69d40f4b9f509f55ff  cherokee-130207-arm-1.txz
+49ecff75fd683d7bd3b219c955593780  cifs-utils-git-20120302-arm-1.txz
+d33d4de033f5734caa97fb64d220a52b  cksfv-1.3.14-arm-1.txz
+ac0cd5691e28b0bcf1f1de6733a86460  cmake-2.8.7-arm-1.txz
+fd44ad8cf4a284e8ae90798467fd345b  dtach-0.8-arm-1.txz
+473b0116a2dbd50121f48097b2e5a829  fontconfig-2.10.2-arm-1.txz
+6be66afb530ab8c7c079e91a13e65ca3  fontconfig-2.8.0-arm-1.txz
+f77c4c8c754b164d05ed1b6e0c4c3ec3  freetype-2.4.8-arm-1.txz
+d2c81249d4bf660ba5c20991c8e86fb4  gcc-4.6.2-arm-1.txz
+e9ee3add43dea9b356feaa4fdbca5fe2  gcc-solibs-4.6.2-arm-1.txz
+fdedc4578b52177d1d36dc48c019e359  ghostscript-9.06-arm-1.txz
+4f283bc42de500a9fe9d6a2e7dae7be4  git-1.8.0-arm-1.txz
+124e02a1eec50b33d8f1c72cf768c572  git-1.8.2.1-arm-1.txz
+102f8bf9b770e8e7701b8ac9cf4e938c  glib-2.35.2-arm-1.txz
+dd86ef680e23d649c7034ceb70f1e420  gnufdisk-2.0.0a-arm-1.txz
+03f8318c94b5154ff9370961ace3567e  gnunet-0.9.2-arm-1.txz
+338c45bfe0571d896fdf12833397b8a6  gnupg-1.4.8-arm-1.txz
+3da6e410046d049a9de0952ced17d207  gnuplot-4.4.4-arm-1.txz
+9e22f867fddbb011ae97fbb522027188  gnuplot-4.4.4-arm-2.txz
+c8e04d19ce6c1be113de2e80dfe388e0  guile-2.0.9-arm-1.txz
+d863b220986066854ac7c9b0afb20faa  harfbuzz-0.9.9-arm-1.txz
+704d33fe923ead8b65f73ec35eee3993  isync-1.0.4-arm-1.txz
+82a6edbe7ba4f8e27d76dc36b1fb0fa3  less-457-arm-1.txz
+cdf7b3acf8e021921e1e2f696b21b12f  libatomic_ops-git-20130417-arm-1.txz
+0c54f33ceaa95ff640e77ec2378a124e  libev-4.11-arm-1.txz
+cbfd7cd569281a9ed6fa2313c30939ed  libextractor-0.6.2-arm-1.txz
+2d1b88015a8dd263f557fb27043e53f8  libffi-3.0.11-arm-1.txz
+f729e959f7a3bc84258d734f81214621  libgcrypt-1.5.0-arm-1.txz
+664311c312926ca30c077a89baebce93  libgd-2.0.33-arm-1.txz
+8ba41420fa0aab68345956455934bc00  libgpg-error-1.10-arm-1.txz
+1c150a8bb838d5c6fec063b67d324c59  libmicrohttpd-0.9.19-arm-1.txz
+c9e9f52bd5ac9f9e2512345223a3b274  libmms-0.6.2-arm-1.txz
+d0ba07ffb41f8c8072c3a72c642fd6ed  libpar2-0.2-arm-1.txz
+3c5701c05ab95f986e01253ad94a8650  libpar2-0.2-arm-2.txz
+1e1c96e71aef38f9bbba4d5b203342fe  libsigc++-2.2.0-arm-1.txz
+549f4f792f3f414dc11a2543aa27a0ff  libspectre-0.2.7-arm-1.txz
+362fecb4327b4db509cc27c8377e3da5  libunistring-0.9.3-arm-1.txz
+aa138e6d77ad3953671610579cc3d42b  links-2.7-arm-1.txz
+aff618deb5ab34b9ac7a03e0d8154838  lzo-2.06-arm-1.txz
+f855d164949e7acc18fa4aaf101c0d04  most-pre5.1-14-arm-1.txz
+e96e21b39bfa4d7eb5d44b5228fe7b70  mysecureshell-1.30-arm-1.txz
+cfb7825ee4f94260672690d154f2b6e3  nail-20120224-arm-1.txz
+0a14881eadc441ccdcfcd31bea56bcdd  neon-0.29.6-arm-1.txz
+9a89b60c336964997604fae4ed17695e  netatalk-3.0.2-arm-1.txz
+6029909b3d503980c034bd39478c0be1  node-0.8.21-arm-1.txz
+8a7d226e05c96bbcb6d53615c8358a7b  node-0.8.21-arm-2.txz
+87293f8ac425e78b4fd4ea49597b9cb0  node-v0.6.10-arm-1.txz
+71de0746bef03bd0f6edcfc667d19a6c  nut-2.6.5-arm-1.txz
+3a2df95f41ab7e1b0f0b81e874fb0812  nzbget-0.8.0r394-arm-1.txz
+083f7fd632357f1cce627207fb4552d3  opencv-2.3.1-arm-2.txz
+74894e01f5a6c68dc684a058883adce1  openssh-6.1p1-arm-4-node.txz
+ca1211de85f0f37d3a8e91d62fc63ab9  openssh-6.1p1-arm-4.txz
+c446b1a2cdfb22283d06cdc1696f69ef  openssl-1.0.0g-arm-1.txz
+1a6b123a0d2d852c49cd3b59dd162587  openssl-1.0.1c-arm-1.txz
+2739d61c04fef5e9c14703d3414a12b4  p7zip-9.20.1-arm-1.txz
+b6587c19ed46af536599c44164f30062  pango-1.32.3-arm-1.txz
+31aab821d024ee722d8086de0aaec3af  par-1.1-arm-1.txz
+40e39f90d6ffc36a13ed1266eaa233af  par2cmdline-0.4-arm-1.txz
+b0bf2733a984c43aa5ae222caf6ed652  parted-3.1-arm-1.txz
+50bb839f538148a881ce720ac210d8cb  php-5.4.11-arm-1.txz
+54868d5f85ba92baadd3f4dfafaebcbe  php-5.4.13-arm-1.txz
+60cf27986a25f0c1e48759e28f30b39e  php-5.5.0beta3-arm-1.txz
+ac2a6618d9bff07b61619eb43e444f76  pixman-0.28.0-arm-1.txz
+6193b8bc9c34ed897730111343822d4f  protobuf-2.4.1-arm-1.txz
+16e33376597489b17fc80cc37d00fc5c  rrdtool-1.4.5-arm-1.txz
+a9950a1a97c267804ff19d08aa6d9525  rtmpdump-2.3-arm-1.txz
+4fa15a6145d7b868d687b8eba8279abc  seeks-20120224-arm-2.txz
+d949e5826b587dfcbb4fc5127b9914bc  sendmail-8.14.5-arm-1.txz
+3b684329a947e339bcf852abccb64a72  setuptools-0.6c11-arm-1.txz
+97642aff8413275eadf07642783a7570  slang-pre2.3.0-68-arm-1.txz
+672ee83f6e2b613bbbf9aad110c52a8f  sshpass-1.05-arm-1.txz
+50001317da06eb57e8898c2e2c590c20  swig-2.0.4-arm-1.txz
+6c49bfc80064b5760b761b57f119c8ed  tokyocabinet-1.4.47-arm-1.txz
+276175e3bd3f5f00e0f5729b013790b0  tokyotyrant-1.1.41-arm-1.txz
+d800d890172e3b93db736db52bdb6de8  tor-0.2.3.25-arm-1.txz
+175f16b06006a17e1ce953e370f369c8  unrar-4.1.4-arm-1.txz
+51da0ea5b5cd3b92dc196ce0ccee8789  vim-7.3-arm-1.txz
+012b27f2e1bc2848263c6d1879589e0d  wdfs-1.4.2-arm-1.txz
+5f93016524482301a080ccbceeaa1413  xvidcore-1.3.2-arm-1.txz
+18c2e4aa1dcfa44fe7f49784d7414846  zlib-1.2.6-arm-1.txz
