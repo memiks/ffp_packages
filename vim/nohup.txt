@@ -1,0 +1,1140 @@
+nohup: ignoring input
+++ basename ./vim.funpkg .funpkg
++ PN=vim
++ PR=1
++ . ./config.ffp
+++ GNU_HOST=
+++ GNU_TARGET=
+++ FFP_CFLAGS='-I/ffp/include -O2'
+++ FFP_LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
+++ '[' '!' -d '' ']'
+++ TMPDIR=/tmp
+++ export TMPDIR
+++ mandir=/ffp/share/man
+++ infodir=/ffp/share/info
+++ docdir=/ffp/share/doc
+++ pwd
++ X=/ffp/home/root/fun_plug/ffp_packages/vim
+++ mktemp -t -d vim.XXXXXX
++ W=/tmp/vim.YIxyQt
++ D=/tmp/vim.YIxyQt/pkg
++ cd /tmp/vim.YIxyQt
++ cat /ffp/home/root/fun_plug/ffp_packages/vim/SRC_URI
++ xargs wget
+--2013-02-13 13:52:13--  ftp://ftp.vim.org/pub/vim/unix/vim-7.3.tar.bz2
+           => `vim-7.3.tar.bz2'
+Resolving ftp.vim.org... 2001:610:1:80aa:192:87:102:42, 192.87.102.42, 192.87.102.43
+Connecting to ftp.vim.org|2001:610:1:80aa:192:87:102:42|:21... failed: Address family not supported by protocol.
+Connecting to ftp.vim.org|192.87.102.42|:21... connected.
+Logging in as anonymous ... Logged in!
+==> SYST ... done.    ==> PWD ... done.
+==> TYPE I ... done.  ==> CWD (1) /pub/vim/unix ... done.
+==> SIZE vim-7.3.tar.bz2 ... 9080692
+==> PASV ... done.    ==> RETR vim-7.3.tar.bz2 ... done.
+Length: 9080692 (8.7M) (unauthoritative)
+
+     0K .......... .......... .......... .......... ..........  0%  408K 22s
+    50K .......... .......... .......... .......... ..........  1%  860K 16s
+   100K .......... .......... .......... .......... ..........  1% 1.13M 13s
+   150K .......... .......... .......... .......... ..........  2% 1.18M 11s
+   200K .......... .......... .......... .......... ..........  2% 1.28M 10s
+   250K .......... .......... .......... .......... ..........  3% 1.18M 10s
+   300K .......... .......... .......... .......... ..........  3% 1.19M 9s
+   350K .......... .......... .......... .......... ..........  4% 1.09M 9s
+   400K .......... .......... .......... .......... ..........  5%  376K 11s
+   450K .......... .......... .......... .......... ..........  5% 1.91M 10s
+   500K .......... .......... .......... .......... ..........  6% 5.79M 9s
+   550K .......... .......... .......... .......... ..........  6% 22.1M 8s
+   600K .......... .......... .......... .......... ..........  7%  729K 8s
+   650K .......... .......... .......... .......... ..........  7% 1.28M 8s
+   700K .......... .......... .......... .......... ..........  8% 1.32M 8s
+   750K .......... .......... .......... .......... ..........  9% 1.34M 8s
+   800K .......... .......... .......... .......... ..........  9% 1.28M 8s
+   850K .......... .......... .......... .......... .......... 10% 1.31M 8s
+   900K .......... .......... .......... .......... .......... 10% 1.33M 7s
+   950K .......... .......... .......... .......... .......... 11% 1.27M 7s
+  1000K .......... .......... .......... .......... .......... 11% 1.32M 7s
+  1050K .......... .......... .......... .......... .......... 12% 1.33M 7s
+  1100K .......... .......... .......... .......... .......... 12% 1.28M 7s
+  1150K .......... .......... .......... .......... .......... 13% 1.33M 7s
+  1200K .......... .......... .......... .......... .......... 14% 1.18M 7s
+  1250K .......... .......... .......... .......... .......... 14%  363K 7s
+  1300K .......... .......... .......... .......... .......... 15% 2.09M 7s
+  1350K .......... .......... .......... .......... .......... 15% 8.73M 7s
+  1400K .......... .......... .......... .......... .......... 16% 1.17M 7s
+  1450K .......... .......... .......... .......... .......... 16% 1.32M 7s
+  1500K .......... .......... .......... .......... .......... 17% 1.28M 7s
+  1550K .......... .......... .......... .......... .......... 18% 1.31M 7s
+  1600K .......... .......... .......... .......... .......... 18% 1.32M 6s
+  1650K .......... .......... .......... .......... .......... 19% 1.28M 6s
+  1700K .......... .......... .......... .......... .......... 19% 1.32M 6s
+  1750K .......... .......... .......... .......... .......... 20% 1.28M 6s
+  1800K .......... .......... .......... .......... .......... 20% 1.22M 6s
+  1850K .......... .......... .......... .......... .......... 21% 1.21M 6s
+  1900K .......... .......... .......... .......... .......... 21% 1.16M 6s
+  1950K .......... .......... .......... .......... .......... 22% 1.17M 6s
+  2000K .......... .......... .......... .......... .......... 23% 1.14M 6s
+  2050K .......... .......... .......... .......... .......... 23% 1.21M 6s
+  2100K .......... .......... .......... .......... .......... 24% 1.33M 6s
+  2150K .......... .......... .......... .......... .......... 24% 1.29M 6s
+  2200K .......... .......... .......... .......... .......... 25% 1.28M 6s
+  2250K .......... .......... .......... .......... .......... 25% 1.31M 6s
+  2300K .......... .......... .......... .......... .......... 26% 1.33M 6s
+  2350K .......... .......... .......... .......... .......... 27% 1.28M 6s
+  2400K .......... .......... .......... .......... .......... 27% 1.15M 6s
+  2450K .......... .......... .......... .......... .......... 28% 1.56M 5s
+  2500K .......... .......... .......... .......... .......... 28% 1.27M 5s
+  2550K .......... .......... .......... .......... .......... 29% 1.32M 5s
+  2600K .......... .......... .......... .......... .......... 29% 1.29M 5s
+  2650K .......... .......... .......... .......... .......... 30% 1.32M 5s
+  2700K .......... .......... .......... .......... .......... 31% 1.28M 5s
+  2750K .......... .......... .......... .......... .......... 31% 1.19M 5s
+  2800K .......... .......... .......... .......... .......... 32% 1.16M 5s
+  2850K .......... .......... .......... .......... .......... 32% 1.18M 5s
+  2900K .......... .......... .......... .......... .......... 33% 1.25M 5s
+  2950K .......... .......... .......... .......... .......... 33% 1.12M 5s
+  3000K .......... .......... .......... .......... .......... 34% 1.25M 5s
+  3050K .......... .......... .......... .......... .......... 34% 1.28M 5s
+  3100K .......... .......... .......... .......... .......... 35% 1.29M 5s
+  3150K .......... .......... .......... .......... .......... 36% 1.32M 5s
+  3200K .......... .......... .......... .......... .......... 36% 1.28M 5s
+  3250K .......... .......... .......... .......... .......... 37% 1.32M 5s
+  3300K .......... .......... .......... .......... .......... 37% 1.29M 5s
+  3350K .......... .......... .......... .......... .......... 38% 1.30M 5s
+  3400K .......... .......... .......... .......... .......... 38% 1.32M 5s
+  3450K .......... .......... .......... .......... .......... 39% 1.28M 4s
+  3500K .......... .......... .......... .......... .......... 40% 1.32M 4s
+  3550K .......... .......... .......... .......... .......... 40% 1.27M 4s
+  3600K .......... .......... .......... .......... .......... 41% 1.29M 4s
+  3650K .......... .......... .......... .......... .......... 41% 1.25M 4s
+  3700K .......... .......... .......... .......... .......... 42% 1.22M 4s
+  3750K .......... .......... .......... .......... .......... 42% 1.07M 4s
+  3800K .......... .......... .......... .......... .......... 43% 1.04M 4s
+  3850K .......... .......... .......... .......... .......... 43% 1.29M 4s
+  3900K .......... .......... .......... .......... .......... 44% 1.33M 4s
+  3950K .......... .......... .......... .......... .......... 45% 1.27M 4s
+  4000K .......... .......... .......... .......... .......... 45% 1.29M 4s
+  4050K .......... .......... .......... .......... .......... 46% 1.32M 4s
+  4100K .......... .......... .......... .......... .......... 46% 1.21M 4s
+  4150K .......... .......... .......... .......... .......... 47% 1.40M 4s
+  4200K .......... .......... .......... .......... .......... 47% 1.31M 4s
+  4250K .......... .......... .......... .......... .......... 48% 1.33M 4s
+  4300K .......... .......... .......... .......... .......... 49% 1.27M 4s
+  4350K .......... .......... .......... .......... .......... 49% 1.32M 4s
+  4400K .......... .......... .......... .......... .......... 50% 1.33M 4s
+  4450K .......... .......... .......... .......... .......... 50% 1.28M 4s
+  4500K .......... .......... .......... .......... .......... 51% 1.24M 4s
+  4550K .......... .......... .......... .......... .......... 51% 1.16M 3s
+  4600K .......... .......... .......... .......... .......... 52% 1.15M 3s
+  4650K .......... .......... .......... .......... .......... 53% 1.13M 3s
+  4700K .......... .......... .......... .......... .......... 53% 1.13M 3s
+  4750K .......... .......... .......... .......... .......... 54% 1.33M 3s
+  4800K .......... .......... .......... .......... .......... 54% 1.30M 3s
+  4850K .......... .......... .......... .......... .......... 55% 1.27M 3s
+  4900K .......... .......... .......... .......... .......... 55% 1.32M 3s
+  4950K .......... .......... .......... .......... .......... 56% 1.32M 3s
+  5000K .......... .......... .......... .......... .......... 56% 1.29M 3s
+  5050K .......... .......... .......... .......... .......... 57%  402K 3s
+  5100K .......... .......... .......... .......... .......... 58% 20.2M 3s
+  5150K .......... .......... .......... .......... .......... 58% 20.9M 3s
+  5200K .......... .......... .......... .......... .......... 59% 2.42M 3s
+  5250K .......... .......... .......... .......... .......... 59% 1.27M 3s
+  5300K .......... .......... .......... .......... .......... 60% 1.32M 3s
+  5350K .......... .......... .......... .......... .......... 60% 1.32M 3s
+  5400K .......... .......... .......... .......... .......... 61% 1.29M 3s
+  5450K .......... .......... .......... .......... .......... 62% 1.32M 3s
+  5500K .......... .......... .......... .......... .......... 62% 1.28M 3s
+  5550K .......... .......... .......... .......... .......... 63% 1.28M 3s
+  5600K .......... .......... .......... .......... .......... 63% 1.33M 3s
+  5650K .......... .......... .......... .......... .......... 64% 1.32M 3s
+  5700K .......... .......... .......... .......... .......... 64% 1.28M 3s
+  5750K .......... .......... .......... .......... .......... 65% 1.28M 2s
+  5800K .......... .......... .......... .......... .......... 65% 1.25M 2s
+  5850K .......... .......... .......... .......... .......... 66% 1.22M 2s
+  5900K .......... .......... .......... .......... .......... 67% 1.20M 2s
+  5950K .......... .......... .......... .......... .......... 67% 1.22M 2s
+  6000K .......... .......... .......... .......... .......... 68% 1.15M 2s
+  6050K .......... .......... .......... .......... .......... 68% 1.13M 2s
+  6100K .......... .......... .......... .......... .......... 69% 1.29M 2s
+  6150K .......... .......... .......... .......... .......... 69% 1.32M 2s
+  6200K .......... .......... .......... .......... .......... 70% 1.28M 2s
+  6250K .......... .......... .......... .......... .......... 71% 1.28M 2s
+  6300K .......... .......... .......... .......... .......... 71% 1.33M 2s
+  6350K .......... .......... .......... .......... .......... 72% 1.32M 2s
+  6400K .......... .......... .......... .......... .......... 72% 1.27M 2s
+  6450K .......... .......... .......... .......... .......... 73% 1.32M 2s
+  6500K .......... .......... .......... .......... .......... 73% 1.28M 2s
+  6550K .......... .......... .......... .......... .......... 74% 1.33M 2s
+  6600K .......... .......... .......... .......... .......... 74% 1.33M 2s
+  6650K .......... .......... .......... .......... .......... 75% 1.27M 2s
+  6700K .......... .......... .......... .......... .......... 76% 1.28M 2s
+  6750K .......... .......... .......... .......... .......... 76% 1.19M 2s
+  6800K .......... .......... .......... .......... .......... 77% 1.15M 2s
+  6850K .......... .......... .......... .......... .......... 77% 1.10M 2s
+  6900K .......... .......... .......... .......... .......... 78% 1.12M 2s
+  6950K .......... .......... .......... .......... .......... 78% 1.30M 2s
+  7000K .......... .......... .......... .......... .......... 79% 1.29M 1s
+  7050K .......... .......... .......... .......... .......... 80% 1.31M 1s
+  7100K .......... .......... .......... .......... .......... 80% 1.28M 1s
+  7150K .......... .......... .......... .......... .......... 81% 1.33M 1s
+  7200K .......... .......... .......... .......... .......... 81% 1.28M 1s
+  7250K .......... .......... .......... .......... .......... 82% 1.31M 1s
+  7300K .......... .......... .......... .......... .......... 82% 1.32M 1s
+  7350K .......... .......... .......... .......... .......... 83% 1.25M 1s
+  7400K .......... .......... .......... .......... .......... 84% 1.33M 1s
+  7450K .......... .......... .......... .......... .......... 84% 1.12M 1s
+  7500K .......... .......... .......... .......... .......... 85% 1.19M 1s
+  7550K .......... .......... .......... .......... .......... 85% 1.24M 1s
+  7600K .......... .......... .......... .......... .......... 86% 1.10M 1s
+  7650K .......... .......... .......... .......... .......... 86% 1.18M 1s
+  7700K .......... .......... .......... .......... .......... 87% 1.32M 1s
+  7750K .......... .......... .......... .......... .......... 87% 1.09M 1s
+  7800K .......... .......... .......... .......... .......... 88% 1.59M 1s
+  7850K .......... .......... .......... .......... .......... 89% 1.32M 1s
+  7900K .......... .......... .......... .......... .......... 89% 1.27M 1s
+  7950K .......... .......... .......... .......... .......... 90% 1.33M 1s
+  8000K .......... .......... .......... .......... .......... 90% 1.33M 1s
+  8050K .......... .......... .......... .......... .......... 91% 1.28M 1s
+  8100K .......... .......... .......... .......... .......... 91% 1.32M 1s
+  8150K .......... .......... .......... .......... .......... 92% 1.31M 1s
+  8200K .......... .......... .......... .......... .......... 93% 1.28M 0s
+  8250K .......... .......... .......... .......... .......... 93% 1.32M 0s
+  8300K .......... .......... .......... .......... .......... 94% 1.33M 0s
+  8350K .......... .......... .......... .......... .......... 94% 1.27M 0s
+  8400K .......... .......... .......... .......... .......... 95% 1.33M 0s
+  8450K .......... .......... .......... .......... .......... 95% 1.28M 0s
+  8500K .......... .......... .......... .......... .......... 96% 1.32M 0s
+  8550K .......... .......... .......... .......... .......... 96% 1.32M 0s
+  8600K .......... .......... .......... .......... .......... 97% 1.25M 0s
+  8650K .......... .......... .......... .......... .......... 98% 1.32M 0s
+  8700K .......... .......... .......... .......... .......... 98% 1.28M 0s
+  8750K .......... .......... .......... .......... .......... 99% 1.19M 0s
+  8800K .......... .......... .......... .......... .......... 99% 1.18M 0s
+  8850K .......... .......                                    100% 1.17M=7.1s
+
+2013-02-13 13:52:21 (1.23 MB/s) - `vim-7.3.tar.bz2' saved [9080692]
+
+++ ls vim-7.3.tar.bz2
+++ egrep -o '[0-9][0-9.]*[0-9]'
++ PV=7.3
++ tar xf vim-7.3.tar.bz2
++ cd vim73/src
+++ ls '/ffp/home/root/fun_plug/ffp_packages/vim/patches/*.patch'
+ls: cannot access /ffp/home/root/fun_plug/ffp_packages/vim/patches/*.patch: No such file or directory
++ LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
++ ./configure --prefix=/ffp --build= --host= --mandir=/ffp/share/man --infodir=/ffp/share/info
+configure: creating cache auto/config.cache
+checking whether make sets $(MAKE)... yes
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /ffp/bin/grep
+checking for egrep... /ffp/bin/grep -E
+checking for library containing strerror... none required
+checking for gawk... gawk
+checking for strip... strip
+checking for ANSI C header files... yes
+checking for sys/wait.h that is POSIX.1 compatible... yes
+configure: checking for buggy tools...
+- sh is	'GNU bash, version 4.1.11(2)-release (arm-ffp-linux-uclibcgnueabi)
+Copyright (C) 2009 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+
+This is free software; you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.' - probably OK.
+- sed is	'GNU sed version 4.2.1
+Copyright (C) 2009 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE,
+to the extent permitted by law.
+
+GNU sed home page: <http://www.gnu.org/software/sed/>.
+General help using GNU software: <http://www.gnu.org/gethelp/>.
+E-mail bug reports to: <bug-gnu-utils@gnu.org>.
+Be sure to include the word ``sed'' somewhere in the ``Subject:'' field.'.
+checking for BeOS... no
+checking for QNX... no
+checking for Darwin (Mac OS X)... no
+checking --with-local-dir argument... Defaulting to /usr/local
+checking --with-vim-name argument... Defaulting to vim
+checking --with-ex-name argument... Defaulting to ex
+checking --with-view-name argument... Defaulting to view
+checking --with-global-runtime argument... no
+checking --with-modified-by argument... no
+checking if character set is EBCDIC... no
+checking --disable-selinux argument... no
+checking for is_selinux_enabled in -lselinux... no
+checking --with-features argument... Defaulting to normal
+checking --with-compiledby argument... no
+checking --disable-xsmp argument... no
+checking --disable-xsmp-interact argument... no
+checking --enable-luainterp argument... no
+checking --enable-mzschemeinterp argument... no
+checking --enable-perlinterp argument... no
+checking --enable-pythoninterp argument... no
+checking --enable-python3interp argument... no
+checking --enable-tclinterp argument... no
+checking --enable-rubyinterp argument... no
+checking --enable-cscope argument... no
+checking --enable-workshop argument... no
+checking --disable-netbeans argument... no
+checking for socket in -lsocket... no
+checking for gethostbyname in -lnsl... no
+checking whether compiling netbeans integration is possible... yes
+checking --enable-sniff argument... no
+checking --enable-multibyte argument... no
+checking --enable-hangulinput argument... no
+checking --enable-xim argument... defaulting to auto
+checking --enable-fontset argument... no
+checking for xmkmf... no
+checking for X... no
+checking if X11 header files can be found... no
+checking --enable-gui argument... no GUI support
+checking X11/SM/SMlib.h usability... no
+checking X11/SM/SMlib.h presence... no
+checking for X11/SM/SMlib.h... no
+checking whether toupper is broken... no
+checking whether __DATE__ and __TIME__ work... yes
+checking whether __attribute__((unused)) is allowed... yes
+checking elf.h usability... yes
+checking elf.h presence... yes
+checking for elf.h... yes
+checking for main in -lelf... no
+checking for dirent.h that defines DIR... yes
+checking for library containing opendir... none required
+checking stdarg.h usability... yes
+checking stdarg.h presence... yes
+checking for stdarg.h... yes
+checking stdint.h usability... yes
+checking stdint.h presence... yes
+checking for stdint.h... yes
+checking stdlib.h usability... yes
+checking stdlib.h presence... yes
+checking for stdlib.h... yes
+checking string.h usability... yes
+checking string.h presence... yes
+checking for string.h... yes
+checking sys/select.h usability... yes
+checking sys/select.h presence... yes
+checking for sys/select.h... yes
+checking sys/utsname.h usability... yes
+checking sys/utsname.h presence... yes
+checking for sys/utsname.h... yes
+checking termcap.h usability... no
+checking termcap.h presence... no
+checking for termcap.h... no
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking sgtty.h usability... yes
+checking sgtty.h presence... yes
+checking for sgtty.h... yes
+checking sys/ioctl.h usability... yes
+checking sys/ioctl.h presence... yes
+checking for sys/ioctl.h... yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking sys/types.h usability... yes
+checking sys/types.h presence... yes
+checking for sys/types.h... yes
+checking termio.h usability... yes
+checking termio.h presence... yes
+checking for termio.h... yes
+checking iconv.h usability... yes
+checking iconv.h presence... yes
+checking for iconv.h... yes
+checking inttypes.h usability... yes
+checking inttypes.h presence... yes
+checking for inttypes.h... yes
+checking langinfo.h usability... yes
+checking langinfo.h presence... yes
+checking for langinfo.h... yes
+checking math.h usability... yes
+checking math.h presence... yes
+checking for math.h... yes
+checking unistd.h usability... yes
+checking unistd.h presence... yes
+checking for unistd.h... yes
+checking stropts.h usability... no
+checking stropts.h presence... no
+checking for stropts.h... no
+checking errno.h usability... yes
+checking errno.h presence... yes
+checking for errno.h... yes
+checking sys/resource.h usability... yes
+checking sys/resource.h presence... yes
+checking for sys/resource.h... yes
+checking sys/systeminfo.h usability... no
+checking sys/systeminfo.h presence... no
+checking for sys/systeminfo.h... no
+checking locale.h usability... yes
+checking locale.h presence... yes
+checking for locale.h... yes
+checking sys/stream.h usability... no
+checking sys/stream.h presence... no
+checking for sys/stream.h... no
+checking termios.h usability... yes
+checking termios.h presence... yes
+checking for termios.h... yes
+checking libc.h usability... no
+checking libc.h presence... no
+checking for libc.h... no
+checking sys/statfs.h usability... yes
+checking sys/statfs.h presence... yes
+checking for sys/statfs.h... yes
+checking poll.h usability... yes
+checking poll.h presence... yes
+checking for poll.h... yes
+checking sys/poll.h usability... yes
+checking sys/poll.h presence... yes
+checking for sys/poll.h... yes
+checking pwd.h usability... yes
+checking pwd.h presence... yes
+checking for pwd.h... yes
+checking utime.h usability... yes
+checking utime.h presence... yes
+checking for utime.h... yes
+checking sys/param.h usability... yes
+checking sys/param.h presence... yes
+checking for sys/param.h... yes
+checking libintl.h usability... yes
+checking libintl.h presence... yes
+checking for libintl.h... yes
+checking libgen.h usability... yes
+checking libgen.h presence... yes
+checking for libgen.h... yes
+checking util/debug.h usability... no
+checking util/debug.h presence... no
+checking for util/debug.h... no
+checking util/msg18n.h usability... no
+checking util/msg18n.h presence... no
+checking for util/msg18n.h... no
+checking frame.h usability... no
+checking frame.h presence... no
+checking for frame.h... no
+checking sys/acl.h usability... no
+checking sys/acl.h presence... no
+checking for sys/acl.h... no
+checking sys/access.h usability... no
+checking sys/access.h presence... no
+checking for sys/access.h... no
+checking sys/sysinfo.h usability... yes
+checking sys/sysinfo.h presence... yes
+checking for sys/sysinfo.h... yes
+checking wchar.h usability... yes
+checking wchar.h presence... yes
+checking for wchar.h... yes
+checking wctype.h usability... yes
+checking wctype.h presence... yes
+checking for wctype.h... yes
+checking for sys/ptem.h... no
+checking for sys/sysctl.h... yes
+checking for pthread_np.h... no
+checking strings.h usability... yes
+checking strings.h presence... yes
+checking for strings.h... yes
+checking if strings.h can be included after string.h... yes
+checking whether gcc needs -traditional... no
+checking for an ANSI C-conforming const... yes
+checking for working volatile... yes
+checking for mode_t... yes
+checking for off_t... yes
+checking for pid_t... yes
+checking for size_t... yes
+checking for uid_t in sys/types.h... yes
+checking for uint32_t... yes
+checking whether time.h and sys/time.h may both be included... yes
+checking for ino_t... yes
+checking for dev_t... yes
+checking whether byte ordering is bigendian... no
+checking for rlim_t... yes
+checking for stack_t... yes
+checking whether stack_t has an ss_base field... no
+checking --with-tlib argument... empty: automatic terminal library selection
+checking for tgetent in -lncurses... yes
+checking whether we talk terminfo... yes
+checking what tgetent() returns for an unknown terminal... zero
+checking whether termcap.h contains ospeed... no
+checking whether ospeed can be extern... yes
+checking whether termcap.h contains UP, BC and PC... no
+checking whether UP, BC and PC can be extern... yes
+checking whether tputs() uses outfuntype... no
+checking whether sys/select.h and sys/time.h may both be included... yes
+checking for /dev/ptc... no
+checking for SVR4 ptys... yes
+checking for ptyranges... p / 0123456
+checking default tty permissions/group... can't determine - assume ptys are world accessible
+world
+checking return type of signal handlers... void
+checking for struct sigcontext... yes
+checking getcwd implementation is broken... no
+checking for bcmp... yes
+checking for fchdir... yes
+checking for fchown... yes
+checking for fsync... yes
+checking for getcwd... yes
+checking for getpseudotty... no
+checking for getpwnam... yes
+checking for getpwuid... yes
+checking for getrlimit... yes
+checking for gettimeofday... yes
+checking for getwd... no
+checking for lstat... yes
+checking for memcmp... yes
+checking for memset... yes
+checking for mkdtemp... yes
+checking for nanosleep... yes
+checking for opendir... yes
+checking for putenv... yes
+checking for qsort... yes
+checking for readlink... yes
+checking for select... yes
+checking for setenv... yes
+checking for setpgid... yes
+checking for setsid... yes
+checking for sigaltstack... yes
+checking for sigstack... no
+checking for sigset... yes
+checking for sigsetjmp... no
+checking for sigaction... yes
+checking for sigvec... no
+checking for strcasecmp... yes
+checking for strerror... yes
+checking for strftime... yes
+checking for stricmp... no
+checking for strncasecmp... yes
+checking for strnicmp... no
+checking for strpbrk... yes
+checking for strtol... yes
+checking for tgetent... yes
+checking for towlower... yes
+checking for towupper... yes
+checking for iswupper... yes
+checking for usleep... yes
+checking for utime... yes
+checking for utimes... yes
+checking for _LARGEFILE_SOURCE value needed for large files... no
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... 64
+checking for st_blksize... yes
+checking whether stat() ignores a trailing slash... no
+checking for iconv_open()... yes; with -liconv
+checking for nl_langinfo(CODESET)... yes
+checking for strtod in -lm... yes
+checking for strtod() and other floating point functions... yes
+checking --disable-acl argument... no
+checking for acl_get_file in -lposix1e... no
+checking for acl_get_file in -lacl... no
+checking for POSIX ACL support... no
+checking for Solaris ACL support... no
+checking for AIX ACL support... no
+checking --disable-gpm argument... no
+checking for gpm... no
+checking --disable-sysmouse argument... no
+checking for sysmouse... no
+checking for FD_CLOEXEC... yes
+checking for rename... yes
+checking for sysctl... not usable
+checking for sysinfo... yes
+checking for sysinfo.mem_unit... yes
+checking for sysconf... yes
+checking size of int... 4
+checking size of long... 4
+checking size of time_t... 4
+checking size of off_t... 8
+checking uint32_t is 32 bits... ok
+checking whether memmove handles overlaps... yes
+checking for _xpg4_setrunelocale in -lxpg4... no
+checking how to create tags... ctags
+checking how to run man with a section nr... man -s
+checking --disable-nls argument... no
+checking for msgfmt... msgfmt
+checking for NLS... gettext() works with -lintl
+checking for bind_textdomain_codeset... yes
+checking for _nl_msg_cat_cntr... yes
+checking dlfcn.h usability... yes
+checking dlfcn.h presence... yes
+checking for dlfcn.h... yes
+checking for dlopen()... no
+checking for dlopen() in -ldl... yes
+checking for dlsym()... yes
+checking setjmp.h usability... yes
+checking setjmp.h presence... yes
+checking for setjmp.h... yes
+checking for GCC 3 or later... yes
+checking whether we need -D_FORTIFY_SOURCE=1... yes
+configure: updating cache auto/config.cache
+configure: creating auto/config.status
+config.status: creating auto/config.mk
+config.status: creating auto/config.h
++ make
+mkdir objects
+CC="gcc -Iproto -DHAVE_CONFIG_H         " srcdir=. sh ./osdef.sh
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/buffer.o buffer.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/blowfish.o blowfish.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/charset.o charset.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/diff.o diff.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/digraph.o digraph.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/edit.o edit.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/eval.o eval.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/ex_cmds.o ex_cmds.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/ex_cmds2.o ex_cmds2.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/ex_docmd.o ex_docmd.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/ex_eval.o ex_eval.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/ex_getln.o ex_getln.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/fileio.o fileio.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/fold.o fold.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/getchar.o getchar.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/hardcopy.o hardcopy.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/hashtab.o hashtab.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/if_cscope.o if_cscope.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/if_xcmdsrv.o if_xcmdsrv.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/main.o main.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/mark.o mark.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/memfile.o memfile.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/memline.o memline.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/menu.o menu.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/message.o message.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/misc1.o misc1.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/misc2.o misc2.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/move.o move.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/mbyte.o mbyte.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/normal.o normal.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/ops.o ops.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/option.o option.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/os_unix.o os_unix.c
+creating auto/pathdef.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/pathdef.o auto/pathdef.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/popupmnu.o popupmnu.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/quickfix.o quickfix.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/regexp.o regexp.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/screen.o screen.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/search.o search.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/sha256.o sha256.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/spell.o spell.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/syntax.o syntax.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/tag.o tag.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/term.o term.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/ui.o ui.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/undo.o undo.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/window.o window.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/netbeans.o netbeans.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       version.c -o objects/version.o
+  gcc   -L/ffp/lib -Wl,-rpath,/ffp/lib -L/usr/local/lib 	-o vim objects/buffer.o objects/blowfish.o objects/charset.o objects/diff.o objects/digraph.o objects/edit.o objects/eval.o objects/ex_cmds.o objects/ex_cmds2.o objects/ex_docmd.o objects/ex_eval.o objects/ex_getln.o objects/fileio.o objects/fold.o objects/getchar.o objects/hardcopy.o objects/hashtab.o  objects/if_cscope.o objects/if_xcmdsrv.o objects/main.o objects/mark.o objects/memfile.o objects/memline.o objects/menu.o objects/message.o objects/misc1.o objects/misc2.o objects/move.o objects/mbyte.o objects/normal.o objects/ops.o objects/option.o objects/os_unix.o objects/pathdef.o objects/popupmnu.o objects/quickfix.o objects/regexp.o objects/screen.o objects/search.o objects/sha256.o objects/spell.o objects/syntax.o  objects/tag.o objects/term.o objects/ui.o objects/undo.o objects/window.o           objects/netbeans.o  objects/version.o       -lm -lncurses  -liconv -lintl -ldl          
+link.sh: OK, linking works, let's try omitting a few libraries.
+link.sh: See auto/link.log for details.
+link.sh: Trying to omit the iconv library...
+link.sh: Vim doesn't need the iconv library!
+link.sh: Trying to omit the dl library...
+link.sh: Vim DOES need the dl library.
+make[1]: Entering directory `/tmp/vim.YIxyQt/vim73/src'
+creating auto/pathdef.c
+gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -D_FORTIFY_SOURCE=1       -o objects/pathdef.o auto/pathdef.c
+make[1]: Leaving directory `/tmp/vim.YIxyQt/vim73/src'
+link.sh: Using auto/link.sed file to omit a few libraries
+  gcc   -L/ffp/lib -Wl,-rpath,/ffp/lib -L/usr/local/lib 	-o vim objects/buffer.o objects/blowfish.o objects/charset.o objects/diff.o objects/digraph.o objects/edit.o objects/eval.o objects/ex_cmds.o objects/ex_cmds2.o objects/ex_docmd.o objects/ex_eval.o objects/ex_getln.o objects/fileio.o objects/fold.o objects/getchar.o objects/hardcopy.o objects/hashtab.o  objects/if_cscope.o objects/if_xcmdsrv.o objects/main.o objects/mark.o objects/memfile.o objects/memline.o objects/menu.o objects/message.o objects/misc1.o objects/misc2.o objects/move.o objects/mbyte.o objects/normal.o objects/ops.o objects/option.o objects/os_unix.o objects/pathdef.o objects/popupmnu.o objects/quickfix.o objects/regexp.o objects/screen.o objects/search.o objects/sha256.o objects/spell.o objects/syntax.o  objects/tag.o objects/term.o objects/ui.o objects/undo.o objects/window.o           objects/netbeans.o  objects/version.o       -lm -lncurses  -lintl -ldl          
+link.sh: Linked fine with a few libraries omitted
+cd xxd; CC="gcc" CFLAGS=" -g -O2 -D_FORTIFY_SOURCE=1" \
+		make -f Makefile
+make[1]: Entering directory `/tmp/vim.YIxyQt/vim73/src/xxd'
+gcc  -g -O2 -D_FORTIFY_SOURCE=1  -DUNIX -o xxd xxd.c
+make[1]: Leaving directory `/tmp/vim.YIxyQt/vim73/src/xxd'
+make[1]: Entering directory `/tmp/vim.YIxyQt/vim73/src/po'
+OLD_PO_FILE_INPUT=yes msgfmt -v -o af.mo af.po
+1427 translated messages.
+OLD_PO_FILE_INPUT=yes msgfmt -v -o ca.mo ca.po
+1701 translated messages.
+OLD_PO_FILE_INPUT=yes msgfmt -v -o cs.mo cs.po
+1284 translated messages.
+OLD_PO_FILE_INPUT=yes msgfmt -v -o de.mo de.po
+1705 translated messages.
+OLD_PO_FILE_INPUT=yes msgfmt -v -o en_GB.mo en_GB.po
+80 translated messages.
+OLD_PO_FILE_INPUT=yes msgfmt -v -o eo.mo eo.po
+1775 translated messages.
+OLD_PO_FILE_INPUT=yes msgfmt -v -o es.mo es.po
+1737 translated messages.
+OLD_PO_FILE_INPUT=yes msgfmt -v -o fi.mo fi.po
+1772 translated messages.
+OLD_PO_FILE_INPUT=yes msgfmt -v -o fr.mo fr.po
+1775 translated messages.
+OLD_PO_FILE_INPUT=yes msgfmt -v -o ga.mo ga.po
+1737 translated messages.
+OLD_PO_FILE_INPUT=yes msgfmt -v -o it.mo it.po
+1775 translated messages.
+OLD_PO_FILE_INPUT=yes msgfmt -v -o ja.mo ja.po
+1708 translated messages.
+OLD_PO_FILE_INPUT=yes msgfmt -v -o ko.mo ko.po
+1687 translated messages.
+OLD_PO_FILE_INPUT=yes msgfmt -v -o ko.UTF-8.mo ko.UTF-8.po
+1687 translated messages.
+OLD_PO_FILE_INPUT=yes msgfmt -v -o nb.mo nb.po
+1672 translated messages.
+OLD_PO_FILE_INPUT=yes msgfmt -v -o no.mo no.po
+1672 translated messages.
+OLD_PO_FILE_INPUT=yes msgfmt -v -o pl.mo pl.po
+1772 translated messages.
+OLD_PO_FILE_INPUT=yes msgfmt -v -o pt_BR.mo pt_BR.po
+1739 translated messages.
+OLD_PO_FILE_INPUT=yes msgfmt -v -o ru.mo ru.po
+1426 translated messages.
+OLD_PO_FILE_INPUT=yes msgfmt -v -o sk.mo sk.po
+1632 translated messages.
+OLD_PO_FILE_INPUT=yes msgfmt -v -o sv.mo sv.po
+1701 translated messages.
+OLD_PO_FILE_INPUT=yes msgfmt -v -o uk.mo uk.po
+1772 translated messages.
+OLD_PO_FILE_INPUT=yes msgfmt -v -o vi.mo vi.po
+1426 translated messages.
+OLD_PO_FILE_INPUT=yes msgfmt -v -o zh_CN.UTF-8.mo zh_CN.UTF-8.po
+1637 translated messages, 3 fuzzy translations.
+OLD_PO_FILE_INPUT=yes msgfmt -v -o zh_CN.mo zh_CN.po
+1637 translated messages, 3 fuzzy translations.
+OLD_PO_FILE_INPUT=yes msgfmt -v -o zh_TW.UTF-8.mo zh_TW.UTF-8.po
+1426 translated messages.
+OLD_PO_FILE_INPUT=yes msgfmt -v -o zh_TW.mo zh_TW.po
+1426 translated messages.
+make[1]: Leaving directory `/tmp/vim.YIxyQt/vim73/src/po'
+make[1]: Entering directory `/tmp/vim.YIxyQt/vim73/src/po'
+OLD_PO_FILE_INPUT=yes msgfmt -v -o cs.cp1250.mo cs.cp1250.po
+1284 translated messages.
+OLD_PO_FILE_INPUT=yes msgfmt -v -o ja.sjis.mo ja.sjis.po
+1708 translated messages.
+OLD_PO_FILE_INPUT=yes msgfmt -v -o pl.cp1250.mo pl.cp1250.po
+1772 translated messages.
+OLD_PO_FILE_INPUT=yes msgfmt -v -o pl.UTF-8.mo pl.UTF-8.po
+1772 translated messages.
+OLD_PO_FILE_INPUT=yes msgfmt -v -o ru.cp1251.mo ru.cp1251.po
+1426 translated messages.
+OLD_PO_FILE_INPUT=yes msgfmt -v -o sk.cp1250.mo sk.cp1250.po
+1632 translated messages.
+OLD_PO_FILE_INPUT=yes msgfmt -v -o uk.cp1251.mo uk.cp1251.po
+1772 translated messages.
+OLD_PO_FILE_INPUT=yes msgfmt -v -o zh_CN.cp936.mo zh_CN.cp936.po
+1637 translated messages, 3 fuzzy translations.
+make[1]: Leaving directory `/tmp/vim.YIxyQt/vim73/src/po'
++ make DESTDIR=/tmp/vim.YIxyQt/pkg install
+/bin/sh ./mkinstalldirs /tmp/vim.YIxyQt/pkg/ffp
+mkdir /tmp/vim.YIxyQt/pkg
+mkdir /tmp/vim.YIxyQt/pkg/ffp
+chmod 755 /tmp/vim.YIxyQt/pkg/ffp
+/bin/sh ./mkinstalldirs /tmp/vim.YIxyQt/pkg/ffp/bin
+mkdir /tmp/vim.YIxyQt/pkg/ffp/bin
+chmod 755 /tmp/vim.YIxyQt/pkg/ffp/bin
+if test -f /tmp/vim.YIxyQt/pkg/ffp/bin/vim; then \
+	  mv -f /tmp/vim.YIxyQt/pkg/ffp/bin/vim /tmp/vim.YIxyQt/pkg/ffp/bin/vim.rm; \
+	  rm -f /tmp/vim.YIxyQt/pkg/ffp/bin/vim.rm; \
+	fi
+cp vim /tmp/vim.YIxyQt/pkg/ffp/bin
+strip /tmp/vim.YIxyQt/pkg/ffp/bin/vim
+chmod 755 /tmp/vim.YIxyQt/pkg/ffp/bin/vim
+/bin/sh ./mkinstalldirs /tmp/vim.YIxyQt/pkg/ffp/share/vim
+mkdir /tmp/vim.YIxyQt/pkg/ffp/share
+mkdir /tmp/vim.YIxyQt/pkg/ffp/share/vim
+chmod 755 /tmp/vim.YIxyQt/pkg/ffp/share/vim
+cp vimtutor /tmp/vim.YIxyQt/pkg/ffp/bin/vimtutor
+chmod 755 /tmp/vim.YIxyQt/pkg/ffp/bin/vimtutor
+/bin/sh ./mkinstalldirs /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73
+mkdir /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73
+chmod 755 /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73
+/bin/sh ./mkinstalldirs /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/doc
+mkdir /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/doc
+chmod 755 /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/doc
+/bin/sh ./mkinstalldirs /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/print
+mkdir /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/print
+chmod 755 /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/print
+/bin/sh ./mkinstalldirs /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/colors
+mkdir /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/colors
+chmod 755 /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/colors
+/bin/sh ./mkinstalldirs /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/syntax
+mkdir /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/syntax
+chmod 755 /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/syntax
+/bin/sh ./mkinstalldirs /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/indent
+mkdir /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/indent
+chmod 755 /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/indent
+/bin/sh ./mkinstalldirs /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/ftplugin
+mkdir /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/ftplugin
+chmod 755 /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/ftplugin
+/bin/sh ./mkinstalldirs /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/autoload
+mkdir /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/autoload
+chmod 755 /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/autoload
+/bin/sh ./mkinstalldirs /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/autoload/xml
+mkdir /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/autoload/xml
+chmod 755 /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/autoload/xml
+/bin/sh ./mkinstalldirs /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/plugin
+mkdir /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/plugin
+chmod 755 /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/plugin
+/bin/sh ./mkinstalldirs /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/tutor
+mkdir /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/tutor
+chmod 755 /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/tutor
+/bin/sh ./mkinstalldirs /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/spell
+mkdir /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/spell
+chmod 755 /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/spell
+/bin/sh ./mkinstalldirs /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/compiler
+mkdir /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/compiler
+chmod 755 /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/compiler
+/bin/sh ./installman.sh install /tmp/vim.YIxyQt/pkg/ffp/share/man/man1 "" /ffp/share/vim /ffp/share/vim/vim73 /ffp/share/vim ../runtime/doc 644 vim vimdiff evim
+creating /tmp/vim.YIxyQt/pkg/ffp/share/man/man1
+mkdir /tmp/vim.YIxyQt/pkg/ffp/share/man
+mkdir /tmp/vim.YIxyQt/pkg/ffp/share/man/man1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/man1/vim.1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/man1/vimtutor.1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/man1/vimdiff.1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/man1/evim.1
+generating help tags
+make[1]: Entering directory `/tmp/vim.YIxyQt/vim73/runtime/doc'
+/tmp/vim.YIxyQt/pkg/ffp/bin/vim -u NONE -esX -c "helptags ++t ." -c quit
+make[1]: Leaving directory `/tmp/vim.YIxyQt/vim73/runtime/doc'
+cd ../runtime/doc; \
+		files=`ls *.txt tags`; \
+		files="$files `ls *.??x tags-?? 2>/dev/null || true`"; \
+		cp $files  /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/doc; \
+		cd /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/doc; \
+		chmod 644 $files
+cp  ../runtime/doc/*.pl /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/doc
+chmod 755 /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/doc/*.pl
+cp ../runtime/menu.vim /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/menu.vim
+chmod 644 /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/menu.vim
+cp ../runtime/synmenu.vim /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/synmenu.vim
+chmod 644 /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/synmenu.vim
+cp ../runtime/delmenu.vim /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/delmenu.vim
+chmod 644 /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/delmenu.vim
+cp ../runtime/mswin.vim /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/mswin.vim
+chmod 644 /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/mswin.vim
+cp ../runtime/evim.vim /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/evim.vim
+chmod 644 /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/evim.vim
+cp ../runtime/bugreport.vim /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/bugreport.vim
+chmod 644 /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/bugreport.vim
+cp ../runtime/vimrc_example.vim /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73
+chmod 644 /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/vimrc_example.vim
+cp ../runtime/gvimrc_example.vim /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73
+chmod 644 /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/gvimrc_example.vim
+cp ../runtime/filetype.vim /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/filetype.vim
+chmod 644 /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/filetype.vim
+cp ../runtime/ftoff.vim /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/ftoff.vim
+chmod 644 /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/ftoff.vim
+cp ../runtime/scripts.vim /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/scripts.vim
+chmod 644 /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/scripts.vim
+cp ../runtime/ftplugin.vim /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/ftplugin.vim
+chmod 644 /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/ftplugin.vim
+cp ../runtime/ftplugof.vim /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/ftplugof.vim
+chmod 644 /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/ftplugof.vim
+cp ../runtime/indent.vim /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/indent.vim
+chmod 644 /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/indent.vim
+cp ../runtime/indoff.vim /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/indoff.vim
+chmod 644 /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/indoff.vim
+cp ../runtime/optwin.vim /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/optwin.vim
+chmod 644 /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/optwin.vim
+cd ../runtime/print; cp *.ps /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/print
+cd /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/print; chmod 644 *.ps
+cd ../runtime/colors; cp *.vim README.txt /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/colors
+cd /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/colors; chmod 644 *.vim README.txt
+cd ../runtime/syntax; cp *.vim README.txt /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/syntax
+cd /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/syntax; chmod 644 *.vim README.txt
+cd ../runtime/indent; cp *.vim README.txt /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/indent
+cd /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/indent; chmod 644 *.vim README.txt
+cd ../runtime/autoload; cp *.vim README.txt /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/autoload
+cd /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/autoload; chmod 644 *.vim README.txt
+cd ../runtime/autoload/xml; cp *.vim /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/autoload/xml
+cd /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/autoload/xml; chmod 644 *.vim
+cd ../runtime/plugin; cp *.vim README.txt /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/plugin
+cd /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/plugin; chmod 644 *.vim README.txt
+cd ../runtime/ftplugin; cp *.vim README.txt logtalk.dict /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/ftplugin
+cd /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/ftplugin; chmod 644 *.vim README.txt
+cd ../runtime/compiler; cp *.vim README.txt /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/compiler
+cd /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/compiler; chmod 644 *.vim README.txt
+/bin/sh ./mkinstalldirs /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/macros
+mkdir /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/macros
+chmod 755 /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/macros
+cp -r ../runtime/macros/* /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/macros
+chmod 755 `find /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/macros -type d -print`
+chmod 644 `find /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/macros -type f -print`
+chmod 755 /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/macros/less.sh
+cvs=`find /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/macros \( -name CVS -o -name AAPDIR -o -name "*.info" \) -print`; \
+	      if test -n "$cvs"; then \
+		 rm -rf $cvs; \
+	      fi
+cp ../runtime/tutor/README* ../runtime/tutor/tutor* /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/tutor
+rm -f /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/tutor/*.info
+chmod 644 /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/tutor/*
+if test -f ../runtime/spell/en.latin1.spl; then \
+	  cp ../runtime/spell/*.spl ../runtime/spell/*.sug ../runtime/spell/*.vim /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/spell; \
+	  chmod 644 /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/spell/*.spl /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/spell/*.sug /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/spell/*.vim; \
+	fi
+cd /tmp/vim.YIxyQt/pkg/ffp/bin; ln -s vim ex
+cd /tmp/vim.YIxyQt/pkg/ffp/bin; ln -s vim view
+cd /tmp/vim.YIxyQt/pkg/ffp/bin; ln -s vim rvim
+cd /tmp/vim.YIxyQt/pkg/ffp/bin; ln -s vim rview
+cd /tmp/vim.YIxyQt/pkg/ffp/bin; ln -s vim vimdiff
+/bin/sh ./installml.sh install "" \
+		/tmp/vim.YIxyQt/pkg/ffp/share/man/man1 vim vimdiff evim ex view rvim rview gvim gview rgvim rgview gvimdiff eview
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/man1/ex.1
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/man1/view.1
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/man1/rvim.1
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/man1/rview.1
+/bin/sh ./mkinstalldirs /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/tools
+mkdir /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/tools
+chmod 755 /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/tools
+/bin/sh ./installman.sh xxd /tmp/vim.YIxyQt/pkg/ffp/share/man/fr/man1 "-fr" /ffp/share/vim /ffp/share/vim/vim73 /ffp/share/vim ../runtime/doc 644 vim vimdiff evim
+creating /tmp/vim.YIxyQt/pkg/ffp/share/man/fr/man1
+mkdir /tmp/vim.YIxyQt/pkg/ffp/share/man/fr
+mkdir /tmp/vim.YIxyQt/pkg/ffp/share/man/fr/man1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/fr/man1/xxd.1
+/bin/sh ./installman.sh xxd /tmp/vim.YIxyQt/pkg/ffp/share/man/fr.ISO8859-1/man1 "-fr" /ffp/share/vim /ffp/share/vim/vim73 /ffp/share/vim ../runtime/doc 644 vim vimdiff evim
+creating /tmp/vim.YIxyQt/pkg/ffp/share/man/fr.ISO8859-1/man1
+mkdir /tmp/vim.YIxyQt/pkg/ffp/share/man/fr.ISO8859-1
+mkdir /tmp/vim.YIxyQt/pkg/ffp/share/man/fr.ISO8859-1/man1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/fr.ISO8859-1/man1/xxd.1
+/bin/sh ./installman.sh xxd /tmp/vim.YIxyQt/pkg/ffp/share/man/fr.UTF-8/man1 "-fr.UTF-8" /ffp/share/vim /ffp/share/vim/vim73 /ffp/share/vim ../runtime/doc 644 vim vimdiff evim
+creating /tmp/vim.YIxyQt/pkg/ffp/share/man/fr.UTF-8/man1
+mkdir /tmp/vim.YIxyQt/pkg/ffp/share/man/fr.UTF-8
+mkdir /tmp/vim.YIxyQt/pkg/ffp/share/man/fr.UTF-8/man1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/fr.UTF-8/man1/xxd.1
+/bin/sh ./installman.sh xxd /tmp/vim.YIxyQt/pkg/ffp/share/man/it/man1 "-it" /ffp/share/vim /ffp/share/vim/vim73 /ffp/share/vim ../runtime/doc 644 vim vimdiff evim
+creating /tmp/vim.YIxyQt/pkg/ffp/share/man/it/man1
+mkdir /tmp/vim.YIxyQt/pkg/ffp/share/man/it
+mkdir /tmp/vim.YIxyQt/pkg/ffp/share/man/it/man1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/it/man1/xxd.1
+/bin/sh ./installman.sh xxd /tmp/vim.YIxyQt/pkg/ffp/share/man/it.ISO8859-1/man1 "-it" /ffp/share/vim /ffp/share/vim/vim73 /ffp/share/vim ../runtime/doc 644 vim vimdiff evim
+creating /tmp/vim.YIxyQt/pkg/ffp/share/man/it.ISO8859-1/man1
+mkdir /tmp/vim.YIxyQt/pkg/ffp/share/man/it.ISO8859-1
+mkdir /tmp/vim.YIxyQt/pkg/ffp/share/man/it.ISO8859-1/man1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/it.ISO8859-1/man1/xxd.1
+/bin/sh ./installman.sh xxd /tmp/vim.YIxyQt/pkg/ffp/share/man/it.UTF-8/man1 "-it.UTF-8" /ffp/share/vim /ffp/share/vim/vim73 /ffp/share/vim ../runtime/doc 644 vim vimdiff evim
+creating /tmp/vim.YIxyQt/pkg/ffp/share/man/it.UTF-8/man1
+mkdir /tmp/vim.YIxyQt/pkg/ffp/share/man/it.UTF-8
+mkdir /tmp/vim.YIxyQt/pkg/ffp/share/man/it.UTF-8/man1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/it.UTF-8/man1/xxd.1
+/bin/sh ./installman.sh xxd /tmp/vim.YIxyQt/pkg/ffp/share/man/pl/man1 "-pl" /ffp/share/vim /ffp/share/vim/vim73 /ffp/share/vim ../runtime/doc 644 vim vimdiff evim
+creating /tmp/vim.YIxyQt/pkg/ffp/share/man/pl/man1
+mkdir /tmp/vim.YIxyQt/pkg/ffp/share/man/pl
+mkdir /tmp/vim.YIxyQt/pkg/ffp/share/man/pl/man1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/pl/man1/xxd.1
+/bin/sh ./installman.sh xxd /tmp/vim.YIxyQt/pkg/ffp/share/man/pl.ISO8859-2/man1 "-pl" /ffp/share/vim /ffp/share/vim/vim73 /ffp/share/vim ../runtime/doc 644 vim vimdiff evim
+creating /tmp/vim.YIxyQt/pkg/ffp/share/man/pl.ISO8859-2/man1
+mkdir /tmp/vim.YIxyQt/pkg/ffp/share/man/pl.ISO8859-2
+mkdir /tmp/vim.YIxyQt/pkg/ffp/share/man/pl.ISO8859-2/man1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/pl.ISO8859-2/man1/xxd.1
+/bin/sh ./installman.sh xxd /tmp/vim.YIxyQt/pkg/ffp/share/man/pl.UTF-8/man1 "-pl.UTF-8" /ffp/share/vim /ffp/share/vim/vim73 /ffp/share/vim ../runtime/doc 644 vim vimdiff evim
+creating /tmp/vim.YIxyQt/pkg/ffp/share/man/pl.UTF-8/man1
+mkdir /tmp/vim.YIxyQt/pkg/ffp/share/man/pl.UTF-8
+mkdir /tmp/vim.YIxyQt/pkg/ffp/share/man/pl.UTF-8/man1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/pl.UTF-8/man1/xxd.1
+/bin/sh ./installman.sh xxd /tmp/vim.YIxyQt/pkg/ffp/share/man/ru.KOI8-R/man1 "-ru" /ffp/share/vim /ffp/share/vim/vim73 /ffp/share/vim ../runtime/doc 644 vim vimdiff evim
+creating /tmp/vim.YIxyQt/pkg/ffp/share/man/ru.KOI8-R/man1
+mkdir /tmp/vim.YIxyQt/pkg/ffp/share/man/ru.KOI8-R
+mkdir /tmp/vim.YIxyQt/pkg/ffp/share/man/ru.KOI8-R/man1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/ru.KOI8-R/man1/xxd.1
+/bin/sh ./installman.sh xxd /tmp/vim.YIxyQt/pkg/ffp/share/man/ru.UTF-8/man1 "-ru.UTF-8" /ffp/share/vim /ffp/share/vim/vim73 /ffp/share/vim ../runtime/doc 644 vim vimdiff evim
+creating /tmp/vim.YIxyQt/pkg/ffp/share/man/ru.UTF-8/man1
+mkdir /tmp/vim.YIxyQt/pkg/ffp/share/man/ru.UTF-8
+mkdir /tmp/vim.YIxyQt/pkg/ffp/share/man/ru.UTF-8/man1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/ru.UTF-8/man1/xxd.1
+if test -f /tmp/vim.YIxyQt/pkg/ffp/bin/xxd; then \
+	  mv -f /tmp/vim.YIxyQt/pkg/ffp/bin/xxd /tmp/vim.YIxyQt/pkg/ffp/bin/xxd.rm; \
+	  rm -f /tmp/vim.YIxyQt/pkg/ffp/bin/xxd.rm; \
+	fi
+cp xxd/xxd /tmp/vim.YIxyQt/pkg/ffp/bin
+strip /tmp/vim.YIxyQt/pkg/ffp/bin/xxd
+chmod 755 /tmp/vim.YIxyQt/pkg/ffp/bin/xxd
+/bin/sh ./installman.sh xxd /tmp/vim.YIxyQt/pkg/ffp/share/man/man1 "" /ffp/share/vim /ffp/share/vim/vim73 /ffp/share/vim ../runtime/doc 644 vim vimdiff evim
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/man1/xxd.1
+cp -r ../runtime/tools/* /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/tools
+cvs=`find /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/tools \( -name CVS -o -name AAPDIR \) -print`; \
+	      if test -n "$cvs"; then \
+		 rm -rf $cvs; \
+	      fi
+chmod 644 /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/tools/*
+perlpath=`./which.sh perl` && sed -e "s+/usr/bin/perl+$perlpath+" ../runtime/tools/efm_perl.pl >/tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/tools/efm_perl.pl
+awkpath=`./which.sh nawk` && sed -e "s+/usr/bin/nawk+$awkpath+" ../runtime/tools/mve.awk >/tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/tools/mve.awk; if test -z "$awkpath"; then \
+		awkpath=`./which.sh gawk` && sed -e "s+/usr/bin/nawk+$awkpath+" ../runtime/tools/mve.awk >/tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/tools/mve.awk; if test -z "$awkpath"; then \
+		awkpath=`./which.sh awk` && sed -e "s+/usr/bin/nawk+$awkpath+" ../runtime/tools/mve.awk >/tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/tools/mve.awk; fi; fi
+chmod 755 `grep -l "^#!" /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/tools/*`
+make[1]: Entering directory `/tmp/vim.YIxyQt/vim73/src/po'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/tmp/vim.YIxyQt/vim73/src/po'
+make[1]: Entering directory `/tmp/vim.YIxyQt/vim73/src/po'
+make[1]: Nothing to be done for `converted'.
+make[1]: Leaving directory `/tmp/vim.YIxyQt/vim73/src/po'
+/bin/sh ./mkinstalldirs /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/lang
+mkdir /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/lang
+chmod 755 /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/lang
+/bin/sh ./mkinstalldirs /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/keymap
+mkdir /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/keymap
+chmod 755 /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/keymap
+/bin/sh ./installman.sh install /tmp/vim.YIxyQt/pkg/ffp/share/man/fr/man1 "-fr" /ffp/share/vim /ffp/share/vim/vim73 /ffp/share/vim ../runtime/doc 644 vim vimdiff evim
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/fr/man1/vim.1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/fr/man1/vimtutor.1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/fr/man1/vimdiff.1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/fr/man1/evim.1
+/bin/sh ./installman.sh install /tmp/vim.YIxyQt/pkg/ffp/share/man/fr.ISO8859-1/man1 "-fr" /ffp/share/vim /ffp/share/vim/vim73 /ffp/share/vim ../runtime/doc 644 vim vimdiff evim
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/fr.ISO8859-1/man1/vim.1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/fr.ISO8859-1/man1/vimtutor.1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/fr.ISO8859-1/man1/vimdiff.1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/fr.ISO8859-1/man1/evim.1
+/bin/sh ./installman.sh install /tmp/vim.YIxyQt/pkg/ffp/share/man/fr.UTF-8/man1 "-fr.UTF-8" /ffp/share/vim /ffp/share/vim/vim73 /ffp/share/vim ../runtime/doc 644 vim vimdiff evim
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/fr.UTF-8/man1/vim.1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/fr.UTF-8/man1/vimtutor.1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/fr.UTF-8/man1/vimdiff.1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/fr.UTF-8/man1/evim.1
+/bin/sh ./installman.sh install /tmp/vim.YIxyQt/pkg/ffp/share/man/it/man1 "-it" /ffp/share/vim /ffp/share/vim/vim73 /ffp/share/vim ../runtime/doc 644 vim vimdiff evim
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/it/man1/vim.1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/it/man1/vimtutor.1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/it/man1/vimdiff.1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/it/man1/evim.1
+/bin/sh ./installman.sh install /tmp/vim.YIxyQt/pkg/ffp/share/man/it.ISO8859-1/man1 "-it" /ffp/share/vim /ffp/share/vim/vim73 /ffp/share/vim ../runtime/doc 644 vim vimdiff evim
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/it.ISO8859-1/man1/vim.1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/it.ISO8859-1/man1/vimtutor.1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/it.ISO8859-1/man1/vimdiff.1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/it.ISO8859-1/man1/evim.1
+/bin/sh ./installman.sh install /tmp/vim.YIxyQt/pkg/ffp/share/man/it.UTF-8/man1 "-it.UTF-8" /ffp/share/vim /ffp/share/vim/vim73 /ffp/share/vim ../runtime/doc 644 vim vimdiff evim
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/it.UTF-8/man1/vim.1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/it.UTF-8/man1/vimtutor.1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/it.UTF-8/man1/vimdiff.1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/it.UTF-8/man1/evim.1
+/bin/sh ./installman.sh install /tmp/vim.YIxyQt/pkg/ffp/share/man/pl/man1 "-pl" /ffp/share/vim /ffp/share/vim/vim73 /ffp/share/vim ../runtime/doc 644 vim vimdiff evim
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/pl/man1/vim.1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/pl/man1/vimtutor.1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/pl/man1/vimdiff.1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/pl/man1/evim.1
+/bin/sh ./installman.sh install /tmp/vim.YIxyQt/pkg/ffp/share/man/pl.ISO8859-2/man1 "-pl" /ffp/share/vim /ffp/share/vim/vim73 /ffp/share/vim ../runtime/doc 644 vim vimdiff evim
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/pl.ISO8859-2/man1/vim.1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/pl.ISO8859-2/man1/vimtutor.1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/pl.ISO8859-2/man1/vimdiff.1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/pl.ISO8859-2/man1/evim.1
+/bin/sh ./installman.sh install /tmp/vim.YIxyQt/pkg/ffp/share/man/pl.UTF-8/man1 "-pl.UTF-8" /ffp/share/vim /ffp/share/vim/vim73 /ffp/share/vim ../runtime/doc 644 vim vimdiff evim
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/pl.UTF-8/man1/vim.1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/pl.UTF-8/man1/vimtutor.1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/pl.UTF-8/man1/vimdiff.1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/pl.UTF-8/man1/evim.1
+/bin/sh ./installman.sh install /tmp/vim.YIxyQt/pkg/ffp/share/man/ru.KOI8-R/man1 "-ru" /ffp/share/vim /ffp/share/vim/vim73 /ffp/share/vim ../runtime/doc 644 vim vimdiff evim
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/ru.KOI8-R/man1/vim.1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/ru.KOI8-R/man1/vimtutor.1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/ru.KOI8-R/man1/vimdiff.1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/ru.KOI8-R/man1/evim.1
+/bin/sh ./installman.sh install /tmp/vim.YIxyQt/pkg/ffp/share/man/ru.UTF-8/man1 "-ru.UTF-8" /ffp/share/vim /ffp/share/vim/vim73 /ffp/share/vim ../runtime/doc 644 vim vimdiff evim
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/ru.UTF-8/man1/vim.1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/ru.UTF-8/man1/vimtutor.1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/ru.UTF-8/man1/vimdiff.1
+installing /tmp/vim.YIxyQt/pkg/ffp/share/man/ru.UTF-8/man1/evim.1
+/bin/sh ./installml.sh install "" \
+		/tmp/vim.YIxyQt/pkg/ffp/share/man/fr/man1 vim vimdiff evim ex view rvim rview gvim gview rgvim rgview gvimdiff eview
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/fr/man1/ex.1
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/fr/man1/view.1
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/fr/man1/rvim.1
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/fr/man1/rview.1
+/bin/sh ./installml.sh install "" \
+		/tmp/vim.YIxyQt/pkg/ffp/share/man/fr.ISO8859-1/man1 vim vimdiff evim ex view rvim rview gvim gview rgvim rgview gvimdiff eview
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/fr.ISO8859-1/man1/ex.1
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/fr.ISO8859-1/man1/view.1
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/fr.ISO8859-1/man1/rvim.1
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/fr.ISO8859-1/man1/rview.1
+/bin/sh ./installml.sh install "" \
+		/tmp/vim.YIxyQt/pkg/ffp/share/man/fr.UTF-8/man1 vim vimdiff evim ex view rvim rview gvim gview rgvim rgview gvimdiff eview
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/fr.UTF-8/man1/ex.1
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/fr.UTF-8/man1/view.1
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/fr.UTF-8/man1/rvim.1
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/fr.UTF-8/man1/rview.1
+/bin/sh ./installml.sh install "" \
+		/tmp/vim.YIxyQt/pkg/ffp/share/man/it/man1 vim vimdiff evim ex view rvim rview gvim gview rgvim rgview gvimdiff eview
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/it/man1/ex.1
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/it/man1/view.1
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/it/man1/rvim.1
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/it/man1/rview.1
+/bin/sh ./installml.sh install "" \
+		/tmp/vim.YIxyQt/pkg/ffp/share/man/it.ISO8859-1/man1 vim vimdiff evim ex view rvim rview gvim gview rgvim rgview gvimdiff eview
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/it.ISO8859-1/man1/ex.1
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/it.ISO8859-1/man1/view.1
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/it.ISO8859-1/man1/rvim.1
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/it.ISO8859-1/man1/rview.1
+/bin/sh ./installml.sh install "" \
+		/tmp/vim.YIxyQt/pkg/ffp/share/man/it.UTF-8/man1 vim vimdiff evim ex view rvim rview gvim gview rgvim rgview gvimdiff eview
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/it.UTF-8/man1/ex.1
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/it.UTF-8/man1/view.1
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/it.UTF-8/man1/rvim.1
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/it.UTF-8/man1/rview.1
+/bin/sh ./installml.sh install "" \
+		/tmp/vim.YIxyQt/pkg/ffp/share/man/pl/man1 vim vimdiff evim ex view rvim rview gvim gview rgvim rgview gvimdiff eview
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/pl/man1/ex.1
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/pl/man1/view.1
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/pl/man1/rvim.1
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/pl/man1/rview.1
+/bin/sh ./installml.sh install "" \
+		/tmp/vim.YIxyQt/pkg/ffp/share/man/pl.ISO8859-2/man1 vim vimdiff evim ex view rvim rview gvim gview rgvim rgview gvimdiff eview
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/pl.ISO8859-2/man1/ex.1
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/pl.ISO8859-2/man1/view.1
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/pl.ISO8859-2/man1/rvim.1
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/pl.ISO8859-2/man1/rview.1
+/bin/sh ./installml.sh install "" \
+		/tmp/vim.YIxyQt/pkg/ffp/share/man/pl.UTF-8/man1 vim vimdiff evim ex view rvim rview gvim gview rgvim rgview gvimdiff eview
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/pl.UTF-8/man1/ex.1
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/pl.UTF-8/man1/view.1
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/pl.UTF-8/man1/rvim.1
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/pl.UTF-8/man1/rview.1
+/bin/sh ./installml.sh install "" \
+		/tmp/vim.YIxyQt/pkg/ffp/share/man/ru.KOI8-R/man1 vim vimdiff evim ex view rvim rview gvim gview rgvim rgview gvimdiff eview
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/ru.KOI8-R/man1/ex.1
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/ru.KOI8-R/man1/view.1
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/ru.KOI8-R/man1/rvim.1
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/ru.KOI8-R/man1/rview.1
+/bin/sh ./installml.sh install "" \
+		/tmp/vim.YIxyQt/pkg/ffp/share/man/ru.UTF-8/man1 vim vimdiff evim ex view rvim rview gvim gview rgvim rgview gvimdiff eview
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/ru.UTF-8/man1/ex.1
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/ru.UTF-8/man1/view.1
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/ru.UTF-8/man1/rvim.1
+creating link /tmp/vim.YIxyQt/pkg/ffp/share/man/ru.UTF-8/man1/rview.1
+if test -n "yes" -a -f po/Makefile; then \
+	   cd po; make prefix=/tmp/vim.YIxyQt/pkg/ffp LOCALEDIR=/tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/lang \
+	   INSTALL_DATA=cp FILEMOD=644 install; \
+	fi
+make[1]: Entering directory `/tmp/vim.YIxyQt/vim73/src/po'
+make[2]: Entering directory `/tmp/vim.YIxyQt/vim73/src/po'
+make[2]: Leaving directory `/tmp/vim.YIxyQt/vim73/src/po'
+for lang in af ca cs de en_GB eo es fi fr ga it ja ko ko.UTF-8 nb no pl pt_BR ru sk sv uk vi zh_CN zh_CN.UTF-8 zh_TW zh_TW.UTF-8; do \
+	  dir=/tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/lang/$lang/; \
+	  if test ! -x "$dir"; then \
+	    mkdir $dir; chmod 755 $dir; \
+	  fi; \
+	  dir=/tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/lang/$lang/LC_MESSAGES; \
+	  if test ! -x "$dir"; then \
+	    mkdir $dir; chmod 755 $dir; \
+	  fi; \
+	  if test -r $lang.mo; then \
+	    cp $lang.mo $dir/vim.mo; \
+	    chmod 644 $dir/vim.mo; \
+	  fi; \
+	done
+make[1]: Leaving directory `/tmp/vim.YIxyQt/vim73/src/po'
+if test -d ../runtime/lang; then \
+	   cp ../runtime/lang/README.txt ../runtime/lang/*.vim /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/lang; \
+	   chmod 644 /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/lang/README.txt /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/lang/*.vim; \
+	fi
+if test -d ../runtime/keymap; then \
+	   cp ../runtime/keymap/README.txt ../runtime/keymap/*.vim /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/keymap; \
+	   chmod 644 /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/keymap/README.txt /tmp/vim.YIxyQt/pkg/ffp/share/vim/vim73/keymap/*.vim; \
+	fi
+if test -d /tmp/vim.YIxyQt/pkg/ffp/share/icons/hicolor/48x48/apps -a -w /tmp/vim.YIxyQt/pkg/ffp/share/icons/hicolor/48x48/apps \
+		-a ! -f /tmp/vim.YIxyQt/pkg/ffp/share/icons/hicolor/48x48/apps/gvim.png; then \
+	   cp ../runtime/vim48x48.png /tmp/vim.YIxyQt/pkg/ffp/share/icons/hicolor/48x48/apps/gvim.png; \
+	fi
+if test -d /tmp/vim.YIxyQt/pkg/ffp/share/icons/locolor/32x32/apps -a -w /tmp/vim.YIxyQt/pkg/ffp/share/icons/locolor/32x32/apps \
+		-a ! -f /tmp/vim.YIxyQt/pkg/ffp/share/icons/locolor/32x32/apps/gvim.png; then \
+	   cp ../runtime/vim32x32.png /tmp/vim.YIxyQt/pkg/ffp/share/icons/locolor/32x32/apps/gvim.png; \
+	fi
+if test -d /tmp/vim.YIxyQt/pkg/ffp/share/icons/locolor/16x16/apps -a -w /tmp/vim.YIxyQt/pkg/ffp/share/icons/locolor/16x16/apps \
+		-a ! -f /tmp/vim.YIxyQt/pkg/ffp/share/icons/locolor/16x16/apps/gvim.png; then \
+	   cp ../runtime/vim16x16.png /tmp/vim.YIxyQt/pkg/ffp/share/icons/locolor/16x16/apps/gvim.png; \
+	fi
++ mkdir -p /tmp/vim.YIxyQt/pkg/install
++ cp /ffp/home/root/fun_plug/ffp_packages/vim/DESCR /ffp/home/root/fun_plug/ffp_packages/vim/HOMEPAGE /tmp/vim.YIxyQt/pkg/install/
++ cd /tmp/vim.YIxyQt/pkg
++ makepkg vim 7.3 1
+Creating /tmp/vim-7.3-arm-1.tar ...
