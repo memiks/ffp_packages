@@ -1,0 +1,13 @@
+MMSRIP is a client for the proprietary protocol MMS://.
+It actually saves to a file the content being streamed.
+Please remember that this is not intended for real use, its existence 
+is only and must only be documentary.
+
+It should run on every POSIX compliant Operating System, but 
+I can't give you any complete list.
+
+This program is highly based on the work of SDP Multimedia and Major MMS.
+They deserve all the credits for it.
+
+Homepage: http://nbenoit.tuxfamily.org/index.php?page=MMSRIP#Overview
+
