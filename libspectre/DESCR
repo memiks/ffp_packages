@@ -1,0 +1,17 @@
+What is libspectre 
+
+libspectre is a small library for rendering Postscript documents. It 
+provides a convenient easy to use API for handling and rendering 
+Postscript documents. 
+
+libspectre it's known to work on UNIX/Linux systems although supporting 
+other platforms (win32, macos) is planned too. Any help on this is, of 
+course, more than welcome :-) 
+
+libspectre is free software and is available to be redistributed and/or 
+modified under the terms of the GNU General Public License as published 
+by the Free Software Foundation; either version 2, or (at your option) 
+any later version. 
+
+Homepage: http://www.freedesktop.org/wiki/Software/libspectre
+
