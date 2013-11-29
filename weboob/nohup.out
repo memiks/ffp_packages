@@ -1,0 +1,81 @@
+++ basename ./weboob.funpkg .funpkg
++ PN=weboob
++ PR=1
++ . ./config.ffp
+++ GNU_HOST=
+++ GNU_TARGET=
+++ FFP_CFLAGS='-I/ffp/include -O2'
+++ FFP_LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
+++ '[' '!' -d '' ']'
+++ TMPDIR=/tmp
+++ export TMPDIR
+++ mandir=/ffp/share/man
+++ infodir=/ffp/share/info
+++ docdir=/ffp/share/doc
+++ pwd
++ X=/ffp/home/root/fun_plug/src/weboob
+++ mktemp -t -d weboob.XXXXXX
++ W=/tmp/weboob.OJWv2Z
++ D=/tmp/weboob.OJWv2Z/pkg
++ cd /tmp/weboob.OJWv2Z
++ cat /ffp/home/root/fun_plug/src/weboob/SRC_URI
++ xargs wget
+git://git.symlink.me/pub/romain/weboob-stable.git: Unsupported scheme `git'.
++ cat /ffp/home/root/fun_plug/src/weboob/SRC_URI
++ xargs git clone
+Cloning into 'weboob-stable'...
++ PV=20121102
++ cd weboob-stable
++ mkdir -p /tmp/weboob.OJWv2Z/pkg/ffp/lib/python2.7/site-packages/
++ export PYTHONPATH=/tmp/weboob.OJWv2Z/pkg/ffp/lib/python2.7/site-packages/
++ PYTHONPATH=/tmp/weboob.OJWv2Z/pkg/ffp/lib/python2.7/site-packages/
++ LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
++ PYTHONPATH=/tmp/weboob.OJWv2Z/pkg/ffp/lib/python2.7/site-packages/
++ python setup.py develop --no-qt --install-dir /tmp/weboob.OJWv2Z/pkg/ffp/lib/python2.7/site-packages/
+running develop
+running egg_info
+creating weboob.egg-info
+writing weboob.egg-info/PKG-INFO
+writing top-level names to weboob.egg-info/top_level.txt
+writing dependency_links to weboob.egg-info/dependency_links.txt
+writing manifest file 'weboob.egg-info/SOURCES.txt'
+reading manifest file 'weboob.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+writing manifest file 'weboob.egg-info/SOURCES.txt'
+running build_ext
+Creating /tmp/weboob.OJWv2Z/pkg/ffp/lib/python2.7/site-packages/site.py
+Creating /tmp/weboob.OJWv2Z/pkg/ffp/lib/python2.7/site-packages/weboob.egg-link (link to .)
+Adding weboob 0.d to easy-install.pth file
+Installing weboob-config script to /tmp/weboob.OJWv2Z/pkg/ffp/lib/python2.7/site-packages/
+Installing weboob-repos script to /tmp/weboob.OJWv2Z/pkg/ffp/lib/python2.7/site-packages/
+Installing weboob-debug script to /tmp/weboob.OJWv2Z/pkg/ffp/lib/python2.7/site-packages/
+Installing boobathon script to /tmp/weboob.OJWv2Z/pkg/ffp/lib/python2.7/site-packages/
+Installing galleroob script to /tmp/weboob.OJWv2Z/pkg/ffp/lib/python2.7/site-packages/
+Installing wetboobs script to /tmp/weboob.OJWv2Z/pkg/ffp/lib/python2.7/site-packages/
+Installing boobank script to /tmp/weboob.OJWv2Z/pkg/ffp/lib/python2.7/site-packages/
+Installing webcontentedit script to /tmp/weboob.OJWv2Z/pkg/ffp/lib/python2.7/site-packages/
+Installing traveloob script to /tmp/weboob.OJWv2Z/pkg/ffp/lib/python2.7/site-packages/
+Installing monboob script to /tmp/weboob.OJWv2Z/pkg/ffp/lib/python2.7/site-packages/
+Installing translaboob script to /tmp/weboob.OJWv2Z/pkg/ffp/lib/python2.7/site-packages/
+Installing videoob script to /tmp/weboob.OJWv2Z/pkg/ffp/lib/python2.7/site-packages/
+Installing flatboob script to /tmp/weboob.OJWv2Z/pkg/ffp/lib/python2.7/site-packages/
+Installing radioob script to /tmp/weboob.OJWv2Z/pkg/ffp/lib/python2.7/site-packages/
+Installing geolooc script to /tmp/weboob.OJWv2Z/pkg/ffp/lib/python2.7/site-packages/
+Installing weboob-cli script to /tmp/weboob.OJWv2Z/pkg/ffp/lib/python2.7/site-packages/
+Installing boobmsg script to /tmp/weboob.OJWv2Z/pkg/ffp/lib/python2.7/site-packages/
+Installing boobill script to /tmp/weboob.OJWv2Z/pkg/ffp/lib/python2.7/site-packages/
+Installing boobtracker script to /tmp/weboob.OJWv2Z/pkg/ffp/lib/python2.7/site-packages/
+Installing pastoob script to /tmp/weboob.OJWv2Z/pkg/ffp/lib/python2.7/site-packages/
+Installing boobooks script to /tmp/weboob.OJWv2Z/pkg/ffp/lib/python2.7/site-packages/
+Installing comparoob script to /tmp/weboob.OJWv2Z/pkg/ffp/lib/python2.7/site-packages/
+Installing weboorrents script to /tmp/weboob.OJWv2Z/pkg/ffp/lib/python2.7/site-packages/
+Installing havedate script to /tmp/weboob.OJWv2Z/pkg/ffp/lib/python2.7/site-packages/
+
+Installed /tmp/weboob.OJWv2Z/weboob-stable
+Processing dependencies for weboob==0.d
+Finished processing dependencies for weboob==0.d
++ mkdir -p /tmp/weboob.OJWv2Z/pkg/install
++ cp /ffp/home/root/fun_plug/src/weboob/DESCR /ffp/home/root/fun_plug/src/weboob/HOMEPAGE /tmp/weboob.OJWv2Z/pkg/install/
++ cd /tmp/weboob.OJWv2Z/pkg
++ makepkg weboob 20121102 1
+Creating /tmp/weboob-20121102-arm-1.tar ...

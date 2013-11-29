@@ -1,0 +1,16 @@
+What is Weboob
+
+Weboob is a collection of applications able to interact with websites, 
+without requiring the user to open them in a browser. 
+
+It also provides well-defined APIs to talk to websites lacking one.
+
+Why use Weboob
+
+    You get information faster
+    You can script around Weboob to automate tasks
+    It extends websites features
+    It helps blind people use crappy websites
+
+Homepage: http://weboob.org/
+
