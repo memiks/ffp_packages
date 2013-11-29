@@ -1,0 +1,39 @@
+--- deps/v8/SConstruct.orig	2013-03-01 09:54:00.000000000 +0100
++++ deps/v8/SConstruct	2013-03-01 10:07:11.000000000 +0100
+@@ -80,7 +80,7 @@
+   },
+   'gcc': {
+     'all': {
+-      'CCFLAGS':      ['$DIALECTFLAGS', '$WARNINGFLAGS'],
++      'CCFLAGS':      ['$DIALECTFLAGS', '$WARNINGFLAGS', '-march=armv5t'],
+       'CXXFLAGS':     ['-fno-rtti', '-fno-exceptions'],
+     },
+     'visibility:hidden': {
+@@ -159,12 +159,12 @@
+       },
+       'armeabi:softfp' : {
+         'CPPDEFINES' : ['USE_EABI_HARDFLOAT=0'],
+-        'vfp3:on': {
+-          'CPPDEFINES' : ['CAN_USE_VFP_INSTRUCTIONS']
+-        },
+-        'simulator:none': {
+-          'CCFLAGS':     ['-mfloat-abi=softfp'],
+-        }
++#        'vfp3:on': {
++#          'CPPDEFINES' : ['CAN_USE_VFP_INSTRUCTIONS']
++#        },
++#        'simulator:none': {
++#          'CCFLAGS':     ['-mfloat-abi=softfp'],
++#        }
+       },
+       'armeabi:hard' : {
+         'CPPDEFINES' : ['USE_EABI_HARDFLOAT=1'],
+@@ -1129,7 +1129,7 @@
+   },
+   'armeabi': {
+     'values': ['hard', 'softfp', 'soft'],
+-    'default': 'softfp',
++    'default': 'soft',
+     'help': 'generate calling conventiont according to selected ARM EABI variant'
+   },
+   'mipsabi': {

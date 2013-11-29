@@ -1,0 +1,66 @@
+#!/ffp/bin/sh -xe
+
+PN=$(basename $0 .funpkg)
+PR=2
+
+. ./config.ffp
+
+X=$(pwd)
+W=$(mktemp -t -d $PN.XXXXXX)
+D=$W/pkg
+
+cd $W
+cat $X/SRC_URI | xargs wget 
+PV=$(ls $PN-*.tar* | egrep -o '[0-9][0-9.]*[0-9]')
+tar xf ${PN}-v${PV}.tar*
+cd $PN-*
+
+export CC='gcc -march=armv5te -mfloat-abi=soft -fno-tree-sink -O0'
+export CCFLAGS='-march=armv5te -mfloat-abi=soft -fno-tree-sink -O0'
+export CXX='g++ -march=armv5te -mfloat-abi=soft -fno-tree-sink -O0'
+export GCC='-march=armv5te -mfloat-abi=soft -fno-tree-sink -O0'
+
+#export CC='gcc -march=armv4 -mfloat-abi=soft'
+#export CCFLAGS='-march=armv4 -mfloat-abi=soft'
+#export CXX='g++ -march=armv4 -mfloat-abi=soft'
+#export GCC='-march=armv4 -mfloat-abi=soft'
+#export CCFLAGS="-march=armv4 -mno-thumb-interwork -mtune=xscale -mno-thumb -mfloat-abi=soft -mfpu=maverick"
+
+LDFLAGS="$FFP_LDFLAGS" \
+./configure \
+	--prefix=/ffp \
+	--without-dtrace \
+	--gdb \
+	--without-snapshot \
+	--shared-openssl \
+        --shared-openssl-includes=/ffp/include/openssl \
+        --shared-openssl-libpath=/ffp/lib
+
+#        --without-ssl \
+
+
+for file in `ls $X/patches/*.patch`
+do
+        patch -p0 -i $file
+done
+
+#GYP_DEFINES="armv7=0" CCFLAGS='-march=armv6' CXXFLAGS='-march=armv6' \
+#LDFLAGS="$FFP_LDFLAGS" \
+make
+
+#GYP_DEFINES="armv7=0" CCFLAGS='-march=armv6' CXXFLAGS='-march=armv6' \
+#LDFLAGS="$FFP_LDFLAGS" \
+make DESTDIR=$D install
+
+# create a default config file
+mkdir -p $D/ffp/etc
+
+#_doc README.txt
+
+mkdir -p $D/install
+cp $X/{DESCR,HOMEPAGE} $D/install/
+
+cd $D
+makepkg $PN $PV $PR
+
+

@@ -1,0 +1,47 @@
+--- ./deps/v8/src/platform-linux.orig.cc	2012-10-04 16:31:52.000000000 +0200
++++ ./deps/v8/src/platform-linux.cc	2012-10-04 16:34:46.000000000 +0200
+@@ -1012,43 +1012,8 @@
+     return;
+   }
+ 
+-  Sampler* sampler = isolate->logger()->sampler();
+-  if (sampler == NULL || !sampler->IsActive()) return;
++	return;
+ 
+-  TickSample sample_obj;
+-  TickSample* sample = CpuProfiler::TickSampleEvent(isolate);
+-  if (sample == NULL) sample = &sample_obj;
+-
+-  // Extracting the sample from the context is extremely machine dependent.
+-  ucontext_t* ucontext = reinterpret_cast<ucontext_t*>(context);
+-  mcontext_t& mcontext = ucontext->uc_mcontext;
+-  sample->state = isolate->current_vm_state();
+-#if V8_HOST_ARCH_IA32
+-  sample->pc = reinterpret_cast<Address>(mcontext.gregs[REG_EIP]);
+-  sample->sp = reinterpret_cast<Address>(mcontext.gregs[REG_ESP]);
+-  sample->fp = reinterpret_cast<Address>(mcontext.gregs[REG_EBP]);
+-#elif V8_HOST_ARCH_X64
+-  sample->pc = reinterpret_cast<Address>(mcontext.gregs[REG_RIP]);
+-  sample->sp = reinterpret_cast<Address>(mcontext.gregs[REG_RSP]);
+-  sample->fp = reinterpret_cast<Address>(mcontext.gregs[REG_RBP]);
+-#elif V8_HOST_ARCH_ARM
+-// An undefined macro evaluates to 0, so this applies to Android's Bionic also.
+-#if (__GLIBC__ < 2 || (__GLIBC__ == 2 && __GLIBC_MINOR__ <= 3))
+-  sample->pc = reinterpret_cast<Address>(mcontext.gregs[R15]);
+-  sample->sp = reinterpret_cast<Address>(mcontext.gregs[R13]);
+-  sample->fp = reinterpret_cast<Address>(mcontext.gregs[R11]);
+-#else
+-  sample->pc = reinterpret_cast<Address>(mcontext.arm_pc);
+-  sample->sp = reinterpret_cast<Address>(mcontext.arm_sp);
+-  sample->fp = reinterpret_cast<Address>(mcontext.arm_fp);
+-#endif  // (__GLIBC__ < 2 || (__GLIBC__ == 2 && __GLIBC_MINOR__ <= 3))
+-#elif V8_HOST_ARCH_MIPS
+-  sample->pc = reinterpret_cast<Address>(mcontext.pc);
+-  sample->sp = reinterpret_cast<Address>(mcontext.gregs[29]);
+-  sample->fp = reinterpret_cast<Address>(mcontext.gregs[30]);
+-#endif  // V8_HOST_ARCH_*
+-  sampler->SampleStack(sample);
+-  sampler->Tick(sample);
+ }
+ 
+ 
