@@ -1,0 +1,617 @@
+++ basename ./sendmail.funpkg .funpkg
++ PN=sendmail
++ PR=1
++ . ./config.ffp
+++ GNU_HOST=
+++ GNU_TARGET=
+++ FFP_CFLAGS='-I/ffp/include -O2'
+++ FFP_LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
+++ '[' '!' -d '' ']'
+++ TMPDIR=/tmp
+++ export TMPDIR
+++ mandir=/ffp/share/man
+++ infodir=/ffp/share/info
+++ docdir=/ffp/share/doc
+++ pwd
++ X=/ffp/home/root/src/sendmail
+++ mktemp -t -d sendmail.XXXXXX
++ W=/tmp/sendmail.QI5c9g
++ D=/tmp/sendmail.QI5c9g/pkg
++ cd /tmp/sendmail.QI5c9g
++ cat /ffp/home/root/src/sendmail/SRC_URI
++ xargs wget
+--2012-03-13 12:04:10--  ftp://ftp.sendmail.org/pub/sendmail/sendmail.8.14.5.tar.gz
+           => `sendmail.8.14.5.tar.gz'
+Resolving ftp.sendmail.org... 209.246.26.22
+Connecting to ftp.sendmail.org|209.246.26.22|:21... connected.
+Logging in as anonymous ... Logged in!
+==> SYST ... done.    ==> PWD ... done.
+==> TYPE I ... done.  ==> CWD (1) /pub/sendmail ... done.
+==> SIZE sendmail.8.14.5.tar.gz ... 2092508
+==> PASV ... done.    ==> RETR sendmail.8.14.5.tar.gz ... done.
+Length: 2092508 (2.0M) (unauthoritative)
+
+     0K .......... .......... .......... .......... ..........  2% 87.0K 23s
+    50K .......... .......... .......... .......... ..........  4%  136K 18s
+   100K .......... .......... .......... .......... ..........  7%  137K 16s
+   150K .......... .......... .......... .......... ..........  9%  251K 14s
+   200K .......... .......... .......... .......... .......... 12%  137K 13s
+   250K .......... .......... .......... .......... .......... 14%  249K 12s
+   300K .......... .......... .......... .......... .......... 17%  138K 12s
+   350K .......... .......... .......... .......... .......... 19%  249K 11s
+   400K .......... .......... .......... .......... .......... 22%  138K 11s
+   450K .......... .......... .......... .......... .......... 24%  137K 10s
+   500K .......... .......... .......... .......... .......... 26%  250K 10s
+   550K .......... .......... .......... .......... .......... 29%  137K 9s
+   600K .......... .......... .......... .......... .......... 31%  246K 9s
+   650K .......... .......... .......... .......... .......... 34%  139K 9s
+   700K .......... .......... .......... .......... .......... 36%  245K 8s
+   750K .......... .......... .......... .......... .......... 39%  138K 8s
+   800K .......... .......... .......... .......... .......... 41%  248K 7s
+   850K .......... .......... .......... .......... .......... 44%  138K 7s
+   900K .......... .......... .......... .......... .......... 46%  141K 7s
+   950K .......... .......... .......... .......... .......... 48%  238K 6s
+  1000K .......... .......... .......... .......... .......... 51%  140K 6s
+  1050K .......... .......... .......... .......... .......... 53%  240K 6s
+  1100K .......... .......... .......... .......... .......... 56%  139K 6s
+  1150K .......... .......... .......... .......... .......... 58%  242K 5s
+  1200K .......... .......... .......... .......... .......... 61%  139K 5s
+  1250K .......... .......... .......... .......... .......... 63%  141K 5s
+  1300K .......... .......... .......... .......... .......... 66%  238K 4s
+  1350K .......... .......... .......... .......... .......... 68%  136K 4s
+  1400K .......... .......... .......... .......... .......... 70%  244K 4s
+  1450K .......... .......... .......... .......... .......... 73%  140K 3s
+  1500K .......... .......... .......... .......... .......... 75%  238K 3s
+  1550K .......... .......... .......... .......... .......... 78%  141K 3s
+  1600K .......... .......... .......... .......... .......... 80%  240K 2s
+  1650K .......... .......... .......... .......... .......... 83%  139K 2s
+  1700K .......... .......... .......... .......... .......... 85%  140K 2s
+  1750K .......... .......... .......... .......... .......... 88%  232K 1s
+  1800K .......... .......... .......... .......... .......... 90%  142K 1s
+  1850K .......... .......... .......... .......... .......... 92%  237K 1s
+  1900K .......... .......... .......... .......... .......... 95%  142K 1s
+  1950K .......... .......... .......... .......... .......... 97%  236K 0s
+  2000K .......... .......... .......... .......... ...       100%  126K=12s
+
+2012-03-13 12:04:25 (165 KB/s) - `sendmail.8.14.5.tar.gz' saved [2092508]
+
+++ ls sendmail.8.14.5.tar.gz
+++ egrep -o '[0-9][0-9.]*[0-9]'
++ PV=8.14.5
++ tar xf sendmail.8.14.5.tar.gz
++ cd sendmail-8.14.5
++ cp /ffp/home/root/src/sendmail/site.config.m4 ./devtools/Site
++ mkdir -p /tmp/sendmail.QI5c9g/pkg/ffp/bin
++ mkdir -p /tmp/sendmail.QI5c9g/pkg/ffp/sbin
++ mkdir -p /tmp/sendmail.QI5c9g/pkg/ffp/libexec
++ mkdir -p /tmp/sendmail.QI5c9g/pkg/ffp/man/man8
++ mkdir -p /tmp/sendmail.QI5c9g/pkg/ffp/man/man1
++ LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
++ ./Build
+Making all in:
+/tmp/sendmail.QI5c9g/sendmail-8.14.5/libsm
+Configuration: pfx=, os=Linux, rel=2.6.22.18, rbase=2, rroot=2.6.22, arch=armv5tejl, sfx=, variant=optimized
+Using M4=/ffp/bin/m4
+Creating /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsm using /tmp/sendmail.QI5c9g/sendmail-8.14.5/devtools/OS/Linux
+Including /tmp/sendmail.QI5c9g/sendmail-8.14.5/devtools/Site/site.config.m4 
+Making dependencies in /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsm
+make[1]: Entering directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsm'
+rm -f sm_os.h
+ln -f -s ../../include/sm/os/sm_os_linux.h sm_os.h
+gcc -M -I. -I../../include    assert.c debug.c errstring.c exc.c heap.c match.c rpool.c strdup.c strerror.c strl.c clrerr.c fclose.c feof.c ferror.c fflush.c fget.c fpos.c findfp.c flags.c fopen.c fprintf.c fpurge.c fput.c fread.c fscanf.c fseek.c fvwrite.c fwalk.c fwrite.c get.c makebuf.c put.c refill.c rewind.c setvbuf.c smstdio.c snprintf.c sscanf.c stdio.c strio.c ungetc.c vasprintf.c vfprintf.c vfscanf.c vprintf.c vsnprintf.c wbuf.c wsetup.c string.c stringf.c xtrap.c strto.c test.c path.c strcasecmp.c strrevcmp.c signal.c clock.c config.c shm.c sem.c mbdb.c strexit.c cf.c ldap.c niprop.c mpeix.c memstat.c util.c    >> Makefile
+make[1]: Leaving directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsm'
+Making in /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsm
+make[1]: Entering directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsm'
+gcc -O2 -I. -I../../include       -c -o assert.o assert.c
+gcc -O2 -I. -I../../include       -c -o debug.o debug.c
+gcc -O2 -I. -I../../include       -c -o errstring.o errstring.c
+gcc -O2 -I. -I../../include       -c -o exc.o exc.c
+gcc -O2 -I. -I../../include       -c -o heap.o heap.c
+gcc -O2 -I. -I../../include       -c -o match.o match.c
+gcc -O2 -I. -I../../include       -c -o rpool.o rpool.c
+gcc -O2 -I. -I../../include       -c -o strdup.o strdup.c
+gcc -O2 -I. -I../../include       -c -o strerror.o strerror.c
+gcc -O2 -I. -I../../include       -c -o strl.o strl.c
+gcc -O2 -I. -I../../include       -c -o clrerr.o clrerr.c
+gcc -O2 -I. -I../../include       -c -o fclose.o fclose.c
+gcc -O2 -I. -I../../include       -c -o feof.o feof.c
+gcc -O2 -I. -I../../include       -c -o ferror.o ferror.c
+gcc -O2 -I. -I../../include       -c -o fflush.o fflush.c
+gcc -O2 -I. -I../../include       -c -o fget.o fget.c
+gcc -O2 -I. -I../../include       -c -o fpos.o fpos.c
+gcc -O2 -I. -I../../include       -c -o findfp.o findfp.c
+gcc -O2 -I. -I../../include       -c -o flags.o flags.c
+gcc -O2 -I. -I../../include       -c -o fopen.o fopen.c
+gcc -O2 -I. -I../../include       -c -o fprintf.o fprintf.c
+gcc -O2 -I. -I../../include       -c -o fpurge.o fpurge.c
+gcc -O2 -I. -I../../include       -c -o fput.o fput.c
+gcc -O2 -I. -I../../include       -c -o fread.o fread.c
+gcc -O2 -I. -I../../include       -c -o fscanf.o fscanf.c
+gcc -O2 -I. -I../../include       -c -o fseek.o fseek.c
+gcc -O2 -I. -I../../include       -c -o fvwrite.o fvwrite.c
+gcc -O2 -I. -I../../include       -c -o fwalk.o fwalk.c
+gcc -O2 -I. -I../../include       -c -o fwrite.o fwrite.c
+gcc -O2 -I. -I../../include       -c -o get.o get.c
+gcc -O2 -I. -I../../include       -c -o makebuf.o makebuf.c
+gcc -O2 -I. -I../../include       -c -o put.o put.c
+gcc -O2 -I. -I../../include       -c -o refill.o refill.c
+gcc -O2 -I. -I../../include       -c -o rewind.o rewind.c
+gcc -O2 -I. -I../../include       -c -o setvbuf.o setvbuf.c
+gcc -O2 -I. -I../../include       -c -o smstdio.o smstdio.c
+gcc -O2 -I. -I../../include       -c -o snprintf.o snprintf.c
+gcc -O2 -I. -I../../include       -c -o sscanf.o sscanf.c
+gcc -O2 -I. -I../../include       -c -o stdio.o stdio.c
+gcc -O2 -I. -I../../include       -c -o strio.o strio.c
+gcc -O2 -I. -I../../include       -c -o ungetc.o ungetc.c
+gcc -O2 -I. -I../../include       -c -o vasprintf.o vasprintf.c
+gcc -O2 -I. -I../../include       -c -o vfprintf.o vfprintf.c
+gcc -O2 -I. -I../../include       -c -o vfscanf.o vfscanf.c
+gcc -O2 -I. -I../../include       -c -o vprintf.o vprintf.c
+gcc -O2 -I. -I../../include       -c -o vsnprintf.o vsnprintf.c
+gcc -O2 -I. -I../../include       -c -o wbuf.o wbuf.c
+gcc -O2 -I. -I../../include       -c -o wsetup.o wsetup.c
+gcc -O2 -I. -I../../include       -c -o string.o string.c
+gcc -O2 -I. -I../../include       -c -o stringf.o stringf.c
+gcc -O2 -I. -I../../include       -c -o xtrap.o xtrap.c
+gcc -O2 -I. -I../../include       -c -o strto.o strto.c
+gcc -O2 -I. -I../../include       -c -o test.o test.c
+gcc -O2 -I. -I../../include       -c -o path.o path.c
+gcc -O2 -I. -I../../include       -c -o strcasecmp.o strcasecmp.c
+gcc -O2 -I. -I../../include       -c -o strrevcmp.o strrevcmp.c
+gcc -O2 -I. -I../../include       -c -o signal.o signal.c
+gcc -O2 -I. -I../../include       -c -o clock.o clock.c
+gcc -O2 -I. -I../../include       -c -o config.o config.c
+gcc -O2 -I. -I../../include       -c -o shm.o shm.c
+gcc -O2 -I. -I../../include       -c -o sem.o sem.c
+gcc -O2 -I. -I../../include       -c -o mbdb.o mbdb.c
+gcc -O2 -I. -I../../include       -c -o strexit.o strexit.c
+gcc -O2 -I. -I../../include       -c -o cf.o cf.c
+gcc -O2 -I. -I../../include       -c -o ldap.o ldap.c
+gcc -O2 -I. -I../../include       -c -o niprop.o niprop.c
+gcc -O2 -I. -I../../include       -c -o mpeix.o mpeix.c
+gcc -O2 -I. -I../../include       -c -o memstat.o memstat.c
+gcc -O2 -I. -I../../include       -c -o util.o util.c
+ar crv libsm.a assert.o debug.o errstring.o exc.o heap.o match.o rpool.o strdup.o strerror.o strl.o clrerr.o fclose.o feof.o ferror.o fflush.o fget.o fpos.o findfp.o flags.o fopen.o fprintf.o fpurge.o fput.o fread.o fscanf.o fseek.o fvwrite.o fwalk.o fwrite.o get.o makebuf.o put.o refill.o rewind.o setvbuf.o smstdio.o snprintf.o sscanf.o stdio.o strio.o ungetc.o vasprintf.o vfprintf.o vfscanf.o vprintf.o vsnprintf.o wbuf.o wsetup.o string.o stringf.o xtrap.o strto.o test.o path.o strcasecmp.o strrevcmp.o signal.o clock.o config.o shm.o sem.o mbdb.o strexit.o cf.o ldap.o niprop.o mpeix.o memstat.o util.o    
+a - assert.o
+a - debug.o
+a - errstring.o
+a - exc.o
+a - heap.o
+a - match.o
+a - rpool.o
+a - strdup.o
+a - strerror.o
+a - strl.o
+a - clrerr.o
+a - fclose.o
+a - feof.o
+a - ferror.o
+a - fflush.o
+a - fget.o
+a - fpos.o
+a - findfp.o
+a - flags.o
+a - fopen.o
+a - fprintf.o
+a - fpurge.o
+a - fput.o
+a - fread.o
+a - fscanf.o
+a - fseek.o
+a - fvwrite.o
+a - fwalk.o
+a - fwrite.o
+a - get.o
+a - makebuf.o
+a - put.o
+a - refill.o
+a - rewind.o
+a - setvbuf.o
+a - smstdio.o
+a - snprintf.o
+a - sscanf.o
+a - stdio.o
+a - strio.o
+a - ungetc.o
+a - vasprintf.o
+a - vfprintf.o
+a - vfscanf.o
+a - vprintf.o
+a - vsnprintf.o
+a - wbuf.o
+a - wsetup.o
+a - string.o
+a - stringf.o
+a - xtrap.o
+a - strto.o
+a - test.o
+a - path.o
+a - strcasecmp.o
+a - strrevcmp.o
+a - signal.o
+a - clock.o
+a - config.o
+a - shm.o
+a - sem.o
+a - mbdb.o
+a - strexit.o
+a - cf.o
+a - ldap.o
+a - niprop.o
+a - mpeix.o
+a - memstat.o
+a - util.o
+ranlib  libsm.a
+make[1]: Leaving directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsm'
+Making all in:
+/tmp/sendmail.QI5c9g/sendmail-8.14.5/libsmutil
+Configuration: pfx=, os=Linux, rel=2.6.22.18, rbase=2, rroot=2.6.22, arch=armv5tejl, sfx=, variant=optimized
+Using M4=/ffp/bin/m4
+Creating /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsmutil using /tmp/sendmail.QI5c9g/sendmail-8.14.5/devtools/OS/Linux
+Including /tmp/sendmail.QI5c9g/sendmail-8.14.5/devtools/Site/site.config.m4 
+Making dependencies in /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsmutil
+make[1]: Entering directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsmutil'
+rm -f sm_os.h
+ln -f -s ../../include/sm/os/sm_os_linux.h sm_os.h
+gcc -M -I. -I../../sendmail   -I../../include  -DNOT_SENDMAIL   debug.c err.c lockfile.c safefile.c snprintf.c cf.c    >> Makefile
+make[1]: Leaving directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsmutil'
+Making in /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsmutil
+make[1]: Entering directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsmutil'
+gcc -O2 -I. -I../../sendmail   -I../../include  -DNOT_SENDMAIL      -c -o debug.o debug.c
+gcc -O2 -I. -I../../sendmail   -I../../include  -DNOT_SENDMAIL      -c -o err.o err.c
+gcc -O2 -I. -I../../sendmail   -I../../include  -DNOT_SENDMAIL      -c -o lockfile.o lockfile.c
+gcc -O2 -I. -I../../sendmail   -I../../include  -DNOT_SENDMAIL      -c -o safefile.o safefile.c
+gcc -O2 -I. -I../../sendmail   -I../../include  -DNOT_SENDMAIL      -c -o snprintf.o snprintf.c
+gcc -O2 -I. -I../../sendmail   -I../../include  -DNOT_SENDMAIL      -c -o cf.o cf.c
+ar crv libsmutil.a debug.o err.o lockfile.o safefile.o snprintf.o cf.o    
+a - debug.o
+a - err.o
+a - lockfile.o
+a - safefile.o
+a - snprintf.o
+a - cf.o
+ranlib  libsmutil.a
+make[1]: Leaving directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsmutil'
+Making all in:
+/tmp/sendmail.QI5c9g/sendmail-8.14.5/libsmdb
+Configuration: pfx=, os=Linux, rel=2.6.22.18, rbase=2, rroot=2.6.22, arch=armv5tejl, sfx=, variant=optimized
+Using M4=/ffp/bin/m4
+Creating /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsmdb using /tmp/sendmail.QI5c9g/sendmail-8.14.5/devtools/OS/Linux
+Including /tmp/sendmail.QI5c9g/sendmail-8.14.5/devtools/Site/site.config.m4 
+Making dependencies in /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsmdb
+make[1]: Entering directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsmdb'
+rm -f sm_os.h
+ln -f -s ../../include/sm/os/sm_os_linux.h sm_os.h
+gcc -M -I. -I../../sendmail   -I../../include  -DNOT_SENDMAIL   smdb.c smdb1.c smdb2.c smndbm.c    >> Makefile
+make[1]: Leaving directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsmdb'
+Making in /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsmdb
+make[1]: Entering directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsmdb'
+gcc -O2 -I. -I../../sendmail   -I../../include  -DNOT_SENDMAIL      -c -o smdb.o smdb.c
+gcc -O2 -I. -I../../sendmail   -I../../include  -DNOT_SENDMAIL      -c -o smdb1.o smdb1.c
+gcc -O2 -I. -I../../sendmail   -I../../include  -DNOT_SENDMAIL      -c -o smdb2.o smdb2.c
+gcc -O2 -I. -I../../sendmail   -I../../include  -DNOT_SENDMAIL      -c -o smndbm.o smndbm.c
+ar crv libsmdb.a smdb.o smdb1.o smdb2.o smndbm.o    
+a - smdb.o
+a - smdb1.o
+a - smdb2.o
+a - smndbm.o
+ranlib  libsmdb.a
+make[1]: Leaving directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsmdb'
+Making all in:
+/tmp/sendmail.QI5c9g/sendmail-8.14.5/sendmail
+Configuration: pfx=, os=Linux, rel=2.6.22.18, rbase=2, rroot=2.6.22, arch=armv5tejl, sfx=, variant=optimized
+Using M4=/ffp/bin/m4
+Creating /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/sendmail using /tmp/sendmail.QI5c9g/sendmail-8.14.5/devtools/OS/Linux
+Including /tmp/sendmail.QI5c9g/sendmail-8.14.5/devtools/Site/site.config.m4 
+Making dependencies in /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/sendmail
+make[1]: Entering directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/sendmail'
+rm -f sm_os.h
+ln -f -s ../../include/sm/os/sm_os_linux.h sm_os.h
+gcc -M -I. -I../../include    main.c alias.c arpadate.c bf.c collect.c conf.c control.c convtime.c daemon.c deliver.c domain.c envelope.c err.c headers.c macro.c map.c mci.c milter.c mime.c parseaddr.c queue.c ratectrl.c readcf.c recipient.c sasl.c savemail.c sfsasl.c shmticklib.c sm_resolve.c srvrsmtp.c stab.c stats.c sysexits.c timers.c tls.c trace.c udb.c usersmtp.c util.c version.c    >> Makefile
+make[1]: Leaving directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/sendmail'
+Making in /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/sendmail
+make[1]: Entering directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/sendmail'
+cp /dev/null statistics
+gcc -O2 -I. -I../../include       -c -o main.o main.c
+gcc -O2 -I. -I../../include       -c -o alias.o alias.c
+gcc -O2 -I. -I../../include       -c -o arpadate.o arpadate.c
+gcc -O2 -I. -I../../include       -c -o bf.o bf.c
+gcc -O2 -I. -I../../include       -c -o collect.o collect.c
+gcc -O2 -I. -I../../include       -c -o conf.o conf.c
+gcc -O2 -I. -I../../include       -c -o control.o control.c
+gcc -O2 -I. -I../../include       -c -o convtime.o convtime.c
+gcc -O2 -I. -I../../include       -c -o daemon.o daemon.c
+gcc -O2 -I. -I../../include       -c -o deliver.o deliver.c
+gcc -O2 -I. -I../../include       -c -o domain.o domain.c
+gcc -O2 -I. -I../../include       -c -o envelope.o envelope.c
+gcc -O2 -I. -I../../include       -c -o err.o err.c
+gcc -O2 -I. -I../../include       -c -o headers.o headers.c
+gcc -O2 -I. -I../../include       -c -o macro.o macro.c
+gcc -O2 -I. -I../../include       -c -o map.o map.c
+gcc -O2 -I. -I../../include       -c -o mci.o mci.c
+gcc -O2 -I. -I../../include       -c -o milter.o milter.c
+gcc -O2 -I. -I../../include       -c -o mime.o mime.c
+gcc -O2 -I. -I../../include       -c -o parseaddr.o parseaddr.c
+gcc -O2 -I. -I../../include       -c -o queue.o queue.c
+gcc -O2 -I. -I../../include       -c -o ratectrl.o ratectrl.c
+gcc -O2 -I. -I../../include       -c -o readcf.o readcf.c
+gcc -O2 -I. -I../../include       -c -o recipient.o recipient.c
+gcc -O2 -I. -I../../include       -c -o sasl.o sasl.c
+gcc -O2 -I. -I../../include       -c -o savemail.o savemail.c
+gcc -O2 -I. -I../../include       -c -o sfsasl.o sfsasl.c
+gcc -O2 -I. -I../../include       -c -o shmticklib.o shmticklib.c
+gcc -O2 -I. -I../../include       -c -o sm_resolve.o sm_resolve.c
+gcc -O2 -I. -I../../include       -c -o srvrsmtp.o srvrsmtp.c
+gcc -O2 -I. -I../../include       -c -o stab.o stab.c
+gcc -O2 -I. -I../../include       -c -o stats.o stats.c
+gcc -O2 -I. -I../../include       -c -o sysexits.o sysexits.c
+gcc -O2 -I. -I../../include       -c -o timers.o timers.c
+gcc -O2 -I. -I../../include       -c -o tls.o tls.c
+gcc -O2 -I. -I../../include       -c -o trace.o trace.c
+gcc -O2 -I. -I../../include       -c -o udb.o udb.c
+gcc -O2 -I. -I../../include       -c -o usersmtp.o usersmtp.c
+gcc -O2 -I. -I../../include       -c -o util.o util.c
+gcc -O2 -I. -I../../include       -c -o version.o version.c
+gcc -o sendmail   main.o alias.o arpadate.o bf.o collect.o conf.o control.o convtime.o daemon.o deliver.o domain.o envelope.o err.o headers.o macro.o map.o mci.o milter.o mime.o parseaddr.o queue.o ratectrl.o readcf.o recipient.o sasl.o savemail.o sfsasl.o shmticklib.o sm_resolve.o srvrsmtp.o stab.o stats.o sysexits.o timers.o tls.o trace.o udb.o usersmtp.o util.o version.o      /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsmutil/libsmutil.a /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsm/libsm.a  -ldl  
+groff -Tascii -man sendmail.8 > sendmail.0 || cp sendmail.0.dist sendmail.0
+groff -Tascii -man aliases.5 > aliases.0 || cp aliases.0.dist aliases.0
+groff -Tascii -man mailq.1 > mailq.0 || cp mailq.0.dist mailq.0
+groff -Tascii -man newaliases.1 > newaliases.0 || cp newaliases.0.dist newaliases.0
+make[1]: Leaving directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/sendmail'
+Making all in:
+/tmp/sendmail.QI5c9g/sendmail-8.14.5/editmap
+Configuration: pfx=, os=Linux, rel=2.6.22.18, rbase=2, rroot=2.6.22, arch=armv5tejl, sfx=, variant=optimized
+Using M4=/ffp/bin/m4
+Creating /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/editmap using /tmp/sendmail.QI5c9g/sendmail-8.14.5/devtools/OS/Linux
+Including /tmp/sendmail.QI5c9g/sendmail-8.14.5/devtools/Site/site.config.m4 
+Making dependencies in /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/editmap
+make[1]: Entering directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/editmap'
+rm -f sm_os.h
+ln -f -s ../../include/sm/os/sm_os_linux.h sm_os.h
+gcc -M -I. -I../../sendmail   -I../../include  -DNOT_SENDMAIL   editmap.c    >> Makefile
+make[1]: Leaving directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/editmap'
+Making in /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/editmap
+make[1]: Entering directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/editmap'
+gcc -O2 -I. -I../../sendmail   -I../../include  -DNOT_SENDMAIL      -c -o editmap.o editmap.c
+gcc -o editmap   editmap.o      /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsmdb/libsmdb.a /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsmutil/libsmutil.a /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsm/libsm.a  -ldl  
+groff -Tascii -man editmap.8 > editmap.0 || cp editmap.0.dist editmap.0
+make[1]: Leaving directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/editmap'
+Making all in:
+/tmp/sendmail.QI5c9g/sendmail-8.14.5/mail.local
+Configuration: pfx=, os=Linux, rel=2.6.22.18, rbase=2, rroot=2.6.22, arch=armv5tejl, sfx=, variant=optimized
+Using M4=/ffp/bin/m4
+Creating /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/mail.local using /tmp/sendmail.QI5c9g/sendmail-8.14.5/devtools/OS/Linux
+Including /tmp/sendmail.QI5c9g/sendmail-8.14.5/devtools/Site/site.config.m4 
+Making dependencies in /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/mail.local
+make[1]: Entering directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/mail.local'
+rm -f sm_os.h
+ln -f -s ../../include/sm/os/sm_os_linux.h sm_os.h
+gcc -M -I. -I../../sendmail   -I../../include  -DNOT_SENDMAIL   mail.local.c    >> Makefile
+make[1]: Leaving directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/mail.local'
+Making in /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/mail.local
+make[1]: Entering directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/mail.local'
+gcc -O2 -I. -I../../sendmail   -I../../include  -DNOT_SENDMAIL      -c -o mail.local.o mail.local.c
+gcc -o mail.local   mail.local.o      /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsm/libsm.a  -ldl  
+groff -Tascii -man mail.local.8 > mail.local.0 || cp mail.local.0.dist mail.local.0
+make[1]: Leaving directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/mail.local'
+Making all in:
+/tmp/sendmail.QI5c9g/sendmail-8.14.5/mailstats
+Configuration: pfx=, os=Linux, rel=2.6.22.18, rbase=2, rroot=2.6.22, arch=armv5tejl, sfx=, variant=optimized
+Using M4=/ffp/bin/m4
+Creating /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/mailstats using /tmp/sendmail.QI5c9g/sendmail-8.14.5/devtools/OS/Linux
+Including /tmp/sendmail.QI5c9g/sendmail-8.14.5/devtools/Site/site.config.m4 
+Making dependencies in /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/mailstats
+make[1]: Entering directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/mailstats'
+rm -f sm_os.h
+ln -f -s ../../include/sm/os/sm_os_linux.h sm_os.h
+gcc -M -I. -I../../sendmail   -I../../include  -DNOT_SENDMAIL   mailstats.c    >> Makefile
+make[1]: Leaving directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/mailstats'
+Making in /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/mailstats
+make[1]: Entering directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/mailstats'
+gcc -O2 -I. -I../../sendmail   -I../../include  -DNOT_SENDMAIL      -c -o mailstats.o mailstats.c
+gcc -o mailstats   mailstats.o      /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsmutil/libsmutil.a /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsm/libsm.a  -ldl  
+groff -Tascii -man mailstats.8 > mailstats.0 || cp mailstats.0.dist mailstats.0
+make[1]: Leaving directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/mailstats'
+Making all in:
+/tmp/sendmail.QI5c9g/sendmail-8.14.5/makemap
+Configuration: pfx=, os=Linux, rel=2.6.22.18, rbase=2, rroot=2.6.22, arch=armv5tejl, sfx=, variant=optimized
+Using M4=/ffp/bin/m4
+Creating /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/makemap using /tmp/sendmail.QI5c9g/sendmail-8.14.5/devtools/OS/Linux
+Including /tmp/sendmail.QI5c9g/sendmail-8.14.5/devtools/Site/site.config.m4 
+Making dependencies in /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/makemap
+make[1]: Entering directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/makemap'
+rm -f sm_os.h
+ln -f -s ../../include/sm/os/sm_os_linux.h sm_os.h
+gcc -M -I. -I../../sendmail   -I../../include  -DNOT_SENDMAIL   makemap.c    >> Makefile
+make[1]: Leaving directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/makemap'
+Making in /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/makemap
+make[1]: Entering directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/makemap'
+gcc -O2 -I. -I../../sendmail   -I../../include  -DNOT_SENDMAIL      -c -o makemap.o makemap.c
+gcc -o makemap   makemap.o      /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsmdb/libsmdb.a /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsmutil/libsmutil.a /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsm/libsm.a  -ldl  
+groff -Tascii -man makemap.8 > makemap.0 || cp makemap.0.dist makemap.0
+make[1]: Leaving directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/makemap'
+Making all in:
+/tmp/sendmail.QI5c9g/sendmail-8.14.5/praliases
+Configuration: pfx=, os=Linux, rel=2.6.22.18, rbase=2, rroot=2.6.22, arch=armv5tejl, sfx=, variant=optimized
+Using M4=/ffp/bin/m4
+Creating /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/praliases using /tmp/sendmail.QI5c9g/sendmail-8.14.5/devtools/OS/Linux
+Including /tmp/sendmail.QI5c9g/sendmail-8.14.5/devtools/Site/site.config.m4 
+Making dependencies in /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/praliases
+make[1]: Entering directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/praliases'
+rm -f sm_os.h
+ln -f -s ../../include/sm/os/sm_os_linux.h sm_os.h
+gcc -M -I. -I../../sendmail   -I../../include  -DNOT_SENDMAIL   praliases.c    >> Makefile
+make[1]: Leaving directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/praliases'
+Making in /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/praliases
+make[1]: Entering directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/praliases'
+gcc -O2 -I. -I../../sendmail   -I../../include  -DNOT_SENDMAIL      -c -o praliases.o praliases.c
+gcc -o praliases   praliases.o      /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsmdb/libsmdb.a /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsmutil/libsmutil.a /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsm/libsm.a  -ldl  
+groff -Tascii -man praliases.8 > praliases.0 || cp praliases.0.dist praliases.0
+make[1]: Leaving directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/praliases'
+Making all in:
+/tmp/sendmail.QI5c9g/sendmail-8.14.5/rmail
+Configuration: pfx=, os=Linux, rel=2.6.22.18, rbase=2, rroot=2.6.22, arch=armv5tejl, sfx=, variant=optimized
+Using M4=/ffp/bin/m4
+Creating /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/rmail using /tmp/sendmail.QI5c9g/sendmail-8.14.5/devtools/OS/Linux
+Including /tmp/sendmail.QI5c9g/sendmail-8.14.5/devtools/Site/site.config.m4 
+Making dependencies in /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/rmail
+make[1]: Entering directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/rmail'
+rm -f sm_os.h
+ln -f -s ../../include/sm/os/sm_os_linux.h sm_os.h
+gcc -M -I. -I../../sendmail   -I../../include    rmail.c    >> Makefile
+make[1]: Leaving directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/rmail'
+Making in /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/rmail
+make[1]: Entering directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/rmail'
+gcc -O2 -I. -I../../sendmail   -I../../include       -c -o rmail.o rmail.c
+gcc -o rmail   rmail.o      /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsm/libsm.a  -ldl  
+groff -Tascii -man rmail.8 > rmail.0 || cp rmail.0.dist rmail.0
+make[1]: Leaving directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/rmail'
+Making all in:
+/tmp/sendmail.QI5c9g/sendmail-8.14.5/smrsh
+Configuration: pfx=, os=Linux, rel=2.6.22.18, rbase=2, rroot=2.6.22, arch=armv5tejl, sfx=, variant=optimized
+Using M4=/ffp/bin/m4
+Creating /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/smrsh using /tmp/sendmail.QI5c9g/sendmail-8.14.5/devtools/OS/Linux
+Including /tmp/sendmail.QI5c9g/sendmail-8.14.5/devtools/Site/site.config.m4 
+Making dependencies in /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/smrsh
+make[1]: Entering directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/smrsh'
+rm -f sm_os.h
+ln -f -s ../../include/sm/os/sm_os_linux.h sm_os.h
+gcc -M -I. -I../../sendmail   -I../../include  -DNOT_SENDMAIL   smrsh.c    >> Makefile
+make[1]: Leaving directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/smrsh'
+Making in /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/smrsh
+make[1]: Entering directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/smrsh'
+gcc -O2 -I. -I../../sendmail   -I../../include  -DNOT_SENDMAIL      -c -o smrsh.o smrsh.c
+gcc -o smrsh   smrsh.o      /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsm/libsm.a  -ldl  
+groff -Tascii -man smrsh.8 > smrsh.0 || cp smrsh.0.dist smrsh.0
+make[1]: Leaving directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/smrsh'
+Making all in:
+/tmp/sendmail.QI5c9g/sendmail-8.14.5/vacation
+Configuration: pfx=, os=Linux, rel=2.6.22.18, rbase=2, rroot=2.6.22, arch=armv5tejl, sfx=, variant=optimized
+Using M4=/ffp/bin/m4
+Creating /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/vacation using /tmp/sendmail.QI5c9g/sendmail-8.14.5/devtools/OS/Linux
+Including /tmp/sendmail.QI5c9g/sendmail-8.14.5/devtools/Site/site.config.m4 
+Making dependencies in /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/vacation
+make[1]: Entering directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/vacation'
+rm -f sm_os.h
+ln -f -s ../../include/sm/os/sm_os_linux.h sm_os.h
+gcc -M -I. -I../../sendmail   -I../../include  -DNOT_SENDMAIL   vacation.c    >> Makefile
+make[1]: Leaving directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/vacation'
+Making in /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/vacation
+make[1]: Entering directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/vacation'
+gcc -O2 -I. -I../../sendmail   -I../../include  -DNOT_SENDMAIL      -c -o vacation.o vacation.c
+gcc -o vacation   vacation.o      /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsmdb/libsmdb.a /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsmutil/libsmutil.a /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsm/libsm.a  -ldl  
+groff -Tascii -man vacation.1 > vacation.0 || cp vacation.0.dist vacation.0
+make[1]: Leaving directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/vacation'
++ ./Build DESTDIR=/tmp/sendmail.QI5c9g/pkg install
+Making all in:
+/tmp/sendmail.QI5c9g/sendmail-8.14.5/libsm
+Configuration: pfx=, os=Linux, rel=2.6.22.18, rbase=2, rroot=2.6.22, arch=armv5tejl, sfx=, variant=optimized
+Making in /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsm
+make[1]: Entering directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsm'
+make[1]: Nothing to be done for `install'.
+make[1]: Leaving directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsm'
+Making all in:
+/tmp/sendmail.QI5c9g/sendmail-8.14.5/libsmutil
+Configuration: pfx=, os=Linux, rel=2.6.22.18, rbase=2, rroot=2.6.22, arch=armv5tejl, sfx=, variant=optimized
+Making in /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsmutil
+make[1]: Entering directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsmutil'
+make[1]: Nothing to be done for `install'.
+make[1]: Leaving directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsmutil'
+Making all in:
+/tmp/sendmail.QI5c9g/sendmail-8.14.5/libsmdb
+Configuration: pfx=, os=Linux, rel=2.6.22.18, rbase=2, rroot=2.6.22, arch=armv5tejl, sfx=, variant=optimized
+Making in /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsmdb
+make[1]: Entering directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsmdb'
+make[1]: Nothing to be done for `install'.
+make[1]: Leaving directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/libsmdb'
+Making all in:
+/tmp/sendmail.QI5c9g/sendmail-8.14.5/sendmail
+Configuration: pfx=, os=Linux, rel=2.6.22.18, rbase=2, rroot=2.6.22, arch=armv5tejl, sfx=, variant=optimized
+Making in /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/sendmail
+make[1]: Entering directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/sendmail'
+if [ ! -d /tmp/sendmail.QI5c9g/pkg/ffp/etc/mail ]; then mkdir -p /tmp/sendmail.QI5c9g/pkg/ffp/etc/mail; else :; fi
+install -c -o root -g root -m 444 helpfile /tmp/sendmail.QI5c9g/pkg/ffp/etc/mail/helpfile
+if [ ! -d /tmp/sendmail.QI5c9g/pkg/ffp/etc/mail ]; then mkdir -p /tmp/sendmail.QI5c9g/pkg/ffp/etc/mail; else :; fi
+install -c -o root -g root -m 0600 statistics /tmp/sendmail.QI5c9g/pkg/ffp/etc/mail/statistics
+Please read INSTALL if anything fails while installing the binary.
+/tmp/sendmail.QI5c9g/pkg/etc/mail/submit.cf will be installed now.
+cd ../../cf/cf && make install-submit-cf
+make[2]: Entering directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/cf/cf'
+../../devtools/bin/install.sh -c -o root -g bin -m 0444 submit.cf /tmp/sendmail.QI5c9g/pkg/etc/mail/submit.cf
+cp: cannot create regular file `/tmp/sendmail.QI5c9g/pkg/etc/mail/submit.cf': No such file or directory
+make[2]: *** [install-submit-cf] Error 1
+make[2]: Leaving directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/cf/cf'
+make[1]: *** [/tmp/sendmail.QI5c9g/pkg/etc/mail/submit.cf] Error 2
+make[1]: Leaving directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/sendmail'
+Making all in:
+/tmp/sendmail.QI5c9g/sendmail-8.14.5/editmap
+Configuration: pfx=, os=Linux, rel=2.6.22.18, rbase=2, rroot=2.6.22, arch=armv5tejl, sfx=, variant=optimized
+Making in /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/editmap
+make[1]: Entering directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/editmap'
+install -c -o root -g root -m 755 editmap /tmp/sendmail.QI5c9g/pkg/ffp/sbin
+install -c -o root -g root -m 644 editmap.0 /tmp/sendmail.QI5c9g/pkg/ffp/man/man8/editmap.8
+make[1]: Leaving directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/editmap'
+Making all in:
+/tmp/sendmail.QI5c9g/sendmail-8.14.5/mail.local
+Configuration: pfx=, os=Linux, rel=2.6.22.18, rbase=2, rroot=2.6.22, arch=armv5tejl, sfx=, variant=optimized
+Making in /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/mail.local
+make[1]: Entering directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/mail.local'
+NOTE: This version of mail.local is not suited for some operating
+      systems such as HP-UX and Solaris.  Please consult the
+      README file in the mail.local directory.  You can force
+      the install using 'Build force-install'.
+make[1]: Leaving directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/mail.local'
+Making all in:
+/tmp/sendmail.QI5c9g/sendmail-8.14.5/mailstats
+Configuration: pfx=, os=Linux, rel=2.6.22.18, rbase=2, rroot=2.6.22, arch=armv5tejl, sfx=, variant=optimized
+Making in /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/mailstats
+make[1]: Entering directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/mailstats'
+install -c -o root -g root -m 755 mailstats /tmp/sendmail.QI5c9g/pkg/ffp/sbin
+install -c -o root -g root -m 644 mailstats.0 /tmp/sendmail.QI5c9g/pkg/ffp/man/man8/mailstats.8
+make[1]: Leaving directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/mailstats'
+Making all in:
+/tmp/sendmail.QI5c9g/sendmail-8.14.5/makemap
+Configuration: pfx=, os=Linux, rel=2.6.22.18, rbase=2, rroot=2.6.22, arch=armv5tejl, sfx=, variant=optimized
+Making in /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/makemap
+make[1]: Entering directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/makemap'
+install -c -o root -g root -m 755 makemap /tmp/sendmail.QI5c9g/pkg/ffp/sbin
+install -c -o root -g root -m 644 makemap.0 /tmp/sendmail.QI5c9g/pkg/ffp/man/man8/makemap.8
+make[1]: Leaving directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/makemap'
+Making all in:
+/tmp/sendmail.QI5c9g/sendmail-8.14.5/praliases
+Configuration: pfx=, os=Linux, rel=2.6.22.18, rbase=2, rroot=2.6.22, arch=armv5tejl, sfx=, variant=optimized
+Making in /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/praliases
+make[1]: Entering directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/praliases'
+install -c -o root -g root -m 755 praliases /tmp/sendmail.QI5c9g/pkg/ffp/sbin
+install -c -o root -g root -m 644 praliases.0 /tmp/sendmail.QI5c9g/pkg/ffp/man/man8/praliases.8
+make[1]: Leaving directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/praliases'
+Making all in:
+/tmp/sendmail.QI5c9g/sendmail-8.14.5/rmail
+Configuration: pfx=, os=Linux, rel=2.6.22.18, rbase=2, rroot=2.6.22, arch=armv5tejl, sfx=, variant=optimized
+Making in /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/rmail
+make[1]: Entering directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/rmail'
+NOTE: This version of rmail is not suited for some operating
+      systems.  You can force the install using
+      'Build force-install'.
+make[1]: Leaving directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/rmail'
+Making all in:
+/tmp/sendmail.QI5c9g/sendmail-8.14.5/smrsh
+Configuration: pfx=, os=Linux, rel=2.6.22.18, rbase=2, rroot=2.6.22, arch=armv5tejl, sfx=, variant=optimized
+Making in /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/smrsh
+make[1]: Entering directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/smrsh'
+install -c -o root -g root -m 755 smrsh /tmp/sendmail.QI5c9g/pkg/ffp/libexec
+install -c -o root -g root -m 644 smrsh.0 /tmp/sendmail.QI5c9g/pkg/ffp/man/man8/smrsh.8
+make[1]: Leaving directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/smrsh'
+Making all in:
+/tmp/sendmail.QI5c9g/sendmail-8.14.5/vacation
+Configuration: pfx=, os=Linux, rel=2.6.22.18, rbase=2, rroot=2.6.22, arch=armv5tejl, sfx=, variant=optimized
+Making in /tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/vacation
+make[1]: Entering directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/vacation'
+install -c -o root -g root -m 755 vacation /tmp/sendmail.QI5c9g/pkg/ffp/bin
+install -c -o root -g root -m 644 vacation.0 /tmp/sendmail.QI5c9g/pkg/ffp/man/man1/vacation.1
+make[1]: Leaving directory `/tmp/sendmail.QI5c9g/sendmail-8.14.5/obj.Linux.2.6.22.18.armv5tejl/vacation'
++ mkdir -p /tmp/sendmail.QI5c9g/pkg/install
++ cp /ffp/home/root/src/sendmail/DESCR /ffp/home/root/src/sendmail/HOMEPAGE /tmp/sendmail.QI5c9g/pkg/install/
++ cd /tmp/sendmail.QI5c9g/pkg
++ makepkg sendmail 8.14.5 1
+Creating /tmp/sendmail-8.14.5-arm-1.tar ...
