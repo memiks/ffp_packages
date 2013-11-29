@@ -1,0 +1,6 @@
+The modutils package contains utilities that are intended to make a 
+Linux modular kernel manageable for all users, administrators, and 
+distribution maintainers.
+
+Homepage: http://freecode.com/projects/modutils
+
