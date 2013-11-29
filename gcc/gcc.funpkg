@@ -1,0 +1,97 @@
+#!/ffp/bin/sh -xe
+
+PN=$(basename $0 .funpkg)
+#A=$(ls $PN-*.tar*)
+#PV=$(echo $A | egrep -o '[0-9][-0-9.]*[0-9]' | tr - _)
+PR=1
+
+. ./config.ffp
+
+GCC_EXTRA_CONFIG="--with-float=soft"
+
+X=$(pwd)
+W=$(mktemp -t -d $PN.XXXXXX)
+D=$W/pkg
+
+cd $W
+GCCTAR=`ls $X/$PN-*.tar*`
+if test -f $GCCTAR
+then
+	cp $X/$PN-*.tar* .
+else
+	cat $X/SRC_URI | xargs wget 
+fi
+A=$(ls $PN-*.tar*)
+PV=$(echo $A | egrep -o '[0-9][-0-9.]*[0-9]' | tr - _)
+tar xf $A
+cd $PN-*
+
+for p in $X/patches/*.patch; do
+	patch -p1 -i $p
+done
+
+# system headers in /ffp/include/
+# startfiles in /ffp/lib/
+sed -i '/^NATIVE_SYSTEM_HEADER_DIR/ s,/usr/,/ffp/,'      gcc/Makefile.in
+echo  '#undef STANDARD_INCLUDE_DIR'                    >>gcc/config/linux.h
+echo '#define STANDARD_INCLUDE_DIR "/ffp/include/"'    >>gcc/config/linux.h
+echo  '#undef STANDARD_STARTFILE_PREFIX_1'             >>gcc/config/linux.h
+echo '#define STANDARD_STARTFILE_PREFIX_1 "/ffp/lib/"' >>gcc/config/linux.h
+echo  '#undef STANDARD_STARTFILE_PREFIX_2'             >>gcc/config/linux.h
+echo '#define STANDARD_STARTFILE_PREFIX_2 ""'          >>gcc/config/linux.h
+
+# dynamic linker in /ffp/lib/
+sed -i '/UCLIBC_DYNAMIC_LINKER/ s,/lib/,/ffp&,' gcc/config/linux.h
+
+mkdir ../build
+cd ../build
+
+CFLAGS="$FFP_CFLAGS" LDFLAGS="$FFP_LDFLAGS" \
+../$PN-*/configure \
+	--prefix=/ffp \
+	--with-local-prefix=/ffp \
+	--build=$GNU_BUILD \
+	--host=$GNU_HOST \
+	--disable-nls \
+	--enable-shared \
+	--enable-languages=c,c++ \
+	--enable-__cxa_atexit \
+	--enable-c99 \
+	--enable-long-long \
+	--enable-threads=posix \
+	--disable-multilib \
+	--with-system-zlib \
+	--enable-checking=release \
+	$GCC_EXTRA_CONFIG
+
+#	--disable-libstdcxx-pch
+
+make \
+	STAGE1_CFLAGS="-O" \
+	BOOT_CFLAGS="-O" \
+	BOOT_LDFLAGS="-Wl,-rpath,/ffp/lib" \
+	LDFLAGS_FOR_TARGET="-Wl,-rpath,/ffp/lib"
+
+make DESTDIR=$D install
+ln -s gcc $D/ffp/bin/cc
+
+mkdir -p $D/install
+cp $X/{DESCR,HOMEPAGE} $D/install/
+
+cd $D
+makepkg $PN $PV $PR
+
+
+# -solibs package
+D2=$D-solibs
+mkdir -p $D2/ffp/lib
+cp -av $D/ffp/lib/*.so* $D2/ffp/lib/
+rm -vf $D/ffp/lib/*.py
+
+mkdir -p $D2/install
+cp $X/DESCR-solibs $D2/install/DESCR
+cp $X/HOMEPAGE $D2/install/
+
+cd $D2
+makepkg $PN-solibs $PV $PR
+
