@@ -1,0 +1,38 @@
+#!/ffp/bin/sh -xe
+
+PN=$(basename $0 .funpkg)
+PV=2.0.33
+PR=1
+
+. ./config.ffp
+
+X=$(pwd)
+W=$(mktemp -t -d $PN.XXXXXX)
+D=$W/pkg
+
+cd $W
+cat $X/SRC_URI | xargs wget --no-check-certificate 
+tar xf *.tar*
+cd *-$PN-*/src
+
+LDFLAGS="$FFP_LDFLAGS" \
+./bootstrap.sh --prefix=/ffp --docdir=/share/doc/ --mandir=/share/man --system-libs
+
+LDFLAGS="$FFP_LDFLAGS" autoreconf -fvi
+
+LDFLAGS="$FFP_LDFLAGS" \
+./configure \
+        --prefix=/ffp \
+        --mandir=$mandir \
+        --infodir=$infodir
+
+make
+make DESTDIR=$D install
+
+mkdir -p $D/install
+cp $X/{DESCR,HOMEPAGE} $D/install/
+
+cd $D
+makepkg $PN $PV $PR
+
+
