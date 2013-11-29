@@ -1,0 +1,1276 @@
+++ basename ./gnufdisk.funpkg .funpkg
++ PN=gnufdisk
++ PR=1
++ . ./config.ffp
+++ GNU_HOST=
+++ GNU_TARGET=
+++ FFP_CFLAGS='-I/ffp/include -O2'
+++ FFP_LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib'
+++ '[' '!' -d '' ']'
+++ TMPDIR=/tmp
+++ export TMPDIR
+++ mandir=/ffp/share/man
+++ infodir=/ffp/share/info
+++ docdir=/ffp/share/doc
+++ pwd
++ X=/ffp/home/root/fun_plug/ffp_packages/gnufdisk
+++ mktemp -t -d gnufdisk.XXXXXX
++ W=/tmp/gnufdisk.Jb9z0x
++ D=/tmp/gnufdisk.Jb9z0x/pkg
++ cd /tmp/gnufdisk.Jb9z0x
++ cat /ffp/home/root/fun_plug/ffp_packages/gnufdisk/SRC_URI
++ xargs wget
+--2013-04-19 09:26:40--  http://ftp.gnu.org/gnu/fdisk/gnufdisk-2.0.0a.tar.gz
+Resolving ftp.gnu.org... 2001:4830:134:3::b, 208.118.235.20
+Connecting to ftp.gnu.org|2001:4830:134:3::b|:80... failed: Address family not supported by protocol.
+Connecting to ftp.gnu.org|208.118.235.20|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2833346 (2.7M) [application/x-gzip]
+Saving to: `gnufdisk-2.0.0a.tar.gz'
+
+     0K .......... .......... .......... .......... ..........  1%  143K 19s
+    50K .......... .......... .......... .......... ..........  3%  244K 15s
+   100K .......... .......... .......... .......... ..........  5% 1.24M 10s
+   150K .......... .......... .......... .......... ..........  7%  462K 9s
+   200K .......... .......... .......... .......... ..........  9%  356K 8s
+   250K .......... .......... .......... .......... .......... 10%  718K 7s
+   300K .......... .......... .......... .......... .......... 12%  406K 7s
+   350K .......... .......... .......... .......... .......... 14%  315K 7s
+   400K .......... .......... .......... .......... .......... 16%  415K 7s
+   450K .......... .......... .......... .......... .......... 18%  295K 7s
+   500K .......... .......... .......... .......... .......... 19% 1.01M 6s
+   550K .......... .......... .......... .......... .......... 21%  480K 6s
+   600K .......... .......... .......... .......... .......... 23%  436K 6s
+   650K .......... .......... .......... .......... .......... 25%  377K 6s
+   700K .......... .......... .......... .......... .......... 27%  732K 5s
+   750K .......... .......... .......... .......... .......... 28%  333K 5s
+   800K .......... .......... .......... .......... .......... 30%  592K 5s
+   850K .......... .......... .......... .......... .......... 32%  422K 5s
+   900K .......... .......... .......... .......... .......... 34%  371K 5s
+   950K .......... .......... .......... .......... .......... 36%  254K 5s
+  1000K .......... .......... .......... .......... .......... 37%  394K 5s
+  1050K .......... .......... .......... .......... .......... 39%  264K 4s
+  1100K .......... .......... .......... .......... .......... 41%  287K 4s
+  1150K .......... .......... .......... .......... .......... 43%  257K 4s
+  1200K .......... .......... .......... .......... .......... 45%  288K 4s
+  1250K .......... .......... .......... .......... .......... 46%  327K 4s
+  1300K .......... .......... .......... .......... .......... 48%  346K 4s
+  1350K .......... .......... .......... .......... .......... 50%  272K 4s
+  1400K .......... .......... .......... .......... .......... 52%  273K 4s
+  1450K .......... .......... .......... .......... .......... 54%  391K 4s
+  1500K .......... .......... .......... .......... .......... 56%  395K 3s
+  1550K .......... .......... .......... .......... .......... 57%  237K 3s
+  1600K .......... .......... .......... .......... .......... 59%  379K 3s
+  1650K .......... .......... .......... .......... .......... 61%  269K 3s
+  1700K .......... .......... .......... .......... .......... 63%  398K 3s
+  1750K .......... .......... .......... .......... .......... 65%  280K 3s
+  1800K .......... .......... .......... .......... .......... 66%  350K 3s
+  1850K .......... .......... .......... .......... .......... 68%  344K 3s
+  1900K .......... .......... .......... .......... .......... 70%  393K 2s
+  1950K .......... .......... .......... .......... .......... 72%  308K 2s
+  2000K .......... .......... .......... .......... .......... 74%  318K 2s
+  2050K .......... .......... .......... .......... .......... 75%  280K 2s
+  2100K .......... .......... .......... .......... .......... 77%  399K 2s
+  2150K .......... .......... .......... .......... .......... 79%  235K 2s
+  2200K .......... .......... .......... .......... .......... 81%  392K 2s
+  2250K .......... .......... .......... .......... .......... 83%  241K 1s
+  2300K .......... .......... .......... .......... .......... 84%  401K 1s
+  2350K .......... .......... .......... .......... .......... 86%  408K 1s
+  2400K .......... .......... .......... .......... .......... 88%  299K 1s
+  2450K .......... .......... .......... .......... .......... 90%  587K 1s
+  2500K .......... .......... .......... .......... .......... 92%  271K 1s
+  2550K .......... .......... .......... .......... .......... 93%  288K 0s
+  2600K .......... .......... .......... .......... .......... 95%  392K 0s
+  2650K .......... .......... .......... .......... .......... 97%  314K 0s
+  2700K .......... .......... .......... .......... .......... 99%  281K 0s
+  2750K .......... ......                                     100%  440K=8.2s
+
+2013-04-19 09:26:49 (338 KB/s) - `gnufdisk-2.0.0a.tar.gz' saved [2833346/2833346]
+
+++ ls gnufdisk-2.0.0a.tar.gz
+++ egrep -o '[0-9][0-9.]*[0-9][a-z]'
++ PV=2.0.0a
++ tar xf gnufdisk-2.0.0a.tar.gz
++ cd gnufdisk-2.0.0a gnufdisk-2.0.0a.tar.gz
+++ ls /ffp/home/root/fun_plug/ffp_packages/gnufdisk/patches/001_userinterface_configure.patch
++ for file in '`ls $X/patches/*.patch`'
++ patch -p0 -i /ffp/home/root/fun_plug/ffp_packages/gnufdisk/patches/001_userinterface_configure.patch
+patching file userinterface/configure
++ CFLAGS='-I/ffp/include -O2 -D_GNU_SOURCE -pthread'
++ CXXFLAGS='-I/ffp/include -O2 -D_GNU_SOURCE -pthread'
++ LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread '
++ ./configure --prefix=/ffp --build= --host= --mandir=/ffp/share/man --infodir=/ffp/share/info
+checking for a BSD-compatible install... /ffp/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /ffp/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking build system type... armv5tejl-unknown-linux-gnueabi
+checking host system type... armv5tejl-unknown-linux-gnueabi
+checking for style of include used by make... GNU
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking dependency style of gcc... gcc3
+checking for a sed that does not truncate output... /ffp/bin/sed
+checking for grep that handles long lines and -e... /ffp/bin/grep
+checking for egrep... /ffp/bin/grep -E
+checking for fgrep... /ffp/bin/grep -F
+checking for ld used by gcc... /ffp/bin/ld
+checking if the linker (/ffp/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /ffp/bin/nm -B
+checking the name lister (/ffp/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking for /ffp/bin/ld option to reload object files... -r
+checking how to recognize dependent libraries... pass_all
+checking for ar... ar
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /ffp/bin/nm -B output from gcc object... ok
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/ffp/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for gcc... (cached) gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to accept ISO C89... (cached) none needed
+checking dependency style of gcc... (cached) gcc3
+checking whether gcc and cc understand -c and -o together... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating doc/Makefile
+config.status: creating src/Makefile
+config.status: creating src/config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+=== configuring in common (/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common)
+configure: running /ffp/bin/sh ./configure --disable-option-checking '--prefix=/ffp'  '--build=' '--host=' '--mandir=/ffp/share/man' '--infodir=/ffp/share/info' 'build_alias=' 'host_alias=' 'CFLAGS=-I/ffp/include -O2 -D_GNU_SOURCE -pthread' 'LDFLAGS=-L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread ' --cache-file=/dev/null --srcdir=.
+checking for a BSD-compatible install... /ffp/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /ffp/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking build system type... armv5tejl-unknown-linux-gnueabi
+checking host system type... armv5tejl-unknown-linux-gnueabi
+checking for style of include used by make... GNU
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking dependency style of gcc... gcc3
+checking for a sed that does not truncate output... /ffp/bin/sed
+checking for grep that handles long lines and -e... /ffp/bin/grep
+checking for egrep... /ffp/bin/grep -E
+checking for fgrep... /ffp/bin/grep -F
+checking for ld used by gcc... /ffp/bin/ld
+checking if the linker (/ffp/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /ffp/bin/nm -B
+checking the name lister (/ffp/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking for /ffp/bin/ld option to reload object files... -r
+checking how to recognize dependent libraries... pass_all
+checking for ar... ar
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /ffp/bin/nm -B output from gcc object... ok
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/ffp/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for gcc... (cached) gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to accept ISO C89... (cached) none needed
+checking dependency style of gcc... (cached) gcc3
+checking whether gcc and cc understand -c and -o together... yes
+checking setjmp.h usability... yes
+checking setjmp.h presence... yes
+checking for setjmp.h... yes
+checking for stdlib.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible malloc... yes
+checking for vsnprintf,... no
+checking for memset... yes
+checking for size_t... yes
+checking wether jmp_buf works... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating src/config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+=== configuring in debug (/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/debug)
+configure: running /ffp/bin/sh ./configure --disable-option-checking '--prefix=/ffp'  '--build=' '--host=' '--mandir=/ffp/share/man' '--infodir=/ffp/share/info' 'build_alias=' 'host_alias=' 'CFLAGS=-I/ffp/include -O2 -D_GNU_SOURCE -pthread' 'LDFLAGS=-L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread ' --cache-file=/dev/null --srcdir=.
+checking for a BSD-compatible install... /ffp/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /ffp/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking build system type... armv5tejl-unknown-linux-gnueabi
+checking host system type... armv5tejl-unknown-linux-gnueabi
+checking for style of include used by make... GNU
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking dependency style of gcc... gcc3
+checking for a sed that does not truncate output... /ffp/bin/sed
+checking for grep that handles long lines and -e... /ffp/bin/grep
+checking for egrep... /ffp/bin/grep -E
+checking for fgrep... /ffp/bin/grep -F
+checking for ld used by gcc... /ffp/bin/ld
+checking if the linker (/ffp/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /ffp/bin/nm -B
+checking the name lister (/ffp/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking for /ffp/bin/ld option to reload object files... -r
+checking how to recognize dependent libraries... pass_all
+checking for ar... ar
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /ffp/bin/nm -B output from gcc object... ok
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/ffp/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for gcc... (cached) gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to accept ISO C89... (cached) none needed
+checking dependency style of gcc... (cached) gcc3
+checking whether gcc and cc understand -c and -o together... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating src/config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+=== configuring in exception (/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/exception)
+configure: running /ffp/bin/sh ./configure --disable-option-checking '--prefix=/ffp'  '--build=' '--host=' '--mandir=/ffp/share/man' '--infodir=/ffp/share/info' 'build_alias=' 'host_alias=' 'CFLAGS=-I/ffp/include -O2 -D_GNU_SOURCE -pthread' 'LDFLAGS=-L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread ' --cache-file=/dev/null --srcdir=.
+checking for a BSD-compatible install... /ffp/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /ffp/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking build system type... armv5tejl-unknown-linux-gnueabi
+checking host system type... armv5tejl-unknown-linux-gnueabi
+checking for style of include used by make... GNU
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking dependency style of gcc... gcc3
+checking for a sed that does not truncate output... /ffp/bin/sed
+checking for grep that handles long lines and -e... /ffp/bin/grep
+checking for egrep... /ffp/bin/grep -E
+checking for fgrep... /ffp/bin/grep -F
+checking for ld used by gcc... /ffp/bin/ld
+checking if the linker (/ffp/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /ffp/bin/nm -B
+checking the name lister (/ffp/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking for /ffp/bin/ld option to reload object files... -r
+checking how to recognize dependent libraries... pass_all
+checking for ar... ar
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /ffp/bin/nm -B output from gcc object... ok
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/ffp/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for gcc... (cached) gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to accept ISO C89... (cached) none needed
+checking dependency style of gcc... (cached) gcc3
+checking whether gcc and cc understand -c and -o together... yes
+checking setjmp.h usability... yes
+checking setjmp.h presence... yes
+checking for setjmp.h... yes
+checking for stdlib.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible malloc... yes
+checking for vsnprintf... yes
+checking wether jmp_buf works... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating src/config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+=== configuring in device (/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/device)
+configure: running /ffp/bin/sh ./configure --disable-option-checking '--prefix=/ffp'  '--build=' '--host=' '--mandir=/ffp/share/man' '--infodir=/ffp/share/info' 'build_alias=' 'host_alias=' 'CFLAGS=-I/ffp/include -O2 -D_GNU_SOURCE -pthread' 'LDFLAGS=-L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread ' --cache-file=/dev/null --srcdir=.
+checking for a BSD-compatible install... /ffp/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /ffp/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking build system type... armv5tejl-unknown-linux-gnueabi
+checking host system type... armv5tejl-unknown-linux-gnueabi
+checking for style of include used by make... GNU
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking dependency style of gcc... gcc3
+checking for a sed that does not truncate output... /ffp/bin/sed
+checking for grep that handles long lines and -e... /ffp/bin/grep
+checking for egrep... /ffp/bin/grep -E
+checking for fgrep... /ffp/bin/grep -F
+checking for ld used by gcc... /ffp/bin/ld
+checking if the linker (/ffp/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /ffp/bin/nm -B
+checking the name lister (/ffp/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking for /ffp/bin/ld option to reload object files... -r
+checking how to recognize dependent libraries... pass_all
+checking for ar... ar
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /ffp/bin/nm -B output from gcc object... ok
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/ffp/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for gcc... (cached) gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to accept ISO C89... (cached) none needed
+checking dependency style of gcc... (cached) gcc3
+checking whether gcc and cc understand -c and -o together... yes
+checking for stdint.h... (cached) yes
+checking for size_t... yes
+checking for an ANSI C-conforming const... yes
+checking for long long int... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating include/gnufdisk-device.h
+config.status: creating src/config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+=== configuring in devicemanager (/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/devicemanager)
+configure: running /ffp/bin/sh ./configure --disable-option-checking '--prefix=/ffp'  '--build=' '--host=' '--mandir=/ffp/share/man' '--infodir=/ffp/share/info' 'build_alias=' 'host_alias=' 'CFLAGS=-I/ffp/include -O2 -D_GNU_SOURCE -pthread' 'LDFLAGS=-L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread ' --cache-file=/dev/null --srcdir=.
+checking for a BSD-compatible install... /ffp/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /ffp/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking build system type... armv5tejl-unknown-linux-gnueabi
+checking host system type... armv5tejl-unknown-linux-gnueabi
+checking for style of include used by make... GNU
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking dependency style of gcc... gcc3
+checking for a sed that does not truncate output... /ffp/bin/sed
+checking for grep that handles long lines and -e... /ffp/bin/grep
+checking for egrep... /ffp/bin/grep -E
+checking for fgrep... /ffp/bin/grep -F
+checking for ld used by gcc... /ffp/bin/ld
+checking if the linker (/ffp/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /ffp/bin/nm -B
+checking the name lister (/ffp/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking for /ffp/bin/ld option to reload object files... -r
+checking how to recognize dependent libraries... pass_all
+checking for ar... ar
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /ffp/bin/nm -B output from gcc object... ok
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/ffp/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for gcc... (cached) gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to accept ISO C89... (cached) none needed
+checking dependency style of gcc... (cached) gcc3
+checking whether gcc and cc understand -c and -o together... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating src/config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+=== configuring in userinterface (/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/userinterface)
+configure: running /ffp/bin/sh ./configure --disable-option-checking '--prefix=/ffp'  '--build=' '--host=' '--mandir=/ffp/share/man' '--infodir=/ffp/share/info' 'build_alias=' 'host_alias=' 'CFLAGS=-I/ffp/include -O2 -D_GNU_SOURCE -pthread' 'LDFLAGS=-L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread ' --cache-file=/dev/null --srcdir=.
+checking for a BSD-compatible install... /ffp/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /ffp/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking build system type... armv5tejl-unknown-linux-gnueabi
+checking host system type... armv5tejl-unknown-linux-gnueabi
+checking for style of include used by make... GNU
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking dependency style of gcc... gcc3
+checking for a sed that does not truncate output... /ffp/bin/sed
+checking for grep that handles long lines and -e... /ffp/bin/grep
+checking for egrep... /ffp/bin/grep -E
+checking for fgrep... /ffp/bin/grep -F
+checking for ld used by gcc... /ffp/bin/ld
+checking if the linker (/ffp/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /ffp/bin/nm -B
+checking the name lister (/ffp/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking for /ffp/bin/ld option to reload object files... -r
+checking how to recognize dependent libraries... pass_all
+checking for ar... ar
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /ffp/bin/nm -B output from gcc object... ok
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/ffp/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for gcc... (cached) gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to accept ISO C89... (cached) none needed
+checking dependency style of gcc... (cached) gcc3
+checking whether gcc and cc understand -c and -o together... yes
+checking for guile... /ffp/bin/guile
+checking for guile-config... /ffp/bin/guile-config
+checking for guile-tools... /ffp/bin/guile-tools
+checking libguile compile flags... -I/ffp/include/guile/2.0 -I/ffp/include  
+checking libguile link flags... -L/ffp/lib -lguile-2.0 -lgc  
+checking for scm_with_guile in -lguile... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating src/config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
++ CFLAGS='-I/ffp/include -O2 -D_GNU_SOURCE -pthread'
++ CXXFLAGS='-I/ffp/include -O2 -D_GNU_SOURCE -pthread'
++ LDFLAGS='-L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread '
++ make
+Making all in doc
+make[1]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/doc'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/doc'
+Making all in common
+make[1]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common'
+Making all in src
+make[2]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common/src'
+make  all-am
+make[3]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common/src'
+/ffp/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I../include    -I/ffp/include -O2 -D_GNU_SOURCE -pthread -MT libgnufdisk_common_la-common.lo -MD -MP -MF .deps/libgnufdisk_common_la-common.Tpo -c -o libgnufdisk_common_la-common.lo `test -f 'common.c' || echo './'`common.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../include -I/ffp/include -O2 -D_GNU_SOURCE -pthread -MT libgnufdisk_common_la-common.lo -MD -MP -MF .deps/libgnufdisk_common_la-common.Tpo -c common.c  -fPIC -DPIC -o .libs/libgnufdisk_common_la-common.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../include -I/ffp/include -O2 -D_GNU_SOURCE -pthread -MT libgnufdisk_common_la-common.lo -MD -MP -MF .deps/libgnufdisk_common_la-common.Tpo -c common.c -o libgnufdisk_common_la-common.o >/dev/null 2>&1
+mv -f .deps/libgnufdisk_common_la-common.Tpo .deps/libgnufdisk_common_la-common.Plo
+/ffp/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I../include    -I/ffp/include -O2 -D_GNU_SOURCE -pthread -MT libgnufdisk_common_la-pointer.lo -MD -MP -MF .deps/libgnufdisk_common_la-pointer.Tpo -c -o libgnufdisk_common_la-pointer.lo `test -f 'pointer.c' || echo './'`pointer.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../include -I/ffp/include -O2 -D_GNU_SOURCE -pthread -MT libgnufdisk_common_la-pointer.lo -MD -MP -MF .deps/libgnufdisk_common_la-pointer.Tpo -c pointer.c  -fPIC -DPIC -o .libs/libgnufdisk_common_la-pointer.o
+pointer.c:20:0: warning: "_GNU_SOURCE" redefined
+<command-line>:0:0: note: this is the location of the previous definition
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../include -I/ffp/include -O2 -D_GNU_SOURCE -pthread -MT libgnufdisk_common_la-pointer.lo -MD -MP -MF .deps/libgnufdisk_common_la-pointer.Tpo -c pointer.c -o libgnufdisk_common_la-pointer.o >/dev/null 2>&1
+mv -f .deps/libgnufdisk_common_la-pointer.Tpo .deps/libgnufdisk_common_la-pointer.Plo
+/ffp/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I../include    -I/ffp/include -O2 -D_GNU_SOURCE -pthread -MT libgnufdisk_common_la-string.lo -MD -MP -MF .deps/libgnufdisk_common_la-string.Tpo -c -o libgnufdisk_common_la-string.lo `test -f 'string.c' || echo './'`string.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../include -I/ffp/include -O2 -D_GNU_SOURCE -pthread -MT libgnufdisk_common_la-string.lo -MD -MP -MF .deps/libgnufdisk_common_la-string.Tpo -c string.c  -fPIC -DPIC -o .libs/libgnufdisk_common_la-string.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../include -I/ffp/include -O2 -D_GNU_SOURCE -pthread -MT libgnufdisk_common_la-string.lo -MD -MP -MF .deps/libgnufdisk_common_la-string.Tpo -c string.c -o libgnufdisk_common_la-string.o >/dev/null 2>&1
+mv -f .deps/libgnufdisk_common_la-string.Tpo .deps/libgnufdisk_common_la-string.Plo
+/ffp/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I../include    -I/ffp/include -O2 -D_GNU_SOURCE -pthread -MT libgnufdisk_common_la-stack.lo -MD -MP -MF .deps/libgnufdisk_common_la-stack.Tpo -c -o libgnufdisk_common_la-stack.lo `test -f 'stack.c' || echo './'`stack.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../include -I/ffp/include -O2 -D_GNU_SOURCE -pthread -MT libgnufdisk_common_la-stack.lo -MD -MP -MF .deps/libgnufdisk_common_la-stack.Tpo -c stack.c  -fPIC -DPIC -o .libs/libgnufdisk_common_la-stack.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../include -I/ffp/include -O2 -D_GNU_SOURCE -pthread -MT libgnufdisk_common_la-stack.lo -MD -MP -MF .deps/libgnufdisk_common_la-stack.Tpo -c stack.c -o libgnufdisk_common_la-stack.o >/dev/null 2>&1
+mv -f .deps/libgnufdisk_common_la-stack.Tpo .deps/libgnufdisk_common_la-stack.Plo
+/ffp/bin/sh ../libtool --tag=CC   --mode=link gcc  -I/ffp/include -O2 -D_GNU_SOURCE -pthread  -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread  -o libgnufdisk-common.la -rpath /ffp/lib libgnufdisk_common_la-common.lo libgnufdisk_common_la-pointer.lo libgnufdisk_common_la-string.lo libgnufdisk_common_la-stack.lo -lpthread 
+libtool: link: gcc -shared  .libs/libgnufdisk_common_la-common.o .libs/libgnufdisk_common_la-pointer.o .libs/libgnufdisk_common_la-string.o .libs/libgnufdisk_common_la-stack.o   -L/ffp/lib -lpthread  -pthread -Wl,-rpath -Wl,/ffp/lib   -pthread -Wl,-soname -Wl,libgnufdisk-common.so.0 -o .libs/libgnufdisk-common.so.0.0.0
+libtool: link: (cd ".libs" && rm -f "libgnufdisk-common.so.0" && ln -s "libgnufdisk-common.so.0.0.0" "libgnufdisk-common.so.0")
+libtool: link: (cd ".libs" && rm -f "libgnufdisk-common.so" && ln -s "libgnufdisk-common.so.0.0.0" "libgnufdisk-common.so")
+libtool: link: ar cru .libs/libgnufdisk-common.a  libgnufdisk_common_la-common.o libgnufdisk_common_la-pointer.o libgnufdisk_common_la-string.o libgnufdisk_common_la-stack.o
+libtool: link: ranlib .libs/libgnufdisk-common.a
+libtool: link: ( cd ".libs" && rm -f "libgnufdisk-common.la" && ln -s "../libgnufdisk-common.la" "libgnufdisk-common.la" )
+make[3]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common/src'
+make[2]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common/src'
+make[2]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common'
+make[2]: Nothing to be done for `all-am'.
+make[2]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common'
+make[1]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common'
+Making all in debug
+make[1]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/debug'
+Making all in src
+make[2]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/debug/src'
+make  all-am
+make[3]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/debug/src'
+/ffp/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I../../common/include -I../include    -I/ffp/include -O2 -D_GNU_SOURCE -pthread -MT libgnufdisk_debug_la-debug.lo -MD -MP -MF .deps/libgnufdisk_debug_la-debug.Tpo -c -o libgnufdisk_debug_la-debug.lo `test -f 'debug.c' || echo './'`debug.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../common/include -I../include -I/ffp/include -O2 -D_GNU_SOURCE -pthread -MT libgnufdisk_debug_la-debug.lo -MD -MP -MF .deps/libgnufdisk_debug_la-debug.Tpo -c debug.c  -fPIC -DPIC -o .libs/libgnufdisk_debug_la-debug.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../common/include -I../include -I/ffp/include -O2 -D_GNU_SOURCE -pthread -MT libgnufdisk_debug_la-debug.lo -MD -MP -MF .deps/libgnufdisk_debug_la-debug.Tpo -c debug.c -o libgnufdisk_debug_la-debug.o >/dev/null 2>&1
+mv -f .deps/libgnufdisk_debug_la-debug.Tpo .deps/libgnufdisk_debug_la-debug.Plo
+/ffp/bin/sh ../libtool --tag=CC   --mode=link gcc  -I/ffp/include -O2 -D_GNU_SOURCE -pthread  -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread  -o libgnufdisk-debug.la -rpath /ffp/lib libgnufdisk_debug_la-debug.lo  
+libtool: link: gcc -shared  .libs/libgnufdisk_debug_la-debug.o   -L/ffp/lib -lpthread  -pthread -Wl,-rpath -Wl,/ffp/lib   -pthread -Wl,-soname -Wl,libgnufdisk-debug.so.0 -o .libs/libgnufdisk-debug.so.0.0.0
+libtool: link: (cd ".libs" && rm -f "libgnufdisk-debug.so.0" && ln -s "libgnufdisk-debug.so.0.0.0" "libgnufdisk-debug.so.0")
+libtool: link: (cd ".libs" && rm -f "libgnufdisk-debug.so" && ln -s "libgnufdisk-debug.so.0.0.0" "libgnufdisk-debug.so")
+libtool: link: ar cru .libs/libgnufdisk-debug.a  libgnufdisk_debug_la-debug.o
+libtool: link: ranlib .libs/libgnufdisk-debug.a
+libtool: link: ( cd ".libs" && rm -f "libgnufdisk-debug.la" && ln -s "../libgnufdisk-debug.la" "libgnufdisk-debug.la" )
+make[3]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/debug/src'
+make[2]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/debug/src'
+make[2]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/debug'
+make[2]: Nothing to be done for `all-am'.
+make[2]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/debug'
+make[1]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/debug'
+Making all in exception
+make[1]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/exception'
+Making all in src
+make[2]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/exception/src'
+make  all-am
+make[3]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/exception/src'
+/ffp/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I../include -I../../common/include   -I/ffp/include -O2 -D_GNU_SOURCE -pthread -MT libgnufdisk_exception_la-exception.lo -MD -MP -MF .deps/libgnufdisk_exception_la-exception.Tpo -c -o libgnufdisk_exception_la-exception.lo `test -f 'exception.c' || echo './'`exception.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../include -I../../common/include -I/ffp/include -O2 -D_GNU_SOURCE -pthread -MT libgnufdisk_exception_la-exception.lo -MD -MP -MF .deps/libgnufdisk_exception_la-exception.Tpo -c exception.c  -fPIC -DPIC -o .libs/libgnufdisk_exception_la-exception.o
+exception.c:27:0: warning: "__USE_GNU" redefined
+/ffp/include/features.h:348:0: note: this is the location of the previous definition
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../include -I../../common/include -I/ffp/include -O2 -D_GNU_SOURCE -pthread -MT libgnufdisk_exception_la-exception.lo -MD -MP -MF .deps/libgnufdisk_exception_la-exception.Tpo -c exception.c -o libgnufdisk_exception_la-exception.o >/dev/null 2>&1
+mv -f .deps/libgnufdisk_exception_la-exception.Tpo .deps/libgnufdisk_exception_la-exception.Plo
+/ffp/bin/sh ../libtool --tag=CC   --mode=link gcc  -I/ffp/include -O2 -D_GNU_SOURCE -pthread  -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread  -o libgnufdisk-exception.la -rpath /ffp/lib libgnufdisk_exception_la-exception.lo -L../../common/src -lpthread -lgnufdisk-common  
+libtool: link: gcc -shared  .libs/libgnufdisk_exception_la-exception.o   -Wl,-rpath -Wl,/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common/src/.libs -Wl,-rpath -Wl,/ffp/lib -L/ffp/lib -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common/src -lpthread /tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common/src/.libs/libgnufdisk-common.so  -pthread -Wl,-rpath -Wl,/ffp/lib   -pthread -Wl,-soname -Wl,libgnufdisk-exception.so.0 -o .libs/libgnufdisk-exception.so.0.0.0
+libtool: link: (cd ".libs" && rm -f "libgnufdisk-exception.so.0" && ln -s "libgnufdisk-exception.so.0.0.0" "libgnufdisk-exception.so.0")
+libtool: link: (cd ".libs" && rm -f "libgnufdisk-exception.so" && ln -s "libgnufdisk-exception.so.0.0.0" "libgnufdisk-exception.so")
+libtool: link: ar cru .libs/libgnufdisk-exception.a  libgnufdisk_exception_la-exception.o
+libtool: link: ranlib .libs/libgnufdisk-exception.a
+libtool: link: ( cd ".libs" && rm -f "libgnufdisk-exception.la" && ln -s "../libgnufdisk-exception.la" "libgnufdisk-exception.la" )
+make[3]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/exception/src'
+make[2]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/exception/src'
+make[2]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/exception'
+make[2]: Nothing to be done for `all-am'.
+make[2]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/exception'
+make[1]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/exception'
+Making all in device
+make[1]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/device'
+Making all in src
+make[2]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/device/src'
+make  all-am
+make[3]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/device/src'
+/ffp/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I../../common/include -I../../debug/include -I../../exception/include -I../include   -I/ffp/include -O2 -D_GNU_SOURCE -pthread -MT libgnufdisk_device_la-geometry.lo -MD -MP -MF .deps/libgnufdisk_device_la-geometry.Tpo -c -o libgnufdisk_device_la-geometry.lo `test -f 'geometry.c' || echo './'`geometry.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../common/include -I../../debug/include -I../../exception/include -I../include -I/ffp/include -O2 -D_GNU_SOURCE -pthread -MT libgnufdisk_device_la-geometry.lo -MD -MP -MF .deps/libgnufdisk_device_la-geometry.Tpo -c geometry.c  -fPIC -DPIC -o .libs/libgnufdisk_device_la-geometry.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../common/include -I../../debug/include -I../../exception/include -I../include -I/ffp/include -O2 -D_GNU_SOURCE -pthread -MT libgnufdisk_device_la-geometry.lo -MD -MP -MF .deps/libgnufdisk_device_la-geometry.Tpo -c geometry.c -o libgnufdisk_device_la-geometry.o >/dev/null 2>&1
+mv -f .deps/libgnufdisk_device_la-geometry.Tpo .deps/libgnufdisk_device_la-geometry.Plo
+/ffp/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I../../common/include -I../../debug/include -I../../exception/include -I../include   -I/ffp/include -O2 -D_GNU_SOURCE -pthread -MT libgnufdisk_device_la-device.lo -MD -MP -MF .deps/libgnufdisk_device_la-device.Tpo -c -o libgnufdisk_device_la-device.lo `test -f 'device.c' || echo './'`device.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../common/include -I../../debug/include -I../../exception/include -I../include -I/ffp/include -O2 -D_GNU_SOURCE -pthread -MT libgnufdisk_device_la-device.lo -MD -MP -MF .deps/libgnufdisk_device_la-device.Tpo -c device.c  -fPIC -DPIC -o .libs/libgnufdisk_device_la-device.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../common/include -I../../debug/include -I../../exception/include -I../include -I/ffp/include -O2 -D_GNU_SOURCE -pthread -MT libgnufdisk_device_la-device.lo -MD -MP -MF .deps/libgnufdisk_device_la-device.Tpo -c device.c -o libgnufdisk_device_la-device.o >/dev/null 2>&1
+mv -f .deps/libgnufdisk_device_la-device.Tpo .deps/libgnufdisk_device_la-device.Plo
+/ffp/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I../../common/include -I../../debug/include -I../../exception/include -I../include   -I/ffp/include -O2 -D_GNU_SOURCE -pthread -MT libgnufdisk_device_la-disklabel.lo -MD -MP -MF .deps/libgnufdisk_device_la-disklabel.Tpo -c -o libgnufdisk_device_la-disklabel.lo `test -f 'disklabel.c' || echo './'`disklabel.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../common/include -I../../debug/include -I../../exception/include -I../include -I/ffp/include -O2 -D_GNU_SOURCE -pthread -MT libgnufdisk_device_la-disklabel.lo -MD -MP -MF .deps/libgnufdisk_device_la-disklabel.Tpo -c disklabel.c  -fPIC -DPIC -o .libs/libgnufdisk_device_la-disklabel.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../common/include -I../../debug/include -I../../exception/include -I../include -I/ffp/include -O2 -D_GNU_SOURCE -pthread -MT libgnufdisk_device_la-disklabel.lo -MD -MP -MF .deps/libgnufdisk_device_la-disklabel.Tpo -c disklabel.c -o libgnufdisk_device_la-disklabel.o >/dev/null 2>&1
+mv -f .deps/libgnufdisk_device_la-disklabel.Tpo .deps/libgnufdisk_device_la-disklabel.Plo
+/ffp/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I../../common/include -I../../debug/include -I../../exception/include -I../include   -I/ffp/include -O2 -D_GNU_SOURCE -pthread -MT libgnufdisk_device_la-partition.lo -MD -MP -MF .deps/libgnufdisk_device_la-partition.Tpo -c -o libgnufdisk_device_la-partition.lo `test -f 'partition.c' || echo './'`partition.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../common/include -I../../debug/include -I../../exception/include -I../include -I/ffp/include -O2 -D_GNU_SOURCE -pthread -MT libgnufdisk_device_la-partition.lo -MD -MP -MF .deps/libgnufdisk_device_la-partition.Tpo -c partition.c  -fPIC -DPIC -o .libs/libgnufdisk_device_la-partition.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../common/include -I../../debug/include -I../../exception/include -I../include -I/ffp/include -O2 -D_GNU_SOURCE -pthread -MT libgnufdisk_device_la-partition.lo -MD -MP -MF .deps/libgnufdisk_device_la-partition.Tpo -c partition.c -o libgnufdisk_device_la-partition.o >/dev/null 2>&1
+mv -f .deps/libgnufdisk_device_la-partition.Tpo .deps/libgnufdisk_device_la-partition.Plo
+/ffp/bin/sh ../libtool --tag=CC   --mode=link gcc  -I/ffp/include -O2 -D_GNU_SOURCE -pthread  -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread  -o libgnufdisk-device.la -rpath /ffp/lib libgnufdisk_device_la-geometry.lo libgnufdisk_device_la-device.lo libgnufdisk_device_la-disklabel.lo libgnufdisk_device_la-partition.lo -L../../common/src -L../../exception/src -L../../debug/src -ldl -lgnufdisk-common -lgnufdisk-exception -lgnufdisk-debug  
+libtool: link: gcc -shared  .libs/libgnufdisk_device_la-geometry.o .libs/libgnufdisk_device_la-device.o .libs/libgnufdisk_device_la-disklabel.o .libs/libgnufdisk_device_la-partition.o   -Wl,-rpath -Wl,/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common/src/.libs -Wl,-rpath -Wl,/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/exception/src/.libs -Wl,-rpath -Wl,/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/debug/src/.libs -Wl,-rpath -Wl,/ffp/lib -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common/src/.libs -L/ffp/lib -lpthread -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common/src -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/exception/src -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/debug/src -ldl /tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common/src/.libs/libgnufdisk-common.so /tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/exception/src/.libs/libgnufdisk-exception.so /tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/debug/src/.libs/libgnufdisk-debug.so  -pthread -Wl,-rpath -Wl,/ffp/lib   -pthread -Wl,-soname -Wl,libgnufdisk-device.so.0 -o .libs/libgnufdisk-device.so.0.0.0
+libtool: link: (cd ".libs" && rm -f "libgnufdisk-device.so.0" && ln -s "libgnufdisk-device.so.0.0.0" "libgnufdisk-device.so.0")
+libtool: link: (cd ".libs" && rm -f "libgnufdisk-device.so" && ln -s "libgnufdisk-device.so.0.0.0" "libgnufdisk-device.so")
+libtool: link: ar cru .libs/libgnufdisk-device.a  libgnufdisk_device_la-geometry.o libgnufdisk_device_la-device.o libgnufdisk_device_la-disklabel.o libgnufdisk_device_la-partition.o
+libtool: link: ranlib .libs/libgnufdisk-device.a
+libtool: link: ( cd ".libs" && rm -f "libgnufdisk-device.la" && ln -s "../libgnufdisk-device.la" "libgnufdisk-device.la" )
+make[3]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/device/src'
+make[2]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/device/src'
+make[2]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/device'
+make[2]: Nothing to be done for `all-am'.
+make[2]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/device'
+make[1]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/device'
+Making all in devicemanager
+make[1]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/devicemanager'
+Making all in src
+make[2]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/devicemanager/src'
+make  all-am
+make[3]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/devicemanager/src'
+/ffp/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I../include -I../../common/include -I../../debug/include -I../../device/include -I../../exception/include -I../../userinterface/include   -I/ffp/include -O2 -D_GNU_SOURCE -pthread -MT libgnufdisk_devicemanager_la-devicemanager.lo -MD -MP -MF .deps/libgnufdisk_devicemanager_la-devicemanager.Tpo -c -o libgnufdisk_devicemanager_la-devicemanager.lo `test -f 'devicemanager.c' || echo './'`devicemanager.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../include -I../../common/include -I../../debug/include -I../../device/include -I../../exception/include -I../../userinterface/include -I/ffp/include -O2 -D_GNU_SOURCE -pthread -MT libgnufdisk_devicemanager_la-devicemanager.lo -MD -MP -MF .deps/libgnufdisk_devicemanager_la-devicemanager.Tpo -c devicemanager.c  -fPIC -DPIC -o .libs/libgnufdisk_devicemanager_la-devicemanager.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../include -I../../common/include -I../../debug/include -I../../device/include -I../../exception/include -I../../userinterface/include -I/ffp/include -O2 -D_GNU_SOURCE -pthread -MT libgnufdisk_devicemanager_la-devicemanager.lo -MD -MP -MF .deps/libgnufdisk_devicemanager_la-devicemanager.Tpo -c devicemanager.c -o libgnufdisk_devicemanager_la-devicemanager.o >/dev/null 2>&1
+mv -f .deps/libgnufdisk_devicemanager_la-devicemanager.Tpo .deps/libgnufdisk_devicemanager_la-devicemanager.Plo
+/ffp/bin/sh ../libtool --tag=CC   --mode=link gcc  -I/ffp/include -O2 -D_GNU_SOURCE -pthread  -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread  -o libgnufdisk-devicemanager.la -rpath /ffp/lib libgnufdisk_devicemanager_la-devicemanager.lo -L../../common/src -L../../debug/src -L../../exception/src -L../../device/src -L../../userinterface/src -lgnufdisk-common -lgnufdisk-debug -lgnufdisk-exception -lgnufdisk-device 
+libtool: link: gcc -shared  .libs/libgnufdisk_devicemanager_la-devicemanager.o   -Wl,-rpath -Wl,/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common/src/.libs -Wl,-rpath -Wl,/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/debug/src/.libs -Wl,-rpath -Wl,/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/exception/src/.libs -Wl,-rpath -Wl,/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/device/src/.libs -Wl,-rpath -Wl,/ffp/lib -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common/src/.libs -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/debug/src/.libs -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/exception/src/.libs -L/ffp/lib -lpthread -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common/src -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/debug/src -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/exception/src -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/device/src -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/userinterface/src /tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common/src/.libs/libgnufdisk-common.so /tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/debug/src/.libs/libgnufdisk-debug.so /tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/exception/src/.libs/libgnufdisk-exception.so /tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/device/src/.libs/libgnufdisk-device.so  -pthread -Wl,-rpath -Wl,/ffp/lib   -pthread -Wl,-soname -Wl,libgnufdisk-devicemanager.so.0 -o .libs/libgnufdisk-devicemanager.so.0.0.0
+libtool: link: (cd ".libs" && rm -f "libgnufdisk-devicemanager.so.0" && ln -s "libgnufdisk-devicemanager.so.0.0.0" "libgnufdisk-devicemanager.so.0")
+libtool: link: (cd ".libs" && rm -f "libgnufdisk-devicemanager.so" && ln -s "libgnufdisk-devicemanager.so.0.0.0" "libgnufdisk-devicemanager.so")
+libtool: link: ar cru .libs/libgnufdisk-devicemanager.a  libgnufdisk_devicemanager_la-devicemanager.o
+libtool: link: ranlib .libs/libgnufdisk-devicemanager.a
+libtool: link: ( cd ".libs" && rm -f "libgnufdisk-devicemanager.la" && ln -s "../libgnufdisk-devicemanager.la" "libgnufdisk-devicemanager.la" )
+make[3]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/devicemanager/src'
+make[2]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/devicemanager/src'
+make[2]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/devicemanager'
+make[2]: Nothing to be done for `all-am'.
+make[2]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/devicemanager'
+make[1]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/devicemanager'
+Making all in userinterface
+make[1]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/userinterface'
+Making all in src
+make[2]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/userinterface/src'
+make  all-am
+make[3]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/userinterface/src'
+/ffp/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I../../common/include -I../../debug/include -I../../exception/include -I../../device/include -I../../devicemanager/include -I../include  -I/ffp/include/guile/2.0 -I/ffp/include   -I/ffp/include -O2 -D_GNU_SOURCE -pthread -MT libgnufdisk_userinterface_la-userinterface.lo -MD -MP -MF .deps/libgnufdisk_userinterface_la-userinterface.Tpo -c -o libgnufdisk_userinterface_la-userinterface.lo `test -f 'userinterface.c' || echo './'`userinterface.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../common/include -I../../debug/include -I../../exception/include -I../../device/include -I../../devicemanager/include -I../include -I/ffp/include/guile/2.0 -I/ffp/include -I/ffp/include -O2 -D_GNU_SOURCE -pthread -MT libgnufdisk_userinterface_la-userinterface.lo -MD -MP -MF .deps/libgnufdisk_userinterface_la-userinterface.Tpo -c userinterface.c  -fPIC -DPIC -o .libs/libgnufdisk_userinterface_la-userinterface.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../common/include -I../../debug/include -I../../exception/include -I../../device/include -I../../devicemanager/include -I../include -I/ffp/include/guile/2.0 -I/ffp/include -I/ffp/include -O2 -D_GNU_SOURCE -pthread -MT libgnufdisk_userinterface_la-userinterface.lo -MD -MP -MF .deps/libgnufdisk_userinterface_la-userinterface.Tpo -c userinterface.c -o libgnufdisk_userinterface_la-userinterface.o >/dev/null 2>&1
+mv -f .deps/libgnufdisk_userinterface_la-userinterface.Tpo .deps/libgnufdisk_userinterface_la-userinterface.Plo
+/ffp/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I../../common/include -I../../debug/include -I../../exception/include -I../../device/include -I../../devicemanager/include -I../include  -I/ffp/include/guile/2.0 -I/ffp/include   -I/ffp/include -O2 -D_GNU_SOURCE -pthread -MT libgnufdisk_userinterface_la-guile.lo -MD -MP -MF .deps/libgnufdisk_userinterface_la-guile.Tpo -c -o libgnufdisk_userinterface_la-guile.lo `test -f 'guile.c' || echo './'`guile.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../common/include -I../../debug/include -I../../exception/include -I../../device/include -I../../devicemanager/include -I../include -I/ffp/include/guile/2.0 -I/ffp/include -I/ffp/include -O2 -D_GNU_SOURCE -pthread -MT libgnufdisk_userinterface_la-guile.lo -MD -MP -MF .deps/libgnufdisk_userinterface_la-guile.Tpo -c guile.c  -fPIC -DPIC -o .libs/libgnufdisk_userinterface_la-guile.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../common/include -I../../debug/include -I../../exception/include -I../../device/include -I../../devicemanager/include -I../include -I/ffp/include/guile/2.0 -I/ffp/include -I/ffp/include -O2 -D_GNU_SOURCE -pthread -MT libgnufdisk_userinterface_la-guile.lo -MD -MP -MF .deps/libgnufdisk_userinterface_la-guile.Tpo -c guile.c -o libgnufdisk_userinterface_la-guile.o >/dev/null 2>&1
+mv -f .deps/libgnufdisk_userinterface_la-guile.Tpo .deps/libgnufdisk_userinterface_la-guile.Plo
+/ffp/bin/sh ../libtool --tag=CC   --mode=link gcc -I/ffp/include/guile/2.0 -I/ffp/include   -I/ffp/include -O2 -D_GNU_SOURCE -pthread -L/ffp/lib -lguile-2.0 -lgc   -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread  -o libgnufdisk-userinterface.la -rpath /ffp/lib libgnufdisk_userinterface_la-userinterface.lo libgnufdisk_userinterface_la-guile.lo -L../../common/src -L../../debug/src -L../../exception/src -L../../device/src -L../../devicemanager/src -lgnufdisk-common -lgnufdisk-debug -lgnufdisk-exception -lgnufdisk-device -lgnufdisk-devicemanager  -lguile 
+libtool: link: gcc -shared  .libs/libgnufdisk_userinterface_la-userinterface.o .libs/libgnufdisk_userinterface_la-guile.o   -Wl,-rpath -Wl,/ffp/lib -Wl,-rpath -Wl,/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common/src/.libs -Wl,-rpath -Wl,/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/debug/src/.libs -Wl,-rpath -Wl,/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/exception/src/.libs -Wl,-rpath -Wl,/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/device/src/.libs -Wl,-rpath -Wl,/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/devicemanager/src/.libs -Wl,-rpath -Wl,/ffp/lib -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common/src/.libs -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/debug/src/.libs -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/exception/src/.libs -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/device/src/.libs -L/ffp/lib /ffp/lib/libguile-2.0.so /ffp/lib/libgc.so -lpthread -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common/src -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/debug/src -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/exception/src -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/device/src -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/devicemanager/src /tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common/src/.libs/libgnufdisk-common.so /tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/debug/src/.libs/libgnufdisk-debug.so /tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/exception/src/.libs/libgnufdisk-exception.so /tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/device/src/.libs/libgnufdisk-device.so /tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/devicemanager/src/.libs/libgnufdisk-devicemanager.so -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/userinterface/src -lguile  -pthread -Wl,-rpath -Wl,/ffp/lib   -pthread -Wl,-soname -Wl,libgnufdisk-userinterface.so.0 -o .libs/libgnufdisk-userinterface.so.0.0.0
+libtool: link: (cd ".libs" && rm -f "libgnufdisk-userinterface.so.0" && ln -s "libgnufdisk-userinterface.so.0.0.0" "libgnufdisk-userinterface.so.0")
+libtool: link: (cd ".libs" && rm -f "libgnufdisk-userinterface.so" && ln -s "libgnufdisk-userinterface.so.0.0.0" "libgnufdisk-userinterface.so")
+libtool: link: ar cru .libs/libgnufdisk-userinterface.a  libgnufdisk_userinterface_la-userinterface.o libgnufdisk_userinterface_la-guile.o
+libtool: link: ranlib .libs/libgnufdisk-userinterface.a
+libtool: link: ( cd ".libs" && rm -f "libgnufdisk-userinterface.la" && ln -s "../libgnufdisk-userinterface.la" "libgnufdisk-userinterface.la" )
+make[3]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/userinterface/src'
+make[2]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/userinterface/src'
+make[2]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/userinterface'
+make[2]: Nothing to be done for `all-am'.
+make[2]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/userinterface'
+make[1]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/userinterface'
+Making all in src
+make[1]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/src'
+make  all-am
+make[2]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/src'
+gcc -DHAVE_CONFIG_H -I.  -I../common/include -I../debug/include -I../exception/include -I../device/include -I../userinterface/include   -I/ffp/include -O2 -D_GNU_SOURCE -pthread -MT gnufdisk-gnufdisk.o -MD -MP -MF .deps/gnufdisk-gnufdisk.Tpo -c -o gnufdisk-gnufdisk.o `test -f 'gnufdisk.c' || echo './'`gnufdisk.c
+mv -f .deps/gnufdisk-gnufdisk.Tpo .deps/gnufdisk-gnufdisk.Po
+/ffp/bin/sh ../libtool --tag=CC   --mode=link gcc  -I/ffp/include -O2 -D_GNU_SOURCE -pthread -shared -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread  -o gnufdisk gnufdisk-gnufdisk.o -L../common/src -L../debug/src -L../exception/src -L../userinterface/src -lgnufdisk-common -lgnufdisk-debug -lgnufdisk-exception -lgnufdisk-userinterface 
+libtool: link: gcc -I/ffp/include -O2 -D_GNU_SOURCE -pthread -Wl,-rpath -Wl,/ffp/lib -o .libs/gnufdisk gnufdisk-gnufdisk.o  -L/ffp/lib -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common/src -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/debug/src -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/exception/src -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/userinterface/src /tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/userinterface/src/.libs/libgnufdisk-userinterface.so /ffp/lib/libguile-2.0.so /ffp/lib/libffi.so -lrt /ffp/lib/libintl.so -lc /ffp/lib/libunistring.so /ffp/lib/libiconv.so /ffp/lib/libgmp.so /ffp/lib/libltdl.so -lcrypt -lm /ffp/lib/libgc.so -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/device/src -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/devicemanager/src /tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/devicemanager/src/.libs/libgnufdisk-devicemanager.so /tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/device/src/.libs/libgnufdisk-device.so -ldl /tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/exception/src/.libs/libgnufdisk-exception.so /tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common/src/.libs/libgnufdisk-common.so /tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/debug/src/.libs/libgnufdisk-debug.so -lpthread -lguile -pthread -Wl,-rpath -Wl,/ffp/lib
+make[2]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/src'
+make[1]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/src'
+make[1]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a'
+make[1]: Nothing to be done for `all-am'.
+make[1]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a'
++ make DESTDIR=/tmp/gnufdisk.Jb9z0x/pkg install
+Making install in doc
+make[1]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/doc'
+make[2]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/doc'
+make[2]: Nothing to be done for `install-exec-am'.
+test -z "/ffp/share/info" || /ffp/bin/mkdir -p "/tmp/gnufdisk.Jb9z0x/pkg/ffp/share/info"
+ /ffp/bin/install -c -m 644 ./gnufdisk '/tmp/gnufdisk.Jb9z0x/pkg/ffp/share/info'
+ install-info --info-dir='/tmp/gnufdisk.Jb9z0x/pkg/ffp/share/info' '/tmp/gnufdisk.Jb9z0x/pkg/ffp/share/info/gnufdisk'
+install-info: warning: no info dir entry in `/tmp/gnufdisk.Jb9z0x/pkg/ffp/share/info/gnufdisk'
+make[2]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/doc'
+make[1]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/doc'
+Making install in common
+make[1]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common'
+Making install in src
+make[2]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common/src'
+make[3]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common/src'
+test -z "/ffp/lib" || /ffp/bin/mkdir -p "/tmp/gnufdisk.Jb9z0x/pkg/ffp/lib"
+ /ffp/bin/sh ../libtool   --mode=install /ffp/bin/install -c   libgnufdisk-common.la '/tmp/gnufdisk.Jb9z0x/pkg/ffp/lib'
+libtool: install: /ffp/bin/install -c .libs/libgnufdisk-common.so.0.0.0 /tmp/gnufdisk.Jb9z0x/pkg/ffp/lib/libgnufdisk-common.so.0.0.0
+libtool: install: (cd /tmp/gnufdisk.Jb9z0x/pkg/ffp/lib && { ln -s -f libgnufdisk-common.so.0.0.0 libgnufdisk-common.so.0 || { rm -f libgnufdisk-common.so.0 && ln -s libgnufdisk-common.so.0.0.0 libgnufdisk-common.so.0; }; })
+libtool: install: (cd /tmp/gnufdisk.Jb9z0x/pkg/ffp/lib && { ln -s -f libgnufdisk-common.so.0.0.0 libgnufdisk-common.so || { rm -f libgnufdisk-common.so && ln -s libgnufdisk-common.so.0.0.0 libgnufdisk-common.so; }; })
+libtool: install: /ffp/bin/install -c .libs/libgnufdisk-common.lai /tmp/gnufdisk.Jb9z0x/pkg/ffp/lib/libgnufdisk-common.la
+libtool: install: /ffp/bin/install -c .libs/libgnufdisk-common.a /tmp/gnufdisk.Jb9z0x/pkg/ffp/lib/libgnufdisk-common.a
+libtool: install: chmod 644 /tmp/gnufdisk.Jb9z0x/pkg/ffp/lib/libgnufdisk-common.a
+libtool: install: ranlib /tmp/gnufdisk.Jb9z0x/pkg/ffp/lib/libgnufdisk-common.a
+libtool: install: warning: remember to run `libtool --finish /ffp/lib'
+make[3]: Nothing to be done for `install-data-am'.
+make[3]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common/src'
+make[2]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common/src'
+make[2]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common'
+make[3]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common'
+make[3]: Nothing to be done for `install-exec-am'.
+test -z "/ffp/include" || /ffp/bin/mkdir -p "/tmp/gnufdisk.Jb9z0x/pkg/ffp/include"
+ /ffp/bin/install -c -m 644 include/gnufdisk-common.h '/tmp/gnufdisk.Jb9z0x/pkg/ffp/include'
+make[3]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common'
+make[2]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common'
+make[1]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common'
+Making install in debug
+make[1]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/debug'
+Making install in src
+make[2]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/debug/src'
+make[3]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/debug/src'
+test -z "/ffp/lib" || /ffp/bin/mkdir -p "/tmp/gnufdisk.Jb9z0x/pkg/ffp/lib"
+ /ffp/bin/sh ../libtool   --mode=install /ffp/bin/install -c   libgnufdisk-debug.la '/tmp/gnufdisk.Jb9z0x/pkg/ffp/lib'
+libtool: install: /ffp/bin/install -c .libs/libgnufdisk-debug.so.0.0.0 /tmp/gnufdisk.Jb9z0x/pkg/ffp/lib/libgnufdisk-debug.so.0.0.0
+libtool: install: (cd /tmp/gnufdisk.Jb9z0x/pkg/ffp/lib && { ln -s -f libgnufdisk-debug.so.0.0.0 libgnufdisk-debug.so.0 || { rm -f libgnufdisk-debug.so.0 && ln -s libgnufdisk-debug.so.0.0.0 libgnufdisk-debug.so.0; }; })
+libtool: install: (cd /tmp/gnufdisk.Jb9z0x/pkg/ffp/lib && { ln -s -f libgnufdisk-debug.so.0.0.0 libgnufdisk-debug.so || { rm -f libgnufdisk-debug.so && ln -s libgnufdisk-debug.so.0.0.0 libgnufdisk-debug.so; }; })
+libtool: install: /ffp/bin/install -c .libs/libgnufdisk-debug.lai /tmp/gnufdisk.Jb9z0x/pkg/ffp/lib/libgnufdisk-debug.la
+libtool: install: /ffp/bin/install -c .libs/libgnufdisk-debug.a /tmp/gnufdisk.Jb9z0x/pkg/ffp/lib/libgnufdisk-debug.a
+libtool: install: chmod 644 /tmp/gnufdisk.Jb9z0x/pkg/ffp/lib/libgnufdisk-debug.a
+libtool: install: ranlib /tmp/gnufdisk.Jb9z0x/pkg/ffp/lib/libgnufdisk-debug.a
+libtool: install: warning: remember to run `libtool --finish /ffp/lib'
+make[3]: Nothing to be done for `install-data-am'.
+make[3]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/debug/src'
+make[2]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/debug/src'
+make[2]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/debug'
+make[3]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/debug'
+make[3]: Nothing to be done for `install-exec-am'.
+test -z "/ffp/include" || /ffp/bin/mkdir -p "/tmp/gnufdisk.Jb9z0x/pkg/ffp/include"
+ /ffp/bin/install -c -m 644 include/gnufdisk-debug.h '/tmp/gnufdisk.Jb9z0x/pkg/ffp/include'
+make[3]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/debug'
+make[2]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/debug'
+make[1]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/debug'
+Making install in exception
+make[1]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/exception'
+Making install in src
+make[2]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/exception/src'
+make[3]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/exception/src'
+test -z "/ffp/lib" || /ffp/bin/mkdir -p "/tmp/gnufdisk.Jb9z0x/pkg/ffp/lib"
+ /ffp/bin/sh ../libtool   --mode=install /ffp/bin/install -c   libgnufdisk-exception.la '/tmp/gnufdisk.Jb9z0x/pkg/ffp/lib'
+libtool: install: warning: relinking `libgnufdisk-exception.la'
+libtool: install: (cd /tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/exception/src; /ffp/bin/sh /tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/exception/libtool  --tag CC --mode=relink gcc -I/ffp/include -O2 -D_GNU_SOURCE -pthread -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread -o libgnufdisk-exception.la -rpath /ffp/lib libgnufdisk_exception_la-exception.lo -L../../common/src -lpthread -lgnufdisk-common -inst-prefix-dir /tmp/gnufdisk.Jb9z0x/pkg)
+libtool: relink: gcc -shared  .libs/libgnufdisk_exception_la-exception.o   -Wl,-rpath -Wl,/ffp/lib -L/ffp/lib -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common/src -lpthread -L/tmp/gnufdisk.Jb9z0x/pkg/ffp/lib -lgnufdisk-common  -pthread -Wl,-rpath -Wl,/ffp/lib   -pthread -Wl,-soname -Wl,libgnufdisk-exception.so.0 -o .libs/libgnufdisk-exception.so.0.0.0
+libtool: install: /ffp/bin/install -c .libs/libgnufdisk-exception.so.0.0.0T /tmp/gnufdisk.Jb9z0x/pkg/ffp/lib/libgnufdisk-exception.so.0.0.0
+libtool: install: (cd /tmp/gnufdisk.Jb9z0x/pkg/ffp/lib && { ln -s -f libgnufdisk-exception.so.0.0.0 libgnufdisk-exception.so.0 || { rm -f libgnufdisk-exception.so.0 && ln -s libgnufdisk-exception.so.0.0.0 libgnufdisk-exception.so.0; }; })
+libtool: install: (cd /tmp/gnufdisk.Jb9z0x/pkg/ffp/lib && { ln -s -f libgnufdisk-exception.so.0.0.0 libgnufdisk-exception.so || { rm -f libgnufdisk-exception.so && ln -s libgnufdisk-exception.so.0.0.0 libgnufdisk-exception.so; }; })
+libtool: install: /ffp/bin/install -c .libs/libgnufdisk-exception.lai /tmp/gnufdisk.Jb9z0x/pkg/ffp/lib/libgnufdisk-exception.la
+libtool: install: /ffp/bin/install -c .libs/libgnufdisk-exception.a /tmp/gnufdisk.Jb9z0x/pkg/ffp/lib/libgnufdisk-exception.a
+libtool: install: chmod 644 /tmp/gnufdisk.Jb9z0x/pkg/ffp/lib/libgnufdisk-exception.a
+libtool: install: ranlib /tmp/gnufdisk.Jb9z0x/pkg/ffp/lib/libgnufdisk-exception.a
+libtool: install: warning: remember to run `libtool --finish /ffp/lib'
+make[3]: Nothing to be done for `install-data-am'.
+make[3]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/exception/src'
+make[2]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/exception/src'
+make[2]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/exception'
+make[3]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/exception'
+make[3]: Nothing to be done for `install-exec-am'.
+test -z "/ffp/include" || /ffp/bin/mkdir -p "/tmp/gnufdisk.Jb9z0x/pkg/ffp/include"
+ /ffp/bin/install -c -m 644 include/gnufdisk-exception.h '/tmp/gnufdisk.Jb9z0x/pkg/ffp/include'
+make[3]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/exception'
+make[2]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/exception'
+make[1]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/exception'
+Making install in device
+make[1]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/device'
+Making install in src
+make[2]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/device/src'
+make[3]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/device/src'
+test -z "/ffp/lib" || /ffp/bin/mkdir -p "/tmp/gnufdisk.Jb9z0x/pkg/ffp/lib"
+ /ffp/bin/sh ../libtool   --mode=install /ffp/bin/install -c   libgnufdisk-device.la '/tmp/gnufdisk.Jb9z0x/pkg/ffp/lib'
+libtool: install: warning: relinking `libgnufdisk-device.la'
+libtool: install: (cd /tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/device/src; /ffp/bin/sh /tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/device/libtool  --tag CC --mode=relink gcc -I/ffp/include -O2 -D_GNU_SOURCE -pthread -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread -o libgnufdisk-device.la -rpath /ffp/lib libgnufdisk_device_la-geometry.lo libgnufdisk_device_la-device.lo libgnufdisk_device_la-disklabel.lo libgnufdisk_device_la-partition.lo -L../../common/src -L../../exception/src -L../../debug/src -ldl -lgnufdisk-common -lgnufdisk-exception -lgnufdisk-debug -inst-prefix-dir /tmp/gnufdisk.Jb9z0x/pkg)
+libtool: relink: gcc -shared  .libs/libgnufdisk_device_la-geometry.o .libs/libgnufdisk_device_la-device.o .libs/libgnufdisk_device_la-disklabel.o .libs/libgnufdisk_device_la-partition.o   -Wl,-rpath -Wl,/ffp/lib -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common/src/.libs -L/ffp/lib -lpthread -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common/src -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/exception/src -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/debug/src -ldl -L/tmp/gnufdisk.Jb9z0x/pkg/ffp/lib -lgnufdisk-common -lgnufdisk-exception -lgnufdisk-debug  -pthread -Wl,-rpath -Wl,/ffp/lib   -pthread -Wl,-soname -Wl,libgnufdisk-device.so.0 -o .libs/libgnufdisk-device.so.0.0.0
+libtool: install: /ffp/bin/install -c .libs/libgnufdisk-device.so.0.0.0T /tmp/gnufdisk.Jb9z0x/pkg/ffp/lib/libgnufdisk-device.so.0.0.0
+libtool: install: (cd /tmp/gnufdisk.Jb9z0x/pkg/ffp/lib && { ln -s -f libgnufdisk-device.so.0.0.0 libgnufdisk-device.so.0 || { rm -f libgnufdisk-device.so.0 && ln -s libgnufdisk-device.so.0.0.0 libgnufdisk-device.so.0; }; })
+libtool: install: (cd /tmp/gnufdisk.Jb9z0x/pkg/ffp/lib && { ln -s -f libgnufdisk-device.so.0.0.0 libgnufdisk-device.so || { rm -f libgnufdisk-device.so && ln -s libgnufdisk-device.so.0.0.0 libgnufdisk-device.so; }; })
+libtool: install: /ffp/bin/install -c .libs/libgnufdisk-device.lai /tmp/gnufdisk.Jb9z0x/pkg/ffp/lib/libgnufdisk-device.la
+libtool: install: /ffp/bin/install -c .libs/libgnufdisk-device.a /tmp/gnufdisk.Jb9z0x/pkg/ffp/lib/libgnufdisk-device.a
+libtool: install: chmod 644 /tmp/gnufdisk.Jb9z0x/pkg/ffp/lib/libgnufdisk-device.a
+libtool: install: ranlib /tmp/gnufdisk.Jb9z0x/pkg/ffp/lib/libgnufdisk-device.a
+libtool: install: warning: remember to run `libtool --finish /ffp/lib'
+make[3]: Nothing to be done for `install-data-am'.
+make[3]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/device/src'
+make[2]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/device/src'
+make[2]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/device'
+make[3]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/device'
+make[3]: Nothing to be done for `install-exec-am'.
+test -z "/ffp/include" || /ffp/bin/mkdir -p "/tmp/gnufdisk.Jb9z0x/pkg/ffp/include"
+ /ffp/bin/install -c -m 644 include/gnufdisk-device.h include/gnufdisk-device-internals.h '/tmp/gnufdisk.Jb9z0x/pkg/ffp/include'
+make[3]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/device'
+make[2]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/device'
+make[1]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/device'
+Making install in devicemanager
+make[1]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/devicemanager'
+Making install in src
+make[2]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/devicemanager/src'
+make[3]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/devicemanager/src'
+test -z "/ffp/lib" || /ffp/bin/mkdir -p "/tmp/gnufdisk.Jb9z0x/pkg/ffp/lib"
+ /ffp/bin/sh ../libtool   --mode=install /ffp/bin/install -c   libgnufdisk-devicemanager.la '/tmp/gnufdisk.Jb9z0x/pkg/ffp/lib'
+libtool: install: warning: relinking `libgnufdisk-devicemanager.la'
+libtool: install: (cd /tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/devicemanager/src; /ffp/bin/sh /tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/devicemanager/libtool  --tag CC --mode=relink gcc -I/ffp/include -O2 -D_GNU_SOURCE -pthread -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread -o libgnufdisk-devicemanager.la -rpath /ffp/lib libgnufdisk_devicemanager_la-devicemanager.lo -L../../common/src -L../../debug/src -L../../exception/src -L../../device/src -L../../userinterface/src -lgnufdisk-common -lgnufdisk-debug -lgnufdisk-exception -lgnufdisk-device -inst-prefix-dir /tmp/gnufdisk.Jb9z0x/pkg)
+libtool: relink: gcc -shared  .libs/libgnufdisk_devicemanager_la-devicemanager.o   -Wl,-rpath -Wl,/ffp/lib -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common/src/.libs -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/debug/src/.libs -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/exception/src/.libs -L/ffp/lib -lpthread -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common/src -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/debug/src -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/exception/src -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/device/src -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/userinterface/src -L/tmp/gnufdisk.Jb9z0x/pkg/ffp/lib -lgnufdisk-common -lgnufdisk-debug -lgnufdisk-exception -lgnufdisk-device  -pthread -Wl,-rpath -Wl,/ffp/lib   -pthread -Wl,-soname -Wl,libgnufdisk-devicemanager.so.0 -o .libs/libgnufdisk-devicemanager.so.0.0.0
+libtool: install: /ffp/bin/install -c .libs/libgnufdisk-devicemanager.so.0.0.0T /tmp/gnufdisk.Jb9z0x/pkg/ffp/lib/libgnufdisk-devicemanager.so.0.0.0
+libtool: install: (cd /tmp/gnufdisk.Jb9z0x/pkg/ffp/lib && { ln -s -f libgnufdisk-devicemanager.so.0.0.0 libgnufdisk-devicemanager.so.0 || { rm -f libgnufdisk-devicemanager.so.0 && ln -s libgnufdisk-devicemanager.so.0.0.0 libgnufdisk-devicemanager.so.0; }; })
+libtool: install: (cd /tmp/gnufdisk.Jb9z0x/pkg/ffp/lib && { ln -s -f libgnufdisk-devicemanager.so.0.0.0 libgnufdisk-devicemanager.so || { rm -f libgnufdisk-devicemanager.so && ln -s libgnufdisk-devicemanager.so.0.0.0 libgnufdisk-devicemanager.so; }; })
+libtool: install: /ffp/bin/install -c .libs/libgnufdisk-devicemanager.lai /tmp/gnufdisk.Jb9z0x/pkg/ffp/lib/libgnufdisk-devicemanager.la
+libtool: install: /ffp/bin/install -c .libs/libgnufdisk-devicemanager.a /tmp/gnufdisk.Jb9z0x/pkg/ffp/lib/libgnufdisk-devicemanager.a
+libtool: install: chmod 644 /tmp/gnufdisk.Jb9z0x/pkg/ffp/lib/libgnufdisk-devicemanager.a
+libtool: install: ranlib /tmp/gnufdisk.Jb9z0x/pkg/ffp/lib/libgnufdisk-devicemanager.a
+libtool: install: warning: remember to run `libtool --finish /ffp/lib'
+make[3]: Nothing to be done for `install-data-am'.
+make[3]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/devicemanager/src'
+make[2]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/devicemanager/src'
+make[2]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/devicemanager'
+make[3]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/devicemanager'
+make[3]: Nothing to be done for `install-exec-am'.
+test -z "/ffp/include" || /ffp/bin/mkdir -p "/tmp/gnufdisk.Jb9z0x/pkg/ffp/include"
+ /ffp/bin/install -c -m 644 include/gnufdisk-devicemanager.h '/tmp/gnufdisk.Jb9z0x/pkg/ffp/include'
+make[3]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/devicemanager'
+make[2]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/devicemanager'
+make[1]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/devicemanager'
+Making install in userinterface
+make[1]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/userinterface'
+Making install in src
+make[2]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/userinterface/src'
+make[3]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/userinterface/src'
+test -z "/ffp/lib" || /ffp/bin/mkdir -p "/tmp/gnufdisk.Jb9z0x/pkg/ffp/lib"
+ /ffp/bin/sh ../libtool   --mode=install /ffp/bin/install -c   libgnufdisk-userinterface.la '/tmp/gnufdisk.Jb9z0x/pkg/ffp/lib'
+libtool: install: warning: relinking `libgnufdisk-userinterface.la'
+libtool: install: (cd /tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/userinterface/src; /ffp/bin/sh /tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/userinterface/libtool  --tag CC --mode=relink gcc -I/ffp/include/guile/2.0 -I/ffp/include -I/ffp/include -O2 -D_GNU_SOURCE -pthread -L/ffp/lib -lguile-2.0 -lgc -L/ffp/lib -Wl,-rpath,/ffp/lib -lpthread -o libgnufdisk-userinterface.la -rpath /ffp/lib libgnufdisk_userinterface_la-userinterface.lo libgnufdisk_userinterface_la-guile.lo -L../../common/src -L../../debug/src -L../../exception/src -L../../device/src -L../../devicemanager/src -lgnufdisk-common -lgnufdisk-debug -lgnufdisk-exception -lgnufdisk-device -lgnufdisk-devicemanager -lguile -inst-prefix-dir /tmp/gnufdisk.Jb9z0x/pkg)
+libtool: relink: gcc -shared  .libs/libgnufdisk_userinterface_la-userinterface.o .libs/libgnufdisk_userinterface_la-guile.o   -Wl,-rpath -Wl,/ffp/lib -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common/src/.libs -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/debug/src/.libs -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/exception/src/.libs -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/device/src/.libs -L/ffp/lib -L/tmp/gnufdisk.Jb9z0x/pkg/ffp/lib -lguile-2.0 -lgc -lpthread -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common/src -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/debug/src -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/exception/src -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/device/src -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/devicemanager/src -lgnufdisk-common -lgnufdisk-debug -lgnufdisk-exception -lgnufdisk-device -lgnufdisk-devicemanager -L/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/userinterface/src -lguile  -pthread -Wl,-rpath -Wl,/ffp/lib   -pthread -Wl,-soname -Wl,libgnufdisk-userinterface.so.0 -o .libs/libgnufdisk-userinterface.so.0.0.0
+libtool: install: /ffp/bin/install -c .libs/libgnufdisk-userinterface.so.0.0.0T /tmp/gnufdisk.Jb9z0x/pkg/ffp/lib/libgnufdisk-userinterface.so.0.0.0
+libtool: install: (cd /tmp/gnufdisk.Jb9z0x/pkg/ffp/lib && { ln -s -f libgnufdisk-userinterface.so.0.0.0 libgnufdisk-userinterface.so.0 || { rm -f libgnufdisk-userinterface.so.0 && ln -s libgnufdisk-userinterface.so.0.0.0 libgnufdisk-userinterface.so.0; }; })
+libtool: install: (cd /tmp/gnufdisk.Jb9z0x/pkg/ffp/lib && { ln -s -f libgnufdisk-userinterface.so.0.0.0 libgnufdisk-userinterface.so || { rm -f libgnufdisk-userinterface.so && ln -s libgnufdisk-userinterface.so.0.0.0 libgnufdisk-userinterface.so; }; })
+libtool: install: /ffp/bin/install -c .libs/libgnufdisk-userinterface.lai /tmp/gnufdisk.Jb9z0x/pkg/ffp/lib/libgnufdisk-userinterface.la
+libtool: install: /ffp/bin/install -c .libs/libgnufdisk-userinterface.a /tmp/gnufdisk.Jb9z0x/pkg/ffp/lib/libgnufdisk-userinterface.a
+libtool: install: chmod 644 /tmp/gnufdisk.Jb9z0x/pkg/ffp/lib/libgnufdisk-userinterface.a
+libtool: install: ranlib /tmp/gnufdisk.Jb9z0x/pkg/ffp/lib/libgnufdisk-userinterface.a
+libtool: install: warning: remember to run `libtool --finish /ffp/lib'
+make[3]: Nothing to be done for `install-data-am'.
+make[3]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/userinterface/src'
+make[2]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/userinterface/src'
+make[2]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/userinterface'
+make[3]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/userinterface'
+make[3]: Nothing to be done for `install-exec-am'.
+test -z "/ffp/include" || /ffp/bin/mkdir -p "/tmp/gnufdisk.Jb9z0x/pkg/ffp/include"
+ /ffp/bin/install -c -m 644 include/gnufdisk-userinterface.h '/tmp/gnufdisk.Jb9z0x/pkg/ffp/include'
+make[3]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/userinterface'
+make[2]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/userinterface'
+make[1]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/userinterface'
+Making install in src
+make[1]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/src'
+make[2]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/src'
+test -z "/ffp/bin" || /ffp/bin/mkdir -p "/tmp/gnufdisk.Jb9z0x/pkg/ffp/bin"
+  /ffp/bin/sh ../libtool   --mode=install /ffp/bin/install -c gnufdisk '/tmp/gnufdisk.Jb9z0x/pkg/ffp/bin'
+libtool: install: warning: `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/userinterface/src/libgnufdisk-userinterface.la' has not been installed in `/ffp/lib'
+libtool: install: warning: `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/devicemanager/src/libgnufdisk-devicemanager.la' has not been installed in `/ffp/lib'
+libtool: install: warning: `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/device/src/libgnufdisk-device.la' has not been installed in `/ffp/lib'
+libtool: install: warning: `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/exception/src/libgnufdisk-exception.la' has not been installed in `/ffp/lib'
+libtool: install: warning: `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/common/src/libgnufdisk-common.la' has not been installed in `/ffp/lib'
+libtool: install: warning: `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/debug/src/libgnufdisk-debug.la' has not been installed in `/ffp/lib'
+libtool: install: /ffp/bin/install -c .libs/gnufdisk /tmp/gnufdisk.Jb9z0x/pkg/ffp/bin/gnufdisk
+make[2]: Nothing to be done for `install-data-am'.
+make[2]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/src'
+make[1]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a/src'
+make[1]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a'
+make[2]: Entering directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a'
+make[2]: Nothing to be done for `install-exec-am'.
+make[2]: Nothing to be done for `install-data-am'.
+make[2]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a'
+make[1]: Leaving directory `/tmp/gnufdisk.Jb9z0x/gnufdisk-2.0.0a'
++ mkdir -p /tmp/gnufdisk.Jb9z0x/pkg/install
++ cp /ffp/home/root/fun_plug/ffp_packages/gnufdisk/DESCR /ffp/home/root/fun_plug/ffp_packages/gnufdisk/HOMEPAGE /tmp/gnufdisk.Jb9z0x/pkg/install/
++ cd /tmp/gnufdisk.Jb9z0x/pkg
++ makepkg gnufdisk 2.0.0a 1
+Creating /tmp/gnufdisk-2.0.0a-arm-1.tar ...
+stdin: is not a tty
+sending incremental file list
+gnufdisk-2.0.0a-arm-1.tar
+
+sent 108482 bytes  received 31 bytes  19729.64 bytes/sec
+total size is 1390008320  speedup is 12809.60
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libatomic_ops-git-20130417-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/ghostscript-9.06-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/most-pre5.1-14-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/beautifulsoup4-4.0.0b9-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gnunet-0.9.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/guile-2.0.9-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/parted-3.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/cmake-2.8.7-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libsigc++-2.2.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1192-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/harfbuzz-0.9.9-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/Python-3.3.0-arm-1.txz
+stdin: is not a tty
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/par-1.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/dtach-0.8-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1218-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/vim-7.3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gnuplot-4.4.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1283-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/tor-0.2.3.25-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/fontconfig-2.8.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/rtmpdump-2.3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libev-4.11-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/setuptools-0.6c11-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/tokyotyrant-1.1.41-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/less-457-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libmicrohttpd-0.9.19-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/lzo-2.06-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/cairo-1.12.8-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/Django-1.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libspectre-0.2.7-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/protobuf-2.4.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/unrar-4.1.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/php-5.4.11-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/openssl-1.0.0g-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libgpg-error-1.10-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/node-v0.6.10-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/xvidcore-1.3.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/Python-2.7.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gcc-solibs-4.6.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1260-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/BeautifulSoup-3.2.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libunistring-0.9.3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gnuplot-4.4.4-arm-2.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/nut-2.6.5-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/fontconfig-2.10.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/freetype-2.4.8-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/pango-1.32.3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/sshpass-1.05-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/tokyocabinet-1.4.47-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/nzbget-0.8.0r394-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libgcrypt-1.5.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1267-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/swig-2.0.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1182-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/netatalk-3.0.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/par2cmdline-0.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/neon-0.29.6-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/berkeleydb-5.1.19-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/cherokee-130207-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/attr-2.4.46-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gcc-4.6.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/openssh-6.1p1-arm-4-node.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/sendmail-8.14.5-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/openssl-1.0.1c-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/mysecureshell-1.30-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/bdwgc-git-20130417-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libextractor-0.6.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/Python-2.7.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/Python-2.7.3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/gnupg-1.4.8-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/cksfv-1.3.14-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/git-1.8.0-arm-1.txz
+ADD /home2/memiksfr/subdomains/ffp/pkg/gnufdisk-2.0.0a-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/nail-20120224-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1217-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/slang-pre2.3.0-68-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/php-5.5.0beta3-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/ImageMagick-6.8.2-9-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/wdfs-1.4.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/seeks-20120224-arm-2.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/opencv-2.3.1-arm-2.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/p7zip-9.20.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libmms-0.6.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/links-2.7-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/node-0.8.21-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1214-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libgd-2.0.33-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/M2Crypto-0.21.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/cifs-utils-git-20120302-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1359-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/rrdtool-1.4.5-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libpar2-0.2-arm-2.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libpar2-0.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/node-0.8.21-arm-2.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/openssh-6.1p1-arm-4.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/pixman-0.28.0-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/zlib-1.2.6-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/glib-2.35.2-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MCServer-1222-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/MPlayer-1.1-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/isync-1.0.4-arm-1.txz
+ALREADY /home2/memiksfr/subdomains/ffp/pkg/libffi-3.0.11-arm-1.txz
+95f341c4aaf4ea5118d10bb529c15a94  BeautifulSoup-3.2.1-arm-1.txz
+a1e0ad986d101c81735bcdaa73ed1120  Django-1.4-arm-1.txz
+8a03198597eb048966609fa7e85081cb  ImageMagick-6.8.2-9-arm-1.txz
+ed100bdde17d72a8de04fe76bf507c27  M2Crypto-0.21.1-arm-1.txz
+982aeaa56561d1a47906af083a198b4e  MCServer-1182-arm-1.txz
+f43e8c2fa9ed0649943984454f93e205  MCServer-1192-arm-1.txz
+59fcfcf1b1ce120f0667436648288811  MCServer-1214-arm-1.txz
+286cba7502f2e28048679877cfdaadcf  MCServer-1217-arm-1.txz
+a196fc6af4ffdc1332a30aedf7b9a8b7  MCServer-1218-arm-1.txz
+866887febd98b38b784f3eaf8a2211b4  MCServer-1222-arm-1.txz
+28bffa04cd4865b1116b9ac2953462ef  MCServer-1260-arm-1.txz
+2a04bdde5efc99df870f2afc1c823038  MCServer-1267-arm-1.txz
+acd360f67af8840035ce045ab8187e3f  MCServer-1283-arm-1.txz
+65cae87083e7251844f83940a019aea5  MCServer-1359-arm-1.txz
+0db42aed04763a412e09295b7879ce42  MPlayer-1.1-arm-1.txz
+a3d7a6d1f4d1ead00ef46940ba2f3bcc  Python-2.7.2-arm-1.txz
+0c0c5ee79714df0686e52cf9775c16bc  Python-2.7.3-arm-1.txz
+7fd7c65f6db3f5080db928f916170028  Python-2.7.4-arm-1.txz
+55a2f685c893cfd91fd418db3e26be35  Python-3.3.0-arm-1.txz
+032ac662c6dd9de1b3cd9b11f533b116  attr-2.4.46-arm-1.txz
+a9c00879a9952577e76bc54f1a523501  bdwgc-git-20130417-arm-1.txz
+85ef9e1adaa758c1f8587c4556799f69  beautifulsoup4-4.0.0b9-arm-1.txz
+6ff8d6a390e744dd99e8d7a7e61b6de2  berkeleydb-5.1.19-arm-1.txz
+32d26bc2fb54e3151a3b10029b310a0e  cairo-1.12.8-arm-1.txz
+01effab30ea00b69d40f4b9f509f55ff  cherokee-130207-arm-1.txz
+49ecff75fd683d7bd3b219c955593780  cifs-utils-git-20120302-arm-1.txz
+d33d4de033f5734caa97fb64d220a52b  cksfv-1.3.14-arm-1.txz
+ac0cd5691e28b0bcf1f1de6733a86460  cmake-2.8.7-arm-1.txz
+fd44ad8cf4a284e8ae90798467fd345b  dtach-0.8-arm-1.txz
+473b0116a2dbd50121f48097b2e5a829  fontconfig-2.10.2-arm-1.txz
+6be66afb530ab8c7c079e91a13e65ca3  fontconfig-2.8.0-arm-1.txz
+f77c4c8c754b164d05ed1b6e0c4c3ec3  freetype-2.4.8-arm-1.txz
+d2c81249d4bf660ba5c20991c8e86fb4  gcc-4.6.2-arm-1.txz
+e9ee3add43dea9b356feaa4fdbca5fe2  gcc-solibs-4.6.2-arm-1.txz
+fdedc4578b52177d1d36dc48c019e359  ghostscript-9.06-arm-1.txz
+4f283bc42de500a9fe9d6a2e7dae7be4  git-1.8.0-arm-1.txz
+102f8bf9b770e8e7701b8ac9cf4e938c  glib-2.35.2-arm-1.txz
+dd86ef680e23d649c7034ceb70f1e420  gnufdisk-2.0.0a-arm-1.txz
+03f8318c94b5154ff9370961ace3567e  gnunet-0.9.2-arm-1.txz
+338c45bfe0571d896fdf12833397b8a6  gnupg-1.4.8-arm-1.txz
+3da6e410046d049a9de0952ced17d207  gnuplot-4.4.4-arm-1.txz
+9e22f867fddbb011ae97fbb522027188  gnuplot-4.4.4-arm-2.txz
+c8e04d19ce6c1be113de2e80dfe388e0  guile-2.0.9-arm-1.txz
+d863b220986066854ac7c9b0afb20faa  harfbuzz-0.9.9-arm-1.txz
+704d33fe923ead8b65f73ec35eee3993  isync-1.0.4-arm-1.txz
+82a6edbe7ba4f8e27d76dc36b1fb0fa3  less-457-arm-1.txz
+cdf7b3acf8e021921e1e2f696b21b12f  libatomic_ops-git-20130417-arm-1.txz
+0c54f33ceaa95ff640e77ec2378a124e  libev-4.11-arm-1.txz
+cbfd7cd569281a9ed6fa2313c30939ed  libextractor-0.6.2-arm-1.txz
+2d1b88015a8dd263f557fb27043e53f8  libffi-3.0.11-arm-1.txz
+f729e959f7a3bc84258d734f81214621  libgcrypt-1.5.0-arm-1.txz
+664311c312926ca30c077a89baebce93  libgd-2.0.33-arm-1.txz
+8ba41420fa0aab68345956455934bc00  libgpg-error-1.10-arm-1.txz
+4f162fbadfa6abc502a045ef4093c4ed  libmicrohttpd-0.9.19-arm-1.txz
+c9e9f52bd5ac9f9e2512345223a3b274  libmms-0.6.2-arm-1.txz
+d0ba07ffb41f8c8072c3a72c642fd6ed  libpar2-0.2-arm-1.txz
+3c5701c05ab95f986e01253ad94a8650  libpar2-0.2-arm-2.txz
+1e1c96e71aef38f9bbba4d5b203342fe  libsigc++-2.2.0-arm-1.txz
+549f4f792f3f414dc11a2543aa27a0ff  libspectre-0.2.7-arm-1.txz
+362fecb4327b4db509cc27c8377e3da5  libunistring-0.9.3-arm-1.txz
+aa138e6d77ad3953671610579cc3d42b  links-2.7-arm-1.txz
+aff618deb5ab34b9ac7a03e0d8154838  lzo-2.06-arm-1.txz
+f855d164949e7acc18fa4aaf101c0d04  most-pre5.1-14-arm-1.txz
+e96e21b39bfa4d7eb5d44b5228fe7b70  mysecureshell-1.30-arm-1.txz
+cfb7825ee4f94260672690d154f2b6e3  nail-20120224-arm-1.txz
+0a14881eadc441ccdcfcd31bea56bcdd  neon-0.29.6-arm-1.txz
+9a89b60c336964997604fae4ed17695e  netatalk-3.0.2-arm-1.txz
+6029909b3d503980c034bd39478c0be1  node-0.8.21-arm-1.txz
+8a7d226e05c96bbcb6d53615c8358a7b  node-0.8.21-arm-2.txz
+87293f8ac425e78b4fd4ea49597b9cb0  node-v0.6.10-arm-1.txz
+71de0746bef03bd0f6edcfc667d19a6c  nut-2.6.5-arm-1.txz
+3a2df95f41ab7e1b0f0b81e874fb0812  nzbget-0.8.0r394-arm-1.txz
+083f7fd632357f1cce627207fb4552d3  opencv-2.3.1-arm-2.txz
+74894e01f5a6c68dc684a058883adce1  openssh-6.1p1-arm-4-node.txz
+ca1211de85f0f37d3a8e91d62fc63ab9  openssh-6.1p1-arm-4.txz
+c446b1a2cdfb22283d06cdc1696f69ef  openssl-1.0.0g-arm-1.txz
+1a6b123a0d2d852c49cd3b59dd162587  openssl-1.0.1c-arm-1.txz
+2739d61c04fef5e9c14703d3414a12b4  p7zip-9.20.1-arm-1.txz
+b6587c19ed46af536599c44164f30062  pango-1.32.3-arm-1.txz
+31aab821d024ee722d8086de0aaec3af  par-1.1-arm-1.txz
+40e39f90d6ffc36a13ed1266eaa233af  par2cmdline-0.4-arm-1.txz
+c10f9ca3681c896fa7e97df17a3b8e78  parted-3.1-arm-1.txz
+50bb839f538148a881ce720ac210d8cb  php-5.4.11-arm-1.txz
+60cf27986a25f0c1e48759e28f30b39e  php-5.5.0beta3-arm-1.txz
+ac2a6618d9bff07b61619eb43e444f76  pixman-0.28.0-arm-1.txz
+6193b8bc9c34ed897730111343822d4f  protobuf-2.4.1-arm-1.txz
+16e33376597489b17fc80cc37d00fc5c  rrdtool-1.4.5-arm-1.txz
+a9950a1a97c267804ff19d08aa6d9525  rtmpdump-2.3-arm-1.txz
+4fa15a6145d7b868d687b8eba8279abc  seeks-20120224-arm-2.txz
+d949e5826b587dfcbb4fc5127b9914bc  sendmail-8.14.5-arm-1.txz
+3b684329a947e339bcf852abccb64a72  setuptools-0.6c11-arm-1.txz
+97642aff8413275eadf07642783a7570  slang-pre2.3.0-68-arm-1.txz
+672ee83f6e2b613bbbf9aad110c52a8f  sshpass-1.05-arm-1.txz
+50001317da06eb57e8898c2e2c590c20  swig-2.0.4-arm-1.txz
+6c49bfc80064b5760b761b57f119c8ed  tokyocabinet-1.4.47-arm-1.txz
+276175e3bd3f5f00e0f5729b013790b0  tokyotyrant-1.1.41-arm-1.txz
+d800d890172e3b93db736db52bdb6de8  tor-0.2.3.25-arm-1.txz
+175f16b06006a17e1ce953e370f369c8  unrar-4.1.4-arm-1.txz
+51da0ea5b5cd3b92dc196ce0ccee8789  vim-7.3-arm-1.txz
+012b27f2e1bc2848263c6d1879589e0d  wdfs-1.4.2-arm-1.txz
+5f93016524482301a080ccbceeaa1413  xvidcore-1.3.2-arm-1.txz
+18c2e4aa1dcfa44fe7f49784d7414846  zlib-1.2.6-arm-1.txz

@@ -1,0 +1,64 @@
+--- userinterface/configure.orig	2013-04-18 12:32:44.000000000 +0200
++++ userinterface/configure	2013-04-18 13:39:27.000000000 +0200
+@@ -11257,12 +11257,12 @@
+ 
+ 
+ 
+-ac_fn_c_check_header_mongrel "$LINENO" "libguile.h" "ac_cv_header_libguile_h" "$ac_includes_default"
+-if test "x$ac_cv_header_libguile_h" = x""yes; then :
+-
+-else
+-  as_fn_error "\"libguile.h not found, please install libguile and try again.\"" "$LINENO" 5
+-fi
++#ac_fn_c_check_header_mongrel "$LINENO" "libguile.h" "ac_cv_header_libguile_h" "$ac_includes_default"
++#if test "x$ac_cv_header_libguile_h" = x""yes; then :
++#
++#else
++#  as_fn_error "\"libguile.h not found, please install libguile and try again.\"" "$LINENO" 5
++#fi
+ 
+ 
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for scm_with_guile in -lguile" >&5
+@@ -11314,24 +11314,24 @@
+ 
+ 
+ # Checks for libraries.
+-for FUNC in scm_to_locale_string scm_dynwind_begin \
+-      scm_dynwind_unwind_handler scm_dynwind_end scm_calloc scm_wrong_type_arg \
+-      scm_gc_mark scm_c_write scm_make_stack scm_error scm_current_output_port \
+-      scm_is_integer scm_is_string scm_from_locale_symbol scm_malloc \
+-      scm_dynwind_free scm_with_guile scm_c_define_gsubr \
+-      scm_c_define scm_append scm_list_2  scm_list_1 \
+-      scm_to_long_long scm_from_long_long scm_to_size_t; do
+-  as_ac_Symbol=`$as_echo "ac_cv_have_decl_$FUNC" | $as_tr_sh`
+-ac_fn_c_check_decl "$LINENO" "$FUNC" "$as_ac_Symbol" "#include <libguile.h>
+-"
+-eval as_val=\$$as_ac_Symbol
+-   if test "x$as_val" = x""yes; then :
+-
+-else
+-  as_fn_error "\"SFUNC is not declared in your libguile.h\"" "$LINENO" 5
+-fi
+-
+-done
++#for FUNC in scm_to_locale_string scm_dynwind_begin \
++#      scm_dynwind_unwind_handler scm_dynwind_end scm_calloc scm_wrong_type_arg \
++#      scm_gc_mark scm_c_write scm_make_stack scm_error scm_current_output_port \
++#      scm_is_integer scm_is_string scm_from_locale_symbol scm_malloc \
++#      scm_dynwind_free scm_with_guile scm_c_define_gsubr \
++#      scm_c_define scm_append scm_list_2  scm_list_1 \
++#      scm_to_long_long scm_from_long_long scm_to_size_t; do
++#  as_ac_Symbol=`$as_echo "ac_cv_have_decl_$FUNC" | $as_tr_sh`
++#ac_fn_c_check_decl "$LINENO" "$FUNC" "$as_ac_Symbol" "#include <libguile.h>
++#"
++#eval as_val=\$$as_ac_Symbol
++#   if test "x$as_val" = x""yes; then :
++#
++#else
++#  as_fn_error "\"$FUNC is not declared in your libguile.h\"" "$LINENO" 5
++#fi
++#
++#done
+ 
+ # Checks for header files.
+ 
