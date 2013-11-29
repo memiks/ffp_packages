@@ -1,0 +1,33 @@
+--- Makefile	2012-01-27 20:15:40.000000000 +0100
++++ ../Makefile	2012-02-29 16:37:26.000000000 +0100
+@@ -61,7 +61,7 @@
+ LINK		= ln -sf
+ LINK_MAN	= $(LINK)
+ 
+-prefix		= /usr
++prefix		= /ffp
+ exec_prefix	= $(prefix)
+ bindir		= $(exec_prefix)/bin
+ datarootdir	= $(prefix)/share
+@@ -157,8 +157,8 @@
+ ifeq (FreeBSD, $(shell uname -s))
+ 	OS = freebsd
+ ifdef ENABLE_NLS
+-	CFLAGS_OS     = -I/usr/local/include
+-	LDFLAGS_EXTRA = -lintl -L/usr/local/lib
++	CFLAGS_OS     = -I/ffp/include
++	LDFLAGS_EXTRA = -lintl -L/ffp/lib
+ endif
+ endif
+ endif
+@@ -166,8 +166,8 @@
+ ifeq (Darwin, $(shell uname -s))
+ 	OS = Darwin
+ ifdef ENABLE_NLS
+-	CFLAGS_OS     = -I/usr/local/include
+-	LDFLAGS_EXTRA = -lintl -L/usr/local/lib
++	CFLAGS_OS     = -I/ffp/include
++	LDFLAGS_EXTRA = -lintl -L/ffp/lib
+ endif
+ endif
+ 
