@@ -10,7 +10,7 @@ W=$(mktemp -t -d $PN.XXXXXX)
 D=$W/pkg
 
 cd $W
-cat $X/SRC_URI | xargs wget 
+cat $X/SRC_URI | xargs wget --no-check-certificate  
 PV=$(ls $PN-*.tar* | egrep -o '[0-9][0-9.]*[0-9]')
 tar xf $PN-$PV.tar*
 cd $PN-*
@@ -35,7 +35,7 @@ LDFLAGS="$FFP_LDFLAGS" \
 make DESTDIR=$D install
 
 cd $W
-cat $X/SRC_MAN | xargs wget
+cat $X/SRC_MAN | xargs wget --no-check-certificate 
 
 mkdir -p $D/$mandir
 cd $D/$mandir
