@@ -80,6 +80,7 @@ done
 
 
 mkdir -p $D/install
+cp -rvf $X/ffp $D/
 cp $X/{DESCR,HOMEPAGE} $D/install/
 
 cd $D
