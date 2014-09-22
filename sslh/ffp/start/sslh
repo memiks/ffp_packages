@@ -1,0 +1,52 @@
+#! /bin/sh
+
+### BEGIN INIT INFO
+# Provides:		sslh
+# Short-Description:	sslh proxy ssl & ssh connections
+### END INIT INFO
+
+set -e
+tag=sslh
+
+# The prefix is normally filled by make install. If
+# installing by hand, fill it in yourself!
+LISTEN=ifname:443
+SSH=localhost:22
+SSL=localhost:443
+USER=nobody
+PID=/ffp/var/run/sslh.pid
+
+PREFIX=/ffp
+DAEMON=$PREFIX/sbin/sslh 
+
+start()
+{
+        echo "Start services: sslh"
+        $DAEMON --user ${USER} --pidfile ${PID} --listen ${LISTEN} --ssh ${SSH} --ssl ${SSL}
+}
+
+stop()
+{
+        echo "Stop services: sslh"
+	killall $DAEMON
+}
+
+
+case "$1" in
+	  start)
+		    start
+		    ;;
+	  stop)
+		    stop
+		    ;;
+    restart)
+		    stop
+		    sleep 5
+		    start
+		    ;;
+	  *)
+		    echo "Usage: /ffp/start/sslh {start|stop|restart}" >&2
+		    ;;
+esac
+
+exit 0
